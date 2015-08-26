@@ -1,0 +1,1588 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="John DM">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="ICD9">Diabetes-Mellitus-Type1</field2>
+            <start>Fri Mar 21 12:25:07 PDT 2008</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pain</field1>
+            <field2 label="Value"> 1</field2>
+            <start>Fri Jan 13 22:53:00 PST 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">59</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">654321</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="John Doe 1159">
+    <meds>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">35</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">353535</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Mary Jane">
+    <meds>
+        <item>
+            <field1 label="Drug">Naproxen</field1>
+            <field2 label="Daily Dose"> 4</field2>
+            <start>Fri Jan 27 14:14:06 PST 2006</start>
+            <end>Sun Feb 26 14:14:06 PST 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Pain</field1>
+            <field2 label="ICD9">0.0</field2>
+            <start>Sat Jan 14 18:36:19 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Atrial_Fibrillation</field1>
+            <field2 label="ICD9">427.31</field2>
+            <start>Fri Dec 22 14:24:33 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Atrial_Tachycardia</field1>
+            <field2 label="ICD9">427.0</field2>
+            <start>Fri Dec 22 14:24:45 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Coronary_Artery_Disease</field1>
+            <field2 label="ICD9">414.01</field2>
+            <start>Fri Dec 22 14:24:51 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Block_2nd_Or_3rd_Degree</field1>
+            <field2 label="ICD9">426.12</field2>
+            <start>Fri Dec 22 14:24:58 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="ICD9">401.9</field2>
+            <start>Fri Dec 22 14:25:06 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">PVD</field1>
+            <field2 label="ICD9">443.81</field2>
+            <start>Fri Dec 22 14:25:12 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Angina</field1>
+            <field2 label="ICD9">413.0</field2>
+            <start>Fri Dec 22 14:25:19 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension_Complicated_by_Heart_Failure</field1>
+            <field2 label="ICD9">402.91</field2>
+            <start>Fri Dec 22 14:25:27 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Rheumatic_Disease_Complicated_by_Heart_Failure</field1>
+            <field2 label="ICD9">398.91</field2>
+            <start>Fri Dec 22 14:25:37 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="ICD9">428.1</field2>
+            <start>Fri Dec 22 14:25:44 PST 2006</start>
+        </item>
+    <item>
+            <field1 label="Dx">Cardiomyopathy</field1>
+            <field2 label="ICD9">425.4</field2>
+            <start>Fri Dec 22 14:26:01 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="ICD9">410.12</field2>
+            <start>Fri Dec 22 14:26:06 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Pacemaker</field1>
+            <field2 label="ICD9">V45.01</field2>
+            <start>Fri Dec 22 14:26:14 PST 2006</start>
+        </item>
+        </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 6</field2>
+            <start>Wed Oct 04 00:52:40 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value"> 8</field2>
+            <start>Wed Oct 04 00:52:48 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Amphetamines UDS</field1>
+            <field2 label="Value">Neg</field2>
+            <start>Tue Apr 04 14:49:00 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Marijuana UDS</field1>
+            <field2 label="Value">Neg</field2>
+            <start>Tue Apr 04 14:49:16 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Opiates UDS</field1>
+            <field2 label="Value">Neg</field2>
+            <start>Tue Apr 04 14:49:22 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Barbituates UDS</field1>
+            <field2 label="Value">Neg</field2>
+            <start>Tue Apr 04 14:49:28 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Cocaine UDS</field1>
+            <field2 label="Value">Neg</field2>
+            <start>Fri Dec 22 14:32:15 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">85</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">888321</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Mary Jane issue uds">
+    <meds>
+        <item>
+            <field1 label="Drug">Acetaminophen</field1>
+            <field2 label="Daily Dose"> 500.00</field2>
+            <start>Fri Feb 24 14:48:16 PST 2006</start>
+            <end>Sun Mar 26 14:48:16 PST 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Pain</field1>
+            <field2 label="ICD9">0.0</field2>
+            <start>Fri Feb 24 14:48:52 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Syndrome</field1>
+            <field2 label="ICD9">Kidney Disease (Creatnine)</field2>
+            <start>Tue May 30 15:59:14 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Obstructive_Pulmonary_Disease</field1>
+            <field2 label="ICD9">492.0</field2>
+            <start>Tue May 30 15:59:30 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 5</field2>
+            <start>Mon Jul 03 17:12:52 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value"> 7</field2>
+            <start>Mon Jul 03 17:13:00 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">2.7</field2>
+            <start>Sun Apr 30 00:00:00 PDT 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">43</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">434311</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94706</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Elderly man -On/off opiates">
+    <meds>
+        <item>
+            <field1 label="Drug">Codeine</field1>
+            <field2 label="Daily Dose">30</field2>
+            <start>Mon Feb 27 16:39:23 PST 2006</start>
+            <end>Wed Mar 29 16:39:23 PST 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Felodipine</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Feb 27 16:39:48 PST 2006</start>
+            <end>Wed Mar 29 16:39:48 PST 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Cyanocobalamin</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Feb 27 16:40:01 PST 2006</start>
+            <end>Wed Mar 29 16:40:01 PST 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Gabapentin</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Feb 27 16:40:15 PST 2006</start>
+            <end>Wed Mar 29 16:40:15 PST 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">SODIUM CHLORIDE SOLN,SPRAY,NASAL</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Thu Apr 27 16:25:39 PDT 2006</start>
+            <end>Sat May 27 16:25:39 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">HERED SENSORY NEUROPATHY</field1>
+            <field2 label="ICD9">356.2</field2>
+            <start>Tue Apr 25 15:02:04 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Thrombocytopenia</field1>
+            <field2 label="ICD9"> 287.5</field2>
+            <start>Tue Apr 25 15:03:24 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Peripheral Neuropathy</field1>
+            <field2 label="ICD9"> 355.9</field2>
+            <start>Tue Apr 25 15:04:38 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">ANEMIA, UNSPECIFIED</field1>
+            <field2 label="ICD9">285.9</field2>
+            <start>Tue Apr 25 15:05:07 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HYPERGLYCEMIA</field1>
+            <field2 label="ICD9">790.6</field2>
+            <start>Tue Apr 25 15:05:28 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">OTHER CONVULSIONS</field1>
+            <field2 label="ICD9">780.39</field2>
+            <start>Tue Apr 25 15:05:47 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">VACCIN FOR RABIES</field1>
+            <field2 label="ICD9">V04.5</field2>
+            <start>Tue Apr 25 15:06:07 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HYPERLIPIDEMIA NEC/NOS</field1>
+            <field2 label="ICD9">272.4</field2>
+            <start>Tue Apr 25 15:06:40 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HYPERTENSION NOS</field1>
+            <field2 label="ICD9">401.9</field2>
+            <start>Tue Apr 25 15:06:57 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HYPERPLASIA OF PROSTATE</field1>
+            <field2 label="ICD9">600.</field2>
+            <start>Tue Apr 25 15:07:16 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HEADACHE</field1>
+            <field2 label="ICD9">784.0</field2>
+            <start>Tue Apr 25 15:07:35 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">TRICHIASIS W/O ENTROPION</field1>
+            <field2 label="ICD9">374.05</field2>
+            <start>Tue Apr 25 15:07:56 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">DERMATITIS NOS</field1>
+            <field2 label="ICD9">692.9</field2>
+            <start>Tue Apr 25 15:08:16 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">MONONEURITIS NOS</field1>
+            <field2 label="ICD9">355.9</field2>
+            <start>Tue Apr 25 15:08:34 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">POSTHERPES TRIGEM NEURAL</field1>
+            <field2 label="ICD9">053.12</field2>
+            <start>Tue Apr 25 15:09:01 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">BENIGN HYPERTENSION</field1>
+            <field2 label="ICD9">401.1</field2>
+            <start>Tue Apr 25 15:09:28 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value">4</field2>
+            <start>Wed Aug 30 00:38:30 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value"> 7</field2>
+            <start>Wed Aug 30 00:38:38 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">Acetaminophen</field1>
+            <start>Tue Apr 04 16:29:33 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">CREATININE</field1>
+            <field2 label="Value">1.6</field2>
+            <start>Fri Dec 30 16:31:02 PST 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALBUMIN</field1>
+            <field2 label="Value">3.9</field2>
+            <start>Wed Nov 16 16:33:52 PST 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST/GOT</field1>
+            <field2 label="Value">16</field2>
+            <start>Wed Nov 16 16:34:46 PST 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT/GPT</field1>
+            <field2 label="Value">13</field2>
+            <start>Wed Nov 16 16:35:18 PST 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">TOT.BILIRUBIN</field1>
+            <field2 label="Value">0.6</field2>
+            <start>Wed Nov 16 16:35:53 PST 2005</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">93</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">393922</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Allergic Alice">
+    <meds>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 6</field2>
+            <start>Fri Jul 07 15:56:08 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value">5</field2>
+            <start>Fri Jul 07 15:56:30 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">Morphine ER</field1>
+            <start>Mon Oct 23 10:38:13 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">70</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">707055</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Initiation_opioid_naive</field1>
+            <field2 label="Value">true</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Continuous</field1>
+            <field2 label="Value">yes</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="sally short acting">
+    <meds>
+        <item>
+            <field1 label="Drug">Hydromorphone_Short_Acting</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Mon Aug 14 15:13:53 PDT 2006</start>
+            <end>Wed Sep 13 15:13:53 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 5</field2>
+            <start>Wed Aug 23 15:04:47 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value"> 5</field2>
+            <start>Wed Aug 23 15:04:54 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">32</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">232399</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Titration_maintenance</field1>
+            <field2 label="Value">true</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Woman_long_and_short_acting">
+    <meds>
+        <item>
+            <field1 label="Drug">Methadone</field1>
+            <field2 label="Daily Dose"> 5</field2>
+            <start>Tue Jan 03 15:41:43 PST 2006</start>
+            <end>Tue Jun 13 15:41:43 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Hydrocodone</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Fri Apr 28 15:42:51 PDT 2006</start>
+            <end>Sun May 28 15:42:51 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">TEMAZEPAM</field1>
+            <field2 label="Daily Dose"> 30</field2>
+            <start>Fri Apr 28 15:45:48 PDT 2006</start>
+            <end>Sun May 28 15:45:48 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Senna</field1>
+            <field2 label="Daily Dose"> 16</field2>
+            <start>Fri Apr 28 15:47:43 PDT 2006</start>
+            <end>Sun May 28 15:47:43 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">FUROSEMIDE</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Fri Apr 28 15:48:50 PDT 2006</start>
+            <end>Sun May 28 15:48:50 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">ASPIRIN</field1>
+            <field2 label="Daily Dose"> 81</field2>
+            <start>Fri Apr 28 15:49:13 PDT 2006</start>
+            <end>Sun May 28 15:49:13 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Low Back Pain</field1>
+            <field2 label="ICD9">724.2</field2>
+            <start>Fri Apr 28 15:37:58 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Gastroesophageal Reflux Disorder</field1>
+            <field2 label="ICD9">530.81</field2>
+            <start>Fri Apr 28 15:38:59 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">SPINAL STENOSIS-LUMBAR</field1>
+            <field2 label="ICD9">724.02</field2>
+            <start>Fri Apr 28 15:40:18 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">OSTEOARTHROS NOS-UNSPEC</field1>
+            <field2 label="ICD9">715.90</field2>
+            <start>Fri Apr 28 15:40:37 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pain</field1>
+            <field2 label="Value"> 4</field2>
+            <start>Fri Apr 28 15:50:51 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 4</field2>
+            <start>Tue Aug 29 13:55:53 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value"> 6</field2>
+            <start>Tue Aug 29 13:56:03 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">Morphine ER</field1>
+            <start>Fri Apr 28 15:41:04 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">CREATININE</field1>
+            <field2 label="Value">1.9</field2>
+            <start>Tue May 30 00:00:00 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALBUMIN</field1>
+            <field2 label="Value">3.8</field2>
+            <start>Fri Jan 27 00:00:00 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST/GOT</field1>
+            <field2 label="Value">20</field2>
+            <start>Fri Jan 27 15:52:43 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT/GPT</field1>
+            <field2 label="Value">13</field2>
+            <start>Fri Jan 27 15:53:52 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALK PHOSPHATASE</field1>
+            <field2 label="Value">38</field2>
+            <start>Fri Jan 27 15:54:41 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">TOT.BILIRUBIN</field1>
+            <field2 label="Value">0.9</field2>
+            <start>Fri Jan 27 15:55:13 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">55</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">112233</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94131</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Titration_maintenance</field1>
+            <field2 label="Value">true</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="no_opioids_dunkin">
+    <meds>
+        <item>
+            <field1 label="Drug">Docusate</field1>
+            <field2 label="Daily Dose"> 250</field2>
+            <start>Fri Apr 28 16:12:41 PDT 2006</start>
+            <end>Sun May 28 16:12:41 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Hydrocodone</field1>
+            <field2 label="Daily Dose"> 30</field2>
+            <start>Fri Apr 28 16:13:42 PDT 2006</start>
+            <end>Sun May 28 16:13:42 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Codeine</field1>
+            <field2 label="Daily Dose"> 180</field2>
+            <start>Tue Feb 28 16:15:34 PST 2006</start>
+            <end>Sat Aug 26 16:15:34 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">ASPIRIN</field1>
+            <field2 label="Daily Dose"> 81</field2>
+            <start>Fri Apr 28 16:17:42 PDT 2006</start>
+            <end>Sun May 28 16:17:42 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Lumbago</field1>
+            <field2 label="ICD9">724.2</field2>
+            <start>Fri Apr 28 16:10:44 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Lumbar Radiculopathy</field1>
+            <field2 label="ICD9">724.4</field2>
+            <start>Fri Apr 28 16:11:29 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">POLYCYSTIC KIDNEY NOS TYPE</field1>
+            <field2 label="ICD9">753.12</field2>
+            <start>Fri Apr 28 16:11:57 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Obstructive_Pulmonary_Disease</field1>
+            <field2 label="ICD9">491.0</field2>
+            <start>Thu Jun 01 22:52:42 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pain</field1>
+            <field2 label="Value"> 6</field2>
+            <start>Tue Mar 28 16:18:02 PST 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">CREATININE</field1>
+            <field2 label="Value">1.6</field2>
+            <start>Sun Apr 16 16:18:51 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALBUMIN</field1>
+            <field2 label="Value">3.8</field2>
+            <start>Wed Jan 11 16:19:23 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">22</field2>
+            <start>Fri Apr 28 16:19:52 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">17</field2>
+            <start>Fri Apr 28 16:20:39 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Alkaline_phosphatase</field1>
+            <field2 label="Value">33</field2>
+            <start>Fri Apr 28 16:21:01 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Total_Bilirubin</field1>
+            <field2 label="Value">1.1</field2>
+            <start>Fri Apr 28 16:21:42 PDT 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">74</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">227474</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="barney_no_opioids">
+    <meds>
+        <item>
+            <field1 label="Drug">Fluoxetine</field1>
+            <field2 label="Daily Dose"> 60</field2>
+            <start>Fri Apr 28 16:29:01 PDT 2006</start>
+            <end>Sun May 28 16:29:01 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">ACETAMINOPHEN</field1>
+            <field2 label="Daily Dose"> 1500</field2>
+            <start>Fri Apr 28 16:30:15 PDT 2006</start>
+            <end>Sun May 28 16:30:15 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Ibuprofen</field1>
+            <field2 label="Daily Dose"> 1600</field2>
+            <start>Fri Apr 28 16:31:25 PDT 2006</start>
+            <end>Sun May 28 16:31:25 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Senna</field1>
+            <field2 label="Daily Dose"> 32</field2>
+            <start>Fri Apr 28 16:32:25 PDT 2006</start>
+            <end>Sun May 28 16:32:25 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Primary ALDOSTERONISM</field1>
+            <field2 label="ICD9"> 255.10</field2>
+            <start>Fri Apr 28 16:24:56 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">VAR. MIGRAINE W/O INTRACTABLE</field1>
+            <field2 label="ICD9">346.20</field2>
+            <start>Fri Apr 28 16:25:31 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">LUMBAR DISC DISPLACEMENT</field1>
+            <field2 label="ICD9">722.10</field2>
+            <start>Fri Apr 28 16:25:56 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">SPINAL STENOSIS-LUMBAR</field1>
+            <field2 label="ICD9">724.02</field2>
+            <start>Fri Apr 28 16:26:15 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">RECURR DEPR DISORDER-UNSP</field1>
+            <field2 label="ICD9">296.30</field2>
+            <start>Fri Apr 28 16:26:44 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">DISC DEGENERATION NOS</field1>
+            <field2 label="ICD9">722.6</field2>
+            <start>Fri Apr 28 16:27:05 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">HYPERSOMNI W SLEEP APNEA</field1>
+            <field2 label="ICD9">780.53</field2>
+            <start>Fri Apr 28 16:27:23 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">LUMBOSACRAL NEURITIS NOS</field1>
+            <field2 label="ICD9">724.4</field2>
+            <start>Fri Apr 28 16:27:41 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">LUMBAGO</field1>
+            <field2 label="ICD9">724.2</field2>
+            <start>Fri Apr 28 16:28:01 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">PROLONG POSTTRAUM STRESS</field1>
+            <field2 label="ICD9">309.81</field2>
+            <start>Fri Apr 28 16:28:19 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">DEPRESSIVE DISORDER NEC</field1>
+            <field2 label="ICD9">311.</field2>
+            <start>Fri Apr 28 16:28:38 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pain</field1>
+            <field2 label="Value"> 5</field2>
+            <start>Fri Mar 10 16:33:05 PST 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Albumen</field1>
+            <field2 label="Value">4.0</field2>
+            <start>Fri Jan 27 16:33:36 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">16</field2>
+            <start>Fri Apr 28 16:34:25 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">16</field2>
+            <start>Fri Apr 28 16:34:47 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Alkaline_phosphatase</field1>
+            <field2 label="Value">75</field2>
+            <start>Fri Apr 28 16:35:11 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Total_Bilirubin</field1>
+            <field2 label="Value">1.0</field2>
+            <start>Fri Jan 27 16:35:41 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.0</field2>
+            <start>Fri Jan 27 16:36:12 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">68</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">686833</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="bale_knee">
+    <meds>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">31</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">313177</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="backer_young_backpain_noopioids">
+    <meds>
+        <item>
+            <field1 label="Drug">IBUPROFEN</field1>
+            <field2 label="Daily Dose"> 800MG</field2>
+            <start>Fri May 13 11:20:21 PDT 2005</start>
+            <end>Sat Jul 01 11:20:21 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">METHOCARBAMOL</field1>
+            <field2 label="Daily Dose"> 500MG</field2>
+            <start>Fri May 13 00:00:00 PDT 2005</start>
+            <end>Sat Jul 01 11:21:54 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">LIDOCAINE LIQUID</field1>
+            <field2 label="Daily Dose"> 2%</field2>
+            <start>Thu Jun 01 11:22:58 PDT 2006</start>
+            <end>Sat Jul 01 11:22:58 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">DIPLOPIA</field1>
+            <field2 label="ICD9">368.2</field2>
+            <start>Thu Jun 01 11:18:44 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Lumbar Radiculopathy</field1>
+            <field2 label="ICD9">724.4</field2>
+            <start>Thu Jun 01 11:19:22 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Displacement of lumbar intervertebral disc without myelopathy</field1>
+            <field2 label="ICD9">722.10</field2>
+            <start>Thu Jun 01 11:19:46 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Albumen</field1>
+            <field2 label="Value">4.1     g/dL       3.0 - 5.5</field2>
+            <start>Sun Jul 03 11:23:32 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST/GOT</field1>
+            <field2 label="Value">20     IU/L       0 - 41</field2>
+            <start>Sun Jul 03 00:00:00 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT/GPT</field1>
+            <field2 label="Value">23     IU/L       0 - 45</field2>
+            <start>Sun Jul 03 00:00:00 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALK PHOSPHATASE</field1>
+            <field2 label="Value">72     IU/L       30 - 115</field2>
+            <start>Thu Jun 01 11:25:45 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALK PHOSPHATASE</field1>
+            <field2 label="Value">72     IU/L       30 - 115</field2>
+            <start>Thu Jun 01 11:25:45 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALK PHOSPHATASE</field1>
+            <field2 label="Value">72     IU/L       30 - 115</field2>
+            <start>Thu Jun 01 11:25:45 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALK PHOSPHATASE</field1>
+            <field2 label="Value">72     IU/L       30 - 115</field2>
+            <start>Thu Jun 01 11:25:45 PDT 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">30</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">303066</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="palmer_no_ongoing_opioids">
+    <meds>
+        <item>
+            <field1 label="Drug">DIAZEPAM</field1>
+            <field2 label="Daily Dose"> 5MG</field2>
+            <start>Thu Mar 16 14:25:37 PST 2006</start>
+            <end>Fri Sep 15 14:25:37 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">CYCLOBENZAPRINE</field1>
+            <field2 label="Daily Dose">10MG</field2>
+            <start>Tue Nov 01 14:28:06 PST 2005</start>
+            <end>Sat Jul 01 14:28:06 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">TACHYCARDIA, PAROX ATRIAL</field1>
+            <field2 label="ICD9">427.0</field2>
+            <start>Thu Jun 01 14:22:25 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Palpitations</field1>
+            <field2 label="ICD9">785.1</field2>
+            <start>Thu Jun 01 14:23:11 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">PMS</field1>
+            <field2 label="ICD9">625.4</field2>
+            <start>Thu Jun 01 14:23:40 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Panic Attacks</field1>
+            <field2 label="ICD9">300.01</field2>
+            <start>Thu Jun 01 14:24:05 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Allergic rhinitis</field1>
+            <field2 label="ICD9">477.9</field2>
+            <start>Thu Jun 01 14:24:29 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Low Back Pain</field1>
+            <field2 label="ICD9">724.2</field2>
+            <start>Thu Jun 01 14:24:53 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">MASS,BENIGN</field1>
+            <field2 label="ICD9">217.</field2>
+            <start>Thu Jun 01 14:25:15 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">NASALIDE</field1>
+            <start>Thu Jun 01 14:29:23 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Albumen</field1>
+            <field2 label="Value">4.1     g/dL       3.0 - 5.5</field2>
+            <start>Tue Jun 14 14:29:51 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST/GOT</field1>
+            <field2 label="Value">24     IU/L       0 - 41</field2>
+            <start>Tue Jun 14 14:30:36 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT/GPT</field1>
+            <field2 label="Value">23     IU/L       0 - 45</field2>
+            <start>Tue Jun 14 14:31:20 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">Total_Bilirubin</field1>
+            <field2 label="Value">0.9     mg/dl      0.2 - 1.3</field2>
+            <start>Tue Jun 14 14:31:50 PDT 2005</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">0.9     mg/dl      0.4 - 1.3</field2>
+            <start>Tue Jun 14 14:33:15 PDT 2005</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">39</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Pain Score</field1>
+            <field2 label="Value">1</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">393977</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Bars_psych_issues">
+    <meds>
+        <item>
+            <field1 label="Drug">METHYLPHENIDATE</field1>
+            <field2 label="Daily Dose"> 30</field2>
+            <start>Tue Apr 25 15:24:11 PDT 2006</start>
+            <end>Sat Jul 01 15:24:11 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">IBUPROFEN</field1>
+            <field2 label="Daily Dose"> 1600</field2>
+            <start>Wed Mar 01 15:25:07 PST 2006</start>
+            <end>Sat Jul 01 15:25:07 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">DOCUSATE</field1>
+            <field2 label="Daily Dose"> 500</field2>
+            <start>Wed Mar 01 15:26:14 PST 2006</start>
+            <end>Sat Jul 01 15:26:14 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">TRAZODONE</field1>
+            <field2 label="Daily Dose"> 400</field2>
+            <start>Thu Jun 01 15:28:02 PDT 2006</start>
+            <end>Sat Jul 01 15:28:02 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">VENLAFAXINE XR CAP,SA</field1>
+            <field2 label="Daily Dose"> 300</field2>
+            <start>Wed Mar 01 15:28:38 PST 2006</start>
+            <end>Sat Jul 01 15:28:38 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">ZIPRASIDONE CAP</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Mar 01 15:33:38 PST 2006</start>
+            <end>Sat Jul 01 15:33:38 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">ARIPIPRAZOLE TAB</field1>
+            <field2 label="Daily Dose">15</field2>
+            <start>Thu Jun 01 15:35:13 PDT 2006</start>
+            <end>Sat Jul 01 15:35:13 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">borderline personality disorder</field1>
+            <field2 label="ICD9">799.9</field2>
+            <start>Thu Jun 01 15:14:38 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Neck Stiffness from whiplash of recent MVA</field1>
+            <field2 label="ICD9">799.9</field2>
+            <start>Thu Jun 01 15:15:10 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Seasonal Allergies</field1>
+            <field2 label="ICD9">799.9</field2>
+            <start>Thu Jun 01 15:15:32 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">DDD SPINE UNSPEC</field1>
+            <field2 label="ICD9">722.6</field2>
+            <start>Thu Jun 01 15:15:55 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Cocaine abuse, in remission</field1>
+            <field2 label="ICD9">305.63</field2>
+            <start>Fri Jan 16 15:16:17 PST 2004</start>
+        </item>
+        <item>
+            <field1 label="Dx">Gastroesophageal Reflux Disorder</field1>
+            <field2 label="ICD9">530.81</field2>
+            <start>Thu Jun 01 15:17:11 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">EATING DISORDER, UNSPEC</field1>
+            <field2 label="ICD9">307.50</field2>
+            <start>Thu Jun 01 15:17:40 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">PROLONG POSTTRAUM STRESS</field1>
+            <field2 label="ICD9">309.81</field2>
+            <start>Thu Jun 01 15:20:18 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">CARBAMAZEPINE</field1>
+            <start>Thu Jun 01 15:22:44 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="ADR">BUPROPION</field1>
+            <start>Thu Jun 01 15:23:39 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="ADR">DESIPRAMINE</field1>
+            <start>Thu Jun 01 15:23:55 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">41</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">858522</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Depressed Dave">
+    <meds>
+        <item>
+            <field1 label="Drug">Oxycodone CR</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Mar 13 00:07:46 PST 2006</start>
+            <end>Sun Jul 16 00:07:46 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Anxiety</field1>
+            <field2 label="ICD9">300</field2>
+            <start>Fri Jun 16 00:07:15 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Depression</field1>
+            <field2 label="ICD9">296.25</field2>
+            <start>Fri Jun 16 00:07:40 PDT 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="ADR">Morphine ER</field1>
+            <start>Fri Jun 16 00:08:10 PDT 2006</start>
+        </item>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">53</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">535344</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94131</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-Lives-Too-Far-Jones  (Zipcode Criteria, in TM)">
+    <meds>
+        <item>
+            <field1 label="Drug">Morphine CR</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 19:34:04 PDT 2006</start>
+            <end>Wed Aug 23 19:34:04 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">08824</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">50</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">765050</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-Suspect-Misuse-Jones ">
+    <meds>
+        <item>
+            <field1 label="Drug">Morphine ER</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jul 24 19:46:13 PDT 2006</start>
+            <end>Wed Aug 23 19:46:13 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">41</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">764141</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-DidntTakeLastUDS-Jones">
+    <meds>
+        <item>
+            <field1 label="Drug">Morphine ER</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 20:06:31 PDT 2006</start>
+            <end>Wed Aug 23 20:06:31 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Last_UDS_Taken</field1>
+            <field2 label="Value">no</field2>
+            <start>Mon Jul 24 20:07:21 PDT 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">75</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">767575</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-MissedManyAppointments-Jones">
+    <meds>
+        <item>
+            <field1 label="Drug">Oxycodone CR</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 20:28:18 PDT 2006</start>
+            <end>Wed Aug 23 20:28:18 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Fraction_Missed_Appointments</field1>
+            <field2 label="Value">0.4</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Num_Appointments</field1>
+            <field2 label="Value">10</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">46</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">764646</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-AnalgesiaDoesNotImprove Three Drugs -- Jones">
+    <meds>
+        <item>
+            <field1 label="Drug">Fentanyl</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 20:51:18 PDT 2006</start>
+            <end>Wed Aug 23 20:51:18 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Oxycodone CR</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 20:51:21 PDT 2006</start>
+            <end>Wed Aug 23 20:51:21 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Morphine ER</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 20:51:24 PDT 2006</start>
+            <end>Wed Aug 23 20:51:24 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Pain_Vital_Constancy</field1>
+            <field2 label="Value">yes</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">62</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">766262</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Joe-AveragePainNo Improve Three Drugs -- Jones">
+    <meds>
+        <item>
+            <field1 label="Drug">Methadone</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 21:19:47 PDT 2006</start>
+            <end>Wed Aug 23 21:19:47 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Oxycodone CR</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 21:19:50 PDT 2006</start>
+            <end>Wed Aug 23 21:19:50 PDT 2006</end>
+        </item>
+        <item>
+            <field1 label="Drug">Fentanyl</field1>
+            <field2 label="Daily Dose">0.0</field2>
+            <start>Mon Jul 24 21:20:30 PDT 2006</start>
+            <end>Wed Aug 23 21:20:30 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value">10</field2>
+            <start>Mon Jul 24 21:19:54 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">59</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">765959</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Samson Test Patient">
+    <meds>
+        <item>
+            <field1 label="Drug">Oxycodone_Long_Acting</field1>
+            <field2 label="Daily Dose">100</field2>
+            <start>Mon Jul 24 21:29:46 PDT 2006</start>
+            <end>Wed Aug 23 21:29:46 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Average_Pain_in_Last_Week</field1>
+            <field2 label="Value">10</field2>
+            <start>Mon Jul 24 21:29:40 PDT 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Overall_ADL</field1>
+            <field2 label="Value"> 1</field2>
+            <start>Tue Aug 29 14:11:10 PDT 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">ZipCode</field1>
+            <field2 label="Value">94025</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">55</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">SSN</field1>
+            <field2 label="Value">765555</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+</patientdata>

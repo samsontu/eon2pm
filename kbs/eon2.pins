@@ -1,0 +1,583 @@
+; Mon Mar 02 13:14:14 PST 2015
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Absolute_Contraindications] of  Slot_With_Pretty_Name
+
+	(PrettyName "absolute contraindications")
+	(weight -10))
+
+([Compelling_Indications] of  Slot_With_Pretty_Name
+
+	(PrettyName "strong indications")
+	(weight 10))
+
+([Complication_Factor] of  Slot_With_Pretty_Name
+
+	(PrettyName "complication conditions"))
+
+([Dharma2_00000] of  %3ASTANDARD-FACET
+)
+
+([Dharma2_00001] of  %3ASTANDARD-FACET
+)
+
+([Dharma_11861] of  %3ASTANDARD-FACET
+
+	(%3AASSOCIATED-SLOT [weight]))
+
+([Dharma_11862] of  %3ASTANDARD-FACET
+)
+
+([Dharma_11863] of  %3ASTANDARD-FACET
+)
+
+([Dharma_11864] of  %3ASTANDARD-FACET
+
+	(%3AASSOCIATED-SLOT [PrettyName]))
+
+([Do_Not_Start_Conditions] of  Slot_With_Pretty_Name
+)
+
+([Drug_Class_Name] of  Slot_With_Pretty_Name
+
+	(PrettyName "drug class name"))
+
+([Drug_Partners] of  Slot_With_Pretty_Name
+
+	(PrettyName "drug partners")
+	(weight 1))
+
+([Drug_Partners_To_Avoid] of  Slot_With_Pretty_Name
+
+	(PrettyName "drug partners to avoid")
+	(weight -1))
+
+([eon-guideline2_107819] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "subclasses of Medical Condition Class are all instances of Medical_Conditions_Metaclass")
+	(%3APAL-RANGE "(defrange ?subclass :FRAME :STANDARD-CLASS)")
+	(%3APAL-STATEMENT "(forall ?subclass\n        (=> (subclass-of (coerce-to-class ?subclass) (coerce-to-class \"Medical_Conditions_Class\"))\n            (instance-of ?subclass (coerce-to-class \"Medical_Conditions_Metaclass\")))\n)\n"))
+
+([eon2_Class0] of  Version
+
+	(version "Version 2.25")
+	(version_note "1. Added subguidelines slot to Management Guideline."))
+
+([eon2_Class10000] of  Version
+
+	(version "versin 2.26")
+	(version_note "modified slots in messages. Deleted Guideline_Task and Procedure."))
+
+([eon2_Class100000] of  Join_Filter
+
+	(attribute_comparisons
+		[eon2_Class120001]
+		[eon2_Class120002])
+	(label "is bad drug partner of a med")
+	(query [eon2_Class120003]))
+
+([eon2_Class100001] of  Structured_Query
+
+	(label "Drug Usages with bad drug partner med")
+	(type Drug_Usage)
+	(where_restriction [eon2_Class80002]))
+
+([eon2_Class100002] of  Attributes_Comparison
+
+	(attribute [drug_name])
+	(attribute_to_compare [Drug_Class_Name])
+	(label "drug name a suclass of drug class name")
+	(operator subclass_of))
+
+([eon2_Class100003] of  Attributes_Comparison
+
+	(attribute [drug_name])
+	(attribute_to_compare [Drug_Partners_To_Avoid])
+	(label "drug name not member of bad drug partner")
+	(operator not_member_of))
+
+([eon2_Class110001] of  Comparison_Filter
+
+	(attribute [drug_name])
+	(label "drug name is member of a Drug Usage bad partner")
+	(operator member_of)
+	(value_expression [eon2_Class110002]))
+
+([eon2_Class110002] of  Structured_Query
+
+	(attribute [Drug_Partners_To_Avoid])
+	(label "Bad partners of a Drug Usage for a current med")
+	(type Drug_Usage)
+	(where_restriction [eon2_Class110003]))
+
+([eon2_Class110003] of  Comparison_Filter
+
+	(attribute [Drug_Class_Name])
+	(label "Drug class name intersect current medication")
+	(operator intersect)
+	(value_expression [eon2_Class80003]))
+
+([eon2_Class120001] of  Attributes_Comparison
+
+	(attribute [drug_name])
+	(attribute_to_compare [Drug_Partners_To_Avoid])
+	(label "drug name a member of bad drug partner")
+	(operator member_of))
+
+([eon2_Class120002] of  Attributes_Comparison
+
+	(attribute [drug_name])
+	(attribute_to_compare [Drug_Class_Name])
+	(label "drug name not a subclass of drug class name (of Drug Usage)")
+	(operator not_subclass_of))
+
+([eon2_Class120003] of  Structured_Query
+
+	(label "Drug usage of a med, and that has a bad partner")
+	(type Drug_Usage)
+	(where_restriction
+		[eon2_Class80002]
+		[eon2_Class110003]))
+
+([eon2_Class20000] of  Variable_ValueSet
+
+	(derivation_expression [eon2_Class20003])
+	(label "multi-valued substitution specification")
+	(property_values_to_get
+		[eon2_Class20001]
+		[eon2_Class20002]))
+
+([eon2_Class20001] of  Property_Value
+
+	(slot [drug_name])
+	(string_name "?drugName"))
+
+([eon2_Class20002] of  Property_Value
+
+	(slot [daily_dose])
+	(string_name "?dose"))
+
+([eon2_Class20003] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Current meds")
+	(PAL_query [eon2_Class20004]))
+
+([eon2_Class20004] of  PAL-QUERY
+
+	(%3APAL-NAME "Find current meds")
+	(%3APAL-RANGE "(defrange ?current_med :FRAME Medication)")
+	(%3APAL-STATEMENT "(findall ?current_med        \n (and (or (not (own-slot-not-null mood ?current_med ))\n                                     (mood ?current_med Authorized))\n                                 (patient_id ?current_med $patient_id)))\n"))
+
+([eon2_Class30000] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Numeric_Entry)
+	(label "There are less than or euqal 2 demographic data elements")
+	(numeric_domain_term Patient_Demographics)
+	(operator %3C%3D)
+	(value 2.0))
+
+([eon2_Class40000] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "There exists a contraindicated current med w no complicating factor")
+	(%3APAL-RANGE "(defrange ?current_med :FRAME Medication)\n(defrange ?problem :FRAME Note_Entry)\n(defrange ?problem1 :FRAME Note_Entry)\n(defrange ?contraindication :FRAME Medical_Conditions_Metaclass)\n(defrange ?derived_contraindication :FRAME Diagnostic_Term_Metaclass)\n(defrange ?complication :FRAME Medical_Conditions_Metaclass)\n(defrange ?derived_complication :FRAME Diagnostic_Term_Metaclass)\n(defrange ?med_class :FRAME Drug_Usage)")
+	(%3APAL-STATEMENT "(exists ?current_med \n        (and (or (not (own-slot-not-null mood ?current_med ))\n                 (mood ?current_med Authorized)) \n             (patient_id ?current_med $patient_id)\n             (is-class (drug_name ?current_med))\n             (exists ?med_class\n                     (and (equal-or-subclass-of (coerce-to-class (drug_name ?current_med)) (Drug_Class_Name ?med_class ))\n                          (not (exists ?complication \n                                       (and  (Complication_Factor ?med_class ?complication)\n                                             (exists ?problem1 \n                                                     (and (patient_id ?problem1 $patient_id)\n                                                          (is-class (domain_term ?problem1) )\n                                                          (equal-or-subclass-of  (coerce-to-class (domain_term ?problem1))\n                                                                                 ?complication))))))\n                          (not (exists ?derived_complication\n                                       (and (Complication_Factor ?med_class ?derived_complication)\n                                            (is-derivable ?derived_complication))))\n             \n                          (or (exists ?contraindication \n                                      (and  (Absolute_Contraindications ?med_class ?contraindication)\n                                            (exists ?problem \n                                                    (and (patient_id ?problem $patient_id)\n                                                         (is-class (domain_term ?problem) )\n                                                         (equal-or-subclass-of  (coerce-to-class (domain_term ?problem))\n                                                                                ?contraindication)))))\n                              (exists ?derived_contraindication\n                                      (and (Absolute_Contraindications ?med_class ?derived_contraindication)\n                                           (is-derivable ?derived_contraindication))))\n                     ))))"))
+
+([eon2_Class50000] of  N_ary_Criterion
+
+	(criteria [eon2_Class50001])
+	(label "Impaired Renal Function")
+	(operator OR))
+
+([eon2_Class50001] of  Expression_Comparison_Criterion
+
+	(expression [eon2_Class50002])
+	(label "Most recent eGFR (min if multiple on the same day) < 60")
+	(operator %3C%3D)
+	(variable [eon2_Class50003]))
+
+([eon2_Class50002] of  Numeric_Constant
+
+	(label "60")
+	(value 60.0))
+
+([eon2_Class50003] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(key_slot [value])
+	(label "Most recent eGFR (min if multiple on the same day)")
+	(%3ADOCUMENTATION "if there exists eGFR within last 30 days"))
+
+([eon2_Class60000] of  Comparison_Filter
+
+	(attribute [Complication_Factor])
+	(label "EPR complication")
+	(operator intersect)
+	(value_expression [eon2_Class60003]))
+
+([eon2_Class60001] of  N_aryFilter
+
+	(filters
+		[eon2_Class60002]
+		[eon2_Class60004])
+	(label "EPR contraindication or derivable contraindication")
+	(operator OR))
+
+([eon2_Class60002] of  Comparison_Filter
+
+	(attribute [Absolute_Contraindications])
+	(label "EPR contraindication")
+	(operator intersect)
+	(value_expression [eon2_Class60003]))
+
+([eon2_Class60003] of  Structured_Query
+
+	(attribute [domain_term])
+	(label "The domain term of all note entries")
+	(type Note_Entry))
+
+([eon2_Class60004] of  Predicate_Filter
+
+	(attribute [Absolute_Contraindications])
+	(label "Derivable contraindication")
+	(predicate derivable)
+	(quantifier exists))
+
+([eon2_Class70000] of  Structured_Query
+
+	(attribute [drug_name])
+	(label "drug name of meds that have bad drug partners")
+	(type Medication)
+	(where_restriction [eon2_Class90000]))
+
+([eon2_Class70001] of  Comparison_Filter
+
+	(attribute [%3ANAME])
+	(label ":NAME in note entries")
+	(operator member_of)
+	(value_expression [eon2_Class60003]))
+
+([eon2_Class70002] of  Comparison_Filter
+
+	(attribute [%3ANAME])
+	(label ":Name eq lisinopril")
+	(operator eq)
+	(value_expression [common_Instance_12]))
+
+([eon2_Class80000] of  Join_Filter
+
+	(attribute_comparisons
+		[eon2_Class100002]
+		[eon2_Class100003])
+	(label "has drug-usage bad drug partner")
+	(query [eon2_Class100001]))
+
+([eon2_Class80001] of  Predicate_Filter
+
+	(attribute [Complication_Factor])
+	(label "Derivable complication")
+	(predicate derivable)
+	(quantifier exists))
+
+([eon2_Class80002] of  Comparison_Filter
+
+	(attribute [Drug_Partners_To_Avoid])
+	(label "EPR bad drug partner")
+	(operator intersect)
+	(value_expression [eon2_Class80003]))
+
+([eon2_Class80003] of  Structured_Query
+
+	(attribute [drug_name])
+	(label "Medication drug names")
+	(type Medication))
+
+([eon2_Class80004] of  N_aryFilter
+
+	(filters
+		[eon2_Class80001]
+		[eon2_Class60000])
+	(label "EPR complication or derivable complication")
+	(operator OR))
+
+([eon2_Class80005] of  Structured_Query
+
+	(attribute [drug_name])
+	(label "drug name of meds not at max dose, not contraindicated or has complication or bad partner")
+	(type Medication)
+	(where_restriction
+		[eon2_Class80006]
+		[eon2_Class80009]
+		[eon2_Class80013]
+		[eon2_Class80016]))
+
+([eon2_Class80006] of  N_aryFilter
+
+	(filters [eon2_Class80007])
+	(label "Not contraindicated")
+	(operator NOT))
+
+([eon2_Class80007] of  Comparison_Filter
+
+	(attribute [drug_name])
+	(label "med contraindicated")
+	(operator member_of)
+	(value_expression [eon2_Class80008]))
+
+([eon2_Class80008] of  Structured_Query
+
+	(attribute [Drug_Class_Name])
+	(label "Drug class names of contraindicated drugs")
+	(type Drug_Usage)
+	(where_restriction [eon2_Class60001]))
+
+([eon2_Class80009] of  Join_Filter
+
+	(attribute_comparisons
+		[eon2_Class80011]
+		[eon2_Class80012])
+	(label "Not at max dose")
+	(query [eon2_Class80010]))
+
+([eon2_Class80010] of  Structured_Query
+
+	(label "Guideline drugs")
+	(type Guideline_Drug))
+
+([eon2_Class80011] of  Attributes_Comparison
+
+	(attribute [drug_name])
+	(attribute_to_compare [generic_drug])
+	(label "drug name subclass of generic drug")
+	(operator subclass_of))
+
+([eon2_Class80012] of  Attributes_Comparison
+
+	(attribute [daily_dose])
+	(attribute_to_compare [increase_dose_ceiling])
+	(label "daily dose < increase dose ceiling")
+	(operator %3C))
+
+([eon2_Class80013] of  N_aryFilter
+
+	(filters [eon2_Class80014])
+	(label "No complication factor")
+	(operator NOT))
+
+([eon2_Class80014] of  Comparison_Filter
+
+	(attribute [drug_name])
+	(label "drug name not one that has complicatin factor")
+	(operator member_of)
+	(value_expression [eon2_Class80015]))
+
+([eon2_Class80015] of  Structured_Query
+
+	(attribute [Drug_Class_Name])
+	(label "Drug class name of Drug Usage that has complication factor")
+	(type Drug_Usage)
+	(where_restriction [eon2_Class80004]))
+
+([eon2_Class80016] of  N_aryFilter
+
+	(filters [eon2_Class80000])
+	(label "No bad drug partner")
+	(operator NOT))
+
+([eon2_Class80017] of  Comparison_Filter
+
+	(attribute [drug_name])
+	(label "drug name has bad partner")
+	(operator member_of)
+	(value_expression [eon2_Class80018]))
+
+([eon2_Class80018] of  Structured_Query
+
+	(attribute [Drug_Class_Name])
+	(label "Drug class name of Drug Usage with bad partner")
+	(type Drug_Usage)
+	(where_restriction [eon2_Class80002]))
+
+([eon2_Class90000] of  N_aryFilter
+
+	(filters
+		[eon2_Class80000]
+		[eon2_Class100000])
+	(label "has bad drug partner")
+	(operator OR))
+
+([eon2_Class90001] of  Query_Result_Criterion
+
+	(label "There exists bad drug partner")
+	(presence TRUE)
+	(query [eon2_Class70000]))
+
+([eon2_Class90002] of  Query_Result_Criterion
+
+	(label "there exists non-contraindicated meds not at max level")
+	(presence TRUE)
+	(query [eon2_Class80005]))
+
+([eon2_Instance_0] of  Version
+
+	(version "version 2.02")
+	(version_note "Changed slot-not-null PAL constraints to facet cardinality constraints."))
+
+([eon2_Instance_1] of  Version
+
+	(version "version 2.10")
+	(version_note "- Added \"direction\" slot in Modify_Activity\n- Deleted Ordinal-Valued_AtomicTest_Metaclass in \"library\" project."))
+
+([eon2_Instance_10000] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Only Action_Choice instances follow Choice_Step")
+	(%3APAL-RANGE "(defrange ?connector :FRAME Followed_By)\n(defrange ?choice :FRAME Choice_Step)\n(defrange ?node :FRAME Management_Algorithm_Entity)")
+	(%3APAL-STATEMENT "(forall ?choice\n        (forall ?node \n                (=> (exists ?connector\n                            (and (:FROM ?connector ?choice)(:TO ?connector ?node )))\n                    (instance-of ?node (coerce-to-class \"Action_Choice\"))))\n)"))
+
+([eon2_Instance_100000] of  Version
+
+	(version "version 2.17")
+	(version_note "Added Variable as an allowed class of patient_characterization slot in Management_Guideline"))
+
+([eon2_Instance_10002] of  Version
+
+	(version "version 2.14")
+	(version_note "1. Added display_location and main_message slots to Message class (a Opioid KB request, used by the Opioid GUI)\n2. Deleted Numeric_PAL_Criterion class\n3. Added Expression_Compariosn_Criterion\n4. Deleted the \"slot\" slot in Numeric_PAL_Query, replace it with \"key_slot\""))
+
+([eon2_Instance_10005] of  Version
+
+	(version "version 2.08")
+	(version_note "- Added Goal class (subclass of Goal_Entity)\n- Added SelectedGoal_Criterion (reference to an instance of Goal). Checks to see if the referenced goal is satisfied."))
+
+([eon2_Instance_110000] of  Version
+
+	(version "versuib 2.18")
+	(version_note "1. Added Date_Expression class\n2. Merged all included projects"))
+
+([eon2_Instance_120000] of  Version
+
+	(version "version 2.19")
+	(version_note "1. partitioned out \"common\" project\n2. added PAL query as allowed anchor for Relative_Time_Interval class."))
+
+([eon2_Instance_140000] of  Version
+
+	(version "version 2.20")
+	(version_note "1. added rule_in_condition to Referral and Schedule\n2. added when to Referral\n3. Changed who_with in Schedule to have type Class"))
+
+([eon2_Instance_150000] of  Version
+
+	(version "version 2.21")
+	(version_note "1. Added rule_in_condition to Collect_Patient_Data\n2. Added Structured_Query class, which allows you to specify a query of the form:\n   select aggregate_operator attribute from entry_type where where_restriction\n  e.g., select most_recent daily_dose from Medication where drug_name eq \"lisinopril\"\n3. Added Query_Result_Criterion, which evaluates a query and returns True or False depending on whether the query returns anything."))
+
+([eon2_Instance_160000] of  Version
+
+	(version "version 2.22")
+	(version_note "1. Added Monitor_Message. Monitor message is applicable if rule_in_condition holds. If it's applicable, a reminder is triggered, possibly in the future, at \"valid time\" if precondition evaluates to TRUE at that time.\n2. Added where and encounter_type slots to Encounter class\n3. Added instances of Monitor_Message, Structured_Query and Query_Result_Criterion to demonstrate the use of monitoring future event"))
+
+([eon2_Instance_170002] of  Query_Result_Criterion
+
+	(label "Absence of encounter of encounter type X in clinic Y within 2 years")
+	(presence FALSE))
+
+([eon2_Instance_170004] of  Relative_Time_Point
+
+	(days_from_current_time 60)
+	(label "60 days from today"))
+
+([eon2_Instance_180000] of  Version
+
+	(version "version 2.23")
+	(version_note "1. Added Order_TestProcedure that allows you to specify \"test_or_procedure\" (e.g., HbA1C) at \"when\" (e.g. today)\n2. Fixed the display of Conditional_Expression\n3. Added possible_values to Quantitative_Data subclass of Data_Entry so that you can add 7%, 8%, 9% as PhysicalQuantity instances with value such as 7 and unit  %."))
+
+([eon2_Instance_190000] of  Version
+
+	(version "Version 2.24")
+	(version_note "- Changed the allowed parents of the domain_term of Data_Entry subclasses so that any Medical domain concept can be entered."))
+
+([eon2_Instance_2] of  Version
+
+	(version "version 2.05")
+	(version_note "- Added the slot \"filter\" for backward compatibilty with EON Presence_Query code"))
+
+([eon2_Instance_20000] of  Version
+
+	(version "version 2.03")
+	(version_note "1. Hide Action_Step\n2. Deleted SLOT-QUERIES from  Abstract_Time_Point\n3. Made Time_Entity abstract\n4. Deleted Off_Guideline class (it is already in the library.pprj)\n5. Guideline_Model class: a. Made primary=true the default and made label a required slot\n6. Made first_step in Consultaiton_Guideline a required slot\n7. Case_Step: made branches and expression required\n8. Choice Step: made branches required\n9. Consultation Branch Step: made branches required\n10: Drug_Usage: reverted to slot names of ATHENA Hypertension\n11: Action_Specification: added \"references\" slot\n12. Deleted \"Goal\" class\n13. Deleted Substition-Pair, Evaluate_Choice and its subclasses (never used)"))
+
+([eon2_Instance_30000] of  Version
+
+	(version "version 2.04")
+	(version_note "- Added Conditional_Expressions class\n- Added Parameterized_String class"))
+
+([eon2_Instance_4] of  Version
+
+	(version "version 2.01")
+	(version_note "Differences between this version and the one in ATHENADSS\n1. Removed the duplicate modeling in Drug_Usage and Drug_Info. slots in Drug_Usage now take instances of Drug_Relations as values\n2. Use Graph widget instead of Diagram widget"))
+
+([eon2_Instance_40000] of  Version
+
+	(version "version 2.06")
+	(version_note "- Added entry type to Numeric_Term_Criterion\n- Deleted \"greyed_out\" from default slot of Action Choice"))
+
+([eon2_Instance_5] of  Version
+
+	(version "version 2.07")
+	(version_note "- Added Interval data vallue\n- Added PAL_Query as allowed class in activity slot (so we can query for activity to modify)\n- Restored Supporting_Materials as allowed class of Drug_Usage's references slot\n- Added abstract Message class as superclass of On_Screen_Message and Parameterized_Message. Parameterized_Message allows use of variables in message string."))
+
+([eon2_Instance_50000] of  Version
+
+	(version "version 2.09")
+	(version_note "- Changed value type of Set_Expression to \"any\" (so that we can insert string PAL query result)"))
+
+([eon2_Instance_60000] of  Version
+
+	(version "version 2.11")
+	(version_note "Changed \"Complicating Factor\" slot to be class-valued, allowed parent Diagnostic Class."))
+
+([eon2_Instance_70000] of  Version
+
+	(version "version 2.12")
+	(version_note "- Added integer-valued priority slot to the Message class"))
+
+([eon2_Instance_70001] of  Version
+
+	(version "version 2.13")
+	(version_note "Changed valuetype of patient_characteristics slot to instance wtih allowed class Diagnostic_Term_Metaclass"))
+
+([eon2_Instance_80000] of  Version
+
+	(version "version 2.15")
+	(version_note "1. Added Temporal_Criterion back to the expressions project"))
+
+([eon2_Instance_90000] of  Version
+
+	(version "version 2.16")
+	(version_note "Added description slot to scenario for documentation purpose"))
+
+([OpioidGuideline_Instance_380003] of  Parameterized_String
+
+	(label "Test multi-valued substitution from a single instance")
+	(multivalued_variables [eon2_Class20000])
+	(value "The medication ?drugName has prescribed daily dose ?dose."))
+
+([Relative_Contraindications] of  Slot_With_Pretty_Name
+
+	(PrettyName "relative contraindications")
+	(weight -1))
+
+([Relative_Indications] of  Slot_With_Pretty_Name
+
+	(PrettyName "relative indications")
+	(weight 1))
+
+([Session_Time] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Session Date"))
+
+([Side_Effects] of  Slot_With_Pretty_Name
+
+	(PrettyName "side effects")
+	(weight -1))

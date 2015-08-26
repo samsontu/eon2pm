@@ -1,0 +1,33 @@
+CONTEXT = BMIR
+
+REM Path to performance measure KB
+PMKB = /Users/tu/workspace/eonpm/kbs/ATHENA_HF.pprj
+GUIDELINENAME=ATHENA HF Astronaut
+REM DB configuration file
+DBCONFIG = /Users/tu/workspace/eonpm/ini/AdvisoryOutpatientEON.mac
+OUTPUTDIR = /Users/tu/workspace/eonpm/testresult/
+
+
+DBHOST = jdbc:mysql://bmir-glinda.stanford.edu:3306/glinda
+USER = glinda
+PWORD = glinda
+DB = glinda
+SESSIONTYPE = Outpatient
+QUERY_FOR_MEDS = SELECT pid, generic_name, daily_dose, date FROM most_recent_rel_med_daily_dose_view WHERE pid = 'xxx'and date <= 'xxSessionTimexx';;
+QUERY_FOR_DX = SELECT pid, athena_dx_name, max(date) AS last_date FROM athena_dx_view WHERE pid = 'xxx' and date <= 'xxSessionTimexx' GROUP BY athena_dx_name;
+QUERY_FOR_VITALS = SELECT pid, measurement, value, max(valid_time) AS last_date FROM vitals WHERE pid = 'xxx' and valid_time <= 'xxSessionTimexx' GROUP BY measurement;
+QUERY_FOR_ADR = SELECT pid, generic_name, date FROM allergy_meds_view WHERE pid = 'xxx' and date <= 'xxSessionTimexx';
+QUERY_FOR_LABS = SELECT pid, athena_lab_name, lab_text, max(valid_time) AS last_date FROM athena_labs_view WHERE pid = 'xxx' and valid_time <= 'xxSessionTimexx' GROUP BY athena_lab_name;
+QUERY_FOR_DEMOGRAPHICS = SELECT pid, sex, athena_race FROM demographics WHERE pid = 'xxx';
+QUERY_FOR_AGE = SELECT datediff('xxStartMeasurementPeriodxx', '1900-01-01') DIV 365 AS age FROM cases WHERE pid = 'xxx';
+
+
+log4j.rootLogger=INFO, A1
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+
+# Print the date in ISO 8601 format
+log4j.appender.A1.layout.ConversionPattern=%d [%t] %-5p %c - %m%n
+
+# Print only messages of level WARN or above in the package com.foo.
+# log4j.logger.com.foo=WARN

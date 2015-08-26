@@ -1,0 +1,1489 @@
+; Sun Jul 20 23:35:07 PDT 2014
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+([ATHENA_DM_Foot_Instance_0] of  Management_Diagram
+
+	(label "Foot algorithm")
+	(steps
+		[ATHENA_DM_Foot_Instance_10000]
+		[ATHENA_DM_Foot_Instance_20024]
+		[ATHENA_DM_Foot_Instance_50000]
+		[ATHENA_DM_Foot_Instance_120005]
+		[ATHENA_DM_Foot_Instance_130001]
+		[ATHENA_DM_Foot_Instance_130010]
+		[ATHENA_DM_Foot_Instance_140001]
+		[ATHENA_DM_Foot_Instance_140030]
+		[ATHENA_DM_Foot_Instance_150008]
+		[ATHENA_DM_Foot_Instance_150023]
+		[ATHENA_DM_Foot_Instance_150046])
+	(transitions
+		[ATHENA_DM_Foot_Instance_20022]
+		[ATHENA_DM_Foot_Instance_150009]
+		[ATHENA_DM_Foot_Instance_150010]
+		[ATHENA_DM_Foot_Instance_150020]
+		[ATHENA_DM_Foot_Instance_150022]
+		[ATHENA_DM_Foot_Instance_150024]
+		[ATHENA_DM_Foot_Instance_150025]
+		[ATHENA_DM_Foot_Instance_150026]
+		[ATHENA_DM_Foot_Instance_150027]
+		[ATHENA_DM_Foot_Instance_150031]
+		[ATHENA_DM_Foot_Instance_150044]
+		[ATHENA_DM_Foot_Instance_150047]
+		[ATHENA_DM_Foot_Instance_150048]
+		[ATHENA_DM_Foot_swt_Instance_0]
+		[ATHENA_DM_Foot_swt_Instance_1]))
+
+([ATHENA_DM_Foot_Instance_1] of  Management_Guideline
+
+	(authors "Mary Goldstein")
+	(clinical_algorithm [ATHENA_DM_Foot_Instance_0])
+	(eligibility_criteria [ATHENA_DM_Eye_Instance_40003])
+	(label "ATHENA Diabetes Mellitus: Foot Care")
+	(title "Management of Diabetes Mellitus Module F - Foot Care")
+	(version "0.0"))
+
+([ATHENA_DM_Foot_Instance_10000] of  Scenario
+
+	(consultation_template [ATHENA_DM_Foot_Instance_60000])
+	(followed_by [ATHENA_DM_Foot_Instance_150008])
+	(label "Not wound-followup DM patients")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Foot_Instance_40000]))
+
+([ATHENA_DM_Foot_Instance_100000] of  Data_Entry_Template
+
+	(data_to_collect [ATHENA_DM_Foot_Instance_110001])
+	(label "Evaluate for need for nail or callus care"))
+
+([ATHENA_DM_Foot_Instance_100001] of  General_Comparison_Criterion
+
+	(domain_term Acute+ischemia%2Frest+pain)
+	(entry_type Note_Entry)
+	(label "Acute ischemia or rest pain YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100002] of  General_Comparison_Criterion
+
+	(domain_term foot+ulcer+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "Foot ulceration YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100003] of  General_Comparison_Criterion
+
+	(domain_term Ingrown+toenail)
+	(entry_type Note_Entry)
+	(label "Ingrown toenail YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100004] of  General_Comparison_Criterion
+
+	(domain_term Puncture+wound)
+	(entry_type Note_Entry)
+	(label "puncture wound YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100005] of  General_Comparison_Criterion
+
+	(domain_term Hemorrhagic+Callus+With+or+Without+Cellulitis)
+	(entry_type Note_Entry)
+	(label "hemorrhagic callus YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100006] of  Conditional_On_Screen_Message
+
+	(display_location Summary)
+	(label "Refer to appropriate level of care")
+	(message "Refer to appropriate level of care for evaluation and treatment.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Foot_Instance_20008]))
+
+([ATHENA_DM_Foot_Instance_100007] of  Referral
+
+	(label "Refer to foot care specialist (no minor wound) in 1 month")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_100010])
+	(when [ATHENA_DM_Eye_Instance_100003])
+	(who_to foot+care+specialist))
+
+([ATHENA_DM_Foot_Instance_100008] of  Data_Entry_Template
+
+	(data_to_collect [ATHENA_DM_Foot_Instance_100009])
+	(label "Evaluate for minor wound or lesion"))
+
+([ATHENA_DM_Foot_Instance_100009] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term minor+lesion)
+	(label "Is there a minor wound?")
+	(prompt "1.	Minor lesions or wounds that could possibly be treated by the primary care provider are blisters, erosions, and/or minor cuts that do not extend beyond subcutaneous tissue. Pulses are present, there are no signs of acute infection, and there is no severe lower limb pain and no sign of a worsening lesion. Is there a")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100010] of  General_Comparison_Criterion
+
+	(domain_term minor+lesion)
+	(entry_type Note_Entry)
+	(label "NO Minor wound data collected")
+	(operator neq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100011] of  General_Comparison_Criterion
+
+	(domain_term minor+lesion)
+	(entry_type Note_Entry)
+	(label "Minor wound or lesion YES data collected")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_100012] of  Conditional_On_Screen_Message
+
+	(display_location Summary)
+	(label "Confirm follow-up foot care specialist (minor wound)")
+	(message "Confirm follow up by foot care specialist if indicated and compliance by patient.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Foot_Instance_100011]))
+
+([ATHENA_DM_Foot_Instance_100013] of  Conditional_On_Screen_Message
+
+	(display_location Summary)
+	(label "Pt education (minor wound)")
+	(message "All patients and their families should receive self-management education for preventive foot care and selection of footwear. Instruction should include recommendations for daily foot inspection and preventive foot care, skin care, and use of emollients, nail care, and treatment for callus. Document.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Foot_Instance_100011]))
+
+([ATHENA_DM_Foot_Instance_100014] of  Data_Entry_Template
+
+	(data_to_collect [ATHENA_DM_Foot_Instance_100015])
+	(label "Evaluate for minor foot problems"))
+
+([ATHENA_DM_Foot_Instance_100015] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term minor+foot+problem)
+	(label "Evaluate for minor foot problems")
+	(prompt "Does patient have minor foot problems (e.g., onychomycosis, painful corn, dry skin, athlete’s foot, minor calluses, uncomplicated nail trimming and improper foot hygiene)?")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100088] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Perform and document visual inspection of feet")
+	(message "Perform and document visual inspection of patient's feet.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_100089] of  Data_Entry_Template
+
+	(data_to_collect
+		[ATHENA_DM_Foot_Instance_100091]
+		[ATHENA_DM_Foot_Instance_100092]
+		[ATHENA_DM_Foot_Instance_100093]
+		[ATHENA_DM_Foot_Instance_100094]
+		[ATHENA_DM_Foot_Instance_100095]
+		[ATHENA_DM_Foot_Instance_100096])
+	(label "Assess if limb threatening conditions present"))
+
+([ATHENA_DM_Foot_Instance_100090] of  Boolean_Data
+
+	(sensitive FALSE))
+
+([ATHENA_DM_Foot_Instance_100091] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Systemic+infection)
+	(label "Presence of systemic infection?")
+	(prompt "Is there")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100092] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Acute+ischemia%2Frest+pain)
+	(label "Presence of acute ischemia/rest pain")
+	(prompt "Is there")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100093] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term foot+ulcer+yes%2Fno)
+	(label "Presence of foot ulceration")
+	(prompt "Does the patient have")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100094] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Puncture+wound)
+	(label "Presence of puncture wound")
+	(prompt "Is there a")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100095] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Ingrown+toenail)
+	(label "Presence of ingrown toenail")
+	(prompt "Is there an")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_100096] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Hemorrhagic+Callus+With+or+Without+Cellulitis)
+	(label "Presence of hemorrhagic callus")
+	(prompt "Does patient have a")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_110000] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Confirm follow-up by foot care specialist")
+	(message "Confirm follow-up by foot care specialist if indicated and compliance by patient.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_110001] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term nail+or+callus+care)
+	(label "Evaluate for need for nail or callus care")
+	(prompt "Does patient need")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_120000] of  Data_Entry_Template
+
+	(data_to_collect [ATHENA_DM_Foot_Instance_120001])
+	(label "Minor lesion/wound healed?")
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_120001] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Minor+wound+healed)
+	(label "Minor lesion/wound healed?")
+	(prompt "Has minor wound healed?")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_120005] of  Action_Choice
+
+	(actions
+		[ATHENA_DM_Foot_Instance_120007]
+		[ATHENA_DM_Foot_Instance_120008])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "Low risk with minor wound")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_120006])
+	(strict_rule_out_condition [ATHENA_DM_Foot_Instance_80029]))
+
+([ATHENA_DM_Foot_Instance_120006] of  General_Comparison_Criterion
+
+	(domain_term minor+lesion)
+	(entry_type Note_Entry)
+	(label "Minor wound/lesion YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_120007] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Local wound care (K)")
+	(message "•	Provide local wound care: cleanse wound with saline, remove necrotic and callus tissue, apply appropriate dressing, and other indicated treatments.\n•	Offload pressure and weight, as indicated: consider lesion site and then provide pressure relief (e.g., special shoes and insoles and bed rest). To avoid further trauma to the lesion site, use a post-operative shoe, offloading, or depressurization footwear based on the lesion site(s).\n•	Follow-up on a specified schedule: VA facility specific patients with active lesions need to be followed at least monthly.\n•	Review the Self-Management and Education Module (Module S): reinforce nutrition, exercise and diabetes self-management. Avoid initiation of a calorie restriction diet for weight loss in patients with foot lesions.\n•	Provide patient and family education.\n•	Refer for foot care assistance, as needed, for patients unable to carry-out local wound care. Educate a family member on local wound care or refer the patient to a home health service.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_120008] of  Schedule
+
+	(label "Follow-up in a month")
+	(when [ATHENA_DM_Eye_Instance_100003])
+	(who_with primary+care+provider))
+
+([ATHENA_DM_Foot_Instance_130001] of  Action_Choice
+
+	(actions [ATHENA_DM_Foot_Instance_130003])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "Low risk no minor wound")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_100010])
+	(strict_rule_out_condition [ATHENA_DM_Foot_Instance_80029]))
+
+([ATHENA_DM_Foot_Instance_130003] of  Conditional_On_Screen_Message
+
+	(display_location Summary)
+	(label "Minor foot problem")
+	(message "Treat minor foot problems, as appropriate.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Foot_Instance_130004]))
+
+([ATHENA_DM_Foot_Instance_130004] of  General_Comparison_Criterion
+
+	(domain_term minor+foot+problem)
+	(entry_type Note_Entry)
+	(label "Minor foot problem YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_130010] of  Scenario
+
+	(consultation_template [ATHENA_DM_Foot_Instance_140004])
+	(followed_by [ATHENA_DM_Foot_Instance_150046])
+	(label "New encounter Wound follow-up")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Foot_Instance_140000]))
+
+([ATHENA_DM_Foot_Instance_130013] of  General_Comparison_Criterion
+
+	(label "Minor wound lesion")
+	(valid_window [ATHENA_DM_Foot_Instance_130015]))
+
+([ATHENA_DM_Foot_Instance_130014] of  Relative_Time_Interval_Definite
+)
+
+([ATHENA_DM_Foot_Instance_130015] of  Relative_Time_Interval_Definite
+)
+
+([ATHENA_DM_Foot_Instance_130016] of  Structured_Query
+
+	(label "Minor lesion dx 3-5weeks ago")
+	(type Note_Entry)
+	(where_restriction
+		[ATHENA_DM_Foot_Instance_130027]
+		[ATHENA_DM_Foot_Instance_130026]
+		[ATHENA_DM_Foot_Instance_130020]
+		[ATHENA_DM_Foot_Instance_130017]))
+
+([ATHENA_DM_Foot_Instance_130017] of  Comparison_Filter
+
+	(attribute [valid_time])
+	(label "Valid time <3 weeks")
+	(operator %3C)
+	(value_expression [ATHENA_DM_Foot_Instance_130018]))
+
+([ATHENA_DM_Foot_Instance_130018] of  Date_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(operator -)
+	(second_argument [ATHENA_DM_Foot_Instance_130019]))
+
+([ATHENA_DM_Foot_Instance_130019] of  Definite_Duration
+
+	(how_many "3")
+	(label "3 weeks")
+	(time_unit week))
+
+([ATHENA_DM_Foot_Instance_130020] of  Comparison_Filter
+
+	(attribute [valid_time])
+	(label "Valid time >5 weeks")
+	(operator %3E)
+	(value_expression [ATHENA_DM_Foot_Instance_130024]))
+
+([ATHENA_DM_Foot_Instance_130021] of  Date_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(operator -)
+	(second_argument [ATHENA_DM_Foot_Instance_130023]))
+
+([ATHENA_DM_Foot_Instance_130022] of  Definite_Duration
+
+	(how_many "5")
+	(label "Today - 5 weeks")
+	(time_unit week))
+
+([ATHENA_DM_Foot_Instance_130023] of  Definite_Duration
+
+	(how_many "3")
+	(label "3 weeks")
+	(time_unit week))
+
+([ATHENA_DM_Foot_Instance_130024] of  Date_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(operator -)
+	(second_argument [ATHENA_DM_Foot_Instance_130025]))
+
+([ATHENA_DM_Foot_Instance_130025] of  Definite_Duration
+
+	(how_many "5")
+	(label "5 weeks")
+	(time_unit week))
+
+([ATHENA_DM_Foot_Instance_130026] of  Comparison_Filter
+
+	(attribute [value])
+	(label "Value minor lesion is  YES")
+	(operator eq)
+	(value_expression [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_130027] of  Comparison_Filter
+
+	(attribute [domain_term])
+	(label "Minor lesion")
+	(operator eq)
+	(value_expression [minor+lesion]))
+
+([ATHENA_DM_Foot_Instance_140000] of  Query_Result_Criterion
+
+	(label "Minor lesion diagnosed ~4weeks ago")
+	(presence TRUE)
+	(query [ATHENA_DM_Foot_Instance_130016]))
+
+([ATHENA_DM_Foot_Instance_140001] of  Action_Choice
+
+	(actions [ATHENA_DM_Foot_Instance_140008])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "No, Refer")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_140000]))
+
+([ATHENA_DM_Foot_Instance_140002] of  Data_Entry_Template
+)
+
+([ATHENA_DM_Foot_Instance_140004] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Foot_Instance_140005])
+	(label "Minor wound follow up")
+	(steps
+		[ATHENA_DM_Foot_Instance_140005]
+		[ATHENA_DM_Foot_Instance_140006])
+	(transitions [ATHENA_DM_Foot_Instance_140007]))
+
+([ATHENA_DM_Foot_Instance_140005] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140006])
+	(label "Minor wound follow up")
+	(selection_method all_of))
+
+([ATHENA_DM_Foot_Instance_140006] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Foot_Instance_120000])
+	(label "Has wound healed?")
+	(rule_in [ATHENA_DM_Foot_Instance_140000]))
+
+([ATHENA_DM_Foot_Instance_140007] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140005])
+	(%3ATO [ATHENA_DM_Foot_Instance_140006]))
+
+([ATHENA_DM_Foot_Instance_140008] of  Referral
+
+	(label "Minor wound healed NO")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_140010])
+	(when [ATHENA_DM_Eye_Instance_100018])
+	(who_to foot+care+specialist))
+
+([ATHENA_DM_Foot_Instance_140009] of  General_Comparison_Criterion
+
+	(domain_term Minor+wound+healed)
+	(entry_type Note_Entry)
+	(label "Minor wound healed? YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_140010] of  General_Comparison_Criterion
+
+	(domain_term Minor+wound+healed)
+	(entry_type Note_Entry)
+	(label "Minor wound healed? NO")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_140011]))
+
+([ATHENA_DM_Foot_Instance_140011] of  Qualitative_Constant
+
+	(value "no"))
+
+([ATHENA_DM_Foot_Instance_140019] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Foot_Instance_140020])
+	(label "General recs")
+	(steps
+		[ATHENA_DM_Foot_Instance_140020]
+		[ATHENA_DM_Foot_Instance_140021])
+	(transitions [ATHENA_DM_Foot_Instance_140022]))
+
+([ATHENA_DM_Foot_Instance_140020] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140021])
+	(label "General Rec")
+	(selection_method some_of))
+
+([ATHENA_DM_Foot_Instance_140021] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_DM_Foot_Instance_110000]
+		[ATHENA_DM_Foot_Instance_80016])
+	(label "General recs")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_140022] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140020])
+	(%3ATO [ATHENA_DM_Foot_Instance_140021]))
+
+([ATHENA_DM_Foot_Instance_140030] of  Action_Choice
+
+	(actions [ATHENA_DM_Foot_Instance_100006])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "Presence of limb threatening scenario")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_20008]))
+
+([ATHENA_DM_Foot_Instance_140036] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Foot_Instance_140037])
+	(label "High risk for foot problems?")
+	(steps
+		[ATHENA_DM_Foot_Instance_140037]
+		[ATHENA_DM_Foot_Instance_140038]
+		[ATHENA_DM_Foot_Instance_140044]
+		[ATHENA_DM_Foot_Instance_140045])
+	(transitions
+		[ATHENA_DM_Foot_Instance_140040]
+		[ATHENA_DM_Foot_Instance_140047]
+		[ATHENA_DM_Foot_Instance_140056]))
+
+([ATHENA_DM_Foot_Instance_140037] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140038])
+	(label "High risk for foot problems?"))
+
+([ATHENA_DM_Foot_Instance_140038] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Foot_Instance_70000])
+	(followed_by [ATHENA_DM_Foot_Instance_150037])
+	(label "No threatened limb. High risk for foot problems?")
+	(rule_in [ATHENA_DM_Foot_Instance_150049]))
+
+([ATHENA_DM_Foot_Instance_140040] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140037])
+	(%3ATO [ATHENA_DM_Foot_Instance_140038]))
+
+([ATHENA_DM_Foot_Instance_140044] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140045])
+	(label "Does patient have a minor wound?"))
+
+([ATHENA_DM_Foot_Instance_140045] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_DM_Foot_Instance_100008]
+		[ATHENA_DM_Foot_Instance_140057])
+	(label "Not high risk, wound or circulatory symptoms that limit lifestyle?")
+	(rule_in [ATHENA_DM_Foot_Instance_80040]))
+
+([ATHENA_DM_Foot_Instance_140047] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140038])
+	(%3ATO [ATHENA_DM_Foot_Instance_140044]))
+
+([ATHENA_DM_Foot_Instance_140049] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Foot_Instance_140050])
+	(label "Foot problems?")
+	(steps
+		[ATHENA_DM_Foot_Instance_140050]
+		[ATHENA_DM_Foot_Instance_140051])
+	(transitions [ATHENA_DM_Foot_Instance_140052]))
+
+([ATHENA_DM_Foot_Instance_140050] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140051])
+	(label "Foot problems?"))
+
+([ATHENA_DM_Foot_Instance_140051] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Foot_Instance_100014])
+	(label "Foot problems?")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_140052] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140050])
+	(%3ATO [ATHENA_DM_Foot_Instance_140051]))
+
+([ATHENA_DM_Foot_Instance_140056] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140044])
+	(%3ATO [ATHENA_DM_Foot_Instance_140045]))
+
+([ATHENA_DM_Foot_Instance_140057] of  Data_Entry_Template
+
+	(data_to_collect [ATHENA_DM_Foot_Instance_140058])
+	(label "Does pt have circulatory symptoms that limit lifestyle?")
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_140058] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term circulatory+symptoms+that+limit+patient%27s+lifestyle)
+	(label "Does pt have circulatory symptoms that limit lifestyle?")
+	(prompt "Does patient have circulatory symptoms that limit lifestyle?")
+	(rule_in_condition [criterion_INSTANCE_00001])
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_140060] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_20000]
+		[ATHENA_DM_Foot_Instance_140064])
+	(label "Absence of foot risk assessment and NO wound diagnosed in past 4 weeks")
+	(operator AND))
+
+([ATHENA_DM_Foot_Instance_140061] of  N_ary_Criterion
+
+	(operator NOT))
+
+([ATHENA_DM_Foot_Instance_140063] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Foot_Instance_140000])
+	(label "No minor lesion diagnosed ~4weeks ago")
+	(operator NOT))
+
+([ATHENA_DM_Foot_Instance_140064] of  Query_Result_Criterion
+
+	(label "NO minor lesion dx ~ 4 weeks ago")
+	(presence FALSE)
+	(query [ATHENA_DM_Foot_Instance_130016]))
+
+([ATHENA_DM_Foot_Instance_15] of  %3APAL-CONSTRAINT
+
+	(%3APAL-STATEMENT "(Predicate)"))
+
+([ATHENA_DM_Foot_Instance_150001] of  Consultation_Branch_Step
+
+	(branches
+		[ATHENA_DM_Foot_Instance_150002]
+		[ATHENA_DM_Foot_Instance_150032])
+	(label "Initial assessments")
+	(selection_method all_of))
+
+([ATHENA_DM_Foot_Instance_150002] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_DM_Foot_Instance_70000]
+		[ATHENA_DM_Foot_Instance_100088])
+	(label "Perform and document foot risk assessment (B) and visual inspection of feet")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_150003] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150001])
+	(%3ATO [ATHENA_DM_Foot_Instance_150002]))
+
+([ATHENA_DM_Foot_Instance_150006] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150001])
+	(%3ATO [ATHENA_DM_Foot_Instance_140021]))
+
+([ATHENA_DM_Foot_Instance_150008] of  Choice_Step
+
+	(branches
+		[ATHENA_DM_Foot_Instance_140030]
+		[ATHENA_DM_Foot_Instance_50000]
+		[ATHENA_DM_Foot_Instance_120005]
+		[ATHENA_DM_Foot_Instance_20024]
+		[ATHENA_DM_Foot_Instance_130001])
+	(label "Evaluate "))
+
+([ATHENA_DM_Foot_Instance_150009] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_10000])
+	(%3ATO [ATHENA_DM_Foot_Instance_150008]))
+
+([ATHENA_DM_Foot_Instance_150010] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150008])
+	(%3ATO [ATHENA_DM_Foot_Instance_140030]))
+
+([ATHENA_DM_Foot_Instance_150015] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140021])
+	(%3ATO [ATHENA_DM_Foot_Instance_140038]))
+
+([ATHENA_DM_Foot_Instance_150016] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140021])
+	(%3ATO [ATHENA_DM_Foot_Instance_140038]))
+
+([ATHENA_DM_Foot_Instance_150018] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140038]))
+
+([ATHENA_DM_Foot_Instance_150020] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150008])
+	(%3ATO [ATHENA_DM_Foot_Instance_50000]))
+
+([ATHENA_DM_Foot_Instance_150022] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150008])
+	(%3ATO [ATHENA_DM_Foot_Instance_120005]))
+
+([ATHENA_DM_Foot_Instance_150023] of  Scenario
+
+	(consultation_template [ATHENA_DM_Foot_Instance_140019])
+	(label "General recs")
+	(new_encounter FALSE)
+	(precondition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_150024] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140001])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([ATHENA_DM_Foot_Instance_150025] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_20024])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([ATHENA_DM_Foot_Instance_150026] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_130001])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([ATHENA_DM_Foot_Instance_150027] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_120005])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([ATHENA_DM_Foot_Instance_150031] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150008])
+	(%3ATO [ATHENA_DM_Foot_Instance_20024]))
+
+([ATHENA_DM_Foot_Instance_150032] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Foot_Instance_100089])
+	(followed_by [ATHENA_DM_Foot_Instance_140038])
+	(label "Assess if limb threatening condition present")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Foot_Instance_150033] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150001])
+	(%3ATO [ATHENA_DM_Foot_Instance_150032]))
+
+([ATHENA_DM_Foot_Instance_150034] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150032])
+	(%3ATO [ATHENA_DM_Foot_Instance_140038]))
+
+([ATHENA_DM_Foot_Instance_150035] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_DM_Foot_Instance_100008]
+		[ATHENA_DM_Foot_Instance_100000])
+	(label "Not high risk, evaluate minor wound"))
+
+([ATHENA_DM_Foot_Instance_150037] of  Consultation_Branch_Step
+
+	(branches
+		[ATHENA_DM_Foot_Instance_150035]
+		[ATHENA_DM_Foot_Instance_140045]
+		[ATHENA_DM_Foot_Instance_150041])
+	(label "Not high risk")
+	(selection_method all_of))
+
+([ATHENA_DM_Foot_Instance_150038] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140038])
+	(%3ATO [ATHENA_DM_Foot_Instance_150037]))
+
+([ATHENA_DM_Foot_Instance_150039] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150037])
+	(%3ATO [ATHENA_DM_Foot_Instance_150035]))
+
+([ATHENA_DM_Foot_Instance_150040] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150037])
+	(%3ATO [ATHENA_DM_Foot_Instance_140045]))
+
+([ATHENA_DM_Foot_Instance_150041] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Foot_Instance_100014])
+	(label "Not high risk, evaluate for foot problem")
+	(rule_in [ATHENA_DM_Foot_Instance_80040]))
+
+([ATHENA_DM_Foot_Instance_150042] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150037])
+	(%3ATO [ATHENA_DM_Foot_Instance_150041]))
+
+([ATHENA_DM_Foot_Instance_150044] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150008])
+	(%3ATO [ATHENA_DM_Foot_Instance_130001]))
+
+([ATHENA_DM_Foot_Instance_150046] of  Choice_Step
+
+	(branches [ATHENA_DM_Foot_Instance_140001])
+	(label "Has minor wound healed?"))
+
+([ATHENA_DM_Foot_Instance_150047] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_130010])
+	(%3ATO [ATHENA_DM_Foot_Instance_150046]))
+
+([ATHENA_DM_Foot_Instance_150048] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_150046])
+	(%3ATO [ATHENA_DM_Foot_Instance_140001]))
+
+([ATHENA_DM_Foot_Instance_150049] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Foot_Instance_20008])
+	(label "No threatened limb")
+	(operator NOT))
+
+([ATHENA_DM_Foot_Instance_20000] of  Presence_Criterion
+
+	(domain_term Foot+risk+assessment)
+	(entry_type Note_Entry)
+	(label "Absence of foot risk assessment")
+	(period [ATHENA_DM_Eye_Instance_30019])
+	(presence FALSE))
+
+([ATHENA_DM_Foot_Instance_20004] of  Qualitative_Data
+
+	(allowed_terms
+		"Protective sensation"
+		"lower extremity vascular disease"
+		"Foot deformities and skin integrity"
+		"Prior history of foot ulcer or amputation")
+	(choice_type some_of)
+	(description "Collect data for foot assessment to see if patient:\n1. Assess for protective sensation\n2. Assess for lower extremity vascular disease\n3. Evaluate for foot deformities and skin integrity\n4. Prior hx of foot ulcer or amputation")
+	(label "Collect data for foot assessment")
+	(prompt "Assess for")
+	(sensitive FALSE))
+
+([ATHENA_DM_Foot_Instance_20008] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_90000]
+		[ATHENA_DM_Foot_Instance_100001]
+		[ATHENA_DM_Foot_Instance_100002]
+		[ATHENA_DM_Foot_Instance_100003]
+		[ATHENA_DM_Foot_Instance_100004]
+		[ATHENA_DM_Foot_Instance_100005]
+		[ATHENA_DM_Foot_Instance_20009])
+	(label "Limb threatening conditions data collected")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_20009] of  Presence_Criterion
+
+	(domain_term Systemic+infection)
+	(entry_type Note_Entry)
+	(label "Systemic Infection")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20010] of  Presence_Criterion
+
+	(domain_term Acute+ischemia%2Frest+pain)
+	(entry_type Note_Entry)
+	(label "Acute ischemia or rest pain")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20011] of  Presence_Criterion
+
+	(domain_term foot+ulcer+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "Foot ulceration")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20012] of  Presence_Criterion
+
+	(domain_term Ingrown+toenail)
+	(entry_type Note_Entry)
+	(label "Ingrown toenail")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20013] of  Presence_Criterion
+
+	(domain_term Puncture+wound)
+	(entry_type Note_Entry)
+	(label "Puncture wound")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20014] of  Presence_Criterion
+
+	(domain_term Hemorrhagic+Callus+With+or+Without+Cellulitis)
+	(entry_type Note_Entry)
+	(label "Hemorrhagic callus with or without cellulitis")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20015] of  Referral
+
+	(label "Refer to foot care specialist immediately")
+	(when [ATHENA_DM_Eye_Instance_100018]))
+
+([ATHENA_DM_Foot_Instance_20016] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_20014]
+		[ATHENA_DM_Foot_Instance_20012]
+		[ATHENA_DM_Foot_Instance_20013]
+		[ATHENA_DM_Foot_Instance_20010]
+		[ATHENA_DM_Foot_Instance_20009]
+		[ATHENA_DM_Foot_Instance_20011]
+		[ATHENA_DM_Foot_Instance_20025])
+	(label "Conditions requiring foot care specialist referral")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_20017] of  Referral
+
+	(label "Refer to vascular specialist")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_60001])
+	(when [ATHENA_DM_Eye_Instance_100003])
+	(who_to vascular+specialist))
+
+([ATHENA_DM_Foot_Instance_20018] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_20009]
+		[ATHENA_DM_Foot_Instance_20010])
+	(label "Conditions requiring referral to vascular specialist")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_20022] of  Followed_By
+)
+
+([ATHENA_DM_Foot_Instance_20024] of  Action_Choice
+
+	(actions
+		[ATHENA_DM_Foot_Instance_100007]
+		[ATHENA_DM_Foot_Instance_60003]
+		[ATHENA_DM_Foot_Instance_100006])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "High risk for a foot problem (E)")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_20025])
+	(strict_rule_out_condition [ATHENA_DM_Foot_Instance_20008]))
+
+([ATHENA_DM_Foot_Instance_20025] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_20026]
+		[ATHENA_DM_Foot_Instance_20029]
+		[ATHENA_DM_Foot_Instance_20030]
+		[ATHENA_DM_Foot_Instance_20031]
+		[ATHENA_DM_Foot_Instance_80029])
+	(label "High risk for a foot problem")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_20026] of  Presence_Criterion
+
+	(domain_term Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+at+one+or+more+noncallused+plantar+sites)
+	(entry_type Note_Entry)
+	(label "Lack of sensation to Semmes-Weinstein 5.07 monofilament")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20028] of  Presence_Criterion
+
+	(domain_term athlete%E2%80%99s+foot)
+	(entry_type Note_Entry)
+	(label "Athlete's foot")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20029] of  Presence_Criterion
+
+	(domain_term Evidence+of+LE+arterial+disease)
+	(entry_type Note_Entry)
+	(label "Evidence of LE arterial disease")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20030] of  Presence_Criterion
+
+	(domain_term Foot+deformities)
+	(entry_type Note_Entry)
+	(label "Foot deformities")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_20031] of  Presence_Criterion
+
+	(domain_term History+of+foot+ulcer+or+non-traumatic+LEA)
+	(entry_type Note_Entry)
+	(label "History of foot ulcer or non-traumatic LEA")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_30000] of  Guideline_View
+
+	(guideline [ATHENA_DM_Foot_Instance_1]))
+
+([ATHENA_DM_Foot_Instance_40000] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Foot_Instance_140000])
+	(label "No minior lesion diagnosed ~4 weeks ago")
+	(operator NOT))
+
+([ATHENA_DM_Foot_Instance_50000] of  Action_Choice
+
+	(actions [ATHENA_DM_Foot_Instance_20017])
+	(followed_by [ATHENA_DM_Foot_Instance_150023])
+	(label "circulatory symptoms that limit patient's  lifestyle")
+	(strict_rule_in_condition [ATHENA_DM_Foot_Instance_60001]))
+
+([ATHENA_DM_Foot_Instance_60000] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Foot_Instance_150001])
+	(label "Non-follow-up assessment")
+	(steps
+		[ATHENA_DM_Foot_Instance_150001]
+		[ATHENA_DM_Foot_Instance_150002]
+		[ATHENA_DM_Foot_Instance_140038]
+		[ATHENA_DM_Foot_Instance_140045]
+		[ATHENA_DM_Foot_Instance_150032]
+		[ATHENA_DM_Foot_Instance_150035]
+		[ATHENA_DM_Foot_Instance_150037]
+		[ATHENA_DM_Foot_Instance_150041])
+	(transitions
+		[ATHENA_DM_Foot_Instance_150003]
+		[ATHENA_DM_Foot_Instance_150018]
+		[ATHENA_DM_Foot_Instance_150033]
+		[ATHENA_DM_Foot_Instance_150034]
+		[ATHENA_DM_Foot_Instance_150038]
+		[ATHENA_DM_Foot_Instance_150039]
+		[ATHENA_DM_Foot_Instance_150040]
+		[ATHENA_DM_Foot_Instance_150042]))
+
+([ATHENA_DM_Foot_Instance_60001] of  Presence_Criterion
+
+	(domain_term circulatory+symptoms+that+limit+patient%27s+lifestyle)
+	(entry_type Note_Entry)
+	(label "Presence of circulatory symptoms that limit patient's lifestyle")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_60003] of  Referral
+
+	(label "Refer to foot care specialist within 1 week (minor wound)")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_100011])
+	(when [ATHENA_DM_Foot_Instance_60004])
+	(who_to foot+care+specialist))
+
+([ATHENA_DM_Foot_Instance_60004] of  Relative_Time_Interval_Definite
+
+	(how_many "1")
+	(label "within 1 week")
+	(polarity After)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit week))
+
+([ATHENA_DM_Foot_Instance_60005] of  N_ary_Criterion
+)
+
+([ATHENA_DM_Foot_Instance_60009] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Care by PCP for uncomplicated minor lesions")
+	(message "Provide local wound care and offload pressure, as indicated, with follow-up on a specified schedule. If patient unable to carry out wound care refer for foot care assistance.")
+	(message_type Primary_Recommendation))
+
+([ATHENA_DM_Foot_Instance_60010] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_80008]
+		[ATHENA_DM_Foot_Instance_20028]
+		[ATHENA_DM_Foot_Instance_80009]
+		[ATHENA_DM_Foot_Instance_80010]
+		[ATHENA_DM_Foot_Instance_80011]
+		[ATHENA_DM_Foot_Instance_80012]
+		[ATHENA_DM_Foot_Instance_80013])
+	(label "minor foot problems")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_60011] of  Presence_Criterion
+
+	(domain_term Medical_Domain_Class)
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_70000] of  Data_Entry_Template
+
+	(data_to_collect
+		[ATHENA_DM_Foot_Instance_70001]
+		[ATHENA_DM_Foot_Instance_80018]
+		[ATHENA_DM_Foot_Instance_80019]
+		[ATHENA_DM_Foot_Instance_80020]
+		[ATHENA_DM_Foot_Instance_80022]
+		[ATHENA_DM_Foot_Instance_80024])
+	(label "Perform foot risk assessment"))
+
+([ATHENA_DM_Foot_Instance_70001] of  Qualitative_Data
+
+	(allowed_terms
+		"Yes"
+		"No")
+	(choice_type one_of)
+	(domain_term lower+extremity+vascular+disease+yes%2Fno)
+	(label "Assess for lower extremity vascular disease")
+	(prompt "Does patient have lower extremity arterial disease?")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_80000])
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80000] of  Presence_Criterion
+
+	(domain_term CCS-3.3.5)
+	(entry_type Note_Entry)
+	(label "Absence of diabetes with circulatory manifestations")
+	(presence FALSE))
+
+([ATHENA_DM_Foot_Instance_80001] of  Structured_Query
+
+	(label "Query for encounter with where and when")
+	(type Encounter)
+	(where_restriction
+		[ATHENA_DM_Foot_Instance_80002]
+		[ATHENA_DM_Foot_Instance_80003]
+		[ATHENA_DM_Foot_Instance_80006]))
+
+([ATHENA_DM_Foot_Instance_80002] of  Comparison_Filter
+
+	(attribute [patient_id])
+	(label "where = Diagnostic_Class")
+	(operator eq)
+	(value_expression [Diagnostic_Class]))
+
+([ATHENA_DM_Foot_Instance_80003] of  Comparison_Filter
+
+	(attribute [when])
+	(label "Encounter date > today-60days")
+	(operator %3C)
+	(value_expression [ATHENA_DM_Foot_Instance_80005]))
+
+([ATHENA_DM_Foot_Instance_80004] of  Binary_Expression
+
+	(label "Today - 30 days")
+	(operator -))
+
+([ATHENA_DM_Foot_Instance_80005] of  Date_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(operator -)
+	(second_argument [OpioidGuideline_Instance_390008]))
+
+([ATHENA_DM_Foot_Instance_80006] of  Comparison_Filter
+
+	(attribute [activity])
+	(label "encounter type neq NOSHOW")
+	(operator neq)
+	(value_expression [criterion_INSTANCE_00002]))
+
+([ATHENA_DM_Foot_Instance_80007] of  Query_Result_Criterion
+
+	(label "presence of encounter where and when")
+	(presence TRUE)
+	(query [ATHENA_DM_Foot_Instance_80001]))
+
+([ATHENA_DM_Foot_Instance_80008] of  Presence_Criterion
+
+	(domain_term onychomycosis)
+	(entry_type Note_Entry)
+	(label "Onychomycosis")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80009] of  Presence_Criterion
+
+	(domain_term dry+skin)
+	(entry_type Note_Entry)
+	(label "Dry skin")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80010] of  Presence_Criterion
+
+	(domain_term painful+corns)
+	(entry_type Note_Entry)
+	(label "Painful corn")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80011] of  Presence_Criterion
+
+	(domain_term minor+calluses)
+	(entry_type Note_Entry)
+	(label "minor calluses")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80012] of  Presence_Criterion
+
+	(domain_term uncomplicated+nail+trimming)
+	(entry_type Note_Entry)
+	(label "uncomplicated nail trimming")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80013] of  Presence_Criterion
+
+	(domain_term improper+foot+hygiene)
+	(entry_type Note_Entry)
+	(label "improper foot hygiene")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80014] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Minor foot problems")
+	(message "Patients with minor foot problems can be treated in the office or at home (by patient or family members).")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_80015] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Foot_Instance_80045])
+	(label "minor lesions icd9")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_80016] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Education: family and pt")
+	(message "All patients and their families should receive self-management education for preventive foot care and selection of footwear. Instruction should include recommendations for daily foot inspection and preventive foot care, skin care, and use of emollients, nail care, and treatment for callus. Document.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_80017] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "lifestyle reinforcement with foot wound")
+	(message "Reinforce nutrition, exercise and diabetes self-management. Avoid initiation of a calorie restriction diet for weight loss in patients with foot lesions.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Foot_Instance_80018] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+yes%2Fno)
+	(label "Assess for protective sensation")
+	(prompt "Does patient have lack of sensation to Semmes-Weinstein 5.07 monofilament?")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_90001])
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80019] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term foot+deformities+yes%2Fno)
+	(label "Assess foot deformity")
+	(prompt "Does patient have acquired foot deformities?")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_90002])
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80020] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term skin+integrity+yes%2Fno)
+	(label "Assess for skin integrity")
+	(prompt "Does patient have foot skin integrity?")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80022] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term foot+ulcer+yes%2Fno)
+	(label "Assess for history of foot ulcer")
+	(prompt "Does patient have history of foot ulcer?")
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80024] of  Qualitative_Data
+
+	(allowed_terms
+		"yes"
+		"no")
+	(choice_type one_of)
+	(domain_term non+traumatic+lower+extremity+amputation+yes%2Fno)
+	(label "Assess for history of amputation")
+	(prompt "Does patient have non traumatic lower extremity amputation?")
+	(rule_in_condition [ATHENA_DM_Foot_Instance_90003])
+	(sensitive TRUE))
+
+([ATHENA_DM_Foot_Instance_80029] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Foot_Instance_80032]
+		[ATHENA_DM_Foot_Instance_80034]
+		[ATHENA_DM_Foot_Instance_80035]
+		[ATHENA_DM_Foot_Instance_80036]
+		[ATHENA_DM_Foot_Instance_80037]
+		[ATHENA_DM_Foot_Instance_80038])
+	(label "High risk for foot problem data collected")
+	(operator OR))
+
+([ATHENA_DM_Foot_Instance_80030] of  Presence_Criterion
+
+	(domain_term foot+deformities+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "Presence foot deformities data collected")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80031] of  Presence_Criterion
+
+	(domain_term foot+ulcer+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "Foot ulcer data collected")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_80032] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term foot+deformities+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "foot deformities YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80033] of  Qualitative_Constant
+
+	(value "yes"))
+
+([ATHENA_DM_Foot_Instance_80034] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term foot+ulcer+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "foot ulcer YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80035] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "Lack of sensation YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80036] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term lower+extremity+vascular+disease+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "lower extremity vascular diseases YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80037] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term non+traumatic+lower+extremity+amputation+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "non traumatic amputation YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80038] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term skin+integrity+yes%2Fno)
+	(entry_type Note_Entry)
+	(label "skin integrity YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_80040] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Foot_Instance_20025])
+	(label "NOT high risk for foot problem")
+	(operator NOT))
+
+([ATHENA_DM_Foot_Instance_80045] of  Presence_Criterion
+
+	(domain_term minor+lesion)
+	(entry_type Note_Entry)
+	(label "Presence of minor lesion or wound")
+	(presence TRUE))
+
+([ATHENA_DM_Foot_Instance_90000] of  General_Comparison_Criterion
+
+	(domain_term Systemic+infection)
+	(entry_type Note_Entry)
+	(label "Systemic infection YES")
+	(operator eq)
+	(value [ATHENA_DM_Foot_Instance_80033]))
+
+([ATHENA_DM_Foot_Instance_90001] of  Presence_Criterion
+
+	(domain_term Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+at+one+or+more+noncallused+plantar+sites)
+	(entry_type Note_Entry)
+	(label "Absence of lack of sensation")
+	(presence FALSE))
+
+([ATHENA_DM_Foot_Instance_90002] of  Presence_Criterion
+
+	(domain_term CCS-13.6.1)
+	(entry_type Note_Entry)
+	(label "Absence of foot deformity")
+	(presence FALSE))
+
+([ATHENA_DM_Foot_Instance_90003] of  Presence_Criterion
+
+	(domain_term lower+extremity+amputation+related+to+DM)
+	(entry_type Note_Entry)
+	(label "Absence of amputation")
+	(presence FALSE))
+
+([ATHENA_DM_Foot_swt_Instance_0] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_50000])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([ATHENA_DM_Foot_swt_Instance_1] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Foot_Instance_140030])
+	(%3ATO [ATHENA_DM_Foot_Instance_150023]))
+
+([foot+deformities+yes%2Fno] of  Medical_Conditions_Metaclass
+
+	(PrettyName "foot deformities yes/no"))
+
+([foot+ulcer+yes%2Fno] of  Medical_Conditions_Metaclass
+
+	(PrettyName "foot ulcer"))
+
+([Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+yes%2Fno] of  Medical_Conditions_Metaclass
+)
+
+([lower+extremity+vascular+disease+yes%2Fno] of  Medical_Conditions_Metaclass
+)
+
+([non+traumatic+lower+extremity+amputation+yes%2Fno] of  Canonical_Terms_Metaclass
+)
+
+([skin+integrity+yes%2Fno] of  Canonical_Terms_Metaclass
+)

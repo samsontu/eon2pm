@@ -1,0 +1,6089 @@
+; Tue Jul 21 13:47:03 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+([BROWSER_SLOT_NAMES] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class23804]
+		[library_ProjectKB_Class23805]
+		[library_ProjectKB_Class23806]
+		[library_ProjectKB_Class23807]
+		[library_ProjectKB_Class23808]
+		[library_ProjectKB_Class23809]
+		[library_ProjectKB_Class23810]))
+
+([CLSES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesTab"))
+
+([FORMS_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.FormsTab"))
+
+([INSTANCE_ANNOTATION_FORM_WIDGET] of  Widget
+
+	(height 476)
+	(is_hidden FALSE)
+	(name ":INSTANCE-ANNOTATION")
+	(property_list [KB_057852_Instance_33])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 603)
+	(x 0)
+	(y 0))
+
+([INSTANCES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_057852_Instance_0] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_057852_Instance_1]
+		[KB_057852_Instance_2]
+		[KB_057852_Instance_3]
+		[KB_057852_Instance_4]
+		[KB_057852_Instance_5]
+		[KB_057852_Instance_6]
+		[KB_057852_Instance_7]
+		[KB_057852_Instance_8]
+		[KB_057852_Instance_9]
+		[KB_057852_Instance_10]))
+
+([KB_057852_Instance_1] of  Widget
+
+	(height 120)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [library_ProjectKB_Instance_690])
+	(widget_class_name "edu.stanford.smi.protege.widget.ConstraintsWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([KB_057852_Instance_10] of  Property_List
+
+	(name "layout properties")
+	(properties [KB_057852_Instance_11]))
+
+([KB_057852_Instance_11] of  String
+
+	(name "vertical_stretcher")
+	(string_value ":DIRECT-TEMPLATE-SLOTS"))
+
+([KB_057852_Instance_12] of  Property_List
+
+	(name "slot widget properties")
+	(properties
+		[KB_057852_Instance_13]
+		[KB_057852_Instance_14]
+		[KB_057852_Instance_15]
+		[KB_057852_Instance_16]
+		[KB_057852_Instance_17]
+		[KB_057852_Instance_18]
+		[KB_057852_Instance_19]
+		[KB_057852_Instance_20]
+		[KB_057852_Instance_21]
+		[KB_057852_Instance_22]
+		[KB_057852_Instance_23]
+		[KB_057852_Instance_24]
+		[KB_057852_Instance_25]
+		[KB_057852_Instance_26]
+		[KB_057852_Instance_27]
+		[KB_057852_Instance_28]
+		[library_ProjectKB_Instance_699]))
+
+([KB_057852_Instance_13] of  Widget
+
+	(height 60)
+	(label "Cardinality")
+	(name ":SLOT-MINIMUM-CARDINALITY")
+	(property_list [library_ProjectKB_Instance_707])
+	(widget_class_name "edu.stanford.smi.protege.widget.MinimumCardinalityWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([KB_057852_Instance_14] of  Widget
+
+	(height 35)
+	(name ":SLOT-MAXIMUM-CARDINALITY")
+	(property_list [library_ProjectKB_Instance_708])
+	(widget_class_name "edu.stanford.smi.protege.widget.MaximumCardinalityWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([KB_057852_Instance_15] of  Widget
+
+	(name ":SLOT-CONSTRAINTS"))
+
+([KB_057852_Instance_16] of  Widget
+
+	(name ":DIRECT-TYPE"))
+
+([KB_057852_Instance_17] of  Widget
+
+	(height 95)
+	(label "Domain")
+	(name ":DIRECT-DOMAIN")
+	(property_list [library_ProjectKB_Instance_700])
+	(widget_class_name "edu.stanford.smi.protege.widget.DirectDomainWidget")
+	(width 200)
+	(x 400)
+	(y 180))
+
+([KB_057852_Instance_18] of  Widget
+
+	(height 90)
+	(label "Template Values")
+	(name ":SLOT-VALUES")
+	(property_list [library_ProjectKB_Instance_701])
+	(widget_class_name "edu.stanford.smi.protege.widget.SlotValuesWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([KB_057852_Instance_19] of  Widget
+
+	(name ":DIRECT-SUPERSLOTS"))
+
+([KB_057852_Instance_2] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_057852_Instance_20] of  Widget
+
+	(name ":DIRECT-SUBSLOTS"))
+
+([KB_057852_Instance_21] of  Widget
+
+	(height 90)
+	(label "Default")
+	(name ":SLOT-DEFAULTS")
+	(property_list [library_ProjectKB_Instance_702])
+	(widget_class_name "edu.stanford.smi.protege.widget.DefaultValuesWidget")
+	(width 200)
+	(x 400)
+	(y 90))
+
+([KB_057852_Instance_22] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Instance_703])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_057852_Instance_23] of  Widget
+
+	(height 60)
+	(label "Maximum")
+	(name ":SLOT-NUMERIC-MAXIMUM")
+	(property_list [library_ProjectKB_Instance_704])
+	(widget_class_name "edu.stanford.smi.protege.widget.NumericMaximumWidget")
+	(width 100)
+	(x 100)
+	(y 215))
+
+([KB_057852_Instance_24] of  Widget
+
+	(height 60)
+	(label "Minimum")
+	(name ":SLOT-NUMERIC-MINIMUM")
+	(property_list [library_ProjectKB_Instance_705])
+	(widget_class_name "edu.stanford.smi.protege.widget.NumericMinimumWidget")
+	(width 100)
+	(x 0)
+	(y 215))
+
+([KB_057852_Instance_25] of  Widget
+
+	(name ":ASSOCIATED-FACET"))
+
+([KB_057852_Instance_26] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [library_ProjectKB_Instance_706])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_057852_Instance_27] of  Widget
+
+	(height 60)
+	(label "Inverse Slot")
+	(name ":SLOT-INVERSE")
+	(property_list [library_ProjectKB_Instance_709])
+	(widget_class_name "edu.stanford.smi.protege.widget.InverseSlotWidget")
+	(width 200)
+	(x 200)
+	(y 215))
+
+([KB_057852_Instance_28] of  Widget
+
+	(height 155)
+	(label "Value Type")
+	(name ":SLOT-VALUE-TYPE")
+	(property_list [library_ProjectKB_Instance_710])
+	(widget_class_name "edu.stanford.smi.protege.widget.ValueTypeWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_057852_Instance_29] of  Property_List
+
+	(name "facet widget properties")
+	(properties
+		[KB_057852_Instance_30]
+		[KB_057852_Instance_31]
+		[KB_057852_Instance_32]))
+
+([KB_057852_Instance_3] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_057852_Instance_30] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_057852_Instance_31] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_057852_Instance_32] of  Widget
+
+	(height 60)
+	(label "Associated Slot")
+	(name ":ASSOCIATED-SLOT")
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_057852_Instance_33] of  Property_List
+
+	(properties
+		[KB_057852_Instance_34]
+		[KB_057852_Instance_35]
+		[KB_057852_Instance_36]
+		[KB_057852_Instance_37]))
+
+([KB_057852_Instance_34] of  Widget
+
+	(name ":ANNOTATED-INSTANCE"))
+
+([KB_057852_Instance_35] of  Widget
+
+	(name ":CREATOR"))
+
+([KB_057852_Instance_36] of  Widget
+
+	(name ":CREATION-TIMESTAMP"))
+
+([KB_057852_Instance_37] of  Widget
+
+	(height 100)
+	(is_hidden FALSE)
+	(name ":ANNOTATION-TEXT")
+	(widget_class_name "edu.stanford.smi.protege.widget.YellowStickyWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_057852_Instance_38] of  Property_List
+
+	(properties
+		[KB_057852_Instance_39]
+		[KB_057852_Instance_40]
+		[KB_057852_Instance_41]
+		[KB_057852_Instance_42]
+		[library_ProjectKB_Class757]))
+
+([KB_057852_Instance_39] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Name")
+	(name ":PAL-NAME")
+	(property_list [library_ProjectKB_Class758])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 275)
+	(x 0)
+	(y 0))
+
+([KB_057852_Instance_4] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_057852_Instance_40] of  Widget
+
+	(height 180)
+	(is_hidden FALSE)
+	(label "Range")
+	(name ":PAL-RANGE")
+	(property_list [library_ProjectKB_Class760])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalRangeWidget")
+	(width 770)
+	(x 0)
+	(y 80))
+
+([KB_057852_Instance_41] of  Widget
+
+	(height 90)
+	(is_hidden FALSE)
+	(label "Description")
+	(name ":PAL-DESCRIPTION")
+	(property_list [library_ProjectKB_Class759])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 250)
+	(x 275)
+	(y 0))
+
+([KB_057852_Instance_42] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(label "Statement")
+	(name ":PAL-STATEMENT")
+	(property_list [library_ProjectKB_Class10761])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalConstraintWidget")
+	(width 770)
+	(x 0)
+	(y 260))
+
+([KB_057852_Instance_5] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Instance_693])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_057852_Instance_6] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [library_ProjectKB_Instance_694])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_057852_Instance_7] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [library_ProjectKB_Instance_698])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_057852_Instance_8] of  Widget
+
+	(name ":DIRECT-TYPE"))
+
+([KB_057852_Instance_9] of  Widget
+
+	(height 150)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [library_ProjectKB_Instance_695])
+	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
+	(width 600)
+	(x 0)
+	(y 120))
+
+([KB_068831_Class3646] of  Map
+
+	(entries
+		[KB_068831_Class3647]
+		[KB_068831_Class3649]
+		[KB_068831_Class3650]
+		[KB_068831_Class3652]
+		[KB_068831_Class3653]
+		[KB_068831_Class3655]
+		[KB_068831_Class3657]
+		[KB_068831_Class3659]
+		[KB_068831_Class3660])
+	(referenced_maps
+		[KB_068831_Class3648]
+		[KB_068831_Class3656]
+		[KB_068831_Class3658]
+		[KB_068831_Class3651]
+		[KB_068831_Class3654]))
+
+([KB_068831_Class3647] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_068831_Class3648] of  Map
+)
+
+([KB_068831_Class3649] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_130002.steps")
+	(key_class "java.lang.String")
+	(value "KB_068831_Class3648")
+	(value_class "java.util.Map"))
+
+([KB_068831_Class3650] of  Map_Entry
+
+	(key "annotation_proj_exists")
+	(key_class "java.lang.String")
+	(value "yes")
+	(value_class "java.lang.String"))
+
+([KB_068831_Class3651] of  Map
+)
+
+([KB_068831_Class3652] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_1.steps")
+	(key_class "java.lang.String")
+	(value "KB_068831_Class3651")
+	(value_class "java.util.Map"))
+
+([KB_068831_Class3653] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_068831_Class3654] of  Map
+)
+
+([KB_068831_Class3655] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_0.steps")
+	(key_class "java.lang.String")
+	(value "KB_068831_Class3654")
+	(value_class "java.util.Map"))
+
+([KB_068831_Class3656] of  Map
+)
+
+([KB_068831_Class3657] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_130001.steps")
+	(key_class "java.lang.String")
+	(value "KB_068831_Class3656")
+	(value_class "java.util.Map"))
+
+([KB_068831_Class3658] of  Map
+)
+
+([KB_068831_Class3659] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_2.steps")
+	(key_class "java.lang.String")
+	(value "KB_068831_Class3658")
+	(value_class "java.util.Map"))
+
+([KB_068831_Class3660] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_475580_Instance_0] of  String
+
+	(name "factory_class_name")
+	(string_value "edu.stanford.smi.protege.storage.clips.ClipsKnowledgeBaseFactory"))
+
+([KB_475580_Instance_1] of  Map
+
+	(entries
+		[library_ProjectKB_Class23811]
+		[library_ProjectKB_Class23812]
+		[library_ProjectKB_Class23813]
+		[library_ProjectKB_Class23814]))
+
+([KB_475580_Instance_3] of  Options
+
+	(confirm_on_remove FALSE)
+	(display_abstract_class_icon FALSE)
+	(display_hidden_classes TRUE)
+	(display_multi_parent_class_icon FALSE)
+	(is_readonly FALSE)
+	(tabbed_instance_form_layout FALSE)
+	(undo_enabled TRUE)
+	(update_modification_slots FALSE))
+
+([KB_475580_Instance_95] of  Property_List
+
+	(properties [library_ProjectKB_Instance_98]))
+
+([KB_475580_Instance_96] of  String
+
+	(name "classes_file_name")
+	(string_value "library.pont"))
+
+([KB_475580_Instance_97] of  String
+
+	(name "instances_file_name")
+	(string_value "library.pins"))
+
+([KB_533515_Instance_329] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Qualitative_Constant")
+	(property_list [KB_533515_Instance_330])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_533515_Instance_330] of  Property_List
+
+	(properties
+		[KB_533515_Instance_333]
+		[KB_533515_Instance_335]
+		[library_ProjectKB_Class10993]
+		[library_ProjectKB_Class10995]))
+
+([KB_533515_Instance_333] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "value")
+	(property_list [KB_533515_Instance_334])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_533515_Instance_334] of  Property_List
+)
+
+([KB_533515_Instance_335] of  Property_List
+
+	(name "layout properties"))
+
+([KB_533515_Instance_569] of  Widget
+
+	(height 574)
+	(is_hidden FALSE)
+	(name "Comparison_Criterion")
+	(property_list [KB_533515_Instance_570])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 806)
+	(x 0)
+	(y 0))
+
+([KB_533515_Instance_570] of  Property_List
+
+	(properties
+		[KB_533515_Instance_571]
+		[KB_533515_Instance_572]))
+
+([KB_533515_Instance_571] of  Property_List
+
+	(name "layout properties"))
+
+([KB_533515_Instance_572] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_533515_Instance_573])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_533515_Instance_573] of  Property_List
+)
+
+([KB_943075_Instance_100] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_101] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_102] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "presence")
+	(property_list [KB_943075_Instance_103])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_103] of  Property_List
+)
+
+([KB_943075_Instance_104] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_105])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([KB_943075_Instance_105] of  Property_List
+)
+
+([KB_943075_Instance_106] of  Widget
+
+	(is_hidden FALSE)
+	(name "Interval-Valued_AtomicTest_Metaclass")
+	(property_list [KB_943075_Instance_107])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_107] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_108]
+		[KB_943075_Instance_110]
+		[KB_943075_Instance_112]
+		[KB_943075_Instance_114]
+		[KB_943075_Instance_116]
+		[KB_943075_Instance_117]
+		[KB_943075_Instance_118]
+		[KB_943075_Instance_119]
+		[KB_943075_Instance_121]
+		[KB_943075_Instance_122]
+		[KB_943075_Instance_123]
+		[KB_943075_Instance_125]
+		[KB_943075_Instance_127]
+		[KB_943075_Instance_129]
+		[KB_943075_Instance_134]
+		[KB_943075_Instance_136]
+		[KB_943075_Instance_138]
+		[library_ProjectKB_Class678]
+		[library_ProjectKB_Class10717]))
+
+([KB_943075_Instance_108] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_109])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_109] of  Property_List
+)
+
+([KB_943075_Instance_110] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_111])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_111] of  Property_List
+)
+
+([KB_943075_Instance_112] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_113])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_113] of  Property_List
+)
+
+([KB_943075_Instance_114] of  Widget
+
+	(height 0)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_115])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_115] of  Property_List
+)
+
+([KB_943075_Instance_116] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_117] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_118] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_119] of  Widget
+
+	(height 0)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_120])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_120] of  Property_List
+)
+
+([KB_943075_Instance_121] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_122] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_123] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_124])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([KB_943075_Instance_124] of  Property_List
+)
+
+([KB_943075_Instance_125] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_126])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([KB_943075_Instance_126] of  Property_List
+)
+
+([KB_943075_Instance_127] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_128])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_128] of  Property_List
+)
+
+([KB_943075_Instance_129] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "LowerLimitOfNormal")
+	(property_list [KB_943075_Instance_130])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 200)
+	(y 300))
+
+([KB_943075_Instance_130] of  Property_List
+
+	(properties
+		[KB_943075_Instance_131]
+		[KB_943075_Instance_132]
+		[KB_943075_Instance_133]))
+
+([KB_943075_Instance_131] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_132] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_133] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([KB_943075_Instance_134] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Units")
+	(property_list [KB_943075_Instance_135])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_135] of  Property_List
+)
+
+([KB_943075_Instance_136] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "Precision")
+	(property_list [KB_943075_Instance_137])
+	(widget_class_name "edu.stanford.smi.protege.widget.IntegerFieldWidget")
+	(width 100)
+	(x 0)
+	(y 240))
+
+([KB_943075_Instance_137] of  Property_List
+)
+
+([KB_943075_Instance_138] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "UpperLimitOfNormal")
+	(property_list [KB_943075_Instance_139])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([KB_943075_Instance_139] of  Property_List
+
+	(properties
+		[KB_943075_Instance_140]
+		[KB_943075_Instance_141]
+		[KB_943075_Instance_142]))
+
+([KB_943075_Instance_140] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_141] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_142] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([KB_943075_Instance_143] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Binary_Expression")
+	(property_list [KB_943075_Instance_144])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_144] of  Property_List
+
+	(properties
+		[KB_943075_Instance_145]
+		[KB_943075_Instance_155]
+		[KB_943075_Instance_157]
+		[KB_943075_Instance_159]
+		[KB_943075_Instance_169]
+		[library_ProjectKB_Class773]))
+
+([KB_943075_Instance_145] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "second_argument")
+	(property_list [KB_943075_Instance_146])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 60))
+
+([KB_943075_Instance_146] of  Property_List
+
+	(properties
+		[KB_943075_Instance_147]
+		[KB_943075_Instance_148]
+		[KB_943075_Instance_149]
+		[KB_943075_Instance_150]
+		[KB_943075_Instance_151]
+		[KB_943075_Instance_152]
+		[KB_943075_Instance_153]
+		[KB_943075_Instance_154]
+		[library_ProjectKB_Class771]))
+
+([KB_943075_Instance_147] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_148] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_149] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_150] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_151] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_152] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_153] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_154] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_155] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "operator")
+	(property_list [KB_943075_Instance_156])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 125)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_156] of  Property_List
+)
+
+([KB_943075_Instance_157] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_158])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_158] of  Property_List
+)
+
+([KB_943075_Instance_159] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "first_argument")
+	(property_list [KB_943075_Instance_160])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_160] of  Property_List
+
+	(properties
+		[KB_943075_Instance_161]
+		[KB_943075_Instance_162]
+		[KB_943075_Instance_163]
+		[KB_943075_Instance_164]
+		[KB_943075_Instance_165]
+		[KB_943075_Instance_166]
+		[KB_943075_Instance_167]
+		[KB_943075_Instance_168]
+		[library_ProjectKB_Class772]))
+
+([KB_943075_Instance_161] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_162] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_163] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_164] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_165] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_166] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_167] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_168] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_169] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_170] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Get_Class_Slot_Value")
+	(property_list [KB_943075_Instance_171])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_171] of  Property_List
+
+	(properties
+		[KB_943075_Instance_172]
+		[KB_943075_Instance_174]
+		[KB_943075_Instance_184]
+		[KB_943075_Instance_189]))
+
+([KB_943075_Instance_172] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_173])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_173] of  Property_List
+)
+
+([KB_943075_Instance_174] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "slot")
+	(property_list [KB_943075_Instance_175])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_175] of  Property_List
+
+	(properties
+		[KB_943075_Instance_176]
+		[KB_943075_Instance_177]
+		[KB_943075_Instance_178]
+		[KB_943075_Instance_179]
+		[KB_943075_Instance_180]
+		[KB_943075_Instance_181]
+		[KB_943075_Instance_182]
+		[KB_943075_Instance_183]))
+
+([KB_943075_Instance_176] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_177] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_178] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_179] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_180] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_181] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_182] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_183] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_184] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "class_reference")
+	(property_list [KB_943075_Instance_185])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_185] of  Property_List
+
+	(properties
+		[KB_943075_Instance_186]
+		[KB_943075_Instance_187]
+		[KB_943075_Instance_188]))
+
+([KB_943075_Instance_186] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_187] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_188] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_189] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_246] of  Widget
+
+	(is_hidden FALSE)
+	(name "Derived_Parameter_Metaclass")
+	(property_list [KB_943075_Instance_247])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_247] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_248]
+		[KB_943075_Instance_250]
+		[KB_943075_Instance_252]
+		[KB_943075_Instance_254]
+		[KB_943075_Instance_256]
+		[KB_943075_Instance_257]
+		[KB_943075_Instance_258]
+		[KB_943075_Instance_259]
+		[KB_943075_Instance_261]
+		[KB_943075_Instance_262]
+		[KB_943075_Instance_263]
+		[KB_943075_Instance_265]
+		[KB_943075_Instance_267]
+		[KB_943075_Instance_269]
+		[library_ProjectKB_Class20801]
+		[library_ProjectKB_Class20803]))
+
+([KB_943075_Instance_248] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_249])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_249] of  Property_List
+)
+
+([KB_943075_Instance_250] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_251])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_251] of  Property_List
+)
+
+([KB_943075_Instance_252] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_253])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_253] of  Property_List
+)
+
+([KB_943075_Instance_254] of  Widget
+
+	(height 0)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_255])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_255] of  Property_List
+)
+
+([KB_943075_Instance_256] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_257] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_258] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_259] of  Widget
+
+	(height 0)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_260])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_260] of  Property_List
+)
+
+([KB_943075_Instance_261] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_262] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_263] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_264])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([KB_943075_Instance_264] of  Property_List
+)
+
+([KB_943075_Instance_265] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_266])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([KB_943075_Instance_266] of  Property_List
+)
+
+([KB_943075_Instance_267] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_268])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_268] of  Property_List
+)
+
+([KB_943075_Instance_269] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "definition")
+	(property_list [KB_943075_Instance_270])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_270] of  Property_List
+
+	(properties
+		[KB_943075_Instance_271]
+		[KB_943075_Instance_272]
+		[library_ProjectKB_Instance_10655]))
+
+([KB_943075_Instance_271] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_272] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_306] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "N_ary_Expression")
+	(property_list [KB_943075_Instance_307])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_307] of  Property_List
+
+	(properties
+		[KB_943075_Instance_308]
+		[KB_943075_Instance_310]
+		[KB_943075_Instance_312]
+		[KB_943075_Instance_322]))
+
+([KB_943075_Instance_308] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_309])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_309] of  Property_List
+)
+
+([KB_943075_Instance_310] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "operator")
+	(property_list [KB_943075_Instance_311])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 125)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_311] of  Property_List
+)
+
+([KB_943075_Instance_312] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "values")
+	(property_list [KB_943075_Instance_313])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_313] of  Property_List
+
+	(properties
+		[KB_943075_Instance_314]
+		[KB_943075_Instance_315]
+		[KB_943075_Instance_316]
+		[KB_943075_Instance_317]
+		[KB_943075_Instance_318]
+		[KB_943075_Instance_319]
+		[KB_943075_Instance_320]
+		[KB_943075_Instance_321]
+		[library_ProjectKB_Class30762]
+		[library_ProjectKB_Class30763]))
+
+([KB_943075_Instance_314] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Selected Instances"))
+
+([KB_943075_Instance_315] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_316] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_317] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_318] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_319] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_320] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_321] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Selected Instances"))
+
+([KB_943075_Instance_322] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_323] of  Widget
+
+	(is_hidden FALSE)
+	(name "Duration")
+	(property_list [KB_943075_Instance_324])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_324] of  Property_List
+
+	(properties
+		[KB_943075_Instance_325]
+		[KB_943075_Instance_326]
+		[KB_943075_Instance_328]
+		[KB_943075_Instance_330]))
+
+([KB_943075_Instance_325] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_326] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "how_many")
+	(property_list [KB_943075_Instance_327])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 70))
+
+([KB_943075_Instance_327] of  Property_List
+)
+
+([KB_943075_Instance_328] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "time_unit")
+	(property_list [KB_943075_Instance_329])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_329] of  Property_List
+)
+
+([KB_943075_Instance_330] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_331])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 10))
+
+([KB_943075_Instance_331] of  Property_List
+)
+
+([KB_943075_Instance_332] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Get_Slot_Value")
+	(property_list [KB_943075_Instance_333])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_333] of  Property_List
+
+	(properties
+		[KB_943075_Instance_334]
+		[KB_943075_Instance_336]
+		[KB_943075_Instance_346]
+		[KB_943075_Instance_356]
+		[library_ProjectKB_Class767]))
+
+([KB_943075_Instance_334] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_335])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_335] of  Property_List
+)
+
+([KB_943075_Instance_336] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "slot")
+	(property_list [KB_943075_Instance_337])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_337] of  Property_List
+
+	(properties
+		[KB_943075_Instance_338]
+		[KB_943075_Instance_339]
+		[KB_943075_Instance_340]
+		[KB_943075_Instance_341]
+		[KB_943075_Instance_342]
+		[KB_943075_Instance_343]
+		[KB_943075_Instance_344]
+		[KB_943075_Instance_345]
+		[library_ProjectKB_Class765]))
+
+([KB_943075_Instance_338] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_339] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_340] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_341] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_342] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_343] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_344] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_345] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_346] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "instance")
+	(property_list [KB_943075_Instance_347])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_347] of  Property_List
+
+	(properties
+		[KB_943075_Instance_348]
+		[KB_943075_Instance_349]
+		[KB_943075_Instance_350]
+		[KB_943075_Instance_351]
+		[KB_943075_Instance_352]
+		[KB_943075_Instance_353]
+		[KB_943075_Instance_354]
+		[KB_943075_Instance_355]
+		[library_ProjectKB_Class766]))
+
+([KB_943075_Instance_348] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_349] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_350] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_351] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_352] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_353] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_354] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_355] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_356] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_357] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Presence_Query")
+	(property_list [KB_943075_Instance_358])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_358] of  Property_List
+
+	(properties
+		[KB_943075_Instance_359]
+		[KB_943075_Instance_361]
+		[KB_943075_Instance_363]
+		[KB_943075_Instance_365]
+		[KB_943075_Instance_373]
+		[KB_943075_Instance_375]
+		[KB_943075_Instance_380]
+		[KB_943075_Instance_385]))
+
+([KB_943075_Instance_359] of  Widget
+
+	(height 0)
+	(is_hidden FALSE)
+	(name "type")
+	(property_list [KB_943075_Instance_360])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_360] of  Property_List
+)
+
+([KB_943075_Instance_361] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_362])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_362] of  Property_List
+)
+
+([KB_943075_Instance_363] of  Widget
+
+	(height 0)
+	(is_hidden FALSE)
+	(name "string_value")
+	(property_list [KB_943075_Instance_364])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_364] of  Property_List
+)
+
+([KB_943075_Instance_365] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "period")
+	(property_list [KB_943075_Instance_366])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 120))
+
+([KB_943075_Instance_366] of  Property_List
+
+	(properties
+		[KB_943075_Instance_367]
+		[KB_943075_Instance_368]
+		[KB_943075_Instance_369]
+		[KB_943075_Instance_370]
+		[KB_943075_Instance_371]
+		[KB_943075_Instance_372]))
+
+([KB_943075_Instance_367] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_368] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_369] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_370] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_371] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_372] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_373] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "qualitative_domain_term")
+	(property_list [KB_943075_Instance_374])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_374] of  Property_List
+)
+
+([KB_943075_Instance_375] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "entry_type")
+	(property_list [KB_943075_Instance_376])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_376] of  Property_List
+
+	(properties
+		[KB_943075_Instance_377]
+		[KB_943075_Instance_378]
+		[KB_943075_Instance_379]))
+
+([KB_943075_Instance_377] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_378] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_379] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_380] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "mood")
+	(property_list [KB_943075_Instance_381])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 250)
+	(y 0))
+
+([KB_943075_Instance_381] of  Property_List
+
+	(properties
+		[KB_943075_Instance_382]
+		[KB_943075_Instance_383]
+		[KB_943075_Instance_384]))
+
+([KB_943075_Instance_382] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_383] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_384] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_385] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "filter")
+	(property_list [KB_943075_Instance_386])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 60))
+
+([KB_943075_Instance_386] of  Property_List
+
+	(properties
+		[KB_943075_Instance_387]
+		[KB_943075_Instance_388]
+		[KB_943075_Instance_389]
+		[KB_943075_Instance_390]
+		[KB_943075_Instance_391]
+		[KB_943075_Instance_392]))
+
+([KB_943075_Instance_387] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_388] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_389] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_390] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_391] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_392] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_400] of  Widget
+
+	(height 574)
+	(is_hidden FALSE)
+	(name "N_ary_Criterion")
+	(property_list [KB_943075_Instance_401])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 806)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_401] of  Property_List
+
+	(properties
+		[KB_943075_Instance_402]
+		[KB_943075_Instance_403]
+		[KB_943075_Instance_405]
+		[KB_943075_Instance_415]
+		[library_ProjectKB_Class769]))
+
+([KB_943075_Instance_402] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_403] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "operator")
+	(property_list [KB_943075_Instance_404])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 125)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_404] of  Property_List
+)
+
+([KB_943075_Instance_405] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "criteria")
+	(property_list [KB_943075_Instance_406])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_406] of  Property_List
+
+	(properties
+		[KB_943075_Instance_407]
+		[KB_943075_Instance_408]
+		[KB_943075_Instance_409]
+		[KB_943075_Instance_410]
+		[KB_943075_Instance_411]
+		[KB_943075_Instance_412]
+		[KB_943075_Instance_413]
+		[KB_943075_Instance_414]
+		[library_ProjectKB_Class686]
+		[library_ProjectKB_Class687]))
+
+([KB_943075_Instance_407] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Selected Instances"))
+
+([KB_943075_Instance_408] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_409] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_410] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_411] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_412] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_413] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_414] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Selected Instances"))
+
+([KB_943075_Instance_415] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_416])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([KB_943075_Instance_416] of  Property_List
+)
+
+([KB_943075_Instance_417] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Numeric_Constant")
+	(property_list [KB_943075_Instance_418])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_418] of  Property_List
+
+	(properties
+		[KB_943075_Instance_419]
+		[KB_943075_Instance_421]
+		[KB_943075_Instance_423]
+		[library_ProjectKB_Class750]))
+
+([KB_943075_Instance_419] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_420])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_420] of  Property_List
+)
+
+([KB_943075_Instance_421] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "value")
+	(property_list [KB_943075_Instance_422])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 125)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_422] of  Property_List
+)
+
+([KB_943075_Instance_423] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_424] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Qualitative_Term_Query")
+	(property_list [KB_943075_Instance_425])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_425] of  Property_List
+
+	(properties
+		[KB_943075_Instance_426]
+		[KB_943075_Instance_428]
+		[KB_943075_Instance_430]
+		[KB_943075_Instance_432]
+		[KB_943075_Instance_434]
+		[KB_943075_Instance_436]))
+
+([KB_943075_Instance_426] of  Widget
+
+	(height 0)
+	(is_hidden FALSE)
+	(name "type")
+	(property_list [KB_943075_Instance_427])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_427] of  Property_List
+)
+
+([KB_943075_Instance_428] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_429])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_429] of  Property_List
+)
+
+([KB_943075_Instance_430] of  Widget
+
+	(height 0)
+	(is_hidden FALSE)
+	(name "string_value")
+	(property_list [KB_943075_Instance_431])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_431] of  Property_List
+)
+
+([KB_943075_Instance_432] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "qualitative_domain_term")
+	(property_list [KB_943075_Instance_433])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_433] of  Property_List
+)
+
+([KB_943075_Instance_434] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "aggregation_operator")
+	(property_list [KB_943075_Instance_435])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 125)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_435] of  Property_List
+)
+
+([KB_943075_Instance_436] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "period")
+	(property_list [KB_943075_Instance_437])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_437] of  Property_List
+
+	(properties
+		[KB_943075_Instance_438]
+		[KB_943075_Instance_439]
+		[KB_943075_Instance_440]
+		[KB_943075_Instance_441]
+		[KB_943075_Instance_442]
+		[KB_943075_Instance_443]))
+
+([KB_943075_Instance_438] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_439] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_440] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_441] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_442] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_443] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_444] of  Widget
+
+	(is_hidden FALSE)
+	(name "Absolute_Time_Interval")
+	(property_list [KB_943075_Instance_445])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_445] of  Property_List
+
+	(properties
+		[KB_943075_Instance_446]
+		[KB_943075_Instance_447]
+		[KB_943075_Instance_449]
+		[KB_943075_Instance_451]
+		[KB_943075_Instance_453]))
+
+([KB_943075_Instance_446] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_447] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "how_many")
+	(property_list [KB_943075_Instance_448])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_448] of  Property_List
+)
+
+([KB_943075_Instance_449] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "time_unit")
+	(property_list [KB_943075_Instance_450])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 100)
+	(y 120))
+
+([KB_943075_Instance_450] of  Property_List
+)
+
+([KB_943075_Instance_451] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_452])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 10))
+
+([KB_943075_Instance_452] of  Property_List
+)
+
+([KB_943075_Instance_453] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "polarity")
+	(property_list [KB_943075_Instance_454])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_454] of  Property_List
+)
+
+([KB_943075_Instance_455] of  Widget
+
+	(is_hidden FALSE)
+	(name "Expression_Comparison_Criterion")
+	(property_list [KB_943075_Instance_456])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_456] of  Property_List
+
+	(properties
+		[KB_943075_Instance_457]
+		[KB_943075_Instance_458]
+		[KB_943075_Instance_460]
+		[KB_943075_Instance_464]
+		[KB_943075_Instance_466]
+		[library_ProjectKB_Class10792]))
+
+([KB_943075_Instance_457] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_458] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_459])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_459] of  Property_List
+)
+
+([KB_943075_Instance_460] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "variable")
+	(property_list [KB_943075_Instance_461])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_461] of  Property_List
+
+	(properties
+		[KB_943075_Instance_462]
+		[KB_943075_Instance_463]
+		[library_ProjectKB_Class30793]))
+
+([KB_943075_Instance_462] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_463] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_464] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "operator")
+	(property_list [KB_943075_Instance_465])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 200)
+	(y 60))
+
+([KB_943075_Instance_465] of  Property_List
+)
+
+([KB_943075_Instance_466] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "expression")
+	(property_list [KB_943075_Instance_467])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 300)
+	(y 60))
+
+([KB_943075_Instance_467] of  Property_List
+
+	(properties
+		[KB_943075_Instance_468]
+		[KB_943075_Instance_469]
+		[library_ProjectKB_Class30794]))
+
+([KB_943075_Instance_468] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_469] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_470] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Numeric_Term_Query")
+	(property_list [KB_943075_Instance_471])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_471] of  Property_List
+
+	(properties
+		[KB_943075_Instance_474]
+		[KB_943075_Instance_478]
+		[KB_943075_Instance_486]
+		[KB_943075_Instance_491]
+		[KB_943075_Instance_493]
+		[KB_943075_Instance_498]
+		[library_ProjectKB_Class20805]
+		[library_ProjectKB_Class20808]))
+
+([KB_943075_Instance_474] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_475])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_475] of  Property_List
+)
+
+([KB_943075_Instance_478] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "period")
+	(property_list [KB_943075_Instance_479])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 120))
+
+([KB_943075_Instance_479] of  Property_List
+
+	(properties
+		[KB_943075_Instance_480]
+		[KB_943075_Instance_481]
+		[KB_943075_Instance_482]
+		[KB_943075_Instance_483]
+		[KB_943075_Instance_484]
+		[KB_943075_Instance_485]
+		[library_ProjectKB_Class20806]
+		[library_ProjectKB_Class20807]))
+
+([KB_943075_Instance_480] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_481] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_482] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_483] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_484] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_485] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_486] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "entry_type")
+	(property_list [KB_943075_Instance_487])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_487] of  Property_List
+
+	(properties
+		[KB_943075_Instance_488]
+		[KB_943075_Instance_489]
+		[KB_943075_Instance_490]))
+
+([KB_943075_Instance_488] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_489] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_490] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_491] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "aggregation_operator")
+	(property_list [KB_943075_Instance_492])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 125)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_492] of  Property_List
+)
+
+([KB_943075_Instance_493] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "mood")
+	(property_list [KB_943075_Instance_494])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 250)
+	(y 60))
+
+([KB_943075_Instance_494] of  Property_List
+
+	(properties
+		[KB_943075_Instance_495]
+		[KB_943075_Instance_496]
+		[KB_943075_Instance_497]))
+
+([KB_943075_Instance_495] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_496] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_497] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_498] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "numeric_domain_term")
+	(property_list [KB_943075_Instance_499])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_499] of  Property_List
+)
+
+([KB_943075_Instance_500] of  Widget
+
+	(is_hidden FALSE)
+	(name "Time_Interval")
+	(property_list [KB_943075_Instance_501])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_501] of  Property_List
+
+	(properties
+		[KB_943075_Instance_502]
+		[KB_943075_Instance_503]
+		[KB_943075_Instance_505]
+		[KB_943075_Instance_507]
+		[library_ProjectKB_Class778]))
+
+([KB_943075_Instance_502] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_503] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "how_many")
+	(property_list [KB_943075_Instance_504])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_504] of  Property_List
+)
+
+([KB_943075_Instance_505] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "time_unit")
+	(property_list [KB_943075_Instance_506])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_506] of  Property_List
+)
+
+([KB_943075_Instance_507] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_508])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_508] of  Property_List
+)
+
+([KB_943075_Instance_515] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Criterion")
+	(property_list [KB_943075_Instance_516])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_516] of  Property_List
+
+	(properties
+		[KB_943075_Instance_517]
+		[KB_943075_Instance_519]))
+
+([KB_943075_Instance_517] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_518])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_518] of  Property_List
+)
+
+([KB_943075_Instance_519] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_527] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Conditional_Expression")
+	(property_list [KB_943075_Instance_528])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_528] of  Property_List
+
+	(properties
+		[KB_943075_Instance_529]
+		[KB_943075_Instance_539]
+		[KB_943075_Instance_541]
+		[KB_943075_Instance_543]
+		[library_ProjectKB_Class20821]))
+
+([KB_943075_Instance_529] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "precondition")
+	(property_list [KB_943075_Instance_530])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 0))
+
+([KB_943075_Instance_530] of  Property_List
+
+	(properties
+		[KB_943075_Instance_531]
+		[KB_943075_Instance_532]
+		[KB_943075_Instance_533]
+		[KB_943075_Instance_534]
+		[KB_943075_Instance_535]
+		[KB_943075_Instance_536]
+		[KB_943075_Instance_537]
+		[KB_943075_Instance_538]
+		[library_ProjectKB_Class30729]))
+
+([KB_943075_Instance_531] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_532] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_533] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_534] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_535] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_536] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_537] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_538] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_539] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "value")
+	(property_list [KB_943075_Instance_540])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_540] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class30730]
+		[library_ProjectKB_Class30731]))
+
+([KB_943075_Instance_541] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_542])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_542] of  Property_List
+)
+
+([KB_943075_Instance_543] of  Property_List
+
+	(name "layout properties")
+	(properties
+		[library_ProjectKB_Class30732]
+		[library_ProjectKB_Class30733]))
+
+([KB_943075_Instance_544] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "EPR_Entity_Class")
+	(property_list [KB_943075_Instance_545])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_545] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_546]
+		[KB_943075_Instance_547]
+		[KB_943075_Instance_548]
+		[KB_943075_Instance_549]
+		[KB_943075_Instance_560]
+		[KB_943075_Instance_561]
+		[KB_943075_Instance_562]
+		[KB_943075_Instance_563]
+		[KB_943075_Instance_575]
+		[KB_943075_Instance_576]
+		[KB_943075_Instance_586]))
+
+([KB_943075_Instance_546] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Name")
+	(name ":NAME")
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_547] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Role")
+	(name ":ROLE")
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_548] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([KB_943075_Instance_549] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_550])
+	(widget_class_name "edu.stanford.smi.protege.widget.ConstraintsWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_550] of  Property_List
+
+	(properties
+		[KB_943075_Instance_551]
+		[KB_943075_Instance_552]
+		[KB_943075_Instance_553]
+		[KB_943075_Instance_554]
+		[KB_943075_Instance_555]
+		[KB_943075_Instance_556]
+		[KB_943075_Instance_557]
+		[KB_943075_Instance_558]
+		[KB_943075_Instance_559]))
+
+([KB_943075_Instance_551] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View"))
+
+([KB_943075_Instance_552] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_553] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_554] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_555] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_556] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_557] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Selected Instances"))
+
+([KB_943075_Instance_558] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_559] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Selected Instances"))
+
+([KB_943075_Instance_560] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_561] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_562] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_563] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_564])
+	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
+	(width 600)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_564] of  Property_List
+
+	(properties
+		[KB_943075_Instance_565]
+		[KB_943075_Instance_566]
+		[KB_943075_Instance_567]
+		[KB_943075_Instance_568]
+		[KB_943075_Instance_569]
+		[KB_943075_Instance_570]
+		[KB_943075_Instance_571]
+		[KB_943075_Instance_572]
+		[KB_943075_Instance_573]
+		[KB_943075_Instance_574]))
+
+([KB_943075_Instance_565] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View"))
+
+([KB_943075_Instance_566] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_567] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove overrides from selected slots"))
+
+([KB_943075_Instance_568] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_569] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_570] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots"))
+
+([KB_943075_Instance_571] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots at class"))
+
+([KB_943075_Instance_572] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create slot and attach to class"))
+
+([KB_943075_Instance_573] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move up"))
+
+([KB_943075_Instance_574] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move down"))
+
+([KB_943075_Instance_575] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_576] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "key_slot")
+	(property_list [KB_943075_Instance_577])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 420))
+
+([KB_943075_Instance_577] of  Property_List
+
+	(properties
+		[KB_943075_Instance_578]
+		[KB_943075_Instance_579]
+		[KB_943075_Instance_580]
+		[KB_943075_Instance_581]
+		[KB_943075_Instance_582]
+		[KB_943075_Instance_583]
+		[KB_943075_Instance_584]
+		[KB_943075_Instance_585]))
+
+([KB_943075_Instance_578] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_579] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_580] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_581] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_582] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_583] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_584] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_585] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_586] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_587] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "EPR_Query")
+	(property_list [KB_943075_Instance_588])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_588] of  Property_List
+
+	(properties
+		[KB_943075_Instance_589]
+		[KB_943075_Instance_591]
+		[library_ProjectKB_Class20795]))
+
+([KB_943075_Instance_589] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_590])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_590] of  Property_List
+)
+
+([KB_943075_Instance_591] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_592] of  Widget
+
+	(is_hidden FALSE)
+	(name "Medications_Metaclass")
+	(property_list [KB_943075_Instance_593])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_593] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_594]
+		[KB_943075_Instance_596]
+		[KB_943075_Instance_598]
+		[KB_943075_Instance_600]
+		[KB_943075_Instance_602]
+		[KB_943075_Instance_603]
+		[KB_943075_Instance_604]
+		[KB_943075_Instance_605]
+		[KB_943075_Instance_607]
+		[KB_943075_Instance_608]
+		[KB_943075_Instance_609]
+		[KB_943075_Instance_611]
+		[KB_943075_Instance_613]
+		[library_ProjectKB_Class30678]
+		[library_ProjectKB_Class20680]))
+
+([KB_943075_Instance_594] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_595])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_595] of  Property_List
+)
+
+([KB_943075_Instance_596] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_597])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_597] of  Property_List
+)
+
+([KB_943075_Instance_598] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_599])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_599] of  Property_List
+)
+
+([KB_943075_Instance_600] of  Widget
+
+	(height 0)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_601])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_601] of  Property_List
+)
+
+([KB_943075_Instance_602] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_603] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_604] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_605] of  Widget
+
+	(height 0)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_606])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_606] of  Property_List
+)
+
+([KB_943075_Instance_607] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_608] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_609] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_610])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([KB_943075_Instance_610] of  Property_List
+)
+
+([KB_943075_Instance_611] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_612])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([KB_943075_Instance_612] of  Property_List
+)
+
+([KB_943075_Instance_613] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_614])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_614] of  Property_List
+)
+
+([KB_943075_Instance_615] of  Widget
+
+	(is_hidden FALSE)
+	(name "Temporal_Criterion")
+	(property_list [KB_943075_Instance_616])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_616] of  Property_List
+
+	(properties
+		[KB_943075_Instance_617]
+		[KB_943075_Instance_619]
+		[KB_943075_Instance_620]
+		[KB_943075_Instance_622]
+		[KB_943075_Instance_624]
+		[KB_943075_Instance_626]))
+
+([KB_943075_Instance_617] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_618])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_618] of  Property_List
+)
+
+([KB_943075_Instance_619] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_620] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "where_condition")
+	(property_list [KB_943075_Instance_621])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_621] of  Property_List
+)
+
+([KB_943075_Instance_622] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "select")
+	(property_list [KB_943075_Instance_623])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_623] of  Property_List
+)
+
+([KB_943075_Instance_624] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "from")
+	(property_list [KB_943075_Instance_625])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 200)
+	(x 200)
+	(y 60))
+
+([KB_943075_Instance_625] of  Property_List
+)
+
+([KB_943075_Instance_626] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "when_condition")
+	(property_list [KB_943075_Instance_627])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([KB_943075_Instance_627] of  Property_List
+)
+
+([KB_943075_Instance_644] of  Widget
+
+	(height 574)
+	(is_hidden FALSE)
+	(name "PAL_Criterion")
+	(property_list [KB_943075_Instance_645])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 806)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_645] of  Property_List
+
+	(properties
+		[KB_943075_Instance_646]
+		[KB_943075_Instance_647]
+		[KB_943075_Instance_657]
+		[KB_943075_Instance_659]
+		[library_ProjectKB_Class755]))
+
+([KB_943075_Instance_646] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_647] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PAL_constraint")
+	(property_list [KB_943075_Instance_648])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_648] of  Property_List
+
+	(properties
+		[KB_943075_Instance_649]
+		[KB_943075_Instance_650]
+		[KB_943075_Instance_651]
+		[KB_943075_Instance_652]
+		[KB_943075_Instance_653]
+		[KB_943075_Instance_654]
+		[KB_943075_Instance_655]
+		[KB_943075_Instance_656]
+		[library_ProjectKB_Class754]))
+
+([KB_943075_Instance_649] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_650] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_651] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_652] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_653] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_654] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_655] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_656] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_657] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "case_variable")
+	(property_list [KB_943075_Instance_658])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_658] of  Property_List
+)
+
+([KB_943075_Instance_659] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_660])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([KB_943075_Instance_660] of  Property_List
+)
+
+([KB_943075_Instance_661] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Variable")
+	(property_list [KB_943075_Instance_662])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_662] of  Property_List
+
+	(properties
+		[KB_943075_Instance_663]
+		[KB_943075_Instance_670]
+		[library_ProjectKB_Class3639]
+		[library_ProjectKB_Class3641]
+		[library_ProjectKB_Class3645]))
+
+([KB_943075_Instance_663] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_664])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_664] of  Property_List
+)
+
+([KB_943075_Instance_670] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_671] of  Widget
+
+	(height 797)
+	(is_hidden FALSE)
+	(name "Set_Expression")
+	(property_list [KB_943075_Instance_672])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 1038)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_672] of  Property_List
+
+	(properties
+		[KB_943075_Instance_673]
+		[KB_943075_Instance_675]
+		[KB_943075_Instance_685]))
+
+([KB_943075_Instance_673] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [KB_943075_Instance_674])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 250)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_674] of  Property_List
+)
+
+([KB_943075_Instance_675] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "set_elements")
+	(property_list [KB_943075_Instance_676])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceListWidget")
+	(width 250)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_676] of  Property_List
+
+	(properties
+		[KB_943075_Instance_677]
+		[KB_943075_Instance_678]
+		[KB_943075_Instance_679]
+		[KB_943075_Instance_680]
+		[KB_943075_Instance_681]
+		[KB_943075_Instance_682]
+		[KB_943075_Instance_683]
+		[KB_943075_Instance_684]))
+
+([KB_943075_Instance_677] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Selected Instances"))
+
+([KB_943075_Instance_678] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_679] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_680] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_681] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_682] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_683] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_684] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Selected Instances"))
+
+([KB_943075_Instance_685] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_686] of  Widget
+
+	(is_hidden FALSE)
+	(name "Diagnostic_Term_Metaclass")
+	(property_list [KB_943075_Instance_687])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([KB_943075_Instance_687] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_688]
+		[KB_943075_Instance_690]
+		[KB_943075_Instance_692]
+		[KB_943075_Instance_694]
+		[KB_943075_Instance_696]
+		[KB_943075_Instance_697]
+		[KB_943075_Instance_698]
+		[KB_943075_Instance_699]
+		[KB_943075_Instance_701]
+		[KB_943075_Instance_702]
+		[KB_943075_Instance_703]
+		[KB_943075_Instance_705]
+		[KB_943075_Instance_707]
+		[KB_943075_Instance_709]
+		[library_ProjectKB_Class783]
+		[library_ProjectKB_Class684]
+		[library_ProjectKB_Class811]))
+
+([KB_943075_Instance_688] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_689])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_689] of  Property_List
+)
+
+([KB_943075_Instance_690] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_691])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_691] of  Property_List
+)
+
+([KB_943075_Instance_692] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_693])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_693] of  Property_List
+)
+
+([KB_943075_Instance_694] of  Widget
+
+	(height 0)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_695])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_695] of  Property_List
+)
+
+([KB_943075_Instance_696] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_697] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_698] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_699] of  Widget
+
+	(height 0)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_700])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_700] of  Property_List
+)
+
+([KB_943075_Instance_701] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_702] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_703] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_704])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 190))
+
+([KB_943075_Instance_704] of  Property_List
+)
+
+([KB_943075_Instance_705] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_706])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 200)
+	(y 130))
+
+([KB_943075_Instance_706] of  Property_List
+)
+
+([KB_943075_Instance_707] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_708])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 130))
+
+([KB_943075_Instance_708] of  Property_List
+)
+
+([KB_943075_Instance_709] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "DiagnosticCriteria")
+	(property_list [KB_943075_Instance_710])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 190))
+
+([KB_943075_Instance_710] of  Property_List
+
+	(properties
+		[KB_943075_Instance_711]
+		[KB_943075_Instance_712]
+		[library_ProjectKB_Instance_663]))
+
+([KB_943075_Instance_711] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_712] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_73] of  Widget
+
+	(height 574)
+	(is_hidden FALSE)
+	(name "Presence_Criterion")
+	(property_list [KB_943075_Instance_74])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 806)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_74] of  Property_List
+
+	(properties
+		[KB_943075_Instance_75]
+		[KB_943075_Instance_76]
+		[KB_943075_Instance_87]
+		[KB_943075_Instance_92]
+		[KB_943075_Instance_97]
+		[KB_943075_Instance_102]
+		[KB_943075_Instance_104]
+		[library_ProjectKB_Class761]
+		[library_ProjectKB_Class10774]))
+
+([KB_943075_Instance_75] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_76] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "period")
+	(property_list [KB_943075_Instance_77])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 250)
+	(x 250)
+	(y 180))
+
+([KB_943075_Instance_77] of  Property_List
+
+	(properties
+		[KB_943075_Instance_78]
+		[KB_943075_Instance_79]
+		[KB_943075_Instance_80]
+		[KB_943075_Instance_81]
+		[KB_943075_Instance_82]
+		[KB_943075_Instance_83]
+		[KB_943075_Instance_84]
+		[KB_943075_Instance_85]
+		[KB_943075_Instance_86]
+		[library_ProjectKB_Instance_711]))
+
+([KB_943075_Instance_776] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(name "Medical_Conditions_Metaclass")
+	(property_list [KB_943075_Instance_777])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 500)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_777] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_778]
+		[KB_943075_Instance_780]
+		[KB_943075_Instance_782]
+		[KB_943075_Instance_784]
+		[KB_943075_Instance_786]
+		[KB_943075_Instance_787]
+		[KB_943075_Instance_788]
+		[KB_943075_Instance_789]
+		[KB_943075_Instance_799]
+		[KB_943075_Instance_802]
+		[KB_943075_Instance_803]
+		[KB_943075_Instance_805]
+		[KB_943075_Instance_807]
+		[library_ProjectKB_Class30676]
+		[library_ProjectKB_Class682]))
+
+([KB_943075_Instance_778] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_779])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_779] of  Property_List
+)
+
+([KB_943075_Instance_78] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Instance"))
+
+([KB_943075_Instance_780] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_781])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_781] of  Property_List
+)
+
+([KB_943075_Instance_782] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_783])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 400)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_783] of  Property_List
+)
+
+([KB_943075_Instance_784] of  Widget
+
+	(height 0)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_785])
+	(width 0)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_785] of  Property_List
+)
+
+([KB_943075_Instance_786] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_787] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_788] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_789] of  Widget
+
+	(height 140)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_790])
+	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
+	(width 600)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_79] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_790] of  Property_List
+
+	(properties
+		[KB_943075_Instance_791]
+		[KB_943075_Instance_792]
+		[KB_943075_Instance_793]
+		[KB_943075_Instance_794]
+		[KB_943075_Instance_795]
+		[KB_943075_Instance_796]
+		[KB_943075_Instance_797]
+		[KB_943075_Instance_798]))
+
+([KB_943075_Instance_791] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots"))
+
+([KB_943075_Instance_792] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots at class"))
+
+([KB_943075_Instance_793] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_794] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove overrides from selected slots"))
+
+([KB_943075_Instance_795] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_796] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_797] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move up"))
+
+([KB_943075_Instance_798] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move down"))
+
+([KB_943075_Instance_799] of  Property_List
+
+	(name "layout properties")
+	(properties
+		[KB_943075_Instance_800]
+		[KB_943075_Instance_801]))
+
+([KB_943075_Instance_80] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_800] of  String
+
+	(name "horizontal_stretcher"))
+
+([KB_943075_Instance_801] of  String
+
+	(name "vertical_stretcher"))
+
+([KB_943075_Instance_802] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_803] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_804])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 320))
+
+([KB_943075_Instance_804] of  Property_List
+)
+
+([KB_943075_Instance_805] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_806])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 380))
+
+([KB_943075_Instance_806] of  Property_List
+)
+
+([KB_943075_Instance_807] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_808])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 260))
+
+([KB_943075_Instance_808] of  Property_List
+)
+
+([KB_943075_Instance_81] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_82] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_83] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_84] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_85] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_86] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_866] of  Widget
+
+	(height 662)
+	(is_hidden FALSE)
+	(name "Canonical_Terms_Metaclass")
+	(property_list [KB_943075_Instance_867])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 699)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_867] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[KB_943075_Instance_868]
+		[KB_943075_Instance_870]
+		[KB_943075_Instance_872]
+		[KB_943075_Instance_874]
+		[KB_943075_Instance_887]
+		[KB_943075_Instance_888]
+		[KB_943075_Instance_889]
+		[KB_943075_Instance_890]
+		[KB_943075_Instance_901]
+		[KB_943075_Instance_902]
+		[KB_943075_Instance_903]
+		[KB_943075_Instance_905]
+		[KB_943075_Instance_907]
+		[library_ProjectKB_Class40679]
+		[library_ProjectKB_Class680]))
+
+([KB_943075_Instance_868] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_943075_Instance_869])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([KB_943075_Instance_869] of  Property_List
+)
+
+([KB_943075_Instance_87] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "mood")
+	(property_list [KB_943075_Instance_88])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 250)
+	(y 60))
+
+([KB_943075_Instance_870] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_943075_Instance_871])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([KB_943075_Instance_871] of  Property_List
+)
+
+([KB_943075_Instance_872] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_943075_Instance_873])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([KB_943075_Instance_873] of  Property_List
+)
+
+([KB_943075_Instance_874] of  Widget
+
+	(height 120)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_943075_Instance_875])
+	(widget_class_name "edu.stanford.smi.protege.widget.ConstraintsWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([KB_943075_Instance_875] of  Property_List
+
+	(properties
+		[KB_943075_Instance_876]
+		[KB_943075_Instance_877]
+		[KB_943075_Instance_878]
+		[KB_943075_Instance_879]
+		[KB_943075_Instance_880]
+		[KB_943075_Instance_881]
+		[KB_943075_Instance_882]
+		[KB_943075_Instance_883]
+		[KB_943075_Instance_884]
+		[KB_943075_Instance_885]
+		[KB_943075_Instance_886]))
+
+([KB_943075_Instance_876] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Selected Instances"))
+
+([KB_943075_Instance_877] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_878] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-References"))
+
+([KB_943075_Instance_879] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_88] of  Property_List
+
+	(properties
+		[KB_943075_Instance_89]
+		[KB_943075_Instance_90]
+		[KB_943075_Instance_91]))
+
+([KB_943075_Instance_880] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_881] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete"))
+
+([KB_943075_Instance_882] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create Instance"))
+
+([KB_943075_Instance_883] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Selected Instances"))
+
+([KB_943075_Instance_884] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value  "))
+
+([KB_943075_Instance_885] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_943075_Instance_886] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([KB_943075_Instance_887] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([KB_943075_Instance_888] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([KB_943075_Instance_889] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([KB_943075_Instance_89] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_890] of  Widget
+
+	(height 150)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_943075_Instance_891])
+	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
+	(width 600)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_891] of  Property_List
+
+	(properties
+		[KB_943075_Instance_892]
+		[KB_943075_Instance_893]
+		[KB_943075_Instance_894]
+		[KB_943075_Instance_895]
+		[KB_943075_Instance_896]
+		[KB_943075_Instance_897]
+		[KB_943075_Instance_898]
+		[KB_943075_Instance_899]
+		[KB_943075_Instance_900]))
+
+([KB_943075_Instance_892] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots"))
+
+([KB_943075_Instance_893] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View selected slots at class"))
+
+([KB_943075_Instance_894] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create"))
+
+([KB_943075_Instance_895] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove overrides from selected slots"))
+
+([KB_943075_Instance_896] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_897] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_898] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Create slot and attach to class"))
+
+([KB_943075_Instance_899] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move up"))
+
+([KB_943075_Instance_90] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_900] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move down"))
+
+([KB_943075_Instance_901] of  Property_List
+
+	(name "layout properties"))
+
+([KB_943075_Instance_902] of  Widget
+
+	(is_hidden FALSE)
+	(name ":DIRECT-TYPE"))
+
+([KB_943075_Instance_903] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "coding_system")
+	(property_list [KB_943075_Instance_904])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 330))
+
+([KB_943075_Instance_904] of  Property_List
+)
+
+([KB_943075_Instance_905] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "PrettyName")
+	(property_list [KB_943075_Instance_906])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 390))
+
+([KB_943075_Instance_906] of  Property_List
+)
+
+([KB_943075_Instance_907] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "code")
+	(property_list [KB_943075_Instance_908])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 270))
+
+([KB_943075_Instance_908] of  Property_List
+)
+
+([KB_943075_Instance_91] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_92] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "domain_term")
+	(property_list [KB_943075_Instance_93])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 0)
+	(y 120))
+
+([KB_943075_Instance_93] of  Property_List
+
+	(properties
+		[KB_943075_Instance_94]
+		[KB_943075_Instance_95]
+		[KB_943075_Instance_96]))
+
+([KB_943075_Instance_94] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([KB_943075_Instance_95] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Add"))
+
+([KB_943075_Instance_96] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-Remove"))
+
+([KB_943075_Instance_97] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "entry_type")
+	(property_list [KB_943075_Instance_98])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 250)
+	(x 0)
+	(y 180))
+
+([KB_943075_Instance_98] of  Property_List
+
+	(properties
+		[KB_943075_Instance_99]
+		[KB_943075_Instance_100]
+		[KB_943075_Instance_101]))
+
+([KB_943075_Instance_99] of  Boolean
+
+	(boolean_value TRUE)
+	(name "ButtonDisplayed-View Class"))
+
+([library_ProjectKB_Class10717] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class10718])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 480))
+
+([library_ProjectKB_Class10718] of  Property_List
+)
+
+([library_ProjectKB_Class10761] of  Property_List
+)
+
+([library_ProjectKB_Class10774] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "status")
+	(property_list [library_ProjectKB_Class10775])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 480))
+
+([library_ProjectKB_Class10775] of  Property_List
+)
+
+([library_ProjectKB_Class10779] of  String
+
+	(name "horizontal_stretcher")
+	(string_value "<<all>>"))
+
+([library_ProjectKB_Class10780] of  String
+
+	(name "vertical_stretcher")
+	(string_value ":PAL-STATEMENT"))
+
+([library_ProjectKB_Class10781] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "status")
+	(property_list [library_ProjectKB_Class10782])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class10782] of  Property_List
+)
+
+([library_ProjectKB_Class10792] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class10793])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Class10793] of  Property_List
+)
+
+([library_ProjectKB_Class10993] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class10994])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Class10994] of  Property_List
+)
+
+([library_ProjectKB_Class10995] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class10996])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([library_ProjectKB_Class10996] of  Property_List
+)
+
+([library_ProjectKB_Class13678] of  Integer
+
+	(integer_value 594)
+	(name "QUERY_TAB_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class13679] of  Integer
+
+	(integer_value 272)
+	(name "QUERY_CONTROL_PANEL_TOP_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class13680] of  Integer
+
+	(integer_value 272)
+	(name "QUERY_CONTROL_PANEL_BOTTOM_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class20675] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Class20676])
+	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
+
+([library_ProjectKB_Class20676] of  Property_List
+)
+
+([library_ProjectKB_Class20680] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class20681])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class20681] of  Property_List
+)
+
+([library_ProjectKB_Class20795] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class20796])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([library_ProjectKB_Class20796] of  Property_List
+)
+
+([library_ProjectKB_Class20801] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class20802])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class20802] of  Property_List
+)
+
+([library_ProjectKB_Class20803] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class20804])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([library_ProjectKB_Class20804] of  Property_List
+)
+
+([library_ProjectKB_Class20805] of  Property_List
+
+	(name "layout properties"))
+
+([library_ProjectKB_Class20806] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class20807] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Class20808] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class20809])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([library_ProjectKB_Class20809] of  Property_List
+)
+
+([library_ProjectKB_Class20821] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class20822])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Class20822] of  Property_List
+)
+
+([library_ProjectKB_Class23804] of  String
+
+	(name "Diagnostic_Term_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23805] of  String
+
+	(name "Ordinal-Valued_AtomicTest_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23806] of  String
+
+	(name "Medications_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23807] of  String
+
+	(name "Medical_Conditions_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23808] of  String
+
+	(name "Derived_Parameter_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23809] of  String
+
+	(name "Interval-Valued_AtomicTest_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23810] of  String
+
+	(name "Canonical_Terms_Metaclass")
+	(string_value "PrettyName"))
+
+([library_ProjectKB_Class23811] of  Map_Entry
+
+	(key "collab.hide.archived")
+	(key_class "java.lang.String")
+	(value "true")
+	(value_class "java.lang.String"))
+
+([library_ProjectKB_Class23812] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([library_ProjectKB_Class23813] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.AllAnnotationsPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([library_ProjectKB_Class23814] of  Map_Entry
+
+	(key "show_collaboration_panel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.Boolean"))
+
+([library_ProjectKB_Class30676] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class30677])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 440))
+
+([library_ProjectKB_Class30677] of  Property_List
+)
+
+([library_ProjectKB_Class30678] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class50679])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([library_ProjectKB_Class30729] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class30730] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class30731] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Class30732] of  String
+
+	(name "horizontal_stretcher")
+	(string_value "<<all>>"))
+
+([library_ProjectKB_Class30733] of  String
+
+	(name "vertical_stretcher")
+	(string_value "<<none>>"))
+
+([library_ProjectKB_Class30762] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class30763] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Class30793] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class30794] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class30825] of  Integer
+
+	(integer_value 594)
+	(name "PAL_TAB_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class30826] of  Integer
+
+	(integer_value 401)
+	(name "CONSTRAINT_CONTROL_PANEL_TOP_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class30827] of  Integer
+
+	(integer_value 401)
+	(name "CONSTRAINT_CONTROL_PANEL_BOTTOM_DIVIDER_LOCATION"))
+
+([library_ProjectKB_Class3639] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class3640])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([library_ProjectKB_Class3640] of  Property_List
+)
+
+([library_ProjectKB_Class3641] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "derivation_expression")
+	(property_list [library_ProjectKB_Class3642])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Class3642] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class3643]
+		[library_ProjectKB_Class3644]))
+
+([library_ProjectKB_Class3643] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class3644] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Class3645] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "string_name")
+	(property_list [library_ProjectKB_Class3646])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([library_ProjectKB_Class3646] of  Property_List
+)
+
+([library_ProjectKB_Class3661] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Class3662])
+	(widget_class_name "gov.va.test.opioidtesttool.TestingEnvironment"))
+
+([library_ProjectKB_Class3662] of  Property_List
+)
+
+([library_ProjectKB_Class40679] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class40680])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 230)
+	(y 270))
+
+([library_ProjectKB_Class40680] of  Property_List
+)
+
+([library_ProjectKB_Class50679] of  Property_List
+)
+
+([library_ProjectKB_Class678] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class679])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class679] of  Property_List
+)
+
+([library_ProjectKB_Class680] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class681])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 240)
+	(y 390))
+
+([library_ProjectKB_Class681] of  Property_List
+)
+
+([library_ProjectKB_Class682] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class683])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 560))
+
+([library_ProjectKB_Class683] of  Property_List
+)
+
+([library_ProjectKB_Class684] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Class685])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 370))
+
+([library_ProjectKB_Class685] of  Property_List
+)
+
+([library_ProjectKB_Class686] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class687] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Class750] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class751])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Class751] of  Property_List
+)
+
+([library_ProjectKB_Class754] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class755] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class756])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([library_ProjectKB_Class756] of  Property_List
+)
+
+([library_ProjectKB_Class757] of  Property_List
+
+	(name "layout properties")
+	(properties
+		[library_ProjectKB_Class10779]
+		[library_ProjectKB_Class10780]))
+
+([library_ProjectKB_Class758] of  Property_List
+)
+
+([library_ProjectKB_Class759] of  Property_List
+)
+
+([library_ProjectKB_Class760] of  Property_List
+)
+
+([library_ProjectKB_Class761] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class762])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class762] of  Property_List
+)
+
+([library_ProjectKB_Class763] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class764])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 240))
+
+([library_ProjectKB_Class764] of  Property_List
+)
+
+([library_ProjectKB_Class765] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class766] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class767] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class768])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([library_ProjectKB_Class768] of  Property_List
+)
+
+([library_ProjectKB_Class769] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class770])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 360))
+
+([library_ProjectKB_Class770] of  Property_List
+)
+
+([library_ProjectKB_Class771] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class772] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Class773] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class774])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([library_ProjectKB_Class774] of  Property_List
+)
+
+([library_ProjectKB_Class778] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name ":DOCUMENTATION")
+	(property_list [library_ProjectKB_Class779])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([library_ProjectKB_Class779] of  Property_List
+)
+
+([library_ProjectKB_Class783] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "data_source")
+	(property_list [library_ProjectKB_Class784])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 0)
+	(y 250))
+
+([library_ProjectKB_Class784] of  Property_List
+)
+
+([library_ProjectKB_Class792] of  Widget
+
+	(is_hidden FALSE)
+	(name "PAL-QUERY")
+	(property_list [library_ProjectKB_Class793])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([library_ProjectKB_Class793] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class794]
+		[library_ProjectKB_Class795]
+		[library_ProjectKB_Class797]
+		[library_ProjectKB_Class799]
+		[library_ProjectKB_Class801]))
+
+([library_ProjectKB_Class794] of  Property_List
+
+	(name "layout properties")
+	(properties
+		[library_ProjectKB_Class809]
+		[library_ProjectKB_Class810]))
+
+([library_ProjectKB_Class795] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "NAME")
+	(name ":PAL-NAME")
+	(property_list [library_ProjectKB_Class796])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 320)
+	(x 0)
+	(y 0))
+
+([library_ProjectKB_Class796] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class803]
+		[library_ProjectKB_Class804]))
+
+([library_ProjectKB_Class797] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(label "STATEMENT")
+	(name ":PAL-STATEMENT")
+	(property_list [library_ProjectKB_Class798])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalConstraintWidget")
+	(width 590)
+	(x 0)
+	(y 230))
+
+([library_ProjectKB_Class798] of  Property_List
+
+	(properties [library_ProjectKB_Class808]))
+
+([library_ProjectKB_Class799] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(label "RANGE")
+	(name ":PAL-RANGE")
+	(property_list [library_ProjectKB_Class800])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalRangeWidget")
+	(width 590)
+	(x 0)
+	(y 110))
+
+([library_ProjectKB_Class800] of  Property_List
+
+	(properties [library_ProjectKB_Class807]))
+
+([library_ProjectKB_Class801] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(label "DESCRIPTION")
+	(name ":PAL-DESCRIPTION")
+	(property_list [library_ProjectKB_Class802])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 270)
+	(x 320)
+	(y 0))
+
+([library_ProjectKB_Class802] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class805]
+		[library_ProjectKB_Class806]))
+
+([library_ProjectKB_Class803] of  String
+
+	(name "tooltip_text"))
+
+([library_ProjectKB_Class804] of  Boolean
+
+	(boolean_value FALSE)
+	(name "readOnly_configured"))
+
+([library_ProjectKB_Class805] of  String
+
+	(name "tooltip_text"))
+
+([library_ProjectKB_Class806] of  Boolean
+
+	(boolean_value FALSE)
+	(name "readOnly_configured"))
+
+([library_ProjectKB_Class807] of  String
+
+	(name "tooltip_text"))
+
+([library_ProjectKB_Class808] of  String
+
+	(name "tooltip_text"))
+
+([library_ProjectKB_Class809] of  String
+
+	(name "horizontal_stretcher")
+	(string_value "<<all>>"))
+
+([library_ProjectKB_Class810] of  String
+
+	(name "vertical_stretcher")
+	(string_value ":PAL-STATEMENT"))
+
+([library_ProjectKB_Class811] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "controllable")
+	(property_list [library_ProjectKB_Class812])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 430))
+
+([library_ProjectKB_Class812] of  Property_List
+)
+
+([library_ProjectKB_Instance_10655] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_10926] of  Widget
+
+	(is_hidden FALSE)
+	(name "General_Comparison_Criterion")
+	(property_list [library_ProjectKB_Instance_10929])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([library_ProjectKB_Instance_10929] of  Property_List
+
+	(properties
+		[library_ProjectKB_Instance_10930]
+		[library_ProjectKB_Instance_10931]
+		[library_ProjectKB_Instance_10933]
+		[library_ProjectKB_Instance_10937]
+		[library_ProjectKB_Instance_10941]
+		[library_ProjectKB_Instance_10943]
+		[library_ProjectKB_Instance_10945]
+		[library_ProjectKB_Instance_10947]
+		[library_ProjectKB_Instance_10949]
+		[library_ProjectKB_Instance_10951]
+		[library_ProjectKB_Instance_10953]
+		[library_ProjectKB_Class763]
+		[library_ProjectKB_Class10781]))
+
+([library_ProjectKB_Instance_10930] of  Property_List
+
+	(name "layout properties"))
+
+([library_ProjectKB_Instance_10931] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "label")
+	(property_list [library_ProjectKB_Instance_10932])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([library_ProjectKB_Instance_10932] of  Property_List
+)
+
+([library_ProjectKB_Instance_10933] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "value")
+	(property_list [library_ProjectKB_Instance_10934])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 300)
+	(y 120))
+
+([library_ProjectKB_Instance_10934] of  Property_List
+
+	(properties
+		[library_ProjectKB_Instance_10935]
+		[library_ProjectKB_Instance_10936]))
+
+([library_ProjectKB_Instance_10935] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_10936] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Instance_10937] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "valid_window")
+	(property_list [library_ProjectKB_Instance_10938])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 180))
+
+([library_ProjectKB_Instance_10938] of  Property_List
+
+	(properties
+		[library_ProjectKB_Instance_10939]
+		[library_ProjectKB_Instance_10940]))
+
+([library_ProjectKB_Instance_10939] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_10940] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Instance_10941] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "entry_type")
+	(property_list [library_ProjectKB_Instance_10942])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 200)
+	(x 100)
+	(y 60))
+
+([library_ProjectKB_Instance_10942] of  Property_List
+)
+
+([library_ProjectKB_Instance_10943] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "aggregation_operator")
+	(property_list [library_ProjectKB_Instance_10944])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 0)
+	(y 60))
+
+([library_ProjectKB_Instance_10944] of  Property_List
+)
+
+([library_ProjectKB_Instance_10945] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "default_value")
+	(property_list [library_ProjectKB_Instance_10946])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 200)
+	(x 300)
+	(y 180))
+
+([library_ProjectKB_Instance_10946] of  Property_List
+)
+
+([library_ProjectKB_Instance_10947] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "mood")
+	(property_list [library_ProjectKB_Instance_10948])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 200)
+	(x 300)
+	(y 60))
+
+([library_ProjectKB_Instance_10948] of  Property_List
+)
+
+([library_ProjectKB_Instance_10949] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "domain_term")
+	(property_list [library_ProjectKB_Instance_10950])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsFieldWidget")
+	(width 200)
+	(x 0)
+	(y 120))
+
+([library_ProjectKB_Instance_10950] of  Property_List
+)
+
+([library_ProjectKB_Instance_10951] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "assume_if_no_value")
+	(property_list [library_ProjectKB_Instance_10952])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 200)
+	(y 180))
+
+([library_ProjectKB_Instance_10952] of  Property_List
+)
+
+([library_ProjectKB_Instance_10953] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "operator")
+	(property_list [library_ProjectKB_Instance_10954])
+	(widget_class_name "edu.stanford.smi.protege.widget.ComboBoxWidget")
+	(width 100)
+	(x 200)
+	(y 120))
+
+([library_ProjectKB_Instance_10954] of  Property_List
+)
+
+([library_ProjectKB_Instance_663] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_690] of  Property_List
+
+	(properties
+		[library_ProjectKB_Instance_691]
+		[library_ProjectKB_Instance_692]))
+
+([library_ProjectKB_Instance_691] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_692] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([library_ProjectKB_Instance_693] of  Property_List
+)
+
+([library_ProjectKB_Instance_694] of  Property_List
+)
+
+([library_ProjectKB_Instance_695] of  Property_List
+
+	(properties
+		[library_ProjectKB_Instance_696]
+		[library_ProjectKB_Instance_697]))
+
+([library_ProjectKB_Instance_696] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move up"))
+
+([library_ProjectKB_Instance_697] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move down"))
+
+([library_ProjectKB_Instance_698] of  Property_List
+)
+
+([library_ProjectKB_Instance_699] of  Property_List
+
+	(name "layout properties"))
+
+([library_ProjectKB_Instance_700] of  Property_List
+)
+
+([library_ProjectKB_Instance_701] of  Property_List
+)
+
+([library_ProjectKB_Instance_702] of  Property_List
+)
+
+([library_ProjectKB_Instance_703] of  Property_List
+)
+
+([library_ProjectKB_Instance_704] of  Property_List
+)
+
+([library_ProjectKB_Instance_705] of  Property_List
+)
+
+([library_ProjectKB_Instance_706] of  Property_List
+)
+
+([library_ProjectKB_Instance_707] of  Property_List
+)
+
+([library_ProjectKB_Instance_708] of  Property_List
+)
+
+([library_ProjectKB_Instance_709] of  Property_List
+)
+
+([library_ProjectKB_Instance_710] of  Property_List
+)
+
+([library_ProjectKB_Instance_711] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([library_ProjectKB_Instance_919] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_920])
+	(widget_class_name "TGViztab.TGVizTab"))
+
+([library_ProjectKB_Instance_920] of  Property_List
+)
+
+([library_ProjectKB_Instance_923] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [library_ProjectKB_Instance_924])
+	(widget_class_name "script.ProtegeScriptTab"))
+
+([library_ProjectKB_Instance_924] of  Property_List
+)
+
+([library_ProjectKB_Instance_925] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_926])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
+
+([library_ProjectKB_Instance_926] of  Property_List
+)
+
+([library_ProjectKB_Instance_927] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [library_ProjectKB_Instance_928])
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
+
+([library_ProjectKB_Instance_928] of  Property_List
+)
+
+([library_ProjectKB_Instance_931] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_932])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
+
+([library_ProjectKB_Instance_932] of  Property_List
+)
+
+([library_ProjectKB_Instance_933] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_934])
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+
+([library_ProjectKB_Instance_934] of  Property_List
+)
+
+([library_ProjectKB_Instance_935] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_936])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
+
+([library_ProjectKB_Instance_936] of  Property_List
+)
+
+([library_ProjectKB_Instance_939] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_940])
+	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
+
+([library_ProjectKB_Instance_940] of  Property_List
+)
+
+([library_ProjectKB_Instance_941] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_942])
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+
+([library_ProjectKB_Instance_942] of  Property_List
+)
+
+([library_ProjectKB_Instance_943] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_944])
+	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
+
+([library_ProjectKB_Instance_944] of  Property_List
+)
+
+([library_ProjectKB_Instance_947] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_948])
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
+
+([library_ProjectKB_Instance_948] of  Property_List
+)
+
+([library_ProjectKB_Instance_949] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_950])
+	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
+
+([library_ProjectKB_Instance_950] of  Property_List
+)
+
+([library_ProjectKB_Instance_951] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_952])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+
+([library_ProjectKB_Instance_952] of  Property_List
+)
+
+([library_ProjectKB_Instance_953] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_954])
+	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
+
+([library_ProjectKB_Instance_954] of  Property_List
+)
+
+([library_ProjectKB_Instance_955] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [library_ProjectKB_Instance_956])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
+
+([library_ProjectKB_Instance_956] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class30825]
+		[library_ProjectKB_Class30826]
+		[library_ProjectKB_Class30827]))
+
+([library_ProjectKB_Instance_957] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_958])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+
+([library_ProjectKB_Instance_958] of  Property_List
+)
+
+([library_ProjectKB_Instance_959] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [library_ProjectKB_Instance_960])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
+
+([library_ProjectKB_Instance_960] of  Property_List
+)
+
+([library_ProjectKB_Instance_961] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_962])
+	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
+
+([library_ProjectKB_Instance_962] of  Property_List
+)
+
+([library_ProjectKB_Instance_963] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_964])
+	(widget_class_name "se.liu.ida.JessTab.JessTab"))
+
+([library_ProjectKB_Instance_964] of  Property_List
+)
+
+([library_ProjectKB_Instance_969] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_970])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
+
+([library_ProjectKB_Instance_970] of  Property_List
+)
+
+([library_ProjectKB_Instance_973] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_974])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+
+([library_ProjectKB_Instance_974] of  Property_List
+)
+
+([library_ProjectKB_Instance_977] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [library_ProjectKB_Instance_978])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+
+([library_ProjectKB_Instance_978] of  Property_List
+
+	(properties
+		[library_ProjectKB_Class13678]
+		[library_ProjectKB_Class13679]
+		[library_ProjectKB_Class13680]))
+
+([library_ProjectKB_Instance_979] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_980])
+	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
+
+([library_ProjectKB_Instance_98] of  String
+
+	(name "SearchTab_Query"))
+
+([library_ProjectKB_Instance_980] of  Property_List
+)
+
+([library_ProjectKB_Instance_983] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [library_ProjectKB_Instance_984])
+	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
+
+([library_ProjectKB_Instance_984] of  Property_List
+)
+
+([PAL_FORM_WIDGET] of  Widget
+
+	(height 476)
+	(is_hidden FALSE)
+	(name ":PAL-CONSTRAINT")
+	(property_list [KB_057852_Instance_38])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 603)
+	(x 0)
+	(y 0))
+
+([PROJECT] of  Project
+
+	(browser_slot_names [BROWSER_SLOT_NAMES])
+	(customized_instance_widgets
+		[PAL_FORM_WIDGET]
+		[KB_943075_Instance_444]
+		[library_ProjectKB_Class792]
+		[KB_943075_Instance_400]
+		[KB_533515_Instance_569]
+		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[KB_943075_Instance_143]
+		[KB_943075_Instance_170]
+		[KB_943075_Instance_686]
+		[KB_943075_Instance_544]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[KB_943075_Instance_592]
+		[KB_943075_Instance_671]
+		[KB_943075_Instance_357]
+		[KB_943075_Instance_866]
+		[KB_943075_Instance_332]
+		[KB_943075_Instance_661]
+		[INSTANCE_ANNOTATION_FORM_WIDGET]
+		[KB_943075_Instance_73]
+		[KB_943075_Instance_615]
+		[library_ProjectKB_Instance_10926]
+		[KB_943075_Instance_500]
+		[KB_943075_Instance_515]
+		[KB_943075_Instance_323]
+		[KB_943075_Instance_644]
+		[KB_943075_Instance_587]
+		[KB_943075_Instance_306]
+		[KB_943075_Instance_424]
+		[KB_943075_Instance_776]
+		[KB_943075_Instance_246]
+		[KB_943075_Instance_455]
+		[KB_943075_Instance_106]
+		[KB_533515_Instance_329]
+		[KB_943075_Instance_470]
+		[KB_943075_Instance_417]
+		[KB_943075_Instance_527])
+	(default_cls_metaclass ":STANDARD-CLASS")
+	(default_facet_metaclass ":STANDARD-FACET")
+	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(default_slot_metaclass ":STANDARD-SLOT")
+	(included_projects "eon2.pprj")
+	(journaling_enabled FALSE)
+	(next_frame_number 0)
+	(options [KB_475580_Instance_3])
+	(property_map [KB_475580_Instance_1])
+	(sources [SOURCES])
+	(tabs
+		[CLSES_TAB]
+		[SLOTS_TAB]
+		[FORMS_TAB]
+		[INSTANCES_TAB]
+		[QUERIES_TAB]
+		[library_ProjectKB_Instance_923]
+		[library_ProjectKB_Instance_955]
+		[library_ProjectKB_Instance_959]
+		[library_ProjectKB_Instance_977]
+		[library_ProjectKB_Class20675]
+		[library_ProjectKB_Instance_943]
+		[library_ProjectKB_Instance_933]
+		[library_ProjectKB_Instance_961]
+		[library_ProjectKB_Instance_925]
+		[library_ProjectKB_Instance_941]
+		[library_ProjectKB_Instance_963]
+		[library_ProjectKB_Instance_949]
+		[library_ProjectKB_Instance_957]
+		[library_ProjectKB_Instance_935]
+		[library_ProjectKB_Instance_947]
+		[library_ProjectKB_Instance_953]
+		[library_ProjectKB_Instance_927]
+		[library_ProjectKB_Class3661]
+		[library_ProjectKB_Instance_919]
+		[library_ProjectKB_Instance_983]
+		[library_ProjectKB_Instance_979]
+		[library_ProjectKB_Instance_973]
+		[library_ProjectKB_Instance_969]
+		[library_ProjectKB_Instance_931]
+		[library_ProjectKB_Instance_951]
+		[library_ProjectKB_Instance_939]))
+
+([QUERIES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [KB_475580_Instance_95])
+	(widget_class_name "edu.stanford.smi.protegex.queries_tab.QueriesTab"))
+
+([SLOTS_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.SlotsTab"))
+
+([SOURCES] of  Property_List
+
+	(properties
+		[KB_475580_Instance_0]
+		[KB_475580_Instance_96]
+		[KB_475580_Instance_97]))
+
+([STANDARD_CLASS_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-CLASS")
+	(property_list [KB_057852_Instance_0])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([STANDARD_FACET_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-FACET")
+	(property_list [KB_057852_Instance_29])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([STANDARD_SLOT_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-SLOT")
+	(property_list [KB_057852_Instance_12])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))

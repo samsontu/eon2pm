@@ -1,0 +1,228 @@
+; Tue Dec 17 13:47:49 PST 2013
+; 
+;+ (version "3.4.7")
+;+ (build "Build 620")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot Label
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-ENGINE
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot %3ASTARTUP-FILE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFINITION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFGLOBAL
+	(is-a %3AJESS-DEFINITION)
+	(role concrete))
+
+(defclass %3AJESS-DEFTEMPLATE
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFFACTS
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMESSAGE-HANDLER
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-DEFMETHOD
+	(is-a %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3ARULE
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-RULE
+	(is-a %3AJESS-DEFINITION %3ARULE)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass %3AFUNCTION
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass %3AJESS-FUNCTION
+	(is-a %3AFUNCTION %3AJESS-DEFINITION)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Hypertension_Code
+	(is-a Hypertension_Inclusive)
+	(role concrete))
+
+(defclass 10_year_CHD_risk_ge_15
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass 10_year_CHD_risk_ge10_lt15
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass High_LDL_Cholesterol
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Abnormal_CPK
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass Abnormal+AST+level
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass Abnormal+ALT+level
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass Abnormal_CrCl_10_to_50
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass Abnormal_CrCl_less_than_10
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass 10-Year_CHD_Risk
+	(is-a Patient_Observations)
+	(role concrete))
+
+(defclass CHD_Risk_Group
+	(is-a Diagnostic_Class)
+	(role concrete)
+	(single-slot Label
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot ICD-9-Code
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass CHD_Or_CHDEquivalent
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 2%2B_Risk_Factors
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 0-1_Risk_Factor
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 10+year+CHD+risk%3E20%25
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 10+year+CHD+risk+10-20%25
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 10+year+CHD+risk%3C10%25
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass CHD_Or_CHDEquivalent_NoRF
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass 10_year_CHD_risk_15_to_20
+	(is-a CHD_Risk_Group)
+	(role concrete))
+
+(defclass Defined+Condition
+	(is-a Diagnostic_Class)
+	(role concrete))
+
+(defclass LDL_not_within_guideline_goal
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass Adverse_Reaction_To_Statin
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass TG%3E400mg%2FdL
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass 400mg%2FdL%3ETG%3E200mg%2FdL
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass HDL+%3C40+mg%2FdL
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass Usage+of+CYP+3A4+inhibitor
+	(is-a Defined+Condition)
+	(role concrete))
+
+(defclass TG%3E%3D500mg%2FdL
+	(is-a Defined+Condition)
+	(role concrete))

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="C:/ATHENA_TestEnvironment/lib/plugins/edu.stanford.smi.eon.pca/pca-glinda.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/eon/src/eon.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="/glinda/src/TestEnvironmentMANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=eon/src&lt;gov.va.athena"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.athenaextensions"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.pca"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.inputoutput"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.clients"/>
+        <file path="/eon/src/TestEnvironment.jardesc"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.util"/>
+        <javaElement handleIdentifier="=eon/src&lt;gov.va.athena.impl"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.siteCustomization"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.criterion"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.time"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.datahandler"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.servers"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.kbhandler"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.guidelineinterpreter"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.Dharma"/>
+        <javaElement handleIdentifier="=eon/src&lt;edu.stanford.smi.eon.PCAServerModule"/>
+    </selectedElements>
+</jardesc>

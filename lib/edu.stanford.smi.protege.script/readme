@@ -1,0 +1,19 @@
+Protégé Scripting Tab
+---------------------
+
+Requirements:
+-------------
+Protégé 2.1beta (build 173) or above.
+It may even work with older versions.
+
+Installation:
+-------------
+1. get the binary (if you read this file, you probably succeeded, congratulations!)
+2. save the file to the 'plugins' subdirectory of your Protégé installation
+3. unzip it. It will hopefully create a 'edu.stanford.smi.protege.script' directory with everything you need in it
+4. run Protégé
+5. in the 'Project' menu, choose 'Configure...' and select 'ProtegeScript'
+
+Contact:
+--------
+http://protege.cim3.net/cgi-bin/wiki.pl?OlivierDameron

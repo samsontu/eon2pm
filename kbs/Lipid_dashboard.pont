@@ -1,0 +1,69 @@
+; Tue Jul 07 10:26:49 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass SGPT_absent
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence_of_fibric_acids
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence+niacin+greater+than+1+gram+per+day
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SGOT%3E3*ULN
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SGPT%3E3*ULN
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CK%3E3*ULN
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SGOT+and+SGPT+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+in+past+3+months
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age%3E%3D65
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass eGFR%3C60
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass anaphylaxis+as+ADR+to+statins
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass myalgia+as+ADR+to+statins
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass rhabdomyolysis+as+ADR+to+statins
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age%3E75
+	(is-a Defined+concept)
+	(role concrete))

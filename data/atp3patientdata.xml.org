@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patientdata>
+<patient name="Jim High_Risk no_drug LDL 90">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="ICD9">410.00</field2>
+            <start>Wed Mar 22 11:06:03 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Diabetes-Mellitus-Type1</field1>
+            <field2 label="ICD9">250.31</field2>
+            <start>Wed Mar 22 11:06:17 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">90</field2>
+            <start>Wed Mar 22 11:05:47 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">45</field2>
+            <start>Wed Mar 22 11:05:56 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">55</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Jack High_risk no_drug LDL120">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Angina</field1>
+            <field2 label="ICD9">413.1</field2>
+            <start>Wed Mar 22 11:08:06 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension_Code</field1>
+            <field2 label="ICD9">401.9</field2>
+            <start>Wed Mar 22 11:08:17 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">120</field2>
+            <start>Wed Mar 22 11:07:41 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">35</field2>
+            <start>Wed Mar 22 11:07:55 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">67</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Josh High_Risk no drug LDL_160">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes-Mellitus-Type1</field1>
+            <field2 label="ICD9">250.21</field2>
+            <start>Wed Mar 22 13:14:01 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Coronary_Artery_Disease</field1>
+            <field2 label="ICD9">412.</field2>
+            <start>Wed Mar 22 13:14:16 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">161</field2>
+            <start>Wed Mar 22 13:13:42 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Mar 22 13:13:52 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">47</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Rachel Pregnant">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Pregnancy</field1>
+            <field2 label="ICD9">640.00</field2>
+            <start>Wed Mar 22 13:31:01 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">tobacco use</field1>
+            <field2 label="ICD9">305.10</field2>
+            <start>Wed Mar 22 13:31:10 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">180</field2>
+            <start>Wed Mar 22 13:30:33 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">40</field2>
+            <start>Wed Mar 22 13:30:53 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">25</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Doug Low_risk no _drug LDL_200">
+    <meds>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">200</field2>
+            <start>Wed Mar 22 13:34:47 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Mar 22 13:34:57 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">55</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Dan Low_risk no_drug LDL170">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">tobacco use</field1>
+            <field2 label="ICD9">305.11</field2>
+            <start>Wed Mar 22 13:41:51 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value"> 70</field2>
+            <start>Wed Mar 22 13:42:18 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value"> 110</field2>
+            <start>Wed Mar 22 13:42:29 PST 2006</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">170</field2>
+            <start>Wed Mar 22 13:41:30 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">40</field2>
+            <start>Wed Mar 22 13:41:39 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">35</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Drew Low_risk no drug LDL_130">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">tobacco use</field1>
+            <field2 label="ICD9">305.1</field2>
+            <start>Wed Mar 22 13:46:59 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">130</field2>
+            <start>Wed Mar 22 13:46:45 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">45</field2>
+            <start>Wed Mar 22 13:46:52 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">32</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Frank High_risk lovastatin20 LD_150">
+    <meds>
+        <item>
+            <field1 label="Drug">lovastatin</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Mar 22 13:50:23 PST 2006</start>
+            <end>Fri Apr 21 14:50:23 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Code</field1>
+            <field2 label="ICD9">401.1</field2>
+            <start>Wed Mar 22 13:50:35 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="ICD9">410.02</field2>
+            <start>Wed Mar 22 13:50:40 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">150</field2>
+            <start>Wed Mar 22 13:50:09 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">40</field2>
+            <start>Wed Mar 22 13:50:16 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">56</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+<patient name="Peter Low_risk lovastatin LDL_180">
+    <meds>
+        <item>
+            <field1 label="Drug">lovastatin</field1>
+            <field2 label="Daily Dose"> 30</field2>
+            <start>Wed Mar 22 13:55:17 PST 2006</start>
+            <end>Fri Apr 21 14:55:17 PDT 2006</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Code</field1>
+            <field2 label="ICD9">401.1</field2>
+            <start>Wed Mar 22 13:55:28 PST 2006</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL</field1>
+            <field2 label="Value">180</field2>
+            <start>Wed Mar 22 13:55:04 PST 2006</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL</field1>
+            <field2 label="Value">43</field2>
+            <start>Wed Mar 22 13:55:10 PST 2006</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">38</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+</patientdata>

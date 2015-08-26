@@ -1,0 +1,137 @@
+; Mon May 11 14:04:38 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass Kidney_Transplant
+	(is-a Therapeutic_Procedure)
+	(role abstract))
+
+(defclass OutOfScopeCondition
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass id_000000
+	(is-a OutOfScopeCondition)
+	(role concrete))
+
+(defclass id_000001
+	(is-a OutOfScopeCondition)
+	(role concrete))
+
+(defclass id_000002
+	(is-a OutOfScopeCondition)
+	(role concrete))
+
+(defclass id_000003
+	(is-a OutOfScopeCondition)
+	(role concrete))
+
+(defclass id_000004
+	(is-a OutOfScopeCondition)
+	(role concrete))
+
+(defclass ATHENA_CKD_Class10134
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+K+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass most+recent+K%3E5+controllable
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence+of+DM+and+ACR%3E%3D30
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+DM+and+ACR%3E300
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence+of+ARB+and+most+recent+K%3E5.5
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SBP+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SBP+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SBP+in+past+year+%3C+110
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass K%3E5.5+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass 5.0%3CK%3C%3D5.5+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Cardiovascular_Diseases
+	(is-a Medical_Conditions_Class)
+	(role abstract))
+
+(defclass Renal_Disease
+	(is-a Medical_Conditions_Class)
+	(role abstract))
+
+(defclass Chronic_Kidney_Disease
+	(is-a Renal_Disease)
+	(role abstract))
+
+(defclass 585
+	(is-a Chronic_Kidney_Disease)
+	(role abstract))
+
+(defclass End-Stage_Renal_Disease
+	(is-a Renal_Disease)
+	(role abstract))
+
+(defclass 585.6
+	(is-a End-Stage_Renal_Disease)
+	(role abstract))
+
+(defclass Defined_Condition
+	(is-a Medical_Conditions_Class)
+	(role abstract))
+
+(defclass Had+a+kidney+transplant
+	(is-a Defined_Condition)
+	(role abstract))
+
+(defclass Two+abnormal+Cr+or+Microalbumin%2FCreatinine+Ratio+3+months+apart
+	(is-a Defined_Condition)
+	(role concrete))
+
+(defclass High+Risk+Group
+	(is-a Defined_Condition)
+	(role abstract))
+
+(defclass Age%3E65%3F
+	(is-a Defined_Condition)
+	(role abstract))
+
+(defclass Microalbumin%2FCreatinine+Ratio
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass ScreeningCandidate
+	(is-a Diagnostic_Procedures_Class)
+	(role abstract))
+
+(defclass nephrologist
+	(is-a Role)
+	(role concrete))

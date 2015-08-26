@@ -1,0 +1,7 @@
+3.26.2013 Version of MRSA_ontology-export.pprj/owl
+
+This version of the MRSA ontology:
+
+- Imports SNOMED CT descendants of concepts in BSI and UTI algorithms that depend on NLP to recognize. They are mostly signs and symptoms and the term "catheter." Among the descendants, those of "Fever" and "Catheter" still need curation.
+
+- Does not yet contain terms harvested from TIU annotations and text mining. 

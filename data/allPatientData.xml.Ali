@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="ZZAutoPM1">
+    <meds>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">50</field2>
+            <start>Tue Mar 26 12:01:54 PDT 2013</start>
+            <end>Thu Apr 25 12:01:54 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">401.1</field1>
+            <field2 label="Name">Hypertension</field2>
+            <start>Tue Mar 26 11:54:18 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">250.01</field1>
+            <field2 label="Name">Diabetes Type 1</field2>
+            <start>Tue Mar 26 11:55:11 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">272.2</field1>
+            <field2 label="Name">Disorders Lipid Metabolism</field2>
+            <start>Tue Mar 26 11:55:59 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">V45.01</field1>
+            <field2 label="Name">Has Pacemaker</field2>
+            <start>Tue Mar 26 12:08:19 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Treatment_Diastolic_BP</field1>
+            <field2 label="Value">90</field2>
+            <start>Tue Mar 26 11:56:43 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Systolic_BP</field1>
+            <field2 label="Value">150</field2>
+            <start>Tue Mar 26 11:57:30 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Weight</field1>
+            <field2 label="Value">160</field2>
+            <start>Tue Mar 26 11:59:20 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Height</field1>
+            <field2 label="Value">72</field2>
+            <start>Tue Mar 26 11:59:30 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">72</field2>
+            <start>Tue Mar 26 11:59:55 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">200</field2>
+            <start>Tue Mar 26 12:10:34 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9.5</field2>
+            <start>Tue Mar 26 12:10:53 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.5</field2>
+            <start>Tue Mar 26 12:11:06 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">137</field2>
+            <start>Tue Mar 26 12:11:18 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">4</field2>
+            <start>Tue Mar 26 12:11:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine_Clearance</field1>
+            <field2 label="Value">.8</field2>
+            <start>Tue Mar 26 12:11:43 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Mar 26 12:13:33 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Hispanic-Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+</patientdata>

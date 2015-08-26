@@ -1,0 +1,674 @@
+; Sat Aug 31 18:07:20 PDT 2013
+; 
+;+ (version "3.4.7")
+;+ (build "Build 620")
+
+([ATHENA_DM_Eye_Class0] of  Management_Diagram
+
+	(label "Algorithm for Module E based on previous eye assessment - dashboard")
+	(steps
+		[ATHENA_DM_Eye_Instance_100005]
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_40028]
+		[ATHENA_DM_Eye_Class7]
+		[ATHENA_DM_Eye_Class5]
+		[ATHENA_DM_Eye_Class8]
+		[ATHENA_DM_Eye_Class6]
+		[ATHENA_DM_Eye_Instance_40018]
+		[ATHENA_DM_Eye_Instance_60000])
+	(transitions
+		[ATHENA_DM_Eye_Class10]
+		[ATHENA_DM_Eye_Class11]
+		[ATHENA_DM_Eye_Class12]
+		[ATHENA_DM_Eye_Class13]
+		[ATHENA_DM_Eye_Class14]
+		[ATHENA_DM_Eye_Class15]
+		[ATHENA_DM_Eye_Class16]
+		[ATHENA_DM_Eye_Class18]
+		[ATHENA_DM_Eye_Class19])
+	(%3ADOCUMENTATION "4/1/13 based on  original CDS eye algorithm with minor tweaks, to allow for panel dashboard management\nFollowing changes\n- remoed Aciton_Choice Urget referal to eye specialist because o ocular changes; instead created consultation template with message"))
+
+([ATHENA_DM_Eye_Class1] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_100005]))
+
+([ATHENA_DM_Eye_Class10] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class7])
+	(%3ATO [ATHENA_DM_Eye_Class5]))
+
+([ATHENA_DM_Eye_Class11] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class5])
+	(%3ATO [ATHENA_DM_Eye_Instance_40028]))
+
+([ATHENA_DM_Eye_Class12] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class5])
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Class13] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class5])
+	(%3ATO [ATHENA_DM_Eye_Instance_100005]))
+
+([ATHENA_DM_Eye_Class14] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class8])
+	(%3ATO [ATHENA_DM_Eye_Class6]))
+
+([ATHENA_DM_Eye_Class15] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class6])
+	(%3ATO [ATHENA_DM_Eye_Instance_40028]))
+
+([ATHENA_DM_Eye_Class16] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class6])
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Class17] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_90002])
+	(label "Dashboard Refer for eye exam within 1 month")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_70001])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Class18] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class6])
+	(%3ATO [ATHENA_DM_Eye_Instance_60000]))
+
+([ATHENA_DM_Eye_Class19] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Class6])
+	(%3ATO [ATHENA_DM_Eye_Instance_40018]))
+
+([ATHENA_DM_Eye_Class2] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Class20] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Eye_Class24])
+	(label "If patient has ocular changes, Urgent referral to eye exam dashboard")
+	(steps
+		[ATHENA_DM_Eye_Class24]
+		[ATHENA_DM_Eye_Class23])
+	(transitions [ATHENA_DM_Eye_Class25]))
+
+([ATHENA_DM_Eye_Class21] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_30008])
+	(%3ATO [ATHENA_DM_Eye_Instance_30009]))
+
+([ATHENA_DM_Eye_Class22] of  Conditional_On_Screen_Message
+
+	(label "Urgent eye exam referral dashboard")
+	(message "If patient experiences ocular changes, request immediate referral for eye exam.")
+	(message_type Recommendation)
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Eye_Class23] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Eye_Class22])
+	(label "If ocular changes, urgent eye exam dashboard")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Eye_Class24] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Eye_Class23])
+	(label "urgent eye exam dashboard")
+	(selection_method all_of))
+
+([ATHENA_DM_Eye_Class25] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_DM_Eye_Class24])
+	(%3ATO [ATHENA_DM_Eye_Class23]))
+
+([ATHENA_DM_Eye_Class26] of  Management_Guideline
+
+	(clinical_algorithm [ATHENA_DM_Eye_Class0])
+	(label "ATHENA DM Eye Care Dashboard")
+	(title "Athena DM Eye algorithm Module E")
+	(%3ADOCUMENTATION "4/1/13 For dashboard\n- guideline calls dashboard algorithm\n- change in dashboard clinical algorithm:  remove urgent referral to eye specialist, put in (new) consultation template to issue message; rationale:  dashboard is panel management vs POC"))
+
+([ATHENA_DM_Eye_Class3] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_40028]))
+
+([ATHENA_DM_Eye_Class4] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_40013])
+	(%3ATO [ATHENA_DM_Eye_Instance_80030]))
+
+([ATHENA_DM_Eye_Class5] of  Choice_Step
+
+	(branches
+		[ATHENA_DM_Eye_Instance_40028]
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_100005])
+	(label "Dashboard Referral for eye exam <1 year"))
+
+([ATHENA_DM_Eye_Class6] of  Choice_Step
+
+	(branches
+		[ATHENA_DM_Eye_Instance_40028]
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_60000]
+		[ATHENA_DM_Eye_Instance_40018])
+	(label "Dashboard Referral for eye exam over a year or no data"))
+
+([ATHENA_DM_Eye_Class7] of  Scenario
+
+	(consultation_template [ATHENA_DM_Eye_Class20])
+	(followed_by [ATHENA_DM_Eye_Class5])
+	(label "Dashboard Eye exam < 1 year")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Eye_Instance_40005]))
+
+([ATHENA_DM_Eye_Class8] of  Scenario
+
+	(consultation_template [ATHENA_DM_Eye_Class20])
+	(followed_by [ATHENA_DM_Eye_Class6])
+	(label "Dashboard Eye exam over a year ago or no data")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Eye_Instance_80003]))
+
+([ATHENA_DM_Eye_Instance_0] of  Management_Guideline
+
+	(authors
+		"Samson Tu"
+		"Susana Martins"
+		"Martha Michel")
+	(clinical_algorithm [ATHENA_DM_Eye_Instance_1])
+	(label "ATHENA DM: Eye Care")
+	(title "Athena DM Eye algorithm Module E")
+	(version "0"))
+
+([ATHENA_DM_Eye_Instance_1] of  Management_Diagram
+
+	(label "Algorithm for Module E based on previous eye assessment")
+	(steps
+		[ATHENA_DM_Eye_Instance_40013]
+		[ATHENA_DM_Eye_Instance_40015]
+		[ATHENA_DM_Eye_Instance_40018]
+		[ATHENA_DM_Eye_Instance_40021]
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_40028]
+		[ATHENA_DM_Eye_Instance_80030]
+		[ATHENA_DM_Eye_Instance_80031]
+		[ATHENA_DM_Eye_Instance_60000]
+		[ATHENA_DM_Eye_Instance_100005])
+	(transitions
+		[ATHENA_DM_Eye_Instance_40020]
+		[ATHENA_DM_Eye_Instance_40023]
+		[ATHENA_DM_Eye_Instance_40027]
+		[ATHENA_DM_Eye_Instance_40030]
+		[ATHENA_DM_Eye_Instance_50000]
+		[ATHENA_DM_Eye_Instance_60001]
+		[ATHENA_DM_Eye_Instance_70002]
+		[ATHENA_DM_Eye_Instance_80004]
+		[ATHENA_DM_Eye_Instance_80009]
+		[ATHENA_DM_Eye_Instance_80032]
+		[ATHENA_DM_Eye_Instance_80033]
+		[ATHENA_DM_Eye_Instance_100004]
+		[ATHENA_DM_Eye_Instance_100010]
+		[ATHENA_DM_Eye_Instance_100011]))
+
+([ATHENA_DM_Eye_Instance_10000] of  Management_Diagram
+
+	(label "Algorithm for Module E based on exam schedule")
+	(steps
+		[ATHENA_DM_Eye_Instance_20001]
+		[ATHENA_DM_Eye_Instance_30001]
+		[ATHENA_DM_Eye_Instance_30002]
+		[ATHENA_DM_Eye_Instance_30003]
+		[ATHENA_DM_Eye_Instance_30000]))
+
+([ATHENA_DM_Eye_Instance_100004] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80031])
+	(%3ATO [ATHENA_DM_Eye_Instance_60000]))
+
+([ATHENA_DM_Eye_Instance_100005] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_100008])
+	(label "Refer Eye exam every year")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_100006])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_100008] of  Referral
+
+	(label "Eye care provider 1 year from last eye exam")
+	(when [ATHENA_DM_Eye_Instance_100009])
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_100009] of  Relative_Time_Interval_Definite
+
+	(how_many "1")
+	(label "1 year from last eye exam")
+	(polarity After)
+	(relative_time_point [ATHENA_DM_Eye_Instance_90005])
+	(time_unit year))
+
+([ATHENA_DM_Eye_Instance_100010] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_100005]))
+
+([ATHENA_DM_Eye_Instance_100011] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_40028]))
+
+([ATHENA_DM_Eye_Instance_100012] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Eye_Instance_100013])
+	(label "All patients"))
+
+([ATHENA_DM_Eye_Instance_100013] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_DM_Eye_Instance_100014]
+		[ATHENA_DM_Eye_Instance_100015]
+		[ATHENA_DM_Eye_Instance_100016]
+		[ATHENA_DM_Eye_Instance_100017])
+	(label "Education messages")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Eye_Instance_100014] of  On_Screen_Message
+
+	(label "Need for periodic eye examination")
+	(message "Educate patient about the need for periodic eye examination, both comprehensive eye examination and specific for retinopathy.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Eye_Instance_100015] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Compliance with follow up schedule")
+	(message "Educate patient about importance of compliance with the follow up schedule for eye examination.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Eye_Instance_100016] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Relationship between control and risk for retinopathy")
+	(message "Educate patient about the relationship between glucose control and risk for developing/worsening of retinopathy.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Eye_Instance_100017] of  On_Screen_Message
+
+	(display_location Summary)
+	(label "Significance of new visual symptons")
+	(message "Educate patient about significance of new visual sympton and the need to seek medical attention.")
+	(message_type Recommendation))
+
+([ATHENA_DM_Eye_Instance_20001] of  Scenario
+
+	(consultation_template [ATHENA_DM_Eye_Instance_30007])
+	(label "Urgent eye exam")
+	(new_encounter FALSE)
+	(precondition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_30000] of  Scenario
+
+	(label "Refer for eye exam within 3 months")
+	(new_encounter FALSE)
+	(precondition [ATHENA_DM_Eye_Instance_40006]))
+
+([ATHENA_DM_Eye_Instance_30001] of  Scenario
+
+	(consultation_template [ATHENA_DM_Eye_Instance_50001])
+	(label "Refer eye exam within 1 month")
+	(new_encounter FALSE)
+	(precondition [ATHENA_DM_Eye_Instance_40004]))
+
+([ATHENA_DM_Eye_Instance_30002] of  Scenario
+
+	(label "Refer for eye exam annually")
+	(new_encounter FALSE))
+
+([ATHENA_DM_Eye_Instance_30003] of  Scenario
+
+	(label "Follow up with eye exam every 2 years")
+	(new_encounter FALSE))
+
+([ATHENA_DM_Eye_Instance_30007] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Eye_Instance_30008])
+	(steps
+		[ATHENA_DM_Eye_Instance_30008]
+		[ATHENA_DM_Eye_Instance_50005]
+		[ATHENA_DM_Eye_Instance_30009])
+	(transitions [ATHENA_DM_Eye_Instance_50007]))
+
+([ATHENA_DM_Eye_Instance_30008] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Eye_Instance_30009])
+	(label "urgent eye exam")
+	(selection_method all_of))
+
+([ATHENA_DM_Eye_Instance_30009] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Eye_Instance_30010])
+	(label "urgent eye exam"))
+
+([ATHENA_DM_Eye_Instance_30010] of  Conditional_On_Screen_Message
+
+	(label "Urgent eye exam referral")
+	(message "Request immediate referral for eye exam.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_40004] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_40005]
+		[ATHENA_DM_Eye_Instance_30026]
+		[ATHENA_DM_Eye_Instance_40003])
+	(label "DM and no eye exam in past year and retinopathy")
+	(operator AND))
+
+([ATHENA_DM_Eye_Instance_40006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_30011]
+		[ATHENA_DM_Eye_Instance_40007])
+	(label "Referral for eye exam within 3 months")
+	(operator AND))
+
+([ATHENA_DM_Eye_Instance_40007] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_40005]
+		[ATHENA_DM_Eye_Instance_40003])
+	(label "DM and absence eye exam past year")
+	(operator AND))
+
+([ATHENA_DM_Eye_Instance_40008] of  Consultation_Guideline
+
+	(steps
+		[ATHENA_DM_Eye_Instance_40009]
+		[ATHENA_DM_Eye_Instance_40010])
+	(transitions [ATHENA_DM_Eye_Instance_40011]))
+
+([ATHENA_DM_Eye_Instance_40009] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Eye_Instance_40012])
+	(label "Eye exam within 3 months"))
+
+([ATHENA_DM_Eye_Instance_40010] of  Consultation_Branch_Step
+
+	(label "Eye exam within 3m"))
+
+([ATHENA_DM_Eye_Instance_40011] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_40010])
+	(%3ATO [ATHENA_DM_Eye_Instance_40009]))
+
+([ATHENA_DM_Eye_Instance_40012] of  Referral
+
+	(label "Urgent referral for eye exam")
+	(when [ATHENA_DM_Eye_Instance_100018])
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_40013] of  Scenario
+
+	(followed_by [ATHENA_DM_Eye_Instance_80030])
+	(label "Eye exam < 1 year")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Eye_Instance_40005]))
+
+([ATHENA_DM_Eye_Instance_40015] of  Scenario
+
+	(followed_by [ATHENA_DM_Eye_Instance_80031])
+	(label "Eye exam over a year ago or no data")
+	(new_encounter TRUE)
+	(precondition [ATHENA_DM_Eye_Instance_80003]))
+
+([ATHENA_DM_Eye_Instance_40018] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_40035])
+	(label "Refer for eye exam within 3m")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_30011])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_40020] of  Followed_By
+
+	(%3ATO [ATHENA_DM_Eye_Instance_40018]))
+
+([ATHENA_DM_Eye_Instance_40021] of  Action_Choice
+
+	(actions
+		[ATHENA_DM_Eye_Instance_40012]
+		[ATHENA_DM_Eye_Instance_60004])
+	(label "Urgent referral eye provider")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_40023] of  Followed_By
+
+	(%3ATO [ATHENA_DM_Eye_Instance_40021]))
+
+([ATHENA_DM_Eye_Instance_40026] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_80011])
+	(label "Refer for eye exam - freq determined by provider")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_80010])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_40027] of  Followed_By
+
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Instance_40028] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_90003])
+	(label "Refer for eye exam every 2 years")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_80012])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_40030] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_40021]))
+
+([ATHENA_DM_Eye_Instance_40035] of  Referral
+
+	(description "Referral should be scheduled for 3 months from today (max)")
+	(label "Refer for eye exam within 3 months")
+	(when [ATHENA_DM_Eye_Instance_100024])
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_40036] of  Referral
+
+	(label "Refer for eye exam within 2 years")
+	(who_to Role))
+
+([ATHENA_DM_Eye_Instance_40037] of  Referral
+
+	(label "Refer for eye exam as provider indicates")
+	(who_to Role))
+
+([ATHENA_DM_Eye_Instance_40040] of  Referral
+
+	(label "Refer for eye exam within 2 years")
+	(who_to Role))
+
+([ATHENA_DM_Eye_Instance_50000] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80031])
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Instance_50001] of  Consultation_Guideline
+
+	(first_step [ATHENA_DM_Eye_Instance_50002])
+	(label "Refer eye exam within 1 month")
+	(steps
+		[ATHENA_DM_Eye_Instance_50002]
+		[ATHENA_DM_Eye_Instance_50002]
+		[ATHENA_DM_Eye_Instance_50003]))
+
+([ATHENA_DM_Eye_Instance_50002] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Eye_Instance_50003])
+	(label "Refer eye exam within 1 month"))
+
+([ATHENA_DM_Eye_Instance_50003] of  Consultation_Action_Step
+
+	(actions [ATHENA_DM_Eye_Instance_50004])
+	(label "Refer eye exam within 1 month")
+	(rule_in [ATHENA_DM_Eye_Instance_40004]))
+
+([ATHENA_DM_Eye_Instance_50004] of  Referral
+
+	(description "refer within 1 month")
+	(label "Refer eye exam within 1 month")
+	(who_to ophtalmologyst))
+
+([ATHENA_DM_Eye_Instance_50005] of  Consultation_Branch_Step
+
+	(branches [ATHENA_DM_Eye_Instance_50003])
+	(label "Refer eye exam within 1 month"))
+
+([ATHENA_DM_Eye_Instance_50007] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_30008]))
+
+([ATHENA_DM_Eye_Instance_60000] of  Action_Choice
+
+	(actions [ATHENA_DM_Eye_Instance_90002])
+	(label "Refer for eye exam within 1 month")
+	(strict_rule_in_condition [ATHENA_DM_Eye_Instance_70001])
+	(strict_rule_out_condition [ATHENA_DM_Eye_Instance_30004]))
+
+([ATHENA_DM_Eye_Instance_60001] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80031])
+	(%3ATO [ATHENA_DM_Eye_Instance_40028]))
+
+([ATHENA_DM_Eye_Instance_60004] of  Conditional_On_Screen_Message
+
+	(display_location Summary)
+	(label "Acute vision change message")
+	(message "Patient has an acute vision change.  Please refer to an opthamologist immediately.\nIn CPRS go here..., and do it now.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_DM_Eye_Instance_20004]))
+
+([ATHENA_DM_Eye_Instance_70002] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80031])
+	(%3ATO [ATHENA_DM_Eye_Instance_40018]))
+
+([ATHENA_DM_Eye_Instance_80002] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Eye_Instance_40005])
+	(label "Eye exam over a year ago")
+	(operator NOT))
+
+([ATHENA_DM_Eye_Instance_80003] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_60003]
+		[ATHENA_DM_Eye_Instance_80002])
+	(label "Absence of eye exam or eye exam over a year ago")
+	(operator OR))
+
+([ATHENA_DM_Eye_Instance_80004] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80031])
+	(%3ATO [ATHENA_DM_Eye_Instance_40021]))
+
+([ATHENA_DM_Eye_Instance_80006] of  Presence_Criterion
+
+	(domain_term dilated+eye+exam)
+	(entry_type Note_Entry)
+	(label "Presence Eye exam < 2 years")
+	(period [ATHENA_DM_Eye_Instance_80007])
+	(presence TRUE))
+
+([ATHENA_DM_Eye_Instance_80008] of  N_ary_Criterion
+
+	(criteria [ATHENA_DM_Eye_Instance_80006])
+	(label "Absence eye exam >=2 years")
+	(operator NOT))
+
+([ATHENA_DM_Eye_Instance_80009] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_80030])
+	(%3ATO [ATHENA_DM_Eye_Instance_40026]))
+
+([ATHENA_DM_Eye_Instance_80011] of  Referral
+
+	(label "Refer for eye exam according to eye provider schedule??")
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_80012] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_80013]
+		[ATHENA_DM_Eye_Instance_80014]
+		[ATHENA_DM_Eye_Instance_80015]
+		[ATHENA_DM_Eye_Instance_80017]
+		[ATHENA_DM_Eye_Instance_80028]
+		[ATHENA_DM_Eye_Instance_80029]
+		[ATHENA_DM_Eye_Instance_80026])
+	(label "Criteria for eye exam every 2 years")
+	(operator AND))
+
+([ATHENA_DM_Eye_Instance_80030] of  Choice_Step
+
+	(branches
+		[ATHENA_DM_Eye_Instance_40021]
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_100005]
+		[ATHENA_DM_Eye_Instance_40028])
+	(label "Referral for eye exam <1 year"))
+
+([ATHENA_DM_Eye_Instance_80031] of  Choice_Step
+
+	(branches
+		[ATHENA_DM_Eye_Instance_40026]
+		[ATHENA_DM_Eye_Instance_40028]
+		[ATHENA_DM_Eye_Instance_40018]
+		[ATHENA_DM_Eye_Instance_60000])
+	(label "Referral for eye exam over a year or no data"))
+
+([ATHENA_DM_Eye_Instance_80032] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_40013])
+	(%3ATO [ATHENA_DM_Eye_Instance_80030]))
+
+([ATHENA_DM_Eye_Instance_80033] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Eye_Instance_40015])
+	(%3ATO [ATHENA_DM_Eye_Instance_80031]))
+
+([ATHENA_DM_Eye_Instance_90002] of  Referral
+
+	(description "Eye exam should occur within 1 month")
+	(label "Refer to eye care provider- exam in 1 month max")
+	(when [ATHENA_DM_Eye_Instance_100003])
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_90003] of  Referral
+
+	(label "Referral for eye exam every 2 years")
+	(rule_in_condition [ATHENA_DM_Eye_Instance_90006])
+	(when [ATHENA_DM_Eye_Instance_90004])
+	(who_to eye+care+provider))
+
+([ATHENA_DM_Eye_Instance_90004] of  Relative_Time_Interval_Definite
+
+	(how_many "2")
+	(label "2 years from last eye exam")
+	(polarity After)
+	(relative_time_point [ATHENA_DM_Eye_Instance_90005])
+	(time_unit year))
+
+([ATHENA_DM_Eye_Instance_90005] of  Relative_Time_Point
+
+	(label "Last eye exam"))

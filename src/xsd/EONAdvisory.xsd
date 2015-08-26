@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by Samson Tu (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:complexType name="Action">
+		<xs:sequence>
+			<xs:element name="type" type="xs:string" minOccurs="0"/>
+			<xs:element name="name"/>
+			<xs:element name="text"/>
+			<xs:element name="time" minOccurs="0"/>
+			<xs:element name="action_class" type="xs:string" minOccurs="0"/>
+			<xs:element name="support" type="Support" minOccurs="0"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Action_Choice">
+		<xs:sequence>
+			<xs:element name="name"/>
+			<xs:element name="preference"/>
+			<xs:element name="action" type="Action" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="support" type="Support" minOccurs="0"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Advisories">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="advisory" type="Advisory" maxOccurs="unbounded"/>
+				<xs:element name="case_id" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Advisory">
+		<xs:annotation>
+			<xs:documentation>A node in clinical algorithm</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="assumption" type="Assumption" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="subject_classification" type="Conclusion" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="evaluated_goal" type="Guideline_Goal" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="scenario_choice" type="Scenario_Choice" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="action" type="Action_Choice" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="evaluated_intervention" type="Guideline_Activity_Evaluations"
+				minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Assumption">
+		<xs:sequence>
+			<xs:element name="guideline_id" type="xs:string"/>
+			<xs:element name="assumption_for_guideline" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Choice_Evaluation">
+		<xs:choice>
+			<xs:element name="add" type="Add_Evaluation"/>
+			<xs:element name="delete" type="Delete_Evaluation"/>
+			<xs:element name="replaces_activity" type="Replacing_Evaluation"/>
+			<xs:element name="replace_by_activity" type="BeingReplaced_Evaluation"/>
+			<xs:element name="change_attribute" type="Change_Attribute_Evaluation"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="Conclusion">
+		<xs:sequence>
+			<xs:element name="parameter" type="xs:string"/>
+			<xs:element name="value" type="xs:string"/>
+			<xs:element name="support" type="Support" minOccurs="0"/>
+			<xs:element name="guideline_id"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Simple_Criteron_Evaluation">
+		<xs:sequence>
+			<xs:element name="name"/>
+			<xs:element name="truth_value"/>
+			<xs:element name="supporting_data" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Complex_Criterion_Evaluation">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="operator" type="xs:string"/>
+			<xs:element name="child" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="simple_criterion" type="Simple_Criteron_Evaluation"/>
+						<xs:element name="complex_criterion" type="Complex_Criterion_Evaluation"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="truth_value"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Add_Evaluation">
+		<xs:sequence>
+			<xs:element name="prior_use" type="xs:boolean"/>
+			<xs:element name="preference" type="Preference"/>
+			<xs:group ref="Common_Evaluation_Considerations"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Change_Attribute_Evaluation">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="attribute_name" type="xs:string"/>
+			<xs:element name="level" type="xs:string"/>
+			<xs:element name="change_direction"/>
+			<xs:element name="messages" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="preference"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+			<xs:element minOccurs="0" name="adverse_reactions" type="Adverse_Reacttion"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Delete_Evaluation">
+		<xs:sequence>
+			<xs:element name="preference" type="Preference"/>
+			<xs:group ref="Common_Evaluation_Considerations"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Guideline_Activity_Evaluations">
+		<xs:sequence>
+			<xs:element name="activity" type="xs:string"/>
+			<xs:element name="evaluations" type="Choice_Evaluation" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Guideline_Goal">
+		<xs:sequence>
+			<xs:element name="reason_for_goal" type="xs:string"/>
+			<xs:element name="goal" type="xs:string"/>
+			<xs:element name="achieved" type="Goal_State"/>
+			<xs:element name="supporting_data" type="xs:string"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Replacing_Evaluation">
+		<xs:sequence>
+			<xs:element name="activity_to_delete"/>
+			<xs:element name="replaced_activity_evaluation" type="Delete_Evaluation"/>
+			<xs:element name="replacing_activity_evaluation" type="Add_Evaluation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BeingReplaced_Evaluation">
+		<xs:sequence>
+			<xs:element name="activity_to_add"/>
+			<xs:element name="replaced_activity_evaluation" type="Delete_Evaluation"/>
+			<xs:element name="replacing_activity_evaluation" type="Add_Evaluation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Scenario_Choice">
+		<xs:all>
+			<xs:element name="name"/>
+			<xs:element name="scenario_id"/>
+			<xs:element name="description" type="xs:string"/>
+			<xs:element name="preference" type="Preference"/>
+			<xs:element name="support" type="Support" minOccurs="0"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="Support">
+		<xs:choice>
+			<xs:element name="simple_criterion" type="Simple_Criteron_Evaluation"/>
+			<xs:element name="complex_criterion" type="Complex_Criterion_Evaluation"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:simpleType name="Goal_State">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="achieved"/>
+			<xs:enumeration value="failed"/>
+			<xs:enumeration value="unknown"/>
+			<xs:enumeration value="none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Preference">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="preferred"/>
+			<xs:enumeration value="neutral"/>
+			<xs:enumeration value="ruled out"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Truth_Value">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:group name="Common_Evaluation_Considerations">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="activity" type="xs:string"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+			<xs:element name="compelling_indications" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="relative_indications" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="contraindications" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="relative_contraindications" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="adverse_reactions" type="Adverse_Reacttion" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="beneficial_interactions" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="harmful_interactions" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="messages" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="guideline_id" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="Adverse_Reacttion">
+		<xs:sequence>
+			<xs:element name="substance" type="xs:string"/>
+			<xs:element minOccurs="0" name="reaction" type="xs:string"/>
+			<xs:element minOccurs="0" name="date" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,3060 @@
+; Sun Jul 20 23:43:57 PDT 2014
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+([Absence+of+Stage+D+HF] of  Diagnostic_Term_Metaclass
+
+	(data_source clinical_assessment)
+	(DiagnosticCriteria [KB_707214_Class0]))
+
+([ACE_ARB_CPT] of  Canonical_Terms_Metaclass
+
+	(PrettyName "ACE Inhibitor or ARB CPT"))
+
+([Acitve+prescription+for+ACE+and+ARB] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class100006]))
+
+([Active+prescription+for+ACE+and+aldosterone+antagonists] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class100008]))
+
+([Active+prescription+for+ARB+and+aldosterone+antagonist] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class100010]))
+
+([African+american+%28black%29+and+moderate+symptoms+and+using+ACE%2C+BB%2C+diuretic] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element clinical_assessment)
+	(DiagnosticCriteria [ATHENA_HF_Class70151]))
+
+([ATHENA_HF_Class10000] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Pregnancy
+		angioedema)
+	(collateral_actions [ATHENA_HF_Class110378])
+	(Compelling_Indications
+		Myocardial_Infarction
+		LVEF%3C%3D40+and+no+HF+symptoms
+		HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40)
+	(Drug_Class_Name ACE_Inhibitors)
+	(formulary_preferred_drug_in_class
+		[ATHENA_HF_Class10001]
+		[ATHENA_HF_Class50040]
+		[ATHENA_HF_Class50042])
+	(label "Ace_Inhibitor")
+	(Relative_Contraindications Active+prescription+for+ARB+and+aldosterone+antagonist)
+	(Relative_Indications
+		HTN+and+LVH
+		High+Risk+for+HF+and+DM%2C+HTN%2C+or+atherosclerotic+vascular+disease))
+
+([ATHENA_HF_Class100000] of  Management_Guideline
+
+	(alternative_goals
+		[ATHENA_HF_Class110003]
+		[ATHENA_HF_Class110006])
+	(eligibility_criteria
+		[ATHENA_HF_Class140007]
+		[ATHENA_HF_PM_Class0]
+		[library_Class20000])
+	(label "HF Performance Measures Outpatient"))
+
+([ATHENA_HF_Class100001] of  General_Conditional_Goal
+
+	(label "PM Aldosterone Antagonists"))
+
+([ATHENA_HF_Class100002] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class100853]
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50018])
+	(label "HF (ICD or Symptoms) and LVEF<=40 and no MI")
+	(operator AND))
+
+([ATHENA_HF_Class100004] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class100853]
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50011])
+	(label "HF (ICD or Symptoms) and LVEF<=40 and MI")
+	(operator AND))
+
+([ATHENA_HF_Class100006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50026]
+		[ATHENA_HF_Class50024])
+	(label "Active prescription for ACE OR ARB")
+	(operator OR))
+
+([ATHENA_HF_Class100008] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class110825]
+		[ATHENA_HF_Class50024])
+	(label "Active prescription for ACE and aldosterone antagonists")
+	(operator AND))
+
+([ATHENA_HF_Class10001] of  Guideline_Drug
+
+	(dose_level_ranges [ATHENA_HF_Class10002])
+	(dose_strength_unit mg_per_mL)
+	(generic_drug ACE_Inhibitors)
+	(label "Captopril")
+	(max_recommended_dose_level Low_Dose%28high%2Flow%29)
+	(rule_in [ATHENA_HF_Class50011])
+	(starting_dose 18.75))
+
+([ATHENA_HF_Class100010] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50026]
+		[ATHENA_HF_Class110825])
+	(label "Active prescription for ARB and aldosterone antagonist")
+	(operator AND))
+
+([ATHENA_HF_Class100013] of  Presence_Criterion
+
+	(domain_term Stage+D+Heart+Failure)
+	(entry_type Note_Entry)
+	(label "Stage D HF (refractory end stage HF)")
+	(presence TRUE))
+
+([ATHENA_HF_Class100016] of  Presence_Criterion
+
+	(domain_term Diuretics)
+	(entry_type Medication)
+	(label "absence of diuretics")
+	(presence FALSE))
+
+([ATHENA_HF_Class10002] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 18.75)
+	(upper_limit 150.0))
+
+([ATHENA_HF_Class10006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50031]
+		[ATHENA_DM_Eye_Instance_40003])
+	(label "High risk for developing heart failure")
+	(operator OR))
+
+([ATHENA_HF_Class10007] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class20005]
+		[ATHENA_HF_Class20006]
+		[ATHENA_HF_Class70628]
+		[ATHENA_HF_Class50011]
+		[ATHENA_HF_Class60044])
+	(label "Structural Heart Disease")
+	(operator OR))
+
+([ATHENA_HF_Class10008] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class60088]
+		[ATHENA_HF_Class10006]
+		[ATHENA_HF_Class20008]
+		[ATHENA_HF_Class60054])
+	(label "Criteria for Stage A HF")
+	(operator AND))
+
+([ATHENA_HF_Class100223] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class60012]
+		[ATHENA_HF_Class60015]
+		[ATHENA_HF_Class60016]
+		[ATHENA_HF_Class50036])
+	(label "ACE or ARB intolerance: ADR, hypotension, renal insuficiency")
+	(operator OR))
+
+([ATHENA_HF_Class100224] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class100223]
+		[ATHENA_HF_Class30004])
+	(label "HF and LVEF<=40 and intolerance to ACE/ARB")
+	(operator AND))
+
+([ATHENA_HF_Class100394] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class70168]
+		[ATHENA_HF_Class70002])
+	(label "HF with persistent symptoms and LVEF<=40 and treated with conventional therapy")
+	(operator AND))
+
+([ATHENA_HF_Class100434] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70145]
+		[ATHENA_HF_Class70147])
+	(label "MI at least 40d old OR non ischemic dilated cardiomyopathy")
+	(operator OR))
+
+([ATHENA_HF_Class100848] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70142]
+		[ATHENA_HF_Class100849]
+		[ATHENA_HF_Class50049]
+		[ATHENA_HF_Class70195])
+	(label "LVEF<=35 & QRS >=0.12 & sinus rhythm & NYHA functional class III ambulatory class IV symptoms")
+	(operator AND))
+
+([ATHENA_HF_Class100849] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70192]
+		[ATHENA_HF_Class100850])
+	(label "cardiac dyssynchrony OR QRS>= 0.12")
+	(operator OR))
+
+([ATHENA_HF_Class100850] of  Presence_Criterion
+
+	(domain_term cardiac+dyssynchrony)
+	(entry_type Note_Entry)
+	(label "presence of cardiac dyssynchrony")
+	(presence TRUE))
+
+([ATHENA_HF_Class100851] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70156]
+		[ATHENA_HF_Class70186])
+	(label "presence of moderate or severe symptoms")
+	(operator OR))
+
+([ATHENA_HF_Class100852] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class70198])
+	(label "HF symptoms/HF and LVEF<=40")
+	(operator AND))
+
+([ATHENA_HF_Class100853] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70187]
+		[ATHENA_HF_Class30004])
+	(label "HF ICD9 OR HF symptoms")
+	(operator OR))
+
+([ATHENA_HF_Class102530] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class70002]
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class70168])
+	(label "LVEF<=40 & using ACE & using BB & persistent HF symptoms")
+	(operator AND))
+
+([ATHENA_HF_Class110000] of  Management_Guideline
+
+	(alternative_goals
+		[ATHENA_HF_Class140003]
+		[ATHENA_HF_Class140005])
+	(authors
+		"Paul Heidenreich"
+		"Mary K Goldstein"
+		"Susana Martins"
+		"Samson Tu")
+	(eligibility_criteria
+		[library_Class20000]
+		[library_Class50022])
+	(label "HF Performance Measures Inpatient")
+	(title "Inpatient Performance Measures for Heart Failure")
+	(version "v1"))
+
+([ATHENA_HF_Class110001] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class110002])
+	(focus Cardiac_resynchronization_therapy)
+	(label "PM CRT"))
+
+([ATHENA_HF_Class110002] of  General_Conditional_Goal
+
+	(label "PM CRT"))
+
+([ATHENA_HF_Class110003] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class110005])
+	(exclusion_criteria
+		[library_Class30031]
+		[library_Class30028]
+		[library_Class50015]
+		[library_Class50019]
+		[library_Class30012]
+		[library_Class30014]
+		[library_Class30016]
+		[library_Class30019]
+		[ATHENA_HF_PM_Class20001]
+		[library_Class30020]
+		[ATHENA_HF_PM_Class20002]
+		[ATHENA_HF_PM_Class20003]
+		[library_Class40004]
+		[library_Class50013]
+		[library_Class30032]
+		[library_Class50004]
+		[library_Class50005]
+		[library_Class50010]
+		[KB_461058_Class0]
+		[library_Class30003]
+		[library_Class40000]
+		[library_Class100003]
+		[KB_326964_Class0])
+	(focus
+		ACE_Inhibitors
+		Angiotensin_II_receptor_blockers)
+	(inclusion_criteria [library_Class20001])
+	(label "NQF 081 Outpatient ACE")
+	(source "NQF"))
+
+([ATHENA_HF_Class110004] of  General_Conditional_Goal
+
+	(criterion_to_achieve
+		[ATHENA_HF_PM_Class10001]
+		[ATHENA_HF_PM_Class10003])
+	(label "Presence of ACEi or ARB prescription within [-2, +1] day of discharge"))
+
+([ATHENA_HF_Class110005] of  General_Conditional_Goal
+
+	(criterion_to_achieve
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class50026]
+		[ATHENA_HF_PM_Class10000])
+	(label "Prescriptions for ACEi or ARB during measurement period"))
+
+([ATHENA_HF_Class110006] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class110008])
+	(exclusion_criteria
+		[library_Class30035]
+		[library_Class30020]
+		[library_Class30037]
+		[library_Class30039]
+		[library_Class30014]
+		[library_Class50013]
+		[library_Class50002]
+		[library_Class50001]
+		[library_Class50015]
+		[library_Class30028]
+		[library_Class30031]
+		[library_Class50019]
+		[library_Class80010]
+		[library_Class80009]
+		[library_Class50010]
+		[library_Class50013])
+	(focus Beta_Blocker+Stage+C+Heart+Failure)
+	(inclusion_criteria [library_Class20001])
+	(label "NQF 083 Outpatient BB")
+	(source "NQF"))
+
+([ATHENA_HF_Class110007] of  General_Conditional_Goal
+
+	(criterion_to_achieve [KB_185671_Class0])
+	(label "NQF 083 Inpatient"))
+
+([ATHENA_HF_Class110008] of  General_Conditional_Goal
+
+	(criterion_to_achieve
+		[ATHENA_HF_Class140011]
+		[ATHENA_HF_Class140010]
+		[ATHENA_HF_Class140012])
+	(label "Prescription for carvedilol OR bisoprolol OR sustained release metoprolol succinate"))
+
+([ATHENA_HF_Class110009] of  Goal
+
+	(conditional_goals [KB_340709_Class1])
+	(focus
+		Hydralazine_and_nitrates
+		hydralazine
+		nitrate)
+	(inclusion_criteria
+		[KB_340709_Class10]
+		[ATHENA_CKD_Instance_70019]
+		[KB_340709_Class11])
+	(label "PM Hydralazine & nitrates"))
+
+([ATHENA_HF_Class110175] of  N_ary_Criterion
+
+	(criteria
+		[KB_707214_Class0]
+		[ATHENA_HF_Class100853])
+	(label "HF (ICD or signs/symptoms) AND NOT stage D")
+	(operator AND))
+
+([ATHENA_HF_Class110349] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LVEF<30")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3C)
+	(value 30.0))
+
+([ATHENA_HF_Class110351] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class20004]
+		[ATHENA_HF_Class110352])
+	(label "30<=LVEF<40")
+	(operator AND))
+
+([ATHENA_HF_Class110352] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LVEF>=30")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3E%3D)
+	(value 30.0))
+
+([ATHENA_HF_Class110354] of  Collateral_Action
+
+	(mood Authorized))
+
+([ATHENA_HF_Class110356] of  Collateral_Action
+
+	(mood Authorized))
+
+([ATHENA_HF_Class110358] of  Collateral_Action
+
+	(mood Recommend_Increase))
+
+([ATHENA_HF_Class110359] of  Collateral_Action
+
+	(mood Recommend_Increase))
+
+([ATHENA_HF_Class110360] of  Collateral_Action
+
+	(mood Recommend_Add))
+
+([ATHENA_HF_Class110362] of  Supporting_Material
+
+	(label "Elaine furmaga - consensus document"))
+
+([ATHENA_HF_Class110364] of  Supporting_Material
+
+	(label "Barry Massey- consensus document"))
+
+([ATHENA_HF_Class110365] of  Supporting_Material
+
+	(label "Paul Heindenrich - consensus document"))
+
+([ATHENA_HF_Class110369] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70142]
+		[ATHENA_HF_Class70195])
+	(label "LVEF<=35 and NYHA class 3 or 4")
+	(operator AND))
+
+([ATHENA_HF_Class110370] of  Collateral_Action
+
+	(mood Recommend_Add))
+
+([ATHENA_HF_Class110372] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class110373]
+		[ATHENA_HF_Class110374])
+	(label "age>70, egfr<30 or low lean body mass")
+	(operator OR))
+
+([ATHENA_HF_Class110373] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "age >70")
+	(numeric_domain_term Age)
+	(operator %3E)
+	(value 70.0))
+
+([ATHENA_HF_Class110374] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "egfr < 30")
+	(numeric_domain_term eGFR)
+	(operator %3C)
+	(value 30.0))
+
+([ATHENA_HF_Class110376] of  Parameterized_String
+
+	(variables [ATHENA_HF_Class110377]))
+
+([ATHENA_HF_Class110377] of  Variable
+)
+
+([ATHENA_HF_Class110378] of  Collateral_Action
+
+	(mood Recommend_Add))
+
+([ATHENA_HF_Class110381] of  Supporting_Material
+
+	(label "ACC/AHA 2009"))
+
+([ATHENA_HF_Class110382] of  Collateral_Action
+
+	(mood Recommend_Add))
+
+([ATHENA_HF_Class110389] of  Supporting_Material
+
+	(label "Mary Goldstein - consensus"))
+
+([ATHENA_HF_Class110824] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class50026]
+		[ATHENA_HF_Class110825])
+	(label "On ACEI, ARB and aldosterone antagonist")
+	(operator AND))
+
+([ATHENA_HF_Class110825] of  Presence_Criterion
+
+	(domain_term aldosterone+antagonist)
+	(entry_type Medication)
+	(label "presence of aldosterone antagonist")
+	(presence TRUE))
+
+([ATHENA_HF_Class120000] of  General_Conditional_Goal
+
+	(label "PM ICD"))
+
+([ATHENA_HF_Class120001] of  Presence_Criterion
+
+	(domain_term Heart_failure_N)
+	(entry_type Note_Entry)
+	(label "Presence of HF N")
+	(presence TRUE))
+
+([ATHENA_HF_Class120005] of  Presence_Criterion
+
+	(entry_type Note_Entry)
+	(label "Presence HF PM Outpatient")
+	(presence TRUE))
+
+([ATHENA_HF_Class120006] of  Medical_Conditions_Metaclass
+)
+
+([ATHENA_HF_Class121650] of  Presence_Criterion
+
+	(domain_term structural+heart+disease)
+	(entry_type Note_Entry)
+	(label "presence of structural heart disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class122379] of  Presence_Criterion
+
+	(domain_term NYHA+class+I)
+	(entry_type Note_Entry)
+	(label "presence of NYHA functional class I")
+	(presence TRUE))
+
+([ATHENA_HF_Class124161] of  Presence_Criterion
+
+	(domain_term nonsteroidal+anti-inflammatory+drugs)
+	(entry_type Medication)
+	(label "presence of NSAIDs")
+	(mood Authorized)
+	(presence TRUE))
+
+([ATHENA_HF_Class124162] of  Presence_Criterion
+
+	(domain_term calcium+channel+blockers+with+negative+inotropic+effects)
+	(entry_type Medication)
+	(label "presence of cardiotoxic CCB")
+	(mood Authorized)
+	(presence TRUE))
+
+([ATHENA_HF_Class124163] of  Presence_Criterion
+
+	(domain_term antiarrhythmic+drugs)
+	(entry_type Medication)
+	(label "presence of cardiotoxic antiarrhythmic drugs")
+	(mood Authorized)
+	(presence TRUE))
+
+([ATHENA_HF_Class124167] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class124162]
+		[ATHENA_HF_Class124163]
+		[ATHENA_HF_Class124161])
+	(label "presence of drugs that adversely effect HF")
+	(operator OR))
+
+([ATHENA_HF_Class130002] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class120000])
+	(focus Implantable_cardioverter_defibrillator)
+	(label "PM ICD"))
+
+([ATHENA_HF_Class130003] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class100001])
+	(focus aldosterone+antagonist)
+	(label "PM Aldosterone Antagonists")
+	(source "ACC/AHA"))
+
+([ATHENA_HF_Class133534] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class133535]
+		[ATHENA_HF_Class133536])
+	(label "creatinine <=2.5 males and <=2 females and K<5")
+	(operator AND))
+
+([ATHENA_HF_Class133535] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "K<5")
+	(numeric_domain_term Potassium)
+	(operator %3C)
+	(value 5.0))
+
+([ATHENA_HF_Class133536] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class133537]
+		[ATHENA_HF_Class133539])
+	(label "creatinine <=2.5 males OR  <=2 females")
+	(operator OR))
+
+([ATHENA_HF_Class133537] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class133538]
+		[ATHENA_CKD_Instance_70005])
+	(label "male and creatinine <=2.5")
+	(operator AND))
+
+([ATHENA_HF_Class133538] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "creatinine <=2.5")
+	(numeric_domain_term Creatinine)
+	(operator %3C%3D)
+	(value 2.5))
+
+([ATHENA_HF_Class133539] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class133540]
+		[ATHENA_CKD_Instance_40003])
+	(label "female and creatinine<=2")
+	(operator AND))
+
+([ATHENA_HF_Class133540] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "creatinine <=2")
+	(numeric_domain_term Creatinine)
+	(operator %3C%3D)
+	(value 2.0))
+
+([ATHENA_HF_Class140003] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class110004])
+	(exclusion_criteria
+		[library_Class30014]
+		[library_Class30032]
+		[library_Class30016]
+		[library_Class40004]
+		[library_Class50004]
+		[library_Class50013]
+		[library_Class50051]
+		[library_Class50010]
+		[ATHENA_HF_PM_Class20003]
+		[ATHENA_HF_PM_Class20002]
+		[library_Class30012]
+		[KB_461058_Class0]
+		[ATHENA_HF_PM_Class20001]
+		[library_Class30019]
+		[library_Class30002]
+		[library_Class50007]
+		[library_Class30003]
+		[library_Class40000]
+		[library_Class30031]
+		[KB_411706_Class0]
+		[library_Class50042]
+		[library_Class50043]
+		[library_Class80004]
+		[library_Class80005]
+		[library_Class80006]
+		[library_Class80007]
+		[library_Class80001]
+		[library_Class80002]
+		[library_Class80003]
+		[KB_174596_Class0]
+		[library_Class50000])
+	(focus
+		ACE_Inhibitors
+		Angiotensin_II_receptor_blockers)
+	(inclusion_criteria [library_Class20001])
+	(label "NQF 081 Inpatient ACE"))
+
+([ATHENA_HF_Class140005] of  Goal
+
+	(conditional_goals [ATHENA_HF_Class110007])
+	(exclusion_criteria
+		[library_Class50010]
+		[library_Class30031]
+		[library_Class80001]
+		[library_Class80002]
+		[library_Class40001]
+		[library_Class40003]
+		[library_Class30035]
+		[library_Class30020]
+		[library_Class30037]
+		[library_Class30039]
+		[library_Class30014]
+		[library_Class50002]
+		[library_Class50001]
+		[library_Class80004]
+		[library_Class80008]
+		[library_Class80005]
+		[library_Class80006]
+		[library_Class80007]
+		[library_Class50043]
+		[library_Class80009]
+		[library_Class50013]
+		[KB_340709_Class8])
+	(focus Beta_Blocker+Stage+C+Heart+Failure)
+	(inclusion_criteria [library_Class20001])
+	(label "NQF 083 Inpatient BB"))
+
+([ATHENA_HF_Class140007] of  Presence_Criterion
+
+	(domain_term Outpatient_Encounter)
+	(entry_type Note_Entry)
+	(label "Outpatient encounter in past 12m")
+	(period [library_Class60017])
+	(presence TRUE)
+	(%3ADOCUMENTATION "CPT codes listed in Map_CPT as defined in ACC/AHA/PCPI Measure #7"))
+
+([ATHENA_HF_Class140008] of  N_ary_Criterion
+
+	(label "Joint HF exclusions")
+	(operator OR))
+
+([ATHENA_HF_Class140009] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class140010]
+		[ATHENA_HF_Class140011]
+		[ATHENA_HF_Class140012])
+	(label "Prescription for carvedilol OR bisoprolol OR sustained release metoprolol succinate")
+	(operator OR))
+
+([ATHENA_HF_Class140010] of  Presence_Criterion
+
+	(domain_term carvedilol)
+	(entry_type Medication)
+	(label "prescription for carvedilol in past year")
+	(mood Authorized)
+	(period [ATHENA_DM_Eye_Instance_30019])
+	(presence TRUE))
+
+([ATHENA_HF_Class140011] of  Presence_Criterion
+
+	(domain_term bisoprolol)
+	(entry_type Medication)
+	(label "prescription for bisoprolol in past year")
+	(mood Authorized)
+	(period [ATHENA_DM_Eye_Instance_30019])
+	(presence TRUE))
+
+([ATHENA_HF_Class140012] of  Presence_Criterion
+
+	(domain_term sustained+release+metoprolol+succinate)
+	(entry_type Medication)
+	(label "prescription for sustained release metoprolol succinate in past year")
+	(mood Authorized)
+	(period [ATHENA_DM_Eye_Instance_30019])
+	(presence TRUE))
+
+([ATHENA_HF_Class140014] of  Presence_Criterion
+
+	(domain_term Angiotensin_II_receptor_blockers)
+	(entry_type Adverse_Reaction)
+	(label "ADR ARB")
+	(presence TRUE))
+
+([ATHENA_HF_Class144252] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70036]
+		[ATHENA_HF_Class60088])
+	(label "No HF AND (DM or HTN or atherosclerotic vascular diseas)")
+	(operator AND))
+
+([ATHENA_HF_Class20001] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class40003])
+	(label "Not_on_ACEI_ARB or BB")
+	(operator OR))
+
+([ATHENA_HF_Class20004] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LVEF < 40")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3C)
+	(value 40.0))
+
+([ATHENA_HF_Class20005] of  Presence_Criterion
+
+	(domain_term Prior_Myocardial_Infarction)
+	(entry_type Note_Entry)
+	(label "Prior Myocardial_Infarction")
+	(presence TRUE))
+
+([ATHENA_HF_Class20006] of  Presence_Criterion
+
+	(domain_term Severe_LVH)
+	(entry_type Note_Entry)
+	(label "Severe LVH")
+	(presence TRUE))
+
+([ATHENA_HF_Class20008] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class10007])
+	(label "Not Structural Heart Disease")
+	(operator NOT))
+
+([ATHENA_HF_Class30000] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class30001]
+		[ATHENA_HF_Class10007])
+	(label "Criteria for Stage C HF")
+	(operator AND))
+
+([ATHENA_HF_Class30001] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class60072])
+	(label "Symptoms of HF")
+	(operator OR))
+
+([ATHENA_HF_Class30002] of  Presence_Criterion
+
+	(domain_term Beta-Blockers)
+	(entry_type Medication)
+	(label "Not_on_betablocker")
+	(mood Authorized)
+	(presence FALSE))
+
+([ATHENA_HF_Class30004] of  Presence_Criterion
+
+	(domain_term Heart_Failure)
+	(entry_type Note_Entry)
+	(label "Presence of Heart Failure")
+	(presence TRUE))
+
+([ATHENA_HF_Class30005] of  Presence_Criterion
+
+	(domain_term Heart_Failure)
+	(entry_type Note_Entry)
+	(label "Absence_Heart_Failure")
+	(presence FALSE))
+
+([ATHENA_HF_Class30018] of  Drug_Usage
+
+	(Compelling_Indications
+		Stage+C+and+LVEF%3C%3D40+and+ADR+ACE
+		No+HF%2C+MI%2C++LVEF%3C%3D40+and+ADR+ACE)
+	(Drug_Class_Name Angiotensin_II_receptor_blockers)
+	(label "ARB")
+	(Relative_Contraindications Active+prescription+for+ACE+and+aldosterone+antagonists)
+	(Relative_Indications
+		HTN+and+LVH
+		Stage+B+and+LVEF%3C%3D40+and+ADR+ACE
+		Mild-moderate+HF+symptoms+and+LVEF%3C%3D+40+and+ACE+intolerant
+		High+Risk+for+HF+and+DM%2C+HTN%2C+or+atherosclerotic+vascular+disease
+		HF+with+persistent+symptoms+and+LVEF%3C%3D40+and+treated+with+conventional+therapy))
+
+([ATHENA_HF_Class40002] of  Presence_Criterion
+
+	(domain_term fatigue)
+	(entry_type Note_Entry)
+	(label "Presence of fatigue")
+	(presence TRUE))
+
+([ATHENA_HF_Class40003] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class40005]
+		[ATHENA_HF_Class50004])
+	(label "Not on ACEI or ARB")
+	(operator OR))
+
+([ATHENA_HF_Class40005] of  Presence_Criterion
+
+	(domain_term ACE_Inhibitors)
+	(entry_type Medication)
+	(label "Not_on_ACEI")
+	(mood Authorized)
+	(presence FALSE))
+
+([ATHENA_HF_Class50004] of  Presence_Criterion
+
+	(domain_term Angiotensin_II_receptor_blockers)
+	(entry_type Medication)
+	(label "Not on ARB")
+	(mood Authorized)
+	(presence FALSE))
+
+([ATHENA_HF_Class50011] of  Presence_Criterion
+
+	(domain_term Myocardial_Infarction)
+	(entry_type Note_Entry)
+	(label "Presence of MI")
+	(presence TRUE))
+
+([ATHENA_HF_Class50012] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50011]
+		[ATHENA_HF_Class40003])
+	(label "Previous MI and no ACEI (or ARB)")
+	(operator AND))
+
+([ATHENA_HF_Class50013] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50011]
+		[ATHENA_HF_Class30002])
+	(label "Previous MI and no beta blocker")
+	(operator AND))
+
+([ATHENA_HF_Class50017] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50018]
+		[ATHENA_HF_Class50019])
+	(label "LVEF < 35 (?) and no MI")
+	(operator AND))
+
+([ATHENA_HF_Class50018] of  Presence_Criterion
+
+	(domain_term Myocardial_Infarction)
+	(entry_type Note_Entry)
+	(label "Absence of MI")
+	(presence FALSE))
+
+([ATHENA_HF_Class50019] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "LVEF <= 40")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3C%3D)
+	(value 40.0))
+
+([ATHENA_HF_Class50020] of  Presence_Criterion
+
+	(domain_term Beta-Blockers)
+	(entry_type Medication)
+	(label "Absence of beta blocker")
+	(mood Authorized)
+	(presence FALSE))
+
+([ATHENA_HF_Class50024] of  Presence_Criterion
+
+	(domain_term ACE_Inhibitors)
+	(entry_type Medication)
+	(label "Presence of ACE Inhibitor within performance measurement period")
+	(mood Authorized)
+	(period [PerformanceMeasurementPeriod])
+	(presence TRUE))
+
+([ATHENA_HF_Class50025] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class50026])
+	(label "Presence of ACEI or ARB")
+	(operator OR))
+
+([ATHENA_HF_Class50026] of  Presence_Criterion
+
+	(domain_term Angiotensin_II_receptor_blockers)
+	(entry_type Medication)
+	(label "Presence of ARB  within performance measurement period")
+	(mood Authorized)
+	(period [PerformanceMeasurementPeriod])
+	(presence TRUE))
+
+([ATHENA_HF_Class50030] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50031]
+		[ATHENA_HF_Class50032])
+	(label "HTN and LVH")
+	(operator AND))
+
+([ATHENA_HF_Class50031] of  Presence_Criterion
+
+	(domain_term Hypertension_Inclusive)
+	(entry_type Note_Entry)
+	(label "Presence of hypertension")
+	(presence TRUE))
+
+([ATHENA_HF_Class50032] of  Presence_Criterion
+
+	(domain_term LVH)
+	(entry_type Note_Entry)
+	(label "Presence of LVH")
+	(presence TRUE))
+
+([ATHENA_HF_Class50035] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50011]
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50036]
+		[ATHENA_HF_Class60088]
+		[ATHENA_HF_Class60054])
+	(label "NO HF, MI, LVEF<=40 and ADR ACE")
+	(operator AND))
+
+([ATHENA_HF_Class50036] of  Presence_Criterion
+
+	(domain_term ACE_Inhibitors)
+	(entry_type Adverse_Reaction)
+	(label "Adverse Reaction to ACEI")
+	(presence TRUE))
+
+([ATHENA_HF_Class50037] of  Drug_Usage
+
+	(collateral_actions [ATHENA_HF_Class110360])
+	(Compelling_Indications
+		Myocardial_Infarction
+		LVEF%3C%3D40+and+no+HF+symptoms
+		HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40)
+	(Drug_Class_Name Beta-Blockers)
+	(formulary_preferred_drug_in_class
+		[ATHENA_HF_Class50092]
+		[ATHENA_HF_Class50093]
+		[ATHENA_HF_Class50094])
+	(label "Beta Blocker"))
+
+([ATHENA_HF_Class50039] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50036])
+	(label "LVEF <=40 and intolerant ACE")
+	(operator AND))
+
+([ATHENA_HF_Class50040] of  Guideline_Drug
+
+	(collateral_actions
+		[ATHENA_HF_Class110354]
+		[ATHENA_HF_Class110359])
+	(dose_level_ranges [ATHENA_HF_Class50041])
+	(drug_usage [ATHENA_HF_Class10000])
+	(generic_drug lisinopril)
+	(label "Lisinopril")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(rule_in [ATHENA_HF_Class50011])
+	(starting_dose 2.5))
+
+([ATHENA_HF_Class50041] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 2.5)
+	(upper_limit 20.0))
+
+([ATHENA_HF_Class50042] of  Guideline_Drug
+
+	(collateral_actions
+		[ATHENA_HF_Class110356]
+		[ATHENA_HF_Class110358])
+	(dose_level_ranges [ATHENA_HF_Class50044])
+	(generic_drug enalapril)
+	(label "Enalapril")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(rule_in [ATHENA_HF_Class50043])
+	(starting_dose 5.0))
+
+([ATHENA_HF_Class50043] of  Presence_Criterion
+
+	(domain_term Heart_Failure)
+	(entry_type Note_Entry)
+	(label "Presence of HF")
+	(presence TRUE))
+
+([ATHENA_HF_Class50044] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 5.0)
+	(upper_limit 20.0))
+
+([ATHENA_HF_Class50045] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Heart_Failure
+		LVEF%3C%3D40+and+no+HF+symptoms
+		Myocardial_Infarction
+		HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40)
+	(Drug_Class_Name Non-Dihydropyridines)
+	(label "NDHP CCB"))
+
+([ATHENA_HF_Class50046] of  Drug_Usage
+
+	(Absolute_Contraindications LVEF%3C%3D40+and+sinus+rhythm+and+Stage+B+and+absence+HF+symptoms)
+	(collateral_actions [ATHENA_HF_Class110370])
+	(Drug_Class_Name digoxin)
+	(label "Digoxin")
+	(Relative_Indications HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40))
+
+([ATHENA_HF_Class50048] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50049]
+		[ATHENA_HF_Class10007]
+		[ATHENA_HF_Class60054]
+		[ATHENA_HF_Class60088])
+	(label "LVEF<=40 and sinus shythm and Stage B and absence HF symptoms")
+	(operator AND))
+
+([ATHENA_HF_Class50049] of  Presence_Criterion
+
+	(domain_term sinus+rhythm)
+	(entry_type Note_Entry)
+	(label "sinus rhythm")
+	(presence TRUE))
+
+([ATHENA_HF_Class50050] of  Presence_Criterion
+
+	(domain_term Stage+B+Heart+Failure)
+	(entry_type Note_Entry)
+	(label "Stage B HF")
+	(presence TRUE))
+
+([ATHENA_HF_Class50053] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50054]
+		[ATHENA_HF_Class50055]
+		[ATHENA_HF_Class50056]
+		[ATHENA_HF_Class90384]
+		[ATHENA_HF_Class122379])
+	(label "ischemic heart disease and LVEF<=30 and >40d postMI and NYHA functional class I")
+	(operator AND))
+
+([ATHENA_HF_Class50054] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "LVEF<=30")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3C%3D)
+	(value 30.0))
+
+([ATHENA_HF_Class50055] of  Presence_Criterion
+
+	(domain_term Ischemic+Heart+Disease)
+	(entry_type Note_Entry)
+	(label "presence of ischemic heart disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class50056] of  Presence_Criterion
+
+	(domain_term Myocardial_Infarction)
+	(entry_type Note_Entry)
+	(label "Presence of MI")
+	(presence TRUE))
+
+([ATHENA_HF_Class50057] of  Relative_Time_Interval_Definite
+
+	(how_many "41")
+	(label "41days before today")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([ATHENA_HF_Class50059] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50054]
+		[ATHENA_HF_Class50060])
+	(label "non-ischemic cardiomyopathy and LVEF<=30")
+	(operator AND))
+
+([ATHENA_HF_Class50060] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class50032])
+	(label "non-ischemic cardiomyopathy")
+	(operator AND))
+
+([ATHENA_HF_Class50063] of  Presence_Criterion
+
+	(domain_term Valvular+heart+disease)
+	(entry_type Note_Entry)
+	(label "presence of valvular disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class50067] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50036]
+		[ATHENA_HF_Class50068])
+	(label "Stage C and EF<=40 and ADR ACE")
+	(operator AND))
+
+([ATHENA_HF_Class50068] of  Presence_Criterion
+
+	(domain_term Stage+C+Heart+Failure)
+	(entry_type Note_Entry)
+	(label "Stage C HF")
+	(presence TRUE))
+
+([ATHENA_HF_Class50069] of  Drug_Usage
+
+	(Absolute_Contraindications Heart_Failure)
+	(Drug_Class_Name cardiotoxic+interventions)
+	(label "cardiotoxic drugs"))
+
+([ATHENA_HF_Class50092] of  Guideline_Drug
+
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_HF_Class50037])
+	(generic_drug sustained+release+metoprolol+succinate)
+	(label "Sustained release metoprolol succinate")
+	(starting_dose 12.5))
+
+([ATHENA_HF_Class50093] of  Guideline_Drug
+
+	(generic_drug carvedilol)
+	(label "Carvedilol")
+	(rule_in [ATHENA_HF_Class50011]))
+
+([ATHENA_HF_Class50094] of  Guideline_Drug
+
+	(drug_usage [ATHENA_HF_Class50037])
+	(generic_drug bisoprolol)
+	(label "Bisoprolol"))
+
+([ATHENA_HF_Class50100] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50101]
+		[ATHENA_HF_Class50102]
+		[ATHENA_HF_Class50103])
+	(label "ventricularfibrillation, cardiac arrest or hemodynamically destabilizing ventricular tachycardia")
+	(operator OR))
+
+([ATHENA_HF_Class50101] of  Presence_Criterion
+
+	(domain_term cardiac+arrest)
+	(entry_type Note_Entry)
+	(label "presence of cardiac arrest")
+	(presence TRUE))
+
+([ATHENA_HF_Class50102] of  Presence_Criterion
+
+	(domain_term ventricular+fibrillation)
+	(entry_type Note_Entry)
+	(label "presence of ventricular fibrillation")
+	(presence TRUE))
+
+([ATHENA_HF_Class50103] of  Presence_Criterion
+
+	(domain_term hemodynamically+destabilizing+ventricular+tachycardia)
+	(entry_type Note_Entry)
+	(label "presence of hemodynamically destabilizing ventricular tachycardia")
+	(presence TRUE))
+
+([ATHENA_HF_Class50104] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50100]
+		[ATHENA_HF_Class30004])
+	(label "HF and EF<35 and presence of ventricular tachycardia, cardiac arrest or hemodynamically destabilizing ventricular tachycardi")
+	(operator AND))
+
+([ATHENA_HF_Class50107] of  Variable
+)
+
+([ATHENA_HF_Class60012] of  Presence_Criterion
+
+	(domain_term Angiotensin_II_receptor_blockers)
+	(entry_type Adverse_Reaction)
+	(label "Presence of adverse reaction to ARB")
+	(presence TRUE))
+
+([ATHENA_HF_Class60014] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50036]
+		[ATHENA_HF_Class60012]
+		[ATHENA_HF_Class60015]
+		[ATHENA_HF_Class60016])
+	(label "drug intolerance ACE/ARB OR hypotension OR renal insufficienc")
+	(operator OR))
+
+([ATHENA_HF_Class60015] of  Presence_Criterion
+
+	(domain_term Renal_Insufficiency)
+	(entry_type Note_Entry)
+	(label "presence of renal insufficiency ICD9")
+	(presence TRUE))
+
+([ATHENA_HF_Class60016] of  Presence_Criterion
+
+	(domain_term hypotension)
+	(entry_type Note_Entry)
+	(label "presence of hypotension")
+	(presence TRUE))
+
+([ATHENA_HF_Class60044] of  Presence_Criterion
+
+	(domain_term Valvular+heart+disease)
+	(entry_type Note_Entry)
+	(label "Presence of valvular disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class60053] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class10007]
+		[ATHENA_HF_Class60054]
+		[ATHENA_HF_Class60088])
+	(label "Criteria for Stage B HF")
+	(operator AND))
+
+([ATHENA_HF_Class60054] of  Presence_Criterion
+
+	(domain_term HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "Absence of HF signs and symptoms")
+	(presence FALSE))
+
+([ATHENA_HF_Class60072] of  Presence_Criterion
+
+	(domain_term HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "Presence of HF signs and symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class60088] of  Presence_Criterion
+
+	(domain_term Heart_Failure)
+	(entry_type Note_Entry)
+	(label "Absence of HF")
+	(presence FALSE))
+
+([ATHENA_HF_Class70000] of  Drug_Usage
+
+	(Compelling_Indications HF+%28ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+no+MI)
+	(Drug_Class_Name Beta_Blocker+Stage+C+Heart+Failure)
+	(formulary_preferred_drug_in_class
+		[ATHENA_HF_Class50094]
+		[ATHENA_HF_Class50092]
+		[ATHENA_HF_Class50093])
+	(label "Beta blocker Stage C HF no MI"))
+
+([ATHENA_HF_Class70001] of  Drug_Usage
+
+	(Absolute_Contraindications Bronchospastic_Disease)
+	(Compelling_Indications MI+no+HF)
+	(Drug_Class_Name Beta+blocker+stage+B+post+MI)
+	(label "Beta blocker Stage B HF post MI"))
+
+([ATHENA_HF_Class70002] of  Presence_Criterion
+
+	(domain_term Persistent+HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "presence of persistent HF signs and symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class70029] of  N_ary_Criterion
+
+	(label "BP not under control")
+	(operator NOT))
+
+([ATHENA_HF_Class70030] of  N_ary_Criterion
+
+	(label "DM and BP not under control")
+	(operator AND))
+
+([ATHENA_HF_Class70031] of  N_ary_Criterion
+
+	(label "Lipid not under control")
+	(operator NOT))
+
+([ATHENA_HF_Class70032] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class90208]
+		[ATHENA_HF_Class90209])
+	(label "strong family history of cardiomyopathy or in those receiving cardiotoxic interventions")
+	(operator OR))
+
+([ATHENA_HF_Class70033] of  Presence_Criterion
+
+	(domain_term atherosclerotic_vascular_disease)
+	(entry_type Note_Entry)
+	(label "Presence of atherosclerotic vascular disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class70034] of  Presence_Criterion
+
+	(domain_term thyroid+disorders)
+	(entry_type Note_Entry)
+	(label "Presence of Thyroid Disorder")
+	(presence TRUE))
+
+([ATHENA_HF_Class70035] of  Presence_Criterion
+
+	(domain_term supraventricular+tachyarrhythmias)
+	(entry_type Note_Entry)
+	(label "Presence of supraventricular tachyarrhythmias")
+	(presence TRUE))
+
+([ATHENA_HF_Class70036] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_40003]
+		[ATHENA_HF_Class50031]
+		[ATHENA_HF_Class70033])
+	(label "DM or HTN or atherosclerotic vascular disease")
+	(operator OR))
+
+([ATHENA_HF_Class70039] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_DM_Eye_Instance_40003]
+		[ATHENA_HF_Class50031]
+		[ATHENA_HF_Class70033])
+	(label "High Risk for HF and DM, HTN, or atherosclerotic vascular disease")
+	(operator OR))
+
+([ATHENA_HF_Class70041] of  Presence_Criterion
+
+	(domain_term at+risk+for+developing+HF)
+	(entry_type Note_Entry)
+	(label "hgiht risk for developing HF")
+	(presence TRUE))
+
+([ATHENA_HF_Class70043] of  Guideline_View
+
+	(drug_usages
+		[ATHENA_HF_Class10000]
+		[ATHENA_HF_Class70157]
+		[ATHENA_HF_Class30018]
+		[ATHENA_HF_Class50037]
+		[ATHENA_HF_Class50069]
+		[ATHENA_HF_Class50046]
+		[ATHENA_HF_Class70183]
+		[ATHENA_HF_Class50045]
+		[ATHENA_HF_Class80000]
+		[ATHENA_HF_Class70001]
+		[ATHENA_HF_Class70000]
+		[ATHENA_HF_Class90000]
+		[ATHENA_HF_Class50045])
+	(guideline_drugs
+		[ATHENA_HF_Class50094]
+		[ATHENA_HF_Class10001]
+		[ATHENA_HF_Class50093]
+		[ATHENA_HF_Class50042]
+		[ATHENA_HF_Class50040]
+		[ATHENA_HF_Class50092]))
+
+([ATHENA_HF_Class70138] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class60054]
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50036]
+		[ATHENA_HF_Class60088]
+		[ATHENA_HF_Class10007])
+	(label "Stage B and LVEF<=40 and ADR ACE")
+	(operator AND))
+
+([ATHENA_HF_Class70141] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70142]
+		[ATHENA_HF_Class100434])
+	(label "LVEF<= 35 and (non isch dilated cardiomyopathy OR MI>40days old")
+	(operator AND))
+
+([ATHENA_HF_Class70142] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "LVEF <=35")
+	(numeric_domain_term Left+Ventricular+Ejection+fraction)
+	(operator %3C%3D)
+	(value 35.0))
+
+([ATHENA_HF_Class70143] of  Presence_Criterion
+
+	(domain_term nonischemic+cardiomyopathy)
+	(entry_type Note_Entry)
+	(label "Presence of non ischemic heart disease")
+	(presence TRUE))
+
+([ATHENA_HF_Class70145] of  Presence_Criterion
+
+	(domain_term non-ischemic+dilated+cardiomyopathy)
+	(entry_type Note_Entry)
+	(label "presence of non-ischemic dilated cardiomyopathy")
+	(presence TRUE))
+
+([ATHENA_HF_Class70147] of  Presence_Criterion
+
+	(domain_term Myocardial_Infarction)
+	(label "presence MI at least 40d old")
+	(period [ATHENA_HF_Class70148])
+	(presence TRUE))
+
+([ATHENA_HF_Class70148] of  Relative_Time_Interval_Definite
+
+	(how_many "40")
+	(label ">40 days")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([ATHENA_HF_Class70151] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70152]
+		[ATHENA_HF_Class70156]
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class70168]
+		[ATHENA_HF_Class70169])
+	(label "African american (black) and moderate symptoms and using ACE, BB, diureti")
+	(operator AND))
+
+([ATHENA_HF_Class70152] of  Presence_Criterion
+
+	(domain_term Black)
+	(entry_type Note_Entry)
+	(label "African american (Black)")
+	(presence TRUE))
+
+([ATHENA_HF_Class70156] of  Presence_Criterion
+
+	(domain_term Moderate+HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "presence of moderate HF symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class70157] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Female+and+most+recent+creatinine++%3E2
+		Male+and+most+recent+creatinine%3E2.5
+		Most+recent+K%3E%3D5
+		Acitve+prescription+for+ACE+and+ARB)
+	(collateral_actions [ATHENA_HF_Class70166])
+	(Compelling_Indications HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms)
+	(Drug_Class_Name aldosterone+antagonist)
+	(label "Aldosterone antagonist"))
+
+([ATHENA_HF_Class70159] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Most recent K>=5")
+	(numeric_domain_term Potassium)
+	(operator %3E%3D)
+	(value 5.0))
+
+([ATHENA_HF_Class70161] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_CKD_Instance_70005]
+		[ATHENA_HF_Class70162])
+	(label "Male and creatinine  >2.5")
+	(operator AND))
+
+([ATHENA_HF_Class70162] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "creatinine  >2.5")
+	(numeric_domain_term Creatinine)
+	(operator %3E)
+	(value 2.5))
+
+([ATHENA_HF_Class70164] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_CKD_Instance_40003]
+		[ATHENA_HF_Class70165])
+	(label "Female and most recent creatinine  >2")
+	(operator AND))
+
+([ATHENA_HF_Class70165] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "creatinine >2")
+	(numeric_domain_term Creatinine)
+	(operator %3E)
+	(value 2.0))
+
+([ATHENA_HF_Class70166] of  Collateral_Action
+
+	(mood Recommend_Add))
+
+([ATHENA_HF_Class70168] of  Presence_Criterion
+
+	(domain_term Beta-Blockers)
+	(entry_type Medication)
+	(label "presence of beta blocker")
+	(presence TRUE))
+
+([ATHENA_HF_Class70169] of  Presence_Criterion
+
+	(domain_term Diuretics)
+	(entry_type Note_Entry)
+	(label "presence of diuretics")
+	(presence TRUE))
+
+([ATHENA_HF_Class70171] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class30004]
+		[ATHENA_HF_Class70172])
+	(label "HF and atrial fibrillation")
+	(operator AND))
+
+([ATHENA_HF_Class70172] of  Presence_Criterion
+
+	(domain_term Atrial_Fibrillation)
+	(entry_type Note_Entry)
+	(label "presence of atrial fibrillation")
+	(presence TRUE))
+
+([ATHENA_HF_Class70179] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class70180]
+		[ATHENA_HF_Class50036])
+	(label "Mild-moderate HF symptoms and LVEF<= 40 and ADR ACE")
+	(operator AND))
+
+([ATHENA_HF_Class70180] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70156]
+		[ATHENA_HF_Class70181])
+	(label "Presence of  mild or moderate HF symptoms")
+	(operator OR))
+
+([ATHENA_HF_Class70181] of  Presence_Criterion
+
+	(domain_term Mild+HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "Presence of  mild HF symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class70183] of  Drug_Usage
+
+	(collateral_actions [ATHENA_HF_Class110382])
+	(Compelling_Indications African+american+%28black%29+and+moderate+symptoms+and+using+ACE%2C+BB%2C+diuretic)
+	(Drug_Class_Name Hydralazine_and_nitrates)
+	(label "Hydralazine and nitrates")
+	(Relative_Indications
+		LVEF%3C%3D40+%26+using+ACE+%26+using+BB+%26+HF+symptoms
+		LVEF%3C%3D40+and+contraindications+to+ACE%2FARB+%28hypotension%2C+renal+insufficiency+or+drug+intolerance%29))
+
+([ATHENA_HF_Class70185] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class70168]
+		[ATHENA_HF_Class30004]
+		[ATHENA_HF_Class70187])
+	(label "LVEF<=40 and using ACE and BB and HF and symptomatic")
+	(operator AND))
+
+([ATHENA_HF_Class70186] of  Presence_Criterion
+
+	(domain_term Severe+HF+signs+and+symptoms)
+	(entry_type Note_Entry)
+	(label "Presence of severe HF symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class70187] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70181]
+		[ATHENA_HF_Class70156]
+		[ATHENA_HF_Class70186])
+	(label "mild or moderate or severe HF symptoms")
+	(operator OR))
+
+([ATHENA_HF_Class70189] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70142]
+		[ATHENA_HF_Class70172]
+		[ATHENA_HF_Class70192]
+		[ATHENA_HF_Class70195])
+	(label "LVEF<=35% and QRS>=0.12s and atrial fibrillation and  NYHA functional class III or ambulatory class IV symptoms")
+	(operator AND))
+
+([ATHENA_HF_Class70192] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "QRS>= 0.12")
+	(numeric_domain_term QRS)
+	(operator %3E%3D)
+	(value 0.12))
+
+([ATHENA_HF_Class70194] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class70142]
+		[ATHENA_HF_Class70195])
+	(label "NYHA functional class III or ambulatory class IV symptoms and LVEF<=35%")
+	(operator AND))
+
+([ATHENA_HF_Class70195] of  Presence_Criterion
+
+	(domain_term NYHA+functional+class+III+ambulatory+class+IV+symptoms)
+	(entry_type Note_Entry)
+	(label "Presence of  NYHA functional class III or ambulatory class IV symptoms")
+	(presence TRUE))
+
+([ATHENA_HF_Class70198] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class100853])
+	(label "(HF ICD9 or symptoms) and LVEF<=40")
+	(operator AND))
+
+([ATHENA_HF_Class70622] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50043]
+		[ATHENA_HF_Class70623])
+	(label "HF ICD9 code OR( signs and structural abnormality)")
+	(operator OR))
+
+([ATHENA_HF_Class70623] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class10007])
+	(label "HF signs/symptoms and structural abnormality of heart")
+	(operator AND))
+
+([ATHENA_HF_Class70628] of  Presence_Criterion
+
+	(domain_term Low_Ejection_Fraction)
+	(entry_type Note_Entry)
+	(label "Low Ejection Fraction")
+	(presence TRUE))
+
+([ATHENA_HF_Class80000] of  Drug_Usage
+
+	(Compelling_Indications LVEF%3C%3D40+and+no+HF+and+no+MI)
+	(Drug_Class_Name Beta+Blocker+Stage+B+no+MI)
+	(label "Beta Blocker Stage B HF no MI"))
+
+([ATHENA_HF_Class80002] of  Guideline_Drug
+
+	(generic_drug sustained+release+metoprolol+tartrate)
+	(label "metoprolol tartrate"))
+
+([ATHENA_HF_Class80004] of  Guideline_Drug
+
+	(generic_drug timolol)
+	(label "timolol"))
+
+([ATHENA_HF_Class80352] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class30004])
+	(label "HF ICD9 and LVEF<=40")
+	(operator AND))
+
+([ATHENA_HF_Class80353] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class100851]
+		[ATHENA_HF_Class133534]
+		[ATHENA_HF_Class30004])
+	(label "HF and LVEF<=40 & moderate/severe symptoms & ((creatinine<=2.5 and male) OR (creatinine<=2 female)) & K<5")
+	(operator AND))
+
+([ATHENA_HF_Class80354] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class60072])
+	(label "HF symptoms and LVEF<=40")
+	(operator AND))
+
+([ATHENA_HF_Class80356] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class60054]
+		[ATHENA_HF_Class30005])
+	(label "LVEF<=40 and no HF symptoms")
+	(operator AND))
+
+([ATHENA_HF_Class90000] of  Drug_Usage
+
+	(Compelling_Indications HF+%28ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+MI)
+	(Drug_Class_Name carvedilol)
+	(formulary_preferred_drug_in_class [ATHENA_HF_Class50093])
+	(label "Beta blocker Stage C with MI"))
+
+([ATHENA_HF_Class90002] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50019]
+		[ATHENA_HF_Class50018]
+		[ATHENA_HF_Class60088])
+	(label "LVEF<=40 and no HF and no MI")
+	(operator AND))
+
+([ATHENA_HF_Class90005] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class60088]
+		[ATHENA_HF_Class50011])
+	(label "MI and no HF")
+	(operator AND))
+
+([ATHENA_HF_Class90208] of  Presence_Criterion
+
+	(domain_term family+history+of+cardiomyopathy)
+	(entry_type Note_Entry)
+	(label "Family history of cardiomopathy")
+	(presence TRUE))
+
+([ATHENA_HF_Class90209] of  Presence_Criterion
+
+	(domain_term cardiotoxic+interventions)
+	(entry_type Medication)
+	(label "Presence of cardiotoxicity drug")
+	(presence TRUE))
+
+([ATHENA_HF_Class90384] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class90385])
+	(label "Absence of MI within 41 days")
+	(operator NOT))
+
+([ATHENA_HF_Class90385] of  Presence_Criterion
+
+	(domain_term Myocardial_Infarction)
+	(entry_type Note_Entry)
+	(label "Presence of MI within 41 days")
+	(period [ATHENA_HF_Class50057])
+	(presence TRUE))
+
+([ATHENA_HF_PM_Class0] of  PAL_Criterion
+
+	(label "Presence HF dx in 2yrs prior to performance measurement period")
+	(%3ADOCUMENTATION "ICD9 codes are listed in the Map_ICD9 table as defined in ACC/AHA/PCPI Measure #7, VA EPRP"))
+
+([ATHENA_HF_PM_Class10000] of  Presence_Criterion
+
+	(domain_term ACE_ARB_CPT)
+	(entry_type Note_Entry)
+	(label "Presence of CPT code for ACE/ARB within performance measurement period")
+	(period [PerformanceMeasurementPeriod])
+	(presence TRUE)
+	(%3ADOCUMENTATION "Defined in ACC/AHA/PCPI Measure #7, see map_CPT"))
+
+([ATHENA_HF_PM_Class10001] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Presence of ACEi prescription within [-2, +1] day of discharge")
+	(PAL_constraint [ATHENA_HF_PM_Class10002]))
+
+([ATHENA_HF_PM_Class10002] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "ACEi within [-2, +1] day of discharge")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?hospitalizationTime :FRAME Definite_Time_Interval)")
+	(%3APAL-STATEMENT "(exists ?med \n        (and (subclass-of (coerce-to-class (drug_name ?med)) ACE_Inhibitors)\n             (=(patient_id ?med) $patient_id)\n             (or (= (status ?med) \"active\")\n                 (exists ?hospitalizationTime\n                         (and (= (:NAME ?hospitalizationTime) \"FocusAdmissionPeriod\")\n                              (<  (system_time  (start_time  (valid_time ?med)))(+ 2 (system_time (stop_time ?hospitalizationTime))))\n                              (>  (system_time  (start_time  (valid_time ?med)))(-  (system_time (stop_time ?hospitalizationTime)) 3))\n                         )\n                 )\n             )\n        )\n)"))
+
+([ATHENA_HF_PM_Class10003] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Presence of ARB prescription within [-2, +1] day of discharge")
+	(PAL_constraint [ATHENA_HF_PM_Class10004]))
+
+([ATHENA_HF_PM_Class10004] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "ARB within [-2, +1] day of discharge")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?hospitalizationTime :FRAME Definite_Time_Interval)")
+	(%3APAL-STATEMENT "(exists ?med \n        (and (subclass-of (drug_name ?med) Angiotensin_II_receptor_blockers)\n             (=(patient_id ?med) $patient_id)\n             (or (= (status ?med) \"active\")\n                 (exists ?hospitalizationTime\n                         (and (= (:NAME ?hospitalizationTime) \"FocusAdmissionPeriod\")\n                              (<  (system_time  (start_time  (valid_time ?med)))(+ 2 (system_time (stop_time ?hospitalizationTime))))\n                              (>  (system_time  (start_time  (valid_time ?med)))(-  (system_time (stop_time ?hospitalizationTime)) 3))\n                         )\n                 )\n             )\n        )\n)"))
+
+([ATHENA_HF_PM_Class2] of  Performance_Measure_Group
+)
+
+([ATHENA_HF_PM_Class20000] of  PAL_Criterion
+
+	(label "Skilled Nursing Facility exclusion for outpatient PM")
+	(%3ADOCUMENTATION "For outpatient measure: any admission to, or time spent in, a SNF in the last 3 months of the performance period."))
+
+([ATHENA_HF_PM_Class20001] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "previous hospitalization with admission dx hyperpotassemia")
+	(PAL_constraint [KB_800283_Class0])
+	(%3ADOCUMENTATION "ICD9 date for hyperpotassemia has to match admission date (ever in the past before end of PM period) to classify as admission dx"))
+
+([ATHENA_HF_PM_Class20002] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Hydralazine prescription after ACE or ARB")
+	(PAL_constraint [KB_800283_Class1])
+	(%3ADOCUMENTATION "If patient EVER had prescription for ACEI or ARB, prior to the most recent use of hydralazine before end of performance measurement period, then patient is excluded. Use issue date (provider writes prescription) and not fill date. We could use release date (patient had meds on hand) in the future."))
+
+([ATHENA_HF_PM_Class20003] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "20% increase in creatinine after ACE/ARB")
+	(PAL_constraint [KB_697275_Class0])
+	(%3ADOCUMENTATION "Any increase of more than 20% in creatinine within 3 months AFTER first prescription for an ACEi/ARB.  The comparison is FROM the baseline creatinine prior to initiation of ACEi/ARB (the most recent creatinine prior to ACEi/ARB) TO the peak creatinine within 3 months after initiation of ACEi/ARB (MKG 2012)."))
+
+([ATHENA_HF_PM_Class3] of  Performance_Measure_Group
+
+	(label "Heart Failure Performance Measures")
+	(subguidelines
+		[ATHENA_HF_Class110000]
+		[ATHENA_HF_Class100000]))
+
+([ATHENA_HF_PM_Class30001] of  Goal
+)
+
+([ATHENA_HF_PM_Class30002] of  PAL_Criterion
+
+	(label "Skilled Nursing Facility exclusion for inpatient PM")
+	(%3ADOCUMENTATION "For inpatient measure: either admission to the inpatient stay from a SNF, or any record of patient having been in a SNF any time during the 3 months prior to the inpatient admission"))
+
+([BeforeEndOfFocusAdmissionPeriod] of  Definite_Time_Interval
+
+	(label "Before end of focus admission period"))
+
+([Beta_Blocker_CPT] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Beta blocker CPT"))
+
+([cardiologist] of  Canonical_Terms_Metaclass
+
+	(data_source VISTA_data_element))
+
+([cardiotoxic+antiarrythmic+drugs] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([cardiotoxic+CA+channel+blockers] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([cifenline] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([Class+II+a] of  Canonical_Terms_Metaclass
+)
+
+([Class+II+b] of  Canonical_Terms_Metaclass
+)
+
+([Class+III] of  Canonical_Terms_Metaclass
+)
+
+([CompellingIndAfrican+american+and+moderate+symptoms+and+using+ACE%2C+BB%2C+diuretichydralazine+and+nitrates] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication African+american+%28black%29+and+moderate+symptoms+and+using+ACE%2C+BB%2C+diuretic))
+
+([CompellingIndHF+symptoms%2FHF+and+LVEF%3C%3D40ACE_Inhibitors] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms))
+
+([CompellingIndHF+symptoms%2FHF+and+LVEF%3C%3D40aldosterone+antagonist] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms))
+
+([CompellingIndHF+symptoms%2FHF+and+LVEF%3C%3D40Beta-Blockers] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms))
+
+([CompellingIndLVEF%3C%3D40+and+no+HF+symptomsACE_Inhibitors] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication LVEF%3C%3D40+and+no+HF+symptoms))
+
+([CompellingIndLVEF%3C%3D40+and+no+HF+symptomsBeta-Blockers] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication LVEF%3C%3D40+and+no+HF+symptoms))
+
+([CompellingIndMI+and+LVEF%3C%3D40+and+ADR+ACEAngiotensin_II_receptor_blockers] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication No+HF%2C+MI%2C++LVEF%3C%3D40+and+ADR+ACE))
+
+([CompellingIndMyocardial_InfarctionACE_Inhibitors] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication Myocardial_Infarction))
+
+([CompellingIndMyocardial_InfarctionBeta-Blockers] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication Myocardial_Infarction))
+
+([CompellingIndStage+C+and+LVEF%3C%3D40+and+ADR+ACEAngiotensin_II_receptor_blockers] of  Drug_Indication_Relation
+
+	(degree compelling)
+	(indication Stage+C+and+LVEF%3C%3D40+and+ADR+ACE))
+
+([disopyramide] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([drug+intolerance+ACE%2FARB+OR+hypotension+OR+renal+insufficiency] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class60014]))
+
+([fatigue] of  Canonical_Terms_Metaclass
+
+	(data_source clinical_assessment))
+
+([Female+and+most+recent+creatinine++%3E2] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class70164]))
+
+([FocusAdmissionPeriod] of  Definite_Time_Interval
+
+	(label "Focus admission period"))
+
+([Heart+Failure+Stage] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment))
+
+([HF+%28ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+MI] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext clinical_assessment)
+	(DiagnosticCriteria [ATHENA_HF_Class100004]))
+
+([HF+%28ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+no+MI] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class100002]))
+
+([HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext clinical_assessment)
+	(DiagnosticCriteria [ATHENA_HF_Class70198]))
+
+([HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms] of  Diagnostic_Term_Metaclass
+
+	(data_source clinical_assessment VISTA_freetext VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class80353])
+	(PrettyName "Heart Failure & LVEF<=40 & moderate/severe symptoms"))
+
+([HF+with+persistent+symptoms+and+LVEF%3C%3D40+and+treated+with+conventional+therapy] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class100394])
+	(PrettyName "HF with persistent symptoms, low EF using ACE inhibitor and beta blocker"))
+
+([High+Risk+for+HF+and+DM%2C+HTN%2C+or+atherosclerotic+vascular+disease] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class144252]))
+
+([HTN+and+LVH] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50030]))
+
+([Hydralazine_and_nitrates] of  Medications_Metaclass
+
+	(data_source VISTA_data_element)
+	(PrettyName "hydralazine and nitrates"))
+
+([idecainide] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([indomethacin] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([KB_020015_Class216] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_020015_Class219] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_065193_Class110] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_065193_Class112] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_081292_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_081292_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_094729_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_094729_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_102662_Class216] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_102662_Class219] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_109062_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_109062_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_127550_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_127550_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_165774_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_165774_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_174596_Class0] of  Query_Result_Criterion
+
+	(label "Presence of adverse reaction to ACE or ARB")
+	(presence TRUE)
+	(query [KB_174596_Class1]))
+
+([KB_174596_Class1] of  Structured_Query
+
+	(label "adverse reaction to ACE or ARB")
+	(type Adverse_Reaction)
+	(where_restriction
+		[KB_174596_Class3]
+		[KB_174596_Class5]))
+
+([KB_174596_Class2] of  Comparison_Filter
+
+	(attribute [substance])
+	(label "a kind of ACE inhibitor")
+	(operator subclass_of)
+	(value_expression [ACE_Inhibitors]))
+
+([KB_174596_Class3] of  N_aryFilter
+
+	(filters
+		[KB_174596_Class2]
+		[KB_174596_Class4])
+	(label "substance is ACE or ARB")
+	(operator OR))
+
+([KB_174596_Class4] of  Comparison_Filter
+
+	(attribute [substance])
+	(label "a kind of ARB")
+	(operator subclass_of)
+	(value_expression [Angiotensin_II_receptor_blockers]))
+
+([KB_174596_Class5] of  N_aryFilter
+
+	(filters
+		[KB_174596_Class6]
+		[KB_174596_Class7]
+		[KB_174596_Class8])
+	(label "reaction is angioedema, hypotension, hyperkalemia, or worsening renal condition")
+	(operator OR))
+
+([KB_174596_Class6] of  Comparison_Filter
+
+	(attribute [domain_term])
+	(label "angioedema")
+	(operator subclass_of)
+	(value_expression [angioedema]))
+
+([KB_174596_Class7] of  Comparison_Filter
+
+	(attribute [domain_term])
+	(label "hypotension")
+	(operator subclass_of)
+	(value_expression [hypotension]))
+
+([KB_174596_Class8] of  Comparison_Filter
+
+	(attribute [domain_term])
+	(label "worsening renal condition")
+	(operator subclass_of)
+	(value_expression [Worsening_renal_condition]))
+
+([KB_175204_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_175204_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_178456_Class110] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_178456_Class112] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_178456_Class209] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_185671_Class0] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Active BB or BB started within [-2, +1] of discharge")
+	(PAL_constraint [KB_185671_Class1])
+	(%3ADOCUMENTATION "Prescription for specific beta blockers: Bisoprolol, carvedilol, and sustained release metoprolol succinate. active within 2 days before or 1 day after discharge date (determined by PHK)."))
+
+([KB_185671_Class1] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Active BB or BB started within [-2, +1] of discharge")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?hospitalizationTime :FRAME Definite_Time_Interval)")
+	(%3APAL-STATEMENT "(exists ?med \n        (and (subclass-of (coerce-to-class (drug_name ?med)) (coerce-to-class \"Beta_Blocker Stage C Heart Failure\"))\n             (=(patient_id ?med) $patient_id)\n             (or (= (status ?med) \"active\")\n                 (exists ?hospitalizationTime\n                         (and (= (:NAME ?hospitalizationTime) \"FocusAdmissionPeriod\")\n                              (<  (system_time  (start_time  (valid_time ?med)))(+ 2 (system_time (stop_time ?hospitalizationTime))))\n                              (>  (system_time  (start_time  (valid_time ?med)))(-  (system_time (stop_time ?hospitalizationTime)) 3))\n                         )\n                 )\n             )\n        )\n)"))
+
+([KB_219870_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_219870_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_304655_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_304655_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_306762_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_306762_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_315111_Class318] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_315111_Class320] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_340709_Class0] of  Conditional_Goal
+
+	(label "Presence of hydralazine & long acting nitrates"))
+
+([KB_340709_Class1] of  General_Conditional_Goal
+
+	(criterion_to_achieve [KB_340709_Class2])
+	(label "Prescription for hydralazine & long acting nitrates in past 12m"))
+
+([KB_340709_Class10] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Optimal therapy: Beta-blocker (unless contraindication) at the end of performance period")
+	(PAL_constraint [KB_551328_Class1])
+	(%3ADOCUMENTATION "Optimal therapy is \"having current therapy at end of performance measurement period,\n1. ACEI or ARB, unless both are contraindicated \n2. Beta Blocker unless it is contraindicated\n3. Diuretic"))
+
+([KB_340709_Class11] of  N_ary_Criterion
+
+	(criteria
+		[library_Class90003]
+		[KB_340709_Class5])
+	(label "Hospitalization with HF as principal dx AND using loop diuretics")
+	(operator AND))
+
+([KB_340709_Class2] of  N_ary_Criterion
+
+	(criteria
+		[KB_340709_Class3]
+		[KB_340709_Class4])
+	(label "Presence of hydralazine & long acting nitrates in past 12m")
+	(operator AND))
+
+([KB_340709_Class3] of  Presence_Criterion
+
+	(entry_type Medication)
+	(label "Presence of long acting nitrates in past 12m")
+	(period [library_Class60017])
+	(presence TRUE))
+
+([KB_340709_Class4] of  Presence_Criterion
+
+	(domain_term Medical_Domain_Class)
+	(entry_type Medication)
+	(label "Presence hydralazine in past 12m")
+	(period [library_Class60017])
+	(presence TRUE))
+
+([KB_340709_Class5] of  PAL_Criterion
+
+	(label "Presence of hospitalization with principal diagnosis of HF in past 6m")
+	(%3ADOCUMENTATION "Discharge with a principal diagnosis of heart failure in the past 6 months  (PH)"))
+
+([KB_340709_Class6] of  PAL_Criterion
+
+	(label "Optimal Therapy HF ACE/ARB (or contraind) + BB (or contraind) + diuretics")
+	(%3ADOCUMENTATION "ACEIs (or ARB or contraindication) AND beta-blocker (or contraindication) AND diuretic"))
+
+([KB_340709_Class7] of  PAL_Criterion
+
+	(label "ACEIs (or ARB or contraindication) AND beta-blocker (or contraindication)")
+	(%3ADOCUMENTATION "ACEIs (or ARB or contraindication) AND beta-blocker (or contraindication)"))
+
+([KB_340709_Class8] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Use of positive inotropic drugs during hospitalization of interest")
+	(PAL_constraint [KB_551328_Class0])
+	(%3ADOCUMENTATION "any use of positve inotropic drugs during the hospitalization being evaluated. These are inpatient meds that come from BCMA tables in CDW."))
+
+([KB_340709_Class9] of  N_ary_Criterion
+)
+
+([KB_376528_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_376528_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_377636_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_377636_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_408923_Class217] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_408923_Class220] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_411706_Class0] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Presence of left ventricular assistive device during hospitalization")
+	(PAL_constraint [KB_814338_Class0])
+	(%3ADOCUMENTATION "ICD or CPT codes during hospital stay"))
+
+([KB_423334_Class318] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_423334_Class320] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_436714_Class490] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_436714_Class492] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_436714_Class526] of  Presence_Query
+)
+
+([KB_442092_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_442092_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_444257_Class110] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_444257_Class112] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_444257_Class209] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_451095_Class125] of  Presence_Query
+
+	(entry_type Medication)
+	(mood Authorized)
+	(qualitative_domain_term "ACE_Inhibitors"))
+
+([KB_459737_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_459737_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_461058_Class0] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Presence of specific allergic reactions to ACE or ARB")
+	(PAL_constraint [KB_684541_Class0])
+	(%3ADOCUMENTATION "use mapping table map_allergic_reactions to identify which specific reactions to ACE or ARB exclude patient.\n\nThe allergic reactions are angioedema, hypotension, hyperkalemia, and worsening reanal condition"))
+
+([KB_469476_Class216] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_469476_Class219] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_479685_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_479685_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_485757_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_485757_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_494836_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_494836_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_551328_Class0] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Use of positive inotropic drugs during hospitalization of interest")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?admissionTime :FRAME Definite_Time_Interval)")
+	(%3APAL-STATEMENT "(exists ?med\n        (and (equal-or-subclass-of (coerce-to-class  (drug_name ?med)) Positive_inotropic_vasopressor)\n             (patient_id ?med $patient_id)\n             (exists ?admissionTime\n                     (and (=  (:NAME ?admissionTime) \"FocusAdmissionPeriod\")\n                          (< (system_time (start_time (valid_time ?med)))(system_time (stop_time ?admissionTime)))\n                          (or (not (own-slot-not-null stop_time ?med))\n                              (> (system_time (stop_time (valid_time ?med)))(system_time (start_time ?admissionTime)))))\n             )\n        )\n)"))
+
+([KB_551328_Class1] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Beta Blocker contraindicated")
+	(%3APAL-RANGE "(defrange ?drugUsage :FRAME Drug_Usage)\n(defrange ?contra :FRAME Medical_Conditions_Metaclass)\n(defrange ?derivedContra :FRAME Diagnostic_Term_Metaclass)\n(defrange ?condition :FRAME Note_Entry)")
+	(%3APAL-STATEMENT "(forall ?drugUsage\n        (=> (Drug_Class_Name ?drugUsage Beta-Blockers)\n            (or (exists ?condition\n                        (and (= (patient_id ?condition) $patient_id)\n                             (is-class (domain_term ?condition))\n                             (exists ?contra (and ( Absolute_Contraindications ?drugUsage ?contra)\n                                                  (equal-or-subclass-of (domain_term ?condition) ?contra)))\n                        ))\n                (exists ?derivedContra (and \n                                            (Absolute_Contraindications ?drugUsage ?derivedContra)\n                                            (is-derivable ?derivedContra)))\n            ))\n)"))
+
+([KB_551328_Class10] of  N_ary_Criterion
+
+	(criteria [KB_551328_Class11])
+	(label "Not (ARB contraindicated but given)")
+	(operator NOT))
+
+([KB_551328_Class11] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50026]
+		[KB_551328_Class12])
+	(label "ARB contraindicated but given")
+	(operator AND))
+
+([KB_551328_Class12] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "ARB Contraindicated")
+	(PAL_constraint [KB_551328_Class13]))
+
+([KB_551328_Class13] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "ARB contraindicated")
+	(%3APAL-RANGE "(defrange ?drugUsage :FRAME Drug_Usage)\n(defrange ?contra :FRAME Medical_Conditions_Metaclass)\n(defrange ?derivedContra :FRAME Diagnostic_Term_Metaclass)\n(defrange ?condition :FRAME Note_Entry)")
+	(%3APAL-STATEMENT "(forall ?drugUsage\n        (=> (Drug_Class_Name ?drugUsage Angiotensin_II_receptor_blockers)\n            (or (exists ?condition\n                        (and (= (patient_id ?condition) $patient_id)\n                             (is-class (domain_term ?condition))\n                             (exists ?contra (and ( Absolute_Contraindications ?drugUsage ?contra)\n                                                  (equal-or-subclass-of (domain_term ?condition) ?contra)))\n                        ))\n                (exists ?derivedContra (and \n                                            (Absolute_Contraindications ?drugUsage ?derivedContra)\n                                            (is-derivable ?derivedContra)))\n            ))\n)"))
+
+([KB_551328_Class14] of  N_ary_Criterion
+
+	(criteria [KB_551328_Class15])
+	(label "Not (Both ACE and ARB given concurrently)")
+	(operator NOT))
+
+([KB_551328_Class15] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "ACEI and ARB given concurrently")
+	(PAL_constraint [KB_551328_Class16]))
+
+([KB_551328_Class16] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "ACEI and ARB given concurrently")
+	(%3APAL-RANGE "(defrange ?ace :FRAME Medication)\n(defrange ?arb :FRAME Medication)")
+	(%3APAL-STATEMENT "(exists ?ace (and (= (patient_id ?ace) $patient_id)\n                  (subclass-of (coerce-to-class (drug_name ?ace)) ACE_Inhibitors)\n                  (exists ?arb (and (= (patient_id ?arb) $patient_id)\n                                    (subclass-of (coerce-to-class (drug_name ?arb) ) Angiotensin_II_receptor_blockers)\n                                    (or (and (not (own-slot-not-null stop_time (valid_time ?ace)))\n                                             (or (not (own-slot-not-null stop_time (valid_time ?arb)))\n                                                 (> (system_time (stop_time (valid_time ?arb)))(system_time (start_time (valid_time ?ace))))))\n                                        (and (not (own-slot-not-null stop_time (valid_time ?arb)))\n                                             (> (system_time (stop_time (valid_time ?ace)))(system_time (start_time (valid_time ?arb)))))\n                                        (> (system_time (stop_time (valid_time ?arb)))(system_time (start_time (valid_time ?ace)))))\n                               )\n                  )\n             )\n)"))
+
+([KB_551328_Class17] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_HF_Class50024]
+		[ATHENA_HF_Class50026]
+		[KB_551328_Class18])
+	(label "ACEI or ARB or both contraindicated")
+	(operator OR))
+
+([KB_551328_Class18] of  N_ary_Criterion
+
+	(criteria
+		[KB_551328_Class12]
+		[KB_551328_Class3])
+	(label "Both ACEI and ARB contraindicated")
+	(operator AND))
+
+([KB_551328_Class2] of  N_ary_Criterion
+
+	(criteria
+		[KB_551328_Class5]
+		[KB_551328_Class3]
+		[KB_340709_Class10]
+		[KB_551328_Class7])
+	(label "Optimal Heart Failure Therapy")
+	(operator AND)
+	(%3ADOCUMENTATION "Optimal therapy is \"having current therapy at end of performance measurement period,\n1. ACEI or ARB, unless both are contraindicated \n2. Beta Blocker unless it is contraindicated\n3. Diuretic"))
+
+([KB_551328_Class3] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "ACE inhibitor contraindicated")
+	(PAL_constraint [KB_551328_Class4]))
+
+([KB_551328_Class4] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "ACEI contraindicated")
+	(%3APAL-RANGE "(defrange ?drugUsage :FRAME Drug_Usage)\n(defrange ?contra :FRAME Medical_Conditions_Metaclass)\n(defrange ?derivedContra :FRAME Diagnostic_Term_Metaclass)\n(defrange ?condition :FRAME Note_Entry)")
+	(%3APAL-STATEMENT "(forall ?drugUsage\n        (=> (Drug_Class_Name ?drugUsage ACE_Inhibitors)\n            (or (exists ?condition\n                        (and (= (patient_id ?condition) $patient_id)\n                             (is-class (domain_term ?condition))\n                             (exists ?contra (and ( Absolute_Contraindications ?drugUsage ?contra)\n                                                  (equal-or-subclass-of (domain_term ?condition) ?contra)))\n                        ))\n                (exists ?derivedContra (and \n                                            (Absolute_Contraindications ?drugUsage ?derivedContra)\n                                            (is-derivable ?derivedContra)))\n            ))\n)"))
+
+([KB_551328_Class5] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "Optimal HF therapy: Diuretic at the end of performance period")
+	(PAL_constraint [KB_551328_Class6])
+	(%3ADOCUMENTATION "Optimal therapy is \"having current therapy at end of performance measurement period,\n1. ACEI or ARB, unless both are contraindicated \n2. Beta Blocker unless it is contraindicated\n3. Diuretic"))
+
+([KB_551328_Class6] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Diuretics at the end of performance period")
+	(%3APAL-RANGE "(defrange ?pm :FRAME Definite_Time_Interval)\n(defrange ?diuretic :FRAME Medication)")
+	(%3APAL-STATEMENT "(exists ?diuretic (and (= (patient_id ?diuretic) $patient_id)\n                       (subclass-of (coerce-to-class (drug_name ?diuretic)) Diuretics)\n                       (exists ?pm (and (= (:NAME ?pm) \"PerformanceMeasurementPeriod\")\n                                        (< (system_time (start_time (valid_time ?diuretic)))(system_time (stop_time ?pm)))\n                                        (or (not (own-slot-not-null stop_time (valid_time ?diuretic)))\n                                            (> (system_time (stop_time (valid_time ?diuretic)))(system_time (start_time ?pm)))))\n                       )\n                  )\n)"))
+
+([KB_551328_Class7] of  N_ary_Criterion
+
+	(criteria
+		[KB_551328_Class8]
+		[KB_551328_Class10]
+		[KB_551328_Class14]
+		[KB_551328_Class17])
+	(label "Optimal therapy: ACEIs or ARB (unless contraindicated) at the end of performance period")
+	(operator AND))
+
+([KB_551328_Class8] of  N_ary_Criterion
+
+	(criteria [KB_551328_Class9])
+	(label "Not (ACE contraindicated but given)")
+	(operator NOT))
+
+([KB_551328_Class9] of  N_ary_Criterion
+
+	(criteria
+		[KB_551328_Class3]
+		[ATHENA_HF_Class50024])
+	(label "ACEI contraindicated but given")
+	(operator AND))
+
+([KB_579166_Class133] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_579166_Class135] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_632464_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_632464_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_637536_Class318] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_637536_Class320] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_645796_Class216] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_645796_Class219] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_671524_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_671524_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_684541_Class0] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Presence of specific allergic reactions to ACE or ARB")
+	(%3APAL-RANGE "(defrange ?reaction :FRAME Adverse_Reaction)\n\n")
+	(%3APAL-STATEMENT "(exists ?reaction \n        (and (= (patient_id ?reaction) $patient_id) \n             (or (= (substance ?reaction) \"ACE_Inhibitors\")\n                 (= (substance ?reaction) \"Angiotensin_II_receptor_blockers\")\n                 ( subclass-of (coerce-to-class (substance ?reaction)) ACE_Inhibitors)\n                 (subclass-of (coerce-to-class (substance ?reaction)) Angiotensin_II_receptor_blockers))\n             (or (= (domain_term ?reaction) \"angioedema\")\n                 (= (domain_term ?reaction) \"hypotension\")\n                 (= (domain_term ?reaction) \"hyperkalemia\")\n                 (= (domain_term ?reaction) \"Worsening_renal_condition\"))\n        )\n)"))
+
+([KB_697275_Class0] of  %3APAL-CONSTRAINT
+
+	(%3APAL-DESCRIPTION "Any increase of more than 20% in creatinine AFTER prescription for an ACEi/ARB.  The comparison is FROM the baseline creatinine prior to initiation of ACEi/ARB (the most recent creatinine prior to first ACEi/ARB) TO the peak creatinine within 3 months after initiation of ACEi/ARB (MKG 2012)")
+	(%3APAL-NAME "20% increase in creatinine after ACE/ARB")
+	(%3APAL-RANGE "(defrange ?baseCreat :FRAME Numeric_Entry)\n(defrange ?peakCreat :FRAME Numeric_Entry)\n(defrange ?initACEARB :FRAME Medication)\n(defrange ?preCreat :FRAME Numeric_Entry)\n(defrange ?postCreat :FRAME Numeric_Entry)\n(defrange ?nonACEARB :FRAME Medication)\n")
+	(%3APAL-STATEMENT "(exists ?initACEARB (and (= (patient_id ?initACEARB) $patient_id)\n                         (or (subclass-of (coerce-to-class (drug_name ?initACEARB)) ACE_Inhibitors)\n                             (subclass-of (coerce-to-class (drug_name ?initACEARB)) Angiotensin_II_receptor_blockers))\n                         (not (exists ?nonACEARB (and (= (patient_id ?nonACEARB) $patient_id)\n                                                      (or (subclass-of (coerce-to-class (drug_name ?nonACEARB)) ACE_Inhibitors)\n                                                          (subclass-of (coerce-to-class (drug_name ?nonACEARB)) Angiotensin_II_receptor_blockers))\n                                                      (>(system_time (start_time (valid_time ?initACEARB)))(system_time (start_time (valid_time ?nonACEARB)))))))\n                         (exists ?baseCreat (and (= (patient_id ?baseCreat) $patient_id)\n                                                 (=    (domain_term ?baseCreat) \"Creatinine\")\n                                                 (< (system_time (valid_time ?baseCreat)) (system_time (start_time (valid_time ?initACEARB))))\n                                                 (not (exists ?preCreat (and (= (patient_id ?preCreat) $patient_id)\n                                                                             (=    (domain_term ?preCreat) \"Creatinine\")\n                                                                             (< (system_time (valid_time ?preCreat)) (system_time (start_time (valid_time ?initACEARB))))\n                                                                             (> (system_time (valid_time ?preCreat)) (system_time (valid_time ?baseCreat))))))\n                                                 (exists ?peakCreat (and (= (patient_id ?peakCreat) $patient_id)\n                                                                         (=    (domain_term ?peakCreat) \"Creatinine\")                                                                \n                                                                         (> (system_time (valid_time ?peakCreat)) (system_time (start_time (valid_time ?initACEARB))))\n                                                                         (< (system_time (valid_time ?peakCreat)) (+ 90 (system_time (start_time (valid_time ?initACEARB)))))\n                                                                         (not (exists ?postCreat  (and (= (patient_id ?postCreat) $patient_id)\n                                                                                                       (=    (domain_term ?postCreat) \"Creatinine\")                                                                \n                                                                                                       (> (system_time (valid_time ?postCreat)) (system_time (start_time (valid_time ?initACEARB))))\n                                                                                                       (> (value ?postCreat)(value ?peakCreat)))))\n                                                                         (> (/ (* 100 (- (value ?peakCreat) (value ?baseCreat))) (value ?peakCreat)) 20)\n                                                                    ))\n                                            ))\n                    ))"))
+
+([KB_697720_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_697720_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_699901_Class214] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_699901_Class217] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_707214_Class0] of  N_ary_Criterion
+
+	(criteria [ATHENA_HF_Class100013])
+	(label "Not Stage D HF (refractory end stage HF)")
+	(operator NOT))
+
+([KB_753810_Class213] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_753810_Class216] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_778916_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_778916_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_794216_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_794216_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_800283_Class0] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "previous hospitalization with admission dx hyperpotassemia")
+	(%3APAL-RANGE "(defrange ?admission :FRAME Note_Entry)\n(defrange ?diag :FRAME Note_Entry)")
+	(%3APAL-STATEMENT "(exists ?admission \n        (and (= (patient_id ?admission) $patient_id) \n             (= (domain_term ?admission) \"Admission_Institution\")\n             (exists ?diag (and (= (patient_id ?diag) $patient_id)\n                                (or (= (domain_term ?diag) \"Hyperpotassemia_ICD9\")\n                                    (subclass-of (coerce-to-class (domain_term ?diag)) Hyperpotassemia_ICD9))\n                                (=  (system_time (valid_time ?admission))(system_time (valid_time ?diag)))\n                           ))\n        )\n)\n"))
+
+([KB_800283_Class1] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "Hydralazine prescription after ACE or ARB")
+	(%3APAL-RANGE "(defrange ?ACEARB :FRAME Medication)\n(defrange ?hydralazine :FRAME Medication)")
+	(%3APAL-STATEMENT "(exists ?ACEARB (and (= (patient_id ?ACEARB) $patient_id)\n                     (or (subclass-of (coerce-to-class (drug_name ?ACEARB)) ACE_Inhibitors)\n                         (subclass-of (coerce-to-class (drug_name ?ACEARB)) Angiotensin_II_receptor_blockers))\n                     (exists ?hydralazine (and (= (patient_id ?hydralazine) $patient_id)\n                                               (or (subclass-of (coerce-to-class (drug_name ?hydralazine)) hydralazine)\n                                                   (=  (coerce-to-class (drug_name ?hydralazine)) \"hydralazine\"))\n                                               (< (system_time (start_time (valid_time ?ACEARB)))(system_time (start_time (valid_time ?hydralzaine))))\n                                          ))\n                ))"))
+
+([KB_814338_Class0] of  %3APAL-CONSTRAINT
+
+	(%3APAL-DESCRIPTION "(exists ?med \n        (and (subclass-of (drug_name ?med) Angiotensin_II_receptor_blockers)\n             (patient_id ?med $patient_id)\n             (exists ?hospitalizationTime\n                     (and (= (:NAME ?hospitalizationTime) \"FocusAdmissionPeriod\")\n                          (<  (system_time  (start_time  (valid_time ?med)))(+ 2 (system_time (stoptime ?hospitalizationTime))))\n                          (>  (system_time  (start_time  (valid_time ?med)))(-  (system_time (stop_time ?hospitalizationTime)) 3))\n                     )\n             )\n        )\n)")
+	(%3APAL-NAME "Presence of left ventricular assistive device during hospitalization")
+	(%3APAL-RANGE "(defrange ?admissionTime :FRAME Definite_Time_Interval)\n(defrange ?device :FRAME Note_Entry)")
+	(%3APAL-STATEMENT "(exists ?device \n        (and (or (subclass-of (coerce-to-class  (domain_term ?device)) Left_ventricular_assistive_device)\n                 (= (domain_term ?device)  \"Left_ventricular_assistive_device\"))\n             (=(patient_id ?device) $patient_id)\n             (exists ?admissionTime\n                     (and (=  (:NAME ?admissionTime) \"FocusAdmissionPeriod\")\n                          (< (system_time (valid_time ?device))(system_time (stop_time ?admissionTime)))\n                          (> (system_time (valid_time ?device))(system_time (start_time ?admissionTime))))\n             )\n        )\n)"))
+
+([KB_814969_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_814969_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_866213_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_866213_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_874985_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_874985_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_881797_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_881797_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_883703_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_883703_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_923519_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_923519_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_929760_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_929760_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_931688_Class216] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_931688_Class219] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_950991_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_950991_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_952347_Class681] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_952347_Class683] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_963063_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_963063_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_994402_Class1212] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_994402_Class1304] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_998060_Class317] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_998060_Class319] of  Qualitative_Constant
+
+	(value "Female"))
+
+([Low_Ejection_Fraction] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class20004])
+	(PrettyName "Low ejection fraction (<40)"))
+
+([LVEF%3C%3D40] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50019])
+	(PrettyName "LV Ejection Fraction <= 40"))
+
+([LVEF%3C%3D40+%26+using+ACE+%26+using+BB+%26+HF+symptoms] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class102530])
+	(PrettyName "HF with low EF and persistent symptoms, using ACE and BB"))
+
+([LVEF%3C%3D40+and+contraindications+to+ACE%2FARB+%28hypotension%2C+renal+insufficiency+or+drug+intolerance%29] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_freetext VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class100224])
+	(PrettyName "HF with low EF,  intolerance to ACE/ARB"))
+
+([LVEF%3C%3D40+and+intolerant+ACE] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50039]))
+
+([LVEF%3C%3D40+and+no+HF+and+no+MI] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class90002])
+	(PrettyName "LVEF<=40 and no HF and no MI"))
+
+([LVEF%3C%3D40+and+no+HF+symptoms] of  Diagnostic_Term_Metaclass
+
+	(data_source clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class80356]))
+
+([LVEF%3C%3D40+and+sinus+rhythm+and+Stage+B+and+absence+HF+symptoms] of  Diagnostic_Term_Metaclass
+
+	(data_source clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50048]))
+
+([LVEF%3C%3D40+and+using+ACE+and+BB+and+HF+and+symptomatic] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element clinical_assessment VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class70185]))
+
+([Male+and+most+recent+creatinine%3E2.5] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class70161]))
+
+([MI+no+HF] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class90005])
+	(PrettyName "MI no HF"))
+
+([Mild+HF+signs+and+symptoms] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment))
+
+([Mild-moderate+HF+symptoms+and+LVEF%3C%3D+40+and+ACE+intolerant] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext clinical_assessment)
+	(DiagnosticCriteria [ATHENA_HF_Class70179]))
+
+([Moderate+HF+signs+and+symptoms] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment))
+
+([moricizine] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([Most+recent+K%3E%3D5] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class70159]))
+
+([No+HF%2C+MI%2C++LVEF%3C%3D40+and+ADR+ACE] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50035]))
+
+([Non+steroidal+anti+inflammatory+drugs] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([non-ischemic+dilated+cardiomyopathy] of  Medical_Conditions_Metaclass
+
+	(data_source VISTA_data_element))
+
+([OnOrBeforePerformancePeriod] of  Definite_Time_Interval
+
+	(label "Before end of performance period"))
+
+([PerformanceMeasurementPeriod] of  Definite_Time_Interval
+
+	(label "Performance measurement period"))
+
+([Persistent+HF+signs+and+symptoms] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment))
+
+([Presence+of+adverse+reaction+to+ACE] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class50036]))
+
+([Presence+of+adverse+reaction+to+ARB] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element)
+	(DiagnosticCriteria [ATHENA_HF_Class60012]))
+
+([Prior_Myocardial_Infarction] of  Canonical_Terms_Metaclass
+
+	(data_source VISTA_data_element)
+	(PrettyName "Prior Myocardial Infarction"))
+
+([procainamide] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([quinidine] of  Medications_Metaclass
+
+	(data_source VISTA_data_element))
+
+([RelativeIndHF+symptoms%2FHF+and+LVEF%3C%3D40digoxin] of  Drug_Indication_Relation
+
+	(degree relative)
+	(indication HF+and+LVEF%3C%3D40+%26+moderate%2Fsevere+symptoms))
+
+([RelativeIndHTN+and+LVHACE_Inhibitors] of  Drug_Indication_Relation
+
+	(degree relative)
+	(indication HTN+and+LVH))
+
+([RelativeIndHTN+and+LVHAngiotensin_II_receptor_blockers] of  Drug_Indication_Relation
+
+	(degree relative)
+	(indication HTN+and+LVH))
+
+([RelativeIndMild-moderate+HF+symptoms+and+LVEF%3C%3D+40Angiotensin_II_receptor_blockers] of  Drug_Indication_Relation
+
+	(degree relative)
+	(indication Mild-moderate+HF+symptoms+and+LVEF%3C%3D+40+and+ACE+intolerant))
+
+([RelativeIndStage+B+and+LVEF%3C%3D40+and+ADR+ACEAngiotensin_II_receptor_blockers] of  Drug_Indication_Relation
+
+	(degree relative)
+	(indication Stage+B+and+LVEF%3C%3D40+and+ADR+ACE))
+
+([Severe+HF+signs+and+symptoms] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment))
+
+([Severe_LVH] of  Canonical_Terms_Metaclass
+
+	(data_source clinical_assessment)
+	(PrettyName "Severe LVH"))
+
+([Stage+A+Heart+Failure] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment VISTA_data_element))
+
+([Stage+B+and+LVEF%3C%3D40+and+ADR+ACE] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class70138]))
+
+([Stage+B+Heart+Failure] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment VISTA_data_element VISTA_freetext))
+
+([Stage+C+and+LVEF%3C%3D40+and+ADR+ACE] of  Diagnostic_Term_Metaclass
+
+	(data_source VISTA_data_element VISTA_freetext)
+	(DiagnosticCriteria [ATHENA_HF_Class50067]))
+
+([Stage+C+Heart+Failure] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment VISTA_data_element))
+
+([Stage+D+Heart+Failure] of  Medical_Conditions_Metaclass
+
+	(data_source clinical_assessment VISTA_data_element))
+
+([Valvular+heart+disease] of  Medical_Conditions_Metaclass
+
+	(data_source VISTA_data_element)
+	(PrettyName "Valvular heart disease"))

@@ -1,0 +1,4976 @@
+; Tue Dec 17 13:47:49 PST 2013
+; 
+;+ (version "3.4.7")
+;+ (build "Build 620")
+
+([0-1_Risk_Factor] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_160070])
+	(PrettyName "0-1 Risk Factor"))
+
+([10+year+CHD+risk+10-20%25] of  Diagnostic_Term_Metaclass
+)
+
+([10+year+CHD+risk%3C10%25] of  Diagnostic_Term_Metaclass
+)
+
+([10+year+CHD+risk%3E20%25] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_60001]))
+
+([10-Year_CHD_Risk] of  Canonical_Terms_Metaclass
+
+	(PrettyName "10 Year CHD Risk"))
+
+([10_year_CHD_risk_15_to_20] of  Diagnostic_Term_Metaclass
+
+	(label "10 year CHD risk 15-20%")
+	(PrettyName "10 year CHD risk 15-20%"))
+
+([10_year_CHD_risk_ge10_lt15] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class210017])
+	(PrettyName "10 year CHD risk 10-15"))
+
+([10_year_CHD_risk_ge_15] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class210018])
+	(PrettyName "10 year CHD risk >=15"))
+
+([2%2B_Risk_Factors] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class140043])
+	(PrettyName "2+ Risk Factors"))
+
+([400mg%2FdL%3ETG%3E200mg%2FdL] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_190025]))
+
+([Abnormal+ALT+level] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class20009])
+	(PrettyName "Abnormal ALT"))
+
+([Abnormal+AST+level] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class20000])
+	(PrettyName "Abnormal AST"))
+
+([Abnormal_CPK] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class10010])
+	(PrettyName "Abnormal CPK"))
+
+([Abnormal_CrCl_10_to_50] of  Diagnostic_Term_Metaclass
+
+	(PrettyName "Abnormal CrCl (10-50 ml/min)"))
+
+([Abnormal_CrCl_less_than_10] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class70027])
+	(PrettyName "Abnormal CrCl (<10 ml/min)"))
+
+([Adverse_Reaction_To_Statin] of  Diagnostic_Term_Metaclass
+
+	(PrettyName "Adverse Reaction To Statin"))
+
+([ATHENA_Lipid_Class0] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Age >= 17")
+	(numeric_domain_term Age)
+	(operator %3E%3D)
+	(value 17.0))
+
+([ATHENA_Lipid_Class10000] of  On_Screen_Message
+
+	(label "Lipid lowering drug may increaese TG")
+	(message "Warning:  This lipid lowering drug may increase TG levels."))
+
+([ATHENA_Lipid_Class100000] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 105.0)
+	(upper_limit 135.0))
+
+([ATHENA_Lipid_Class100001] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 4.0)
+	(upper_limit 40.0))
+
+([ATHENA_Lipid_Class100002] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 40.0)
+	(upper_limit 41.0))
+
+([ATHENA_Lipid_Class100003] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 4.0)
+	(upper_limit 8.0))
+
+([ATHENA_Lipid_Class100004] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 3.0))
+
+([ATHENA_Lipid_Class100005] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 4.0))
+
+([ATHENA_Lipid_Class100006] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 4.5)
+	(upper_limit 4.6))
+
+([ATHENA_Lipid_Class100007] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 2.0)
+	(upper_limit 3.0))
+
+([ATHENA_Lipid_Class100008] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 0.4)
+	(upper_limit 1.9))
+
+([ATHENA_Lipid_Class100009] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 1200.0)
+	(upper_limit 1800.0))
+
+([ATHENA_Lipid_Class10001] of  Conditional_On_Screen_Message
+
+	(description "presence")
+	(label "Caution when prescribing statin metabolized by cyp3a4 in preence of cyp3a4 inhibitor")
+	(message "<font color=red>Presence of CYP3A4 Inhibitor detected.  Caution:  there is an increased risk of myopathy when combining a statin metabolized by CYP3A4 and an inhibitor of CYP3A4.</font>")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_mod1_Class0]))
+
+([ATHENA_Lipid_Class100010] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 500.0)
+	(upper_limit 1190.0))
+
+([ATHENA_Lipid_Class100011] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 120.0)
+	(upper_limit 210.0))
+
+([ATHENA_Lipid_Class100012] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 30.0)
+	(upper_limit 119.0))
+
+([ATHENA_Lipid_Class10002] of  On_Screen_Message
+
+	(label "Liver function tests recommended at start of statin therapy")
+	(message "Liver function test recommended before initiating statin therapy and clinically indicated thereafter.  Possible Adverse reaction is increase in LFTs >3x upper limit and CPKs > 10x upper limit"))
+
+([ATHENA_Lipid_Class10004] of  N_ary_Expression
+
+	(label "Abnormal = CPK gt 10*UpperLmitofNormal")
+	(operator *)
+	(values
+		[ATHENA_Lipid_Class10005]
+		[ATHENA_Lipid_Class10007]))
+
+([ATHENA_Lipid_Class10005] of  Numeric_Constant
+
+	(value 10.0))
+
+([ATHENA_Lipid_Class10006] of  Numeric_Constant
+
+	(label "3.0")
+	(value 3.0))
+
+([ATHENA_Lipid_Class10007] of  Get_Class_Slot_Value
+
+	(class_reference Creatine_Phosphokinase_CPK_or_CK)
+	(label "CPK UpperLImitOfNormal")
+	(slot [UpperLimitOfNormal]))
+
+([ATHENA_Lipid_Class10010] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Creatine_Phosphokinase_CPK_or_CK)
+	(entry_type Numeric_Entry)
+	(label "CPK > 10*UpperLImitofNormal")
+	(operator %3E)
+	(value [ATHENA_Lipid_Class10004]))
+
+([ATHENA_Lipid_Class10011] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class10013]))
+
+([ATHENA_Lipid_Class10012] of  Presence_Criterion
+
+	(domain_term Abnormal_CPK)
+	(label "Presence of abnormal CPK (gt 10xUpperLimitofNormal)")
+	(presence TRUE))
+
+([ATHENA_Lipid_Class10013] of  Conditional_On_Screen_Message
+
+	(label "Presence of abnormal CPK level >10 times Upper Limit of Normal, consider alternative drug")
+	(message "Abnormal CPK levels measured (>10 times upper limit of normal), which can be an adverse reaction to statin.  Consider alternative drug therapy.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class10012]))
+
+([ATHENA_Lipid_Class10014] of  Drug_Usage
+
+	(Absolute_Contraindications Abnormal+ALT+level)
+	(collateral_actions [ATHENA_Lipid_Class70013])
+	(Drug_Class_Name Omega3_Polyunsaturate_Fatty_Acid)
+	(label "Omega3 Fatty Acid"))
+
+([ATHENA_Lipid_Class10015] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Abnormal+ALT+level
+		Abnormal+AST+level
+		Abnormal_CPK)
+	(collateral_actions [ATHENA_Lipid_Class70014])
+	(Drug_Class_Name Cholesterol_Absorption_Inhibitors)
+	(label "Cholesterol Absorption Inhibitors"))
+
+([ATHENA_Lipid_Class10016] of  Presence_Criterion
+
+	(domain_term HS800_Progestins)
+	(entry_type Medication)
+	(label "Presence of progestins")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10017] of  Presence_Criterion
+
+	(domain_term HS100_Androgens_Anabolics)
+	(entry_type Medication)
+	(label "Presence of androgens or anabolics")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10018] of  Presence_Criterion
+
+	(domain_term HS300_Estrogens)
+	(entry_type Medication)
+	(label "Presence of estrogens")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10019] of  Presence_Criterion
+
+	(domain_term cyclosporine)
+	(entry_type Medication)
+	(label "Presence of cyclosporine")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10020] of  Presence_Criterion
+
+	(domain_term HIV_Protease_Inhibitors)
+	(entry_type Medication)
+	(label "Presence of HIV protease inhibitors")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10021] of  Presence_Criterion
+
+	(domain_term Retinoids_for_Acne_systemic)
+	(entry_type Medication)
+	(label "Presence of retinoids for acne, systemic")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10022] of  Presence_Criterion
+
+	(domain_term Retinoids_for_Psoriasis_systemic)
+	(entry_type Medication)
+	(label "Presence of retinoids for psoriasis, systemic")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10023] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class10018]
+		[ATHENA_Lipid_Class10020]
+		[ATHENA_Lipid_Class10016]
+		[ATHENA_Lipid_Class10017]
+		[ATHENA_Lipid_Class10019]
+		[ATHENA_Lipid_Class10022]
+		[ATHENA_Lipid_Class10021]
+		[ATHENA_Lipid_Class10024]
+		[ATHENA_Lipid_Class10025])
+	(label "Presence of drugs that may raise cholesterol or TG")
+	(operator OR))
+
+([ATHENA_Lipid_Class10024] of  Presence_Criterion
+
+	(domain_term HS050_Adrenal_Corticosteroid)
+	(entry_type Medication)
+	(label "Presence of corticosteroid")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10025] of  Presence_Criterion
+
+	(domain_term Diuretics)
+	(entry_type Medication)
+	(label "Presence of diuretics")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class10026] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "TG >= 200 mg/dL")
+	(numeric_domain_term Triglycerides)
+	(operator %3E%3D)
+	(value 200.0))
+
+([ATHENA_Lipid_Class10027] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "TG >= 500")
+	(numeric_domain_term Triglycerides)
+	(operator %3E%3D)
+	(value 500.0))
+
+([ATHENA_Lipid_Class110000] of  Management_Diagram
+
+	(label "Lipid management algorithm II")
+	(steps
+		[NCEPATPIII_Instance_10000]
+		[NCEPATPIII_Instance_20001]
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_30014]
+		[NCEPATPIII_Instance_30019]
+		[NCEPATPIII_Instance_30026]
+		[NCEPATPIII_Instance_40005]
+		[NCEPATPIII_Instance_40006]
+		[NCEPATPIII_Instance_40007]
+		[NCEPATPIII_Instance_40008]
+		[NCEPATPIII_Instance_40009]
+		[NCEPATPIII_Instance_40014]
+		[NCEPATPIII_Instance_40017]
+		[NCEPATPIII_Instance_40034]
+		[NCEPATPIII_Instance_40045]
+		[NCEPATPIII_Instance_40046]
+		[NCEPATPIII_Instance_40051]
+		[NCEPATPIII_Instance_40053]
+		[NCEPATPIII_Instance_40057]
+		[NCEPATPIII_Instance_40060]
+		[NCEPATPIII_Instance_70076]
+		[NCEPATPIII_Instance_170010]
+		[ATHENA_Lipid_Class130000]
+		[ATHENA_Lipid_Class160253]
+		[ATHENA_Lipid_Class160252]
+		[ATHENA_Lipid_Class150000])
+	(transitions
+		[NCEPATPIII_Instance_20002]
+		[NCEPATPIII_Instance_30032]
+		[NCEPATPIII_Instance_30033]
+		[NCEPATPIII_Instance_30034]
+		[NCEPATPIII_Instance_30035]
+		[NCEPATPIII_Instance_30057]
+		[NCEPATPIII_Instance_30059]
+		[NCEPATPIII_Instance_40010]
+		[NCEPATPIII_Instance_40011]
+		[NCEPATPIII_Instance_40015]
+		[NCEPATPIII_Instance_40016]
+		[NCEPATPIII_Instance_40039]
+		[NCEPATPIII_Instance_40054]
+		[NCEPATPIII_Instance_40055]
+		[NCEPATPIII_Instance_40056]
+		[NCEPATPIII_Instance_40058]
+		[NCEPATPIII_Instance_40059]
+		[NCEPATPIII_Instance_40061]
+		[NCEPATPIII_Instance_50012]
+		[NCEPATPIII_Instance_60000]
+		[NCEPATPIII_Instance_70077]
+		[NCEPATPIII_Instance_100007]
+		[NCEPATPIII_Instance_190011]
+		[NCEPATPIII_Instance_190012]
+		[NCEPATPIII_Instance_200014]
+		[NCEPATPIII_Instance_200016]
+		[NCEPATPIII_Instance_200017]
+		[KB_229039_Class0]
+		[ATHENA_Lipid_Class169]
+		[ATHENA_Lipid_Class160002]
+		[ATHENA_Lipid_Class160053]
+		[ATHENA_Lipid_Class160054]
+		[ATHENA_Lipid_Class140087]
+		[ATHENA_Lipid_Class140088]
+		[ATHENA_Lipid_Class140090]
+		[ATHENA_Lipid_Class140091]
+		[ATHENA_Lipid_Class140094]
+		[ATHENA_Lipid_Class140001]
+		[ATHENA_Lipid_Class170002]
+		[ATHENA_Lipid_Class170003]))
+
+([ATHENA_Lipid_Class110001] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 30.0)
+	(upper_limit 104.0))
+
+([ATHENA_Lipid_Class110002] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 30.0)
+	(upper_limit 60.0))
+
+([ATHENA_Lipid_Class110003] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 4.0)
+	(upper_limit 29.0))
+
+([ATHENA_Lipid_Class110004] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 15.0))
+
+([ATHENA_Lipid_Class110005] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 16.0)
+	(upper_limit 17.0))
+
+([ATHENA_Lipid_Class110006] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 24.0)
+	(upper_limit 25.0))
+
+([ATHENA_Lipid_Class110007] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 24.0)
+	(upper_limit 25.0))
+
+([ATHENA_Lipid_Class110008] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 3.75)
+	(upper_limit 4.0))
+
+([ATHENA_Lipid_Class110009] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 0.625)
+	(upper_limit 3.7))
+
+([ATHENA_Lipid_Class110010] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 24.0)
+	(upper_limit 25.0))
+
+([ATHENA_Lipid_Class110011] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 4.0)
+	(upper_limit 23.0))
+
+([ATHENA_Lipid_Class110012] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 9.0))
+
+([ATHENA_Lipid_Class110013] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 10.0)
+	(upper_limit 11.0))
+
+([ATHENA_Lipid_Class110014] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 1.1))
+
+([ATHENA_Lipid_Class110015] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 0.1)
+	(upper_limit 0.9))
+
+([ATHENA_Lipid_Class110016] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class90000]
+		[ATHENA_Lipid_Class100001])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class10005])
+	(generic_drug atorvastatin)
+	(label "atorvastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 10.0))
+
+([ATHENA_Lipid_Class110017] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class100001]
+		[ATHENA_Lipid_Class90000])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class20000])
+	(generic_drug fluvastatin)
+	(label "fluvastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 20.0))
+
+([ATHENA_Lipid_Class110018] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class90000]
+		[ATHENA_Lipid_Class100001])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class20000])
+	(generic_drug pravastatin)
+	(label "pravastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 10.0))
+
+([ATHENA_Lipid_Class110019] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class170455]
+		[ATHENA_Lipid_Class170456])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class20000])
+	(generic_drug rosuvastatin)
+	(label "rosuvastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 5.0))
+
+([ATHENA_Lipid_Class110020] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class100006]
+		[ATHENA_Lipid_Class110021])
+	(dose_strength_unit grams)
+	(drug_usage [ATHENA_Lipid_mod1_Class10004])
+	(generic_drug immediate_release_crystalline_nicotinic_acid)
+	(label "Niacin IR")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 1.5))
+
+([ATHENA_Lipid_Class110021] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 0.1)
+	(upper_limit 4.4))
+
+([ATHENA_Lipid_Class110022] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class100007]
+		[ATHENA_Lipid_Class100008])
+	(dose_strength_unit grams)
+	(drug_usage [ATHENA_Lipid_mod1_Class10004])
+	(generic_drug extended_release_nicotinic_acid)
+	(label "Niacin ER")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 0.5))
+
+([ATHENA_Lipid_Class120000] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [ATHENA_Lipid_Class120002]))
+
+([ATHENA_Lipid_Class120001] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30043]
+		[NCEPATPIII_Instance_30003])
+	(label "(CHD or CHD Equivalent) and LDL >=100")
+	(operator AND))
+
+([ATHENA_Lipid_Class120002] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[NCEPATPIII_Instance_100075])
+	(label "LDL>=100, Initiate Drug Therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class120001]))
+
+([ATHENA_Lipid_Class130000] of  Action_Choice
+
+	(actions
+		[ATHENA_Lipid_Class160001]
+		[ATHENA_Lipid_Class160217])
+	(label "Presence of CHD, Initiate statin therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class190003]))
+
+([ATHENA_Lipid_Class130001] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_70076]))
+
+([ATHENA_Lipid_Class130003] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class130007] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class20009]
+		[ATHENA_Lipid_Class20000]
+		[ATHENA_Lipid_Class10010])
+	(label "ALT or AST  > 3*UpperLImit or CPK > 10*UpperLimitofNormal")
+	(operator OR))
+
+([ATHENA_Lipid_Class130008] of  Presence_Criterion
+
+	(domain_term CV350_AntiLipemic_Agents)
+	(entry_type Medication)
+	(label "Presence of LDL lowering drugs")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class130009] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class130008]
+		[ATHENA_Lipid_Class130007])
+	(label "Presence of LDL lowering drug and abnormal liver test")
+	(operator AND))
+
+([ATHENA_Lipid_Class130011] of  N_ary_Criterion
+
+	(criteria [ATHENA_Lipid_Class130007])
+	(label "NOT (ALT or AST > 3*UpperLimit or CPK > 10*UpperLimitofNormal)")
+	(operator NOT))
+
+([ATHENA_Lipid_Class130012] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class130008]
+		[ATHENA_Lipid_Class130011])
+	(label "Presence of LDL lowering drugs and NOT abnormal liver tests")
+	(operator AND))
+
+([ATHENA_Lipid_Class130013] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_40036]
+		[ATHENA_Lipid_Class130012])
+	(label "within guideline goal AND no abnormal liver tests with drugs")
+	(operator AND))
+
+([ATHENA_Lipid_Class140000] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30003]
+		[NCEPATPIII_Instance_30043])
+	(label "Presence of CHD or Equiv and LDL >= 100")
+	(operator AND))
+
+([ATHENA_Lipid_Class140001] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class140043] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30039]
+		[NCEPATPIII_Instance_160071])
+	(label "Absence of CHD/CHD Equivalent and 2+ RF")
+	(operator AND))
+
+([ATHENA_Lipid_Class140087] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [ATHENA_Lipid_Class160253]))
+
+([ATHENA_Lipid_Class140088] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [ATHENA_Lipid_Class160252]))
+
+([ATHENA_Lipid_Class140090] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_40017]))
+
+([ATHENA_Lipid_Class140091] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30026])
+	(%3ATO [NCEPATPIII_Instance_40007]))
+
+([ATHENA_Lipid_Class140092] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30026])
+	(%3ATO [NCEPATPIII_Instance_40007]))
+
+([ATHENA_Lipid_Class140093] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_40017]))
+
+([ATHENA_Lipid_Class140094] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_70076]))
+
+([ATHENA_Lipid_Class140095] of  Presence_Criterion
+
+	(domain_term LDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of LDL data in last year")
+	(period [ATHENA_DM_Eye_Instance_30019])
+	(presence FALSE))
+
+([ATHENA_Lipid_Class140096] of  Order_TestProcedure
+
+	(label "Absence of lipid panel measurement in last year; order lipid panel"))
+
+([ATHENA_Lipid_Class150000] of  Action_Choice
+
+	(actions [ATHENA_Lipid_Class170004])
+	(label "Substitute")
+	(strict_rule_in_condition [ATHENA_Lipid_Class160247]))
+
+([ATHENA_Lipid_Class150001] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_40003]))
+
+([ATHENA_Lipid_Class160000] of  Guideline_Drug
+
+	(dose_level_ranges [ATHENA_Lipid_Class180004])
+	(generic_drug simvastatin)
+	(label "simvastatin in presence of verapamil or diltiazem")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(rule_in [ATHENA_Lipid_Class180001])
+	(starting_dose 3.0))
+
+([ATHENA_Lipid_Class160001] of  On_Screen_Message
+
+	(label "Initiate statin therapy")
+	(message "<b><font color=red>Initiate statin therapy and therapeutic lifestyle changes</font>")
+	(message_type Primary_Recommendation))
+
+([ATHENA_Lipid_Class160002] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [ATHENA_Lipid_Class130000]))
+
+([ATHENA_Lipid_Class160004] of  Consultation_Action_Step
+
+	(actions
+		[ATHENA_Lipid_Class160256]
+		[ATHENA_Lipid_Class160008])
+	(label "check for contraindicated med")
+	(rule_in [ATHENA_Lipid_Class160247]))
+
+([ATHENA_Lipid_Class160008] of  On_Screen_Message
+
+	(label "Stop drug therapy, consider alternative")
+	(message "<b><font color=red>Abnormal LFT detected; stop current therapy and consider alternatives</font>"))
+
+([ATHENA_Lipid_Class160009] of  Consultation_Guideline
+
+	(first_step [ATHENA_Lipid_Class160567])
+	(label "on medication consultation guideline")
+	(steps
+		[ATHENA_Lipid_Class160567]
+		[ATHENA_Lipid_Class160568]
+		[ATHENA_Lipid_Class160004])
+	(transitions
+		[ATHENA_Lipid_Class160012]
+		[ATHENA_Lipid_Class160013]))
+
+([ATHENA_Lipid_Class160012] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_Lipid_Class160567])
+	(%3ATO [ATHENA_Lipid_Class160004]))
+
+([ATHENA_Lipid_Class160013] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_Lipid_Class160567])
+	(%3ATO [ATHENA_Lipid_Class160568]))
+
+([ATHENA_Lipid_Class160053] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [ATHENA_Lipid_Class160253]))
+
+([ATHENA_Lipid_Class160054] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [ATHENA_Lipid_Class160252]))
+
+([ATHENA_Lipid_Class160217] of  Evaluate_Start_Activity
+
+	(alternatives
+		[ATHENA_Lipid_mod1_Class10005]
+		[ATHENA_Lipid_mod1_Class20000])
+	(label "evaluate starting statin therapy"))
+
+([ATHENA_Lipid_Class160247] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "there exists a contraindicated current med")
+	(PAL_constraint [ATHENA_Lipid_Class160248]))
+
+([ATHENA_Lipid_Class160248] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "there exists a contraindicated drug")
+	(%3APAL-RANGE "(defrange ?current_med :FRAME Medication)\n(defrange ?problem :FRAME Note_Entry)\n(defrange ?med_class :FRAME Drug_Usage)\n(defrange ?contraindication :FRAME Medical_Conditions_Metaclass)\n(defrange ?derived_contraindication :FRAME Diagnostic_Term_Metaclass)")
+	(%3APAL-STATEMENT "(exists ?current_med \n        (and (or (not (own-slot-not-null mood ?current_med ))\n                 (mood ?current_med Authorized)) \n             (patient_id ?current_med $patient_id)\n             (is-class (drug_name ?current_med))\n             (exists ?med_class\n                     (and (subclass-of (coerce-to-class (drug_name ?current_med)) (Drug_Class_Name ?med_class ))\n                          (or (exists ?contraindication \n                                      (and  (Absolute_Contraindications ?med_class ?contraindication)\n                                            (exists ?problem \n                                                    (and (patient_id ?problem $patient_id)\n                                                         (is-class (domain_term ?problem) )\n                                                         (equal-or-subclass-of  (coerce-to-class (domain_term ?problem))\n                                                                                ?contraindication)))))\n                              (exists ?derived_contraindication\n                                      (and (Absolute_Contraindications ?med_class ?derived_contraindication)\n                                           (is-derivable ?derived_contraindication))))\n                     ))))"))
+
+([ATHENA_Lipid_Class160250] of  N_ary_Criterion
+
+	(criteria [ATHENA_Lipid_Class160247])
+	(label "not (there exists a contraindicated current med)")
+	(operator NOT))
+
+([ATHENA_Lipid_Class160251] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_40036]
+		[ATHENA_Lipid_Class160250])
+	(label "within guideline goal and no contraindicated med")
+	(operator AND))
+
+([ATHENA_Lipid_Class160252] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_40063])
+	(label "LDL within goal and no contra med")
+	(strict_rule_in_condition [ATHENA_Lipid_Class160251]))
+
+([ATHENA_Lipid_Class160253] of  Action_Choice
+
+	(actions
+		[ATHENA_Lipid_Class160255]
+		[ATHENA_Lipid_Class160256])
+	(label "LDL within goal and contra med (abnormal LFT)")
+	(strict_rule_in_condition [ATHENA_Lipid_Class160254]))
+
+([ATHENA_Lipid_Class160254] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_40036]
+		[ATHENA_Lipid_Class160247])
+	(label "within guideline goal AND contraindicated current med")
+	(operator AND))
+
+([ATHENA_Lipid_Class160255] of  Evaluate_Start_Activity
+
+	(alternatives
+		[ATHENA_Lipid_mod1_Class10005]
+		[ATHENA_Lipid_mod1_Class20000]
+		[ATHENA_Lipid_mod1_Class10004]
+		[ATHENA_Lipid_mod1_Class10002]
+		[ATHENA_Lipid_mod1_Class10003]
+		[ATHENA_Lipid_Class10015])
+	(label "re-evaluate  lipid-lowering drugs"))
+
+([ATHENA_Lipid_Class160256] of  Conditional_On_Screen_Message
+
+	(label "Presence of abnormal LFT message")
+	(message "<b>Presence of abnormal liver function test detected.  Consider alternative drug therapy.")
+	(rule_in_condition [ATHENA_Lipid_Class130007]))
+
+([ATHENA_Lipid_Class160567] of  Consultation_Branch_Step
+
+	(branches
+		[ATHENA_Lipid_Class160004]
+		[ATHENA_Lipid_Class160568])
+	(label "on medication:  things to check")
+	(selection_method all_of))
+
+([ATHENA_Lipid_Class160568] of  Consultation_Action_Step
+
+	(actions [ATHENA_Lipid_Class160571])
+	(label "check for medications above max limit")
+	(rule_in [ATHENA_Lipid_Class160569]))
+
+([ATHENA_Lipid_Class160569] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "there exists medication whose dose is above upper limit")
+	(PAL_constraint [ATHENA_Lipid_Class160570]))
+
+([ATHENA_Lipid_Class160570] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "there exists medication whose dose is above upper limit")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?guidelineDrug :FRAME Guideline_Drug)\n(defrange ?rangeMapping :FRAME Range_Mapping_Entry)")
+	(%3APAL-STATEMENT "(exists ?med \n        (and \n             (patient_id ?med $patient_id)\n             (is-class (drug_name ?med))\n             (is-class \"High_Dose\")\n             (or (not (own-slot-not-null mood ?med ))\n                 (mood ?med Authorized)) \n             (exists ?guidelineDrug\n                     (and (= (coerce-to-class (drug_name ?med)) (generic_drug ?guidelineDrug))\n                          (exists ?rangeMapping (and (dose_level_ranges ?guidelineDrug ?rangeMapping)\n                                                     (or (= (abstract_value ?rangeMapping) (coerce-to-class \"High_Dose\"))\n                                                         (and (= (drug_name ?med) \"hydrochlorothiazide\")\n                                                              (= (abstract_value ?rangeMapping)(coerce-to-class \"Medium_Dose\"))))\n                                                     (> (daily_dose ?med) (upper_limit ?rangeMapping))  )))\n                     			      )\n        )\n)"))
+
+([ATHENA_Lipid_Class160571] of  Parameterized_Message
+
+	(label "Medication dose above upper limit")
+	(message_type Primary_Recommendation)
+	(parameterized_message [ATHENA_Lipid_Class160572]))
+
+([ATHENA_Lipid_Class160572] of  Parameterized_String
+
+	(value "The dose of ?med is above the upper limit for management of hypertension. Please check if prescription information is accurate.")
+	(variables [ATHENA_Lipid_Class160573]))
+
+([ATHENA_Lipid_Class160573] of  Variable
+
+	(derivation_expression [ATHENA_Lipid_Class160574])
+	(label "medication whose dose is above upper limit")
+	(string_name "?med"))
+
+([ATHENA_Lipid_Class160574] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(key_slot [drug_name])
+	(label "medication whose dose is above upper limit")
+	(PAL_query [ATHENA_Lipid_Class160575]))
+
+([ATHENA_Lipid_Class160575] of  PAL-QUERY
+
+	(%3APAL-NAME "medication whose dose is above upper limit")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?guidelineDrug :FRAME Guideline_Drug)\n(defrange ?rangeMapping :FRAME Range_Mapping_Entry)")
+	(%3APAL-STATEMENT "(findall ?med \n         (and \n              (patient_id ?med $patient_id)\n              (is-class (drug_name ?med))\n              (or (not (own-slot-not-null mood ?med ))\n                  (mood ?med Authorized)) \n              (exists ?guidelineDrug\n                      (and (= (coerce-to-class (drug_name ?med)) (generic_drug ?guidelineDrug))\n                           (exists ?rangeMapping (and (dose_level_ranges ?guidelineDrug ?rangeMapping)\n                                                      (or (= (abstract_value ?rangeMapping) (coerce-to-class \"High_Dose\"))\n                                                          (and (= (drug_name ?med) \"hydrochlorothiazide\")\n                                                               (= (abstract_value ?rangeMapping)(coerce-to-class \"Medium_Dose\"))))\n                                                      (> (daily_dose ?med) (upper_limit ?rangeMapping))  )))\n                      			      )\n         )\n)"))
+
+([ATHENA_Lipid_Class169] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class170000] of  Management_Diagram
+
+	(label "Lipid management algorithm dashboard")
+	(steps
+		[NCEPATPIII_Instance_40034]
+		[NCEPATPIII_Instance_30012]
+		[ATHENA_Lipid_Class190007]
+		[NCEPATPIII_Instance_40046]
+		[ATHENA_Lipid_Class190012]
+		[NCEPATPIII_Instance_40045]
+		[ATHENA_Lipid_Class190017]
+		[ATHENA_Lipid_Class180000]
+		[ATHENA_Lipid_Class210004]
+		[ATHENA_Lipid_Class210008]
+		[ATHENA_Lipid_Class210013]
+		[ATHENA_Lipid_Class210021]
+		[ATHENA_Lipid_Class210024]
+		[ATHENA_Lipid_Class160252]
+		[NCEPATPIII_Instance_30026]
+		[ATHENA_Lipid_Class150000]
+		[ATHENA_Lipid_Class210027]
+		[NCEPATPIII_Instance_40007]
+		[NCEPATPIII_Instance_40008]
+		[NCEPATPIII_Instance_40009]
+		[NCEPATPIII_Instance_40014]
+		[NCEPATPIII_Instance_40017]
+		[NCEPATPIII_Instance_170010]
+		[ATHENA_Lipid_Class200000]
+		[ATHENA_Lipid_Class220002]
+		[ATHENA_Lipid_Class220004]
+		[ATHENA_Lipid_Class220016]
+		[ATHENA_Lipid_Class230432])
+	(transitions
+		[ATHENA_Lipid_Class190010]
+		[ATHENA_Lipid_Class190013]
+		[ATHENA_Lipid_Class190014]
+		[ATHENA_Lipid_Class190015]
+		[ATHENA_Lipid_Class190018]
+		[ATHENA_Lipid_Class190019]
+		[ATHENA_Lipid_Class190020]
+		[ATHENA_Lipid_Class210003]
+		[ATHENA_Lipid_Class210007]
+		[ATHENA_Lipid_Class210010]
+		[ATHENA_Lipid_Class210011]
+		[ATHENA_Lipid_Class210014]
+		[ATHENA_Lipid_Class210023]
+		[ATHENA_Lipid_Class210026]
+		[ATHENA_Lipid_Class210029]
+		[ATHENA_Lipid_Class210030]
+		[ATHENA_Lipid_Class210031]
+		[ATHENA_Lipid_Class210032]
+		[ATHENA_Lipid_Class210033]
+		[ATHENA_Lipid_Class210034]
+		[ATHENA_Lipid_Class210035]
+		[ATHENA_Lipid_Class210037]
+		[ATHENA_Lipid_Class210038]
+		[ATHENA_Lipid_Class210041]
+		[ATHENA_Lipid_Class210001]
+		[ATHENA_Lipid_Class220005]
+		[ATHENA_Lipid_Class220009]
+		[ATHENA_Lipid_Class220012]
+		[ATHENA_Lipid_Class220014]
+		[ATHENA_Lipid_Class220015]
+		[ATHENA_Lipid_Class220018]
+		[ATHENA_Lipid_Class230434]
+		[ATHENA_Lipid_Class230435])
+	(%3ADOCUMENTATION "2Apr13 clinical algorithm for dashboard based on original clinical algorithm*\n- created/added 2ndary prevention scenario to add statin\n- unchanged: scenario= no drug, 0-1 RF\n- scenario=no drug and 2+RF add CHD risks action_choices, no TLC consultation template\n- scenario=1 drug dashboard:  add TLC consultation template, otherwise unchanged\n- scenario=2 drug dashboard:  no add drug\n16may13\n- added TLC initiation cashboard to 0-1 RF dahsboard, 2+RF dashboard\n\nSimvastatin logic NOT implemented"))
+
+([ATHENA_Lipid_Class170001] of  Choice_Step
+
+	(label "Substitute choices"))
+
+([ATHENA_Lipid_Class170002] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [ATHENA_Lipid_Class150000]))
+
+([ATHENA_Lipid_Class170003] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [ATHENA_Lipid_Class150000]))
+
+([ATHENA_Lipid_Class170004] of  Evaluate_Substitution_Activity
+
+	(activity_class "Medication")
+	(activity_spec Drug_Usage)
+	(activity_spec_key [Drug_Class_Name])
+	(activity_to_stop [ATHENA_Lipid_Class170005])
+	(alternatives
+		[ATHENA_Lipid_mod1_Class10005]
+		[ATHENA_Lipid_mod1_Class20000]
+		[ATHENA_Lipid_mod1_Class10004]
+		[ATHENA_Lipid_mod1_Class10003]
+		[ATHENA_Lipid_Class10015]
+		[ATHENA_Lipid_mod1_Class10002]
+		[ATHENA_Lipid_Class10014])
+	(domain_term CV350_AntiLipemic_Agents)
+	(label "Evaluate substitution lipid agent"))
+
+([ATHENA_Lipid_Class170005] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(key_slot [drug_name])
+	(label "query for contraindicated drug")
+	(PAL_query [ATHENA_Lipid_Class170006]))
+
+([ATHENA_Lipid_Class170006] of  PAL-QUERY
+
+	(%3APAL-NAME "query for contraindicated drugs")
+	(%3APAL-RANGE "(defrange ?current_med :FRAME Medication) \n(defrange ?problem :FRAME Note_Entry) \n(defrange ?med_class :FRAME Drug_Usage) \n(defrange ?contraindication :FRAME Medical_Conditions_Metaclass Absolute_Contraindications) \n(defrange ?derived_contraindication :FRAME Diagnostic_Term_Metaclass)")
+	(%3APAL-STATEMENT "(findall ?current_med        \n         (and (or (not (own-slot-not-null mood ?current_med ))           \n                  (is-class (drug_name ?current_med))    \n                  (mood ?current_med Authorized))             \n              (patient_id ?current_med $patient_id)            \n              (exists ?med_class                    \n                      (and (equal-or-subclass-of (coerce-to-class (drug_name ?current_med)) (Drug_Class_Name ?med_class ))                         \n                           (or (exists ?contraindication                                      (and  (Absolute_Contraindications ?med_class ?contraindication)                                           (exists ?problem                                                    (and (patient_id ?problem $patient_id)                                                        (is-class (domain_term ?problem) )                                                        (equal-or-subclass-of  (coerce-to-class (domain_term ?problem))                                                                               ?contraindication)))))                             (exists ?derived_contraindication                                                                 (and (Absolute_Contraindications ?med_class ?derived_contraindication)(is-derivable ?derived_contraindication))))                    ))))"))
+
+([ATHENA_Lipid_Class170455] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 5.0))
+
+([ATHENA_Lipid_Class170456] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 6.0)
+	(upper_limit 10.0))
+
+([ATHENA_Lipid_Class170457] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 21.0)
+	(upper_limit 40.0))
+
+([ATHENA_Lipid_Class170458] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 4.0)
+	(upper_limit 20.0))
+
+([ATHENA_Lipid_Class180000] of  Action_Choice
+
+	(actions
+		[ATHENA_Lipid_Class160001]
+		[ATHENA_Lipid_Class160217])
+	(label "Presence of ACS, Initiate statin therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class210002]))
+
+([ATHENA_Lipid_Class180001] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class180002]
+		[ATHENA_Lipid_Class180003])
+	(label "Presence of verapamil or diltiazem")
+	(operator OR))
+
+([ATHENA_Lipid_Class180002] of  Presence_Criterion
+
+	(domain_term verapamil)
+	(entry_type Medication)
+	(label "Presence of verapamil")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class180003] of  Presence_Criterion
+
+	(domain_term diltiazem)
+	(entry_type Medication)
+	(label "Presence of diltiazem")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class180004] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(upper_limit 10.0))
+
+([ATHENA_Lipid_Class190000] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_Lipid_Class210049])
+	(%3ATO [ATHENA_Lipid_Class210053]))
+
+([ATHENA_Lipid_Class190001] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_10000])
+	(%3ATO [NCEPATPIII_Instance_20001]))
+
+([ATHENA_Lipid_Class190002] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [ATHENA_Lipid_Class130000]))
+
+([ATHENA_Lipid_Class190003] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30003]
+		[NCEPATPIII_Instance_30043]
+		[ATHENA_Lipid_mod1_Class10000])
+	(label "Presence of CHD or Equiv and LDL >= 100 and absence of LDL drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class190004] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [ATHENA_Lipid_Class160252]))
+
+([ATHENA_Lipid_Class190005] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class190006] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class190007] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class180000]
+		[ATHENA_Lipid_Class210008]
+		[NCEPATPIII_Instance_30012])
+	(label "Management Choice dashboard"))
+
+([ATHENA_Lipid_Class190008] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_10000])
+	(%3ATO [ATHENA_Lipid_Class190007]))
+
+([ATHENA_Lipid_Class190010] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190007])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class190011] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190007])
+	(%3ATO [ATHENA_Lipid_Class130000]))
+
+([ATHENA_Lipid_Class190012] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class210013]
+		[ATHENA_Lipid_Class230432])
+	(label "0-1 risk factor choices dashboard"))
+
+([ATHENA_Lipid_Class190013] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40046])
+	(%3ATO [ATHENA_Lipid_Class190012]))
+
+([ATHENA_Lipid_Class190014] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190012])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class190015] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190012])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class190016] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190012])
+	(%3ATO [NCEPATPIII_Instance_40051]))
+
+([ATHENA_Lipid_Class190017] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class210021]
+		[ATHENA_Lipid_Class210024]
+		[ATHENA_Lipid_Class230432])
+	(label "2+ risk factors choices dashboard"))
+
+([ATHENA_Lipid_Class190018] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40045])
+	(%3ATO [ATHENA_Lipid_Class190017]))
+
+([ATHENA_Lipid_Class190019] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class190020] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class190021] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [NCEPATPIII_Instance_40060]))
+
+([ATHENA_Lipid_Class190022] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30005]
+		[ATHENA_Lipid_mod1_Class10000])
+	(label "LDL >= 160 and Absence of LDL drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class20000] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term SGOT)
+	(entry_type Numeric_Entry)
+	(label "AST > 3*UpperLimitofNormal")
+	(operator %3E)
+	(value [ATHENA_Lipid_Class20001]))
+
+([ATHENA_Lipid_Class200000] of  Scenario
+
+	(consultation_template [ATHENA_Lipid_Class210048])
+	(followed_by [ATHENA_Lipid_Class210027])
+	(label "Drug Therapy (1 drug) dashboard")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50003]))
+
+([ATHENA_Lipid_Class200001] of  Presence_Criterion
+
+	(domain_term Acute_Coronary_Syndrome)
+	(entry_type Note_Entry)
+	(label "Presence of ACS in past 6 mo")
+	(period [library_Class30029])
+	(presence TRUE))
+
+([ATHENA_Lipid_Class200002] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30044]
+		[NCEPATPIII_Instance_30009]
+		[NCEPATPIII_Instance_160072]
+		[NCEPATPIII_Instance_160076]
+		[NCEPATPIII_Instance_160075])
+	(label "CHD equivalents dashboard")
+	(operator OR))
+
+([ATHENA_Lipid_Class200003] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class200002]
+		[NCEPATPIII_Instance_30003])
+	(label "CHD equivalents dashboard and LDL>= 100")
+	(operator AND))
+
+([ATHENA_Lipid_Class20001] of  N_ary_Expression
+
+	(label "Abnormal AST = 3*UpperLimitofNormal")
+	(operator *)
+	(values
+		[ATHENA_Lipid_Class10006]
+		[ATHENA_Lipid_Class20002]))
+
+([ATHENA_Lipid_Class20002] of  Get_Class_Slot_Value
+
+	(class_reference SGOT)
+	(label "AST UpperLimitOfNormal")
+	(slot [UpperLimitOfNormal]))
+
+([ATHENA_Lipid_Class20003] of  Get_Class_Slot_Value
+
+	(class_reference SGPT)
+	(label "ALT UpperLimitOfNormal")
+	(slot [UpperLimitOfNormal]))
+
+([ATHENA_Lipid_Class20004] of  Presence_Criterion
+
+	(domain_term Abnormal+AST+level)
+	(entry_type Numeric_Entry)
+	(label "Presence of abnormal AST (gt 3xUpperLimitofNormal)")
+	(presence TRUE))
+
+([ATHENA_Lipid_Class20006] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class20007]))
+
+([ATHENA_Lipid_Class20007] of  Conditional_On_Screen_Message
+
+	(label "Presence of abnormal AST level message")
+	(message "Abnormal AST levels measure (>3 times upper limit of normal), which may be an adverse reaction to statin.  Consider alternative drug therapy.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class20004]))
+
+([ATHENA_Lipid_Class20008] of  N_ary_Expression
+
+	(label "Abnormal ALT = 3*UpperLImitofNormal")
+	(operator *)
+	(values
+		[ATHENA_Lipid_Class10006]
+		[ATHENA_Lipid_Class20003]))
+
+([ATHENA_Lipid_Class20009] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term SGPT)
+	(entry_type Numeric_Entry)
+	(label "ALT > 3*UpperlimitofNormal")
+	(operator %3E)
+	(value [ATHENA_Lipid_Class20008]))
+
+([ATHENA_Lipid_Class20011] of  Presence_Criterion
+
+	(domain_term Abnormal+ALT+level)
+	(entry_type Numeric_Entry)
+	(label "Presence of abnormal ALT (gt 3xUpperLimitofNormal)")
+	(presence TRUE))
+
+([ATHENA_Lipid_Class20012] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class20013]))
+
+([ATHENA_Lipid_Class20013] of  Conditional_On_Screen_Message
+
+	(label "Presence of abnormal ALT level message")
+	(message "Abnormal AST levels measure (>3 times upper limit of normal), which may be an adverse reaction to statin.  Consider alternative drug therapy.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class20011]))
+
+([ATHENA_Lipid_Class210001] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class200000])
+	(%3ATO [ATHENA_Lipid_Class210027]))
+
+([ATHENA_Lipid_Class210002] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class200001]
+		[ATHENA_Lipid_mod1_Class10000])
+	(label "Presence of ACS in past 6 mo and absence of LDL drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class210003] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190007])
+	(%3ATO [ATHENA_Lipid_Class180000]))
+
+([ATHENA_Lipid_Class210004] of  Scenario
+
+	(followed_by [ATHENA_Lipid_Class190007])
+	(label "2ndary Prevention no drug")
+	(new_encounter TRUE)
+	(precondition [ATHENA_Lipid_Class210005]))
+
+([ATHENA_Lipid_Class210005] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_mod1_Class10000]
+		[ATHENA_Lipid_Class210006])
+	(label "Absence of LDL drug and (CHD equiv dashboard or ACS)")
+	(operator AND))
+
+([ATHENA_Lipid_Class210006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class200001]
+		[ATHENA_Lipid_Class200002])
+	(label "ACS in past 6 mo OR CHD equiv dashboard")
+	(operator OR))
+
+([ATHENA_Lipid_Class210007] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class210004])
+	(%3ATO [ATHENA_Lipid_Class190007]))
+
+([ATHENA_Lipid_Class210008] of  Action_Choice
+
+	(actions
+		[ATHENA_Lipid_Class160001]
+		[ATHENA_Lipid_Class160217])
+	(label "Presence of CHD dash, LDL >=100, initiate statin")
+	(strict_rule_in_condition [ATHENA_Lipid_Class210009]))
+
+([ATHENA_Lipid_Class210009] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class200002]
+		[NCEPATPIII_Instance_30003]
+		[ATHENA_Lipid_mod1_Class10000])
+	(label "CHD equiv dash, LDL>=100, no drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class210010] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190007])
+	(%3ATO [ATHENA_Lipid_Class210008]))
+
+([ATHENA_Lipid_Class210011] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190007])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([ATHENA_Lipid_Class210012] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30054]
+		[NCEPATPIII_Instance_130008])
+	(label "0-1 risk factors  and LDL>=190")
+	(operator AND))
+
+([ATHENA_Lipid_Class210013] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[NCEPATPIII_Instance_100075])
+	(label "0-1 risk factors,no drug  Initiate drug therapy")
+	(strict_rule_in_condition [NCEPATPIII_Instance_30046]))
+
+([ATHENA_Lipid_Class210014] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190012])
+	(%3ATO [ATHENA_Lipid_Class210013]))
+
+([ATHENA_Lipid_Class210017] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30010]
+		[ATHENA_Lipid_Class210019])
+	(label "10 year risk 10-15%")
+	(operator AND))
+
+([ATHENA_Lipid_Class210018] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10 year risk >=15")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3E%3D)
+	(value 15.0))
+
+([ATHENA_Lipid_Class210019] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10 year risk < 15")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3C)
+	(value 15.0))
+
+([ATHENA_Lipid_Class210020] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30049]
+		[ATHENA_Lipid_Class210018])
+	(label "10 year risk 15 - 20 %")
+	(operator AND))
+
+([ATHENA_Lipid_Class210021] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[ATHENA_Lipid_Class160217])
+	(label "2+ risk factors, CHD risk>15,  initiate drug therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class210022]))
+
+([ATHENA_Lipid_Class210022] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30004]
+		[ATHENA_Lipid_mod1_Class10000]
+		[NCEPATPIII_Instance_30039]
+		[ATHENA_Lipid_Class230147])
+	(label "LDL>=130 & (CHD risk>=15 or Absent) & no drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class210023] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [ATHENA_Lipid_Class210021]))
+
+([ATHENA_Lipid_Class210024] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[ATHENA_Lipid_Class160217])
+	(label "2+ risk factors CHD risk<15, initiate drug therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class210025]))
+
+([ATHENA_Lipid_Class210025] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30005]
+		[ATHENA_Lipid_mod1_Class10000]
+		[NCEPATPIII_Instance_30039]
+		[ATHENA_Lipid_Class210017]
+		[ATHENA_Lipid_Class210019])
+	(label "LDL>160 & risk <15 & no drug")
+	(operator AND))
+
+([ATHENA_Lipid_Class210026] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [ATHENA_Lipid_Class210024]))
+
+([ATHENA_Lipid_Class210027] of  Choice_Step
+
+	(branches
+		[ATHENA_Lipid_Class160252]
+		[NCEPATPIII_Instance_30026]
+		[ATHENA_Lipid_Class150000]
+		[NCEPATPIII_Instance_40034])
+	(label "drug therapy choice dashboard"))
+
+([ATHENA_Lipid_Class210028] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30014])
+	(%3ATO [ATHENA_Lipid_Class210027]))
+
+([ATHENA_Lipid_Class210029] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class210027])
+	(%3ATO [ATHENA_Lipid_Class160252]))
+
+([ATHENA_Lipid_Class210030] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class210027])
+	(%3ATO [NCEPATPIII_Instance_30026]))
+
+([ATHENA_Lipid_Class210031] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class210027])
+	(%3ATO [ATHENA_Lipid_Class150000]))
+
+([ATHENA_Lipid_Class210032] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30026])
+	(%3ATO [NCEPATPIII_Instance_40007]))
+
+([ATHENA_Lipid_Class210033] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40007])
+	(%3ATO [NCEPATPIII_Instance_40009]))
+
+([ATHENA_Lipid_Class210034] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40007])
+	(%3ATO [NCEPATPIII_Instance_40008]))
+
+([ATHENA_Lipid_Class210035] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40009])
+	(%3ATO [NCEPATPIII_Instance_40014]))
+
+([ATHENA_Lipid_Class210037] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40014])
+	(%3ATO [NCEPATPIII_Instance_170010]))
+
+([ATHENA_Lipid_Class210038] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_170010])
+	(%3ATO [NCEPATPIII_Instance_40017]))
+
+([ATHENA_Lipid_Class210040] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30026]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class150000]
+		[ATHENA_Lipid_Class160252])
+	(label "2-drug therapy choices dashboard"))
+
+([ATHENA_Lipid_Class210041] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class210027])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class210046] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40005])
+	(%3ATO [ATHENA_Lipid_Class210040]))
+
+([ATHENA_Lipid_Class210047] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40005])
+	(%3ATO [ATHENA_Lipid_Class210027]))
+
+([ATHENA_Lipid_Class210048] of  Consultation_Guideline
+
+	(first_step [ATHENA_Lipid_Class210049])
+	(label "TLC")
+	(steps
+		[ATHENA_Lipid_Class210049]
+		[ATHENA_Lipid_Class210053]
+		[ATHENA_Lipid_Class210053])
+	(transitions [ATHENA_Lipid_Class190000]))
+
+([ATHENA_Lipid_Class210049] of  Consultation_Branch_Step
+
+	(branches [ATHENA_Lipid_Class210053])
+	(label "TLC")
+	(selection_method all_of))
+
+([ATHENA_Lipid_Class210050] of  Consultation_Action_Step
+
+	(actions [NCEPATPIII_Instance_100001])
+	(label "Start TLC"))
+
+([ATHENA_Lipid_Class210051] of  Consultation_Selection
+
+	(%3AFROM [ATHENA_Lipid_Class210049])
+	(%3ATO [ATHENA_Lipid_Class210050]))
+
+([ATHENA_Lipid_Class210052] of  On_Screen_Message
+
+	(description "TLC message")
+	(label "Continue  TLC")
+	(message "<b><font color=red>Continue  Therapeutic lifestyle changes to achieve LDL goal.  .</font>")
+	(message_type Primary_Recommendation))
+
+([ATHENA_Lipid_Class210053] of  Consultation_Action_Step
+
+	(actions [ATHENA_Lipid_Class210052])
+	(label "Continue TLC")
+	(rule_in [criterion_INSTANCE_00001]))
+
+([ATHENA_Lipid_Class220002] of  Scenario
+
+	(consultation_template [ATHENA_Lipid_Class210048])
+	(followed_by [ATHENA_Lipid_Class220004])
+	(label "Drug therapy (2+ drugs) dashboard")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50002]))
+
+([ATHENA_Lipid_Class220004] of  Choice_Step
+
+	(branches
+		[ATHENA_Lipid_Class150000]
+		[NCEPATPIII_Instance_40008]
+		[ATHENA_Lipid_Class160252]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class220016])
+	(label "2+ drug therapy choice dash"))
+
+([ATHENA_Lipid_Class220005] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220002])
+	(%3ATO [ATHENA_Lipid_Class220004]))
+
+([ATHENA_Lipid_Class220006] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_50007])
+	(followed_by [ATHENA_Lipid_Class220007])
+	(label "Intensify 2 drug")
+	(strict_rule_in_condition [NCEPATPIII_Instance_40037]))
+
+([ATHENA_Lipid_Class220007] of  Choice_Step
+
+	(branches [NCEPATPIII_Instance_40008])
+	(label "Intensify choices 2 drug"))
+
+([ATHENA_Lipid_Class220008] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [ATHENA_Lipid_Class220006]))
+
+([ATHENA_Lipid_Class220009] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [ATHENA_Lipid_Class150000]))
+
+([ATHENA_Lipid_Class220010] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220006])
+	(%3ATO [ATHENA_Lipid_Class220007]))
+
+([ATHENA_Lipid_Class220011] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220007])
+	(%3ATO [NCEPATPIII_Instance_40008]))
+
+([ATHENA_Lipid_Class220012] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [NCEPATPIII_Instance_40008]))
+
+([ATHENA_Lipid_Class220014] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [ATHENA_Lipid_Class160252]))
+
+([ATHENA_Lipid_Class220015] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([ATHENA_Lipid_Class220016] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_50008])
+	(label "Refer to lipid specialist 2 drug")
+	(strict_rule_in_condition [ATHENA_Lipid_Class220017]))
+
+([ATHENA_Lipid_Class220017] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIIInew_Instance_200023]
+		[NCEPATPIII_Instance_50002])
+	(label "current drugs at maximum & on 2 drugs")
+	(operator AND))
+
+([ATHENA_Lipid_Class220018] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class220004])
+	(%3ATO [ATHENA_Lipid_Class220016]))
+
+([ATHENA_Lipid_Class230144] of  Conditional_Expression
+
+	(label "10 year CHD risk default"))
+
+([ATHENA_Lipid_Class230146] of  Presence_Criterion
+
+	(domain_term 10-Year_CHD_Risk)
+	(entry_type Numeric_Entry)
+	(label "Absence of 10 year CHD Risk")
+	(presence FALSE))
+
+([ATHENA_Lipid_Class230147] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class210018]
+		[ATHENA_Lipid_Class230146])
+	(label "Absence of 10 year CHD Risk or 10 year risk >=15")
+	(operator OR))
+
+([ATHENA_Lipid_Class230207] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30052]
+		[ATHENA_Lipid_Class230208])
+	(label "(0-1 RF & LDL>=190) or (2+RF & LDL>=130)")
+	(operator OR))
+
+([ATHENA_Lipid_Class230208] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30005]
+		[NCEPATPIII_Instance_30039])
+	(label "2+ risk factors, LDL>=160")
+	(operator AND))
+
+([ATHENA_Lipid_Class230432] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_100001])
+	(label "TLC initiation dashboard")
+	(strict_rule_in_condition [ATHENA_Lipid_Class230433])
+	(strict_rule_out_condition [NCEPATPIII_Instance_40036]))
+
+([ATHENA_Lipid_Class230433] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_70078]
+		[NCEPATPIII_Instance_100005])
+	(label "Criteria for initiation for TLC dahsboard")
+	(operator OR))
+
+([ATHENA_Lipid_Class230434] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190012])
+	(%3ATO [ATHENA_Lipid_Class230432]))
+
+([ATHENA_Lipid_Class230435] of  Followed_By
+
+	(%3AFROM [ATHENA_Lipid_Class190017])
+	(%3ATO [ATHENA_Lipid_Class230432]))
+
+([ATHENA_Lipid_Class240331] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_40037]
+		[ATHENA_Lipid_Class160250])
+	(label "not within guideline goal and no contraindicated med")
+	(operator AND))
+
+([ATHENA_Lipid_Class30000] of  Presence_Criterion
+
+	(domain_term BL110_Anticoagulants)
+	(entry_type Medication)
+	(label "Presence of warfarin or anticoagulant")
+	(mood Authorized)
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class30001] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class30002])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class30002] of  Conditional_On_Screen_Message
+
+	(label "Caution in presence of warfarin or anticoagulants")
+	(message "Prescription of warfarin or anticoagulant detected.  Drug-drug interaction.  Caution:  monitor INR; there may be a need to adjust dosage to prevent bleeding complications")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class30000]))
+
+([ATHENA_Lipid_Class30003] of  Presence_Criterion
+
+	(domain_term digoxin)
+	(entry_type Medication)
+	(label "Presence of digoxin")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class30005] of  Presence_Criterion
+
+	(domain_term levothyroxine)
+	(entry_type Medication)
+	(label "Presence of levothyroxine")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class30006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class30000]
+		[ATHENA_Lipid_Class30005]
+		[ATHENA_Lipid_Class30005])
+	(label "Presence of digoxin, levothyroxine or warfarin")
+	(operator OR))
+
+([ATHENA_Lipid_Class30007] of  Presence_Criterion
+
+	(domain_term amiodarone)
+	(entry_type Medication)
+	(label "Presence of amiodarone")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class30008] of  Conditional_On_Screen_Message
+
+	(label "Presence of amiodarone when prescribing bile acid resin")
+	(message "Bile acid resins may increase the elimination of amiodarone; consider increasing dosing requirements of amiodarone.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class30007]))
+
+([ATHENA_Lipid_Class30009] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class30008])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class30010] of  Presence_Criterion
+
+	(domain_term CV200_Calcium_Channel_Blockers)
+	(entry_type Medication)
+	(label "Presence of calcium channel blockers")
+	(period [ATHENA_DM_Eye_Instance_100018])
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class30011] of  Conditional_On_Screen_Message
+
+	(label "Drug-drug interaction with calcium channel blocker")
+	(message "Prescription of calcium channel blocker detected.  Drug-drug interaction increases risk of myopathy.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class30010]))
+
+([ATHENA_Lipid_Class30012] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class30011])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class40000] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term CYP_3A4_Inhibitors)
+	(entry_type Medication)
+	(label "On CYP3A4 inhibitor")
+	(status active)
+	(value [criterion_INSTANCE_00001]))
+
+([ATHENA_Lipid_Class40001] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class10010]
+		[ATHENA_Lipid_Class40005])
+	(label "Presence of statin and CPK >10*UpperlimitofNormal")
+	(operator AND))
+
+([ATHENA_Lipid_Class40003] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Statin_Metabolized_by_CYP3A4)
+	(entry_type Medication)
+	(label "on stain metabolized by cyp3a4")
+	(mood Authorized)
+	(status active)
+	(value [criterion_INSTANCE_00001]))
+
+([ATHENA_Lipid_Class40004] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Statin_Not_Metabolized_by_CYP3A4)
+	(entry_type Medication)
+	(label "on statin not metabolized by cyp3a4")
+	(mood Authorized)
+	(status active)
+	(value [criterion_INSTANCE_00001]))
+
+([ATHENA_Lipid_Class40005] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class40003]
+		[ATHENA_Lipid_Class40004])
+	(label "on statin")
+	(operator OR))
+
+([ATHENA_Lipid_Class40008] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class40009])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class40009] of  On_Screen_Message
+
+	(label "Potential adverse effect of statins")
+	(message "Rhabdomyolysis is a potential adverse effect of statins.\nMyopathy (<0.2%; 5% in combination with gemfibrozil; 2% in combination with niacin) is a potential adverse effect of statins."))
+
+([ATHENA_Lipid_Class40012] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class10002]
+		[ATHENA_Lipid_Class30002]
+		[ATHENA_Lipid_Class30011])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class50000] of  On_Screen_Message
+
+	(label "Potential adverse effects of cholesterol absorption inhibitors")
+	(message "Potential adverse effects of cholesterol sbsorption inhibitors include myopathy and LFT elevation when combined with statins; hepatitis, pancreatitis; angioedema; thrombocitopenia; rhabdomyolysis (rare)"))
+
+([ATHENA_Lipid_Class50001] of  Conditional_On_Screen_Message
+
+	(description "active prescription")
+	(label "Caution when presecribing statin metabolized by cyp3a4 when there exists active prescription of cyp3a4 inhibitor")
+	(message "Presence of prescription of CYP3A4 Inhibitor detected.  Caution:  there is an increased risk of myopathy when combining a statin metabolized by CYP3A4 and an inhibitor of CYP3A4.")
+	(message_type Recommendation)
+	(rule_in_condition [ATHENA_Lipid_Class40000]))
+
+([ATHENA_Lipid_Class50002] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class10001])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class50004] of  On_Screen_Message
+
+	(label "Grapefruit juice is CYP3A4 inhibitor")
+	(message "Grapefruit juice is CYP3A4 inhibitor and may increase risk of myopathy when combined with statin metabolized by CYP3A4"))
+
+([ATHENA_Lipid_Class60000] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "CrCl <=50")
+	(numeric_domain_term Creatinine_Clearance)
+	(operator %3C%3D)
+	(value 50.0))
+
+([ATHENA_Lipid_Class60001] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class10000]
+		[ATHENA_Lipid_Class30008])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class60002] of  On_Screen_Message
+
+	(label "Potential adverse effects of fibrates")
+	(message "Potential adverse effects of fibreates include:  hepatitis, gallstones, myalgia, and myopathy and rhabdomyolysis.\nRisk of myopathy/rhabdomyolysis increases when combined with statins."))
+
+([ATHENA_Lipid_Class60003] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class60002])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class60004] of  Presence_Criterion
+
+	(domain_term Statin_Metabolized_by_CYP3A4)
+	(entry_type Medication)
+	(label "Presence of statin metabolized by CYP3A4")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class60005] of  Presence_Criterion
+
+	(domain_term Statin_Not_Metabolized_by_CYP3A4)
+	(entry_type Medication)
+	(label "Prsence of statin not metabolized by CYP3A4")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class60006] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class60005]
+		[ATHENA_Lipid_Class60004])
+	(label "Presence of statin")
+	(operator OR))
+
+([ATHENA_Lipid_Class60007] of  Conditional_On_Screen_Message
+
+	(label "Caution:  Presence of statin when prescribing fibrate")
+	(message "Prescription of statin detected.  Caution:  Risk of myopathy/rhabdomyolysis increases when fibrates combined with statins.  Monitor for musculoskeletal symptoms.")
+	(rule_in_condition [ATHENA_Lipid_Class60006]))
+
+([ATHENA_Lipid_Class60008] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class60007]))
+
+([ATHENA_Lipid_Class60009] of  On_Screen_Message
+
+	(label "Potential adverse effects of niacin")
+	(message "Potential adverse effects of niacin include hepatotoxicity, hyperglycemia, hyperuricemia"))
+
+([ATHENA_Lipid_Class60010] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class60009])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class60011] of  On_Screen_Message
+
+	(label "Liver function test monitoring (timely)")
+	(message "Baseline liver function test recommended, then 6-12 weeks after start of dosage or dosage change, then 6-12 months thereafter."))
+
+([ATHENA_Lipid_Class60012] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class60011]
+		[ATHENA_Lipid_Class70019]
+		[ATHENA_Lipid_Class60007]))
+
+([ATHENA_Lipid_Class70000] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Medication)
+	(label "0 Lipid Lowering Drug")
+	(numeric_domain_term CV350_AntiLipemic_Agents)
+	(operator %3D)
+	(status active)
+	(value 0.0))
+
+([ATHENA_Lipid_Class70001] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class50000]))
+
+([ATHENA_Lipid_Class70002] of  Conditional_On_Screen_Message
+
+	(label "Caution:  presence of statin when prescribing cholesterol absorption inhibitor")
+	(message "Presence of prescription of statin detected.  Myopathy reported after adding cholesterol absorption inhibitors to high dose statins; LFT elevation incurred when combined with statins.\nPlease instruct patients to report any unexplained musce tenderness, pain or weaknes, as this increases the risk of myopahty.")
+	(rule_in_condition [ATHENA_Lipid_Class60006]))
+
+([ATHENA_Lipid_Class70003] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class70002]))
+
+([ATHENA_Lipid_Class70004] of  Presence_Criterion
+
+	(domain_term Bile_Acid_Sequestrant)
+	(entry_type Medication)
+	(label "Presence of bile acid sequestrant")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class70005] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class60004]
+		[ATHENA_Lipid_Class60005]
+		[ATHENA_Lipid_Class10019]
+		[ATHENA_Lipid_Class70004])
+	(label "Presence of drugs that may raise LFT that interact w cholesterol absorption inhibitors")
+	(operator OR))
+
+([ATHENA_Lipid_Class70006] of  Conditional_On_Screen_Message
+
+	(label "Presence of drugs that may raise LFT that interact w cholesterol absorption inhibitors")
+	(message "Presence of a potential drug-drug interaction detected.  LFT elevation may occur.")
+	(rule_in_condition [ATHENA_Lipid_Class70005]))
+
+([ATHENA_Lipid_Class70007] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class70006]))
+
+([ATHENA_Lipid_Class70008] of  On_Screen_Message
+
+	(label "Potential adverse effects of omega-3 fatty acid")
+	(message "Potential adverse effects of omega-3 fatty acid include:  LDL-C elevation, especially for those with very high TG and no concomitant statin; ALT elevation."))
+
+([ATHENA_Lipid_Class70009] of  Collateral_Action
+
+	(actions [ATHENA_Lipid_Class70008])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class70010] of  On_Screen_Message
+
+	(label "Liver function tests monitoring (general)")
+	(message "Recommend monitoring LFTs throughout therapy."))
+
+([ATHENA_Lipid_Class70011] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class70010]
+		[ATHENA_Lipid_Class60002]
+		[ATHENA_Lipid_Class60007]
+		[ATHENA_Lipid_Class30002]
+		[ATHENA_Lipid_Class70016])
+	(mood Recommend_Add))
+
+([ATHENA_Lipid_Class70012] of  On_Screen_Message
+
+	(label "Lipid panel monitoring")
+	(message "Lipid panel, including TG and LDL-C should be checked within 6-12 weeks of initiation of treatment."))
+
+([ATHENA_Lipid_Class70013] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class70012]
+		[ATHENA_Lipid_Class30002]
+		[ATHENA_Lipid_Class70008]))
+
+([ATHENA_Lipid_Class70014] of  Collateral_Action
+
+	(actions
+		[ATHENA_Lipid_Class30002]
+		[ATHENA_Lipid_Class50000]
+		[ATHENA_Lipid_Class70002]
+		[ATHENA_Lipid_Class70006]))
+
+([ATHENA_Lipid_Class70015] of  Presence_Criterion
+
+	(domain_term GLYBURIDE)
+	(entry_type Medication)
+	(label "Presence of glyburide")
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_Class70016] of  Conditional_On_Screen_Message
+
+	(label "Caution:  presence of glyburide; drug-drug interaction w firbrates")
+	(message "Presence of glyburide detected; there is a drug-drug interaction with fibrates that may cause hypoglycemia.")
+	(rule_in_condition [ATHENA_Lipid_Class70015]))
+
+([ATHENA_Lipid_Class70017] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class60004]
+		[ATHENA_Lipid_mod1_Class0])
+	(label "Presence of statin metabolized by cyp3a4 and cyp3a4 inhibitor")
+	(operator AND))
+
+([ATHENA_Lipid_Class70019] of  Conditional_On_Screen_Message
+
+	(label "Caution when there exists statin metabolized by cyp3a4 and cyp3a4 inhibitor")
+	(message "Caution when prescribing niacin when patient is already on a statin metabolized by cyp3a4 and a cyp3a4 inhibitor")
+	(rule_in_condition [ATHENA_Lipid_Class70017]))
+
+([ATHENA_Lipid_Class70021] of  On_Screen_Message
+
+	(label "Monitor for musculoskeletal symptoms")
+	(message "Monitor for musculoskeletal symptoms"))
+
+([ATHENA_Lipid_Class70023] of  Interval
+
+	(high [library_Class10003])
+	(label "10-50")
+	(low [ATHENA_Lipid_Class10005]))
+
+([ATHENA_Lipid_Class70027] of  Numeric_Term_Criterion
+
+	(entry_type Numeric_Entry)
+	(label "CrCl<10")
+	(numeric_domain_term Creatinine_Clearance)
+	(operator %3C)
+	(value 10.0))
+
+([ATHENA_Lipid_Class80000] of  On_Screen_Message
+
+	(label "Mesg about conditions and drugs that affect lipid levels")
+	(message "Clinical decisions should be based upon lipid profiles done 1 to 8 weeks apart (fasting) with an LDL-Cor TC difference of <30 mg/dL. [I]\nCholesterol levels may be temporarily lowered up to 40 percent because of recent acute hospitalization, MI, stroke, surgery, trauma, or infection. Lipid profiles should be obtained after 8 weeks of the event or within 12-24 hours of the event to ensure accuracy. [I]\nCholesterol and/or TG levels may be raised by some medications, such as. progestins, estrogens, androgens, anabolic steroids, corticosteroids, cyclosporine, diuretics, protease inhibitors, and retinoids.\nLipid profiles should not be mesured in pregnant women until three to 4 months post partum. [I]")
+	(message_type Recommendation))
+
+([ATHENA_Lipid_Class80001] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "CrCl >=10")
+	(numeric_domain_term Creatinine_Clearance)
+	(operator %3E%3D)
+	(value 10.0))
+
+([ATHENA_Lipid_Class80002] of  N_ary_Criterion
+
+	(criteria
+		[ATHENA_Lipid_Class80001]
+		[ATHENA_Lipid_Class60000])
+	(label "10 <= CrCl <=50")
+	(operator AND))
+
+([ATHENA_Lipid_Class90000] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 41.0)
+	(upper_limit 80.0))
+
+([ATHENA_Lipid_Class90001] of  Numeric_Term_Criterion
+
+	(entry_type Medication)
+	(label "rosuvastatin >= 40 mg daily")
+	(numeric_domain_term rosuvastatin)
+	(operator %3E%3D)
+	(status active)
+	(value 40.0))
+
+([ATHENA_Lipid_mod1_Class0] of  Presence_Criterion
+
+	(domain_term CYP_3A4_Inhibitors)
+	(entry_type Medication)
+	(label "Presence of CYP 3A4 Inhibitor")
+	(mood Authorized)
+	(presence TRUE)
+	(status active))
+
+([ATHENA_Lipid_mod1_Class10000] of  Presence_Criterion
+
+	(domain_term CV350_AntiLipemic_Agents)
+	(entry_type Medication)
+	(label "Absence of LDL lowering drug")
+	(presence FALSE)
+	(status active))
+
+([ATHENA_Lipid_mod1_Class10001] of  Presence_Criterion
+
+	(domain_term CV350_AntiLipemic_Agents)
+	(entry_type Medication)
+	(label "Absence of recommended lipid lowing drug to add")
+	(mood Recommend_Add)
+	(presence FALSE)
+	(status active))
+
+([ATHENA_Lipid_mod1_Class10002] of  Drug_Usage
+
+	(Absolute_Contraindications
+		TG%3E400mg%2FdL
+		Dysbeta_lipoproteinemia)
+	(collateral_actions [ATHENA_Lipid_Class60001])
+	(Drug_Class_Name Bile_Acid_Sequestrant)
+	(label "Bile Acid Sequestrant")
+	(Relative_Contraindications
+		400mg%2FdL%3ETG%3E200mg%2FdL
+		Peptic_Ulcer))
+
+([ATHENA_Lipid_mod1_Class10003] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Abnormal+ALT+level
+		Abnormal+AST+level
+		Abnormal_CPK)
+	(collateral_actions [ATHENA_Lipid_Class70011])
+	(Drug_Class_Name Fibric_Acid)
+	(label "Fibric Acid"))
+
+([ATHENA_Lipid_mod1_Class10004] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Abnormal+ALT+level
+		Abnormal+AST+level
+		Abnormal_CPK
+		Chronic_Liver_Disease)
+	(collateral_actions
+		[ATHENA_Lipid_Class60010]
+		[ATHENA_Lipid_Class60012])
+	(Drug_Class_Name Nicotinic_Acid)
+	(label "Nicotinic Acid")
+	(Relative_Contraindications
+		Diabetes_Mellitus
+		Gout
+		Hyperuricemia
+		Peptic_Ulcer)
+	(Relative_Indications TG%3E%3D500mg%2FdL))
+
+([ATHENA_Lipid_mod1_Class10005] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Adverse_Reaction_To_Statin
+		Pregnancy
+		Abnormal+ALT+level
+		Abnormal+AST+level
+		Abnormal_CPK
+		Chronic_Liver_Disease)
+	(collateral_actions
+		[ATHENA_Lipid_Class40012]
+		[ATHENA_Lipid_Class50002])
+	(Compelling_Indications
+		CHD_Or_CHDEquivalent
+		Hyperlipidemia
+		High_LDL_Cholesterol)
+	(Drug_Class_Name Statin_Metabolized_by_CYP3A4)
+	(Drug_Partners_To_Avoid Statin_Not_Metabolized_by_CYP3A4)
+	(formulary_preferred_drug_in_class
+		[ATHENA_Lipid_Class110016]
+		[ATHENA_Lipid_mod1_Class30000]
+		[ATHENA_Lipid_mod1_Class30001])
+	(label "Statin metabolized by CYP3A4")
+	(Relative_Contraindications
+		Liver_Disease
+		Renal_Insufficiency
+		Usage+of+CYP+3A4+inhibitor)
+	(%3ADOCUMENTATION "5/16/13 added compelling indication hyperlipidemia, High_LDL_Cholesterol"))
+
+([ATHENA_Lipid_mod1_Class20000] of  Drug_Usage
+
+	(Absolute_Contraindications
+		Adverse_Reaction_To_Statin
+		Pregnancy
+		Abnormal+ALT+level
+		Abnormal+AST+level
+		Abnormal_CPK
+		Chronic_Liver_Disease)
+	(collateral_actions [ATHENA_Lipid_Class40012])
+	(Compelling_Indications
+		CHD_Or_CHDEquivalent
+		Hyperlipidemia
+		High_LDL_Cholesterol)
+	(Drug_Class_Name Statin_Not_Metabolized_by_CYP3A4)
+	(Drug_Partners_To_Avoid Statin_Metabolized_by_CYP3A4)
+	(formulary_preferred_drug_in_class [ATHENA_Lipid_Class110018])
+	(label "Statin not metabolized by CYP3A4")
+	(Relative_Contraindications
+		Liver_Disease
+		Renal_Insufficiency)
+	(%3ADOCUMENTATION "5/16/13 added compelling indication hyperlipidemia, High_LDL_Cholesterol"))
+
+([ATHENA_Lipid_mod1_Class30000] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class100001]
+		[ATHENA_Lipid_Class90000])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class10005])
+	(generic_drug lovastatin)
+	(label "lovastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 10.0))
+
+([ATHENA_Lipid_mod1_Class30001] of  Guideline_Drug
+
+	(dose_level_ranges
+		[ATHENA_Lipid_Class170457]
+		[ATHENA_Lipid_Class170458])
+	(dose_strength_unit mg)
+	(drug_usage [ATHENA_Lipid_mod1_Class10005])
+	(generic_drug simvastatin)
+	(label "simvastatin")
+	(max_recommended_dose_level High_Dose%28high%2Flow%29)
+	(starting_dose 20.0))
+
+([ATP3Demo_Instance_2] of  N_ary_Criterion
+
+	(criteria
+		[ATP3Demo_Instance_3]
+		[ATP3Demo_Instance_4])
+	(label "AST > 40 or AST < 40")
+	(operator OR))
+
+([ATP3Demo_Instance_3] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "AST > 40")
+	(numeric_domain_term SGOT)
+	(operator %3E)
+	(value 40.0))
+
+([ATP3Demo_Instance_4] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "ALT > 40")
+	(numeric_domain_term SGPT)
+	(operator %3E)
+	(value 40.0))
+
+([CHD_Or_CHDEquivalent] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_30007])
+	(PrettyName "CHD or CHD-Equivalent"))
+
+([CHD_Or_CHDEquivalent_NoRF] of  Diagnostic_Term_Metaclass
+
+	(PrettyName "CHD Equivalents"))
+
+([CHD_Risk_Group] of  Diagnostic_Term_Metaclass
+
+	(PrettyName "CHD Risk Group"))
+
+([Defined+Condition] of  Diagnostic_Term_Metaclass
+)
+
+([Dharma_11866_temp] of  %3ASTANDARD-FACET
+
+	(%3AASSOCIATED-SLOT [PrettyName]))
+
+([HDL+%3C40+mg%2FdL] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_170268]))
+
+([High_LDL_Cholesterol] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class230207])
+	(label "High LDL Cholesterol"))
+
+([Hypertension_Code] of  Medical_Conditions_Metaclass
+)
+
+([Jess+engine] of  %3AJESS-ENGINE
+)
+
+([KB_229039_Class0] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([KB_922029_Class249] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class250] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_922029_Class251] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class252] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_922029_Class253] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class254] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_922029_Class255] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_922029_Class256] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_922029_Class257] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class258] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_922029_Class259] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_922029_Class260] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class261] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_922029_Class262] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class263] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class264] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class265] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class266] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_922029_Class267] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class268] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class269] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class270] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class271] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_922029_Class272] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class145] of  Definite_Time_Point
+
+	(day 15)
+	(month_name 5)
+	(system_time 2448758)
+	(year_CE 1992))
+
+([KB_923353_Class147] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_923353_Class149] of  Definite_Time_Point
+
+	(day 29)
+	(month_name 3)
+	(system_time 2448345)
+	(year_CE 1991))
+
+([KB_923353_Class151] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_923353_Class153] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class155] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 1)
+	(system_time 2448277)
+	(year_CE 1991))
+
+([KB_923353_Class157] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_923353_Class159] of  Definite_Time_Point
+
+	(day 26)
+	(month_name 3)
+	(system_time 2448342)
+	(year_CE 1991))
+
+([KB_923353_Class161] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class163] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class165] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_923353_Class167] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class169] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class171] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class175] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class177] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class179] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_923353_Class181] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class183] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class185] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class187] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class189] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class191] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class193] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class195] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class197] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class199] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class201] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class203] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class205] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class207] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class209] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class211] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class213] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class215] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class217] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class219] of  Definite_Time_Point
+
+	(day 1)
+	(month_name 1)
+	(system_time 2440588)
+	(year_CE 1970))
+
+([KB_923353_Class245] of  Definite_Time_Point
+
+	(day 1)
+	(month_name 1)
+	(system_time 2440588)
+	(year_CE 1970))
+
+([KB_923353_Class246] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class247] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class248] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class249] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class250] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class251] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class252] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_923353_Class253] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class254] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class255] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class256] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class257] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class258] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class259] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_923353_Class260] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class261] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_923353_Class262] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class263] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class264] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class265] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class266] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_923353_Class267] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class268] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class269] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class270] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class271] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_923353_Class272] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class145] of  Definite_Time_Point
+
+	(day 15)
+	(month_name 5)
+	(system_time 2448758)
+	(year_CE 1992))
+
+([KB_963093_Class147] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_963093_Class149] of  Definite_Time_Point
+
+	(day 29)
+	(month_name 3)
+	(system_time 2448345)
+	(year_CE 1991))
+
+([KB_963093_Class151] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_963093_Class153] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class155] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 1)
+	(system_time 2448277)
+	(year_CE 1991))
+
+([KB_963093_Class157] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_963093_Class159] of  Definite_Time_Point
+
+	(day 26)
+	(month_name 3)
+	(system_time 2448342)
+	(year_CE 1991))
+
+([KB_963093_Class161] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class163] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class165] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_963093_Class167] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class169] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class171] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class175] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class177] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class179] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_963093_Class181] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class183] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class185] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class187] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class189] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class191] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class193] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class195] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class197] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class199] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class201] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class203] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class205] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class207] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class209] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class211] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class213] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class215] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class217] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class219] of  Definite_Time_Point
+
+	(day 1)
+	(month_name 1)
+	(system_time 2440588)
+	(year_CE 1970))
+
+([KB_963093_Class245] of  Definite_Time_Point
+
+	(day 1)
+	(month_name 1)
+	(system_time 2440588)
+	(year_CE 1970))
+
+([KB_963093_Class246] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class247] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class248] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class249] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class250] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class251] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class252] of  Definite_Time_Point
+
+	(day 20)
+	(month_name 2)
+	(system_time 2448673)
+	(year_CE 1992))
+
+([KB_963093_Class253] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class254] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class255] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class256] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class257] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class258] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class259] of  Definite_Time_Point
+
+	(day 22)
+	(month_name 3)
+	(system_time 2448338)
+	(year_CE 1991))
+
+([KB_963093_Class260] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class261] of  Definite_Time_Point
+
+	(day 23)
+	(month_name 3)
+	(system_time 2448339)
+	(year_CE 1991))
+
+([KB_963093_Class262] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class263] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class264] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class265] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class266] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([KB_963093_Class267] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class268] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class269] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class270] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class271] of  Definite_Time_Point
+
+	(day 18)
+	(month_name 4)
+	(system_time 2448731)
+	(year_CE 1992))
+
+([KB_963093_Class272] of  Definite_Time_Point
+
+	(day 9)
+	(month_name 12)
+	(system_time 2448600)
+	(year_CE 1991))
+
+([LDL_not_within_guideline_goal] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_40037])
+	(PrettyName "LDL not within guideline goal"))
+
+([NCEPATPIII_Instance_0] of  Management_Diagram
+
+	(label "Lipid management algorithm")
+	(steps
+		[NCEPATPIII_Instance_10000]
+		[NCEPATPIII_Instance_10001]
+		[NCEPATPIII_Instance_20001]
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_30014]
+		[NCEPATPIII_Instance_30019]
+		[NCEPATPIII_Instance_30026]
+		[NCEPATPIII_Instance_40003]
+		[NCEPATPIII_Instance_40005]
+		[NCEPATPIII_Instance_40006]
+		[NCEPATPIII_Instance_40007]
+		[NCEPATPIII_Instance_40008]
+		[NCEPATPIII_Instance_40009]
+		[NCEPATPIII_Instance_40014]
+		[NCEPATPIII_Instance_40017]
+		[NCEPATPIII_Instance_40020]
+		[NCEPATPIII_Instance_40034]
+		[NCEPATPIII_Instance_40045]
+		[NCEPATPIII_Instance_40046]
+		[NCEPATPIII_Instance_40051]
+		[NCEPATPIII_Instance_40053]
+		[NCEPATPIII_Instance_40057]
+		[NCEPATPIII_Instance_40060]
+		[NCEPATPIII_Instance_70076]
+		[NCEPATPIII_Instance_170010])
+	(transitions
+		[NCEPATPIII_Instance_20002]
+		[NCEPATPIII_Instance_20003]
+		[NCEPATPIII_Instance_30032]
+		[NCEPATPIII_Instance_30033]
+		[NCEPATPIII_Instance_30034]
+		[NCEPATPIII_Instance_30035]
+		[NCEPATPIII_Instance_30057]
+		[NCEPATPIII_Instance_30059]
+		[NCEPATPIII_Instance_40004]
+		[NCEPATPIII_Instance_40010]
+		[NCEPATPIII_Instance_40011]
+		[NCEPATPIII_Instance_40015]
+		[NCEPATPIII_Instance_40016]
+		[NCEPATPIII_Instance_40021]
+		[NCEPATPIII_Instance_40039]
+		[NCEPATPIII_Instance_40054]
+		[NCEPATPIII_Instance_40055]
+		[NCEPATPIII_Instance_40056]
+		[NCEPATPIII_Instance_40058]
+		[NCEPATPIII_Instance_40059]
+		[NCEPATPIII_Instance_40061]
+		[NCEPATPIII_Instance_50012]
+		[NCEPATPIII_Instance_60000]
+		[NCEPATPIII_Instance_70077]
+		[NCEPATPIII_Instance_100007]
+		[NCEPATPIII_Instance_190011]
+		[NCEPATPIII_Instance_190012]
+		[NCEPATPIII_Instance_200014]
+		[NCEPATPIII_Instance_200016]
+		[NCEPATPIII_Instance_200017]
+		[KB_229039_Class0]
+		[ATHENA_Lipid_Class169]
+		[ATHENA_Lipid_Class130001]
+		[ATHENA_Lipid_Class130003]
+		[ATHENA_Lipid_Class140092]
+		[ATHENA_Lipid_Class140093]))
+
+([NCEPATPIII_Instance_10000] of  Scenario
+
+	(followed_by [ATHENA_Lipid_Class190007])
+	(label "No drug, high CHD risk")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50010]))
+
+([NCEPATPIII_Instance_100000] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(label "no risk factor")
+	(numeric_domain_term Risk_Factor_for_CVD)
+	(operator %3D)
+	(value 0.0))
+
+([NCEPATPIII_Instance_100001] of  On_Screen_Message
+
+	(description "TLC message")
+	(label "Start TLC")
+	(message "<b><font color=red>Start Therapeutic lifestyle changes to achieve LDL goal.  Check lipid profile in 3 months.</font>")
+	(message_type Primary_Recommendation))
+
+([NCEPATPIII_Instance_100004] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_70078]
+		[NCEPATPIII_Instance_100005]
+		[NCEPATPIII_Instance_30043])
+	(label "Criteria for initiation for TLC")
+	(operator OR))
+
+([NCEPATPIII_Instance_100005] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30039]
+		[NCEPATPIII_Instance_30004]
+		[NCEPATPIII_Instance_110005]
+		[NCEPATPIII_Instance_30002]
+		[NCEPATPIII_Instance_160070])
+	(label "2+Risk Factors and 130 <= LDL<160")
+	(operator AND))
+
+([NCEPATPIII_Instance_100006] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30003]
+		[NCEPATPIII_Instance_30043]
+		[NCEPATPIII_Instance_30001])
+	(label "CHD or CHD Equivalent and 100 <= LDL<130")
+	(operator AND))
+
+([NCEPATPIII_Instance_100007] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40057])
+	(%3ATO [NCEPATPIII_Instance_70076]))
+
+([NCEPATPIII_Instance_10001] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[NCEPATPIII_Instance_100075])
+	(label "LDL>=130, Initiate Drug Therapy")
+	(strict_rule_in_condition [NCEPATPIII_Instance_30042]))
+
+([NCEPATPIII_Instance_100013] of  Consultation_Selection
+
+	(%3AFROM [NCEPATPIII_Instance_90012])
+	(%3ATO [NCEPATPIII_Instance_90011]))
+
+([NCEPATPIII_Instance_10002] of  Supporting_Material
+
+	(label "NCEPATPIII Report")
+	(role evidence)
+	(URL "http://www.nhlbi.nih.gov/guidelines/cholesterol/atp3_rpt.htm"))
+
+([NCEPATPIII_Instance_100075] of  Evaluate_Start_Activity
+
+	(alternatives
+		[ATHENA_Lipid_mod1_Class10005]
+		[ATHENA_Lipid_mod1_Class20000]
+		[ATHENA_Lipid_mod1_Class10004]
+		[ATHENA_Lipid_mod1_Class10002]
+		[ATHENA_Lipid_mod1_Class10003]
+		[ATHENA_Lipid_Class10015])
+	(label "evaluate starting lipid-lowering drugs"))
+
+([NCEPATPIII_Instance_110002] of  Conditional_Expressions
+
+	(conditional_expression_list
+		[NCEPATPIII_Instance_90000]
+		[NCEPATPIII_Instance_120001])
+	(label "net number of risk factor"))
+
+([NCEPATPIII_Instance_110003] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_110004]
+		[NCEPATPIII_Instance_130005]
+		[NCEPATPIII_Instance_130006])
+	(label "on anti-hypertensive med or BP>140/90")
+	(operator OR))
+
+([NCEPATPIII_Instance_110004] of  Presence_Criterion
+
+	(entry_type Medication)
+	(label "presence of antihypertensive drug")
+	(presence TRUE)
+	(status active))
+
+([NCEPATPIII_Instance_110005] of  Presence_Criterion
+
+	(domain_term 10+year+CHD+risk%3C10%25)
+	(entry_type Note_Entry)
+	(label "presence of CHD risk <10%")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_120000] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 21.0)
+	(upper_limit 40.0))
+
+([NCEPATPIII_Instance_120001] of  Conditional_Expression
+
+	(label "if HDL <= 60 mg/dL do not subtract 1 from number of risk factors")
+	(precondition [NCEPATPIII_Instance_120005])
+	(value [NCEPATPIII_Instance_120006]))
+
+([NCEPATPIII_Instance_120002] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_120003]
+		[NCEPATPIII_Instance_120004])
+	(label "HDL > 60 mg/dL and  # of risk factors > 0")
+	(operator AND))
+
+([NCEPATPIII_Instance_120003] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "HDL>60mg/dL")
+	(numeric_domain_term HDL_Cholesterol)
+	(operator %3E)
+	(unit "mg/dL")
+	(value 60.0))
+
+([NCEPATPIII_Instance_120004] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(label "# of risk factors > 0")
+	(numeric_domain_term Risk_Factor_for_CVD)
+	(operator %3E)
+	(value 0.0))
+
+([NCEPATPIII_Instance_120005] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_100000]
+		[NCEPATPIII_Instance_130001])
+	(label "no risk factor or HDL<60 mg/dL")
+	(operator OR))
+
+([NCEPATPIII_Instance_120006] of  Numeric_Term_Query
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(numeric_domain_term "Risk_Factor"))
+
+([NCEPATPIII_Instance_120201] of  Presence_Criterion
+
+	(domain_term Total_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of Cholesterol Lab Data")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_130001] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "hdl < 60 mg/dL")
+	(numeric_domain_term HDL_Cholesterol)
+	(operator %3C%3D)
+	(unit "mg/dL")
+	(value 60.0))
+
+([NCEPATPIII_Instance_130003] of  Binary_Expression
+
+	(first_argument [NCEPATPIII_Instance_120006])
+	(label "# of risk factors - 1")
+	(operator -)
+	(second_argument [NCEPATPIII_Instance_130004]))
+
+([NCEPATPIII_Instance_130004] of  Numeric_Constant
+
+	(value 1.0))
+
+([NCEPATPIII_Instance_130005] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "DBP>90mmHG")
+	(numeric_domain_term Treatment_Diastolic_BP)
+	(operator %3E)
+	(unit "mmHG")
+	(value 90.0))
+
+([NCEPATPIII_Instance_130006] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "SBP>140mmHG")
+	(numeric_domain_term Treatment_Systolic_BP)
+	(operator %3E)
+	(unit "mmHG")
+	(value 140.0))
+
+([NCEPATPIII_Instance_130008] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(label "# risk factors <= 1")
+	(numeric_domain_term Risk_Factor_for_CVD)
+	(operator %3C%3D)
+	(value 1.0))
+
+([NCEPATPIII_Instance_140001] of  Range_Mapping_Entry
+
+	(abstract_value High_Dose%28high%2Flow%29)
+	(lower_limit 41.0)
+	(upper_limit 80.0))
+
+([NCEPATPIII_Instance_140002] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 40.0)
+	(upper_limit 40.0))
+
+([NCEPATPIII_Instance_140003] of  PAL_Criterion
+
+	(case_variable "$patient_id")
+	(label "There exists non-contraindicated drug that is not at maximum dose")
+	(PAL_constraint [NCEPATPIII_Instance_140004]))
+
+([NCEPATPIII_Instance_140004] of  %3APAL-CONSTRAINT
+
+	(%3APAL-NAME "There exists non-contraindicated drug that is not at maximum dose")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?guidelineDrug :FRAME Guideline_Drug)\n(defrange ?rangeMapping :FRAME Range_Mapping_Entry)\n(defrange ?drug_usage :FRAME Drug_Usage)\n\n(defrange ?condition :FRAME Note_Entry)\n\n(defrange ?contraindication :FRAME Medical_Conditions_Metaclass)\n(defrange ?derived_contraindication :FRAME Diagnostic_Term_Metaclass)\n\n")
+	(%3APAL-STATEMENT "(exists ?med \n        (and \n             (patient_id ?med $patient_id)\n             (is-class (drug_name ?med))\n             (or (not (own-slot-not-null mood ?med ))\n                 (mood ?med Authorized)) \n             (exists ?guidelineDrug\n                     (and (= (coerce-to-class (drug_name ?med)) (generic_drug ?guidelineDrug))\n                          (exists ?rangeMapping \n                                  (and (dose_level_ranges ?guidelineDrug ?rangeMapping)\n                                       (= (abstract_value ?rangeMapping) (coerce-to-class \"High_Dose(high/low)\"))\n                                                        \n                                       (< (daily_dose ?med) (lower_limit ?rangeMapping))  )))\n                     			      )\n             (not (exists ?drug_usage \n                          (and (subclass-of (coerce-to-class (drug_name ?med))\n                                            (Drug_Class_Name ?drug_usage))\n                               (or (exists ?contraindication \n                                           (and (Absolute_Contraindications ?drug_usage ?contraindication)\n                                                (exists ?condition \n                                                        (and (patient_id ?med $patient_id)(is-class (domain_term ?condition))\n                                                             (or  (subclass-of (coerce-to-class (domain_term ?condition))\n                                                                               ?contraindication)\n                                                                  (= (coerce-to-class (domain_term ?condition))\n                                                                     ?contraindication)\n                                                             )))))\n                                   (exists  ?derived_contraindication \n                                            (and (Absolute_Contraindications ?drug_usage ?derived_contraindication)\n                                                 (is-derivable ?derived_contraindication))))))))\n)\n\n"))
+
+([NCEPATPIII_Instance_140005] of  Evaluate_Increase_Activity_Intensity
+
+	(activities_to_modify [NCEPATPIII_Instance_140006])
+	(activity_class "Medication")
+	(activity_spec Guideline_Drug)
+	(activity_spec_key [generic_drug])
+	(attribute "drug_daily_dose")
+	(label "consider increasing dose"))
+
+([NCEPATPIII_Instance_140006] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(key_slot [drug_name])
+	(label "non-contraindicated drugs not at max dose")
+	(PAL_query [NCEPATPIII_Instance_140007]))
+
+([NCEPATPIII_Instance_140007] of  PAL-QUERY
+
+	(%3APAL-NAME "find non-contraindicated medications whose dose can be increased")
+	(%3APAL-RANGE "(defrange ?med :FRAME Medication)\n(defrange ?guidelineDrug :FRAME Guideline_Drug)\n(defrange ?rangeMapping :FRAME Range_Mapping_Entry)\n(defrange ?drug_usage :FRAME Drug_Usage)\n\n(defrange ?condition :FRAME Note_Entry)\n\n(defrange ?contraindication :FRAME Medical_Conditions_Metaclass)\n(defrange ?derived_contraindication :FRAME Diagnostic_Term_Metaclass)")
+	(%3APAL-STATEMENT "(findall ?med \n         (and \n              (patient_id ?med $patient_id)\n              (is-class (drug_name ?med))\n              (or (not (own-slot-not-null mood ?med ))\n                  (mood ?med Authorized)) \n              (exists ?guidelineDrug\n                      (and (= (coerce-to-class (drug_name ?med)) (generic_drug ?guidelineDrug))\n                           (exists ?rangeMapping \n                                   (and (dose_level_ranges ?guidelineDrug ?rangeMapping)\n                                        (= (abstract_value ?rangeMapping) (coerce-to-class \"High_Dose(high/low)\"))\n                                                        \n                                        (< (daily_dose ?med) (lower_limit ?rangeMapping))  )))\n                      			      )\n              (not (exists ?drug_usage \n                           (and (subclass-of (coerce-to-class (drug_name ?med))\n                                             (Drug_Class_Name ?drug_usage))\n                                (or (exists ?contraindication \n                                            (and (Absolute_Contraindications ?drug_usage ?contraindication)\n                                                 (exists ?condition \n                                                         (and (patient_id ?med $patient_id)(is-class (domain_term ?condition))\n                                                              (or  (subclass-of (coerce-to-class (domain_term ?condition))\n                                                                                ?contraindication)\n                                                                   (= (coerce-to-class (domain_term ?condition))\n                                                                      ?contraindication)\n                                                              )))))\n                                    (exists  ?derived_contraindication \n                                             (and (Absolute_Contraindications ?drug_usage ?derived_contraindication)\n                                                  (is-derivable ?derived_contraindication))))))))\n)\n"))
+
+([NCEPATPIII_Instance_160070] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_60002]
+		[NCEPATPIII_Instance_160071])
+	(label "Absence of CHD/CHD Equivalent and 0-1 Risk Factors")
+	(operator AND))
+
+([NCEPATPIII_Instance_160071] of  Presence_Criterion
+
+	(domain_term CHD_Or_CHDEquivalent)
+	(entry_type Note_Entry)
+	(label "Absence of CHD/CHD equivalent")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_160072] of  Presence_Criterion
+
+	(domain_term Abdominal_Aortic_Aneurysm)
+	(entry_type Note_Entry)
+	(label "Presence of Abdominal Aortic Aneurism")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_160075] of  Presence_Criterion
+
+	(domain_term Peripheral_Arterial_Disease)
+	(entry_type Note_Entry)
+	(label "Presence of Peripheral Artery Disease")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_160076] of  Presence_Criterion
+
+	(domain_term Carotid_Artery_Disease)
+	(entry_type Note_Entry)
+	(label "Presence of Carotid Artery Disease")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_170010] of  Choice_Step
+
+	(branches [NCEPATPIII_Instance_40017])
+	(label "consider alternatives"))
+
+([NCEPATPIII_Instance_170263] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Sex)
+	(entry_type Patient)
+	(label "Sex = Male")
+	(operator eq)
+	(value [Male]))
+
+([NCEPATPIII_Instance_170264] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_80027]
+		[NCEPATPIII_Instance_80026])
+	(label "Age >55 and female")
+	(operator AND))
+
+([NCEPATPIII_Instance_170268] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Low HDL <40 mg/dL")
+	(numeric_domain_term HDL_Cholesterol)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 40.0))
+
+([NCEPATPIII_Instance_180011] of  Range_Mapping_Entry
+
+	(abstract_value Low_Dose%28high%2Flow%29)
+	(lower_limit 1.0)
+	(upper_limit 20.0))
+
+([NCEPATPIII_Instance_190011] of  Case_Selection
+
+	(value [criterion_INSTANCE_00001])
+	(%3AFROM [NCEPATPIII_Instance_40014])
+	(%3ATO [NCEPATPIII_Instance_170010]))
+
+([NCEPATPIII_Instance_190012] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_170010])
+	(%3ATO [NCEPATPIII_Instance_40017]))
+
+([NCEPATPIII_Instance_190025] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_190026]
+		[NCEPATPIII_Instance_90002])
+	(label "400mg/dL>TG>200mg/dL")
+	(operator AND))
+
+([NCEPATPIII_Instance_190026] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "TG<400mg/dL")
+	(numeric_domain_term Triglycerides)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 400.0))
+
+([NCEPATPIII_Instance_2] of  Guideline_View
+
+	(drug_usages
+		[ATHENA_Lipid_mod1_Class10005]
+		[ATHENA_Lipid_mod1_Class20000]
+		[ATHENA_Lipid_mod1_Class10002]
+		[ATHENA_Lipid_mod1_Class10004]
+		[ATHENA_Lipid_mod1_Class10003]
+		[ATHENA_Lipid_Class10015])
+	(guideline [NCEPATPIII_Instance_3])
+	(guideline_drugs
+		[ATHENA_Lipid_mod1_Class30000]
+		[ATHENA_Lipid_mod1_Class30001]
+		[ATHENA_Lipid_Class110016]
+		[ATHENA_Lipid_Class110017]
+		[ATHENA_Lipid_Class110018]
+		[ATHENA_Lipid_Class110019]))
+
+([NCEPATPIII_Instance_20001] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class130000]
+		[NCEPATPIII_Instance_70076]
+		[NCEPATPIII_Instance_30012])
+	(label "Management Choice"))
+
+([NCEPATPIII_Instance_200014] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([NCEPATPIII_Instance_200016] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40057])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([NCEPATPIII_Instance_200017] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40053])
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([NCEPATPIII_Instance_20002] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_10000])
+	(%3ATO [NCEPATPIII_Instance_20001]))
+
+([NCEPATPIII_Instance_20003] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_20001])
+	(%3ATO [NCEPATPIII_Instance_10001]))
+
+([NCEPATPIII_Instance_20004] of  On_Screen_Message
+
+	(label "Initiate drug therapy")
+	(message "<b><font color=red>Initiate lipid lowering drug therapy and therapeutic lifestyle changes</font>")
+	(message_type Primary_Recommendation))
+
+([NCEPATPIII_Instance_3] of  Management_Guideline
+
+	(clinical_algorithm [ATHENA_Lipid_Class170000])
+	(eligibility_criteria
+		[NCEPATPIII_Instance_80020]
+		[ATHENA_Lipid_Class0])
+	(goal
+		[NCEPATPIII_Instance_40031]
+		[NCEPATPIII_Instance_40032]
+		[NCEPATPIII_Instance_40033])
+	(label "ATHENA Lipid Management Guideline")
+	(patient_characterization
+		[CHD_Or_CHDEquivalent]
+		[2%2B_Risk_Factors]
+		[0-1_Risk_Factor])
+	(title "Knowledge base for implementation of NCEP ATP III drug therapy\nUpdate  with VA Clinical Practice Gujideline for mangement of dyslipidemia v. 2.0 2006, summer 2012")
+	(%3ADOCUMENTATION "4/1/13 replaced Clinical algorithm original Lipid Management algorithm with Lipid management algorithm dashboard, \nother changes:\n- divided statins into lipids metabolized by cyp3a4 and statin not metabolized by cyp3a4, added formulary preferred drugs\n- added collateral actions (messages) for lipid drugs in drug_usage class\n- lipid disease concepts moved to library\n- lipid drugs moved to library"))
+
+([NCEPATPIII_Instance_30000] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL< 100 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 100.0))
+
+([NCEPATPIII_Instance_30001] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL< 130 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 130.0))
+
+([NCEPATPIII_Instance_30002] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL< 160 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 160.0))
+
+([NCEPATPIII_Instance_30003] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL>= 100 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3E%3D)
+	(unit "mg/dL")
+	(value 100.0))
+
+([NCEPATPIII_Instance_30004] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL>= 130 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3E%3D)
+	(unit "mg/dL")
+	(value 130.0))
+
+([NCEPATPIII_Instance_30005] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL>= 160 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3E%3D)
+	(unit "mg/dL")
+	(value 160.0))
+
+([NCEPATPIII_Instance_30007] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30009]
+		[NCEPATPIII_Instance_60001]
+		[NCEPATPIII_Instance_30044]
+		[NCEPATPIII_Instance_160072]
+		[NCEPATPIII_Instance_160075]
+		[NCEPATPIII_Instance_160076])
+	(label "CHD Risk Equivalent")
+	(operator OR))
+
+([NCEPATPIII_Instance_30008] of  Presence_Criterion
+
+	(domain_term 0-1_Risk_Factor)
+	(entry_type Note_Entry)
+	(label "Presence of 0-1 risk factors")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_30009] of  Presence_Criterion
+
+	(domain_term Diabetes_Mellitus)
+	(entry_type Note_Entry)
+	(label "Presence of diabetes")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_30010] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10-year CHD risk >= 10%")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3E%3D)
+	(unit "%")
+	(value 10.0))
+
+([NCEPATPIII_Instance_30012] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_40063])
+	(label "LDL within goal")
+	(strict_rule_in_condition [NCEPATPIII_Instance_40036]))
+
+([NCEPATPIII_Instance_30014] of  Scenario
+
+	(consultation_template [ATHENA_Lipid_Class210048])
+	(followed_by [NCEPATPIII_Instance_30019])
+	(label "Drug Therapy (1 drug)")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50003]))
+
+([NCEPATPIII_Instance_30019] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30026]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class160253]
+		[ATHENA_Lipid_Class160252]
+		[ATHENA_Lipid_Class150000])
+	(label "1-drug therapy choice"))
+
+([NCEPATPIII_Instance_30026] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_50007])
+	(followed_by [NCEPATPIII_Instance_40007])
+	(label "Intensify")
+	(strict_rule_in_condition [ATHENA_Lipid_Class240331]))
+
+([NCEPATPIII_Instance_30032] of  Followed_By
+)
+
+([NCEPATPIII_Instance_30033] of  Followed_By
+)
+
+([NCEPATPIII_Instance_30034] of  Followed_By
+)
+
+([NCEPATPIII_Instance_30035] of  Followed_By
+)
+
+([NCEPATPIII_Instance_30039] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(label "2+ Risk Factors")
+	(numeric_domain_term Risk_Factor_for_CVD)
+	(operator %3E%3D)
+	(value 2.0))
+
+([NCEPATPIII_Instance_30040] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Note_Entry)
+	(label "1 Risk Factor")
+	(numeric_domain_term Risk_Factor_for_CVD)
+	(operator %3D)
+	(value 1.0))
+
+([NCEPATPIII_Instance_30042] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30043]
+		[NCEPATPIII_Instance_30004])
+	(label "(CHD or CHD equivalent) and LDL>=130")
+	(operator AND))
+
+([NCEPATPIII_Instance_30043] of  Presence_Criterion
+
+	(domain_term CHD_Or_CHDEquivalent)
+	(entry_type Note_Entry)
+	(label "Presence of CHD or CHD Equivalent")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_30044] of  Presence_Criterion
+
+	(domain_term Ischemic+Heart+Disease)
+	(entry_type Note_Entry)
+	(label "Presence of CHD")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_30045] of  Presence_Criterion
+
+	(domain_term 2%2B_Risk_Factors)
+	(entry_type Note_Entry)
+	(label "Presence of 2+ risk factors")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_30046] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30054]
+		[NCEPATPIII_Instance_130008]
+		[ATHENA_Lipid_mod1_Class10000])
+	(label "0-1 risk factors  and  LDL>=190 and no drug")
+	(operator AND))
+
+([NCEPATPIII_Instance_30047] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30043]
+		[NCEPATPIII_Instance_30004])
+	(label "CHD or equivalent and LDL>=130")
+	(operator AND))
+
+([NCEPATPIII_Instance_30048] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10-year CHD risk < 10%")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3C)
+	(unit "%")
+	(value 10.0))
+
+([NCEPATPIII_Instance_30049] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10-year CHD risk < 20%")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3C)
+	(unit "%")
+	(value 20.0))
+
+([NCEPATPIII_Instance_30050] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10-year CHD risk >= 20%")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3E%3D)
+	(unit "%")
+	(value 20.0))
+
+([NCEPATPIII_Instance_30051] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30049]
+		[NCEPATPIII_Instance_30010])
+	(label "10 year risk 10-20%")
+	(operator AND))
+
+([NCEPATPIII_Instance_30052] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30004]
+		[NCEPATPIII_Instance_30039])
+	(label "2+ risk factors,  LDL>=130")
+	(operator AND))
+
+([NCEPATPIII_Instance_30053] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30048]
+		[NCEPATPIII_Instance_30005]
+		[NCEPATPIII_Instance_30039])
+	(label "2+ risk factors, 10-yera risk < 10%  and LDL>=160")
+	(operator AND))
+
+([NCEPATPIII_Instance_30054] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL >= 190 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3E%3D)
+	(unit "mg/dL")
+	(value 190.0))
+
+([NCEPATPIII_Instance_30057] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30014])
+	(%3ATO [NCEPATPIII_Instance_30019]))
+
+([NCEPATPIII_Instance_30059] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [NCEPATPIII_Instance_30026]))
+
+([NCEPATPIII_Instance_40000] of  On_Screen_Message
+
+	(label "Order lipid panel")
+	(message "Order lipid panel"))
+
+([NCEPATPIII_Instance_40003] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_40063])
+	(label "Continue current therapies and monitor")
+	(strict_rule_in_condition [NCEPATPIII_Instance_40036]))
+
+([NCEPATPIII_Instance_40004] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_30019])
+	(%3ATO [NCEPATPIII_Instance_40003]))
+
+([NCEPATPIII_Instance_40005] of  Scenario
+
+	(consultation_template [ATHENA_Lipid_Class210048])
+	(followed_by [NCEPATPIII_Instance_40006])
+	(label "Drug therapy (2+ drugs)")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50002]))
+
+([NCEPATPIII_Instance_40006] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30026]
+		[NCEPATPIII_Instance_40034]
+		[ATHENA_Lipid_Class160253]
+		[ATHENA_Lipid_Class160252]
+		[NCEPATPIII_Instance_40017])
+	(label "2+ drug therapy choice II"))
+
+([NCEPATPIII_Instance_40007] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_40009]
+		[NCEPATPIII_Instance_40008])
+	(label "Intensify choices"))
+
+([NCEPATPIII_Instance_40008] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_140005])
+	(label "Increase dose")
+	(strict_rule_in_condition [NCEPATPIII_Instance_140003]))
+
+([NCEPATPIII_Instance_40009] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_100075])
+	(followed_by [NCEPATPIII_Instance_40014])
+	(label "Add drug")
+	(strict_rule_in_condition [criterion_INSTANCE_00001])
+	(strict_rule_out_condition [NCEPATPIII_Instance_140003]))
+
+([NCEPATPIII_Instance_40010] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40007])
+	(%3ATO [NCEPATPIII_Instance_40008]))
+
+([NCEPATPIII_Instance_40011] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40007])
+	(%3ATO [NCEPATPIII_Instance_40009]))
+
+([NCEPATPIII_Instance_40014] of  Case_Step
+
+	(branches [NCEPATPIII_Instance_170010])
+	(expression [NCEPATPIIInew_Instance_200021])
+	(label "No recommended drug to add and cannot increase dose"))
+
+([NCEPATPIII_Instance_40015] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40009])
+	(%3ATO [NCEPATPIII_Instance_40014]))
+
+([NCEPATPIII_Instance_40016] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40005])
+	(%3ATO [NCEPATPIII_Instance_40006]))
+
+([NCEPATPIII_Instance_40017] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_50008])
+	(label "Refer to lipid specialist")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([NCEPATPIII_Instance_40020] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_40063])
+	(label "Continue current therapy & monitor")
+	(strict_rule_in_condition [NCEPATPIII_Instance_40036]))
+
+([NCEPATPIII_Instance_40021] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_40020]))
+
+([NCEPATPIII_Instance_40031] of  Conditional_Goal
+
+	(criterion_to_achieve [NCEPATPIII_Instance_30000])
+	(label "LDL goal: CHD or equivalent")
+	(selection_criterion [NCEPATPIII_Instance_30007]))
+
+([NCEPATPIII_Instance_40032] of  Conditional_Goal
+
+	(criterion_to_achieve [NCEPATPIII_Instance_30001])
+	(label "LDL goal: 2+ risk factors")
+	(selection_criterion [NCEPATPIII_Instance_30039]))
+
+([NCEPATPIII_Instance_40033] of  Conditional_Goal
+
+	(criterion_to_achieve [NCEPATPIII_Instance_30002])
+	(label "LDL goal: 0-1 risk factor")
+	(selection_criterion [NCEPATPIII_Instance_60002]))
+
+([NCEPATPIII_Instance_40034] of  Action_Choice
+
+	(actions [ATHENA_Lipid_Class140096])
+	(label "Order lipid study")
+	(strict_rule_in_condition [ATHENA_Lipid_Class140095]))
+
+([NCEPATPIII_Instance_40036] of  Goal_Criterion
+
+	(guideline_entity [NCEPATPIII_Instance_3])
+	(label "Within guideline goal"))
+
+([NCEPATPIII_Instance_40037] of  N_ary_Criterion
+
+	(criteria [NCEPATPIII_Instance_40036])
+	(label "Not within guideline goal")
+	(operator NOT))
+
+([NCEPATPIII_Instance_40038] of  Presence_Criterion
+
+	(domain_term LDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of LDL measurement")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_40039] of  Followed_By
+
+	(%3ATO [NCEPATPIII_Instance_40020]))
+
+([NCEPATPIII_Instance_40045] of  Scenario
+
+	(followed_by [ATHENA_Lipid_Class190017])
+	(label "No drug, 2+ risk factors")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50001]))
+
+([NCEPATPIII_Instance_40046] of  Scenario
+
+	(followed_by [ATHENA_Lipid_Class190012])
+	(label "No drug, 0-1 risk factors")
+	(new_encounter TRUE)
+	(precondition [NCEPATPIII_Instance_50004]))
+
+([NCEPATPIII_Instance_40051] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[NCEPATPIII_Instance_100075])
+	(label "0-1 risk factors, Initiate drug therapy")
+	(strict_rule_in_condition [NCEPATPIII_Instance_30046]))
+
+([NCEPATPIII_Instance_40053] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_40051]
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_40034]
+		[NCEPATPIII_Instance_70076])
+	(label "0-1 risk factor choices"))
+
+([NCEPATPIII_Instance_40054] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40046])
+	(%3ATO [NCEPATPIII_Instance_40053]))
+
+([NCEPATPIII_Instance_40055] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40053])
+	(%3ATO [NCEPATPIII_Instance_40051]))
+
+([NCEPATPIII_Instance_40056] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40053])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([NCEPATPIII_Instance_40057] of  Choice_Step
+
+	(branches
+		[NCEPATPIII_Instance_30012]
+		[NCEPATPIII_Instance_40060]
+		[NCEPATPIII_Instance_70076]
+		[NCEPATPIII_Instance_40034])
+	(label "2+ risk factors choices"))
+
+([NCEPATPIII_Instance_40058] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40045])
+	(%3ATO [NCEPATPIII_Instance_40057]))
+
+([NCEPATPIII_Instance_40059] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40057])
+	(%3ATO [NCEPATPIII_Instance_30012]))
+
+([NCEPATPIII_Instance_40060] of  Action_Choice
+
+	(actions
+		[NCEPATPIII_Instance_20004]
+		[NCEPATPIII_Instance_100075])
+	(label "2+ risk factors, initiate drug therapy")
+	(strict_rule_in_condition [ATHENA_Lipid_Class190022]))
+
+([NCEPATPIII_Instance_40061] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40057])
+	(%3ATO [NCEPATPIII_Instance_40060]))
+
+([NCEPATPIII_Instance_40062] of  N_ary_Criterion
+
+	(criteria [NCEPATPIII_Instance_30052])
+	(label "2+ risk factors, initiate drug therapy criteria")
+	(operator OR))
+
+([NCEPATPIII_Instance_40063] of  On_Screen_Message
+
+	(label "LDL within goal")
+	(message "<b><font color=red>Most recently avalilable LDL within goal. Great job.  Continue current therapies and TLC</font>"))
+
+([NCEPATPIII_Instance_40064] of  On_Screen_Message
+
+	(label "CHD or equivalent, LDL<=130, not within goal")
+	(message "CHD or equivalent, LDL<=130, not within goal"))
+
+([NCEPATPIII_Instance_50000] of  Presence_Criterion
+
+	(domain_term Total_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of Total Cholesterol lab")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_50001] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30039]
+		[NCEPATPIII_Instance_160071]
+		[ATHENA_Lipid_Class70000])
+	(label "No drug, 2+ risk factors")
+	(operator AND))
+
+([NCEPATPIII_Instance_50002] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Medication)
+	(label "2+ LDL-lowering drug")
+	(mood Authorized)
+	(numeric_domain_term CV350_AntiLipemic_Agents)
+	(operator %3E%3D)
+	(status active)
+	(value 2.0))
+
+([NCEPATPIII_Instance_50003] of  Numeric_Term_Criterion
+
+	(aggregation_operator count)
+	(entry_type Medication)
+	(label "1 LDL-lowering drug")
+	(mood Authorized)
+	(numeric_domain_term CV350_AntiLipemic_Agents)
+	(operator %3D)
+	(status active)
+	(value 1.0))
+
+([NCEPATPIII_Instance_50004] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_60002]
+		[NCEPATPIII_Instance_160071]
+		[ATHENA_Lipid_Class70000])
+	(label "No drug, 0-1 risk factors")
+	(operator AND))
+
+([NCEPATPIII_Instance_50007] of  On_Screen_Message
+
+	(label "Intensify drug therapy")
+	(message "<b><font color=red>Intensify drug therapy</font>"))
+
+([NCEPATPIII_Instance_50008] of  Referral
+
+	(label "Refer to lipid specialist"))
+
+([NCEPATPIII_Instance_50009] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_40037]
+		[NCEPATPIII_Instance_30001]
+		[NCEPATPIII_Instance_30043])
+	(label "CHD or equivalent, LDL<=130, not within goal")
+	(operator AND))
+
+([NCEPATPIII_Instance_50010] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30043]
+		[ATHENA_Lipid_Class70000])
+	(label "no drug, high CHD risk")
+	(operator AND))
+
+([NCEPATPIII_Instance_50012] of  Followed_By
+
+	(%3ATO [NCEPATPIII_Instance_40034]))
+
+([NCEPATPIII_Instance_60000] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40006])
+	(%3ATO [NCEPATPIII_Instance_30026]))
+
+([NCEPATPIII_Instance_60001] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "10 year CHD risk > 20%")
+	(numeric_domain_term 10-Year_CHD_Risk)
+	(operator %3E)
+	(unit "%")
+	(value 20.0))
+
+([NCEPATPIII_Instance_60002] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_30040]
+		[NCEPATPIII_Instance_60003])
+	(label "0-1 risk factors")
+	(operator OR))
+
+([NCEPATPIII_Instance_60003] of  Presence_Criterion
+
+	(domain_term Risk_Factor_for_CVD)
+	(entry_type Note_Entry)
+	(label "Absence of risk factor")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_67] of  Conditional_On_Screen_Message
+
+	(description "message to get complete lipid profile")
+	(label "message to get complete lipid profile")
+	(message "<b><Font color=red>One or more lab values missing.  Please order new lipid profile with all 4 tests:Total Cholesterol, HDL, LDL and Triglycerides. </font><br>")
+	(message_type Recommendation)
+	(rule_in_condition [NCEPATPIII_Instance_90008]))
+
+([NCEPATPIII_Instance_70000] of  Presence_Criterion
+
+	(domain_term Triglycerides)
+	(entry_type Numeric_Entry)
+	(label "Presence of Triglycerides data lab")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_70001] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_70002]
+		[NCEPATPIII_Instance_170263])
+	(label "Age >45 and male")
+	(operator AND))
+
+([NCEPATPIII_Instance_70002] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Age>45")
+	(numeric_domain_term Age)
+	(operator %3E)
+	(value 45.0))
+
+([NCEPATPIII_Instance_70018] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_50003]
+		[NCEPATPIII_Instance_80005])
+	(label "1 LDL drug; has LDL data")
+	(operator AND))
+
+([NCEPATPIII_Instance_70019] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_50002]
+		[NCEPATPIII_Instance_80005])
+	(label "2+ LDL drug; has LDL data")
+	(operator AND))
+
+([NCEPATPIII_Instance_70076] of  Action_Choice
+
+	(actions [NCEPATPIII_Instance_100001])
+	(label "TLC initiation")
+	(strict_rule_in_condition [NCEPATPIII_Instance_100004])
+	(strict_rule_out_condition [NCEPATPIII_Instance_40036]))
+
+([NCEPATPIII_Instance_70077] of  Followed_By
+
+	(%3AFROM [NCEPATPIII_Instance_40053])
+	(%3ATO [NCEPATPIII_Instance_70076]))
+
+([NCEPATPIII_Instance_70078] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_60002]
+		[NCEPATPIII_Instance_30005]
+		[NCEPATPIII_Instance_70079]
+		[NCEPATPIII_Instance_160070])
+	(label "0-1 risk factor, 160<=LDL LDL<190")
+	(operator AND))
+
+([NCEPATPIII_Instance_70079] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "LDL < 190 mg/dL")
+	(numeric_domain_term LDL_Cholesterol)
+	(operator %3C)
+	(unit "mg/dL")
+	(value 190.0))
+
+([NCEPATPIII_Instance_80001] of  Presence_Criterion
+
+	(domain_term HDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of HDL data lab")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_80002] of  Presence_Criterion
+
+	(domain_term LDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Absence of LDL data lab")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_80003] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_70000]
+		[NCEPATPIII_Instance_80004]
+		[NCEPATPIII_Instance_80005]
+		[NCEPATPIII_Instance_80006])
+	(label "Lipid Profile presence")
+	(operator AND))
+
+([NCEPATPIII_Instance_80004] of  Presence_Criterion
+
+	(domain_term HDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Presence of HDL data lab")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_80005] of  Presence_Criterion
+
+	(domain_term LDL_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Presence of LDL data lab")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_80006] of  Presence_Criterion
+
+	(domain_term Total_Cholesterol)
+	(entry_type Numeric_Entry)
+	(label "Presence of Total Cholesterol lab")
+	(presence TRUE))
+
+([NCEPATPIII_Instance_80007] of  Presence_Criterion
+
+	(domain_term Triglycerides)
+	(entry_type Numeric_Entry)
+	(label "Absence of Triglycerides data lab")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_80020] of  Presence_Criterion
+
+	(domain_term Pregnancy)
+	(entry_type Note_Entry)
+	(label "Absence of Pregnancy")
+	(presence FALSE))
+
+([NCEPATPIII_Instance_80022] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "HDL<40")
+	(numeric_domain_term HDL_Cholesterol)
+	(operator %3C)
+	(value 40.0))
+
+([NCEPATPIII_Instance_80025] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_80026]
+		[NCEPATPIII_Instance_80027])
+	(label "Male Age>45")
+	(operator AND))
+
+([NCEPATPIII_Instance_80026] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Age>55")
+	(numeric_domain_term Age)
+	(operator %3E)
+	(value 55.0))
+
+([NCEPATPIII_Instance_80027] of  General_Comparison_Criterion
+
+	(aggregation_operator most_recent)
+	(domain_term Sex)
+	(entry_type Patient)
+	(label "Sex = Female")
+	(operator eq)
+	(value [Female]))
+
+([NCEPATPIII_Instance_90000] of  Conditional_Expression
+
+	(label "if HDL > 60 mg/dL subtract 1 from number of risk factors")
+	(precondition [NCEPATPIII_Instance_120002])
+	(value [NCEPATPIII_Instance_130003]))
+
+([NCEPATPIII_Instance_90001] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "TG > 400 mg/dL")
+	(numeric_domain_term Triglycerides)
+	(operator %3E)
+	(unit "mg/dL")
+	(value 400.0))
+
+([NCEPATPIII_Instance_90002] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "TG > 200 mg/dL")
+	(numeric_domain_term Triglycerides)
+	(operator %3E)
+	(unit "mg/dL")
+	(value 200.0))
+
+([NCEPATPIII_Instance_90008] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIII_Instance_80001]
+		[NCEPATPIII_Instance_80002]
+		[NCEPATPIII_Instance_80007]
+		[NCEPATPIII_Instance_120201])
+	(label "Lipid Profile incomplete")
+	(operator OR))
+
+([NCEPATPIII_Instance_90011] of  Consultation_Action_Step
+
+	(actions [NCEPATPIII_Instance_67])
+	(label "Check for complete lipid profile")
+	(rule_in [NCEPATPIII_Instance_90008]))
+
+([NCEPATPIII_Instance_90012] of  Consultation_Branch_Step
+
+	(branches [NCEPATPIII_Instance_90011])
+	(label "Initial Consultation guideline")
+	(selection_method all_of))
+
+([NCEPATPIII_Instance_90073] of  Numeric_Term_Criterion
+
+	(aggregation_operator most_recent)
+	(entry_type Numeric_Entry)
+	(label "Age >= 20")
+	(numeric_domain_term Age)
+	(operator %3E%3D)
+	(value 20.0))
+
+([NCEPATPIIInew_Instance_200021] of  N_ary_Criterion
+
+	(criteria
+		[NCEPATPIIInew_Instance_200022]
+		[NCEPATPIIInew_Instance_200023]
+		[NCEPATPIII_Instance_50003])
+	(label "no recommended drugs to add and current drugs at maximum")
+	(operator AND))
+
+([NCEPATPIIInew_Instance_200022] of  Presence_Criterion
+
+	(entry_type Medication)
+	(label "No recommended lipid lowing drug to add")
+	(mood Recommend_Add)
+	(presence FALSE)
+	(status active))
+
+([NCEPATPIIInew_Instance_200023] of  N_ary_Criterion
+
+	(criteria [NCEPATPIII_Instance_140003])
+	(label "no drug whose dose can be increased")
+	(operator NOT))
+
+([TG%3E400mg%2FdL] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [NCEPATPIII_Instance_90001]))
+
+([TG%3E%3D500mg%2FdL] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_Class10027]))
+
+([Usage+of+CYP+3A4+inhibitor] of  Diagnostic_Term_Metaclass
+
+	(DiagnosticCriteria [ATHENA_Lipid_mod1_Class0]))

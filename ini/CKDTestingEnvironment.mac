@@ -1,0 +1,46 @@
+REM
+REM  PCATestParams.ini
+REM
+REM  This file contains the parameters which specify the 
+REM  options for running the main routine of:
+REM    edu.stanford.smi.eon.clients.PCATest
+
+REM 	    GUIDELINE_NAME
+REM GUIDELINE_NAME gives the name of the guideline to use
+REM This name must match the value of the "label" slot for
+REM the management guideline instance of interest in the 
+REM knowledge base used
+REM For hypertension
+REM GUIDELINE_NAME=JNC-VI Hypertension Guideline
+REM For Chronic Pain
+GUIDELINE_NAME=ATHENA CKD Guideline
+
+REM 	   DATABASE
+REM DATABASE corresponds to the name given to 
+REM the system Data Source when you open up 
+REM control Panel/ODBC Data Source
+DATABASE=
+
+REM       SERVER_LOGFILE
+REM SERVER_LOGFILE gives the directory where
+REM server logs are being stored
+SERVER_LOGFILE = 
+
+REM       SERVERKB
+REM SERVERKB is the full path name for the Protege project 
+REM file containing the guideline knowledge base 
+REM Use following line for athena_hypertension
+REM SERVERKB = c:/ATHENADEMO/domain_model/athena_hypertension.pprj
+REM Use following for chronic pain??
+REM SERVERKB = c:/OpioidTestTool/domain_model/ChronicPainOpioid10-26-05.pprj
+SERVERKB = /Users/tu/workspace/eonpm/kbs/ATHENA_CKD.pprj
+
+REM       PCAOUTPUTDIR
+REM PCAOUTPUTDIR gives the directory location for the
+REM output file containing the recommendations computed 
+PCAOUTPUTDIR = /Users/tu/workspace/eonpm/output
+
+REM       XMLDATAFILE
+REM XMLDATAFILE gives location of file with pre-created 
+REM patients 
+XMLDATAFILE = /Users/tu/workspace/eonpm/data/hfpatientdata.xml

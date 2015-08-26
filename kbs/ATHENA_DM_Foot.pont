@@ -1,0 +1,33 @@
+; Sun Jul 20 23:35:07 PDT 2014
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass non+traumatic+lower+extremity+amputation+yes%2Fno
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass foot+deformities+yes%2Fno
+	(is-a CCS-13.6.1)
+	(role concrete))
+
+(defclass foot+ulcer+yes%2Fno
+	(is-a CCS-12.3)
+	(role concrete))
+
+(defclass lower+extremity+vascular+disease+yes%2Fno
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+yes%2Fno
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass skin+integrity+yes%2Fno
+	(is-a Findings)
+	(role concrete))

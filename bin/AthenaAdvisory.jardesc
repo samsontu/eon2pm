@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="MacRoman" standalone="no"?>
+<jardesc>
+    <jar path="eonpm/lib/edu.stanford.smi.eon.pca/AthenaAdvisory.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/eonpm/src/AthenaAdvisory.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=eonpm/src&lt;gov.va.athena.advisory"/>
+        <javaElement handleIdentifier="=eonpm/src&lt;gov.va.athena.advisory.impl"/>
+    </selectedElements>
+</jardesc>

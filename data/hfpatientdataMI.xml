@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="Stage C Other">
+    <meds>
+        <item>
+            <field1 label="Drug">carvedilol</field1>
+            <field2 label="Daily Dose">6.25</field2>
+            <start>Tue Aug 03 14:15:34 PDT 2010</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">captopril</field1>
+            <field2 label="Daily Dose">18.75</field2>
+            <start>Tue Aug 03 14:23:00 PDT 2010</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">furosemide</field1>
+            <field2 label="Daily Dose">20 </field2>
+            <start>Tue Aug 03 14:24:26 PDT 2010</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure</field2>
+            <start>Tue Aug 03 13:54:54 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Dx">Coronary_Artery_Disease</field1>
+            <field2 label="Name">Coronary Artery Disease</field2>
+            <start>Tue Aug 03 14:06:37 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction_w_systolic_dysfcn</field1>
+            <field2 label="Name"/>
+            <start>Tue Aug 03 14:07:20 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Tue Aug 03 14:28:40 PDT 2010</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Height</field1>
+            <field2 label="Value">5'8</field2>
+            <start>Tue Aug 03 13:44:57 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">65</field2>
+            <start>Tue Aug 03 13:46:22 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">110</field2>
+            <start>Tue Aug 03 13:46:53 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">65</field2>
+            <start>Tue Aug 03 13:47:01 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Tue Aug 03 13:47:34 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">fatigue</field1>
+            <field2 label="Value"/>
+            <start>Tue Aug 03 14:33:29 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Sign">edema</field1>
+            <field2 label="Value"/>
+            <start>Tue Aug 03 14:34:29 PDT 2010</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.2</field2>
+            <start>Tue Aug 03 13:48:51 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">140</field2>
+            <start>Tue Aug 03 13:49:13 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Lab">Cholesterol</field1>
+            <field2 label="Value">180</field2>
+            <start>Tue Aug 03 13:49:32 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">49</field2>
+            <start>Tue Aug 03 13:49:45 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">130</field2>
+            <start>Tue Aug 03 13:50:01 PDT 2010</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.4</field2>
+            <start>Tue Aug 03 13:50:13 PDT 2010</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">58</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Other_Race</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>

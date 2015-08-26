@@ -1,0 +1,469 @@
+; Mon Aug 10 14:08:52 PDT 2015
+; 
+;+ (version "3.4.5")
+;+ (build "Build 585")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass Hydralazine_and_nitrates
+	(is-a Anti-Hypertensive_Drugs_Inclusive)
+	(role concrete))
+
+(defclass cardiotoxic+antiarrythmic+drugs
+	(is-a cardiotoxic+interventions)
+	(role concrete))
+
+(defclass Non+steroidal+anti+inflammatory+drugs
+	(is-a cardiotoxic+interventions)
+	(role concrete))
+
+(defclass cardiotoxic+CA+channel+blockers
+	(is-a cardiotoxic+interventions)
+	(role concrete))
+
+(defclass procainamide
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass quinidine
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass disopyramide
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass cifenline
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass moricizine
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass idecainide
+	(is-a antiarrhythmic+drugs)
+	(role concrete))
+
+(defclass indomethacin
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Potassium_supplements
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+intolerant+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+using+ACE+and+BB+and+HF+and+symptomatic
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Presence+of+adverse+reaction+to+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Presence+of+adverse+reaction+to+ARB
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass drug+intolerance+ACE%2FARB+OR+hypotension+OR+renal+insufficiency
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+no+HF+and+no+MI
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass MI+no+HF
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+%28HF+global+ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+no+MI
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+%28ICD+or+Symptoms%29+and+LVEF%3C%3D40+and+MI
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Acitve+prescription+for+ACE+and+ARB
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Active+prescription+for+ACE+and+aldosterone+antagonists
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Active+prescription+for+ARB+and+aldosterone+antagonist
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Absence+of+Stage+D+HF
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HTN+and+LVH
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass High+Risk+for+HF+and+DM%2C+HTN%2C+or+atherosclerotic+vascular+disease "Stage A Class IIa #2"
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+no+HF+symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+%28ICD9+or+symptoms%29+and+LVEF%3C%3D40
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Stage+B+and+LVEF%3C%3D40+and+ADR+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Mild-moderate+HF+symptoms+and+LVEF%3C%3D+40+and+ACE+intolerant
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+with+persistent+symptoms+and+LVEF%3C%3D40+and+treated+with+conventional+therapy
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Stage+C+and+LVEF%3C%3D40+and+ADR+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass No+HF%2C+MI%2C++LVEF%3C%3D40+and+ADR+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+sinus+rhythm+and+Stage+B+and+absence+HF+symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Female+and+most+recent+creatinine++%3E2
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Male+and+most+recent+creatinine%3E2.5
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+and+LVEF%3C%3D35+%26+HF+%26+moderate%2Fsevere+symptoms+%26+low+creatinine+%26+K%3C5
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+%26+using+ACE+%26+using+BB+%26+HF+symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+contraindications+to+ACE%2FARB+%28hypotension%2C+renal+insufficiency+or+drug+intolerance%29
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass African+american+%28black%29+and+moderate+symptoms+and+using+ACE%2C+BB%2C+diuretic
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF+%26+LVEF%3C%3D35+%26+%28IF+moderate+or+severe+symptoms%29
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass African_American_and_IF_moderate_or_severe_symptoms_and_using_ACEI_BB_diuretics
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass If_moderate_or_severe_symptoms_are_present "created for Nary for compelling indication HF for adlosterone  when input for symptoms does not exit"
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass If_moderate_symptoms_+are_present "created for Nary for compelling indication HF for hidralzine_and_nitrates and hydralazine_and_nitrate when input for symptoms does not exit"
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass IF_NYHA_functional_class_II_o_+III_symptoms "created for Nary for compelling indication HF for ICD rec when input for symptoms does not exit"
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass IF_NYHA_functional_class_III_or+_mbulatory_class_IV_heart_failure_symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass African_American_and_IF_moderate_or_severe_symptoms_and_using_ACEI_BBNot
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass IF_NYHA_class_III_IV_symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass African_American_and_IF_NYHA_ClassIII_IV_symptoms_and_ACEorARB_BB
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass African_American_and_NYHA_III_IV_symptoms_ACE_or_ARB_and_BB
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass IF_NYHA_Class_II_III_IV_symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF_and_+LVEF%3C%3D35_and_IF_NYHA_Class_II_or_Class_III_or_Class_IV
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass IF_NHYA_Class_II_symptoms
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF_and_+LVEF%3C%3D35_and_IF_NYHA_Class_III_or__IV_or_II_and_elevated_BNP
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF_and_LVEF%3C%3D35_and_NYHA_Class_III_IV_or_Class_II_and_elevated_BNP
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Stage+C+and+LVEF%3C%3D40+and+symptoms+and+ADR+ACE
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass HF_and_LVEF_le_40_and_NYHA_II_III_IIV_or_DM
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Prescription++for+ACE+Inhibitor
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+MI+or+ACS+Stage+B
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass K%3E5.0
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass eGFR%3C30
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40_and_NYHA_Class_IIi_or_IV_and_ACE_intolerance
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Low_LVEF_Low_SBC
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Low_LVEF_High_Creatinine
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass CKDstage4_5_eGFRlte30_highcreatinine
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+no+MI
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass LVEF%3C%3D40+and+MI
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass non-ischemic+dilated+cardiomyopathy
+	(is-a nonischemic+cardiomyopathy)
+	(role concrete))
+
+(defclass LVEF%3C%3D40 "HF consensus document as a definition of low LVEF when not defined in 2009 ACC guideline.\nMKG defined as structural abnormality."
+	(is-a Syndrome structural+heart+disease)
+	(role concrete))
+
+(defclass Low_Ejection_Fraction
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Valvular+heart+disease
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass AddisonsDisease
+	(is-a Endocrine_Diseases)
+	(role concrete))
+
+(defclass Lupus
+	(is-a Immunological_Diseases)
+	(role concrete))
+
+(defclass prior_cardiovascular_hospitalization
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CKDstage3_30gt_eGFR_lte60
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Lupus_ADR_hydralazine
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence_phosphodiesterase_inhibitor
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Pulse_lt_60
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_verapamil_OR_diltiazem
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_betablocker_notstageC_HF
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass prescription_sotalol
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass PalliativeCare
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Most+recent+SBP%3C110
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_verapamil
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_diltiazem
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_cholestyramine
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_heparin
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass DecisionCreatinine
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass On_Potassium+supplements
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Decision_eGFR
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Angioedema+due+to+ADR+to+ACEI_OLD
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass UNKNOWN+BY+PATIENT%2C+DECLINED+TO+ANSWER
+	(is-a Race)
+	(role concrete))
+
+(defclass UNKNOWN+BY+PATIENT
+	(is-a Race)
+	(role concrete))
+
+(defclass DECLINED+TO+ANSWER%2C+DECLINED+TO+ANSWER
+	(is-a Race)
+	(role concrete))
+
+(defclass Prior_Myocardial_Infarction
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass Severe_LVH
+	(is-a Symptoms LVH)
+	(role concrete))
+
+(defclass fatigue
+	(is-a Symptoms HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass Mild+HF+signs+and+symptoms
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass Moderate+HF+signs+and+symptoms
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass Severe+HF+signs+and+symptoms
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass Persistent+HF+signs+and+symptoms
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_functional_class_IV
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_functional_class_IV_ambulatory
+	(is-a HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass Heart+Failure+Stage
+	(is-a Patient_History_Class Patient_Observations)
+	(role concrete))
+
+(defclass Stage+A+Heart+Failure
+	(is-a Heart+Failure+Stage)
+	(role concrete))
+
+(defclass Stage+B+Heart+Failure
+	(is-a Heart+Failure+Stage)
+	(role concrete))
+
+(defclass Stage+D+Heart+Failure
+	(is-a Heart+Failure+Stage)
+	(role concrete))
+
+(defclass Stage+C+Heart+Failure
+	(is-a Heart+Failure+Stage)
+	(role concrete))
+
+(defclass cardiologist
+	(is-a Role)
+	(role concrete))
+
+(defclass Class+III
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Class+II+a
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Class+II+b
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Class+I
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Palliative_care
+	(is-a Medical_Domain_Class)
+	(role concrete))

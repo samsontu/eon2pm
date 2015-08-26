@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="JohnDoe">
+    <meds>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Fri Jun 03 10:21:54 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">40</field2>
+            <start>Fri Jun 03 10:23:00 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="Daily Dose">1000</field2>
+            <start>Tue Jun 07 14:22:13 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Ibuprofen</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Tue Oct 22 15:45:56 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Tue Oct 22 15:49:26 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Tue Jun 03 10:23:24 PDT 2008</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Tue Jun 05 10:23:47 PDT 2007</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Fri Jun 03 10:25:29 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Dx">Bronchospastic_Disease</field1>
+            <field2 label="Name">Bronchospastic disease</field2>
+            <start>Tue Jun 12 15:35:53 PDT 2007</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Tue Oct 22 15:46:29 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">82</field2>
+            <start>Fri Jun 03 10:21:03 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">158</field2>
+            <start>Fri Jun 03 10:21:37 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Fri Jun 03 18:47:13 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Weight</field1>
+            <field2 label="Value">210</field2>
+            <start>Fri Jun 03 18:48:09 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Height</field1>
+            <field2 label="Value">64</field2>
+            <start>Fri Jun 03 18:48:44 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Fri Jun 03 19:05:24 PDT 2011</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Fri Jun 03 18:49:55 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Fri Jun 03 18:50:35 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Wed Jun 15 18:51:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Fri Jun 03 18:51:31 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Wed Jun 15 18:52:33 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">target_HBA1c</field1>
+            <field2 label="Value">7</field2>
+            <start>Fri Jun 03 18:52:54 PDT 2011</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Hispanic-White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="junk">
+    <meds>
+        <item>
+            <field1 label="Drug">spironolactone</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Tue Feb 12 13:38:23 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Tue Oct 22 15:54:32 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="OnePatientwithEFandsymptoms">
+    <meds>
+        <item>
+            <field1 label="Drug">triamterene</field1>
+            <field2 label="Daily Dose">1.</field2>
+            <start>Mon Oct 07 10:58:23 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">aspirin</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Mon Oct 07 10:59:45 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hyperlipidemia</field1>
+            <field2 label="Name">Hyperlipidemia</field2>
+            <start>Mon Oct 07 10:54:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Mon Oct 07 10:55:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Mon Oct 07 10:56:29 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Mon Oct 07 10:57:02 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name">hypertension</field2>
+            <start>Mon Oct 07 11:09:02 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">74</field2>
+            <start>Mon Oct 07 11:04:16 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Diastolic_BP</field1>
+            <field2 label="Value">81</field2>
+            <start>Mon Oct 07 11:04:32 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Systolic_BP</field1>
+            <field2 label="Value">134</field2>
+            <start>Mon Oct 07 11:05:06 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Oct 07 09:04:02 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 09:04:50 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">AM110_PenicillinG_Related_Penicillins</field1>
+            <field2 label="Reaction">itching</field2>
+            <start>Mon Oct 07 11:10:46 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.3</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Mon Oct 07 11:02:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">140</field2>
+            <start>Mon Oct 07 11:03:19 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">78</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="EightPatient">
+    <meds>
+        <item>
+            <field1 label="Drug">aspirin</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Mon Oct 07 10:59:45 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">amiloride</field1>
+            <field2 label="Daily Dose"> 1</field2>
+            <start>Mon Oct 07 11:23:16 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hyperlipidemia</field1>
+            <field2 label="Name">Hyperlipidemia</field2>
+            <start>Mon Oct 07 10:54:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Mon Oct 07 10:55:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Mon Oct 07 10:56:29 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Mon Oct 07 10:57:02 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name">hypertension</field2>
+            <start>Mon Oct 07 11:09:02 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">74</field2>
+            <start>Mon Oct 07 11:04:16 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Diastolic_BP</field1>
+            <field2 label="Value">50</field2>
+            <start>Mon Oct 07 11:04:32 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Systolic_BP</field1>
+            <field2 label="Value">180</field2>
+            <start>Mon Oct 07 11:05:06 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">AM110_PenicillinG_Related_Penicillins</field1>
+            <field2 label="Reaction">itching</field2>
+            <start>Mon Oct 07 11:10:46 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.3</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Mon Oct 07 11:02:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">140</field2>
+            <start>Mon Oct 07 11:03:19 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">78</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="TwentyEightPatient">
+    <meds>
+        <item>
+            <field1 label="Drug">aspirin</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Mon Oct 07 10:59:45 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">diltiazem</field1>
+            <field2 label="Daily Dose"> 1</field2>
+            <start>Mon Oct 07 11:29:01 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hyperlipidemia</field1>
+            <field2 label="Name">Hyperlipidemia</field2>
+            <start>Mon Oct 07 10:54:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Mon Oct 07 10:55:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Mon Oct 07 10:56:29 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Mon Oct 07 10:57:02 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name">hypertension</field2>
+            <start>Mon Oct 07 11:09:02 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">74</field2>
+            <start>Mon Oct 07 11:04:16 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Diastolic_BP</field1>
+            <field2 label="Value">81</field2>
+            <start>Mon Oct 07 11:04:32 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Systolic_BP</field1>
+            <field2 label="Value">134</field2>
+            <start>Mon Oct 07 11:05:06 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">AM110_PenicillinG_Related_Penicillins</field1>
+            <field2 label="Reaction">itching</field2>
+            <start>Mon Oct 07 11:10:46 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.3</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Mon Oct 07 11:02:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">140</field2>
+            <start>Mon Oct 07 11:03:19 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">78</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="TwentyNinePatient">
+    <meds>
+        <item>
+            <field1 label="Drug">triamterene</field1>
+            <field2 label="Daily Dose">1.</field2>
+            <start>Mon Oct 07 10:58:23 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">aspirin</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Mon Oct 07 10:59:45 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hyperlipidemia</field1>
+            <field2 label="Name">Hyperlipidemia</field2>
+            <start>Mon Oct 07 10:54:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Mon Oct 07 10:55:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Mon Oct 07 10:56:29 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Mon Oct 07 10:57:02 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name">hypertension</field2>
+            <start>Mon Oct 07 11:09:02 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">74</field2>
+            <start>Mon Oct 07 11:04:16 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Diastolic_BP</field1>
+            <field2 label="Value">81</field2>
+            <start>Mon Oct 07 11:04:32 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Treatment_Systolic_BP</field1>
+            <field2 label="Value">134</field2>
+            <start>Mon Oct 07 11:05:06 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">AM110_PenicillinG_Related_Penicillins</field1>
+            <field2 label="Reaction">itching</field2>
+            <start>Mon Oct 07 11:10:46 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.3</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Oct 07 11:01:50 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Mon Oct 07 11:02:36 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">140</field2>
+            <start>Mon Oct 07 11:03:19 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">78</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="SimplePatient0_harmfulDrug">
+    <meds>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Fri Jun 03 10:21:54 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">40</field2>
+            <start>Fri Jun 03 10:23:00 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="Daily Dose">1000</field2>
+            <start>Tue Jun 07 14:22:13 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Ibuprofen</field1>
+            <field2 label="Daily Dose"> 80</field2>
+            <start>Tue Oct 22 15:45:56 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Tue Oct 22 15:49:26 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Tue Jun 03 10:23:24 PDT 2008</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Tue Jun 05 10:23:47 PDT 2007</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Fri Jun 03 10:25:29 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Dx">Bronchospastic_Disease</field1>
+            <field2 label="Name">Bronchospastic disease</field2>
+            <start>Tue Jun 12 15:35:53 PDT 2007</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Tue Oct 22 15:46:29 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">82</field2>
+            <start>Fri Jun 03 10:21:03 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">158</field2>
+            <start>Fri Jun 03 10:21:37 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Fri Jun 03 19:05:24 PDT 2011</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Fri Jun 03 18:49:55 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Wed Jun 15 18:51:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Fri Jun 03 18:51:31 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Wed Jun 15 18:52:33 PDT 2011</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">65</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Hispanic-White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="SimplePatient1_Efgt40">
+    <meds>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Fri Jun 03 10:21:54 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">40</field2>
+            <start>Fri Jun 03 10:23:00 PDT 2011</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="Daily Dose">1000</field2>
+            <start>Tue Jun 07 14:22:13 PDT 2011</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Tue Jun 03 10:23:24 PDT 2008</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Tue Jun 05 10:23:47 PDT 2007</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Fri Jun 03 10:25:29 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Tue Oct 22 15:46:29 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">82</field2>
+            <start>Fri Jun 03 10:21:03 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">109</field2>
+            <start>Fri Jun 03 10:21:37 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Fri Jun 03 19:05:24 PDT 2011</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Fri Jun 03 18:49:55 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Fri Jun 03 18:50:35 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Wed Jun 15 18:51:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Fri Jun 03 18:51:31 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Fri Jun 03 18:52:08 PDT 2011</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Wed Jun 15 18:52:33 PDT 2011</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="LowSBP">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Tue Nov 26 08:35:19 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Tue Nov 26 08:31:33 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">105</field2>
+            <start>Tue Nov 26 08:32:48 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">65</field2>
+            <start>Tue Nov 26 08:33:17 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Tue Nov 26 08:38:01 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIV</field2>
+            <start>Mon Dec 02 14:55:51 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">3</field2>
+            <start>Tue Nov 26 09:12:53 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Nov 26 09:12:53 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3</field2>
+            <start>Mon Dec 02 14:46:13 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ACEI_and_BB">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="addBB">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="AddAA">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Dec 02 14:29:49 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3</field2>
+            <start>Mon Dec 02 14:34:22 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="AddAA3">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">carvedilol</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:35:54 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Dec 02 14:29:49 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3</field2>
+            <start>Mon Dec 02 14:34:22 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="AddAAhydNit">
+    <meds>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">sustained release metoprolol succinate</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:37:34 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Dec 02 14:29:49 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3</field2>
+            <start>Mon Dec 02 14:34:22 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">BLACK OR AFRICAN AMERICAN, HISPANIC OR LATINO</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="CRT">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">sustained release metoprolol succinate</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:37:34 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">spironolactone</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:43:37 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">32</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassII</field2>
+            <start>Mon Dec 02 14:36:22 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="hydra_nitrates">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">sustained release metoprolol succinate</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:37:34 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">spironolactone</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:43:37 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Sun Dec 25 00:00:00 PST 2011</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">35</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Dec 02 14:29:49 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">BLACK OR AFRICAN AMERICAN, HISPANIC OR LATINO</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ICD">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:36:44 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">sustained release metoprolol succinate</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:37:34 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">spironolactone</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 14:43:37 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Thu Dec 02 15:23:44 PST 2010</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">30</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassI</field2>
+            <start>Fri Dec 02 15:23:01 PST 2011</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="AddAA2">
+    <meds>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:16:54 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">bisoprolol</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:17:12 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Mon Dec 02 16:18:19 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Myocardial_Infarction</field1>
+            <field2 label="Name">Myocardial Infarction</field2>
+            <start>Tue Sep 03 16:18:56 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3</field2>
+            <start>Sun Dec 01 00:00:00 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ACEIcontra">
+    <meds>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Sun Jan 08 00:00:00 PST 2012</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">HF signs and symptoms</field1>
+            <field2 label="Value">NYHA_ClassIII</field2>
+            <start>Mon Dec 02 13:53:33 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">6</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">HISPANIC, BLACK, NOT HISPANIC OR LATINO</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="BBsub">
+    <meds>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:16:54 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">acebutolol</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:17:12 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="sotalol">
+    <meds>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:16:54 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">sotalol</field1>
+            <field2 label="Daily Dose"> 10</field2>
+            <start>Mon Dec 02 16:17:12 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_failure_N</field1>
+            <field2 label="Name">Heart Failure PM</field2>
+            <start>Mon Dec 02 14:13:14 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">39</field2>
+            <start>Mon Dec 02 14:15:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Mon Dec 02 14:15:46 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Mon Dec 02 14:16:06 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">66</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ignore">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name">Heart Failure HTN</field2>
+            <start>Tue Nov 26 09:16:52 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Left Ventricular Ejection fraction</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Nov 26 09:17:17 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">112</field2>
+            <start>Tue Nov 26 09:21:20 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">85</field2>
+            <start>Tue Nov 26 09:21:37 PST 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">2.0</field2>
+            <start>Tue Nov 26 09:20:25 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Mon Dec 02 14:17:06 PST 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Unknown_Race</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">55</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+</patientdata>

@@ -1,0 +1,2286 @@
+; Tue Jul 07 10:26:49 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+([ANNOTATED_INSTANCE_WIDGET] of  Widget
+
+	(name ":ANNOTATED-INSTANCE"))
+
+([ANNOTATION_TEXT_WIDGET] of  Widget
+
+	(height 100)
+	(is_hidden FALSE)
+	(name ":ANNOTATION-TEXT")
+	(widget_class_name "edu.stanford.smi.protege.widget.YellowStickyWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([BROWSER_SLOT_NAMES] of  Property_List
+
+	(properties
+		[Lipid_dashboard_ProjectKB_Class4773]
+		[Lipid_dashboard_ProjectKB_Class4774]
+		[Lipid_dashboard_ProjectKB_Class4775]))
+
+([CLSES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesTab"))
+
+([CREATION_TIMESTAMP_WIDGET] of  Widget
+
+	(name ":CREATION-TIMESTAMP"))
+
+([CREATOR_WIDGET] of  Widget
+
+	(name ":CREATOR"))
+
+([FORMS_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.FormsTab"))
+
+([INSTANCE_ANNOTATION_FORM_WIDGET] of  Widget
+
+	(height 476)
+	(is_hidden FALSE)
+	(name ":INSTANCE-ANNOTATION")
+	(property_list [INSTANCE_ANNOTATION_PROPERTY_LIST])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 603)
+	(x 0)
+	(y 0))
+
+([INSTANCE_ANNOTATION_PROPERTY_LIST] of  Property_List
+
+	(properties
+		[ANNOTATED_INSTANCE_WIDGET]
+		[CREATOR_WIDGET]
+		[CREATION_TIMESTAMP_WIDGET]
+		[ANNOTATION_TEXT_WIDGET]))
+
+([INSTANCES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
+
+([KB_103675_Class4598] of  Map
+
+	(entries
+		[KB_103675_Class4599]
+		[KB_103675_Class4600]
+		[KB_103675_Class4601]
+		[KB_103675_Class4602]
+		[KB_103675_Class4603]
+		[KB_103675_Class4605]
+		[KB_103675_Class4606]
+		[KB_103675_Class4607]
+		[KB_103675_Class4609]
+		[KB_103675_Class4611]
+		[KB_103675_Class4613]
+		[KB_103675_Class4615]
+		[KB_103675_Class4616])
+	(referenced_maps
+		[KB_103675_Class4612]
+		[KB_103675_Class4614]
+		[KB_103675_Class4608]
+		[KB_103675_Class4610]
+		[KB_103675_Class4604]))
+
+([KB_103675_Class4599] of  Map_Entry
+
+	(key "collab.hide.archived")
+	(key_class "java.lang.String")
+	(value "true")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4600] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.ChatPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4601] of  Map_Entry
+
+	(key "annotation_proj_exists")
+	(key_class "java.lang.String")
+	(value "yes")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4602] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4603] of  Map_Entry
+
+	(key "edu.stanford.smi.protege.collab.annotation.gui.panel.AllAnnotationsPanel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4604] of  Map
+)
+
+([KB_103675_Class4605] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_0.steps")
+	(key_class "java.lang.String")
+	(value "KB_103675_Class4604")
+	(value_class "java.util.Map"))
+
+([KB_103675_Class4606] of  Map_Entry
+
+	(key "add_name_on_instance_form")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_103675_Class4607] of  Map_Entry
+
+	(key "show_collaboration_panel")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.Boolean"))
+
+([KB_103675_Class4608] of  Map
+)
+
+([KB_103675_Class4609] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_130002.steps")
+	(key_class "java.lang.String")
+	(value "KB_103675_Class4608")
+	(value_class "java.util.Map"))
+
+([KB_103675_Class4610] of  Map
+)
+
+([KB_103675_Class4611] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_1.steps")
+	(key_class "java.lang.String")
+	(value "KB_103675_Class4610")
+	(value_class "java.util.Map"))
+
+([KB_103675_Class4612] of  Map
+)
+
+([KB_103675_Class4613] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_130001.steps")
+	(key_class "java.lang.String")
+	(value "KB_103675_Class4612")
+	(value_class "java.util.Map"))
+
+([KB_103675_Class4614] of  Map
+)
+
+([KB_103675_Class4615] of  Map_Entry
+
+	(key "InstanceGraphWidget.eon2_Instance_2.steps")
+	(key_class "java.lang.String")
+	(value "KB_103675_Class4614")
+	(value_class "java.util.Map"))
+
+([KB_103675_Class4616] of  Map_Entry
+
+	(key "suppress_instance_counting")
+	(key_class "java.lang.String")
+	(value "false")
+	(value_class "java.lang.String"))
+
+([KB_583993_Class0] of  String
+
+	(name "factory_class_name")
+	(string_value "edu.stanford.smi.protege.storage.clips.ClipsKnowledgeBaseFactory"))
+
+([KB_583993_Class1] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4776]
+		[Lipid_dashboard_ProjectKB_Class4786]
+		[Lipid_dashboard_ProjectKB_Class4787]
+		[Lipid_dashboard_ProjectKB_Class4831]
+		[Lipid_dashboard_ProjectKB_Class4864]
+		[Lipid_dashboard_ProjectKB_Class4874]
+		[Lipid_dashboard_ProjectKB_Class4878]
+		[Lipid_dashboard_ProjectKB_Class4926])
+	(referenced_maps
+		[Lipid_dashboard_ProjectKB_Class4777]
+		[Lipid_dashboard_ProjectKB_Class4865]
+		[Lipid_dashboard_ProjectKB_Class4879]
+		[Lipid_dashboard_ProjectKB_Class4788]
+		[Lipid_dashboard_ProjectKB_Class4875]
+		[Lipid_dashboard_ProjectKB_Class4832]))
+
+([KB_583993_Class100] of  Property_List
+)
+
+([KB_583993_Class101] of  Property_List
+)
+
+([KB_583993_Class102] of  Property_List
+)
+
+([KB_583993_Class103] of  Property_List
+)
+
+([KB_583993_Class104] of  Property_List
+
+	(properties [Lipid_dashboard_ProjectKB_Class107]))
+
+([KB_583993_Class105] of  String
+
+	(name "classes_file_name")
+	(string_value "Lipid_dashboard.pont"))
+
+([KB_583993_Class106] of  String
+
+	(name "instances_file_name")
+	(string_value "Lipid_dashboard.pins"))
+
+([KB_583993_Class83] of  Property_List
+
+	(properties
+		[KB_583993_Class84]
+		[KB_583993_Class85]))
+
+([KB_583993_Class84] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-View References to Value"))
+
+([KB_583993_Class85] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Delete Instance"))
+
+([KB_583993_Class86] of  Property_List
+)
+
+([KB_583993_Class87] of  Property_List
+)
+
+([KB_583993_Class88] of  Property_List
+
+	(properties
+		[KB_583993_Class89]
+		[KB_583993_Class90]))
+
+([KB_583993_Class89] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move up"))
+
+([KB_583993_Class90] of  Boolean
+
+	(boolean_value FALSE)
+	(name "ButtonDisplayed-Move down"))
+
+([KB_583993_Class91] of  Property_List
+)
+
+([KB_583993_Class92] of  Property_List
+
+	(name "layout properties"))
+
+([KB_583993_Class93] of  Property_List
+)
+
+([KB_583993_Class94] of  Property_List
+)
+
+([KB_583993_Class95] of  Property_List
+)
+
+([KB_583993_Class96] of  Property_List
+)
+
+([KB_583993_Class97] of  Property_List
+)
+
+([KB_583993_Class98] of  Property_List
+)
+
+([KB_583993_Class99] of  Property_List
+)
+
+([LAYOUT_PROPERTIES] of  Property_List
+
+	(name "layout properties")
+	(properties [VERTICAL_STRETCHER]))
+
+([Lipid_dashboard_ProjectKB_Class107] of  String
+
+	(name "SearchTab_Query"))
+
+([Lipid_dashboard_ProjectKB_Class14010] of  String
+
+	(name "KnowledgeTreeTab.TOP_LEVEL_INSTANCE")
+	(string_value "Lipid_dashboard_Class0"))
+
+([Lipid_dashboard_ProjectKB_Class14106] of  Integer
+
+	(integer_value 456)
+	(name "PAL_TAB_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class14107] of  Integer
+
+	(integer_value 470)
+	(name "CONSTRAINT_CONTROL_PANEL_TOP_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class14108] of  Integer
+
+	(integer_value 470)
+	(name "CONSTRAINT_CONTROL_PANEL_BOTTOM_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class24019] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class24020])
+	(widget_class_name "gov.va.test.opioidtesttool.TestingEnvironment"))
+
+([Lipid_dashboard_ProjectKB_Class24020] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3884] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3885])
+	(widget_class_name "TGViztab.TGVizTab"))
+
+([Lipid_dashboard_ProjectKB_Class3885] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3888] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3889])
+	(widget_class_name "script.ProtegeScriptTab"))
+
+([Lipid_dashboard_ProjectKB_Class3889] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3890] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3891])
+	(widget_class_name "edu.stanford.smi.protege.widget.ClsesAndInstancesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3891] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3894] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3895])
+	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
+
+([Lipid_dashboard_ProjectKB_Class3895] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3898] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3899])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.metadatatab.OWLMetadataTab"))
+
+([Lipid_dashboard_ProjectKB_Class3899] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3900] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3901])
+	(widget_class_name "edu.stanford.smi.protegex.changes.ChangesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3901] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3902] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3903])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormsTab"))
+
+([Lipid_dashboard_ProjectKB_Class3903] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3906] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3907])
+	(widget_class_name "edu.stanford.smi.protegex.owl.swrl.ui.tab.SWRLTab"))
+
+([Lipid_dashboard_ProjectKB_Class3907] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3908] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3909])
+	(widget_class_name "edu.stanford.smi.protegex.fctab.FacetConstraintsTab"))
+
+([Lipid_dashboard_ProjectKB_Class3909] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3910] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3911])
+	(widget_class_name "edu.stanford.smi.protegex.changes.changesKBViewTab.ChangesKBViewTab"))
+
+([Lipid_dashboard_ProjectKB_Class3911] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3916] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3917])
+	(widget_class_name "edu.stanford.smi.protege.widget.KAToolTab"))
+
+([Lipid_dashboard_ProjectKB_Class3917] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3918] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3919])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.properties.OWLPropertiesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3919] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3920] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3921])
+	(widget_class_name "edu.stanford.smi.protege.widget.ProtegePropertiesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3921] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3922] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3923])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
+
+([Lipid_dashboard_ProjectKB_Class3923] of  Property_List
+
+	(properties
+		[Lipid_dashboard_ProjectKB_Class14106]
+		[Lipid_dashboard_ProjectKB_Class14107]
+		[Lipid_dashboard_ProjectKB_Class14108]))
+
+([Lipid_dashboard_ProjectKB_Class3924] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3925])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+
+([Lipid_dashboard_ProjectKB_Class3925] of  Property_List
+
+	(properties [Lipid_dashboard_ProjectKB_Class14010]))
+
+([Lipid_dashboard_ProjectKB_Class3926] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3927])
+	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.InstanceTreeTab"))
+
+([Lipid_dashboard_ProjectKB_Class3927] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3928] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3929])
+	(widget_class_name "edu.stanford.smi.protegex.changes.stats.ChangeStatisticsTab"))
+
+([Lipid_dashboard_ProjectKB_Class3929] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3930] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3931])
+	(widget_class_name "se.liu.ida.JessTab.JessTab"))
+
+([Lipid_dashboard_ProjectKB_Class3931] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3938] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3939])
+	(widget_class_name "edu.stanford.smi.protegex.changeanalysis.ChangeAnalysisTab"))
+
+([Lipid_dashboard_ProjectKB_Class3939] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3940] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3941])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.individuals.OWLIndividualsTab"))
+
+([Lipid_dashboard_ProjectKB_Class3941] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3944] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3945])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.cls.OWLClassesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3945] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3950] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3951])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalQueriesTab"))
+
+([Lipid_dashboard_ProjectKB_Class3951] of  Property_List
+
+	(properties
+		[Lipid_dashboard_ProjectKB_Class4023]
+		[Lipid_dashboard_ProjectKB_Class4024]
+		[Lipid_dashboard_ProjectKB_Class4025]))
+
+([Lipid_dashboard_ProjectKB_Class3952] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3953])
+	(widget_class_name "edu.stanford.smi.protegex.chatPlugin.ChatTab"))
+
+([Lipid_dashboard_ProjectKB_Class3953] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class3956] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class3957])
+	(widget_class_name "edu.stanford.smi.protegex.server_changes.prompt.UsersTab"))
+
+([Lipid_dashboard_ProjectKB_Class3957] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4023] of  Integer
+
+	(integer_value 456)
+	(name "QUERY_TAB_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class4024] of  Integer
+
+	(integer_value 74)
+	(name "QUERY_CONTROL_PANEL_TOP_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class4025] of  Integer
+
+	(integer_value 74)
+	(name "QUERY_CONTROL_PANEL_BOTTOM_DIVIDER_LOCATION"))
+
+([Lipid_dashboard_ProjectKB_Class4104] of  Property_List
+
+	(name "layout properties"))
+
+([Lipid_dashboard_ProjectKB_Class4105] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4106] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4107] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4108] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4583] of  Widget
+
+	(is_hidden TRUE)
+	(property_list [Lipid_dashboard_ProjectKB_Class4584])
+	(widget_class_name "edu.stanford.smi.protegex.prompt.PromptTab"))
+
+([Lipid_dashboard_ProjectKB_Class4584] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4617] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(name "increase_dose_ceiling")
+	(property_list [Lipid_dashboard_ProjectKB_Class4618])
+	(widget_class_name "edu.stanford.smi.protege.widget.FloatFieldWidget")
+	(width 100)
+	(x 0)
+	(y 1140))
+
+([Lipid_dashboard_ProjectKB_Class4618] of  Property_List
+)
+
+([Lipid_dashboard_ProjectKB_Class4773] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([Lipid_dashboard_ProjectKB_Class4774] of  String
+
+	(name "Guideline_Drug")
+	(string_value "label"))
+
+([Lipid_dashboard_ProjectKB_Class4775] of  String
+
+	(name "Collateral_Action")
+	(string_value "actions"))
+
+([Lipid_dashboard_ProjectKB_Class4776] of  Map_Entry
+
+	(key "chaoProject")
+	(key_class "java.lang.String")
+	(value "annotation_Lipid_dashboard.pprj")
+	(value_class "java.lang.String"))
+
+([Lipid_dashboard_ProjectKB_Class4777] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4778]
+		[Lipid_dashboard_ProjectKB_Class4779]
+		[Lipid_dashboard_ProjectKB_Class4780]
+		[Lipid_dashboard_ProjectKB_Class4781]
+		[Lipid_dashboard_ProjectKB_Class4782]
+		[Lipid_dashboard_ProjectKB_Class4783]
+		[Lipid_dashboard_ProjectKB_Class4784]
+		[Lipid_dashboard_ProjectKB_Class4785]))
+
+([Lipid_dashboard_ProjectKB_Class4778] of  Map_Entry
+
+	(key "Lipid_dashboard_Class120002")
+	(key_class "java.lang.String")
+	(value "200 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4779] of  Map_Entry
+
+	(key "Lipid_dashboard_Class120000")
+	(key_class "java.lang.String")
+	(value "100 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4780] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110010")
+	(key_class "java.lang.String")
+	(value "340 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4781] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110002")
+	(key_class "java.lang.String")
+	(value "140 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4782] of  Map_Entry
+
+	(key "Lipid_dashboard_Class300001")
+	(key_class "java.lang.String")
+	(value "420 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4783] of  Map_Entry
+
+	(key "Lipid_dashboard_Class120016")
+	(key_class "java.lang.String")
+	(value "200 60 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4784] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110007")
+	(key_class "java.lang.String")
+	(value "220 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4785] of  Map_Entry
+
+	(key "Lipid_dashboard_Class130009")
+	(key_class "java.lang.String")
+	(value "280 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4786] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class120015.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4777")
+	(value_class "java.util.Map"))
+
+([Lipid_dashboard_ProjectKB_Class4787] of  Map_Entry
+
+	(key "change_tracking_active")
+	(key_class "java.lang.String")
+	(value "true")
+	(value_class "java.lang.String"))
+
+([Lipid_dashboard_ProjectKB_Class4788] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4789]
+		[Lipid_dashboard_ProjectKB_Class4790]
+		[Lipid_dashboard_ProjectKB_Class4791]
+		[Lipid_dashboard_ProjectKB_Class4792]
+		[Lipid_dashboard_ProjectKB_Class4793]
+		[Lipid_dashboard_ProjectKB_Class4794]
+		[Lipid_dashboard_ProjectKB_Class4795]
+		[Lipid_dashboard_ProjectKB_Class4796]
+		[Lipid_dashboard_ProjectKB_Class4797]
+		[Lipid_dashboard_ProjectKB_Class4798]
+		[Lipid_dashboard_ProjectKB_Class4799]
+		[Lipid_dashboard_ProjectKB_Class4800]
+		[Lipid_dashboard_ProjectKB_Class4801]
+		[Lipid_dashboard_ProjectKB_Class4802]
+		[Lipid_dashboard_ProjectKB_Class4803]
+		[Lipid_dashboard_ProjectKB_Class4804]
+		[Lipid_dashboard_ProjectKB_Class4805]
+		[Lipid_dashboard_ProjectKB_Class4806]
+		[Lipid_dashboard_ProjectKB_Class4807]
+		[Lipid_dashboard_ProjectKB_Class4808]
+		[Lipid_dashboard_ProjectKB_Class4809]
+		[Lipid_dashboard_ProjectKB_Class4810]
+		[Lipid_dashboard_ProjectKB_Class4811]
+		[Lipid_dashboard_ProjectKB_Class4812]
+		[Lipid_dashboard_ProjectKB_Class4813]
+		[Lipid_dashboard_ProjectKB_Class4814]
+		[Lipid_dashboard_ProjectKB_Class4815]
+		[Lipid_dashboard_ProjectKB_Class4816]
+		[Lipid_dashboard_ProjectKB_Class4817]
+		[Lipid_dashboard_ProjectKB_Class4818]
+		[Lipid_dashboard_ProjectKB_Class4819]
+		[Lipid_dashboard_ProjectKB_Class4820]
+		[Lipid_dashboard_ProjectKB_Class4821]
+		[Lipid_dashboard_ProjectKB_Class4822]
+		[Lipid_dashboard_ProjectKB_Class4823]
+		[Lipid_dashboard_ProjectKB_Class4824]
+		[Lipid_dashboard_ProjectKB_Class4825]
+		[Lipid_dashboard_ProjectKB_Class4826]
+		[Lipid_dashboard_ProjectKB_Class4827]
+		[Lipid_dashboard_ProjectKB_Class4828]
+		[Lipid_dashboard_ProjectKB_Class4829]
+		[Lipid_dashboard_ProjectKB_Class4830]))
+
+([Lipid_dashboard_ProjectKB_Class4789] of  Map_Entry
+
+	(key "Lipid_dashboard_Class260014")
+	(key_class "java.lang.String")
+	(value "1040 540 59 61")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4790] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240027")
+	(key_class "java.lang.String")
+	(value "500 380 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4791] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240010")
+	(key_class "java.lang.String")
+	(value "360 80 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4792] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240026")
+	(key_class "java.lang.String")
+	(value "500 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4793] of  Map_Entry
+
+	(key "Lipid_dashboard_Class320000")
+	(key_class "java.lang.String")
+	(value "260 480 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4794] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240025")
+	(key_class "java.lang.String")
+	(value "500 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4795] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240011")
+	(key_class "java.lang.String")
+	(value "220 80 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4796] of  Map_Entry
+
+	(key "Lipid_dashboard_Class260017")
+	(key_class "java.lang.String")
+	(value "940 540 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4797] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190016")
+	(key_class "java.lang.String")
+	(value "880 200 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4798] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240028")
+	(key_class "java.lang.String")
+	(value "420 480 68 81")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4799] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190014")
+	(key_class "java.lang.String")
+	(value "900 300 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4800] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390011")
+	(key_class "java.lang.String")
+	(value "760 1000 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4801] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390012")
+	(key_class "java.lang.String")
+	(value "760 900 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4802] of  Map_Entry
+
+	(key "Lipid_dashboard_Class180004")
+	(key_class "java.lang.String")
+	(value "640 200 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4803] of  Map_Entry
+
+	(key "Lipid_dashboard_Class330000")
+	(key_class "java.lang.String")
+	(value "760 760 68 79")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4804] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210020")
+	(key_class "java.lang.String")
+	(value "1000 300 74 77")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4805] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80039")
+	(key_class "java.lang.String")
+	(value "540 700 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4806] of  Map_Entry
+
+	(key "Lipid_dashboard_Class250028")
+	(key_class "java.lang.String")
+	(value "420 700 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4807] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240007")
+	(key_class "java.lang.String")
+	(value "80 80 64 67")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4808] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240009")
+	(key_class "java.lang.String")
+	(value "880 80 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4809] of  Map_Entry
+
+	(key "Lipid_dashboard_Class300114")
+	(key_class "java.lang.String")
+	(value "1100 300 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4810] of  Map_Entry
+
+	(key "Lipid_dashboard_Class250024")
+	(key_class "java.lang.String")
+	(value "500 600 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4811] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210049")
+	(key_class "java.lang.String")
+	(value "780 300 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4812] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240021")
+	(key_class "java.lang.String")
+	(value "360 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4813] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240020")
+	(key_class "java.lang.String")
+	(value "360 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4814] of  Map_Entry
+
+	(key "Lipid_dashboard_Class300119")
+	(key_class "java.lang.String")
+	(value "940 420 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4815] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240000")
+	(key_class "java.lang.String")
+	(value "620 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4816] of  Map_Entry
+
+	(key "Lipid_dashboard_Class250000")
+	(key_class "java.lang.String")
+	(value "1020 660 69 66")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4817] of  Map_Entry
+
+	(key "Lipid_dashboard_Class270002")
+	(key_class "java.lang.String")
+	(value "1020 780 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4818] of  Map_Entry
+
+	(key "Lipid_dashboard_Class270003")
+	(key_class "java.lang.String")
+	(value "1120 780 64 69")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4819] of  Map_Entry
+
+	(key "Lipid_dashboard_Class270006")
+	(key_class "java.lang.String")
+	(value "900 780 63 73")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4820] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390003")
+	(key_class "java.lang.String")
+	(value "1120 900 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4821] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20002")
+	(key_class "java.lang.String")
+	(value "80 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4822] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390002")
+	(key_class "java.lang.String")
+	(value "1120 1000 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4823] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20003")
+	(key_class "java.lang.String")
+	(value "80 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4824] of  Map_Entry
+
+	(key "Lipid_dashboard_Class250012")
+	(key_class "java.lang.String")
+	(value "520 480 75 89")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4825] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30000")
+	(key_class "java.lang.String")
+	(value "500 80 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4826] of  Map_Entry
+
+	(key "Lipid_dashboard_Class250017")
+	(key_class "java.lang.String")
+	(value "620 480 83 78")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4827] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390007")
+	(key_class "java.lang.String")
+	(value "900 1000 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4828] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240015")
+	(key_class "java.lang.String")
+	(value "220 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4829] of  Map_Entry
+
+	(key "Lipid_dashboard_Class240016")
+	(key_class "java.lang.String")
+	(value "220 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4830] of  Map_Entry
+
+	(key "Lipid_dashboard_Class390008")
+	(key_class "java.lang.String")
+	(value "900 900 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4831] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class240012.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4788")
+	(value_class "java.util.Map"))
+
+([Lipid_dashboard_ProjectKB_Class4832] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4833]
+		[Lipid_dashboard_ProjectKB_Class4834]
+		[Lipid_dashboard_ProjectKB_Class4835]
+		[Lipid_dashboard_ProjectKB_Class4836]
+		[Lipid_dashboard_ProjectKB_Class4837]
+		[Lipid_dashboard_ProjectKB_Class4838]
+		[Lipid_dashboard_ProjectKB_Class4839]
+		[Lipid_dashboard_ProjectKB_Class4840]
+		[Lipid_dashboard_ProjectKB_Class4841]
+		[Lipid_dashboard_ProjectKB_Class4842]
+		[Lipid_dashboard_ProjectKB_Class4843]
+		[Lipid_dashboard_ProjectKB_Class4844]
+		[Lipid_dashboard_ProjectKB_Class4845]
+		[Lipid_dashboard_ProjectKB_Class4846]
+		[Lipid_dashboard_ProjectKB_Class4847]
+		[Lipid_dashboard_ProjectKB_Class4848]
+		[Lipid_dashboard_ProjectKB_Class4849]
+		[Lipid_dashboard_ProjectKB_Class4850]
+		[Lipid_dashboard_ProjectKB_Class4851]
+		[Lipid_dashboard_ProjectKB_Class4852]
+		[Lipid_dashboard_ProjectKB_Class4853]
+		[Lipid_dashboard_ProjectKB_Class4854]
+		[Lipid_dashboard_ProjectKB_Class4855]
+		[Lipid_dashboard_ProjectKB_Class4856]
+		[Lipid_dashboard_ProjectKB_Class4857]
+		[Lipid_dashboard_ProjectKB_Class4858]
+		[Lipid_dashboard_ProjectKB_Class4859]
+		[Lipid_dashboard_ProjectKB_Class4860]
+		[Lipid_dashboard_ProjectKB_Class4861]
+		[Lipid_dashboard_ProjectKB_Class4862]
+		[Lipid_dashboard_ProjectKB_Class4863]))
+
+([Lipid_dashboard_ProjectKB_Class4833] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80022")
+	(key_class "java.lang.String")
+	(value "420 680 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4834] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70016")
+	(key_class "java.lang.String")
+	(value "240 140 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4835] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80000")
+	(key_class "java.lang.String")
+	(value "540 40 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4836] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190016")
+	(key_class "java.lang.String")
+	(value "860 80 59 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4837] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30046")
+	(key_class "java.lang.String")
+	(value "360 460 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4838] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190014")
+	(key_class "java.lang.String")
+	(value "860 200 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4839] of  Map_Entry
+
+	(key "Lipid_dashboard_Class180004")
+	(key_class "java.lang.String")
+	(value "380 140 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4840] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80039")
+	(key_class "java.lang.String")
+	(value "80 780 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4841] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90002")
+	(key_class "java.lang.String")
+	(value "480 220 73 69")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4842] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90001")
+	(key_class "java.lang.String")
+	(value "540 120 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4843] of  Map_Entry
+
+	(key "Lipid_dashboard_Class100016")
+	(key_class "java.lang.String")
+	(value "220 780 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4844] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80019")
+	(key_class "java.lang.String")
+	(value "300 560 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4845] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80016")
+	(key_class "java.lang.String")
+	(value "240 640 77 78")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4846] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90005")
+	(key_class "java.lang.String")
+	(value "520 400 84 71")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4847] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90006")
+	(key_class "java.lang.String")
+	(value "620 460 84 71")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4848] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90004")
+	(key_class "java.lang.String")
+	(value "560 300 73 66")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4849] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80036")
+	(key_class "java.lang.String")
+	(value "120 660 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4850] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90031")
+	(key_class "java.lang.String")
+	(value "680 360 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4851] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20002")
+	(key_class "java.lang.String")
+	(value "80 140 59 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4852] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80028")
+	(key_class "java.lang.String")
+	(value "400 580 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4853] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20003")
+	(key_class "java.lang.String")
+	(value "80 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4854] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80029")
+	(key_class "java.lang.String")
+	(value "460 500 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4855] of  Map_Entry
+
+	(key "Lipid_dashboard_Class100007")
+	(key_class "java.lang.String")
+	(value "600 220 71 65")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4856] of  Map_Entry
+
+	(key "Lipid_dashboard_Class100029")
+	(key_class "java.lang.String")
+	(value "720 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4857] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30000")
+	(key_class "java.lang.String")
+	(value "240 40 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4858] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70010")
+	(key_class "java.lang.String")
+	(value "320 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4859] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70011")
+	(key_class "java.lang.String")
+	(value "220 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4860] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30004")
+	(key_class "java.lang.String")
+	(value "220 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4861] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30005")
+	(key_class "java.lang.String")
+	(value "140 460 65 73")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4862] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20000")
+	(key_class "java.lang.String")
+	(value "80 40 65 68")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4863] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70012")
+	(key_class "java.lang.String")
+	(value "240 460 73 69")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4864] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class20001.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4832")
+	(value_class "java.util.Map"))
+
+([Lipid_dashboard_ProjectKB_Class4865] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4866]
+		[Lipid_dashboard_ProjectKB_Class4867]
+		[Lipid_dashboard_ProjectKB_Class4868]
+		[Lipid_dashboard_ProjectKB_Class4869]
+		[Lipid_dashboard_ProjectKB_Class4870]
+		[Lipid_dashboard_ProjectKB_Class4871]
+		[Lipid_dashboard_ProjectKB_Class4872]
+		[Lipid_dashboard_ProjectKB_Class4873]))
+
+([Lipid_dashboard_ProjectKB_Class4866] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110010")
+	(key_class "java.lang.String")
+	(value "380 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4867] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110002")
+	(key_class "java.lang.String")
+	(value "160 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4868] of  Map_Entry
+
+	(key "Lipid_dashboard_Class300001")
+	(key_class "java.lang.String")
+	(value "20 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4869] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110001")
+	(key_class "java.lang.String")
+	(value "260 100 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4870] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110007")
+	(key_class "java.lang.String")
+	(value "280 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4871] of  Map_Entry
+
+	(key "Lipid_dashboard_Class270011")
+	(key_class "java.lang.String")
+	(value "480 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4872] of  Map_Entry
+
+	(key "Lipid_dashboard_Class340001")
+	(key_class "java.lang.String")
+	(value "580 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4873] of  Map_Entry
+
+	(key "Lipid_dashboard_Class340000")
+	(key_class "java.lang.String")
+	(value "680 260 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4874] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class110000.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4865")
+	(value_class "java.util.Map"))
+
+([Lipid_dashboard_ProjectKB_Class4875] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4876]
+		[Lipid_dashboard_ProjectKB_Class4877]))
+
+([Lipid_dashboard_ProjectKB_Class4876] of  Map_Entry
+
+	(key "Lipid_dashboard_Class110002")
+	(key_class "java.lang.String")
+	(value "220 220 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4877] of  Map_Entry
+
+	(key "Lipid_dashboard_Class160007")
+	(key_class "java.lang.String")
+	(value "220 80 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4878] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class160006.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4875")
+	(value_class "java.util.Map"))
+
+([Lipid_dashboard_ProjectKB_Class4879] of  Map
+
+	(entries
+		[Lipid_dashboard_ProjectKB_Class4880]
+		[Lipid_dashboard_ProjectKB_Class4881]
+		[Lipid_dashboard_ProjectKB_Class4882]
+		[Lipid_dashboard_ProjectKB_Class4883]
+		[Lipid_dashboard_ProjectKB_Class4884]
+		[Lipid_dashboard_ProjectKB_Class4885]
+		[Lipid_dashboard_ProjectKB_Class4886]
+		[Lipid_dashboard_ProjectKB_Class4887]
+		[Lipid_dashboard_ProjectKB_Class4888]
+		[Lipid_dashboard_ProjectKB_Class4889]
+		[Lipid_dashboard_ProjectKB_Class4890]
+		[Lipid_dashboard_ProjectKB_Class4891]
+		[Lipid_dashboard_ProjectKB_Class4892]
+		[Lipid_dashboard_ProjectKB_Class4893]
+		[Lipid_dashboard_ProjectKB_Class4894]
+		[Lipid_dashboard_ProjectKB_Class4895]
+		[Lipid_dashboard_ProjectKB_Class4896]
+		[Lipid_dashboard_ProjectKB_Class4897]
+		[Lipid_dashboard_ProjectKB_Class4898]
+		[Lipid_dashboard_ProjectKB_Class4899]
+		[Lipid_dashboard_ProjectKB_Class4900]
+		[Lipid_dashboard_ProjectKB_Class4901]
+		[Lipid_dashboard_ProjectKB_Class4902]
+		[Lipid_dashboard_ProjectKB_Class4903]
+		[Lipid_dashboard_ProjectKB_Class4904]
+		[Lipid_dashboard_ProjectKB_Class4905]
+		[Lipid_dashboard_ProjectKB_Class4906]
+		[Lipid_dashboard_ProjectKB_Class4907]
+		[Lipid_dashboard_ProjectKB_Class4908]
+		[Lipid_dashboard_ProjectKB_Class4909]
+		[Lipid_dashboard_ProjectKB_Class4910]
+		[Lipid_dashboard_ProjectKB_Class4911]
+		[Lipid_dashboard_ProjectKB_Class4912]
+		[Lipid_dashboard_ProjectKB_Class4913]
+		[Lipid_dashboard_ProjectKB_Class4914]
+		[Lipid_dashboard_ProjectKB_Class4915]
+		[Lipid_dashboard_ProjectKB_Class4916]
+		[Lipid_dashboard_ProjectKB_Class4917]
+		[Lipid_dashboard_ProjectKB_Class4918]
+		[Lipid_dashboard_ProjectKB_Class4919]
+		[Lipid_dashboard_ProjectKB_Class4920]
+		[Lipid_dashboard_ProjectKB_Class4921]
+		[Lipid_dashboard_ProjectKB_Class4922]
+		[Lipid_dashboard_ProjectKB_Class4923]
+		[Lipid_dashboard_ProjectKB_Class4924]
+		[Lipid_dashboard_ProjectKB_Class4925]))
+
+([Lipid_dashboard_ProjectKB_Class4880] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80022")
+	(key_class "java.lang.String")
+	(value "320 740 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4881] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210039")
+	(key_class "java.lang.String")
+	(value "780 440 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4882] of  Map_Entry
+
+	(key "Lipid_dashboard_Class30046")
+	(key_class "java.lang.String")
+	(value "340 460 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4883] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190016")
+	(key_class "java.lang.String")
+	(value "700 140 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4884] of  Map_Entry
+
+	(key "Lipid_dashboard_Class190014")
+	(key_class "java.lang.String")
+	(value "600 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4885] of  Map_Entry
+
+	(key "Lipid_dashboard_Class220001")
+	(key_class "java.lang.String")
+	(value "700 620 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4886] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210016")
+	(key_class "java.lang.String")
+	(value "700 40 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4887] of  Map_Entry
+
+	(key "Lipid_dashboard_Class220002")
+	(key_class "java.lang.String")
+	(value "820 620 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4888] of  Map_Entry
+
+	(key "Lipid_dashboard_Class220021")
+	(key_class "java.lang.String")
+	(value "220 340 60 57")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4889] of  Map_Entry
+
+	(key "Lipid_dashboard_Class180004")
+	(key_class "java.lang.String")
+	(value "440 180 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4890] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210022")
+	(key_class "java.lang.String")
+	(value "760 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4891] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210003")
+	(key_class "java.lang.String")
+	(value "20 660 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4892] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210020")
+	(key_class "java.lang.String")
+	(value "760 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4893] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80039")
+	(key_class "java.lang.String")
+	(value "440 1140 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4894] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210002")
+	(key_class "java.lang.String")
+	(value "20 560 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4895] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210026")
+	(key_class "java.lang.String")
+	(value "660 440 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4896] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210000")
+	(key_class "java.lang.String")
+	(value "780 540 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4897] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210025")
+	(key_class "java.lang.String")
+	(value "540 440 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4898] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210023")
+	(key_class "java.lang.String")
+	(value "580 340 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4899] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230003")
+	(key_class "java.lang.String")
+	(value "540 660 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4900] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210048")
+	(key_class "java.lang.String")
+	(value "880 440 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4901] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80019")
+	(key_class "java.lang.String")
+	(value "220 820 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4902] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230006")
+	(key_class "java.lang.String")
+	(value "240 140 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4903] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230005")
+	(key_class "java.lang.String")
+	(value "240 20 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4904] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80016")
+	(key_class "java.lang.String")
+	(value "220 940 79 82")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4905] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230008")
+	(key_class "java.lang.String")
+	(value "200 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4906] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210049")
+	(key_class "java.lang.String")
+	(value "900 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4907] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230020")
+	(key_class "java.lang.String")
+	(value "400 880 71 66")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4908] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230023")
+	(key_class "java.lang.String")
+	(value "440 1040 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4909] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90005")
+	(key_class "java.lang.String")
+	(value "720 840 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4910] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90006")
+	(key_class "java.lang.String")
+	(value "820 840 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4911] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90004")
+	(key_class "java.lang.String")
+	(value "820 720 82 71")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4912] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80036")
+	(key_class "java.lang.String")
+	(value "320 1060 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4913] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210009")
+	(key_class "java.lang.String")
+	(value "100 780 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4914] of  Map_Entry
+
+	(key "Lipid_dashboard_Class90031")
+	(key_class "java.lang.String")
+	(value "920 840 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4915] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20002")
+	(key_class "java.lang.String")
+	(value "40 160 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4916] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80028")
+	(key_class "java.lang.String")
+	(value "360 640 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4917] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20003")
+	(key_class "java.lang.String")
+	(value "40 280 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4918] of  Map_Entry
+
+	(key "Lipid_dashboard_Class80029")
+	(key_class "java.lang.String")
+	(value "440 740 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4919] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210012")
+	(key_class "java.lang.String")
+	(value "100 880 80 75")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4920] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70010")
+	(key_class "java.lang.String")
+	(value "320 240 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4921] of  Map_Entry
+
+	(key "Lipid_dashboard_Class210031")
+	(key_class "java.lang.String")
+	(value "540 560 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4922] of  Map_Entry
+
+	(key "Lipid_dashboard_Class70012")
+	(key_class "java.lang.String")
+	(value "219 460 66 67")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4923] of  Map_Entry
+
+	(key "Lipid_dashboard_Class20000")
+	(key_class "java.lang.String")
+	(value "40 40 67 77")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4924] of  Map_Entry
+
+	(key "Lipid_dashboard_Class230018")
+	(key_class "java.lang.String")
+	(value "140 660 60 60")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4925] of  Map_Entry
+
+	(key "Lipid_dashboard_Class200000")
+	(key_class "java.lang.String")
+	(value "100 460 67 74")
+	(value_class "java.awt.Rectangle"))
+
+([Lipid_dashboard_ProjectKB_Class4926] of  Map_Entry
+
+	(key "InstanceGraphWidget.Lipid_dashboard_Class190000.steps")
+	(key_class "java.lang.String")
+	(value "Lipid_dashboard_ProjectKB_Class4879")
+	(value_class "java.util.Map"))
+
+([option_instance] of  Options
+
+	(confirm_on_remove FALSE)
+	(display_abstract_class_icon TRUE)
+	(display_hidden_classes TRUE)
+	(display_multi_parent_class_icon TRUE)
+	(is_readonly FALSE)
+	(tabbed_instance_form_layout FALSE)
+	(undo_enabled TRUE)
+	(update_modification_slots FALSE))
+
+([PAL_DESCRIPTION_WIDGET] of  Widget
+
+	(height 180)
+	(is_hidden FALSE)
+	(label "Description")
+	(name ":PAL-DESCRIPTION")
+	(property_list [Lipid_dashboard_ProjectKB_Class4106])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextAreaWidget")
+	(width 250)
+	(x 275)
+	(y 0))
+
+([PAL_FORM_WIDGET] of  Widget
+
+	(height 476)
+	(is_hidden FALSE)
+	(name ":PAL-CONSTRAINT")
+	(property_list [PAL_PROPERTY_LIST])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(width 603)
+	(x 0)
+	(y 0))
+
+([PAL_NAME_WIDGET] of  Widget
+
+	(height 60)
+	(is_hidden FALSE)
+	(label "Name")
+	(name ":PAL-NAME")
+	(property_list [Lipid_dashboard_ProjectKB_Class4105])
+	(widget_class_name "edu.stanford.smi.protege.widget.TextFieldWidget")
+	(width 275)
+	(x 0)
+	(y 0))
+
+([PAL_PROPERTY_LIST] of  Property_List
+
+	(properties
+		[PAL_NAME_WIDGET]
+		[PAL_RANGE_WIDGET]
+		[PAL_DESCRIPTION_WIDGET]
+		[PAL_STATEMENT_WIDGET]
+		[Lipid_dashboard_ProjectKB_Class4104]))
+
+([PAL_RANGE_WIDGET] of  Widget
+
+	(height 180)
+	(is_hidden FALSE)
+	(label "Range")
+	(name ":PAL-RANGE")
+	(property_list [Lipid_dashboard_ProjectKB_Class4107])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalRangeWidget")
+	(width 250)
+	(x 275)
+	(y 180))
+
+([PAL_STATEMENT_WIDGET] of  Widget
+
+	(height 300)
+	(is_hidden FALSE)
+	(label "Statement")
+	(name ":PAL-STATEMENT")
+	(property_list [Lipid_dashboard_ProjectKB_Class4108])
+	(widget_class_name "edu.stanford.smi.protegex.widget.pal.constraint.PalConstraintWidget")
+	(width 275)
+	(x 0)
+	(y 60))
+
+([PROJECT] of  Project
+
+	(browser_slot_names [BROWSER_SLOT_NAMES])
+	(customized_instance_widgets
+		[PAL_FORM_WIDGET]
+		[STANDARD_FACET_FORM_WIDGET]
+		[STANDARD_CLASS_FORM_WIDGET]
+		[STANDARD_SLOT_FORM_WIDGET]
+		[INSTANCE_ANNOTATION_FORM_WIDGET])
+	(default_cls_metaclass ":STANDARD-CLASS")
+	(default_facet_metaclass ":STANDARD-FACET")
+	(default_instance_widget_class_name "edu.stanford.smi.protege.widget.FormWidget")
+	(default_slot_metaclass ":STANDARD-SLOT")
+	(included_projects
+		"library.pprj"
+		"eon2.pprj")
+	(java_packages
+		"edu.stanford.smi.eon.Dharma"
+		"edu.stanford.smi.eon.time"
+		"edu.stanford.smi.eon.criterion"
+		"edu.stanford.smi.eon.athenaextensions"
+		"edu.stanford.smi.eon.datahandler")
+	(journaling_enabled FALSE)
+	(next_frame_number 0)
+	(options [option_instance])
+	(property_map [KB_583993_Class1])
+	(sources [SOURCES])
+	(tabs
+		[Lipid_dashboard_ProjectKB_Class3924]
+		[CLSES_TAB]
+		[SLOTS_TAB]
+		[FORMS_TAB]
+		[INSTANCES_TAB]
+		[QUERIES_TAB]
+		[Lipid_dashboard_ProjectKB_Class3890]
+		[Lipid_dashboard_ProjectKB_Class3894]
+		[Lipid_dashboard_ProjectKB_Class3922]
+		[Lipid_dashboard_ProjectKB_Class3950]
+		[Lipid_dashboard_ProjectKB_Class24019]
+		[Lipid_dashboard_ProjectKB_Class3938]
+		[Lipid_dashboard_ProjectKB_Class3900]
+		[Lipid_dashboard_ProjectKB_Class3908]
+		[Lipid_dashboard_ProjectKB_Class3926]
+		[Lipid_dashboard_ProjectKB_Class3930]
+		[Lipid_dashboard_ProjectKB_Class3916]
+		[Lipid_dashboard_ProjectKB_Class3902]
+		[Lipid_dashboard_ProjectKB_Class4583]
+		[Lipid_dashboard_ProjectKB_Class3920]
+		[Lipid_dashboard_ProjectKB_Class3888]
+		[Lipid_dashboard_ProjectKB_Class3884]
+		[Lipid_dashboard_ProjectKB_Class3910]
+		[Lipid_dashboard_ProjectKB_Class3928]
+		[Lipid_dashboard_ProjectKB_Class3952]
+		[Lipid_dashboard_ProjectKB_Class3944]
+		[Lipid_dashboard_ProjectKB_Class3940]
+		[Lipid_dashboard_ProjectKB_Class3898]
+		[Lipid_dashboard_ProjectKB_Class3918]
+		[Lipid_dashboard_ProjectKB_Class3906]
+		[Lipid_dashboard_ProjectKB_Class3956]))
+
+([QUERIES_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(property_list [KB_583993_Class104])
+	(widget_class_name "edu.stanford.smi.protegex.queries_tab.QueriesTab"))
+
+([SLOTS_TAB] of  Widget
+
+	(is_hidden FALSE)
+	(widget_class_name "edu.stanford.smi.protege.widget.SlotsTab"))
+
+([SOURCES] of  Property_List
+
+	(properties
+		[KB_583993_Class0]
+		[KB_583993_Class105]
+		[KB_583993_Class106]))
+
+([STANDARD_CLASS_CONSTRAINTS_WIDGET] of  Widget
+
+	(height 120)
+	(label "Constraints")
+	(name ":SLOT-CONSTRAINTS")
+	(property_list [KB_583993_Class83])
+	(widget_class_name "edu.stanford.smi.protege.widget.ConstraintsWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([STANDARD_CLASS_DIRECT_INSTANCES_WIDGET] of  Widget
+
+	(name ":DIRECT-INSTANCES"))
+
+([STANDARD_CLASS_DIRECT_SUBCLASSES_WIDGET] of  Widget
+
+	(name ":DIRECT-SUBCLASSES"))
+
+([STANDARD_CLASS_DIRECT_SUPERCLASSES_WIDGET] of  Widget
+
+	(name ":DIRECT-SUPERCLASSES"))
+
+([STANDARD_CLASS_DIRECT_TYPE_WIDGET] of  Widget
+
+	(name ":DIRECT-TYPE"))
+
+([STANDARD_CLASS_DOCUMENTATION_WIDGET] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_583993_Class86])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([STANDARD_CLASS_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-CLASS")
+	(property_list [STANDARD_CLASS_WIDGETS])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([STANDARD_CLASS_NAME_WIDGET] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_583993_Class87])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([STANDARD_CLASS_ROLE_WIDGET] of  Widget
+
+	(height 60)
+	(label "Role")
+	(name ":ROLE")
+	(property_list [KB_583993_Class91])
+	(widget_class_name "edu.stanford.smi.protege.widget.RoleWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([STANDARD_CLASS_TEMPLATE_SLOTS_WIDGET] of  Widget
+
+	(height 150)
+	(label "Template Slots")
+	(name ":DIRECT-TEMPLATE-SLOTS")
+	(property_list [KB_583993_Class88])
+	(widget_class_name "edu.stanford.smi.protege.widget.TemplateSlotsWidget")
+	(width 600)
+	(x 0)
+	(y 120))
+
+([STANDARD_CLASS_WIDGETS] of  Property_List
+
+	(name "class widget properties")
+	(properties
+		[STANDARD_CLASS_CONSTRAINTS_WIDGET]
+		[STANDARD_CLASS_DIRECT_INSTANCES_WIDGET]
+		[STANDARD_CLASS_DIRECT_SUBCLASSES_WIDGET]
+		[STANDARD_CLASS_DIRECT_SUPERCLASSES_WIDGET]
+		[STANDARD_CLASS_DOCUMENTATION_WIDGET]
+		[STANDARD_CLASS_NAME_WIDGET]
+		[STANDARD_CLASS_ROLE_WIDGET]
+		[STANDARD_CLASS_DIRECT_TYPE_WIDGET]
+		[STANDARD_CLASS_TEMPLATE_SLOTS_WIDGET]
+		[LAYOUT_PROPERTIES]))
+
+([STANDARD_FACET_ASSOCIATED_SLOT_WIDGET] of  Widget
+
+	(height 60)
+	(label "Associated Slot")
+	(name ":ASSOCIATED-SLOT")
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceFieldWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([STANDARD_FACET_DOCUMENTATION_WIDGET] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([STANDARD_FACET_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-FACET")
+	(property_list [STANDARD_FACET_WIDGETS])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([STANDARD_FACET_NAME_WIDGET] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([STANDARD_FACET_WIDGETS] of  Property_List
+
+	(name "facet widget properties")
+	(properties
+		[STANDARD_FACET_NAME_WIDGET]
+		[STANDARD_FACET_DOCUMENTATION_WIDGET]
+		[STANDARD_FACET_ASSOCIATED_SLOT_WIDGET]))
+
+([STANDARD_SLOT_ASSOCIATED_FACET_WIDGET] of  Widget
+
+	(name ":ASSOCIATED-FACET"))
+
+([STANDARD_SLOT_CONSTRAINTS_WIDGET] of  Widget
+
+	(name ":SLOT-CONSTRAINTS"))
+
+([STANDARD_SLOT_DEFAULT_VALUE_WIDGET] of  Widget
+
+	(height 90)
+	(label "Default")
+	(name ":SLOT-DEFAULTS")
+	(property_list [KB_583993_Class95])
+	(widget_class_name "edu.stanford.smi.protege.widget.DefaultValuesWidget")
+	(width 200)
+	(x 400)
+	(y 90))
+
+([STANDARD_SLOT_DIRECT_DOMAIN_WIDGET] of  Widget
+
+	(height 95)
+	(label "Domain")
+	(name ":DIRECT-DOMAIN")
+	(property_list [KB_583993_Class93])
+	(widget_class_name "edu.stanford.smi.protege.widget.DirectDomainWidget")
+	(width 200)
+	(x 400)
+	(y 180))
+
+([STANDARD_SLOT_DIRECT_TYPE_WIDGET] of  Widget
+
+	(name ":DIRECT-TYPE"))
+
+([STANDARD_SLOT_DOCUMENTATION_WIDGET] of  Widget
+
+	(height 120)
+	(label "Documentation")
+	(name ":DOCUMENTATION")
+	(property_list [KB_583993_Class96])
+	(widget_class_name "edu.stanford.smi.protege.widget.DocumentationWidget")
+	(width 200)
+	(x 200)
+	(y 0))
+
+([STANDARD_SLOT_FORM_WIDGET] of  Widget
+
+	(name ":STANDARD-SLOT")
+	(property_list [STANDARD_SLOT_WIDGETS])
+	(widget_class_name "edu.stanford.smi.protege.widget.FormWidget"))
+
+([STANDARD_SLOT_INVERSE_WIDGET] of  Widget
+
+	(height 60)
+	(label "Inverse Slot")
+	(name ":SLOT-INVERSE")
+	(property_list [KB_583993_Class102])
+	(widget_class_name "edu.stanford.smi.protege.widget.InverseSlotWidget")
+	(width 200)
+	(x 200)
+	(y 215))
+
+([STANDARD_SLOT_MAXIMUM_CARDINALITY_WIDGET] of  Widget
+
+	(height 35)
+	(name ":SLOT-MAXIMUM-CARDINALITY")
+	(property_list [KB_583993_Class101])
+	(widget_class_name "edu.stanford.smi.protege.widget.MaximumCardinalityWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([STANDARD_SLOT_MAXIMUM_VALUE_WIDGET] of  Widget
+
+	(height 60)
+	(label "Maximum")
+	(name ":SLOT-NUMERIC-MAXIMUM")
+	(property_list [KB_583993_Class97])
+	(widget_class_name "edu.stanford.smi.protege.widget.NumericMaximumWidget")
+	(width 100)
+	(x 100)
+	(y 215))
+
+([STANDARD_SLOT_MINIMUM_CARDINALITY_WIDGET] of  Widget
+
+	(height 60)
+	(label "Cardinality")
+	(name ":SLOT-MINIMUM-CARDINALITY")
+	(property_list [KB_583993_Class100])
+	(widget_class_name "edu.stanford.smi.protege.widget.MinimumCardinalityWidget")
+	(width 200)
+	(x 200)
+	(y 120))
+
+([STANDARD_SLOT_MINIMUM_VALUE_WIDGET] of  Widget
+
+	(height 60)
+	(label "Minimum")
+	(name ":SLOT-NUMERIC-MINIMUM")
+	(property_list [KB_583993_Class98])
+	(widget_class_name "edu.stanford.smi.protege.widget.NumericMinimumWidget")
+	(width 100)
+	(x 0)
+	(y 215))
+
+([STANDARD_SLOT_NAME_WIDGET] of  Widget
+
+	(height 60)
+	(label "Name")
+	(name ":NAME")
+	(property_list [KB_583993_Class99])
+	(widget_class_name "edu.stanford.smi.protege.widget.InstanceNameWidget")
+	(width 200)
+	(x 0)
+	(y 0))
+
+([STANDARD_SLOT_SUBSLOTS_WIDGET] of  Widget
+
+	(name ":DIRECT-SUBSLOTS"))
+
+([STANDARD_SLOT_SUPERSLOTS_WIDGET] of  Widget
+
+	(name ":DIRECT-SUPERSLOTS"))
+
+([STANDARD_SLOT_TYPE_WIDGET] of  Widget
+
+	(height 155)
+	(label "Value Type")
+	(name ":SLOT-VALUE-TYPE")
+	(property_list [KB_583993_Class103])
+	(widget_class_name "edu.stanford.smi.protege.widget.ValueTypeWidget")
+	(width 200)
+	(x 0)
+	(y 60))
+
+([STANDARD_SLOT_VALUES_WIDGET] of  Widget
+
+	(height 90)
+	(label "Template Values")
+	(name ":SLOT-VALUES")
+	(property_list [KB_583993_Class94])
+	(widget_class_name "edu.stanford.smi.protege.widget.SlotValuesWidget")
+	(width 200)
+	(x 400)
+	(y 0))
+
+([STANDARD_SLOT_WIDGETS] of  Property_List
+
+	(name "slot widget properties")
+	(properties
+		[STANDARD_SLOT_MINIMUM_CARDINALITY_WIDGET]
+		[STANDARD_SLOT_MAXIMUM_CARDINALITY_WIDGET]
+		[STANDARD_SLOT_CONSTRAINTS_WIDGET]
+		[STANDARD_SLOT_DIRECT_TYPE_WIDGET]
+		[STANDARD_SLOT_DIRECT_DOMAIN_WIDGET]
+		[STANDARD_SLOT_VALUES_WIDGET]
+		[STANDARD_SLOT_SUPERSLOTS_WIDGET]
+		[STANDARD_SLOT_SUBSLOTS_WIDGET]
+		[STANDARD_SLOT_DEFAULT_VALUE_WIDGET]
+		[STANDARD_SLOT_DOCUMENTATION_WIDGET]
+		[STANDARD_SLOT_MAXIMUM_VALUE_WIDGET]
+		[STANDARD_SLOT_MINIMUM_VALUE_WIDGET]
+		[STANDARD_SLOT_ASSOCIATED_FACET_WIDGET]
+		[STANDARD_SLOT_NAME_WIDGET]
+		[STANDARD_SLOT_INVERSE_WIDGET]
+		[STANDARD_SLOT_TYPE_WIDGET]
+		[KB_583993_Class92]))
+
+([VERTICAL_STRETCHER] of  String
+
+	(name "vertical_stretcher")
+	(string_value ":DIRECT-TEMPLATE-SLOTS"))

@@ -1,0 +1,221 @@
+; Thu Apr 23 16:21:55 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass K%3E5.5+and+ACE-I+in+last+3+months
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass K%3E5.5+and+ARB+in+last+3+months
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Presence+of+ACE+Inhibitor+and+AA
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Allergy+to+Sulfonylureas
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass new-onset+insulin-requiring+DM
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Creatinine+%3E+1.4+and+Female
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Creatinine+%3E+1.5+and+Male
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass BMI%3E25
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass BMI%3E%3D29
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age%3E80+yrs
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass eGFR+%3C+30 "ADA 2009 guideline?"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age%3E%3D65+and+creatinine%3E%3D2
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Serum+creatinine+%3E%3D2
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass HbA1c_GT_9
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence_of_insulin_defined_concept
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass creatinine_clearance_lt_30_defined_concept
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass bicarb%3C%3D21
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SGOT%3E3*UpperLimitOfNormal
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SGPT%3E3*UpperLimitOfNormal
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass HbA1c%3C6
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Allergy_ADR_to_sulfa_drugs
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence_of_Gemfibrozil
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Presence_of_NPH_insulin
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CKD_stage_3_or_4_or_5_or_eGFR_lt_50
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass K%3E5+and+absence+of+ACE-I
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Contraindication_to_ACE_Inhibitor_defined_concept
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Poor_renal_function
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Intermediate_renal_function
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+or+Absnece+of+eGFR+in+past+mo
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+bicar+or+Absence+of+bicarb+in+past+yr
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SGOT+and+SGPT+or+Absnece+of+SGOT+and+SGPT+in+past+yr
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+or+Absence+of+eGFR+in+past+yr
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+K+in+past+mo
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Allergy+to+aspirin
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SBP+in+past+mo
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age+%3E%3D65+and+absence+of+creatinine+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Age+%3E%3D65+and+absence+of+creatinine+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass SBP%3C110
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass ADR+anggioedema+or+anaphylaxis+or+stevens+johns+to+glimepiride
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass ADR+anaphylaxis+to+glipizide
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass ADR+anaphylaxis+to+glyburide
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+in+past+month
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+eGFR+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+SGOT+and+SGPT+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Absence+of+bicarb+in+past+year
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass ADR+anaphylaxis+to+SU+1st+gen
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass eGFR%3C45
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Edema
+	(is-a Signs)
+	(role concrete))
+
+(defclass Weight+gain
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass Hypersensitivity+to+Chlorpropamide
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass endocrinologist
+	(is-a Role)
+	(role concrete))
+
+(defclass DM_care_team
+	(is-a Role)
+	(role concrete))
+
+(defclass nephrologist
+	(is-a Role)
+	(role concrete))

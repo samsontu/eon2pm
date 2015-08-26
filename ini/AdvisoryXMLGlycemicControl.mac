@@ -1,0 +1,17 @@
+
+
+KBPath = /Users/tu/workspace/eonpm/kbs/ATHENA_GlycemicControl_GenQuery.pprj
+GuidelineName=ATHENA DM:  Glycemic Control Dashboard
+XMLDataFile = /Users/tu/workspace/eonpm/data/dmpatientdata_dm_PKdescrip.xml
+OutputDir = /Users/tu/workspace/eonpm/output/
+PatientID = G2aB12atGoalsMetforminACENoB12_640_531
+
+log4j.rootLogger=INFO, A1
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+
+# Print the date in ISO 8601 format
+log4j.appender.A1.layout.ConversionPattern=%d [%t] %-5p %c - %m%n
+
+# Print only messages of level WARN or above in the package com.foo.
+# log4j.logger.com.foo=WARN

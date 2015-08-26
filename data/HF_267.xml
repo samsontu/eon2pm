@@ -1,0 +1,1497 @@
+<patientdata>
+<patient name="267">
+<meds>
+<item>
+<field1 label="Drug">triamterene</field1>
+<field2 label="Daily Dose">400</field2>
+<start>Tue OCT 23 00:04:00 EST 2012</start>
+</item>
+</meds>
+<dx>
+<item>
+<field1 label="Dx">Heart_failure_N</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+<item>
+<field1 label="Dx">Diabetes_Mellitus</field1>
+<start>Mon APR 09 10:50:03 EST 2001</start>
+</item>
+<item>
+<field1 label="Dx">Diabetes_Mellitus</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+<item>
+<field1 label="Dx">272.4</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+<item>
+<field1 label="Dx">389.9</field1>
+<start>Fri APR 02 01:04:27 EST 2004</start>
+</item>
+<item>
+<field1 label="Dx">401.9</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+<item>
+<field1 label="Dx">427.31</field1>
+<start>Tue MAR 05 13:33:25 EST 2002</start>
+</item>
+<item>
+<field1 label="Dx">782.3</field1>
+<start>Sun MAY 21 01:00:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Dx">782.3</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+</dx>
+<cpt>
+<item>
+	<field1 label="Cpt">82465</field1>
+<start>Thu MAR 17 02:58:00 EST 2005</start>
+</item>
+<item>
+	<field1 label="Cpt">82950</field1>
+<start>Sun MAY 21 09:50:48 EST 2000</start>
+</item>
+<item>
+	<field1 label="Cpt">82950</field1>
+<start>Sun MAY 21 09:51:54 EST 2000</start>
+</item>
+<item>
+	<field1 label="Cpt">82950</field1>
+<start>Sun MAY 21 09:53:10 EST 2000</start>
+</item>
+<item>
+	<field1 label="Cpt">82950</field1>
+<start>Sun MAY 21 09:53:38 EST 2000</start>
+</item>
+<item>
+	<field1 label="Cpt">82950</field1>
+<start>Thu JUL 07 10:04:00 EST 2005</start>
+</item>
+<item>
+	<field1 label="Cpt">84484</field1>
+<start>Thu MAR 17 02:58:00 EST 2005</start>
+</item>
+<item>
+	<field1 label="Cpt">85610</field1>
+<start>Thu MAR 17 02:58:00 EST 2005</start>
+</item>
+<item>
+	<field1 label="Cpt">85610</field1>
+<start>Fri JUN 02 00:01:00 EST 2006</start>
+</item>
+<item>
+	<field1 label="Cpt">85670</field1>
+<start>Fri JUN 02 00:01:00 EST 2006</start>
+</item>
+<item>
+	<field1 label="Cpt">99201</field1>
+<start>Fri APR 02 01:04:27 EST 2004</start>
+</item>
+<item>
+	<field1 label="Cpt">99211</field1>
+<start>Tue OCT 23 00:03:58 EST 2012</start>
+</item>
+<item>
+	<field1 label="Cpt">99212</field1>
+<start>Sun MAY 21 01:00:00 EST 2000</start>
+</item>
+<item>
+	<field1 label="Cpt">99212</field1>
+<start>Mon APR 09 10:50:03 EST 2001</start>
+</item>
+<item>
+	<field1 label="Cpt">99361</field1>
+<start>Wed OCT 18 16:40:06 EST 2000</start>
+</item>
+</cpt>
+<clinicalSigns>
+<item>
+	<field1 label="Sign">Left Ventricular Ejection fraction</field1>
+	<field2 label="Value">36</field2>
+<start>Tue OCT 08 20:02:00 EST 2013</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">100</field2>
+<start>Tue MAY 02 10:02:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">90</field2>
+<start>Thu MAY 11 10:24:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">90</field2>
+<start>Sun MAY 21 10:25:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">82</field2>
+<start>Mon APR 09 10:05:00 EST 2001</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">84</field2>
+<start>Sat APR 05 15:15:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">92</field2>
+<start>Tue APR 15 16:05:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">86</field2>
+<start>Tue MAR 30 21:31:00 EST 2004</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">88</field2>
+<start>Tue MAR 15 11:03:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">82</field2>
+<start>Wed MAR 16 06:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">68</field2>
+<start>Wed MAR 16 01:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">97</field2>
+<start>Thu MAR 15 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">92</field2>
+<start>Wed APR 11 07:45:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">70</field2>
+<start>Tue APR 24 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">88</field2>
+<start>Wed NOV 28 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">90</field2>
+<start>Fri DEC 28 09:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">94</field2>
+<start>Wed JAN 30 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">96</field2>
+<start>Tue MAY 06 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">104</field2>
+<start>Tue MAY 20 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">80</field2>
+<start>Tue JUN 10 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">86</field2>
+<start>Mon NOV 10 08:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">90</field2>
+<start>Fri APR 17 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">90</field2>
+<start>Mon AUG 24 14:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">87</field2>
+<start>Tue DEC 01 08:53:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Diastolic_BP</field1>
+<field2 label="Value">81</field2>
+<start>Fri MAR 05 09:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">70</field2>
+<start>Tue MAY 02 10:02:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">70</field2>
+<start>Thu MAY 11 10:24:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">70</field2>
+<start>Sun MAY 21 10:25:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">70</field2>
+<start>Sat APR 05 15:15:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">70</field2>
+<start>Tue MAR 30 21:31:00 EST 2004</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Tue MAR 15 11:03:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Wed NOV 28 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Fri DEC 28 09:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Tue MAY 06 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Tue MAY 20 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Tue JUN 10 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Height</field1>
+<field2 label="Value">71</field2>
+<start>Mon AUG 24 14:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">39</field2>
+<start>Tue MAY 02 10:02:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">44</field2>
+<start>Thu MAY 11 10:24:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">45</field2>
+<start>Sun MAY 21 10:25:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">76</field2>
+<start>Sat APR 05 15:15:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">72</field2>
+<start>Tue APR 15 16:05:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">68</field2>
+<start>Tue MAR 30 21:31:00 EST 2004</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">76</field2>
+<start>Tue MAR 15 11:03:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">88</field2>
+<start>Wed MAR 16 06:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">72</field2>
+<start>Wed MAR 16 01:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">92</field2>
+<start>Thu MAR 15 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">87</field2>
+<start>Wed APR 11 07:45:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">82</field2>
+<start>Tue APR 24 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">80</field2>
+<start>Wed NOV 28 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">80</field2>
+<start>Fri DEC 28 09:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">80</field2>
+<start>Wed JAN 30 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">82</field2>
+<start>Tue MAY 06 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">82</field2>
+<start>Tue MAY 20 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">82</field2>
+<start>Tue JUN 10 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">80</field2>
+<start>Mon NOV 10 08:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">88</field2>
+<start>Fri APR 17 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">82</field2>
+<start>Mon AUG 24 14:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">78</field2>
+<start>Tue DEC 01 08:53:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Pulse</field1>
+<field2 label="Value">74</field2>
+<start>Fri MAR 05 09:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">180</field2>
+<start>Tue MAY 02 10:02:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">177</field2>
+<start>Thu MAY 11 10:24:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">180</field2>
+<start>Sun MAY 21 10:25:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">165</field2>
+<start>Mon APR 09 10:05:00 EST 2001</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">146</field2>
+<start>Sat APR 05 15:15:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">146</field2>
+<start>Tue APR 15 16:05:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">120</field2>
+<start>Tue MAR 30 21:31:00 EST 2004</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">182</field2>
+<start>Tue MAR 15 11:03:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">176</field2>
+<start>Wed MAR 16 06:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">168</field2>
+<start>Wed MAR 16 01:00:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">160</field2>
+<start>Thu MAR 15 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">156</field2>
+<start>Wed APR 11 07:45:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">136</field2>
+<start>Tue APR 24 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">138</field2>
+<start>Wed NOV 28 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">140</field2>
+<start>Fri DEC 28 09:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">145</field2>
+<start>Wed JAN 30 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">156</field2>
+<start>Tue MAY 06 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">158</field2>
+<start>Tue MAY 20 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">124</field2>
+<start>Tue JUN 10 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">135</field2>
+<start>Mon NOV 10 08:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">143</field2>
+<start>Fri APR 17 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">154</field2>
+<start>Mon AUG 24 14:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">143</field2>
+<start>Tue DEC 01 08:53:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Systolic_BP</field1>
+<field2 label="Value">134</field2>
+<start>Fri MAR 05 09:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">200</field2>
+<start>Tue MAY 02 10:02:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">196</field2>
+<start>Thu MAY 11 10:24:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">196</field2>
+<start>Sun MAY 21 10:25:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">187</field2>
+<start>Mon APR 09 10:05:00 EST 2001</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">172</field2>
+<start>Sat APR 05 15:15:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">174</field2>
+<start>Tue APR 15 16:05:00 EST 2003</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">185</field2>
+<start>Tue MAR 30 21:31:00 EST 2004</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">199</field2>
+<start>Tue MAR 15 11:03:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">196</field2>
+<start>Thu MAR 15 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">184</field2>
+<start>Wed APR 11 07:45:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">175</field2>
+<start>Tue APR 24 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">168</field2>
+<start>Wed NOV 28 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">166</field2>
+<start>Fri DEC 28 09:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">174</field2>
+<start>Tue MAY 06 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">170</field2>
+<start>Tue MAY 20 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">172</field2>
+<start>Tue JUN 10 11:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">180</field2>
+<start>Mon NOV 10 08:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">185</field2>
+<start>Fri APR 17 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">190</field2>
+<start>Mon AUG 24 14:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">182</field2>
+<start>Tue DEC 01 08:53:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Sign">Weight</field1>
+<field2 label="Value">178</field2>
+<start>Fri MAR 05 09:00:00 EST 2010</start>
+</item>
+</clinicalSigns>
+<adr>
+</adr>
+<labs>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">101</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">100</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">99</field2>
+<start>Thu MAR 15 07:45:03 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">103</field2>
+<start>Wed APR 11 08:00:03 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">100</field2>
+<start>Tue APR 24 07:30:03 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">100</field2>
+<start>Wed NOV 28 07:00:04 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">99</field2>
+<start>Fri DEC 28 07:30:04 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHLORIDE</field1>
+<field2 label="Value">98</field2>
+<start>Wed JAN 30 08:00:04 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">245</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">205</field2>
+<start>Thu MAR 15 07:45:06 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">215</field2>
+<start>Wed APR 11 08:00:06 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">188</field2>
+<start>Tue APR 24 07:30:06 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">139</field2>
+<start>Wed NOV 28 07:00:07 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">138</field2>
+<start>Fri DEC 28 07:30:07 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">136</field2>
+<start>Wed JAN 30 08:00:07 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">166</field2>
+<start>Mon NOV 10 01:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">189</field2>
+<start>Fri APR 17 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">158</field2>
+<start>Mon AUG 24 09:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">169</field2>
+<start>Tue DEC 01 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">CHOLESTEROL</field1>
+<field2 label="Value">153</field2>
+<start>Fri MAR 05 10:00:03 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">CK-MB PERCENT</field1>
+<field2 label="Value">7</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">29</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">30</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">24</field2>
+<start>Thu MAR 15 07:45:04 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">27</field2>
+<start>Wed APR 11 08:00:04 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">26</field2>
+<start>Tue APR 24 07:30:04 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">26</field2>
+<start>Wed NOV 28 07:00:05 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">25</field2>
+<start>Fri DEC 28 07:30:05 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">CO2</field1>
+<field2 label="Value">26</field2>
+<start>Wed JAN 30 08:00:05 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">CPK </field1>
+<field2 label="Value">250</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">CPK-MB</field1>
+<field2 label="Value">17.5</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.2</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.1</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.2</field2>
+<start>Thu MAR 15 07:45:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.3</field2>
+<start>Wed APR 11 08:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.1</field2>
+<start>Tue APR 24 07:03:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.2</field2>
+<start>Wed NOV 28 07:00:01 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.1</field2>
+<start>Fri DEC 28 07:30:01 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1</field2>
+<start>Wed JAN 30 08:00:01 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.2</field2>
+<start>Mon NOV 10 09:00:02 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.5</field2>
+<start>Fri APR 17 10:00:02 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.3</field2>
+<start>Mon AUG 24 12:00:01 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.1</field2>
+<start>Tue DEC 01 10:00:02 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Creatinine</field1>
+<field2 label="Value">1.3</field2>
+<start>Fri MAR 05 10:00:02 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">230</field2>
+<start>Thu MAY 18 08:00:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">450</field2>
+<start>Fri MAY 19 08:00:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">200</field2>
+<start>Sat MAY 20 08:00:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">145</field2>
+<start>Sun MAY 21 08:00:00 EST 2000</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">225</field2>
+<start>Thu MAR 25 22:35:29 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">85</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">310</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">350</field2>
+<start>Thu JUL 07 10:04:00 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">135</field2>
+<start>Thu MAR 15 07:45:05 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">155</field2>
+<start>Wed APR 11 08:00:05 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">95</field2>
+<start>Tue APR 24 07:30:05 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">102</field2>
+<start>Wed NOV 28 07:00:06 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">99</field2>
+<start>Fri DEC 28 07:30:06 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">GLUCOSE</field1>
+<field2 label="Value">101</field2>
+<start>Wed JAN 30 08:00:06 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">HCT</field1>
+<field2 label="Value">42</field2>
+<start>Wed NOV 28 07:00:14 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HCT</field1>
+<field2 label="Value">44</field2>
+<start>Fri DEC 28 07:30:14 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HCT</field1>
+<field2 label="Value">44</field2>
+<start>Wed JAN 30 08:00:14 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">41</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">38</field2>
+<start>Thu MAR 15 07:45:07 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">36</field2>
+<start>Wed APR 11 08:00:07 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">44</field2>
+<start>Tue APR 24 07:30:07 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">53</field2>
+<start>Wed NOV 28 07:00:09 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">52</field2>
+<start>Fri DEC 28 07:30:09 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">54</field2>
+<start>Wed JAN 30 08:00:09 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">44</field2>
+<start>Mon NOV 10 09:00:07 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">49</field2>
+<start>Fri APR 17 10:00:07 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">52</field2>
+<start>Mon AUG 24 12:00:06 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">50</field2>
+<start>Tue DEC 01 10:00:07 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HDL</field1>
+<field2 label="Value">58</field2>
+<start>Fri MAR 05 12:00:01 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">8.2</field2>
+<start>Thu MAR 17 02:58:39 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">6.1</field2>
+<start>Thu JUN 01 02:14:00 EST 2006</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">8.4</field2>
+<start>Mon NOV 10 09:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">8</field2>
+<start>Fri APR 17 01:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">8.2</field2>
+<start>Mon AUG 24 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">7.8</field2>
+<start>Tue DEC 01 01:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">HEMOGLOBIN A1C</field1>
+<field2 label="Value">6.2</field2>
+<start>Fri MAR 05 01:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">HGB</field1>
+<field2 label="Value">6.0</field2>
+<start>Wed NOV 28 07:00:13 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HGB</field1>
+<field2 label="Value">7.0</field2>
+<start>Fri DEC 28 07:30:13 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">HGB</field1>
+<field2 label="Value">8.0</field2>
+<start>Wed JAN 30 08:00:13 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">INR</field1>
+<field2 label="Value">1.6</field2>
+<start>Thu MAR 17 02:58:38 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">LDH</field1>
+<field2 label="Value">190</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">168</field2>
+<start>Thu MAR 15 07:45:09 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">175</field2>
+<start>Wed APR 11 08:00:09 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">129</field2>
+<start>Tue APR 24 07:30:09 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">101</field2>
+<start>Wed NOV 28 07:00:10 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">102</field2>
+<start>Fri DEC 28 07:30:10 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">103</field2>
+<start>Wed JAN 30 08:00:10 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">56</field2>
+<start>Mon NOV 10 09:00:06 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">64</field2>
+<start>Fri APR 17 10:00:06 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">69</field2>
+<start>Mon AUG 24 12:00:05 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">88</field2>
+<start>Tue DEC 01 10:00:06 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">LDL CHOLESTEROL</field1>
+<field2 label="Value">77</field2>
+<start>Fri MAR 05 10:00:04 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">MCH</field1>
+<field2 label="Value">32.1</field2>
+<start>Wed NOV 28 07:00:16 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCH</field1>
+<field2 label="Value">33.3</field2>
+<start>Fri DEC 28 07:30:16 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCH</field1>
+<field2 label="Value">34.1</field2>
+<start>Wed JAN 30 08:00:16 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">MCHC</field1>
+<field2 label="Value">35.1</field2>
+<start>Wed NOV 28 07:00:17 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCHC</field1>
+<field2 label="Value">34.9</field2>
+<start>Fri DEC 28 07:30:17 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCHC</field1>
+<field2 label="Value">34.7</field2>
+<start>Wed JAN 30 08:00:17 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">MCV</field1>
+<field2 label="Value">92.0</field2>
+<start>Wed NOV 28 07:00:15 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCV</field1>
+<field2 label="Value">93.0</field2>
+<start>Fri DEC 28 07:30:15 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">MCV</field1>
+<field2 label="Value">92.0</field2>
+<start>Wed JAN 30 08:00:15 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">PLATELET COUNT</field1>
+<field2 label="Value">360</field2>
+<start>Wed NOV 28 07:00:19 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">PLATELET COUNT</field1>
+<field2 label="Value">410</field2>
+<start>Fri DEC 28 07:30:19 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">PLATELET COUNT</field1>
+<field2 label="Value">381</field2>
+<start>Wed JAN 30 08:00:19 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.0</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">5.2</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">5.1</field2>
+<start>Thu MAR 15 07:45:02 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">5.2</field2>
+<start>Wed APR 11 08:00:02 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">3.8</field2>
+<start>Tue APR 24 07:30:02 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.2</field2>
+<start>Wed NOV 28 07:00:03 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.3</field2>
+<start>Fri DEC 28 07:30:03 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.1</field2>
+<start>Wed JAN 30 08:00:03 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.1</field2>
+<start>Mon NOV 10 09:00:04 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">3.9</field2>
+<start>Fri APR 17 10:00:04 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.4</field2>
+<start>Mon AUG 24 12:00:03 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.9</field2>
+<start>Tue DEC 01 10:00:04 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">Potassium</field1>
+<field2 label="Value">4.1</field2>
+<start>Fri MAR 05 09:00:01 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">PROTIME</field1>
+<field2 label="Value">17.5</field2>
+<start>Thu MAR 17 02:58:38 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">PROTIME</field1>
+<field2 label="Value">14</field2>
+<start>Fri JUN 02 00:01:00 EST 2006</start>
+</item>
+<item>
+<field1 label="Lab">PTT</field1>
+<field2 label="Value">26.0</field2>
+<start>Fri JUN 02 00:01:00 EST 2006</start>
+</item>
+<item>
+<field1 label="Lab">RBC</field1>
+<field2 label="Value">4.80</field2>
+<start>Wed NOV 28 07:00:12 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">RBC</field1>
+<field2 label="Value">4.90</field2>
+<start>Fri DEC 28 07:30:12 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">RBC</field1>
+<field2 label="Value">4.80</field2>
+<start>Wed JAN 30 08:00:12 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">RDW</field1>
+<field2 label="Value">12</field2>
+<start>Wed NOV 28 07:00:18 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">RDW</field1>
+<field2 label="Value">13</field2>
+<start>Fri DEC 28 07:30:18 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">RDW</field1>
+<field2 label="Value">12</field2>
+<start>Wed JAN 30 08:00:18 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">135</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">144</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">137</field2>
+<start>Thu MAR 15 07:45:01 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">140</field2>
+<start>Wed APR 11 08:00:01 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">135</field2>
+<start>Tue APR 24 07:30:01 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">140</field2>
+<start>Wed NOV 28 07:00:02 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">139</field2>
+<start>Fri DEC 28 07:30:02 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">138</field2>
+<start>Wed JAN 30 08:00:02 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">147</field2>
+<start>Mon NOV 10 09:00:03 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">137</field2>
+<start>Fri APR 17 10:00:03 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">133</field2>
+<start>Mon AUG 24 12:00:02 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">144</field2>
+<start>Tue DEC 01 10:00:03 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">SODIUM</field1>
+<field2 label="Value">140</field2>
+<start>Fri MAR 05 09:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">250</field2>
+<start>Thu MAR 15 07:45:08 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">261</field2>
+<start>Wed APR 11 08:00:08 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">185</field2>
+<start>Tue APR 24 07:30:08 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">203</field2>
+<start>Wed NOV 28 07:00:08 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">202</field2>
+<start>Fri DEC 28 07:30:08 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">201</field2>
+<start>Wed JAN 30 08:00:08 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">221</field2>
+<start>Mon NOV 10 09:00:05 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">220</field2>
+<start>Fri APR 17 10:00:05 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">199</field2>
+<start>Mon AUG 24 12:00:04 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">177</field2>
+<start>Tue DEC 01 10:00:05 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">TRIGLYCERIDE</field1>
+<field2 label="Value">162</field2>
+<start>Fri MAR 05 12:00:00 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">TROPONIN</field1>
+<field2 label="Value">1.8</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">19</field2>
+<start>Sun MAR 28 23:14:03 EST 2004</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">15</field2>
+<start>Thu MAR 17 02:58:37 EST 2005</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">15</field2>
+<start>Wed NOV 28 07:00:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">13</field2>
+<start>Fri DEC 28 07:03:00 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">14</field2>
+<start>Wed JAN 30 08:00:00 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">18</field2>
+<start>Mon NOV 10 09:00:01 EST 2008</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">19</field2>
+<start>Fri APR 17 10:00:01 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">14</field2>
+<start>Tue AUG 25 12:00:00 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">18</field2>
+<start>Tue DEC 01 10:00:01 EST 2009</start>
+</item>
+<item>
+<field1 label="Lab">UREA NITROGEN</field1>
+<field2 label="Value">16</field2>
+<start>Fri MAR 05 10:00:01 EST 2010</start>
+</item>
+<item>
+<field1 label="Lab">WBC</field1>
+<field2 label="Value">7</field2>
+<start>Wed NOV 28 07:00:11 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">WBC</field1>
+<field2 label="Value">6.8</field2>
+<start>Fri DEC 28 07:30:11 EST 2007</start>
+</item>
+<item>
+<field1 label="Lab">WBC</field1>
+<field2 label="Value">7.2</field2>
+<start>Wed JAN 30 08:00:11 EST 2008</start>
+</item>
+</labs>
+<demographics>
+<item>
+<field1 label="Field Name">Age</field1>
+<field2 label="Value">78</field2>
+</item>
+<item>
+<field1 label="Field Name">Race</field1>
+<field2 label="Value">NONE</field2>
+</item>
+<item>
+<field1 label="Field Name">Sex</field1>
+<field2 label="Value">Male</field2>
+	<field2 label="Value">Male</field2>
+</item>
+</demographics>
+</patient>
+</patientdata>

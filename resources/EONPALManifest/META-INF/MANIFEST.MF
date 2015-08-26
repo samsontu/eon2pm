@@ -1,0 +1,305 @@
+Manifest-Version: 1.0
+Created-By: 1.4.2_04 (Sun Microsystems Inc.)
+
+Name: edu/stanford/smi/protegex/pal/predicates/AllowedSlotValueP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/eon/criterion/EqualOrSubclassOf.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OwnSlotNotNullP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsFrameValued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsInstanceVa
+ lued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/TemplateFacetNotNullP.c
+ lass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsStringValued.clas
+ s
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/NumberOfTemplateSlotValu
+ es.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsInstanceValued.cl
+ ass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsBooleanVal
+ ued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SuffixOf.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToNumber.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsFloatValued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/DirectInstanceOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsPrimitiveV
+ alued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/ForallP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsSymbolValued.clas
+ s
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToSymbol.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/NumberOfOwnSlotValues.cl
+ ass
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SubclassOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/TemplateSlotHasDuplicat
+ eValuesP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/IsClassP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/NotEqualsP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsSingleValu
+ ed.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OwnSlotHasDuplicateValu
+ esP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/widget/pal/PalQueriesTab.class
+Tab-Widget: True
+
+Name: edu/stanford/smi/protegex/pal/functions/Add.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/DirectSubclassOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/eon/criterion/IsDerivable.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/GreaterThanP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/AndP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/FacetNotNullP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/RoundNumber.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/PrimeP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToFacet.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/DirectSuperclassOfP.cla
+ ss
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsBooleanValued.cla
+ ss
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/TemplateSlotNotNullP.cl
+ ass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/InstanceOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsClassValue
+ d.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OrP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToInstance.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToInteger.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/IsConcreteClassP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/widget/pal/constraint/PalRangeWidget.c
+ lass
+Slot-Widget: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/IsFrameP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/IfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/NotP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/LessThanP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SuperclassOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/NegativeP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToString.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsIntegerVal
+ ued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SubstringOf.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/DirectTemplateSlotOfP.c
+ lass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/widget/pal/constraint/PalConstraintWid
+ get.class
+Slot-Widget: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/AllowedSlotValueTypeP.c
+ lass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/ZeroP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsSymbolValu
+ ed.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/PositiveP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotNotNullP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OddP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/IffP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsStringValu
+ ed.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OwnSlotOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/EqualsP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsPrimitiveValued.c
+ lass
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToFrame.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotHasDuplicateValuesP
+ .class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/ExistsP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/Subtract.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsSingleValued.clas
+ s
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/ProtegeType.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/Divide.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToSlot.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/OwnFacetNotNullP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsIntegerValued.cla
+ ss
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/NumberOfSlotValues.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/EvenP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/functions/CoerceToClass.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/TruncateNumber.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/functions/Multiply.class
+PAL-Function: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/ElementOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/PrefixOf.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/TemplateSlotOfP.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotIsClassValued.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsFrameValue
+ d.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/eon/criterion/IsClassName.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/pal/predicates/SlotAtClassIsFloatValue
+ d.class
+PAL-Predicate: True
+
+Name: edu/stanford/smi/protegex/widget/pal/PalConstraintsTab.class
+Tab-Widget: True
+

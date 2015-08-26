@@ -1,0 +1,2114 @@
+; Tue Feb 24 15:37:43 PST 2015
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([ATHENA_CVD_Class0] of  Management_Guideline
+
+	(clinical_algorithm [ATHENA_CVD_Class1])
+	(label "Print Messages Guideline"))
+
+([ATHENA_CVD_Class1] of  Management_Diagram
+
+	(label "Priint message algorithm")
+	(steps
+		[ATHENA_CVD_Class2]
+		[ATHENA_CVD_Class3]
+		[ATHENA_CVD_Class5]
+		[ATHENA_CVD_Class6]
+		[ATHENA_CVD_Class7]
+		[ATHENA_CVD_Class20019]
+		[ATHENA_CVD_Class20021]
+		[ATHENA_CVD_Class20022]
+		[ATHENA_CVD_Class10000]
+		[ATHENA_CVD_Class10001]
+		[ATHENA_CVD_Class10004]
+		[ATHENA_CVD_Class10005]
+		[ATHENA_CVD_Class30028]
+		[ATHENA_CVD_Class30029]
+		[ATHENA_CVD_Class30030]
+		[ATHENA_CVD_Class30031]
+		[ATHENA_CVD_Class30032]
+		[ATHENA_CVD_Class40047]
+		[ATHENA_CVD_Class40048]
+		[ATHENA_CVD_Class40050]
+		[ATHENA_CVD_Class40051]
+		[ATHENA_CVD_Class40067]
+		[ATHENA_CVD_Class40068]
+		[ATHENA_CVD_Class40069]
+		[ATHENA_CVD_Class40070]
+		[ATHENA_CVD_Class40071]
+		[ATHENA_CVD_Class40072])
+	(transitions
+		[ATHENA_CVD_Class4]
+		[ATHENA_CVD_Class9]
+		[ATHENA_CVD_Class10]
+		[ATHENA_CVD_Class11]
+		[ATHENA_CVD_Class20020]
+		[ATHENA_CVD_Class20023]
+		[ATHENA_CVD_Class20024]
+		[ATHENA_CVD_Class10006]
+		[ATHENA_CVD_Class10007]
+		[ATHENA_CVD_Class10008]
+		[ATHENA_CVD_Class10009]
+		[ATHENA_CVD_Class30035]
+		[ATHENA_CVD_Class30036]
+		[ATHENA_CVD_Class30038]
+		[ATHENA_CVD_Class30039]
+		[ATHENA_CVD_Class40049]
+		[ATHENA_CVD_Class40052]
+		[ATHENA_CVD_Class40053]
+		[ATHENA_CVD_Class40054]
+		[ATHENA_CVD_Class40055]
+		[ATHENA_CVD_Class40074]
+		[ATHENA_CVD_Class40075]
+		[ATHENA_CVD_Class40076]
+		[ATHENA_CVD_Class40077]
+		[ATHENA_CVD_Class40078]
+		[ATHENA_CVD_Class40079]))
+
+([ATHENA_CVD_Class10] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40051])
+	(%3ATO [ATHENA_CVD_Class6]))
+
+([ATHENA_CVD_Class10000] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10002]
+		[ATHENA_CVD_Class40045])
+	(label "CKD Dashboard Algorithm Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10001] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10003]
+		[ATHENA_CVD_Class50050])
+	(label "CKD Dashboard Consultation Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10002] of  Parameterized_Message
+
+	(label "CKD algorithm on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class20016]))
+
+([ATHENA_CVD_Class10003] of  Parameterized_Message
+
+	(label "CKD Dashboard consultation on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class20012]))
+
+([ATHENA_CVD_Class10004] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class20010]
+		[ATHENA_CVD_Class50065])
+	(label "Lipid Dashboard Consultation Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10005] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class20011]
+		[ATHENA_CVD_Class50060])
+	(label "Lipid Dashboard Algorithm Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10006] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40050])
+	(%3ATO [ATHENA_CVD_Class10001]))
+
+([ATHENA_CVD_Class10007] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40050])
+	(%3ATO [ATHENA_CVD_Class10000]))
+
+([ATHENA_CVD_Class10008] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class3])
+	(%3ATO [ATHENA_CVD_Class10004]))
+
+([ATHENA_CVD_Class10009] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class3])
+	(%3ATO [ATHENA_CVD_Class10005]))
+
+([ATHENA_CVD_Class10010] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Glycemic Control Dashboard II Consultation Guidelilne messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?algorithm (and (label ?algorithm \"Glycemic Control Dashboard III\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (actions ?action ?message)))))))))\n)"))
+
+([ATHENA_CVD_Class10011] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HF Astronaut Consultation Guidelilne messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?algorithm (and (label ?algorithm \"ATHENA HF Astronaut algorithm\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (actions ?action ?message)))))))))\n)"))
+
+([ATHENA_CVD_Class10012] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HTN Dashboard Consultation Guidelilne messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?algorithm (and (label ?algorithm \"JNC8_Dashboard\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (actions ?action ?message)))))))))\n)"))
+
+([ATHENA_CVD_Class10013] of  Parameterized_Message
+
+	(label "HTN consultation guideline on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class10014]))
+
+([ATHENA_CVD_Class10014] of  Parameterized_String
+
+	(label "HTN consultation guideline messages")
+	(multivalued_variables [ATHENA_CVD_Class10017])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class10015] of  Parameterized_String
+
+	(label "HF consultation messages")
+	(multivalued_variables [ATHENA_CVD_Class10024])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class10016] of  Parameterized_String
+
+	(label "Glycemic control consultation messages")
+	(multivalued_variables [ATHENA_CVD_Class10020])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class10017] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class10018])
+	(label "HTN consultation guideline messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class10018] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "HTN consultation guideline messages")
+	(PAL_query [ATHENA_CVD_Class10012]))
+
+([ATHENA_CVD_Class10019] of  Parameterized_Message
+
+	(label "Glycemic control algorithm on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class10418])
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10020] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class10021])
+	(label "Glycemic control consultation messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class10021] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Glycemic control consultation messages")
+	(PAL_query [ATHENA_CVD_Class10010]))
+
+([ATHENA_CVD_Class10022] of  Parameterized_Message
+
+	(label "ATHENA HF Astronaut on-screen consultation messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class10015]))
+
+([ATHENA_CVD_Class10024] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class10025])
+	(label "ATHENA HF Astronaut consultation messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class10025] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "ATHENA HF Astronaut consultation messages")
+	(PAL_query [ATHENA_CVD_Class10011]))
+
+([ATHENA_CVD_Class10340] of  PAL-QUERY
+
+	(%3APAL-NAME "Query ATHENA Glycemic Control algorithm messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?algorithm (and (label ?algorithm \"Glycemic Control Dashboard III\")\n                                      (exists ?action (and (steps ?algorithm ?action)(actions ?action ?message))))))\n)"))
+
+([ATHENA_CVD_Class10341] of  PAL-QUERY
+
+	(%3APAL-NAME "Query ATHENA HTN Dashboard algorithm messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?algorithm (and (label ?algorithm \"JNC8_Dashboard\")\n                                      (exists ?action (and (steps ?algorithm ?action)(actions ?action ?message))))))\n)"))
+
+([ATHENA_CVD_Class10342] of  Parameterized_Message
+
+	(label "HTN management diagram on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class10343])
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class10343] of  Parameterized_String
+
+	(label "HTN algorithm messages")
+	(multivalued_variables [ATHENA_CVD_Class10344])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class10344] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class10345])
+	(label "Query HTN algorithm messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class10345] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HTN algorithm messages")
+	(PAL_query [ATHENA_CVD_Class30064]))
+
+([ATHENA_CVD_Class10418] of  Parameterized_String
+
+	(label "Glycemic control algorithm messages")
+	(multivalued_variables [ATHENA_CVD_Class10419])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class10419] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class10420])
+	(label "Query glycemic control algorithm messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class10420] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query glycemic control algorithm messages")
+	(PAL_query [ATHENA_CVD_Class10340]))
+
+([ATHENA_CVD_Class10421] of  Parameterized_Message
+
+	(label "Glycemic control consultation on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class10016])
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class11] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40048])
+	(%3ATO [ATHENA_CVD_Class7]))
+
+([ATHENA_CVD_Class13] of  Parameterized_Message
+
+	(label "ATHENA HF Astronaut algorithm on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class14]))
+
+([ATHENA_CVD_Class14] of  Parameterized_String
+
+	(label "HF algorithm message display")
+	(multivalued_variables [ATHENA_CVD_Class15])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class15] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class19])
+	(label "Query ATHENA HF Astronaut algorithm messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class16] of  Property_Value
+
+	(slot [message_type])
+	(string_name "?messageType"))
+
+([ATHENA_CVD_Class17] of  Property_Value
+
+	(slot [label])
+	(string_name "?label"))
+
+([ATHENA_CVD_Class18] of  Property_Value
+
+	(slot [message])
+	(string_name "?messagebody"))
+
+([ATHENA_CVD_Class19] of  PAL_Query
+
+	(case_variable "$patient")
+	(label "Query ATHENA HF Astronaut algorithm messages")
+	(PAL_query [ATHENA_CVD_Class20]))
+
+([ATHENA_CVD_Class2] of  Scenario
+
+	(followed_by [ATHENA_CVD_Class40067])
+	(label "Do All Guidelines")
+	(new_encounter TRUE)
+	(precondition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class20] of  PAL-QUERY
+
+	(%3APAL-NAME "Query ATHENA HF Astronaut algorithm messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?algorithm (and (label ?algorithm \"ATHENA HF Astronaut algorithm\")\n                                      (exists ?action (and (steps ?algorithm ?action)(actions ?action ?message))))))\n)"))
+
+([ATHENA_CVD_Class20000] of  Property_Value
+
+	(slot [value])
+	(string_name "?value"))
+
+([ATHENA_CVD_Class20010] of  Parameterized_Message
+
+	(label "Lipid consultation on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30020]))
+
+([ATHENA_CVD_Class20011] of  Parameterized_Message
+
+	(label "Lipid algorithm on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30021])
+	(rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class20012] of  Parameterized_String
+
+	(label "CKD Dashboard consultation messages")
+	(multivalued_variables [ATHENA_CVD_Class20013])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class20013] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class20014])
+	(label "CKD Dashboard consultation messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class20014] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "CKD Dashboard consultation messages")
+	(PAL_query [ATHENA_CVD_Class20015]))
+
+([ATHENA_CVD_Class20015] of  PAL-QUERY
+
+	(%3APAL-NAME "Query for CKD Dashboard consultation messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?algorithm (and (label ?algorithm \"CKD dashboard\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (actions ?action ?message)))))))))\n)"))
+
+([ATHENA_CVD_Class20016] of  Parameterized_String
+
+	(label "CKD algorithm messages")
+	(multivalued_variables [ATHENA_CVD_Class20017])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class20017] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class20018])
+	(label "CKD algorithm messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class20018] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(PAL_query [ATHENA_CVD_Class30019]))
+
+([ATHENA_CVD_Class20019] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10013]
+		[ATHENA_CVD_Class30005])
+	(label "HTN Dashboard Consultation Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class20020] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40047])
+	(%3ATO [ATHENA_CVD_Class20019]))
+
+([ATHENA_CVD_Class20021] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10421]
+		[ATHENA_CVD_Class40035])
+	(label "Glycemic Control Consultation Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class20022] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10022]
+		[ATHENA_CVD_Class40020])
+	(label "HF Dashboard Consultation Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class20023] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40048])
+	(%3ATO [ATHENA_CVD_Class20021]))
+
+([ATHENA_CVD_Class20024] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40051])
+	(%3ATO [ATHENA_CVD_Class20022]))
+
+([ATHENA_CVD_Class3] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class10004]
+		[ATHENA_CVD_Class10005]
+		[ATHENA_CVD_Class30030])
+	(label "Lipid"))
+
+([ATHENA_CVD_Class30000] of  Parameterized_Message
+
+	(label "HTN Parameterized Algorithm Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class30001]))
+
+([ATHENA_CVD_Class30001] of  Parameterized_String
+
+	(label "HTN Parameterized Algorithm Messages")
+	(multivalued_variables [ATHENA_CVD_Class30002])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class30002] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30003])
+	(label "HTN Parameterized Algorithm Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30003] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HTN Parameterized Algorithm Messages")
+	(PAL_query [ATHENA_CVD_Class30004]))
+
+([ATHENA_CVD_Class30004] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HTN Parameterized Algorithm Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message) \n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"JNC8_Dashboard\")                                (exists ?action (and (steps ?algorithm ?action)\n                                                      (exists ?message (and (actions ?action ?message)\n                                                                            (parameterized_message ?message ?string))\n                                                      )))\n                            )))"))
+
+([ATHENA_CVD_Class30005] of  Parameterized_Message
+
+	(label "HTN Parameterized Consultation Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class30006]))
+
+([ATHENA_CVD_Class30006] of  Parameterized_String
+
+	(label "HTN Parameterized Consultation Messages")
+	(multivalued_variables [ATHENA_CVD_Class30007])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class30007] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30008])
+	(label "HTN Parameterized Consultation Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30008] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HTN Parameterized Consultation Messages")
+	(PAL_query [ATHENA_CVD_Class30009]))
+
+([ATHENA_CVD_Class30009] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HTN Parameterized Consultation Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"JNC8_Dashboard\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (exists ?message (and (actions ?action ?message)\n                                                                                                                         (parameterized_message ?message ?string))\n                                                                                                   ))))))))))"))
+
+([ATHENA_CVD_Class30010] of  Parameterized_Message
+
+	(label "HTN Parameterized collateral messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class30011]))
+
+([ATHENA_CVD_Class30011] of  Parameterized_String
+
+	(label "HTN Parameterized collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30012])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class30012] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30013])
+	(label "HTN Parameterized collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30013] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HTN Parameterized collateral messages")
+	(PAL_query [ATHENA_CVD_Class30014]))
+
+([ATHENA_CVD_Class30014] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HTN Parameterized collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n          (defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (and (exists ?guideline (and (label ?guideline \"JNC8_Dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (exists ?message (and (actions ?collateral ?message)\n                                                                                                              (parameterized_message ?message ?string))\n                                                                                        )))))))))\n "))
+
+([ATHENA_CVD_Class30015] of  Parameterized_Message
+
+	(label "HF Parameterized Algorithm Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class30016]))
+
+([ATHENA_CVD_Class30016] of  Parameterized_String
+
+	(label "HF Parameterized Algorithm Messages")
+	(multivalued_variables [ATHENA_CVD_Class30017])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class30017] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30018])
+	(label "HF Parameterized Algorithm Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30018] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HF Parameterized Algorithm Messages")
+	(PAL_query [ATHENA_CVD_Class40019]))
+
+([ATHENA_CVD_Class30019] of  PAL-QUERY
+
+	(%3APAL-NAME "Query for CKD algorithm messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?algorithm (and (label ?algorithm \"CKD dashboard\")\n                                      (exists ?action (and (steps ?algorithm ?action)(actions ?action ?message))))))\n)"))
+
+([ATHENA_CVD_Class30020] of  Parameterized_String
+
+	(label "Lipid Dashboard consultation messages")
+	(multivalued_variables [ATHENA_CVD_Class30025])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30021] of  Parameterized_String
+
+	(label "Lipid algorithm messages")
+	(multivalued_variables [ATHENA_CVD_Class30022])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30022] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30023])
+	(label "Lipid algorithm messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30023] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Lipid algorithm messages")
+	(PAL_query [ATHENA_CVD_Class30024]))
+
+([ATHENA_CVD_Class30024] of  PAL-QUERY
+
+	(%3APAL-NAME "Query for Lipid algorithm messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?algorithm (and (label ?algorithm \"Statin recommendations III\")\n                                      (exists ?action (and (steps ?algorithm ?action)(actions ?action ?message))))))\n)"))
+
+([ATHENA_CVD_Class30025] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30026])
+	(label "Lipid Dashboard consultation messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30026] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Lipid Dashboard consultation messages")
+	(PAL_query [ATHENA_CVD_Class30027]))
+
+([ATHENA_CVD_Class30027] of  PAL-QUERY
+
+	(%3APAL-NAME "Query for Lipid Dashboard consultation messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?algorithm (and (label ?algorithm \"Statin recommendations III\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (actions ?action ?message)))))))))\n)"))
+
+([ATHENA_CVD_Class30028] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class30066]
+		[ATHENA_CVD_Class30010])
+	(label "HTN Dashboard collateral messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class30029] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class30067]
+		[ATHENA_CVD_Class40025])
+	(label "HF Dashboard collateral messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class30030] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class30065]
+		[ATHENA_CVD_Class50070])
+	(label "Lipid Dashboard collateral messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class30031] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class30068]
+		[ATHENA_CVD_Class50055])
+	(label "CKD Dashboard collateral messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class30032] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class30069]
+		[ATHENA_CVD_Class40040])
+	(label "Glycemic Control collateral messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class30035] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40050])
+	(%3ATO [ATHENA_CVD_Class30031]))
+
+([ATHENA_CVD_Class30036] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40047])
+	(%3ATO [ATHENA_CVD_Class30028]))
+
+([ATHENA_CVD_Class30038] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40051])
+	(%3ATO [ATHENA_CVD_Class30029]))
+
+([ATHENA_CVD_Class30039] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class3])
+	(%3ATO [ATHENA_CVD_Class30030]))
+
+([ATHENA_CVD_Class30040] of  Parameterized_String
+
+	(label "HTN collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30045])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30041] of  Parameterized_String
+
+	(label "HF collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30047])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30042] of  Parameterized_String
+
+	(label "CKD collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30046])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30043] of  Parameterized_String
+
+	(label "Lipid collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30048])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30044] of  Parameterized_String
+
+	(label "Glycemic Control collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class30049])
+	(value "<p><!--Message$?id$*--><b>-   ?label</b>  <i>?messageType</i> : %#?messagebody#% </p>"))
+
+([ATHENA_CVD_Class30045] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30050])
+	(label "Query HTN collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30046] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30052])
+	(label "Query CKD collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30047] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30051])
+	(label "Query HF collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30048] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30053])
+	(label "Query Lipid collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30049] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class30054])
+	(label "Query Glycemic Control collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class18]
+		[ATHENA_CVD_Class16]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class30050] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HTN collateral messages")
+	(PAL_query [ATHENA_CVD_Class30060]))
+
+([ATHENA_CVD_Class30051] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HF collateral messages")
+	(PAL_query [ATHENA_CVD_Class30061]))
+
+([ATHENA_CVD_Class30052] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query CKD collateral messages")
+	(PAL_query [ATHENA_CVD_Class30063]))
+
+([ATHENA_CVD_Class30053] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Lipid collateral messages")
+	(PAL_query [ATHENA_CVD_Class30062]))
+
+([ATHENA_CVD_Class30054] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Glycemic Control collateral messages")
+	(PAL_query [ATHENA_CVD_Class30064]))
+
+([ATHENA_CVD_Class30060] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HTN collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?guideline (and (label ?guideline \"JNC8_Dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (actions ?collateral ?message))\n                                                              )))))))"))
+
+([ATHENA_CVD_Class30061] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HF collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?guideline (and (label ?guideline \"ATHENA HF Astronaut\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (actions ?collateral ?message)))\n                                                         ))))))"))
+
+([ATHENA_CVD_Class30062] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Lipid collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n")
+	(%3APAL-STATEMENT "(findall ?message \n         (exists ?guideline (and (label ?guideline \"Lipid Management ACC AHA\")\n                                 (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                         (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                   (actions ?collateral ?message)))\n                                                    )))))"))
+
+([ATHENA_CVD_Class30063] of  PAL-QUERY
+
+	(%3APAL-NAME "Query CKD collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?guideline (and (label ?guideline \"ATHENA CKD dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (actions ?collateral ?message)))\n                                                         ))))))"))
+
+([ATHENA_CVD_Class30064] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Glycemic Control collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n(defrange ?collateral :FRAME Collateral_Action)\n")
+	(%3APAL-STATEMENT "(findall ?message \n         (and (exists ?guideline (and (label ?guideline \"ATHENA DM:  Glycemic Control Dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (actions ?collateral ?message)))\n                                                         ))))))"))
+
+([ATHENA_CVD_Class30065] of  Parameterized_Message
+
+	(label "Lipid collateral on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30043]))
+
+([ATHENA_CVD_Class30066] of  Parameterized_Message
+
+	(label "HTN collateral on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30040]))
+
+([ATHENA_CVD_Class30067] of  Parameterized_Message
+
+	(label "HF collateral on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30041]))
+
+([ATHENA_CVD_Class30068] of  Parameterized_Message
+
+	(label "CKD collateral on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30042]))
+
+([ATHENA_CVD_Class30069] of  Parameterized_Message
+
+	(label "Glycemic Control collateral on-screen messages")
+	(message_type Fixed+Messsages)
+	(parameterized_message [ATHENA_CVD_Class30044]))
+
+([ATHENA_CVD_Class4] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40070])
+	(%3ATO [ATHENA_CVD_Class3]))
+
+([ATHENA_CVD_Class40000] of  Property_Value
+
+	(slot [%3ANAME])
+	(string_name "?id"))
+
+([ATHENA_CVD_Class40019] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HF Parameterized Algorithm Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message) \n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"ATHENA HF Astronaut algorithm\")\n                                 (exists ?action (and (steps ?algorithm ?action)\n                                                      (exists ?message (and (actions ?action ?message)\n                                                                            (parameterized_message ?message ?string))\n                                                      )))\n                            )))"))
+
+([ATHENA_CVD_Class40020] of  Parameterized_Message
+
+	(label "HF Parameterized Consultation Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40021]))
+
+([ATHENA_CVD_Class40021] of  Parameterized_String
+
+	(label "HF Parameterized Consultation Messages")
+	(multivalued_variables [ATHENA_CVD_Class40022])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40022] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class40023])
+	(label "HF Parameterized Consultation Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class40023] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HF Parameterized Consultation Messages")
+	(PAL_query [ATHENA_CVD_Class40024]))
+
+([ATHENA_CVD_Class40024] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HF Parameterized Consultation Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"ATHENA HF Astronaut algorithm\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (exists ?message (and (actions ?action ?message)\n                                                                                                                         (parameterized_message ?message ?string))\n                                                                                                   ))))))))))"))
+
+([ATHENA_CVD_Class40025] of  Parameterized_Message
+
+	(label "HF Parameterized collateral messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40026]))
+
+([ATHENA_CVD_Class40026] of  Parameterized_String
+
+	(label "HF Parameterized collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class40027])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40027] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class40028])
+	(label "HF Parameterized collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class40028] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query HF Parameterized collateral messages")
+	(PAL_query [ATHENA_CVD_Class40029]))
+
+([ATHENA_CVD_Class40029] of  PAL-QUERY
+
+	(%3APAL-NAME "Query HF Parameterized collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n          (defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (and (exists ?guideline (and (label ?guideline \"ATHENA HF Astronaut\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (exists ?message (and (actions ?collateral ?message)\n                                                                                                              (parameterized_message ?message ?string))\n                                                                                        )))))))))\n "))
+
+([ATHENA_CVD_Class40030] of  Parameterized_Message
+
+	(label "Glycemic Control Parameterized Algorithm Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40031]))
+
+([ATHENA_CVD_Class40031] of  Parameterized_String
+
+	(label "Glycemic Control Parameterized Algorithm Messages")
+	(multivalued_variables [ATHENA_CVD_Class40032])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40032] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class40033])
+	(label "Glycemic Control Parameterized Algorithm Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class40033] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Glycemic Control Parameterized Algorithm Messages")
+	(PAL_query [ATHENA_CVD_Class40034]))
+
+([ATHENA_CVD_Class40034] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Glycemic Control Parameterized Algorithm Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message) \n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"Glycemic Control Dashboard III\")\n                                 (exists ?action (and (steps ?algorithm ?action)\n                                                      (exists ?message (and (actions ?action ?message)\n                                                                            (parameterized_message ?message ?string))\n                                                      )))\n                            )))"))
+
+([ATHENA_CVD_Class40035] of  Parameterized_Message
+
+	(label "Glycemic Control Parameterized Consultation Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40036]))
+
+([ATHENA_CVD_Class40036] of  Parameterized_String
+
+	(label "Glycemic Control Parameterized Consultation Messages")
+	(multivalued_variables [ATHENA_CVD_Class40037])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40037] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class40038])
+	(label "Glycemic Control Parameterized Consultation Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class40038] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Glycemic Control Parameterized Consultation Messages")
+	(PAL_query [ATHENA_CVD_Class40039]))
+
+([ATHENA_CVD_Class40039] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Glycemic Control Parameterized Consultation Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"Glycemic Control Dashboard III\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (exists ?message (and (actions ?action ?message)\n                                                                                                                         (parameterized_message ?message ?string))\n                                                                                                   ))))))))))"))
+
+([ATHENA_CVD_Class40040] of  Parameterized_Message
+
+	(label "Glycemic Control Parameterized collateral messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40041]))
+
+([ATHENA_CVD_Class40041] of  Parameterized_String
+
+	(label "Glycemic Control Parameterized collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class40042])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40042] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class40043])
+	(label "Glycemic Control Parameterized collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class40043] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Glycemic Control Parameterized collateral messages")
+	(PAL_query [ATHENA_CVD_Class40044]))
+
+([ATHENA_CVD_Class40044] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Glycemic Control Parameterized collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n          (defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (and (exists ?guideline (and (label ?guideline \"ATHENA DM:  Glycemic Control Dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (exists ?message (and (actions ?collateral ?message)\n                                                                                                              (parameterized_message ?message ?string))\n                                                                                        )))))))))\n "))
+
+([ATHENA_CVD_Class40045] of  Parameterized_Message
+
+	(label "CKD Parameterized Algorithm Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class40046]))
+
+([ATHENA_CVD_Class40046] of  Parameterized_String
+
+	(label "CKD Parameterized Algorithm Messages")
+	(multivalued_variables [ATHENA_CVD_Class50047])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class40047] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class5]
+		[ATHENA_CVD_Class20019]
+		[ATHENA_CVD_Class30028])
+	(label "HTN"))
+
+([ATHENA_CVD_Class40048] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class7]
+		[ATHENA_CVD_Class20021]
+		[ATHENA_CVD_Class30032])
+	(label "Glycemic Control"))
+
+([ATHENA_CVD_Class40049] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40048])
+	(%3ATO [ATHENA_CVD_Class30032]))
+
+([ATHENA_CVD_Class40050] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class10001]
+		[ATHENA_CVD_Class10000]
+		[ATHENA_CVD_Class30031])
+	(label "CKD"))
+
+([ATHENA_CVD_Class40051] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class6]
+		[ATHENA_CVD_Class20022]
+		[ATHENA_CVD_Class30029])
+	(label "HF"))
+
+([ATHENA_CVD_Class40052] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40068])
+	(%3ATO [ATHENA_CVD_Class40051]))
+
+([ATHENA_CVD_Class40053] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40069])
+	(%3ATO [ATHENA_CVD_Class40050]))
+
+([ATHENA_CVD_Class40054] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40071])
+	(%3ATO [ATHENA_CVD_Class40047]))
+
+([ATHENA_CVD_Class40055] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40072])
+	(%3ATO [ATHENA_CVD_Class40048]))
+
+([ATHENA_CVD_Class40067] of  Choice_Step
+
+	(branches
+		[ATHENA_CVD_Class40070]
+		[ATHENA_CVD_Class40068]
+		[ATHENA_CVD_Class40069]
+		[ATHENA_CVD_Class40071]
+		[ATHENA_CVD_Class40072])
+	(label "Select Guideline"))
+
+([ATHENA_CVD_Class40068] of  Action_Choice
+
+	(followed_by [ATHENA_CVD_Class40051])
+	(label "HF")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class40069] of  Action_Choice
+
+	(followed_by [ATHENA_CVD_Class40050])
+	(label "CKD")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class40070] of  Action_Choice
+
+	(followed_by [ATHENA_CVD_Class3])
+	(label "Lipid")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class40071] of  Action_Choice
+
+	(followed_by [ATHENA_CVD_Class40047])
+	(label "HTN")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class40072] of  Action_Choice
+
+	(followed_by [ATHENA_CVD_Class40048])
+	(label "Glycemic Control")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class40074] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40067])
+	(%3ATO [ATHENA_CVD_Class40070]))
+
+([ATHENA_CVD_Class40075] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40067])
+	(%3ATO [ATHENA_CVD_Class40068]))
+
+([ATHENA_CVD_Class40076] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40067])
+	(%3ATO [ATHENA_CVD_Class40069]))
+
+([ATHENA_CVD_Class40077] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class2])
+	(%3ATO [ATHENA_CVD_Class40067]))
+
+([ATHENA_CVD_Class40078] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40067])
+	(%3ATO [ATHENA_CVD_Class40071]))
+
+([ATHENA_CVD_Class40079] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40067])
+	(%3ATO [ATHENA_CVD_Class40072]))
+
+([ATHENA_CVD_Class5] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10342]
+		[ATHENA_CVD_Class30000])
+	(label "HTN Dashboard Algorithm Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class50047] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50048])
+	(label "CKD Parameterized Algorithm Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50048] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query CKD Parameterized Algorithm Messages")
+	(PAL_query [ATHENA_CVD_Class50049]))
+
+([ATHENA_CVD_Class50049] of  PAL-QUERY
+
+	(%3APAL-NAME "Query CKD Parameterized Algorithm Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message) \n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"CKD dashboard\")\n                                 (exists ?action (and (steps ?algorithm ?action)\n                                                      (exists ?message (and (actions ?action ?message)\n                                                                            (parameterized_message ?message ?string))\n                                                      )))\n                            )))"))
+
+([ATHENA_CVD_Class50050] of  Parameterized_Message
+
+	(label "CKD Parameterized Consultation Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class50051]))
+
+([ATHENA_CVD_Class50051] of  Parameterized_String
+
+	(label "CKD Parameterized Consultation Messages")
+	(multivalued_variables [ATHENA_CVD_Class50052])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class50052] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50053])
+	(label "CKD Parameterized Consultation Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50053] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query CKD Parameterized Consultation Messages")
+	(PAL_query [ATHENA_CVD_Class50054]))
+
+([ATHENA_CVD_Class50054] of  PAL-QUERY
+
+	(%3APAL-NAME "Query CKD Parameterized Consultation Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"CKD dashboard\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (exists ?message (and (actions ?action ?message)\n                                                                                                                         (parameterized_message ?message ?string))\n                                                                                                   ))))))))))"))
+
+([ATHENA_CVD_Class50055] of  Parameterized_Message
+
+	(label "CKD Parameterized collateral messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class50056]))
+
+([ATHENA_CVD_Class50056] of  Parameterized_String
+
+	(label "CKD Parameterized collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class50057])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class50057] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50058])
+	(label "CKD Parameterized collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50058] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query CKD Parameterized collateral messages")
+	(PAL_query [ATHENA_CVD_Class50059]))
+
+([ATHENA_CVD_Class50059] of  PAL-QUERY
+
+	(%3APAL-NAME "Query CKD Parameterized collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n          (defrange ?collateral :FRAME Collateral_Action)\n          (defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (and (exists ?guideline (and (label ?guideline \"ATHENA CKD dashboard\")\n                                      (exists ?drugUsage (and (or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                              (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                        (exists ?message (and (actions ?collateral ?message)\n                                                                                                              (parameterized_message ?message ?string))\n                                                                                        )))))))))\n "))
+
+([ATHENA_CVD_Class50060] of  Parameterized_Message
+
+	(label "Lipid Parameterized Algorithm Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class50061]))
+
+([ATHENA_CVD_Class50061] of  Parameterized_String
+
+	(label "Lipid Parameterized Algorithm Messages")
+	(multivalued_variables [ATHENA_CVD_Class50062])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class50062] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50063])
+	(label "Lipid Parameterized Algorithm Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50063] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Lipid Parameterized Algorithm Messages")
+	(PAL_query [ATHENA_CVD_Class50064]))
+
+([ATHENA_CVD_Class50064] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Lipid Parameterized Algorithm Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message) \n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Action_Choice)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"Statin recommendations III\")\n                                 (exists ?action (and (steps ?algorithm ?action)\n                                                      (exists ?message (and (actions ?action ?message)\n                                                                            (parameterized_message ?message ?string))\n                                                      )))\n                            )))"))
+
+([ATHENA_CVD_Class50065] of  Parameterized_Message
+
+	(label "Lipid Parameterized Consultation Messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class50066]))
+
+([ATHENA_CVD_Class50066] of  Parameterized_String
+
+	(label "Lipid Parameterized Consultation Messages")
+	(multivalued_variables [ATHENA_CVD_Class50067])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class50067] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50068])
+	(label "Lipid Parameterized Consultation Messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50068] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Lipid Parameterized Consultation Messages")
+	(PAL_query [ATHENA_CVD_Class50069]))
+
+([ATHENA_CVD_Class50069] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Lipid Parameterized Consultation Messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME Parameterized_Message)\n(defrange ?algorithm :FRAME Management_Diagram)\n(defrange ?action :FRAME Consultation_Action_Step)\n(defrange ?scenario :FRAME Scenario)\n(defrange ?consult :FRAME Consultation_Guideline)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?algorithm (and (label ?algorithm \"Statin recommendations III\")\n                                 (exists ?scenario (and (steps ?algorithm ?scenario)\n                                                        (exists ?consult (and (consultation_template ?scenario ?consult)\n                                                                              (exists ?action (and (steps ?consult ?action)\n                                                                                                   (exists ?message (and (actions ?action ?message)\n                                                                                                                         (parameterized_message ?message ?string))\n                                                                                                   ))))))))))"))
+
+([ATHENA_CVD_Class50070] of  Parameterized_Message
+
+	(label "Lipid Parameterized collateral messages")
+	(message_type Parameterized+Messages)
+	(parameterized_message [ATHENA_CVD_Class50071]))
+
+([ATHENA_CVD_Class50071] of  Parameterized_String
+
+	(label "Lipid Parameterized collateral messages")
+	(multivalued_variables [ATHENA_CVD_Class50072])
+	(value " <p><!--Parameterized_Message$?id$*--><b>-   ?label</b>%#?value#%</p>   "))
+
+([ATHENA_CVD_Class50072] of  Variable_ValueSet
+
+	(derivation_expression [ATHENA_CVD_Class50073])
+	(label "Lipid Parameterized collateral messages")
+	(property_values_to_get
+		[ATHENA_CVD_Class20000]
+		[ATHENA_CVD_Class17]
+		[ATHENA_CVD_Class40000]))
+
+([ATHENA_CVD_Class50073] of  PAL_Query
+
+	(case_variable "$patient_id")
+	(label "Query Lipid Parameterized collateral messages")
+	(PAL_query [ATHENA_CVD_Class50074]))
+
+([ATHENA_CVD_Class50074] of  PAL-QUERY
+
+	(%3APAL-NAME "Query Lipid Parameterized collateral messages")
+	(%3APAL-RANGE "(defrange ?message :FRAME On_Screen_Message)\n(defrange ?guideline :FRAME Management_Guideline)\n(defrange ?drugUsage :FRAME Drug_Usage)\n(defrange ?collateral :FRAME Collateral_Action)\n(defrange ?string :FRAME Parameterized_String)")
+	(%3APAL-STATEMENT "(findall ?string \n         (exists ?guideline (and (label ?guideline \"Lipid Management ACC AHA\")\n                                 (exists ?drugUsage (and(or (drug_usages ?guideline ?drugUsage)(guideline_drugs ?guideline ?drugUsage))\n                                                         (exists ?collateral (and  (collateral_actions ?drugUsage ?collateral)\n                                                                                   (exists ?message (and (actions ?collateral ?message)\n                                                                                                         (parameterized_message ?message ?string))\n                                                                                   ))))))))\n "))
+
+([ATHENA_CVD_Class6] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class13]
+		[ATHENA_CVD_Class30015])
+	(label "HF Dashboard Algorithm Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class7] of  Action_Choice
+
+	(actions
+		[ATHENA_CVD_Class10019]
+		[ATHENA_CVD_Class40030])
+	(label "Glycemic Control Algorithm Messages")
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_CVD_Class9] of  Followed_By
+
+	(%3AFROM [ATHENA_CVD_Class40047])
+	(%3ATO [ATHENA_CVD_Class5]))
+
+([ATHENA_DM_Class0] of  Management_Guideline
+
+	(clinical_algorithm [ATHENA_DM_Instance_32528])
+	(eligibility_criteria [criterion_INSTANCE_00001])
+	(label "ATHENA Cardiovascular Guidelines")
+	(subguidelines
+		[ATHENA_CKD_Class20000]
+		[ATHENA_GlycemicControl_Class130049]
+		[ATHENA_HF_Class120000]
+		[ATHENA_HTN_Dashboard_Class10000]
+		[Lipid_dashboard_Class0])
+	(title "ATHENA Cardiovascular Guidelines")
+	(version "1.0"))
+
+([ATHENA_DM_Instance_20000] of  Action_Choice
+
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Instance_20001] of  Scenario
+
+	(new_encounter FALSE))
+
+([ATHENA_DM_Instance_20002] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Instance_20001])
+	(%3ATO [ATHENA_DM_Instance_20000]))
+
+([ATHENA_DM_Instance_30000] of  Scenario
+
+	(new_encounter FALSE))
+
+([ATHENA_DM_Instance_30001] of  Action_Choice
+
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Instance_30002] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Instance_30000])
+	(%3ATO [ATHENA_DM_Instance_30001]))
+
+([ATHENA_DM_Instance_32528] of  Management_Diagram
+)
+
+([ATHENA_DM_Instance_40000] of  Action_Choice
+
+	(strict_rule_in_condition [criterion_INSTANCE_00001]))
+
+([ATHENA_DM_Instance_40001] of  Scenario
+
+	(new_encounter FALSE))
+
+([ATHENA_DM_Instance_40002] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Instance_40001])
+	(%3ATO [ATHENA_DM_Instance_40000]))
+
+([ATHENA_DM_Instance_50000] of  Scenario
+
+	(new_encounter FALSE))
+
+([ATHENA_DM_Instance_50001] of  Action_Choice
+)
+
+([ATHENA_DM_Instance_50002] of  Followed_By
+
+	(%3AFROM [ATHENA_DM_Instance_50000])
+	(%3ATO [ATHENA_DM_Instance_50001]))
+
+([Fixed+Messsages] of  Canonical_Terms_Metaclass
+)
+
+([KB_003436_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_003436_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_003436_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_003436_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_003436_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_003436_Class199] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_003436_Class207] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_208374_Class113] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_208374_Class128] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_208374_Class41] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_208374_Class59] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_208374_Class75] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_226346_Class104] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_226346_Class56] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_250697_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_250697_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_250697_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_250697_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_250697_Class168] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_250697_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_374736_Class1038] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_374736_Class1045] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_374736_Class1056] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_374736_Class1094] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_374736_Class1104] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_374736_Class1108] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_498092_Class455] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_498092_Class465] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_498092_Class469] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_498092_Class474] of  Definite_Time_Interval
+
+	(how_many "15")
+	(label "< 15 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_507828_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_507828_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_507828_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_507828_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_507828_Class168] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_507828_Class170] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_507828_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_507828_Class88] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_532532_Class113] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_532532_Class125] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_532532_Class128] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_532532_Class38] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_532532_Class41] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_532532_Class52] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_532532_Class59] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_532532_Class70] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_532532_Class75] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_610824_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_610824_Class168] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_610824_Class170] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_610824_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class199] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class207] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_610824_Class88] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_624098_Class201] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_624098_Class204] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_624098_Class215] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_624098_Class222] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_624098_Class233] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_624098_Class238] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_624098_Class276] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_624098_Class288] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_624098_Class291] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_630940_Class226] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_630940_Class233] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_630940_Class281] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_630940_Class291] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_630940_Class295] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_630940_Class300] of  Definite_Time_Interval
+
+	(how_many "15")
+	(label "< 15 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_785400_Class113] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_785400_Class125] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_785400_Class128] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_785400_Class38] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_785400_Class41] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_785400_Class52] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_785400_Class59] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_785400_Class70] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_785400_Class75] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_799589_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_799589_Class168] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_799589_Class170] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_799589_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class199] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class207] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_799589_Class88] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_814665_Class110] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class142] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class152] of  Definite_Time_Interval
+
+	(how_many "3")
+	(label "past 3 years")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class156] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "in past month")
+	(polarity Before)
+	(time_unit month))
+
+([KB_814665_Class168] of  Qualitative_Constant
+
+	(value "Male"))
+
+([KB_814665_Class170] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_814665_Class192] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class199] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class207] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "Within last year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_814665_Class88] of  Qualitative_Constant
+
+	(value "Female"))
+
+([KB_927639_Class61] of  Numeric_Constant
+
+	(value 8.0))
+
+([KB_927639_Class67] of  Definite_Time_Interval
+
+	(how_many "1")
+	(label "In past year")
+	(polarity Before)
+	(time_unit year))
+
+([KB_927639_Class78] of  Qualitative_Constant
+
+	(value "Female"))
+
+([Parameterized+Messages] of  Canonical_Terms_Metaclass
+)

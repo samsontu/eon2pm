@@ -1,0 +1,2671 @@
+; Mon Apr 13 20:47:23 GMT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot version_note
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot route
+;+		(comment "The route of administration of a medication")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot set_elements
+;+		(type ANY)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot DrugGenericName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot sex
+;+		(comment "gender of patient")
+		(type SYMBOL)
+		(allowed-values Male Female)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot DiseasesAffectingSystem
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot query
+		(type INSTANCE)
+;+		(allowed-classes Query)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PreferredSource
+;+		(comment "This is the preferred source to use when getting the value of this data")
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot select
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot where_restriction
+		(type INSTANCE)
+;+		(allowed-classes Filter)
+		(create-accessor read-write))
+	(multislot keywords
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot DiagnosticCriteria
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot period
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval_Definite Definite_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot predicate
+		(type SYMBOL)
+		(allowed-values derivable)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot when
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot net_benefit
+		(type SYMBOL)
+;+		(allowed-parents Net_Benefit)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot PrettyName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot relative_time_point
+;+		(comment "A relative time interval is defined in relation to a relative time point, such as \"now\" or a query")
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Point PAL_Query)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot filters
+		(type INSTANCE)
+;+		(allowed-classes Filter)
+		(create-accessor read-write))
+	(single-slot start_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot attribute
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot encounter_reason
+;+		(comment "Can be chief complaint, reason for inpateint admission")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot TestResultParameters
+		(type SYMBOL)
+;+		(allowed-parents Diagnostic_Class)
+		(create-accessor read-write))
+	(single-slot PAL_constraint
+		(type INSTANCE)
+;+		(allowed-classes %3APAL-CONSTRAINT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot encounter_type
+;+		(comment "Type of encounter such as no-show")
+		(type SYMBOL)
+;+		(allowed-parents Encounter_Type)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot controllable
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot DiseaseCategory
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+		(create-accessor read-write))
+	(single-slot previous
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot criteria
+;+		(comment "eg criteria1 AND criteria2 AND criteria3")
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot property_values_to_get
+		(type INSTANCE)
+;+		(allowed-classes Property_Value)
+		(create-accessor read-write))
+	(single-slot indication
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot ICD-9-Code
+		(type STRING)
+		(create-accessor read-write))
+	(multislot TradeNames
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot slot
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot discharged_to
+;+		(comment "the location to where patient was discharged. For example if the patient was discharged to hospice then he/she will be excluded")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot before_uncertainty
+;+		(comment "In a fuzzy time point or duration, the time interval before the time point or the beginning of the duration where the event could have happened")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot duration
+		(type INSTANCE)
+;+		(allowed-classes Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot ConstituentDiagnosticTests
+		(type SYMBOL)
+;+		(allowed-parents Diagnostic_Class)
+		(create-accessor read-write))
+	(single-slot type
+;+		(comment "The class whose instances we are querying for")
+		(type SYMBOL)
+;+		(allowed-parents Guideline_Model_Entity EPR_Entity Canonical_Terms_Metaclass)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Shared_documentation
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot case_variable
+;+		(comment "This is the variable name that should be instantiate with case id.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot time_unit
+;+		(comment "unit granularities of time")
+		(type SYMBOL)
+		(allowed-values day hour minute second week month year undefined)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot qualitative_domain_term
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot versions
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot next
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot medication_possession_ratio
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot conditional_expression_list
+		(type INSTANCE)
+;+		(allowed-classes Conditional_Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot ConstituentTherapeuticProcedures
+		(type SYMBOL)
+;+		(allowed-parents Therapeutic_Class)
+		(create-accessor read-write))
+	(single-slot supporting_materials
+		(type INSTANCE)
+;+		(allowed-classes Supporting_Material)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADIRECT-BROWSER-SLOT
+		(type INSTANCE)
+;+		(allowed-classes %3ASLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot overall_quality_of_evidence
+;+		(comment "Overall quality of evidence refers to the availability of evidence on intermediate or final outcomes.")
+		(type SYMBOL)
+;+		(allowed-parents Overall_Quality_Of_Evidence)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot high
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot DrugClass
+		(type SYMBOL)
+;+		(allowed-parents Medications_Class)
+		(create-accessor read-write))
+	(single-slot substance
+;+		(comment "The substance to which a patient has an adverse reaction")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot high_closed
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot data_source
+		(type SYMBOL)
+		(allowed-values VISTA_data_element VISTA_freetext clinical_assessment inferred)
+		(create-accessor read-write))
+	(multislot DoseSupplied
+;+		(comment "This is the dose that the medication is supplied in")
+		(type FLOAT)
+		(create-accessor read-write))
+	(single-slot string_value
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot month_name
+;+		(comment "integer for the month (e.g, 1 for January)")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot code
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Medication_Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot URL
+;+		(comment "Unique Resource Locator specification for the location of the supporting material")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot results
+		(type SYMBOL)
+;+		(allowed-parents Diagnostic_Class)
+		(create-accessor read-write))
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot complication
+		(type SYMBOL)
+;+		(allowed-parents Diagnostic_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot SurgicalProcedure
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency_unit
+;+		(comment "The time during which a number of drug (frequency) is to be administered")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot daily_dose
+;+		(comment "The normalized daily dose of a prescribed medication")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Synonyms
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot query_template
+;+		(comment "Returns true if Query has non-null result.")
+		(type INSTANCE)
+;+		(allowed-classes Structured_Query)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot CriteriaForToxicity
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot contraindication
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot time_point
+;+		(comment "In specification of time interval, the reference time point for defining the interval.")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot valid_window
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval_Definite Definite_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot default_value
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot daily_dose_unit
+;+		(comment "The unit of the normalized daily dose of a prescribed medication")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3C %3C%3D %3D %3E %3E%3D eq neq member_of subclass_of)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot SLOT-QUERIES
+		(type INSTANCE)
+;+		(allowed-classes QUERY)
+		(create-accessor read-write))
+	(single-slot AttributionToDrug
+;+		(comment "These are grades defined by NIH CTC V. 2.0")
+		(type SYMBOL)
+		(allowed-values 1_unrelated 2_unlikely 3_possible 4_probable 5_definite)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot side_effect
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot first_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot role
+		(type SYMBOL)
+		(allowed-values evidence comment patient_education_material illustration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot coding_system
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot UpperLimitOfNormal
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FindingModifier
+		(type SYMBOL)
+		(allowed-values Mild Moderate Severe)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot where_condition
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot age
+;+		(comment "Age (in years) of patient at the time of encounter")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot day
+;+		(comment "The day in month, beginning with 1 for first day of the month")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot attribute_to_compare
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot system_time
+;+		(comment "An application-dependent integer representing an absolute time point")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot precondition
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DefaultSource
+;+		(comment "This is the default source to use when getting the value of this data in case the preferred source data is missing")
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot comparison
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot file_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot numeric_domain_term
+		(type SYMBOL)
+;+		(allowed-parents Medical_Domain_Class)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot who_with
+		(type SYMBOL)
+;+		(allowed-parents Role)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DrugInfo
+		(type INSTANCE)
+;+		(allowed-classes Drug_Relation)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot where
+;+		(comment "Location of encounter")
+		(type SYMBOL)
+;+		(allowed-parents Clinic)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot prescription_id
+;+		(comment "unique identifier of prescription")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot strength_of_recommendation
+		(type SYMBOL)
+;+		(allowed-parents Strength_Of_Recommendation)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot instance
+		(type INSTANCE)
+;+		(allowed-classes %3ATHING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Precision
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot class_reference
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot low
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot value_expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot PAL_query
+		(type INSTANCE)
+;+		(allowed-classes PAL-QUERY)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot status
+;+		(comment "Status of an intervention with respect to the session time of CDS")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot values
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot purpose
+		(type SYMBOL)
+		(allowed-values evidence comment patient_education_material illustration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot drug_name
+;+		(comment "(Generic) name of the prescribed drug")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "A number of time granules. Can be the string representation of a float or the symbol \"*\" representing infinity.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot lower_limit
+;+		(comment "The lower limit of a laboratory test result")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Units
+		(type SYMBOL)
+;+		(allowed-parents Units_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot attribute_comparisons
+		(type INSTANCE)
+;+		(allowed-classes Attributes_Comparison)
+		(create-accessor read-write))
+	(single-slot derivation_expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot quantifier
+		(type SYMBOL)
+		(allowed-values exists forall)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unit
+;+		(comment "The unit of the numerical measurement")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot from
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot after_uncertainty
+;+		(comment "In a fuzzy time point or duration, the time interval after the time point or the end of the duration where the event could have happened")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot fuzzy_time_point
+;+		(comment "A fuzzy time interval is defined relative to a fuzzy time point. ")
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot year_CE
+;+		(comment "Year in Common Era (e.g., 1995)")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot definition
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot variable
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot second_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot variable_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot OnFormulary
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot degree
+		(type SYMBOL)
+		(allowed-values compelling relative life_saving)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot polarity
+;+		(comment "Specification of time interval, polarity specifies whether the interval is before or after the reference time point.")
+		(type SYMBOL)
+		(allowed-values Before After)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dob
+;+		(comment "Date of birth, in the format yyyy-mm-dd")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot stop_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot multivalued_variables
+		(type INSTANCE)
+;+		(allowed-classes Variable_ValueSet)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot string_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot effects
+		(type SYMBOL)
+;+		(allowed-parents Medical_Domain_Class)
+		(create-accessor read-write))
+	(single-slot argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot children
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
+	(single-slot key_slot
+;+		(comment "The slot of hte EPR class that is part of the index for the class.")
+		(type INSTANCE)
+;+		(allowed-classes %3ASLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot last_fill_date
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot ListOfFindings
+		(type INSTANCE)
+;+		(allowed-classes Diagnostic_Class)
+		(create-accessor read-write))
+	(single-slot level_of_evidence
+;+		(comment "Level of evidence refers to the types of evidence (e.g., clinical trials, expert opinions) that have different evidentiary strengths.")
+		(type SYMBOL)
+;+		(allowed-parents Level_Of_Evidence)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot low_closed
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot ListOfConditions
+		(type INSTANCE)
+;+		(allowed-classes Medical_Conditions_Class)
+		(create-accessor read-write))
+	(single-slot expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot encounter_time_interval
+		(type INSTANCE)
+;+		(allowed-classes Absolute_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot assume_if_no_value
+		(type SYMBOL)
+		(allowed-values no_assumption assume_satisfied assume_unsatisfied use_default)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot upper_limit
+;+		(comment "The upper limit of a laboratory test result")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot anchor_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot presence
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot when_condition
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot abstract
+;+		(comment "Abstract that summaries the supporting material")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LowerLimitOfNormal
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot patient_id
+;+		(comment "Patient identifier")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency
+;+		(comment "The number of times that a drug is to be administered.")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot present_release_time
+		(type INSTANCE)
+;+		(allowed-classes Definite_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot variables
+;+		(comment "The list of variables whose values can be substituted into variable references in the value of a Parameterized_String.")
+		(type INSTANCE)
+;+		(allowed-classes Variable)
+		(create-accessor read-write))
+	(single-slot days_from_current_time
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass EPR_Entity_Class
+	(is-a %3ASTANDARD-CLASS)
+	(role concrete)
+	(single-slot key_slot
+;+		(comment "The slot of hte EPR class that is part of the index for the class.")
+		(type INSTANCE)
+;+		(allowed-classes %3ASLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADIRECT-TYPE
+		(type SYMBOL)
+;+		(allowed-parents %3ACLASS)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass QUERYABLE-CLASS
+	(is-a %3ASTANDARD-CLASS)
+	(role concrete)
+	(multislot SLOT-QUERIES
+		(type INSTANCE)
+;+		(allowed-classes QUERY)
+		(create-accessor read-write)))
+
+(defclass Ordered_List_Value
+	(is-a %3ASTANDARD-CLASS)
+	(role concrete)
+	(single-slot next
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot previous
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Versioned_Metaclass
+	(is-a %3ASTANDARD-CLASS)
+	(role concrete)
+	(multislot versions
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write)))
+
+(defclass QUERY
+	(is-a %3ASYSTEM-CLASS)
+	(role abstract))
+
+(defclass PAL-QUERY
+	(is-a QUERY)
+	(role concrete)
+	(single-slot %3APAL-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3APAL-DESCRIPTION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3APAL-STATEMENT
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3APAL-RANGE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Deprecated
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete))
+
+(defclass Version
+	(is-a %3ASYSTEM-CLASS)
+	(role concrete)
+	(single-slot version_note
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass EPR_Entity "Base concept for an entry in the medical record. A \"logical\" model against which queries are made."
+	(is-a USER)
+	(role abstract)
+	(single-slot patient_id
+;+		(comment "Patient identifier")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Encounter "Consultation between patient and care provider or provision of services to patients"
+	(is-a EPR_Entity)
+	(role concrete)
+	(single-slot duration
+		(type INSTANCE)
+;+		(allowed-classes Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot encounter_type
+;+		(comment "Type of encounter such as no-show")
+		(type SYMBOL)
+;+		(allowed-parents Encounter_Type)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot where
+;+		(comment "Location of encounter")
+		(type SYMBOL)
+;+		(allowed-parents Clinic)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot encounter_reason
+;+		(comment "Can be chief complaint, reason for inpateint admission")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot stop_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot start_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Hospitalization
+	(is-a Encounter)
+	(role concrete)
+	(single-slot discharged_to
+;+		(comment "the location to where patient was discharged. For example if the patient was discharged to hospice then he/she will be excluded")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Patient "The class that holds demographic information about a patient"
+	(is-a EPR_Entity)
+	(role concrete)
+	(single-slot sex
+;+		(comment "gender of patient")
+		(type SYMBOL)
+		(allowed-values Male Female)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot age
+;+		(comment "Age (in years) of patient at the time of encounter")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot dob
+;+		(comment "Date of birth, in the format yyyy-mm-dd")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Observation "Statements about a patient's condition at a particular point in time."
+	(is-a EPR_Entity)
+	(role concrete)
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Numeric_Entry "Observations that result in a numerical measured value"
+	(is-a Observation)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unit
+;+		(comment "The unit of the numerical measurement")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot lower_limit
+;+		(comment "The lower limit of a laboratory test result")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot upper_limit
+;+		(comment "The upper limit of a laboratory test result")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Note_Entry "Observations about a categorical condition (e.g., Fever) or ones that result in values that are not numeric"
+	(is-a Observation)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Adverse_Reaction "Statement about reactions (domain term) to a substance that a patient experiences"
+	(is-a Observation)
+	(role concrete)
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot substance
+;+		(comment "The substance to which a patient has an adverse reaction")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Intervention "An abstract class for representing interventions that are performed on a patient"
+	(is-a EPR_Entity)
+	(role abstract)
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Procedure "The procedures that are performed on a patient"
+	(is-a Intervention)
+	(role concrete)
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Procedure_Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Medication "The medications that have been prescribed or recommended to a patient"
+	(is-a Intervention)
+	(role concrete)
+	(single-slot drug_name
+;+		(comment "(Generic) name of the prescribed drug")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot prescription_id
+;+		(comment "unique identifier of prescription")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency_unit
+;+		(comment "The time during which a number of drug (frequency) is to be administered")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot route
+;+		(comment "The route of administration of a medication")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot daily_dose
+;+		(comment "The normalized daily dose of a prescribed medication")
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot medication_possession_ratio
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frequency
+;+		(comment "The number of times that a drug is to be administered.")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot last_fill_date
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot present_release_time
+		(type INSTANCE)
+;+		(allowed-classes Definite_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot status
+;+		(comment "Status of an intervention with respect to the session time of CDS")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Medication_Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot daily_dose_unit
+;+		(comment "The unit of the normalized daily dose of a prescribed medication")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Condition "Those patient conditions that are to be tracked over time."
+	(is-a EPR_Entity)
+	(role concrete)
+	(single-slot valid_time
+;+		(comment "Time for which the data is valid")
+		(type INSTANCE)
+;+		(allowed-classes Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Expression
+	(is-a USER)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Criterion
+	(is-a Expression)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Comparison_Criterion
+	(is-a Criterion)
+	(role abstract))
+
+(defclass General_Comparison_Criterion "if (value of domain_term  operator Get_Slot_Value) then true, else false"
+	(is-a Comparison_Criterion)
+	(role concrete)
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent exists)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot valid_window
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval_Definite Definite_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot status
+;+		(comment "Status of an intervention with respect to the session time of CDS")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot assume_if_no_value
+		(type SYMBOL)
+		(allowed-values no_assumption assume_satisfied assume_unsatisfied use_default)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type SYMBOL)
+;+		(allowed-parents Medical_Domain_Class)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot default_value
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3C %3C%3D %3D %3E %3E%3D eq neq member_of subclass_of)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Numeric_Term_Criterion
+	(is-a Comparison_Criterion)
+	(role concrete)
+	(single-slot numeric_domain_term
+		(type SYMBOL)
+;+		(allowed-parents Medical_Domain_Class)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot unit
+;+		(comment "The unit of the numerical measurement")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot valid_window
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval_Definite Definite_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot status
+;+		(comment "Status of an intervention with respect to the session time of CDS")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot assume_if_no_value
+		(type SYMBOL)
+		(allowed-values no_assumption assume_satisfied assume_unsatisfied use_default)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot default_value
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3D %21%3D %3C%3D %3C %3E%3D %3E)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Expression_Comparison_Criterion
+	(is-a Comparison_Criterion)
+	(role concrete)
+	(single-slot expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot variable
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3C %3C%3D %3D %3E %3E%3D eq neq member_of subclass_of)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Presence_Criterion
+	(is-a Criterion)
+	(role concrete)
+	(single-slot period
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval_Definite Definite_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot presence
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot status
+;+		(comment "Status of an intervention with respect to the session time of CDS")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot domain_term
+;+		(comment "A domain concept represented as a term in a controlled vocabulary")
+		(type SYMBOL)
+;+		(allowed-parents Medical_Domain_Class)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass N_ary_Criterion
+	(is-a Criterion)
+	(role concrete)
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values AND NOT OR)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot criteria
+;+		(comment "eg criteria1 AND criteria2 AND criteria3")
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass PAL_Criterion
+	(is-a Criterion)
+	(role concrete)
+	(single-slot PAL_constraint
+		(type INSTANCE)
+;+		(allowed-classes %3APAL-CONSTRAINT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot case_variable
+;+		(comment "This is the variable name that should be instantiate with case id.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Temporal_Criterion "ChronusII query. Considered \"true\" if the query has result; \"false\" if the selection returns no result."
+	(is-a Criterion)
+	(role concrete)
+	(single-slot select
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot from
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot where_condition
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot when_condition
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Query_Result_Criterion "returns true if query result is not null"
+	(is-a Criterion)
+	(role concrete)
+	(single-slot presence
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot query
+		(type INSTANCE)
+;+		(allowed-classes Query)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Data_Value
+	(is-a Expression)
+	(role concrete))
+
+(defclass Time_Entity "This is the toplevel class for temporal entities"
+	(is-a Data_Value)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Abstract_Time_Point "Relative and absolute time point"
+	(is-a Time_Entity)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot days_from_current_time
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Absolute_Time_Point ";******************* Definition of time ************ Many models of time are possible. In Amar Das's model, an 'event' (e.g., a measurment of platelets) has an interval of uncertainty, where the bounds of the interval are calendate date-time. For simplicity, we define here a model of time in which time is an integer representing number of time units (default to days) after a reference time point. "
+	(is-a Abstract_Time_Point)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot month_name
+;+		(comment "integer for the month (e.g, 1 for January)")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot day
+;+		(comment "The day in month, beginning with 1 for first day of the month")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot year_CE
+;+		(comment "Year in Common Era (e.g., 1995)")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot system_time
+;+		(comment "An application-dependent integer representing an absolute time point")
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Definite_Time_Point
+	(is-a Absolute_Time_Point)
+	(role concrete))
+
+(defclass Relative_Time_Point "e.g. 'Today' or 'now' is a relative time point."
+	(is-a Abstract_Time_Point)
+	(role concrete)
+	(single-slot anchor_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "A number of time granules. Can be the string representation of a float or the symbol \"*\" representing infinity.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot polarity
+;+		(comment "Specification of time interval, polarity specifies whether the interval is before or after the reference time point.")
+		(type SYMBOL)
+		(allowed-values Before After)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot time_unit
+;+		(comment "unit granularities of time")
+		(type SYMBOL)
+		(allowed-values day hour minute second week month year undefined)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Duration
+	(is-a Time_Entity)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "A number of time granules. Can be the string representation of a float or the symbol \"*\" representing infinity.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot time_unit
+;+		(comment "unit granularities of time")
+		(type SYMBOL)
+		(allowed-values day hour minute second week month year undefined)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Definite_Duration "Specification for some definite duration in terms of a quantity and a time unit. \"Name\" is just some string identifier. "
+	(is-a Duration)
+	(role concrete))
+
+(defclass Fuzzy_Duration
+	(is-a Duration)
+	(role concrete)
+	(single-slot after_uncertainty
+;+		(comment "In a fuzzy time point or duration, the time interval after the time point or the end of the duration where the event could have happened")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot before_uncertainty
+;+		(comment "In a fuzzy time point or duration, the time interval before the time point or the beginning of the duration where the event could have happened")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Duration)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Time_Interval "A time interval with start/stop time"
+	(is-a Time_Entity)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "A number of time granules. Can be the string representation of a float or the symbol \"*\" representing infinity.")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot time_unit
+;+		(comment "unit granularities of time")
+		(type SYMBOL)
+		(allowed-values day hour minute second week month year undefined)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Absolute_Time_Interval "e.g 3 weeks after 4th may 1998"
+	(is-a Time_Interval)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "foo")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot polarity
+;+		(comment "Specification of time interval, polarity specifies whether the interval is before or after the reference time point.")
+		(type SYMBOL)
+		(allowed-values Before After)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot stop_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot start_time
+		(type INSTANCE)
+;+		(allowed-classes Abstract_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Definite_Time_Interval
+	(is-a Absolute_Time_Interval)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot how_many
+;+		(comment "foo")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot time_point
+;+		(comment "In specification of time interval, the reference time point for defining the interval.")
+		(type INSTANCE)
+;+		(allowed-classes Definite_Time_Point)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Relative_Time_Interval "Interval of time defined by  a duration before or after an indefinite time point, e.g. 3 weeks before today"
+	(is-a Time_Interval)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot relative_time_point
+;+		(comment "A relative time interval is defined in relation to a relative time point, such as \"now\" or a query")
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Point PAL_Query)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot polarity
+;+		(comment "Specification of time interval, polarity specifies whether the interval is before or after the reference time point.")
+		(type SYMBOL)
+		(allowed-values Before After)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Relative_Time_Interval_Definite
+	(is-a Relative_Time_Interval)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Canonical_Terms_Metaclass
+	(is-a %3ASTANDARD-CLASS Data_Value)
+	(role concrete)
+	(single-slot code
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot PrettyName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot data_source
+		(type SYMBOL)
+		(allowed-values VISTA_data_element VISTA_freetext clinical_assessment inferred)
+		(create-accessor read-write))
+	(single-slot coding_system
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Derived_Parameter_Metaclass "This metaclass allows a parameter (e.g., systolic BP) to be derived from an ordered list of possible definitions"
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete)
+	(multislot definition
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Diagnostic_Term_Metaclass
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete)
+	(single-slot controllable
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot DiagnosticCriteria
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Interval-Valued_AtomicTest_Metaclass
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete)
+	(single-slot Units
+		(type SYMBOL)
+;+		(allowed-parents Units_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot LowerLimitOfNormal
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot UpperLimitOfNormal
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Precision
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Ordinal-Valued_AtomicTest_Metaclass
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete))
+
+(defclass Medications_Metaclass
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete))
+
+(defclass Medical_Conditions_Metaclass
+	(is-a Canonical_Terms_Metaclass)
+	(role concrete))
+
+(defclass Set_Expression
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot set_elements
+;+		(type ANY)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass String_Set_Expression
+	(is-a Set_Expression)
+	(role concrete)
+	(multislot set_elements
+		(type STRING)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Numeric_Constant
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Qualitative_Constant
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Physical_Quantity
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unit
+;+		(comment "The unit of the numerical measurement")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Parameterized_String "A string that has embedded in it, references to variables whose values are evaluated and substituted into the string.The Parameterized_String will be extended with a new slot multivalued_variables, which accepts an instance of Variable_ValueSet. The behavior of evaluating a Parameterized_String P will be as follows:\n\n1. Get the variables V in P.variables and replace references to V.string_name (e.g., ?dose) in P.value (e.g., \"The dose of atenolol is ?dose mg/day\") with evaluation of V.derivation_expression (e.g., a PAL query to get the dose of atenolol medication), call the resulting string S (e.g.,  \"The dose of atenolol is 3 mg/day\"). This is the existing behavior)\n2. Get the Variable_ValueSet VVS instance in P.multivalued_variables. An example of Variable_ValueSet instance is shown below.\n3. Evaluate VVS.derivation_expression (e.g., current meds) that results in a set of instances.\n4. For each instance I from step 2, replace any slot value reference (i.e.,  ?drugName, ?MPR, and ?PRT in the screenshot) in S with the corresponding slot values of I. Note that each \"property value to get\" is a pair of \"string_name\" (e.g., ?drugName) and a slot (e.g., drug_name slot)).\n5. Concatenate the strings in created in step 4. \n\nFor instance, if the \"value\" slot of a Parameterized_String  is\n\n\"The medication possession ratio is ?MPR  for ?drugName since ?PRT.\"\n\nand the patient is taking lisinopril and atenolol where the MPRs are 0.3, 0.4 since PRT = 2013-11-12 for each drug, evaluating the Parameterized_String will yield \n \n\"The medication possession ratio is 0.3  for lisinopril since 2013-11-12. The medication possession ratio is 0.4  for atenolol since 2013-11-12\""
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot multivalued_variables
+		(type INSTANCE)
+;+		(allowed-classes Variable_ValueSet)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot variables
+;+		(comment "The list of variables whose values can be substituted into variable references in the value of a Parameterized_String.")
+		(type INSTANCE)
+;+		(allowed-classes Variable)
+		(create-accessor read-write)))
+
+(defclass Interval
+	(is-a Data_Value)
+	(role concrete)
+	(single-slot low
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot high_closed
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot low_closed
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot high
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Variable
+	(is-a Expression)
+	(role concrete)
+	(single-slot label
+;+		(comment "Store the actual controlled term in this slot")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot string_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot derivation_expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Binary_Expression
+	(is-a Expression)
+	(role concrete)
+	(single-slot first_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot second_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %2F - %5E)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass N_ary_Expression
+	(is-a Expression)
+	(role concrete)
+	(multislot values
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values + * concat %2B)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Conditional_Expression "if precondition, then value = expression"
+	(is-a Expression)
+	(role concrete)
+	(single-slot value
+;+		(comment "Value of a measurement or an observation")
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot precondition
+		(type INSTANCE)
+;+		(allowed-classes Criterion)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Get_Slot_Value "subclasses of this class tries to get values of a slot in various ways"
+	(is-a Expression)
+	(role concrete)
+	(single-slot instance
+		(type INSTANCE)
+;+		(allowed-classes %3ATHING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot slot
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Conditional_Expressions
+	(is-a Expression)
+	(role concrete)
+	(multislot conditional_expression_list
+		(type INSTANCE)
+;+		(allowed-classes Conditional_Expression)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Get_Class_Slot_Value
+	(is-a Deprecated Expression)
+	(role concrete)
+	(single-slot class_reference
+		(type SYMBOL)
+;+		(allowed-parents %3ATHING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot slot
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Date_Expression
+	(is-a Expression)
+	(role concrete)
+	(single-slot first_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot second_argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %2B -)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Query
+	(is-a Expression)
+	(role abstract))
+
+(defclass PAL_Query
+	(is-a Query)
+	(role concrete)
+	(single-slot key_slot
+;+		(comment "The slot of hte EPR class that is part of the index for the class.")
+		(type INSTANCE)
+;+		(allowed-classes %3ASLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot case_variable
+;+		(comment "This is the variable name that should be instantiate with case id.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PAL_query
+		(type INSTANCE)
+;+		(allowed-classes PAL-QUERY)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass EPR_Query
+	(is-a Query)
+	(role abstract))
+
+(defclass Presence_Query "Presence_Query is used by the execution engine to help evaluating Presence Criterion. It should not be used in guideline encoding."
+	(is-a EPR_Query)
+	(role concrete)
+	(single-slot period
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot qualitative_domain_term
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Qualitative_Term_Query
+	(is-a EPR_Query)
+	(role concrete)
+	(single-slot period
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot qualitative_domain_term
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Numeric_PAL_Query
+	(is-a EPR_Query)
+	(role concrete)
+	(single-slot key_slot
+;+		(comment "The slot of hte EPR class that is part of the index for the class.")
+		(type INSTANCE)
+;+		(allowed-classes %3ASLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot case_variable
+;+		(comment "This is the variable name that should be instantiate with case id.")
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PAL_query
+		(type INSTANCE)
+;+		(allowed-classes PAL-QUERY)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Numeric_Term_Query "Query for numeric EPR data with a specific domain term  within a period."
+	(is-a EPR_Query)
+	(role concrete)
+	(single-slot numeric_domain_term
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot period
+		(type INSTANCE)
+;+		(allowed-classes Relative_Time_Interval)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot entry_type
+		(type SYMBOL)
+;+		(allowed-parents EPR_Entity)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot mood
+;+		(comment "As the Guideline Interpreter generates recommendations about drug usage, it needs to perform additional tasks based on these recommendations (or the lack of such recommendations). For example, we may want to generate patient-specific messages when recommending the addition of a drug. Thus, in the knowledge base, we need to write decision criteria based on the system’s drug recommendations (i.e. the collateral actions associated with an instance of Drug_Usage). In effect, we need to represent these recommendations as data upon which additional reasoning can be based. Thus, the Guideline Interpreter generates instances of the Medication class to represent its recommendations. To distinguish between system-generated Medication instances from patient data, we use Medication_Mood values. Thus, the Authorized mood value represents the medication that is prescribed. The Actual mood value represents the medication that is actually taken by the patient. The Recommend_Decrease, Recommend_Delete, Recommend_Increase, Recommend_Add mood values represent possible recommendations for a drug")
+		(type SYMBOL)
+;+		(allowed-parents Mood)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Structured_Query "A query of the form\nselect aggregate_operator attribute from type where where_restriction"
+	(is-a Query)
+	(role concrete)
+	(single-slot attribute
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot aggregation_operator
+;+		(comment "If there is more than 1 investigation results that satisfy temporal constraint, apply the data function to determine the value to use")
+		(type SYMBOL)
+		(allowed-values average count maximum minimum most_recent)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot where_restriction
+		(type INSTANCE)
+;+		(allowed-classes Filter)
+		(create-accessor read-write))
+	(single-slot type
+;+		(comment "The class whose instances we are querying for")
+		(type SYMBOL)
+;+		(allowed-parents Guideline_Model_Entity EPR_Entity Canonical_Terms_Metaclass)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Unary_Expression "Unary expression (1) count the number of objects in a set, or (2) negate a number"
+	(is-a Expression)
+	(role concrete)
+	(single-slot argument
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values count log exp)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Medical_Domain_Class "This class comprises a controlled vocabulary of concepts to shared across ontologies.  It names concepts such as drugs, lab tests, and diseases."
+	(is-a USER)
+	(role abstract))
+
+(defclass Units_Class
+	(is-a Medical_Domain_Class)
+	(role abstract))
+
+(defclass Concentration_Unit
+	(is-a Units_Class)
+	(role abstract))
+
+(defclass mg_per_mL
+	(is-a Concentration_Unit)
+	(role concrete))
+
+(defclass Length_Unit
+	(is-a Units_Class)
+	(role abstract))
+
+(defclass cm
+	(is-a Length_Unit)
+	(role abstract))
+
+(defclass mm
+	(is-a Length_Unit)
+	(role abstract))
+
+(defclass Temperature_Unit
+	(is-a Units_Class)
+	(role abstract))
+
+(defclass Volume_Unit
+	(is-a Units_Class)
+	(role abstract))
+
+(defclass Weight_Unit
+	(is-a Units_Class)
+	(role abstract))
+
+(defclass mg
+	(is-a Weight_Unit)
+	(role abstract))
+
+(defclass grams
+	(is-a Weight_Unit)
+	(role abstract))
+
+(defclass Time_Unit
+	(is-a Units_Class)
+	(role concrete))
+
+(defclass Year
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Month
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Day
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Week
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Hour
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Minute
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Second
+	(is-a Time_Unit)
+	(role concrete))
+
+(defclass Supporting_Material
+	(is-a Medical_Domain_Class)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot role
+		(type SYMBOL)
+		(allowed-values evidence comment patient_education_material illustration)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot keywords
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot abstract
+;+		(comment "Abstract that summaries the supporting material")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot URL
+;+		(comment "Unique Resource Locator specification for the location of the supporting material")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Associations
+	(is-a Medical_Domain_Class)
+	(role concrete))
+
+(defclass Drug_Relation
+	(is-a Associations)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that labels the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_Drug_Interaction
+	(is-a Drug_Relation)
+	(role concrete)
+	(single-slot strength_of_recommendation
+		(type SYMBOL)
+;+		(allowed-parents Strength_Of_Recommendation)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_Medical_Condition_Relation
+	(is-a Drug_Relation)
+	(role concrete)
+	(single-slot level_of_evidence
+;+		(comment "Level of evidence refers to the types of evidence (e.g., clinical trials, expert opinions) that have different evidentiary strengths.")
+		(type SYMBOL)
+;+		(allowed-parents Level_Of_Evidence)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot supporting_materials
+		(type INSTANCE)
+;+		(allowed-classes Supporting_Material)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot net_benefit
+		(type SYMBOL)
+;+		(allowed-parents Net_Benefit)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot strength_of_recommendation
+		(type SYMBOL)
+;+		(allowed-parents Strength_Of_Recommendation)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot overall_quality_of_evidence
+;+		(comment "Overall quality of evidence refers to the availability of evidence on intermediate or final outcomes.")
+		(type SYMBOL)
+;+		(allowed-parents Overall_Quality_Of_Evidence)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_Complication_Relation
+	(is-a Drug_Medical_Condition_Relation)
+	(role concrete)
+	(single-slot complication
+		(type SYMBOL)
+;+		(allowed-parents Diagnostic_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_Contraindication_Relation
+	(is-a Drug_Medical_Condition_Relation)
+	(role concrete)
+	(single-slot contraindication
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot degree
+		(type SYMBOL)
+		(allowed-values relative absolute)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_Indication_Relation
+	(is-a Drug_Medical_Condition_Relation)
+	(role concrete)
+	(single-slot degree
+		(type SYMBOL)
+		(allowed-values compelling relative life_saving)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot indication
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Drug_SideEffect_Relation
+	(is-a Drug_Medical_Condition_Relation)
+	(role concrete)
+	(single-slot side_effect
+		(type SYMBOL)
+;+		(allowed-parents Medical_Conditions_Class)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Medical_Task
+	(is-a Medical_Domain_Class)
+	(role abstract))
+
+(defclass Education
+	(is-a Medical_Task)
+	(role concrete)
+	(single-slot file_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Therapeutic_Class "These are all the possible therapeutic procedures that can be done to treat a patient."
+	(is-a Medical_Task)
+	(role abstract))
+
+(defclass Medications_Class
+	(is-a Therapeutic_Class)
+	(role abstract))
+
+(defclass Therapeutic_Procedure
+	(is-a Therapeutic_Class)
+	(role abstract))
+
+(defclass DuplicateDrug
+	(is-a Therapeutic_Class)
+	(role concrete))
+
+(defclass Diagnostic_Class
+	(is-a Medical_Task)
+	(role abstract))
+
+(defclass Medical_Conditions_Class
+	(is-a Diagnostic_Class)
+	(role abstract))
+
+(defclass Patient_History_Class
+	(is-a Diagnostic_Class)
+	(role abstract))
+
+(defclass Patient_Demographics
+	(is-a Patient_History_Class)
+	(role abstract))
+
+(defclass Age
+	(is-a Patient_Demographics)
+	(role abstract))
+
+(defclass Race
+	(is-a Patient_Demographics)
+	(role abstract))
+
+(defclass Sex
+	(is-a Patient_Demographics)
+	(role abstract))
+
+(defclass Risk_Factor
+	(is-a Patient_History_Class)
+	(role abstract))
+
+(defclass Patient_Observations
+	(is-a Diagnostic_Class)
+	(role abstract))
+
+(defclass Findings "This heading is meant for signs and symptoms"
+	(is-a Patient_Observations)
+	(role abstract))
+
+(defclass Vital_Signs
+	(is-a Patient_Observations)
+	(role abstract))
+
+(defclass Laboratory_Tests
+	(is-a Patient_Observations)
+	(role abstract))
+
+(defclass Diagnostic_Procedures_Class
+	(is-a Diagnostic_Class)
+	(role abstract))
+
+(defclass Role
+	(is-a Medical_Domain_Class)
+	(role abstract))
+
+(defclass Value_Type
+	(is-a Medical_Domain_Class)
+	(role abstract))
+
+(defclass Mood
+	(is-a Value_Type)
+	(role abstract))
+
+(defclass Medication_Mood
+	(is-a Mood)
+	(role abstract))
+
+(defclass Recommend_Decrease
+	(is-a Medication_Mood)
+	(role abstract))
+
+(defclass Recommend_Delete
+	(is-a Medication_Mood)
+	(role abstract))
+
+(defclass Recommend_Increase
+	(is-a Medication_Mood)
+	(role abstract))
+
+(defclass Blocked_Increase
+	(is-a Medication_Mood)
+	(role abstract))
+
+(defclass Blocked_Add
+	(is-a Medication_Mood)
+	(role concrete))
+
+(defclass Procedure_Mood
+	(is-a Mood)
+	(role concrete))
+
+(defclass Actual
+	(is-a Medication_Mood Procedure_Mood)
+	(role abstract))
+
+(defclass Authorized
+	(is-a Medication_Mood Procedure_Mood)
+	(role abstract))
+
+(defclass Recommend_Add
+	(is-a Medication_Mood Procedure_Mood)
+	(role abstract))
+
+(defclass Clinic
+	(is-a Value_Type)
+	(role concrete))
+
+(defclass Encounter_Type
+	(is-a Value_Type)
+	(role concrete))
+
+(defclass Inpatient_Encounter
+	(is-a Encounter_Type)
+	(role concrete))
+
+(defclass Outpatient_Encounter
+	(is-a Encounter_Type)
+	(role concrete))
+
+(defclass Telephone_Encounter
+	(is-a Encounter_Type)
+	(role concrete))
+
+(defclass Message_Type
+	(is-a Value_Type)
+	(role abstract))
+
+(defclass Assumption
+	(is-a Message_Type)
+	(role abstract))
+
+(defclass Recommendation
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Primary_Recommendation
+	(is-a Message_Type)
+	(role abstract))
+
+(defclass Follow_Up
+	(is-a Message_Type)
+	(role concrete))
+
+(defclass Drug_Dose_Level
+	(is-a Value_Type)
+	(role abstract))
+
+(defclass Three_Levels_Dosing
+	(is-a Drug_Dose_Level)
+	(role abstract))
+
+(defclass High_Dose
+	(is-a Three_Levels_Dosing)
+	(role abstract))
+
+(defclass Medium_Dose
+	(is-a Three_Levels_Dosing)
+	(role abstract))
+
+(defclass Low_Dose
+	(is-a Three_Levels_Dosing)
+	(role abstract))
+
+(defclass Two_Levels_Dosing
+	(is-a Drug_Dose_Level)
+	(role concrete))
+
+(defclass High_Dose%28high%2Flow%29
+	(is-a Two_Levels_Dosing)
+	(role concrete))
+
+(defclass Low_Dose%28high%2Flow%29
+	(is-a Two_Levels_Dosing)
+	(role concrete))
+
+(defclass Recommendation_Attribute
+	(is-a Value_Type)
+	(role abstract))
+
+(defclass Strength_Of_Recommendation
+	(is-a Recommendation_Attribute)
+	(role abstract))
+
+(defclass Overall_Quality_Of_Evidence
+	(is-a Recommendation_Attribute)
+	(role abstract))
+
+(defclass Net_Benefit
+	(is-a Recommendation_Attribute)
+	(role abstract))
+
+(defclass Level_Of_Evidence
+	(is-a Recommendation_Attribute)
+	(role abstract))
+
+(defclass Auxiliary_Entity
+	(is-a USER)
+	(role abstract)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+		(create-accessor read-write)))
+
+(defclass Filter
+	(is-a Auxiliary_Entity)
+	(role abstract)
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass N_aryFilter "WhereFilter allows the specification of conjunction (AND) or disjunction (OR) of filters"
+	(is-a Filter)
+	(role concrete)
+	(multislot filters
+		(type INSTANCE)
+;+		(allowed-classes Filter)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values AND OR NOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Comparison_Filter
+	(is-a Filter)
+	(role concrete)
+	(single-slot attribute
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot value_expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3C %3C%3D %3D %3E %3E%3D eq neq member_of subclass_of superclass_of intersect)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Predicate_Filter "An instance i passes a PredicateFilter if some or all of the values of attribute satisfies the predicate (e.g., if attriubute = absolute contraindication, predicate = derivable, quantifier = exists, then some of the absolute contraindications must be derivable: \n\n(exists ?i (and (absolute_contraindication ?i ?contra)(derivable ?i)))"
+	(is-a Filter)
+	(role concrete)
+	(single-slot attribute
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot predicate
+		(type SYMBOL)
+		(allowed-values derivable)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot quantifier
+		(type SYMBOL)
+		(allowed-values exists forall)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Join_Filter
+	(is-a Filter)
+	(role concrete)
+	(multislot attribute_comparisons
+		(type INSTANCE)
+;+		(allowed-classes Attributes_Comparison)
+		(create-accessor read-write))
+	(single-slot query
+		(type INSTANCE)
+;+		(allowed-classes Query)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Variable_ValueSet
+	(is-a Auxiliary_Entity)
+	(role concrete)
+	(multislot %3ADOCUMENTATION
+		(type STRING)
+;+		(value "Instances of this class are used to extract multiple property values from a set of instances returned from an evaluated deriviation expression. The property values to get are pairs of strings (e.g., ?dailydose) and slots (e.g., daily_dose slot) that extract the slot value and bind the value to the string names.")
+		(create-accessor read-write))
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot property_values_to_get
+		(type INSTANCE)
+;+		(allowed-classes Property_Value)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot derivation_expression
+		(type INSTANCE)
+;+		(allowed-classes Expression)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Property_Value
+	(is-a Auxiliary_Entity)
+	(role concrete)
+	(single-slot string_name
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot slot
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Attributes_Comparison
+	(is-a Auxiliary_Entity)
+	(role concrete)
+	(single-slot attribute
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot operator
+		(type SYMBOL)
+		(allowed-values %3C %3C%3D %3D %3E %3E%3D eq neq member_of subclass_of not_subclass_of not_member_of)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot attribute_to_compare
+		(type INSTANCE)
+;+		(allowed-classes %3ASTANDARD-SLOT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Guideline_Model_Entity
+	(is-a USER)
+	(role concrete)
+	(single-slot label
+;+		(comment "Short descriptive string that names the concept represented by the instance")
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Shared_documentation
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))

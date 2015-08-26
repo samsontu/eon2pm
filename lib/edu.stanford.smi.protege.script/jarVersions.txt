@@ -1,0 +1,5 @@
+bsfperl:	0.2
+bsh:		2.0b4 (beta but stable according to website)
+groovy:		1.5.6 (2008-07-30	groovy-1.5.6.jar antlr-2.7.6.jar asm-2.2.jar asm-analysis-2.2.jar asm-tree-2.2.jar asm-util-2.2.jar bsf-2.4.0.jar
+jruby:		1.1.3 (2008-07-30)	jruby.jar bsf.jar profile.jar?
+jython:		2.2.1 (2008-07-30)	jython.jar

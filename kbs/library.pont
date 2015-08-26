@@ -1,0 +1,4436 @@
+; Tue Jul 21 13:47:03 PDT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot %3ADEFINITION-NAME
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3AKB-SAVE
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default FALSE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-FILE
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ASTARTUP-EXPRESSION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot %3ADEFINITION
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot _REFERENCES
+		(type INTEGER)
+;+		(cardinality 0 1)
+;+		(associated-facet _REFERENCES_FACET)
+		(create-accessor read-write)))
+
+(defclass _DUMMY-FRAMES-METACLASS
+	(is-a %3ASTANDARD-CLASS)
+	(role concrete)
+	(single-slot _REFERENCES
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass _DUMMY-FRAMES-METASLOT
+	(is-a %3ASTANDARD-SLOT)
+	(role concrete)
+	(single-slot _REFERENCES
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass _DUMMY-FRAMES-METAFACET
+	(is-a %3ASTANDARD-FACET)
+	(role concrete)
+	(single-slot _REFERENCES
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass HeartFailureClass
+	(is-a Deprecated)
+	(role concrete))
+
+(defclass PND
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass DOE
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass at+risk+for+developing+HF
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass contemporary+guidelines
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass secondary+prevention+of+atherosclerotic+vascular+disease
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass renal+function
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass glycemic+control
+	(is-a HeartFailureClass)
+	(role concrete))
+
+(defclass Patient+and+family+foot+education
+	(is-a Education)
+	(role concrete))
+
+(defclass Blood_Glucose_Regulation_Agent
+	(is-a Medications_Class)
+	(role abstract))
+
+(defclass Injectable_hypoglycemic_agent_not_insulin
+	(is-a Blood_Glucose_Regulation_Agent)
+	(role concrete))
+
+(defclass Insulin_Adjunctive_Therapy
+	(is-a Injectable_hypoglycemic_agent_not_insulin)
+	(role concrete))
+
+(defclass Pramlintide
+	(is-a Insulin_Adjunctive_Therapy)
+	(role concrete))
+
+(defclass Non_Insulin_Related_Glucose_Reg_Agents
+	(is-a Blood_Glucose_Regulation_Agent)
+	(role concrete))
+
+(defclass Oral_Hypoglycemic_Agent
+	(is-a Blood_Glucose_Regulation_Agent Non_Insulin_Related_Glucose_Reg_Agents)
+	(role abstract))
+
+(defclass SULFONYLUREAS
+	(is-a Oral_Hypoglycemic_Agent)
+	(role concrete))
+
+(defclass SULFONYLUREAS_1STGEN
+	(is-a SULFONYLUREAS)
+	(role concrete))
+
+(defclass CHLORPROPAMIDE
+	(is-a SULFONYLUREAS_1STGEN)
+	(role concrete))
+
+(defclass TOLAZAMIDE
+	(is-a SULFONYLUREAS_1STGEN)
+	(role concrete))
+
+(defclass TOLBUTAMIDE
+	(is-a SULFONYLUREAS_1STGEN)
+	(role concrete))
+
+(defclass ACETOHEXAMIDE
+	(is-a SULFONYLUREAS_1STGEN)
+	(role concrete))
+
+(defclass Glibenclamide
+	(is-a SULFONYLUREAS_1STGEN)
+	(role concrete))
+
+(defclass SULFONYLUREAS_2NDGEN
+	(is-a SULFONYLUREAS)
+	(role concrete))
+
+(defclass GLIPIZIDE
+	(is-a SULFONYLUREAS_2NDGEN)
+	(role concrete))
+
+(defclass GLIMEPIRIDE
+	(is-a SULFONYLUREAS_2NDGEN)
+	(role concrete))
+
+(defclass GLIPIZIDE_XL
+	(is-a SULFONYLUREAS_2NDGEN)
+	(role concrete))
+
+(defclass SGLT2_Inhibitor
+	(is-a Oral_Hypoglycemic_Agent)
+	(role concrete))
+
+(defclass Canagliflozin
+	(is-a SGLT2_Inhibitor)
+	(role concrete))
+
+(defclass Empagliflozin
+	(is-a SGLT2_Inhibitor)
+	(role concrete))
+
+(defclass digitalis
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass nitrate
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass hormonal+therapy
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Anti-Hypertensive_Drugs_Inclusive
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Antihypertensive_Agents
+	(is-a Anti-Hypertensive_Drugs_Inclusive)
+	(role abstract))
+
+(defclass Potassium-Sparing_Diuretics
+	(is-a Antihypertensive_Agents)
+	(role abstract))
+
+(defclass amiloride
+	(is-a Potassium-Sparing_Diuretics)
+	(role abstract))
+
+(defclass triamterene
+	(is-a Potassium-Sparing_Diuretics)
+	(role abstract))
+
+(defclass Alpha_beta_blockers "postural hypotension, bronchospasm"
+	(is-a Antihypertensive_Agents)
+	(role concrete))
+
+(defclass Adrenergic_inhibitors_central "Central alpha-agonists: clinidine, guanabenz, guanfacine, methldopa\nalso called \"central alpha-agonists\""
+	(is-a Antihypertensive_Agents)
+	(role concrete))
+
+(defclass clonidine "sedation, dry mouth, bradycardia, withdrawal hypertension\nmore withrdawal"
+	(is-a Adrenergic_inhibitors_central)
+	(role concrete))
+
+(defclass guanabenz "sedation, dry mouth, bradycardia, withdrawal hypertension"
+	(is-a Adrenergic_inhibitors_central)
+	(role concrete))
+
+(defclass guanfacine "sedation, dry mouth, bradycardia, withdrawal hypertension\nless withdrawal"
+	(is-a Adrenergic_inhibitors_central)
+	(role concrete))
+
+(defclass methyldopa "sedation, dry mouth, bradycardia, withdrawal hypertension\nhepatic and autoimmune disorders"
+	(is-a Adrenergic_inhibitors_central)
+	(role concrete))
+
+(defclass methyldopa_SA
+	(is-a Adrenergic_inhibitors_central)
+	(role concrete))
+
+(defclass Adrenergic_inhibitors_peripheral "guanadrel, guanethidine, reserpine"
+	(is-a Antihypertensive_Agents)
+	(role concrete))
+
+(defclass reserpine "nasal congestion, sedation, depression, activation of peptic ulcer"
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass alseroxylon
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass cryptenamine
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass deserpidine
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass guanadrel "postural hypotension, diarrhea"
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass guanethidine "postural Hypotension, diarrhea"
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass rauwolfia+serpentina
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass rauwolfia
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass rescinnamine
+	(is-a Adrenergic_inhibitors_peripheral)
+	(role concrete))
+
+(defclass Alpha_blockers
+	(is-a Antihypertensive_Agents)
+	(role concrete))
+
+(defclass doxazosin "postural hypotension"
+	(is-a Alpha_blockers)
+	(role concrete))
+
+(defclass prazosin "postural hypotension"
+	(is-a Alpha_blockers)
+	(role concrete))
+
+(defclass terazosin "postural hypotension"
+	(is-a Alpha_blockers)
+	(role concrete))
+
+(defclass Direct_vasodilators "headaches, fluid retention, tachycardia"
+	(is-a Antihypertensive_Agents)
+	(role concrete))
+
+(defclass hydralazine "class effect: headaches, fluid retention, tachycardia.\n\nlupus syndrome"
+	(is-a Direct_vasodilators)
+	(role concrete))
+
+(defclass minoxidil "class effect: headaches, fluid retention, tachycardia\n\nhirsutism"
+	(is-a Direct_vasodilators)
+	(role concrete))
+
+(defclass flosequinan
+	(is-a Direct_vasodilators)
+	(role concrete))
+
+(defclass Metoprolol_and_terazosin
+	(is-a Antihypertensive_Agents)
+	(role abstract))
+
+(defclass Metoprolol_and_felodopine
+	(is-a Antihypertensive_Agents)
+	(role abstract))
+
+(defclass Non-Cardiac_Drugs
+	(is-a Anti-Hypertensive_Drugs_Inclusive)
+	(role concrete))
+
+(defclass cylcosporine
+	(is-a Non-Cardiac_Drugs)
+	(role concrete))
+
+(defclass tamsulosin
+	(is-a Non-Cardiac_Drugs)
+	(role concrete))
+
+(defclass sotalol
+	(is-a Non-Cardiac_Drugs)
+	(role concrete))
+
+(defclass Diuretics
+	(is-a Anti-Hypertensive_Drugs_Inclusive Medications_Class)
+	(role concrete))
+
+(defclass Loop_diuretics "furosemide, bumetanide, ethacrynic acid, torsemide"
+	(is-a Diuretics)
+	(role concrete))
+
+(defclass bumetanide "short duration of action, no hypercalcemia"
+	(is-a Loop_diuretics)
+	(role concrete))
+
+(defclass ethacrynic_acid "only nonsulfonamide diuretic.  ototoxicity."
+	(is-a Loop_diuretics)
+	(role concrete))
+
+(defclass furosemide "short duration of action.  no hypercalcemia"
+	(is-a Loop_diuretics)
+	(role concrete))
+
+(defclass torsemide
+	(is-a Loop_diuretics)
+	(role concrete))
+
+(defclass JNC8_antihypertensives
+	(is-a Anti-Hypertensive_Drugs_Inclusive)
+	(role concrete))
+
+(defclass Calcium_channel_antagonists "class effects: conduction defects, worsening of systolic dysfunction, gingival hyperplasia"
+	(is-a Antihypertensive_Agents JNC8_antihypertensives)
+	(role concrete))
+
+(defclass Dihydropyridines "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Calcium_channel_antagonists)
+	(role concrete))
+
+(defclass amlodipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines)
+	(role concrete))
+
+(defclass amlodipine_besylate
+	(is-a amlodipine)
+	(role concrete))
+
+(defclass felodipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines)
+	(role concrete))
+
+(defclass felodipine_SA
+	(is-a felodipine)
+	(role concrete))
+
+(defclass nimodipine
+	(is-a Dihydropyridines)
+	(role concrete))
+
+(defclass Non-Dihydropyridines
+	(is-a Calcium_channel_antagonists)
+	(role concrete))
+
+(defclass bepridil
+	(is-a Non-Dihydropyridines)
+	(role concrete))
+
+(defclass Thiazide_Diuretics "per Table 7, JNC VI: short-term increases cholesterol and glucose.  biochemical: decreases potassium, sodium and magnesium levels, increases uric acid and calcium lelvels.  Rare: blood dyscarsias, photosens, pancreatitis, hyponatremia"
+	(is-a Antihypertensive_Agents Diuretics JNC8_antihypertensives)
+	(role concrete))
+
+(defclass bendroflumethiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass bendroflumethiazide_SA
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass benzthiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass chlorothiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass chlorthalidone
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass cyclothiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass hydrochlorothiazide "HCTZ"
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass hydroflumethiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass indapamide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass methyclothiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass metolazone
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass polythiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass quinethazone
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass trichlormethiazide
+	(is-a Thiazide_Diuretics)
+	(role concrete))
+
+(defclass cardiotoxic+interventions
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass antiarrhythmic+drugs
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass AM000_Antimicrobials
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass AM700_Antifungals
+	(is-a AM000_Antimicrobials)
+	(role concrete))
+
+(defclass AM800_Antivirals
+	(is-a AM000_Antimicrobials)
+	(role concrete))
+
+(defclass HIV_RT_inhibitors
+	(is-a AM800_Antivirals)
+	(role concrete))
+
+(defclass AM900_Anti_Infectives_Other
+	(is-a AM000_Antimicrobials)
+	(role concrete))
+
+(defclass trimethoprim
+	(is-a AM900_Anti_Infectives_Other)
+	(role concrete))
+
+(defclass CN000_Central_Nervous_System_Medications
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass CN609_Antidepressants_other
+	(is-a CN000_Central_Nervous_System_Medications)
+	(role concrete))
+
+(defclass CN400_Anticonvulsants
+	(is-a CN000_Central_Nervous_System_Medications)
+	(role concrete))
+
+(defclass CN700_Antipsychotic
+	(is-a CN000_Central_Nervous_System_Medications)
+	(role concrete))
+
+(defclass CN750_Lithium_Salts
+	(is-a CN700_Antipsychotic)
+	(role concrete))
+
+(defclass CN609_Antipsychotics_Other
+	(is-a CN700_Antipsychotic)
+	(role concrete))
+
+(defclass CN900_CNS_Medications_Other
+	(is-a CN000_Central_Nervous_System_Medications)
+	(role concrete))
+
+(defclass CN103_Non_Opioid_Analgesics
+	(is-a CN000_Central_Nervous_System_Medications)
+	(role concrete))
+
+(defclass Acetaminophen
+	(is-a CN103_Non_Opioid_Analgesics)
+	(role concrete))
+
+(defclass aspirin
+	(is-a CN103_Non_Opioid_Analgesics)
+	(role concrete))
+
+(defclass CV000_Cardiovascular_Medications
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass CV050_Digitalis_glycosides
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass CV200_Calcium_Channel_Blockers
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass CV300_Antiarrhythmics
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass amiodarone
+	(is-a Non-Cardiac_Drugs CV300_Antiarrhythmics)
+	(role concrete))
+
+(defclass CV350_AntiLipemic_Agents
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass Bile_Acid_Sequestrant
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass cholestyramine
+	(is-a Bile_Acid_Sequestrant)
+	(role concrete))
+
+(defclass colesevelam
+	(is-a Bile_Acid_Sequestrant)
+	(role concrete))
+
+(defclass colestipol
+	(is-a Bile_Acid_Sequestrant)
+	(role concrete))
+
+(defclass Fibric_Acid
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass clofibrate
+	(is-a Fibric_Acid)
+	(role concrete))
+
+(defclass Nicotinic_Acid
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass immediate_release_crystalline_nicotinic_acid
+	(is-a Nicotinic_Acid)
+	(role concrete))
+
+(defclass sustained_release_nicotinic_acid
+	(is-a Nicotinic_Acid)
+	(role concrete))
+
+(defclass Statin_withdrawn
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass cerivastatin
+	(is-a Statin_withdrawn)
+	(role concrete))
+
+(defclass Cholesterol_Absorption_Inhibitors
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass ezetimibe
+	(is-a Cholesterol_Absorption_Inhibitors)
+	(role concrete))
+
+(defclass Omega3_Polyunsaturate_Fatty_Acid
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass omega3_fatty_acid
+	(is-a Omega3_Polyunsaturate_Fatty_Acid)
+	(role concrete))
+
+(defclass Statins
+	(is-a CV350_AntiLipemic_Agents)
+	(role concrete))
+
+(defclass High_Intensity_Statins
+	(is-a Statins)
+	(role concrete))
+
+(defclass Moderate_Intensity_Statins
+	(is-a Statins)
+	(role concrete))
+
+(defclass fluvastatin_XL
+	(is-a Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass Pulmonary_htn_meds
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass Epoprostenol
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass Bosentan
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass Treprostinil
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass IIoprost
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass Riociguat
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass Ambrisentan
+	(is-a Pulmonary_htn_meds)
+	(role concrete))
+
+(defclass Peripheral_artery_disease_meds
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass Cilostazol
+	(is-a Peripheral_artery_disease_meds)
+	(role concrete))
+
+(defclass Clopidogrel
+	(is-a Peripheral_artery_disease_meds)
+	(role concrete))
+
+(defclass Isoxsuprine
+	(is-a Peripheral_artery_disease_meds)
+	(role concrete))
+
+(defclass Pentoxifylline
+	(is-a Peripheral_artery_disease_meds)
+	(role concrete))
+
+(defclass Positive_inotropic_vasopressor
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass Adrenaline
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Amrinone
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Digitoxin
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Dobutamine
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Dopamine
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Ephedrine_sulphate
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Epinephrine
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Inamrinone_lactate
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Milrinone
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Noradrenaline
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Norepinephrine
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Phenylephrine
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Vasopressin
+	(is-a Positive_inotropic_vasopressor)
+	(role concrete))
+
+(defclass Long_acting_nitrates
+	(is-a CV000_Cardiovascular_Medications)
+	(role concrete))
+
+(defclass Nitroglycerin
+	(is-a Long_acting_nitrates)
+	(role concrete))
+
+(defclass Isosorbide_mononitrate
+	(is-a Long_acting_nitrates)
+	(role concrete))
+
+(defclass Isosorbide_dinitrate
+	(is-a Long_acting_nitrates)
+	(role concrete))
+
+(defclass IM000_Immunological_Agents
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Cytochrome_P450_Inhibitors
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass CYP_3A4_Inhibitors
+	(is-a Cytochrome_P450_Inhibitors)
+	(role concrete))
+
+(defclass Azole_antifungals
+	(is-a AM700_Antifungals CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass fluconazole
+	(is-a Azole_antifungals)
+	(role concrete))
+
+(defclass ketoconazole
+	(is-a Azole_antifungals)
+	(role concrete))
+
+(defclass itraconazole
+	(is-a Azole_antifungals)
+	(role concrete))
+
+(defclass HIV_Protease_Inhibitors
+	(is-a AM800_Antivirals CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass saquinavir
+	(is-a HIV_Protease_Inhibitors)
+	(role concrete))
+
+(defclass delavirdine
+	(is-a HIV_RT_inhibitors CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass nefazodone
+	(is-a CN609_Antidepressants_other CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass grapefruit_juice
+	(is-a CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass IM600_Immmune_Suppressants
+	(is-a IM000_Immunological_Agents CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass cyclosporine
+	(is-a Medications_Class IM600_Immmune_Suppressants)
+	(role concrete))
+
+(defclass tacrolimus
+	(is-a Medications_Class IM600_Immmune_Suppressants)
+	(role concrete))
+
+(defclass Mycophenolate
+	(is-a IM600_Immmune_Suppressants)
+	(role concrete))
+
+(defclass CYP_2D6_Inhibitors
+	(is-a Cytochrome_P450_Inhibitors)
+	(role concrete))
+
+(defclass BL000_BloodProducts_Modifiers_VolumeExpanders
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass BL110_Anticoagulants
+	(is-a BL000_BloodProducts_Modifiers_VolumeExpanders)
+	(role concrete))
+
+(defclass HS000_Hormones_Synthetics_Modifiers
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass HS050_Adrenal_Corticosteroid
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass HS051_Glucocorticoids
+	(is-a HS050_Adrenal_Corticosteroid)
+	(role concrete))
+
+(defclass HS100_Androgens_Anabolics
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass HS300_Estrogens
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass HS800_Progestins
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass HS850_Thyroid_Modifiers
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass HS851_Thyroid_Supplements
+	(is-a HS850_Thyroid_Modifiers)
+	(role concrete))
+
+(defclass levothyroxine
+	(is-a HS851_Thyroid_Supplements)
+	(role concrete))
+
+(defclass HS900_Hormones_Synthetics_Modifiers_Other
+	(is-a HS000_Hormones_Synthetics_Modifiers)
+	(role concrete))
+
+(defclass alfuzosin_SA
+	(is-a HS900_Hormones_Synthetics_Modifiers_Other)
+	(role concrete))
+
+(defclass DE000_Dermatological_Agents
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass DE750_Antiacne_Agents
+	(is-a DE000_Dermatological_Agents)
+	(role concrete))
+
+(defclass Retinoids_for_Acne_systemic
+	(is-a DE750_Antiacne_Agents)
+	(role concrete))
+
+(defclass DE800_Antipsoriatic_Agents
+	(is-a DE000_Dermatological_Agents)
+	(role concrete))
+
+(defclass Retinoids_for_Psoriasis_systemic
+	(is-a DE800_Antipsoriatic_Agents)
+	(role concrete))
+
+(defclass Chemotherapy
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Vaccines
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Pneumococcus
+	(is-a Vaccines)
+	(role concrete))
+
+(defclass Influenza
+	(is-a Vaccines)
+	(role concrete))
+
+(defclass MS000_Musculoskeletal_Medications
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass MS400_Antigout_Agents
+	(is-a MS000_Musculoskeletal_Medications)
+	(role concrete))
+
+(defclass GU000_Genitourinary_Medications
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass GU900_Genitourinary_Agents_Other
+	(is-a GU000_Genitourinary_Medications)
+	(role concrete))
+
+(defclass GA000_Gastrointestinal_Medications
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass GA900_Gastric_Medications_Other
+	(is-a GA000_Gastrointestinal_Medications)
+	(role concrete))
+
+(defclass Omeprazole
+	(is-a GA900_Gastric_Medications_Other)
+	(role concrete))
+
+(defclass Nephrotoxic_drugs "Drugs to be used with cuation or avoided for CDK patients"
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass ACE_Inhibitors "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a Antihypertensive_Agents Nephrotoxic_drugs JNC8_antihypertensives)
+	(role abstract))
+
+(defclass captopril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass enalapril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass fosinopril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass fosinopril+NA
+	(is-a fosinopril)
+	(role abstract))
+
+(defclass lisinopril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass quinapril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass benazepril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass moexipril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass perindopril
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass ramipril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass trandolapril "class effects: common: cough.  rare: angioedema, hyperkalemia, rash, loss of taste, leukopenia."
+	(is-a ACE_Inhibitors)
+	(role abstract))
+
+(defclass Angiotensin_II_receptor_blockers "class effects: angiodema (very rare), hyperkalemia"
+	(is-a Antihypertensive_Agents Nephrotoxic_drugs JNC8_antihypertensives)
+	(role abstract))
+
+(defclass candesartan
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass azilsartan
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass irbesartan "class effects: angiodema (very rare), hyperkalemia"
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass losartan "class effects: angiodema (very rare), hyperkalemia"
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass telmisartan
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass valsartan "class effects: angiodema (very rare), hyperkalemia"
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass olmesartan
+	(is-a Angiotensin_II_receptor_blockers)
+	(role concrete))
+
+(defclass eprosartan
+	(is-a Angiotensin_II_receptor_blockers)
+	(role abstract))
+
+(defclass aldosterone+antagonist
+	(is-a Medications_Class Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass spironolactone
+	(is-a Potassium-Sparing_Diuretics aldosterone+antagonist)
+	(role abstract))
+
+(defclass eplerenone "added by SBM 050504"
+	(is-a Potassium-Sparing_Diuretics aldosterone+antagonist)
+	(role concrete))
+
+(defclass Aliskiren
+	(is-a Medications_Class Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Beta-Blockers "bronchospasm, bradycardia, ht failure.  may mask insuline-induced hypoglycemia.  less serious: impaired periph circ, insomnia, fatigue, decreased exercise tolerance, hypertriglyceridemia (except agents with ISA).  NOTE: need to finish list and categorization"
+	(is-a Antihypertensive_Agents Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Beta-Blockers-Cardioselective
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass metoprolol
+	(is-a Beta-Blockers-Cardioselective)
+	(role concrete))
+
+(defclass metoprolol_SA
+	(is-a metoprolol)
+	(role concrete))
+
+(defclass metoprolol_notSA
+	(is-a metoprolol)
+	(role concrete))
+
+(defclass beta-blockers-ISA
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass Beta-Blockers-non-cardioselective
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass Beta_Blocker+Stage+C+Heart+Failure
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass Beta+blocker+stage+B+post+MI
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass carvedilol "NOTE; need specific info on use in heart failure\n\nclass effects: postural hypotension, bronchospasm"
+	(is-a Alpha_beta_blockers Beta-Blockers Beta_Blocker+Stage+C+Heart+Failure Beta+blocker+stage+B+post+MI)
+	(role concrete))
+
+(defclass Beta+Blocker+Stage+B+no+MI
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass bisoprolol
+	(is-a Beta-Blockers-Cardioselective Beta_Blocker+Stage+C+Heart+Failure Beta+Blocker+Stage+B+no+MI)
+	(role concrete))
+
+(defclass sustained+release+metoprolol+succinate
+	(is-a Beta_Blocker+Stage+C+Heart+Failure Beta+Blocker+Stage+B+no+MI metoprolol_SA)
+	(role concrete))
+
+(defclass Beta_blocker_not_StageC_HF
+	(is-a Beta-Blockers)
+	(role concrete))
+
+(defclass acebutolol
+	(is-a Beta-Blockers-Cardioselective Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass betaxolol
+	(is-a Beta-Blockers-Cardioselective Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass carteolol
+	(is-a Beta-Blockers-non-cardioselective Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass labetalol "postural hypotension, bronchospasm"
+	(is-a Alpha_beta_blockers Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass nadolol
+	(is-a Beta-Blockers-non-cardioselective Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass penbutolol
+	(is-a Beta-Blockers-non-cardioselective Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass pindolol
+	(is-a beta-blockers-ISA Beta+Blocker+Stage+B+no+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass atenolol
+	(is-a Beta-Blockers-Cardioselective Beta+blocker+stage+B+post+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass propranolol
+	(is-a Beta-Blockers-non-cardioselective Beta+blocker+stage+B+post+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass propranolol_SA
+	(is-a Beta-Blockers-non-cardioselective Beta+blocker+stage+B+post+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass timolol
+	(is-a Beta-Blockers-non-cardioselective Beta+blocker+stage+B+post+MI Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass sustained+release+metoprolol+tartrate
+	(is-a Beta+blocker+stage+B+post+MI metoprolol_SA Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass metoprolol_tartrate
+	(is-a metoprolol_notSA Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass metoprolol_succinate
+	(is-a metoprolol_notSA Beta_blocker_not_StageC_HF)
+	(role concrete))
+
+(defclass digoxin
+	(is-a Medications_Class CV050_Digitalis_glycosides Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass CN101_Opioid_Analgesics
+	(is-a CN000_Central_Nervous_System_Medications Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Penicillins
+	(is-a AM000_Antimicrobials Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass AM110_PenicillinG_Related_Penicillins
+	(is-a Penicillins)
+	(role concrete))
+
+(defclass AM111_Penicillins_Amino_Derivatives
+	(is-a Penicillins)
+	(role concrete))
+
+(defclass AM112_Penicillinase_Resistant__Penicillins
+	(is-a Penicillins)
+	(role concrete))
+
+(defclass AM113_Extended_Spectrum_Penicillins
+	(is-a Penicillins)
+	(role concrete))
+
+(defclass AM300_Aminoglycosides
+	(is-a AM000_Antimicrobials Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass AM200_Erythromycin_Macrolides
+	(is-a AM000_Antimicrobials Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass clarithromycin
+	(is-a AM200_Erythromycin_Macrolides CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass erythromycin
+	(is-a AM200_Erythromycin_Macrolides CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass AM400_Quinolones
+	(is-a AM000_Antimicrobials Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass AM250_Tetracyclines
+	(is-a AM000_Antimicrobials Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass amphotericin_b
+	(is-a AM700_Antifungals Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass GLYBURIDE
+	(is-a SULFONYLUREAS_2NDGEN Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Insulin
+	(is-a Blood_Glucose_Regulation_Agent Nephrotoxic_drugs)
+	(role abstract))
+
+(defclass Nph_Insulin
+	(is-a Insulin)
+	(role concrete))
+
+(defclass BIGUANIDE
+	(is-a Oral_Hypoglycemic_Agent Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass METFORMIN
+	(is-a BIGUANIDE)
+	(role concrete))
+
+(defclass METFORMIN_ER
+	(is-a BIGUANIDE)
+	(role concrete))
+
+(defclass ALPHA-GLUCOSIDASE_INHIBITORS
+	(is-a Oral_Hypoglycemic_Agent Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass ACARBOSE
+	(is-a ALPHA-GLUCOSIDASE_INHIBITORS)
+	(role concrete))
+
+(defclass MIGLITOL "not in VA formulary"
+	(is-a ALPHA-GLUCOSIDASE_INHIBITORS)
+	(role concrete))
+
+(defclass Glucagon_like_peptide_1_agonist
+	(is-a Injectable_hypoglycemic_agent_not_insulin Nephrotoxic_drugs Non_Insulin_Related_Glucose_Reg_Agents)
+	(role concrete))
+
+(defclass Exenatide
+	(is-a Glucagon_like_peptide_1_agonist)
+	(role concrete))
+
+(defclass Liraglutide
+	(is-a Glucagon_like_peptide_1_agonist)
+	(role concrete))
+
+(defclass Dulaglutide
+	(is-a Glucagon_like_peptide_1_agonist)
+	(role concrete))
+
+(defclass DIPEPTIDYL_PEPTIDASE-4_INHIBITOR
+	(is-a Oral_Hypoglycemic_Agent Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass SITAGLIPTIN
+	(is-a DIPEPTIDYL_PEPTIDASE-4_INHIBITOR)
+	(role concrete))
+
+(defclass Saxagliptin
+	(is-a DIPEPTIDYL_PEPTIDASE-4_INHIBITOR)
+	(role concrete))
+
+(defclass Linagliptin
+	(is-a DIPEPTIDYL_PEPTIDASE-4_INHIBITOR)
+	(role concrete))
+
+(defclass Vildagliptin
+	(is-a DIPEPTIDYL_PEPTIDASE-4_INHIBITOR)
+	(role concrete))
+
+(defclass Alogliptin
+	(is-a DIPEPTIDYL_PEPTIDASE-4_INHIBITOR)
+	(role concrete))
+
+(defclass MEGLITINIDES
+	(is-a Oral_Hypoglycemic_Agent Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass REPAGLINIDE
+	(is-a MEGLITINIDES)
+	(role concrete))
+
+(defclass NATEGLINIDE
+	(is-a MEGLITINIDES)
+	(role concrete))
+
+(defclass Statin_Metabolized_by_CYP3A4
+	(is-a Nephrotoxic_drugs Statins)
+	(role concrete))
+
+(defclass atorvastatin
+	(is-a Statin_Metabolized_by_CYP3A4 High_Intensity_Statins)
+	(role concrete))
+
+(defclass lovastatin
+	(is-a Statin_Metabolized_by_CYP3A4 Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass simvastatin
+	(is-a Statin_Metabolized_by_CYP3A4 Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass Statin_Not_Metabolized_by_CYP3A4
+	(is-a Nephrotoxic_drugs Statins)
+	(role concrete))
+
+(defclass pravastatin
+	(is-a Statin_Not_Metabolized_by_CYP3A4 Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass rosuvastatin "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=bb0f3b5e-4bc6-41c9-66b9-6257e2513512"
+	(is-a Statin_Not_Metabolized_by_CYP3A4 High_Intensity_Statins)
+	(role concrete))
+
+(defclass fluvastatin "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=aad8b373-0aec-4efb-8e61-3d8114b31127#nlm34070-3\n75% 2C9; 5% 2C8; 20% 3A4"
+	(is-a Statin_Not_Metabolized_by_CYP3A4 Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass pitavastatin "http://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b3c41a2f-da77-4465-8af6-038006a7ea58"
+	(is-a Statin_Not_Metabolized_by_CYP3A4 Moderate_Intensity_Statins)
+	(role concrete))
+
+(defclass fenofibrate
+	(is-a Fibric_Acid Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass gemfibrozil
+	(is-a Fibric_Acid Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass AN000_Antineoplastics "class created for CKD;\nentire class is now in nephrotoxic drugs; may need to be removed from nephrotoxic drugs if other drugs added that do not have CKD toxicity/dose adjustment"
+	(is-a Medications_Class Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass AN900_Antineoplastics_Other
+	(is-a AN000_Antineoplastics)
+	(role concrete))
+
+(defclass cisplatin
+	(is-a AN900_Antineoplastics_Other)
+	(role concrete))
+
+(defclass carboplatin
+	(is-a AN900_Antineoplastics_Other)
+	(role concrete))
+
+(defclass oxaliplatin
+	(is-a AN900_Antineoplastics_Other)
+	(role concrete))
+
+(defclass AN300_Antineoplastics_Antimetabolites
+	(is-a AN000_Antineoplastics)
+	(role concrete))
+
+(defclass methotrexate
+	(is-a AN300_Antineoplastics_Antimetabolites)
+	(role concrete))
+
+(defclass AN100_Antineoplastics_Alkylating_Agents
+	(is-a AN000_Antineoplastics)
+	(role concrete))
+
+(defclass melphalan
+	(is-a AN100_Antineoplastics_Alkylating_Agents)
+	(role concrete))
+
+(defclass warfarin
+	(is-a BL110_Anticoagulants Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass heparin
+	(is-a BL110_Anticoagulants Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass lithium
+	(is-a CN750_Lithium_Salts Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass allopurinol
+	(is-a MS400_Antigout_Agents Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Nucleoside_Nucleotide_Analogs
+	(is-a AM700_Antifungals Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass aciclovir
+	(is-a Nucleoside_Nucleotide_Analogs)
+	(role concrete))
+
+(defclass ganciclovir
+	(is-a Nucleoside_Nucleotide_Analogs)
+	(role concrete))
+
+(defclass valganciclovir
+	(is-a Nucleoside_Nucleotide_Analogs)
+	(role concrete))
+
+(defclass adefovir
+	(is-a Nucleoside_Nucleotide_Analogs)
+	(role concrete))
+
+(defclass entecavir
+	(is-a Nucleoside_Nucleotide_Analogs)
+	(role concrete))
+
+(defclass Bisphosphonates
+	(is-a HS900_Hormones_Synthetics_Modifiers_Other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass PDE5_Inhibitors
+	(is-a GU900_Genitourinary_Agents_Other CYP_3A4_Inhibitors Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass sildenafil
+	(is-a PDE5_Inhibitors)
+	(role concrete))
+
+(defclass tadalafil
+	(is-a PDE5_Inhibitors)
+	(role concrete))
+
+(defclass vardenafil
+	(is-a PDE5_Inhibitors)
+	(role concrete))
+
+(defclass GA301_Histamine_H2_Antagonist
+	(is-a GA000_Gastrointestinal_Medications Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass cimetidine
+	(is-a GA301_Histamine_H2_Antagonist)
+	(role concrete))
+
+(defclass famotidine
+	(is-a GA301_Histamine_H2_Antagonist)
+	(role concrete))
+
+(defclass nizatidine
+	(is-a GA301_Histamine_H2_Antagonist)
+	(role concrete))
+
+(defclass ranitidine
+	(is-a GA301_Histamine_H2_Antagonist)
+	(role concrete))
+
+(defclass gabapentin
+	(is-a CN400_Anticonvulsants Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass levetiracetam
+	(is-a CN400_Anticonvulsants Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass paroxetine
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass citalopram
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass duloxetine
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass venlafaxine
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass desvenlafaxine
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass bupropion
+	(is-a CN609_Antidepressants_other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass risperidone
+	(is-a CN609_Antipsychotics_Other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass paliperidone
+	(is-a CN609_Antipsychotics_Other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass memantine
+	(is-a CN900_CNS_Medications_Other Nephrotoxic_drugs)
+	(role concrete))
+
+(defclass Harmful_to_HF
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass calcium+channel+blockers+with+negative+inotropic+effects
+	(is-a Medications_Class Harmful_to_HF)
+	(role concrete))
+
+(defclass nifedipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects)
+	(role concrete))
+
+(defclass nifedipine_SA
+	(is-a nifedipine)
+	(role concrete))
+
+(defclass nisoldipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects)
+	(role concrete))
+
+(defclass nisoldipine_SA
+	(is-a nisoldipine)
+	(role concrete))
+
+(defclass nicardipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects)
+	(role concrete))
+
+(defclass nicardipine_SA
+	(is-a nicardipine)
+	(role concrete))
+
+(defclass isradipine "class effect: edema of the ankle, flushing, headache, gingival hypertrophy"
+	(is-a Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects)
+	(role concrete))
+
+(defclass isradipine_SA
+	(is-a isradipine)
+	(role concrete))
+
+(defclass diltiazem "nausea, headache\n\nclass effects: conduction defects, worsening of systolic dysfunction, gingival hyperplasia"
+	(is-a Non-Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects CV200_Calcium_Channel_Blockers CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass diltiazem_SA
+	(is-a diltiazem)
+	(role concrete))
+
+(defclass verapamil "class effects: conduction defects, worsening of systolic dysfunction, gingival hyperplasia\n\nconstipation"
+	(is-a Non-Dihydropyridines calcium+channel+blockers+with+negative+inotropic+effects CV200_Calcium_Channel_Blockers CYP_3A4_Inhibitors)
+	(role concrete))
+
+(defclass verapamil_SA
+	(is-a verapamil)
+	(role concrete))
+
+(defclass THIAZOLIDINEDIONES
+	(is-a Oral_Hypoglycemic_Agent Harmful_to_HF)
+	(role concrete))
+
+(defclass ROSIGLITAZONE
+	(is-a THIAZOLIDINEDIONES)
+	(role concrete))
+
+(defclass PIOGLITAZONE
+	(is-a THIAZOLIDINEDIONES)
+	(role concrete))
+
+(defclass Dronedarone
+	(is-a Harmful_to_HF)
+	(role concrete))
+
+(defclass nonsteroidal+anti-inflammatory+drugs
+	(is-a Medications_Class Nephrotoxic_drugs Harmful_to_HF)
+	(role concrete))
+
+(defclass Aceclofenac "micromedex"
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Acemetacin "micromedex"
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Azapropazone "micromedex"
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Benoxaprofen "micromedex"
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Bromfenac "micromedex"
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Naproxen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Ibuprofen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Celecoxib
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Diclofenac
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Diflunisal
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Etodolac
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Fenoprofen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Flurbiprofen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Indomethacin
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Ketoprofen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Ketorolac_Tromethamine
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Meclofenamate
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Mefenamic_Acid
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Meloxicam
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Nabumetone
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Oxaprozin
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Oxyphenbutazone
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Phenylbutazone
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Piroxicam
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Rofecoxib
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Sulindac
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Suprofen
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Tolmetin
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Valdecoxib
+	(is-a nonsteroidal+anti-inflammatory+drugs)
+	(role concrete))
+
+(defclass Sulfa_drugs_noSU "AKA sulfonamides; class created for patients with \"sulfa allergy\"; list in mapping table"
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Autonomic_Agents_Other_AU900
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Dopamine_agonist
+	(is-a Autonomic_Agents_Other_AU900)
+	(role concrete))
+
+(defclass Bromocriptine
+	(is-a Dopamine_agonist)
+	(role concrete))
+
+(defclass Statin_interacting_drugs
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass UGT_Inducers
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Gymnema
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass Fosphenytoin
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass Phenobarbital
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass Phenytoin
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass Primidone
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass Rifampin
+	(is-a UGT_Inducers)
+	(role concrete))
+
+(defclass ritonavir
+	(is-a HIV_Protease_Inhibitors UGT_Inducers)
+	(role concrete))
+
+(defclass insulin_syringe
+	(is-a Medications_Class)
+	(role concrete))
+
+(defclass Eye+procedures
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass dilated+eye+exam
+	(is-a Eye+procedures)
+	(role concrete))
+
+(defclass comprehensive+eye+exam
+	(is-a Eye+procedures)
+	(role concrete))
+
+(defclass Foot+procedures "Exams related to foot procedures"
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass Foot+risk+assessment
+	(is-a Foot+procedures)
+	(role concrete))
+
+(defclass patient%E2%80%99s+footwear
+	(is-a Foot+procedures)
+	(role concrete))
+
+(defclass lower+extremity+amputation+related+to+DM
+	(is-a Foot+procedures)
+	(role concrete))
+
+(defclass Cardiac+procedures
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass Implantable_cardioverter_defibrillator
+	(is-a Cardiac+procedures)
+	(role concrete))
+
+(defclass Cardiac_resynchronization_therapy
+	(is-a Cardiac+procedures)
+	(role concrete))
+
+(defclass Cardiac_valve_surgery
+	(is-a Cardiac+procedures)
+	(role concrete))
+
+(defclass Left_ventricular_assistive_device
+	(is-a Cardiac+procedures)
+	(role concrete))
+
+(defclass Off_Guideline
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass Radiation_therapy
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass Dialysis
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass Hemodialysis
+	(is-a Dialysis)
+	(role concrete))
+
+(defclass Medications
+	(is-a Therapeutic_Procedure)
+	(role concrete))
+
+(defclass ACE_OR_ARB "ACA/AHA/AMA 2010 Measure 7"
+	(is-a Medications)
+	(role concrete))
+
+(defclass nutritional+supplements
+	(is-a Therapeutic_Class)
+	(role concrete))
+
+(defclass Potassium_Supplements
+	(is-a nutritional+supplements)
+	(role concrete))
+
+(defclass Vitamin_B12
+	(is-a nutritional+supplements)
+	(role concrete))
+
+(defclass Vitamin_D
+	(is-a nutritional+supplements)
+	(role concrete))
+
+(defclass Syndrome
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Idiopathic+Hypertrophic+Subaortic+Stenosis
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass OrganTransplant
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass TRANSPLANT002
+	(is-a OrganTransplant Cardiac+procedures)
+	(role concrete))
+
+(defclass TRANSPLANT003
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT004
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT005
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT006
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT008
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT009
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT001
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass TRANSPLANT007
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass heart_transplant_CPT
+	(is-a OrganTransplant)
+	(role concrete))
+
+(defclass DM_Dashboard_definig_diseases
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass Glycosuria
+	(is-a DM_Dashboard_definig_diseases)
+	(role concrete))
+
+(defclass Acetonuria
+	(is-a DM_Dashboard_definig_diseases)
+	(role concrete))
+
+(defclass Acute_Coronary_Syndrome "4/2/13 CO For Lipid KB"
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass CKD+by+eGFR+or+ICD9+codes
+	(is-a Syndrome)
+	(role concrete))
+
+(defclass CCS-13
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-13.6
+	(is-a CCS-13)
+	(role concrete))
+
+(defclass CCS-13.6.1
+	(is-a CCS-13.6)
+	(role concrete))
+
+(defclass Foot+deformities "(defined as hammer toes, claw toe, Charcot’s arthropathy, bunions, metatarsal head deformities)"
+	(is-a CCS-13.6.1)
+	(role concrete))
+
+(defclass hammer+toes
+	(is-a Foot+deformities)
+	(role concrete))
+
+(defclass claw+toe
+	(is-a Foot+deformities)
+	(role concrete))
+
+(defclass Charcot%E2%80%99s+arthropathy
+	(is-a Foot+deformities)
+	(role concrete))
+
+(defclass bunions
+	(is-a Foot+deformities)
+	(role concrete))
+
+(defclass metatarsal+head+deformities
+	(is-a Foot+deformities)
+	(role concrete))
+
+(defclass Osteoporosis "Thiazide diuretics and the risk for hip fracture.\nAnn Intern Med. 2003 Sep 16;139(6):476-82. \nPMID: 13679324 [PubMed - indexed for MEDLINE]"
+	(is-a CCS-13)
+	(role concrete))
+
+(defclass Disorders+of+muscle%2C+ligament+and+fascia
+	(is-a CCS-13)
+	(role concrete))
+
+(defclass Rhabdomyolysis "http://icd9cm.chrisendres.com/index.php?action=child&recordid=7125"
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Muscle+weakness+%28generalized%29 "http://icd9cm.chrisendres.com/index.php?action=child&recordid=7125"
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Myopathy
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Myalgia
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Drug_induced_myopathy
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Muscle_pain
+	(is-a Disorders+of+muscle%2C+ligament+and+fascia)
+	(role concrete))
+
+(defclass Osteoarthritis
+	(is-a CCS-13)
+	(role concrete))
+
+(defclass CCS-12
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-12.3
+	(is-a CCS-12)
+	(role concrete))
+
+(defclass Hemorrhagic+Callus+With+or+Without+Cellulitis
+	(is-a CCS-12)
+	(role concrete))
+
+(defclass Stevens_Johnson_Syndrome
+	(is-a CCS-12)
+	(role concrete))
+
+(defclass CCS-10
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-10.1
+	(is-a CCS-10)
+	(role concrete))
+
+(defclass CCS-10.1.3
+	(is-a CCS-10.1)
+	(role concrete))
+
+(defclass Renal-Urinary_Diseases
+	(is-a CCS-10)
+	(role concrete))
+
+(defclass Nephritis_nephrosis_renal+sclerosis
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Renal+Diagnosis
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Hematuria
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Renovascular_Disease
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass CKD
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Prostatism_BPH
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Renal_Insufficiency
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass athena_hypertension_506720
+	(is-a Renal_Insufficiency)
+	(role concrete))
+
+(defclass Renal+disease
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Chronic_kidney_disease_stage34
+	(is-a Renal+disease CKD)
+	(role concrete))
+
+(defclass Chronic_kidney_disease_stage3
+	(is-a Chronic_kidney_disease_stage34)
+	(role concrete))
+
+(defclass Chronic_kidney_disease_stage4
+	(is-a Chronic_kidney_disease_stage34)
+	(role concrete))
+
+(defclass Chronic_kidney_disease_stage5
+	(is-a Renal+disease)
+	(role concrete))
+
+(defclass CKD_Stage_1
+	(is-a Renal+disease)
+	(role concrete))
+
+(defclass CKD_Stage_2
+	(is-a Renal+disease)
+	(role concrete))
+
+(defclass Renal+Dialysis
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Worsening_renal_condition
+	(is-a Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Obstetric%26Gynecological_Diseases
+	(is-a CCS-10)
+	(role concrete))
+
+(defclass CCS-11
+	(is-a Obstetric%26Gynecological_Diseases)
+	(role concrete))
+
+(defclass CCS-11.7
+	(is-a Obstetric%26Gynecological_Diseases)
+	(role concrete))
+
+(defclass Pregnancy
+	(is-a CCS-11.7)
+	(role concrete))
+
+(defclass CCS-9
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Hepatobiliary_Diseases
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Liver_Disease
+	(is-a Hepatobiliary_Diseases)
+	(role concrete))
+
+(defclass cirrhosis
+	(is-a Liver_Disease)
+	(role concrete))
+
+(defclass CCS-9.8.2.1
+	(is-a cirrhosis)
+	(role concrete))
+
+(defclass Hepatitis_573_1_2_3
+	(is-a Liver_Disease)
+	(role concrete))
+
+(defclass Other_disorders_of_biliary_tract_576
+	(is-a Hepatobiliary_Diseases)
+	(role concrete))
+
+(defclass Obstruction_of_bile_duct_576.2
+	(is-a Other_disorders_of_biliary_tract_576)
+	(role concrete))
+
+(defclass Ascites
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Diseases_of_pancreas_577
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Pancreatitis
+	(is-a Diseases_of_pancreas_577)
+	(role concrete))
+
+(defclass Diseases_of_Esophagus_Stomach_Duodenum_530_to_539
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Disorders_of_function_of_stomach_536
+	(is-a Diseases_of_Esophagus_Stomach_Duodenum_530_to_539)
+	(role concrete))
+
+(defclass Dyspepsia_and_other_specified_disorders_of_function_of_stomach_536.8
+	(is-a Disorders_of_function_of_stomach_536)
+	(role concrete))
+
+(defclass Gastroparesis
+	(is-a Disorders_of_function_of_stomach_536)
+	(role concrete))
+
+(defclass GERD
+	(is-a Diseases_of_Esophagus_Stomach_Duodenum_530_to_539)
+	(role concrete))
+
+(defclass Disorders_of_gallbladde_570_to_579
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Noninfective_Enteritis_And_Colitis_555to558
+	(is-a CCS-9)
+	(role concrete))
+
+(defclass Crohns_disease
+	(is-a Noninfective_Enteritis_And_Colitis_555to558)
+	(role concrete))
+
+(defclass Ulcerative_enterocolitis
+	(is-a Noninfective_Enteritis_And_Colitis_555to558)
+	(role concrete))
+
+(defclass CCS-7
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-7.4
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass CCS-7.4.4
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass Evidence+of+LE+arterial+disease
+	(is-a CCS-7.4.4)
+	(role concrete))
+
+(defclass PVD
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass Raynaud%27s+syndrome
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass Cerebral_Vascular_Diseases
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass Transient+cerebral+ischemia
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass Intracranial+hemorrhage
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass Occulusion+of+cerebral+arteries
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass CVA
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass Late+effects+of+CVA
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass Hemorrhagic_stroke
+	(is-a Cerebral_Vascular_Diseases)
+	(role concrete))
+
+(defclass Dissecting_aortic_aneurysm
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass atherosclerotic_vascular_disease
+	(is-a CCS-7.4)
+	(role concrete))
+
+(defclass CCS-7.2
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass Silent+Ischemia
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Stable+Angina
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass CCS-7.2.11
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass CCS-7.2.11.1
+	(is-a CCS-7.2.11)
+	(role concrete))
+
+(defclass nonischemic+cardiomyopathy
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass structural+heart+disease
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass LVH
+	(is-a CCS-7.2 structural+heart+disease)
+	(role concrete))
+
+(defclass Heart_Block_2nd_Or_3rd_Degree
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass 1st+degree+Heart+Block
+	(is-a Heart_Block_2nd_Or_3rd_Degree)
+	(role concrete))
+
+(defclass Unspecified+AV+Block
+	(is-a Heart_Block_2nd_Or_3rd_Degree)
+	(role concrete))
+
+(defclass Heart_Block_2nddegree
+	(is-a Heart_Block_2nd_Or_3rd_Degree)
+	(role concrete))
+
+(defclass Heart_block_3rddegree
+	(is-a Heart_Block_2nd_Or_3rd_Degree)
+	(role concrete))
+
+(defclass Sinoatrial+node+dysfunction
+	(is-a Syndrome CCS-7.2)
+	(role concrete))
+
+(defclass Ischemic+Heart+Disease
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Angina
+	(is-a Ischemic+Heart+Disease)
+	(role concrete))
+
+(defclass Coronary_Artery_Disease
+	(is-a Ischemic+Heart+Disease)
+	(role concrete))
+
+(defclass Myocardial_Infarction
+	(is-a Ischemic+Heart+Disease structural+heart+disease)
+	(role concrete))
+
+(defclass Myocardial_Infarction_w_systolic_dysfcn
+	(is-a Myocardial_Infarction)
+	(role abstract))
+
+(defclass supraventricular+tachyarrhythmias
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Atrial_Fibrillation
+	(is-a supraventricular+tachyarrhythmias)
+	(role concrete))
+
+(defclass Atrial_Tachycardia
+	(is-a supraventricular+tachyarrhythmias)
+	(role concrete))
+
+(defclass cardiac+arrest
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass ventricular+fibrillation
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass cardiac+dyssynchrony
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Heart_Failure_Global
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Heart_Failure
+	(is-a Heart_Failure_Global)
+	(role concrete))
+
+(defclass Hypertension_Complicated_by_Heart_Failure
+	(is-a Heart_Failure)
+	(role concrete))
+
+(defclass Cardiomyopathy
+	(is-a Heart_Failure)
+	(role concrete))
+
+(defclass Cardiomegaly
+	(is-a Heart_Failure)
+	(role concrete))
+
+(defclass Rheumatic_Disease_Complicated_by_Heart_Failure
+	(is-a Heart_Failure)
+	(role concrete))
+
+(defclass Heart_failure_N "based on ICD9s from NQF 081, which is equivalent to AHA/PCPI measure 7"
+	(is-a Heart_Failure_Global)
+	(role concrete))
+
+(defclass Heart_Failure_hospitalization_principaldx
+	(is-a Heart_Failure_Global)
+	(role concrete))
+
+(defclass Aortic_stenosis
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Hypertrophic_cardiomyopathy
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Left_Bundle_Branch_Block
+	(is-a CCS-7.2)
+	(role concrete))
+
+(defclass Hypertension_Inclusive
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass Hypertension
+	(is-a Hypertension_Inclusive)
+	(role concrete))
+
+(defclass Pacemaker
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass Cardiovascular_disease_unspecified
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass Secondary_Hypertension
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass Renal_artery_stenosis
+	(is-a Secondary_Hypertension Renal-Urinary_Diseases)
+	(role concrete))
+
+(defclass Cerebrovascular+disease
+	(is-a CCS-7)
+	(role concrete))
+
+(defclass CCS-6
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Neuropathy
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass peripheral+neuropathy
+	(is-a Neuropathy)
+	(role concrete))
+
+(defclass Mild+neuropathy
+	(is-a Neuropathy)
+	(role concrete))
+
+(defclass diabetic+neuropathy "Still need to define icd9 codes"
+	(is-a Neuropathy)
+	(role concrete))
+
+(defclass CCS-6.7
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass CCS-6.7.2
+	(is-a CCS-6.7)
+	(role concrete))
+
+(defclass Retinopathy
+	(is-a CCS-6.7.2)
+	(role concrete))
+
+(defclass Cataracts
+	(is-a CCS-6.7)
+	(role concrete))
+
+(defclass Visual_disturbance
+	(is-a CCS-6.7)
+	(role concrete))
+
+(defclass mild+microvasular+disease "early background retinopathy, and/or microalbuminuria, and/or mild neuropathy"
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass Advanced+microvascular+disease "severe non-proliferative (with severe hemorrhage, IRMA, or venous bleeding) or proliferative retinopathy and/or renal insufficiency (serum creatinine level > 2.0 mg/dL) and/or insensate extremities or autonomic neuropathy (e.g., gastroparesis, impaired sweating, or orthostatic hypotension)"
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass Moderate+microvascular+disease "pre-proliferative (without severe hemorrhage, intra-retinal microvascular anomalies [IRMA], or venous bleeding) retinopathy or persistent, fixed proteinuria (macroalbuminuria) and/or demonstrable peripheral neuropathy (sensory loss)."
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass Migraine
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass Essential_Tremor
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass 333.1
+	(is-a Essential_Tremor)
+	(role concrete))
+
+(defclass Narcolepsy
+	(is-a CCS-6)
+	(role concrete))
+
+(defclass Traumatic_Disorders
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Spinal_Cord_Injury
+	(is-a Traumatic_Disorders)
+	(role concrete))
+
+(defclass CCS-5
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-5.11
+	(is-a CCS-5)
+	(role concrete))
+
+(defclass Psychiatric_Diseases
+	(is-a CCS-5)
+	(role concrete))
+
+(defclass Substance_Abuse
+	(is-a Psychiatric_Diseases)
+	(role concrete))
+
+(defclass Tobacco_Use
+	(is-a Substance_Abuse)
+	(role concrete))
+
+(defclass High_Risk_Psych_Diseases
+	(is-a Psychiatric_Diseases)
+	(role concrete))
+
+(defclass Anxiety
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Drug+Induced+Mental+Disorder
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Personality_Disorder
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Suicidality
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass E950.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.21
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.22
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.3
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.31
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.32
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.4
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.41
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.42
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.5
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.51
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.52
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.6
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.61
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.62
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.7
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.71
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.72
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.8
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.81
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.82
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.91
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E950.92
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.8
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.81
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E951.82
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.8
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.81
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.82
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.91
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E952.92
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.8
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.81
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.82
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E953.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E954
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E954.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E954.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.21
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.22
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.3
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.31
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.32
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.4
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.41
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.42
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.5
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.51
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.52
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.6
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.7
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E955.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E956
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E956.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E956.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.21
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.22
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.91
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E957.92
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.0
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.01
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.02
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.1
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.11
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.12
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.2
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.21
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.22
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.3
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.31
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.32
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.4
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.41
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.42
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.5
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.51
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.52
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.6
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.61
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.62
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.7
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.71
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.72
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.8
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.81
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.82
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E958.9
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass E959
+	(is-a Suicidality)
+	(role concrete))
+
+(defclass PTSD
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Bipolar
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Dementia
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Psychosis
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Schizophrenia
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Panic+Disorder
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Depression
+	(is-a High_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Medium_Risk_Psych_Diseases
+	(is-a Psychiatric_Diseases)
+	(role concrete))
+
+(defclass Cognitive_Impairment
+	(is-a Medium_Risk_Psych_Diseases)
+	(role concrete))
+
+(defclass Homeless
+	(is-a Psychiatric_Diseases)
+	(role concrete))
+
+(defclass V60.0
+	(is-a Homeless)
+	(role concrete))
+
+(defclass Mentally+disabled
+	(is-a Psychiatric_Diseases)
+	(role concrete))
+
+(defclass Autism
+	(is-a Mentally+disabled)
+	(role concrete))
+
+(defclass Mental+retardation
+	(is-a Mentally+disabled)
+	(role concrete))
+
+(defclass Cocaine_abuse
+	(is-a CCS-5)
+	(role concrete))
+
+(defclass CCS-3
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Metabolic%26Nutritional_Diseases
+	(is-a CCS-3)
+	(role concrete))
+
+(defclass Disorders+Lipid+Metabolism
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass Hypercalcemia
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass Gout_Complicated
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass Gout
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass hyperkalemia "to match to an ADR reaction"
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass Hyperpotassemia_ICD9
+	(is-a Metabolic%26Nutritional_Diseases)
+	(role concrete))
+
+(defclass Endocrine_Diseases
+	(is-a CCS-3)
+	(role concrete))
+
+(defclass SIADH
+	(is-a Endocrine_Diseases)
+	(role concrete))
+
+(defclass Glucose_intolerance-hyperglycemia
+	(is-a Endocrine_Diseases)
+	(role concrete))
+
+(defclass Diabetes_Mellitus
+	(is-a Endocrine_Diseases)
+	(role concrete))
+
+(defclass Diabetes-Mellitus-Type1
+	(is-a Diabetes_Mellitus)
+	(role concrete))
+
+(defclass DM-Type2
+	(is-a Diabetes_Mellitus)
+	(role concrete))
+
+(defclass CCS-3.3
+	(is-a Diabetes_Mellitus)
+	(role concrete))
+
+(defclass Diabetes+with+renal+manifestations
+	(is-a CCS-3.3)
+	(role concrete))
+
+(defclass CCS-3.3.5
+	(is-a CCS-3.3)
+	(role concrete))
+
+(defclass CCS-3.3.4
+	(is-a CCS-3.3)
+	(role concrete))
+
+(defclass CCS-3.3.3
+	(is-a CCS-3.3)
+	(role concrete))
+
+(defclass thyroid+disorders
+	(is-a Endocrine_Diseases)
+	(role concrete))
+
+(defclass Hyperthyroidism
+	(is-a thyroid+disorders)
+	(role concrete))
+
+(defclass Hypothyroidism
+	(is-a thyroid+disorders)
+	(role concrete))
+
+(defclass Immunological_Diseases
+	(is-a CCS-3)
+	(role concrete))
+
+(defclass CCS-1
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass CCS-1.2
+	(is-a CCS-1)
+	(role concrete))
+
+(defclass onychomycosis
+	(is-a CCS-1.2)
+	(role concrete))
+
+(defclass athlete%E2%80%99s+foot
+	(is-a CCS-1.2)
+	(role concrete))
+
+(defclass Tinea+pedis
+	(is-a athlete%E2%80%99s+foot)
+	(role concrete))
+
+(defclass CCS-1.1
+	(is-a CCS-1)
+	(role concrete))
+
+(defclass CCS-1.1.2
+	(is-a CCS-1.1)
+	(role concrete))
+
+(defclass Systemic+infection
+	(is-a CCS-1.1.2)
+	(role concrete))
+
+(defclass Systemic+or+Ascending+%28Worsening%29+Infection
+	(is-a Systemic+infection)
+	(role concrete))
+
+(defclass Defined+concept
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Acute+ischemia%2Frest+pain
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass history+of+rest+pain+or+claudication
+	(is-a Acute+ischemia%2Frest+pain)
+	(role concrete))
+
+(defclass Limb+threatening+condition
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Tibialis+posterior+pulses
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Lack+of+sensation+to+Semmes-Weinstein+5.07+monofilament+at+one+or+more+noncallused+plantar+sites "Module F - Foot care high risk"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CV+autonomic+neuropathy
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass uncontrolled+htn "not clearly defined in DM guideline"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass chronic+severe+hypoglycemia "not clearly defined in DM guideline -"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass change+in+ocular+function "not clearly defined in DM guideline module E"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Acute+ocular+changes "acute changes within 48-72h as defined in Module E of DM guideline"
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Ingrown+toenail
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass trauma+to+lower+extremity
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Dorsalis+pedis+pulses
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass uncomplicated+nail+trimming
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass improper+foot+hygiene
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Footwear+prescriptions
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass microalbuminuria
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass hypoglycemia
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass history+of+severe+hypoglycemic+reactions
+	(is-a hypoglycemia)
+	(role concrete))
+
+(defclass recurrent+episodes+of+incapacitating+hypoglycemia
+	(is-a hypoglycemia)
+	(role concrete))
+
+(defclass poor+recognition+of+hypoglycemia
+	(is-a hypoglycemia)
+	(role concrete))
+
+(defclass hyperglycemia
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass recurrent+episodes+of+incapacitating+hyperglycemia
+	(is-a hyperglycemia)
+	(role concrete))
+
+(defclass psychosocial+problems+that+complicate+management
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass chronic+severe+hyperglycemia
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass risk+for+foot+ulcer
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass BMIGT25
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass foot+ulcer
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass trauma
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass other+known+microvascular+disease+%28albuminuria+or+neuropathy%29
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass circulatory+symptoms+that+limit+patient%27s+lifestyle
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Hypertension_Defined
+	(is-a Hypertension_Inclusive Defined+concept)
+	(role concrete))
+
+(defclass Angioedema+due+to+ADR+to+ACEI
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Angioedema_due_to_ADR_to_ARB
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass K%3E5
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CKD_Stage3or4_15eGFR_gt60
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass CKD_stage_5_or_eGFR_lt15
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_Aliskiren
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_Ksparingdiuretic
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Prescription_NSAID
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass 20PercentIncreaseCreatinineACE_ARB
+	(is-a Defined+concept)
+	(role concrete))
+
+(defclass Diseases+of+the+respiratory+system
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Respiratory_Diseases
+	(is-a Diseases+of+the+respiratory+system)
+	(role concrete))
+
+(defclass Bronchospastic_Disease
+	(is-a Respiratory_Diseases)
+	(role concrete))
+
+(defclass Obstructive_Pulmonary_Disease
+	(is-a Respiratory_Diseases)
+	(role concrete))
+
+(defclass Asthma
+	(is-a Diseases+of+the+respiratory+system)
+	(role concrete))
+
+(defclass COPD
+	(is-a Diseases+of+the+respiratory+system)
+	(role concrete))
+
+(defclass Diseases_of_the_blood_and_blood_forming_organs
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Purpura_and_other_hemorrhagic_conditions_287
+	(is-a Diseases_of_the_blood_and_blood_forming_organs)
+	(role concrete))
+
+(defclass Thrombocytopenia
+	(is-a Purpura_and_other_hemorrhagic_conditions_287)
+	(role concrete))
+
+(defclass Multiple_myeloma
+	(is-a Diseases_of_the_blood_and_blood_forming_organs)
+	(role concrete))
+
+(defclass Lipid_Disease_Concepts_to_be_moved
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Abdominal_Aortic_Aneurysm
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Carotid_Artery_Disease
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Chronic_Liver_Disease
+	(is-a Lipid_Disease_Concepts_to_be_moved Liver_Disease)
+	(role concrete))
+
+(defclass Dysbeta_lipoproteinemia
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Hyperlipidemia
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Hyperuricemia
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Peptic_Ulcer
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Peripheral_Arterial_Disease
+	(is-a Lipid_Disease_Concepts_to_be_moved)
+	(role concrete))
+
+(defclass Active_Liver_Disease
+	(is-a Lipid_Disease_Concepts_to_be_moved Liver_Disease)
+	(role concrete))
+
+(defclass Cancer
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Prostate_Cancer
+	(is-a Cancer)
+	(role concrete))
+
+(defclass Metastatic_disease
+	(is-a Cancer)
+	(role concrete))
+
+(defclass Anaphylaxis
+	(is-a Medical_Conditions_Class)
+	(role concrete))
+
+(defclass Unknown_Race
+	(is-a Race)
+	(role concrete))
+
+(defclass Hispanic
+	(is-a Race)
+	(role concrete))
+
+(defclass Black
+	(is-a Race)
+	(role concrete))
+
+(defclass Hispanic-Black
+	(is-a Black Hispanic)
+	(role concrete))
+
+(defclass Non-Hispanic
+	(is-a Race)
+	(role concrete))
+
+(defclass Black_Non-Hispanic
+	(is-a Black Non-Hispanic)
+	(role concrete))
+
+(defclass Non-Black
+	(is-a Race)
+	(role concrete))
+
+(defclass Asian_or_Pacific-Islander
+	(is-a Non-Black)
+	(role concrete))
+
+(defclass Hispanic-Asian_or_Pacific-Islander
+	(is-a Asian_or_Pacific-Islander)
+	(role concrete))
+
+(defclass Asian_or_Pacific-Islander_Non-Hispanic
+	(is-a Asian_or_Pacific-Islander Non-Hispanic)
+	(role concrete))
+
+(defclass White
+	(is-a Non-Black)
+	(role concrete))
+
+(defclass Hispanic-White
+	(is-a White Hispanic)
+	(role concrete))
+
+(defclass White_Non-Hispanic
+	(is-a White Non-Hispanic)
+	(role concrete))
+
+(defclass Native_American
+	(is-a Non-Black)
+	(role concrete))
+
+(defclass Hispanic-Native_American
+	(is-a Native_American Hispanic)
+	(role concrete))
+
+(defclass Native_American_Non-Hispanic
+	(is-a Native_American Non-Hispanic)
+	(role concrete))
+
+(defclass Other_Race
+	(is-a Race)
+	(role concrete))
+
+(defclass xxxxxxxx
+	(is-a Race)
+	(role concrete))
+
+(defclass Female
+	(is-a Sex)
+	(role concrete))
+
+(defclass Non-Black+Female
+	(is-a Female Non-Black)
+	(role concrete))
+
+(defclass Male
+	(is-a Sex)
+	(role concrete))
+
+(defclass Non-Black+Male
+	(is-a Male Non-Black)
+	(role concrete))
+
+(defclass Death
+	(is-a Patient_Demographics)
+	(role concrete))
+
+(defclass Duration+of+Diabetes
+	(is-a Risk_Factor)
+	(role concrete))
+
+(defclass Family_History
+	(is-a Patient_History_Class)
+	(role abstract))
+
+(defclass family+history+of+cardiomyopathy
+	(is-a Family_History)
+	(role concrete))
+
+(defclass Allergies+and+ADR+reactions
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass angioedema+equivalent
+	(is-a Allergies+and+ADR+reactions)
+	(role concrete))
+
+(defclass LIP+SWELLING "NATIONAL_SIGN (VISTA)"
+	(is-a angioedema+equivalent)
+	(role concrete))
+
+(defclass SWELLING+OF+LIPS "synonym VISTA"
+	(is-a LIP+SWELLING)
+	(role concrete))
+
+(defclass ORAL+SWELLING "NATIONAL_SIGN (VISTA)"
+	(is-a angioedema+equivalent)
+	(role concrete))
+
+(defclass ORAL+EDEMA "synonym VISTA"
+	(is-a ORAL+SWELLING)
+	(role concrete))
+
+(defclass angioedema
+	(is-a Allergies+and+ADR+reactions Medical_Conditions_Class)
+	(role concrete))
+
+(defclass ANGIOEDEMA
+	(is-a angioedema)
+	(role concrete))
+
+(defclass ANGIONEUROTIC+EDEMA+OF+LARYNX "NATIONAL_SIGN (VISTA)"
+	(is-a angioedema)
+	(role concrete))
+
+(defclass EDEMA+OF+LARYNX "synonym VISTA"
+	(is-a ANGIONEUROTIC+EDEMA+OF+LARYNX)
+	(role concrete))
+
+(defclass Socio-economic+history
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass excessive+alcohol+consumption
+	(is-a Socio-economic+history)
+	(role concrete))
+
+(defclass illicit+drug+use
+	(is-a Socio-economic+history)
+	(role concrete))
+
+(defclass Impact+on+quality+of+life
+	(is-a Socio-economic+history)
+	(role concrete))
+
+(defclass interference+with+daily+activities
+	(is-a Socio-economic+history)
+	(role concrete))
+
+(defclass NYHA+staging
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass Risk_Factor_for_CVD
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass male+and+age%3D%3E45
+	(is-a Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass female+and+age%3E%3D55
+	(is-a Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass Presence+of+hypertension%2C+inclusive
+	(is-a Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass smoking
+	(is-a Socio-economic+history Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass family+history+of+premature+coronary+artery+disease
+	(is-a Family_History Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass HDLC+lt+40
+	(is-a Risk_Factor_for_CVD)
+	(role concrete))
+
+(defclass Risk_Factor_for_CVD_treated_according_to_2ndary_prevention_protocols
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass Presence_of_DM
+	(is-a Risk_Factor_for_CVD_treated_according_to_2ndary_prevention_protocols)
+	(role concrete))
+
+(defclass Hospitalization_LengthofStay
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass Hospitalization_related
+	(is-a Patient_History_Class)
+	(role concrete))
+
+(defclass Disposition
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass Hospital_Death
+	(is-a Disposition)
+	(role concrete))
+
+(defclass Death_With_Autopsy
+	(is-a Hospital_Death)
+	(role concrete))
+
+(defclass Death_Without_Autopsy
+	(is-a Hospital_Death)
+	(role concrete))
+
+(defclass Left_Against_Medical_Advice
+	(is-a Disposition)
+	(role concrete))
+
+(defclass irregular
+	(is-a Left_Against_Medical_Advice)
+	(role concrete))
+
+(defclass Healthcare_institution
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass Hospice
+	(is-a Healthcare_institution)
+	(role concrete))
+
+(defclass Skilled_Nursing_Facility
+	(is-a Healthcare_institution)
+	(role concrete))
+
+(defclass Hospital
+	(is-a Healthcare_institution)
+	(role concrete))
+
+(defclass VA_medical_center
+	(is-a Hospital)
+	(role concrete))
+
+(defclass Military_hospital
+	(is-a Hospital)
+	(role concrete))
+
+(defclass Other_federal_hospital
+	(is-a Hospital)
+	(role concrete))
+
+(defclass Other_government_hospital
+	(is-a Hospital)
+	(role concrete))
+
+(defclass Community_hospital
+	(is-a Hospital)
+	(role concrete))
+
+(defclass Admission_Source
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass Discharge_Destination
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass Admission_Institution
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass Principal_Diagnosis
+	(is-a Hospitalization_related)
+	(role concrete))
+
+(defclass rash
+	(is-a Findings)
+	(role concrete))
+
+(defclass Proteinuria
+	(is-a Findings)
+	(role concrete))
+
+(defclass Proteinuria+equals+trace+or+above
+	(is-a Proteinuria)
+	(role concrete))
+
+(defclass Signs
+	(is-a Findings)
+	(role concrete))
+
+(defclass minor+calluses
+	(is-a Signs)
+	(role concrete))
+
+(defclass painful+corns
+	(is-a Signs)
+	(role concrete))
+
+(defclass dry+skin
+	(is-a Signs)
+	(role concrete))
+
+(defclass Puncture+wound
+	(is-a Signs)
+	(role concrete))
+
+(defclass minor+lesion
+	(is-a Signs)
+	(role concrete))
+
+(defclass Pitting+edema
+	(is-a Signs)
+	(role concrete))
+
+(defclass Pallor+on+elevation
+	(is-a Signs)
+	(role concrete))
+
+(defclass Nail+deformities
+	(is-a Signs)
+	(role concrete))
+
+(defclass Extensive+callus
+	(is-a Signs)
+	(role concrete))
+
+(defclass Erythema
+	(is-a Signs)
+	(role concrete))
+
+(defclass Changes+in+the+size+of+foot
+	(is-a Signs)
+	(role concrete))
+
+(defclass Breaks+in+the+skin
+	(is-a Signs)
+	(role concrete))
+
+(defclass dependent+rubor+with+pallor+on+elevation
+	(is-a Signs)
+	(role concrete))
+
+(defclass minor+foot+problem
+	(is-a Signs)
+	(role concrete))
+
+(defclass Minor+wound+healed
+	(is-a Signs)
+	(role concrete))
+
+(defclass hypotension
+	(is-a Signs)
+	(role concrete))
+
+(defclass valvular+stenosis
+	(is-a Signs)
+	(role concrete))
+
+(defclass valvular+regurgitation
+	(is-a Signs)
+	(role concrete))
+
+(defclass ventricular+rate
+	(is-a Signs)
+	(role concrete))
+
+(defclass Volume+overload
+	(is-a Signs)
+	(role concrete))
+
+(defclass fluid+retention
+	(is-a Signs)
+	(role concrete))
+
+(defclass hematuria
+	(is-a Signs)
+	(role concrete))
+
+(defclass Symptoms
+	(is-a Findings)
+	(role concrete))
+
+(defclass Weight+loss
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass othopnea
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass nausea
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass headache
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass edema
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass diarrhea
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass pain
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass vomiting
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass pain%2C+abdominal
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass blurred+vision
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass constipation
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass Flatulence_eructation_gass_pain_787_3
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass Flushing
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass itching
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass bloating
+	(is-a Symptoms)
+	(role concrete))
+
+(defclass Evaluation+for+foot+deformity
+	(is-a Findings)
+	(role concrete))
+
+(defclass Evaluation+for+LE+arterial+disease
+	(is-a Findings)
+	(role concrete))
+
+(defclass patient+history+data
+	(is-a Findings)
+	(role concrete))
+
+(defclass History+of+foot+ulcer+or+non-traumatic+LEA
+	(is-a patient+history+data)
+	(role concrete))
+
+(defclass Clinical+reminders
+	(is-a Findings)
+	(role concrete))
+
+(defclass Pedal+pulses+dm
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Visual+inspection+%28foot+dm%29
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Sensory+exam+%28foot+dm%29
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Risk+level+dm
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Diabetic+foot+exam+in+this+facility+in+past+year+not+coded
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Diabetic+foot+exam+at+other+facility+in+past+year
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass bilateral+LE+amputation
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Life+expectancy+%3C6m
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass Screening+no+longer+indicated
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass No+longer+diabetic
+	(is-a Clinical+reminders)
+	(role concrete))
+
+(defclass nail+or+callus+care
+	(is-a Findings)
+	(role concrete))
+
+(defclass HF+signs+and+symptoms
+	(is-a Findings)
+	(role concrete))
+
+(defclass NYHA+functional+class+III+ambulatory+class+IV+symptoms
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA+functional+class+III
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA+functional+class+II
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA+class+I
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_ClassI
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_ClassII
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_ClassIII
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_ClassIV
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass NYHA_ClassIV_ambulatory
+	(is-a NYHA+staging HF+signs+and+symptoms)
+	(role concrete))
+
+(defclass hemodynamically+destabilizing+ventricular+tachycardia
+	(is-a Findings)
+	(role concrete))
+
+(defclass CKDflag
+	(is-a Findings)
+	(role concrete))
+
+(defclass Metabolic_Syndrome
+	(is-a Vital_Signs)
+	(role concrete))
+
+(defclass Blood_Pressure
+	(is-a Vital_Signs)
+	(role abstract))
+
+(defclass Diastolic_BP
+	(is-a Blood_Pressure)
+	(role abstract))
+
+(defclass DB_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass Home_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass MD_Clinic_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass MD_Typical_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass Nurse_Clinic_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass Treatment_Diastolic_BP
+	(is-a Diastolic_BP)
+	(role concrete))
+
+(defclass Systolic_BP
+	(is-a Blood_Pressure)
+	(role abstract))
+
+(defclass DB_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass Home_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass MD_Clinic_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass MD_Typical_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass Nurse_Clinic_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass Treatment_Systolic_BP
+	(is-a Systolic_BP)
+	(role concrete))
+
+(defclass Height
+	(is-a Vital_Signs)
+	(role abstract))
+
+(defclass Weight
+	(is-a Vital_Signs)
+	(role abstract))
+
+(defclass BMI
+	(is-a Vital_Signs)
+	(role abstract))
+
+(defclass Pulse
+	(is-a Vital_Signs)
+	(role abstract))
+
+(defclass Blood_Chemistry
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass Albumin
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Alkaline_phosphatase
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Bicarbonate
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass BUN
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Calcium
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Cholesterol
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Creatinine_Clearance
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Glucose
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Glycosylated_Hemoglobin
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Phosphorus
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass SGOT
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass SGPT
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Total_Bilirubin
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass PPG "Postprandial plasma glucose (PPG)"
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass HbA1C "HbA1c"
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass eGFR
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Potassium
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Sodium
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Creatinine
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Uric_Acid
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass LDL_Cholesterol
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Calculated_LDL
+	(is-a LDL_Cholesterol)
+	(role concrete))
+
+(defclass Direct_Measure_LDL
+	(is-a LDL_Cholesterol)
+	(role concrete))
+
+(defclass Triglycerides
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Total_Cholesterol
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass HDL_Cholesterol
+	(is-a Blood_Chemistry)
+	(role abstract))
+
+(defclass Creatine_Phosphokinase_CPK_or_CK
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass NT_proBNP
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass BNP
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass B_12
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass PTH
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass Vitamin_D_lab
+	(is-a Blood_Chemistry)
+	(role concrete))
+
+(defclass Hematology
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass AGN
+	(is-a Hematology)
+	(role abstract))
+
+(defclass HCT
+	(is-a Hematology)
+	(role abstract))
+
+(defclass Hemoglobin_A1C
+	(is-a Hematology)
+	(role abstract))
+
+(defclass PLT
+	(is-a Hematology)
+	(role abstract))
+
+(defclass WBC
+	(is-a Hematology)
+	(role abstract))
+
+(defclass HGB
+	(is-a Hematology)
+	(role concrete))
+
+(defclass CBC
+	(is-a Hematology)
+	(role concrete))
+
+(defclass Microbiology_Tests
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass Hepatitis_B_Surface_Antigen
+	(is-a Microbiology_Tests)
+	(role abstract))
+
+(defclass Hepatitis_C_Status
+	(is-a Microbiology_Tests)
+	(role concrete))
+
+(defclass HIV_Test
+	(is-a Microbiology_Tests)
+	(role concrete))
+
+(defclass Urinalysis
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass Urine_Alb%2Fcreat_Ratio_24h
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineProtein_12h
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass Urine_ALB%2FCREAT_RATIO_spot
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineAlbumin_24H
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineAlbumin_SPOT
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineProtein_Spot
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineProtein_Qualitative
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineProtein_24h
+	(is-a Urinalysis)
+	(role abstract))
+
+(defclass UrineProtein_Quantitative
+	(is-a Urinalysis)
+	(role concrete))
+
+(defclass Pulmonary_Function_Studies
+	(is-a Laboratory_Tests)
+	(role abstract))
+
+(defclass DCL
+	(is-a Pulmonary_Function_Studies)
+	(role abstract))
+
+(defclass FEV1
+	(is-a Pulmonary_Function_Studies)
+	(role abstract))
+
+(defclass FVC
+	(is-a Pulmonary_Function_Studies)
+	(role abstract))
+
+(defclass respiratory+gas+exchange
+	(is-a Laboratory_Tests)
+	(role concrete))
+
+(defclass Procedure_finding
+	(is-a Patient_Observations)
+	(role concrete))
+
+(defclass EKG
+	(is-a Procedure_finding)
+	(role concrete))
+
+(defclass QRS
+	(is-a EKG)
+	(role concrete))
+
+(defclass sinus+rhythm
+	(is-a EKG)
+	(role concrete))
+
+(defclass Echocardiogram
+	(is-a Procedure_finding)
+	(role concrete))
+
+(defclass Left+Ventricular+Ejection+fraction
+	(is-a Echocardiogram)
+	(role concrete))
+
+(defclass Heart_dysfunction_qualitative
+	(is-a Echocardiogram)
+	(role concrete))
+
+(defclass ophtalmologyst
+	(is-a Role)
+	(role concrete))
+
+(defclass eye+care+provider
+	(is-a Role)
+	(role concrete))
+
+(defclass podiatrist
+	(is-a Role)
+	(role concrete))
+
+(defclass vascular+specialist
+	(is-a Role)
+	(role concrete))
+
+(defclass foot+care+specialist
+	(is-a Role)
+	(role concrete))
+
+(defclass primary+care+provider
+	(is-a Role)
+	(role concrete))
+
+(defclass Target_parameters
+	(is-a Medical_Domain_Class)
+	(role concrete))
+
+(defclass target_HBA1c
+	(is-a Target_parameters Laboratory_Tests)
+	(role concrete))

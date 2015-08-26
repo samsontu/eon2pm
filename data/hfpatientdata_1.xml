@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="test1">
+    <meds>
+        <item>
+            <field1 label="Drug">atenolol</field1>
+            <field2 label="Daily Dose">55</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">furosemide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Insulin</field1>
+            <field2 label="Daily Dose">0.05</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">3.0</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">metformin</field1>
+            <field2 label="Daily Dose">1250</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">50</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">tamsulosin</field1>
+            <field2 label="Daily Dose">0.5</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">terazosin</field1>
+            <field2 label="Daily Dose">15</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">triamterene</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Angina</field1>
+            <field2 label="Name"/>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Atrial_Fibrillation</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Cardiomegaly</field1>
+            <field2 label="Name"/>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Coronary_Artery_Disease</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Disorders Lipid Metabolism</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">edema</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Block_2nd_Or_3rd_Degree</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Heart_Failure</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Pacemaker</field1>
+            <field2 label="Name"/>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Prostatism_BPH</field1>
+            <field2 label="Name"/>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Dx">Unspecified AV Block</field1>
+            <field2 label="Name"/>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">75</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Sign">Height</field1>
+            <field2 label="Value">64</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">72</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">132</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Sign">Weight</field1>
+            <field2 label="Value">155</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">B 12</field1>
+            <field2 label="Value">919</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Calcium</field1>
+            <field2 label="Value">9.2</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Chloride</field1>
+            <field2 label="Value">107</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Cholesterol</field1>
+            <field2 label="Value">110</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.15</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">38</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Glucose</field1>
+            <field2 label="Value">131</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Glycosylated_Hemoglobin</field1>
+            <field2 label="Value">6.1</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">HCT</field1>
+            <field2 label="Value">30.5</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">54</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">49</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">3.8</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">141</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">target_HBA1c</field1>
+            <field2 label="Value">7.0</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Total_Cholesterol</field1>
+            <field2 label="Value">108</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Triglycerides</field1>
+            <field2 label="Value">87</field2>
+            <start>Sun Feb 08 00:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_24H</field1>
+            <field2 label="Value">170</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Alb/creat_Ratio_24h</field1>
+            <field2 label="Value">110</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">110</field2>
+            <start>Sat Feb 07 23:00:00 PST 2009</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">79</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Asian_or_Pacific-Islander_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+</patient>
+</patientdata>

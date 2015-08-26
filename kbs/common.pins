@@ -1,0 +1,340 @@
+; Mon Apr 13 20:47:23 GMT 2015
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+([Age] of  Interval-Valued_AtomicTest_Metaclass
+
+	(Precision 0))
+
+([Associations] of  Canonical_Terms_Metaclass
+)
+
+([Assumption] of  Canonical_Terms_Metaclass
+)
+
+([Clinic] of  Canonical_Terms_Metaclass
+)
+
+([cm] of  Canonical_Terms_Metaclass
+)
+
+([common_Class0] of  Qualitative_Constant
+
+	(value "UDS"))
+
+([common_Class20000] of  Binary_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(label "today - 2 years")
+	(operator -)
+	(second_argument [common_Instance_9]))
+
+([common_Class20004] of  Binary_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(label "more than 3 years ago")
+	(operator -)
+	(second_argument [common_Class20005]))
+
+([common_Class20005] of  Definite_Duration
+
+	(how_many "3")
+	(label "3 years")
+	(time_unit year))
+
+([common_Class30000] of  Data_Value
+
+	(label "null"))
+
+([common_Instance_12] of  Qualitative_Constant
+
+	(value "lisinopril"))
+
+([common_Instance_2] of  Qualitative_Constant
+
+	(value "POS"))
+
+([common_Instance_4] of  Date_Expression
+
+	(first_argument [time%3AINSTANCE_1])
+	(label "today - 2 years")
+	(operator -)
+	(second_argument [common_Instance_9]))
+
+([common_Instance_7] of  Variable
+
+	(derivation_expression [time%3AINSTANCE_1])
+	(label "Today")
+	(string_name "?Today"))
+
+([common_Instance_8] of  Physical_Quantity
+
+	(unit "year")
+	(value "2"))
+
+([common_Instance_9] of  Definite_Duration
+
+	(how_many "2")
+	(label "2 years")
+	(time_unit year))
+
+([Concentration_Unit] of  Canonical_Terms_Metaclass
+)
+
+([criterion_11820] of  Relative_Time_Interval_Definite
+
+	(how_many "7")
+	(label "last 7 days")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([criterion_INSTANCE_00001] of  Criterion
+
+	(label "true"))
+
+([criterion_INSTANCE_00002] of  Criterion
+
+	(label "false"))
+
+([Day] of  Canonical_Terms_Metaclass
+)
+
+([Diagnostic_Class] of  Canonical_Terms_Metaclass
+)
+
+([Diagnostic_Procedures_Class] of  Canonical_Terms_Metaclass
+)
+
+([Drug_Medical_Condition_Relation] of  Canonical_Terms_Metaclass
+)
+
+([Drug_Relation] of  Canonical_Terms_Metaclass
+)
+
+([Drug_SideEffect_Relation] of  Canonical_Terms_Metaclass
+)
+
+([DuplicateDrug] of  Canonical_Terms_Metaclass
+)
+
+([Encounter_Type] of  Canonical_Terms_Metaclass
+)
+
+([eon2_Instance_6] of  Version
+
+	(version "version 2.0")
+	(version_note "This is the baseline version as of 2005-07-27"))
+
+([expression_Instance_3] of  Temporal_Criterion
+
+	(from "Prescriptions(drugName) as P, Drug")
+	(label "Sample Chronus Query (find Opioid drugs a patient takes some time 2 to 4 months ago)")
+	(select "drug_name")
+	(when_condition "overlaps(P, PERIOD('now - month(4)', 'now - month(2)'))")
+	(where_condition "P.drug_name = Drug.drug_name and\nDrug.drug_class = 'Opioid'"))
+
+([Findings] of  Canonical_Terms_Metaclass
+)
+
+([Follow_Up] of  Canonical_Terms_Metaclass
+)
+
+([grams] of  Canonical_Terms_Metaclass
+
+	(PrettyName "grams"))
+
+([Guideline_Model_Entity] of  Versioned_Metaclass
+)
+
+([High_Dose] of  Ordered_List_Value
+
+	(previous Medium_Dose))
+
+([High_Dose%28high%2Flow%29] of  Ordered_List_Value
+
+	(previous Low_Dose%28high%2Flow%29))
+
+([Hour] of  Canonical_Terms_Metaclass
+)
+
+([Inpatient_Encounter] of  Canonical_Terms_Metaclass
+)
+
+([Laboratory_Tests] of  Interval-Valued_AtomicTest_Metaclass
+)
+
+([Length_Unit] of  Canonical_Terms_Metaclass
+)
+
+([Level_Of_Evidence] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Level of evidence"))
+
+([Low_Dose] of  Ordered_List_Value
+
+	(next Medium_Dose))
+
+([Low_Dose%28high%2Flow%29] of  Ordered_List_Value
+
+	(next High_Dose%28high%2Flow%29))
+
+([Medical_Conditions_Class] of  Medical_Conditions_Metaclass
+)
+
+([Medical_Domain_Class] of  Canonical_Terms_Metaclass
+)
+
+([Medical_Task] of  Canonical_Terms_Metaclass
+)
+
+([Medications_Class] of  Medications_Metaclass
+)
+
+([Medium_Dose] of  Ordered_List_Value
+
+	(next High_Dose)
+	(previous Low_Dose))
+
+([Message_Type] of  Canonical_Terms_Metaclass
+)
+
+([mg] of  Canonical_Terms_Metaclass
+)
+
+([mg_per_mL] of  Canonical_Terms_Metaclass
+)
+
+([Minute] of  Canonical_Terms_Metaclass
+)
+
+([mm] of  Canonical_Terms_Metaclass
+)
+
+([Month] of  Canonical_Terms_Metaclass
+)
+
+([Net_Benefit] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Net benefit"))
+
+([OpioidGuideline_Instance_390008] of  Definite_Duration
+
+	(how_many "60")
+	(label "60 days duration")
+	(time_unit day))
+
+([OpioidGuideline_Instance_390009] of  PAL-QUERY
+
+	(%3APAL-NAME "Most recent creatinine")
+	(%3APAL-RANGE "(defrange ?creat :FRAME Numeric_Entry)\n(defrange ?creat2 :FRAME Numeric_Entry)")
+	(%3APAL-STATEMENT "(findall ?creat (and (= (domain_term ?creat) \"foo\")\n                     (not (exists ?creat2 \n                                  (and (= (domain_term ?creat2) \"foo\")\n                                       (> (system_time (valid_time ?creat2))\n                                          (system_time (valid_time ?creat)))))))\n)"))
+
+([Outpatient_Encounter] of  Canonical_Terms_Metaclass
+)
+
+([Overall_Quality_Of_Evidence] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Overall quality of evidence"))
+
+([Patient_Demographics] of  Canonical_Terms_Metaclass
+)
+
+([Patient_History_Class] of  Canonical_Terms_Metaclass
+)
+
+([Patient_Observations] of  Canonical_Terms_Metaclass
+)
+
+([Primary_Recommendation] of  Canonical_Terms_Metaclass
+)
+
+([Race] of  Canonical_Terms_Metaclass
+)
+
+([Recommendation] of  Canonical_Terms_Metaclass
+)
+
+([Recommendation_Attribute] of  Canonical_Terms_Metaclass
+)
+
+([Risk_Factor] of  Canonical_Terms_Metaclass
+)
+
+([Role] of  Canonical_Terms_Metaclass
+)
+
+([Second] of  Canonical_Terms_Metaclass
+)
+
+([Sex] of  Canonical_Terms_Metaclass
+)
+
+([Strength_Of_Recommendation] of  Canonical_Terms_Metaclass
+
+	(PrettyName "Strength of recommendation"))
+
+([Telephone_Encounter] of  Canonical_Terms_Metaclass
+)
+
+([Temperature_Unit] of  Canonical_Terms_Metaclass
+)
+
+([Therapeutic_Class] of  Canonical_Terms_Metaclass
+)
+
+([Therapeutic_Procedure] of  Canonical_Terms_Metaclass
+)
+
+([time%3AINSTANCE_1] of  Relative_Time_Point
+
+	(label "Today"))
+
+([time%3AINSTANCE_2] of  Relative_Time_Interval_Definite
+
+	(how_many "30")
+	(label "within last 30 days")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([time%3AINSTANCE_3] of  Relative_Time_Interval_Definite
+
+	(how_many "7")
+	(label "last 7 days")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([time%3AINSTANCE_4] of  Relative_Time_Interval_Definite
+
+	(how_many "*")
+	(label "any time in the past")
+	(polarity Before)
+	(relative_time_point [time%3AINSTANCE_1])
+	(time_unit day))
+
+([Time_Unit] of  Canonical_Terms_Metaclass
+)
+
+([Units_Class] of  Canonical_Terms_Metaclass
+)
+
+([Value_Type] of  Canonical_Terms_Metaclass
+)
+
+([Vital_Signs] of  Interval-Valued_AtomicTest_Metaclass
+)
+
+([Volume_Unit] of  Canonical_Terms_Metaclass
+)
+
+([Week] of  Canonical_Terms_Metaclass
+)
+
+([Weight_Unit] of  Canonical_Terms_Metaclass
+)
+
+([Year] of  Canonical_Terms_Metaclass
+)

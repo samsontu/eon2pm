@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+         xmlns:doap="http://usefulinc.com/ns/doap#" 
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+         xmlns:admin="http://webns.net/mvcb/" 
+         xmlns:dod="http://www.ea3888.univ-rennes1.fr/dameron/ontology/rdf/doap-od.rdf#"
+	 xmlns="http://www.ea3888.univ-rennes1.fr/dameron/protegeScript/doap.rdf#"
+	 xml:base="http://www.ea3888.univ-rennes1.fr/dameron/protegeScript/doap.rdf"
+         xml:lang="en">
+
+  <doap:Project rdf:ID="protegeScript-project">
+    <doap:name>Protege Scripting Plugin</doap:name>
+    <doap:shortname>protegeScript</doap:shortname>
+    <doap:homepage rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/protegeScript/index.html"/>
+    <doap:created>2004-09-23</doap:created>
+    <doap:description>The script console is a tab for the Protege ontology development platform. It provides a scripting environment for manipulating an ontology. It is compatible with both the traditionnal Protege environment and with the OWL Plugin.</doap:description>
+    <doap:wiki rdf:resource="http://protege.cim3.net/cgi-bin/wiki.pl?ProtegeScriptTab"/>
+    <doap:screenshots rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/protegeScript/image/script06exampleRuby.png"/>
+    <doap:programming-language>java</doap:programming-language>
+    <doap:license rdf:resource="http://usefulinc.com/doap/licenses/mpl"/>
+    <doap:download-page rdf:resource="http://www.ea3888.univ-rennes1.fr/dameron/protegeScript/download/ProtegeScript-0.32.tar.gz" dod:content-type="application/x-tgz"/>
+    <dod:requires rdf:resource="http://protege.stanford.edu/doap/doap.rdf#protege-project" />
+
+    <doap:repository>
+     <doap:SVNRepository>
+      <doap:location rdf:resource="http://smi-protege.stanford.edu/repos/protege/protege-script-console/trunk/" />
+      <doap:browse rdf:resource="http://smi-protege.stanford.edu/svn/protege-script-console/trunk/" />
+     </doap:SVNRepository>
+    </doap:repository>
+
+    <doap:maintainer>
+      <foaf:Person rdf:about="http://www.ea3888.univ-rennes1.fr/dameron/foaf.rdf#olivierDameron">
+        <foaf:name>Olivier Dameron</foaf:name>
+        <foaf:mbox_sha1sum>18e24f77af95b32d545e76c991016934f1ea72e1</foaf:mbox_sha1sum>
+      </foaf:Person>
+    </doap:maintainer>
+
+    <doap:release>
+      <doap:Version rdf:ID="protegeScript-stableVersion">
+        <doap:branch>stable</doap:branch>
+        <doap:created>2008-08-01</doap:created>
+        <doap:revision>0.32</doap:revision>
+      </doap:Version>
+    </doap:release>
+
+  </doap:Project>
+</rdf:RDF>
+
