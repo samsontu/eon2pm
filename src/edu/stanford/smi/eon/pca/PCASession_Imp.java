@@ -1727,10 +1727,10 @@ public class PCASession_Imp {
 					nf.setMaximumFractionDigits(precision);
 					nf.setMinimumFractionDigits(precision);
 				} else 
-					logger.warn("getNumberFormat: "+ labName
+					logger.info("getNumberFormat: "+ labName
 							+ " is an instance of Interval-Valued_AtomicTest_Metaclass but the 'precision' slot is not set");
 			} else
-				logger.warn("getNumberFormat: "+ labName
+				logger.info("getNumberFormat: "+ labName
 					+ " is not an instance of Interval-Valued_AtomicTest_Metaclass, and has no precision setting");
 		return nf;
 	}

@@ -54,10 +54,11 @@ public class WhereComparisonFilter implements AbstractWhereFilter {
 	public boolean evaluate(Instance instance, GuidelineInterpreter guidelineManager) throws KnowledgeBaseException {
 		KnowledgeBase kb = instance.getKnowledgeBase();
 		if (value == null) {
-			logger.error("WhereComparisonFilter.evaluate attribute: "+attribute+
+			logger.warn("WhereComparisonFilter.evaluate attribute: "+attribute+
 				" opeator: "+ comparison_operator + " has null value");
-			throw new KnowledgeBaseException("WhereComparisonFilter.evaluate attribute: "+attribute+
-					" opeator: "+ comparison_operator + " has null value");
+			return false;
+//			throw new KnowledgeBaseException("WhereComparisonFilter.evaluate attribute: "+attribute+
+//					" opeator: "+ comparison_operator + " has null value");
 		}
 		// NoAttribute means comparing the instance (eq, neq or  a member_of, subclass) to the RHS
 		if ((attribute.equals(DharmaPaddaConstants.NoAttribute)) && 

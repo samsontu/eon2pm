@@ -215,7 +215,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 							logger.debug("Evaluate_Modify_Activity_Intensity.doAction: current actvitity "+
 									currentActivity + " activitySpecClass "+activitySpecClass.getName());
 							compare.value = currentActivity;
-							Collection activitySpec = interpreter.getKBmanager().findInstances(
+							Collection<Instance> activitySpec = interpreter.getKBmanager().findInstances(
 									activitySpecClass, compare, interpreter);
 
 							if ((activitySpec != null) && (activitySpec.size() > 0)) {
@@ -225,8 +225,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 								if (currentActivityLevel != null) {
 									logger.debug("Evaluate_Modify_Activity_Intensity.doAction: actvitity level Cls "+
 											currentActivityLevel.getName());
-									for (Iterator j=activitySpec.iterator(); j.hasNext();) {
-										Instance evaluateObject = (Instance)j.next();
+									for (Instance evaluateObject :  activitySpec) {
 										try {
 											// if current activity level not is less than the maximum level
 											// then

@@ -120,18 +120,13 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 					} catch (Exception e) {
 						logger.error("Evaluate_Substitute_Activity: Exception evaluating delete activity"+e.getMessage(), e);
 					}
-/*					if (delEval!= null) {
-						if ((delEval.contraindications != null) &&
-								(delEval.contraindications.length > 0)) {
-							currentActivitiesToStop.add(delEval);
-						} else
-							if ((delEval.compelling_indications == null) ||
-									(delEval.compelling_indications.length == 0))   // current drug not indicated
-								currentActivitiesToStop.add(delEval);
-					}
-*/
-					currentActivitiesToStop.add(delEval);
+				} else {
+					delEval = new Delete_Evaluation("",
+							currentActivity, this.makeGuideline_Entity(interpreter.guideline.getName()),
+							null, new Matched_Data[0], new Matched_Data[0], new Matched_Data[0],new Matched_Data[0], new Matched_Data[0],new Matched_Data[0], new Matched_Data[0],Truth_Value._true, 
+							null, Preference.preferred, null, 0);
 				}
+				currentActivitiesToStop.add(delEval);
 			}
 		}
 		Delete_Evaluation[] activitiesToStopArray=
