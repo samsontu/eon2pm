@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="MacRoman" standalone="no"?>
 <jardesc>
-    <jar path="eonpm/lib/edu.stanford.smi.eon.pca/eonpm.jar"/>
-    <options buildIfNeeded="true" compress="true" descriptionLocation="/eonpm/src/eonpm.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <jar path="eon2pm/lib/edu.stanford.smi.eon.pca/eonpm.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/eon2pm/src/eonpm.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>
-    <manifest generateManifest="false" manifestLocation="eonpm/src/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+    <manifest generateManifest="false" manifestLocation="eon2pm/src/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
         <sealing sealJar="false">
             <packagesToSeal/>
             <packagesToUnSeal/>
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.criterion"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.datahandler"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.athenaextensions"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;gov.va.test.opioidtesttool.pca"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.time"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.execEngine"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.util"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.Dharma"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.PCAServerModule"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.guidelineinterpreter"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.siteCustomization"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.pca"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.servers"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.clients"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;gov.va.test.opioidtesttool.degui"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;gov.va.test.opioidtesttool"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.data"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.kbhandler"/>
-        <javaElement handleIdentifier="=eonpm/src&lt;edu.stanford.smi.eon.inputoutput"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.criterion"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.datahandler"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.athenaextensions"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;gov.va.test.opioidtesttool.pca"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.time"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.execEngine"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.util"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.Dharma"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.PCAServerModule"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.guidelineinterpreter"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.siteCustomization"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.pca"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.servers"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.clients"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;gov.va.test.opioidtesttool.degui"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;gov.va.test.opioidtesttool"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.data"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.kbhandler"/>
+        <javaElement handleIdentifier="=eon2pm/src&lt;edu.stanford.smi.eon.inputoutput"/>
     </selectedElements>
 </jardesc>

@@ -91,7 +91,8 @@ public class Start_Activity extends Activity_Act {
       // addEvaluations is a collection of Choice_Evaluation instances
       Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
       try {
-        Add_Evaluation addEval =  activity.addActivity(interpreter, this.getfine_grain_priorityValue());
+    	
+        Add_Evaluation addEval =  activity.processAddActivity(interpreter, this.getfine_grain_priorityValue(), null);
         addEval.preference = Preference.preferred;
         activity.addMedicationInstance(interpreter, addEval, "Recommend_Add");
         if (addEval != null) {

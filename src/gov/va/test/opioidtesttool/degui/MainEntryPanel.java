@@ -28,13 +28,13 @@ public class MainEntryPanel extends JPanel {
     private DEPanel mprPanel = null;
 
     // roots for tree in knowledge base
-    public static String[] DRUG_ROOT = {"Opioids" , "CYP2D6 Inhibiting Drugs", "Opioid Side Effect Modifying Drugs", "NSAID"};
+    public static String[] DRUG_ROOT = {"Medications_Class", "nutritional supplements"};
     public static String[] DX_ROOT = {"Medical_Conditions_Class"};
     public static String[] LABS_ROOT = {"Laboratory_Tests"};
     public static String[] SIGNS_ROOT = {"Patient_Observations"};
     public static String[] DEMOGRAPHICS_ROOT = {"Patient_Demographics"};
     public static String[] ADR_ROOT = DRUG_ROOT;
-    public static String[] PROCEDURE_ROOT = {"Education", "nutritional supplements", "Therapeutic_Procedure"};
+    public static String[] PROCEDURE_ROOT = {"Education", "Diagnostic_Procedures_Class", "Therapeutic_Procedure"};
     
     public MainEntryPanel() {	
 	PatientDataStore pds = GlobalVars.currentPatient;

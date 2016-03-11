@@ -285,6 +285,34 @@ public class Drug_Usage extends Activity_Specification {
 		}
 		else  return null;
 	}
+	
+	public Add_Evaluation processAddActivity (GuidelineInterpreter interpreter, int fine_grain_priority, Delete_Evaluation delEval) {
+
+		Collection evaluatedAddCollateralActions = evaluateCollateralActions(interpreter, getCollateralActionsByType("Recommend_Add"));
+		Collection evaluatedBlockedCollateralActions = evaluateCollateralActions(interpreter,getCollateralActionsByType("Blocked_Add"));
+		evaluatedBlockedCollateralActions.addAll(evaluatedAddCollateralActions);
+
+		Add_Evaluation addEval = addActivity( interpreter, fine_grain_priority);
+		if (addEval != null)  {
+			if ((addEval.contraindications.length > 0 ) || 
+					(hasHarmfulInteractions(addEval, delEval)) || 
+					(addEval.prior_use.equals(Truth_Value._true) ) || 
+					(addEval.do_not_start_uncontrollable_conditions.length > 0))
+				addEval.preference = Preference.ruled_out;
+			else if (addEval.do_not_start_controllable_conditions.length > 0) {
+				addMedicationInstance(interpreter, addEval, "Blocked_Add");
+				addEval.preference = Preference.blocked;
+				addEval.messages =  (Action_Spec_Record[]) evaluatedBlockedCollateralActions.toArray(new Action_Spec_Record[0]);
+			} else {
+				addEval.preference = Preference.preferred;
+				logger.debug("in Drug_Usage.evaluateAdd: creating Medication recom "+
+						"instance for " + getDrug_Class_NameValue().getName());
+				addMedicationInstance(interpreter, addEval, "Recommend_Add");
+				addEval.messages =  (Action_Spec_Record[]) evaluatedAddCollateralActions.toArray(new Action_Spec_Record[0]);
+			} 
+			return addEval;
+		} else  return null;
+	}
 
 	public Add_Evaluation addActivity(GuidelineInterpreter interpreter, int fine_grain_priority) {
 		// an activity is a Drug Usage.
