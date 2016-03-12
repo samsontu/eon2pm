@@ -76,12 +76,12 @@ public class Substitute_Activity extends Activity_Act {
 
 			// addEvaluations is a collection of Choice_Evaluation instances
 			try {
-				Add_Evaluation addEval =  activity.addActivity(interpreter,  this.getfine_grain_priorityValue());
+				Add_Evaluation addEval =  activity.processAddActivity(interpreter, this.getfine_grain_priorityValue(), null);
 				if (addEval != null) {
 					if (this.getjustificationValue() != null)
 						addEval.description =  this.getjustificationValue();
-					activity.addMedicationInstance(interpreter, addEval, "Recommend_Add");
-					addEval.preference = Preference.preferred;
+//					activity.addMedicationInstance(interpreter, addEval, "Recommend_Add");
+//					addEval.preference = Preference.preferred;
 					addEvaluations.add(addEval);
 				}
 				logger.debug("Substitute_Activity.addEvaluations: "+activity.getlabelValue()+" got added");
