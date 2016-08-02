@@ -107,7 +107,7 @@ public class PCASession_Imp {
 	public Map guidelineManagers;
 	public Compliance_Level compliance = Compliance_Level.strict;
 	private boolean cumulativeFlag = false;
-	private String fileExtension = ".dat";
+	private String fileExtension = ".data";
 	private String PERFORMANCE_MEASURE_PERIOD = "PerformanceMeasurementPeriod";
 	private String BEFORE_END_OF_PERFORMANCE_MEASURE_PERIOD = "OnOrBeforePerformancePeriod";
 	private String labs[] =
