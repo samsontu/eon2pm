@@ -94,6 +94,13 @@ private Direction getDirection(String direction) {
 public void doAction (Action_To_Choose action,
 	    Guideline_Action_Choices currentDecision,
 	    GuidelineInterpreter interpreter) {
+	Matched_Data[] beneficial_interactions =null;
+	Matched_Data[] compelling_indications=null;
+	Matched_Data[] contraindications=null;
+	Matched_Data[] harmful_interactions=null;
+	Matched_Data[] relative_contraindications=null;
+	Matched_Data[] relative_indications=null;
+
 	if (getrule_in_conditionValue() != null) {
 		Criteria_Evaluation evaluation = HelperFunctions.dummyCriteriaEvaluation();
 		try {
@@ -135,6 +142,12 @@ public void doAction (Action_To_Choose action,
 	                    interpreter.getCurrentGuidelineID(),
 	                    getattributeValue(),
 	                    level,
+						beneficial_interactions,
+						compelling_indications,
+						contraindications,
+						harmful_interactions,
+						relative_contraindications,
+						relative_indications,
 	                    new Matched_Data[0],
 	                    new Matched_Data[0],
 	                    getDirection(getdirectionValue()), //Truth_Value._true,

@@ -409,22 +409,22 @@ public  class ClientUtil {
 						itsWriter.println();
 						break;
 					case Evaluation_Type._change_attribute:
-						String evalComment =  mkStringMatchedDataList(
-								evaluation.change_attribute_eval().do_not_intensify_conditions);
-						if (!evalComment.equals("")) {
-							evalComment = ("<li>do not intensify conditions: "+ evalComment);
-						}
-						String adverseReactions =  mkADRMatchedDataList(
-								evaluation.change_attribute_eval().adverse_reactions);
-						if (!adverseReactions.equals("")) 
-							adverseReactions = " <li>prior adverse reaction: "+adverseReactions;
-						String priorityText = " <li> fine-grained priority: "+evaluation.change_attribute_eval().fine_grain_priority;
 						itsWriter.println("<li>"+evaluation.change_attribute_eval().name+"(change "+
 								evaluation.change_attribute_eval().attribute_name+ ": "+
 								evaluation.change_attribute_eval().change_direction+ " to " +
 								evaluation.change_attribute_eval().level +"<ul><li>" +
-								evaluation.change_attribute_eval().preference + evalComment+ adverseReactions +priorityText+"</ul>)");
-						
+								evaluation.change_attribute_eval().preference);
+						hasComment = printEvaluation(itsWriter, kb, evaluation.change_attribute_eval().beneficial_interactions, 
+								evaluation.change_attribute_eval().harmful_interactions, evaluation.change_attribute_eval().compelling_indications, 
+								evaluation.change_attribute_eval().contraindications, evaluation.change_attribute_eval().relative_indications, 
+								evaluation.change_attribute_eval().relative_contraindications, evaluation.change_attribute_eval().adverse_reactions);
+						String evalComment =  mkStringMatchedDataList(
+								evaluation.change_attribute_eval().do_not_intensify_conditions);
+						if (!evalComment.equals("")) {
+							itsWriter.println("<li>do not intensify conditions: "+ evalComment);
+						}
+						String priorityText = " <li> fine-grained priority: "+evaluation.change_attribute_eval().fine_grain_priority;
+						itsWriter.println(priorityText+"</ul>)");
 						if (evaluation.change_attribute_eval().messages != null) {
 							if (evaluation.change_attribute_eval().messages.length > 0) {
 								hasComment = true;
@@ -509,6 +509,53 @@ public  class ClientUtil {
 		}
 		return result;
 	}
+	
+	private static boolean printEvaluation(PrintWriter itsWriter, KnowledgeBase kb,
+			Matched_Data[] beneficial_interactions, Matched_Data[] harmful_interactions, Matched_Data[] compelling_indications, 
+			Matched_Data[] contraindications, Matched_Data[] relative_indications, Matched_Data[] relative_contraindications, 
+			Matched_Data[] side_effects) {
+		boolean hasComment = false;
+		String evalComment;
+		evalComment= mkStringMatchedDataList(beneficial_interactions);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Drugs to partner: "+ evalComment);
+			hasComment = true;
+		}
+		evalComment = mkStringMatchedDataList(harmful_interactions);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Bad drug partner: "+ evalComment);
+			hasComment = true;
+		}
+		evalComment =  mkStringMatchedDataList(compelling_indications);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li><font color=FF0000>Compelling indications: "+
+					evalComment+"</font>");
+			hasComment = true;
+		}
+		evalComment = mkStringMatchedDataList(contraindications);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Contraindications: "+ evalComment);
+			hasComment = true;
+		}
+		evalComment =  mkStringMatchedDataList(relative_indications);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Relative indications: "+ evalComment);
+			hasComment = true;
+		}
+		evalComment =  mkStringMatchedDataList(relative_contraindications);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Relative contraindications: "+ evalComment);
+			hasComment = true;
+		}
+		evalComment =  mkADRMatchedDataList(side_effects);
+		if (!evalComment.equals("")) {
+			itsWriter.println("<li>Adverse reaction: "+ evalComment);
+			hasComment = true;
+		}
+
+		return hasComment;
+	}
+	
 
 	private static boolean printAdd(PrintWriter itsWriter, Add_Evaluation evaluation, KnowledgeBase kb) {
 		boolean hasComment = false;
@@ -528,47 +575,9 @@ public  class ClientUtil {
 			}
 			itsWriter.println("</li>");
 		}
-		if (evaluation.prior_use.value() == Truth_Value._true.value()) {
-			itsWriter.println("<li>Already being used");
-			hasComment = true;
-		}
-		evalComment= mkStringMatchedDataList(
-				evaluation.beneficial_interactions);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Drugs to partner: "+ evalComment);
-			hasComment = true;
-		}
-		evalComment = mkStringMatchedDataList(
-				evaluation.harmful_interactions);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Bad drug partner: "+ evalComment);
-			hasComment = true;
-		}
-		evalComment =  mkStringMatchedDataList(
-				evaluation.compelling_indications);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li><font color=FF0000>Compelling indications: "+
-					evalComment+"</font>");
-			hasComment = true;
-		}
-		evalComment = mkStringMatchedDataList(
-				evaluation.contraindications);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Contraindications: "+ evalComment);
-			hasComment = true;
-		}
-		evalComment =  mkStringMatchedDataList(
-				evaluation.relative_indications);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Relative indications: "+ evalComment);
-			hasComment = true;
-		}
-		evalComment =  mkStringMatchedDataList(
-				evaluation.relative_contraindications);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Relative contraindications: "+ evalComment);
-			hasComment = true;
-		}
+		hasComment = printEvaluation(itsWriter, kb, evaluation.beneficial_interactions, evaluation.harmful_interactions, 
+				evaluation.compelling_indications, evaluation.contraindications, evaluation.relative_indications, 
+				evaluation.relative_contraindications, evaluation.side_effects);
 		evalComment =  mkStringMatchedDataList(
 				evaluation.do_not_start_controllable_conditions);
 		if (!evalComment.equals("")) {
@@ -581,10 +590,9 @@ public  class ClientUtil {
 			itsWriter.println("<li>Do not add uncontrollable conditions: "+ evalComment);
 			hasComment = true;
 		}
-		evalComment =  mkADRMatchedDataList(
-				evaluation.side_effects);
-		if (!evalComment.equals("")) {
-			itsWriter.println("<li>Adverse reaction: "+ evalComment);
+
+		if (evaluation.prior_use.value() == Truth_Value._true.value()) {
+			itsWriter.println("<li>Already being used");
 			hasComment = true;
 		}
 		itsWriter.println("<li>preference: "+printPreferenceValue(evaluation.preference));
@@ -627,54 +635,9 @@ public  class ClientUtil {
 			itsWriter.println("<li>"+evaluation.name+"("+
 					evaluation.activity_to_delete +")");
 			itsWriter.println("<ul>");
-			evalComment= mkADRMatchedDataList(
-					evaluation.side_effects);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Adverse reaction: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment= mkStringMatchedDataList(
-					evaluation.beneficial_interactions);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Drugs to partner: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment = mkStringMatchedDataList(
-					evaluation.harmful_interactions);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Bad drug partner: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment =  mkStringMatchedDataList(
-					evaluation.compelling_indications);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Compelling indications: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment = mkStringMatchedDataList(
-					evaluation.contraindications);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Contraindications: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment =  mkStringMatchedDataList(
-					evaluation.relative_indications);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Relative indications: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment =  mkStringMatchedDataList(
-					evaluation.relative_contraindications);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Relative contraindications: "+ evalComment);
-				hasComment = true;
-			}
-			evalComment =  mkADRMatchedDataList(
-					evaluation.side_effects);
-			if (!evalComment.equals("")) {
-				itsWriter.println("<li>Adverse reaction: "+ evalComment);
-				hasComment = true;
-			}
+			hasComment = printEvaluation(itsWriter, kb, evaluation.beneficial_interactions, evaluation.harmful_interactions, 
+					evaluation.compelling_indications, evaluation.contraindications, evaluation.relative_indications, 
+					evaluation.relative_contraindications, evaluation.side_effects);
 			itsWriter.println("<li>preference: "+printPreferenceValue(evaluation.preference));
 			itsWriter.println("<li>fine-grained priority: "+evaluation.fine_grain_priority);
 			if (evaluation.messages != null) {

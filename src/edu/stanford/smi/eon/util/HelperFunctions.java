@@ -129,7 +129,10 @@ public class HelperFunctions {
 		//dayObj.setMonth(Integer.parseInt(date.substring(5, 7)));
 		
 	}
-
+	
+	public static Collection safeCollection(Collection other) {
+		return other == null ? Collections.EMPTY_LIST : other;
+	}
 	
 	public static long DateTime2Int(String date)    {
 		// datetime has the form: yyyy-mm-dd hh:mm:ss:mmm

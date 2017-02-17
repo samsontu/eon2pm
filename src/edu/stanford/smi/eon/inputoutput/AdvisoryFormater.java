@@ -400,15 +400,10 @@ public class AdvisoryFormater {
 	private static void setChangeDoseEvaluation(Increase_Decrease_Dose_Recommendation toChange, Change_Attribute_Evaluation changeEval) {
 		toChange.setPreference(changeEval.preference.toString());
 		toChange.setFine_grain_priority(changeEval.fine_grain_priority);
+		Collection<Evaluated_Drug_Relation> drugRels = translateEvaluatedDrugRelations(changeEval.compelling_indications,
+				changeEval.relative_indications, changeEval.contraindications, changeEval.relative_contraindications, changeEval.beneficial_interactions,
+				changeEval.harmful_interactions, changeEval.adverse_reactions, null, null);
 		// add adverse reactions to specific drug
-		Collection< Evaluated_Drug_Relation> drugRels = new ArrayList<Evaluated_Drug_Relation>();
-		for (Matched_Data source : changeEval.adverse_reactions) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setSubstance(getSubstance(source));
-			rel.setRelation_type("adverse_reaction");
-			drugRels.add(rel);
-		}
 		for (Matched_Data source : changeEval.do_not_intensify_conditions) {
 			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
 			rel.setCondition_or_drug(getCondition(source));

@@ -31,7 +31,7 @@ import java.io.PrintWriter;
 
 import edu.stanford.smi.protege.model.*;
 import edu.stanford.smi.protege.util.*;
-import edu.stanford.smi.eon.util.*;
+import edu.stanford.smi.eon.util.*; 
 import edu.stanford.smi.eon.guidelineinterpreter.*;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.kbhandler.*;
@@ -86,7 +86,10 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 	}
 	// __Code above is automatically generated. Do not change
 
-	private int debugLevel = 4;
+	/*
+	 * Activities to modify can be defined either (1) using an expression in the slot activities_to_modify or (2) using activity_class
+	 * 	(e.g., all instances of Medication) and excluded_activities. Using an activities_to_modify expression is preferred.
+	 */
 
 	public Collection activitiesToModify(GuidelineInterpreter interpreter) {
 		logger.debug("Evaluate_Modify_Activity.activitiesToModify");
@@ -125,22 +128,6 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 
 	}
 
-	private boolean insufficientSpec() {
-		if ((getactivity_classValue() ==null) && (getactivities_to_modifyValue() == null)) {
-			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_class in "+getlabelValue());
-			return true;
-		}
-		if (getactivity_spec_keyValue() == null) {
-			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_spec_key in "+getlabelValue());
-			return true;
-		}
-		if (getactivity_specValue() == null) {
-			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_spec in "+getlabelValue());
-			return true;
-		}
-		return false;
-	}
-
 	private Collection evaluateActivitiesToModify(GuidelineInterpreter interpreter)
 			throws PCA_Session_Exception {
 
@@ -177,27 +164,47 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		} else return null;
 	}
 
+	private boolean insufficientSpec() {
+		if ((getactivity_classValue() ==null) && (getactivities_to_modifyValue() == null)) {
+			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_class in "+getlabelValue());
+			return true;
+		}
+		if (getactivity_spec_keyValue() == null) {
+			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_spec_key in "+getlabelValue());
+			return true;
+		}
+		if (getactivity_specValue() == null) {
+			logger.error("Evaluate_Modify_Activity_Intensity.doAction: No value for activity_spec in "+getlabelValue());
+			return true;
+		}
+		return false;
+	}
 
-	public void doAction (Action_To_Choose action,
-			Guideline_Action_Choices currentDecision,
-			GuidelineInterpreter interpreter) {
+	private boolean isRuledIn(GuidelineInterpreter interpreter) {
 		if (getrule_in_conditionValue() != null) {
 			Criteria_Evaluation evaluation = HelperFunctions.dummyCriteriaEvaluation();
 			try {
 				evaluation = (Criteria_Evaluation) ((Criterion)getrule_in_conditionValue()).evaluate(interpreter, false);
 				if (!(PCAInterfaceUtil.mapTruthValue(evaluation.truth_value)))  {   // rule-in condition does not hold
-					return ;
+					return false;
 				}
 			} catch (PCA_Session_Exception e) {
 				e.printStackTrace();
-				return ;
+				return false;
 			}
 		}
-		if (insufficientSpec())
+		return true;
+	}
+
+
+	public void doAction (Action_To_Choose action,
+			Guideline_Action_Choices currentDecision,
+			GuidelineInterpreter interpreter) {
+		if (!isRuledIn(interpreter) || (insufficientSpec()))
 			return;
 		else {
 			Collection activitiesToModify = activitiesToModify(interpreter);
-			Collection changeEvaluations = new ArrayList(); //each entry is an instance of Change_Attribute_Evaluation
+			Collection changeEvaluations = new ArrayList(); 
 			Cls activitySpecClass = (Cls) getactivity_specValue();    //e.g., Guideline_Drug
 			Slot activitySpecKey = (Slot)getactivity_spec_keyValue(); //e.g., drug_name
 			WhereComparisonFilter compare = new WhereComparisonFilter(activitySpecKey.getName(),
@@ -209,15 +216,14 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 					if (activitiesToModify == null) {
 						logger.error("Evaluate_Modify_Activity_Intensity.doAction:Potential Error: No activity to modify");
 					} else {
-						for (Iterator i = activitiesToModify.iterator();i.hasNext();) {
+						for (Object i :  activitiesToModify) {
 							Change_Attribute_Evaluation changeEval = null;
-							String currentActivity = (String)i.next();
+							String currentActivity = (String)i;
 							logger.debug("Evaluate_Modify_Activity_Intensity.doAction: current actvitity "+
 									currentActivity + " activitySpecClass "+activitySpecClass.getName());
 							compare.value = currentActivity;
 							Collection<Instance> activitySpec = interpreter.getKBmanager().findInstances(
 									activitySpecClass, compare, interpreter);
-
 							if ((activitySpec != null) && (activitySpec.size() > 0)) {
 								Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
 								Cls currentActivityLevel = getCurrentActivityLevel(interpreter,
@@ -225,78 +231,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 								if (currentActivityLevel != null) {
 									logger.debug("Evaluate_Modify_Activity_Intensity.doAction: actvitity level Cls "+
 											currentActivityLevel.getName());
-									for (Instance evaluateObject :  activitySpec) {
-										try {
-											// if current activity level not is less than the maximum level
-											// then
-											if (changeToNextLevel(interpreter, currentActivityLevel, evaluateObject)) {
-												Collection<Matched_Data> adverseReactionCollection  = null;
-												Collection<Matched_Data> stopControllableIntensifyConditionCollection = null;
-												Collection<Matched_Data> stopUncontrollableIntensifyConditionCollection = null;
-												Collection<Matched_Data> stopIntensifyConditionCollection = new ArrayList<Matched_Data>();
-												Matched_Data[] addverseReactionArray = null;
-												Matched_Data[] stopIntensifyConditionArray = null;
-												Cls nextLevel = getNextLevel(interpreter, currentActivityLevel, evaluateObject);
-												Cls specificDrugCls = interpreter.getKBmanager().getCls(currentActivity);
-												if (specificDrugCls != null) {
-													adverseReactionCollection =  interpreter.matchAdverseEvents(specificDrugCls);
-													stopControllableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, true); ;
-													stopUncontrollableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, false); ;
-													if (adverseReactionCollection != null) {
-														addverseReactionArray = adverseReactionCollection.toArray(new Matched_Data[adverseReactionCollection.size()]);
-													}
-													if (stopControllableIntensifyConditionCollection != null)
-														stopIntensifyConditionCollection.addAll(stopControllableIntensifyConditionCollection);
-													if (stopUncontrollableIntensifyConditionCollection != null)
-														stopIntensifyConditionCollection.addAll(stopUncontrollableIntensifyConditionCollection);
-													stopIntensifyConditionArray = stopIntensifyConditionCollection.toArray(new Matched_Data[stopIntensifyConditionCollection.size()]);
-												}
-												if (stopUncontrollableIntensifyConditionCollection == null) {
-													Preference preference = null;
-													Cls mood = null;
-													if (stopControllableIntensifyConditionCollection == null) {
-														preference = Preference.preferred;
-													} else {
-														preference = Preference.blocked;
-													}
-													mood = getRecommendationMood(preference);
-													changeEval = new Change_Attribute_Evaluation("",
-															currentActivity,
-															interpreter.getCurrentGuidelineID(),
-															getattributeValue(),
-															(nextLevel != null) ? nextLevel.getName() : "",
-																	addverseReactionArray,  //side_effects
-																	stopIntensifyConditionArray, 
-																	direction(), //Truth_Value._true,
-																	generateMessages(interpreter, currentActivity, evaluateObject, preference),
-																	preference, this.getfine_grain_priorityValue());
-													String patient_id = interpreter.getDBmanager().getCaseID();
-													Medication addedMed = (Medication)interpreter.getDBmanager().createInstance("Medication");
-													addedMed.setSlotsValues((float)0.0, "",
-															currentActivity, 0, "",
-															mood,
-															patient_id, "", "", Constants.active, null, (float)0.0, null );
-												} else {
-													String uncontrollableCondition = "";
-													boolean first = true;
-													for (Matched_Data m : stopUncontrollableIntensifyConditionCollection) {
-														if (first) {
-															uncontrollableCondition = uncontrollableCondition+ (m.guideline_term);
-															first = false;
-														} else
-															uncontrollableCondition = uncontrollableCondition+", "+ (m.guideline_term);
-													}
-													logger.warn("Uncontrollable do not intensify condition is not null: "+uncontrollableCondition
-															+". No increase dose recommendation)");
-												}
-												break;
-											}
-										} catch (Exception e) {
-											logger.error("Evaluate_Modify_Activity_Intensity.doAction: exception looking at maximum dose level of "+
-													evaluateObject.getName()+": "+e.getMessage());
-
-										}
-									} //for
+									changeEval = evaluateModifyActivityIntensity(activitySpec, interpreter, currentActivityLevel, currentActivity);									
 									if (changeEval != null) {
 										choiceEvaluation.change_attribute_eval(changeEval);
 										changeEvaluations.add(choiceEvaluation);
@@ -306,10 +241,8 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 							}
 							else logger.error("Evaluate_Modify_Activity_Intensity.doAction: "+
 									currentActivity+" activitySpec is null");
-
 						}
 					}
-
 					if (changeEvaluations.size ()> 0) {
 						logger.debug("Evaluate_Modify_Activity_Intensity.doAction: "+
 								"****Add evaluated choice number=" + changeEvaluations.size ());
@@ -398,5 +331,108 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 			return new Action_Spec_Record[0];
 		}
 
+	}
+
+	private Change_Attribute_Evaluation evaluateModifyActivityIntensity(Collection<Instance> activitySpec, GuidelineInterpreter interpreter, Cls currentActivityLevel, String currentActivity) {
+		Change_Attribute_Evaluation changeEval = null;
+		for (Instance evaluateObject :  activitySpec) {
+			try {
+				Drug_Usage drugUsage = (Drug_Usage)((Guideline_Drug)evaluateObject).getdrug_usageValue();
+				ActivityEvaluation activityEval = interpreter.getEvaluation(drugUsage);
+				if (activityEval == null) {
+					activityEval = drugUsage.evaluate(interpreter);
+					//check the case where the bad partner drug is the medication whose dose under consideration
+					checkPartner(activityEval, currentActivity);
+				}
+				// if current activity level not is less than the maximum level
+				// then
+				if (changeToNextLevel(interpreter, currentActivityLevel, evaluateObject)) {
+					Collection<Matched_Data> adverseReactionCollection  = null;
+					Collection<Matched_Data> stopControllableIntensifyConditionCollection = null;
+					Collection<Matched_Data> stopUncontrollableIntensifyConditionCollection = null;
+					Collection<Matched_Data> stopIntensifyConditionCollection = new ArrayList<Matched_Data>();
+					Matched_Data[] addverseReactionArray = null;
+
+					Cls nextLevel = getNextLevel(interpreter, currentActivityLevel, evaluateObject);
+					Cls specificDrugCls = interpreter.getKBmanager().getCls(currentActivity);
+					if (specificDrugCls != null) {
+						adverseReactionCollection =  interpreter.matchAdverseEvents(specificDrugCls);
+						stopControllableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, true); ;
+						stopUncontrollableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, false); ;
+						if (adverseReactionCollection != null) {
+							addverseReactionArray = adverseReactionCollection.toArray(new Matched_Data[adverseReactionCollection.size()]);
+						}
+						if (stopControllableIntensifyConditionCollection != null)
+							stopIntensifyConditionCollection.addAll(stopControllableIntensifyConditionCollection);
+						if (stopUncontrollableIntensifyConditionCollection != null)
+							stopIntensifyConditionCollection.addAll(stopUncontrollableIntensifyConditionCollection);
+					}
+					if (stopUncontrollableIntensifyConditionCollection == null) {
+						Preference preference = null;
+						Cls mood = null;
+						if (stopControllableIntensifyConditionCollection == null) {
+							preference = Preference.preferred;
+						} else {
+							preference = Preference.blocked;
+						}
+						mood = getRecommendationMood(preference);
+						changeEval = new Change_Attribute_Evaluation("",
+								currentActivity,
+								interpreter.getCurrentGuidelineID(),
+								getattributeValue(),
+								(nextLevel != null) ? nextLevel.getName() : "",
+								(activityEval != null) ? (Matched_Data[]) activityEval.beneficialInteractions.toArray(new Matched_Data[0]) : null,
+								(activityEval != null) ? (Matched_Data[]) activityEval.compellingIndications.toArray(new Matched_Data[0]) : null,
+								(activityEval != null) ? (Matched_Data[]) activityEval.contraindications.toArray(new Matched_Data[0]) : null,
+								(activityEval != null) ? (Matched_Data[]) activityEval.harmful_interactions.toArray(new Matched_Data[0]) : null,
+								(activityEval != null) ? (Matched_Data[]) activityEval.relative_contraindications.toArray(new Matched_Data[0]) : null,
+								(activityEval != null) ? (Matched_Data[]) activityEval.relative_indications.toArray(new Matched_Data[0]) : null,
+								addverseReactionArray,  //side_effects
+								( Matched_Data[])stopIntensifyConditionCollection.toArray(new Matched_Data[stopIntensifyConditionCollection.size()]), 
+								direction(), //Truth_Value._true,
+								generateMessages(interpreter, currentActivity, evaluateObject, preference),
+								preference, this.getfine_grain_priorityValue());
+						String patient_id = interpreter.getDBmanager().getCaseID();
+						Medication addedMed = (Medication)interpreter.getDBmanager().createInstance("Medication");
+						addedMed.setSlotsValues((float)0.0, "",
+								currentActivity, 0, "",
+								mood,
+								patient_id, "", "", Constants.active, null, (float)0.0, null );
+					} else {
+						String uncontrollableCondition = "";
+						boolean first = true;
+						for (Matched_Data m : stopUncontrollableIntensifyConditionCollection) {
+							if (first) {
+								uncontrollableCondition = uncontrollableCondition+ (m.guideline_term);
+								first = false;
+							} else
+								uncontrollableCondition = uncontrollableCondition+", "+ (m.guideline_term);
+						}
+						logger.warn("Uncontrollable do not intensify condition is not null: "+uncontrollableCondition
+								+". No increase dose recommendation)");
+					}
+					break;
+				}
+
+			} catch (Exception e) {
+				logger.error("Evaluate_Modify_Activity_Intensity.doAction: exception looking at maximum dose level of "+
+						evaluateObject.getName()+": "+e.getMessage());
+			}
+		} //for
+		return changeEval;
+	}
+	private void checkPartner(ActivityEvaluation activityEval, String currentActivity) {
+		Collection<Matched_Data> badPartners = activityEval.harmful_interactions;
+		Collection<Matched_Data> checkedBadPartners = new ArrayList<Matched_Data>();
+		for (Object badPartner : HelperFunctions.safeCollection(badPartners)) {
+			String[] matchedData = ((Matched_Data)badPartner).getData();
+			List<String> list = new ArrayList<String>(Arrays.asList(matchedData));
+			list.remove(currentActivity);
+			if (!list.isEmpty()) {
+				((Matched_Data)badPartner).data = list.toArray(new String[0]);
+				checkedBadPartners.add((Matched_Data)badPartner);
+			}
+		activityEval.harmful_interactions	= checkedBadPartners;
+		}
 	}
 }

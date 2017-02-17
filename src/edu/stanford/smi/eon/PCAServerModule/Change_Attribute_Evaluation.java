@@ -53,6 +53,12 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
   public java.lang.String guideline_id;
   public java.lang.String attribute_name;
   public java.lang.String level;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] adverse_reactions;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_intensify_conditions;
   public edu.stanford.smi.eon.PCAServerModule.Direction change_direction;
@@ -68,6 +74,12 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     java.lang.String guideline_id,
     java.lang.String attribute_name,
     java.lang.String level,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] adverse_reactions,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_intensify_conditions,
     edu.stanford.smi.eon.PCAServerModule.Direction change_direction,
@@ -80,6 +92,12 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     this.guideline_id = guideline_id;
     this.attribute_name = attribute_name;
     this.level = level;
+    this.beneficial_interactions = beneficial_interactions;
+    this.compelling_indications=compelling_indications;
+    this.contraindications =contraindications;
+    this.harmful_interactions = harmful_interactions;
+    this.relative_contraindications =relative_contraindications;
+    this.relative_indications = relative_indications;
     this.do_not_intensify_conditions = do_not_intensify_conditions;
     this.change_direction = change_direction;
     this.messages = messages;
