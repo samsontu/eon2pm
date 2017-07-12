@@ -71,7 +71,7 @@ public class WhereJoinFilter implements AbstractWhereFilter {
 				else {
 					compareFilter.value = instanceToCompare.getOwnSlotValue(attributeComparison.getattribute_to_compareValue());
 					if (compareFilter.value == null) {
-						logger.error(instanceToCompare.getBrowserText()+" has null value for the attribute "+attributeComparison.getattribute_to_compareValue().getName());
+						logger.error(instanceToCompare.getBrowserText()+"("+instanceToCompare.getName()+") has null value for the attribute "+attributeComparison.getattribute_to_compareValue().getName());
 						existMatch= false;
 						break;
 					}
