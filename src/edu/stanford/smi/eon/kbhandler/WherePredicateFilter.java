@@ -101,6 +101,7 @@ public class WherePredicateFilter implements AbstractWhereFilter {
 					  logger.debug("IsDerivable holds: class="+classInstance.getName()+" has definition");
 					  for (Criterion def : definition) {
 						  try {
+							  //For n-ary criteria, do not need to evaluate all of subcriteria. Modified 2017/07/12
 							  criteriaEvaluation = def.evaluate(guidelineManager, false);
 							  if (criteriaEvaluation !=null) {
 								  logger.debug("IsDerivable holds: class="+classInstance.getName()+ " "+def.getBrowserText()+
