@@ -79,6 +79,11 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		return ((Instance) ModelUtilities.getOwnSlotValue(this, "activities_to_modify"));
 	}
 
+	public void setactivity_spec_candidateValue(Instance activity_spec_candidate) {
+		ModelUtilities.setOwnSlotValue(this, "activity_spec_candidate", activity_spec_candidate);	}
+	public Instance getactivity_spec_candidateValue() {
+		return ((Instance) ModelUtilities.getOwnSlotValue(this, "activity_spec_candidate"));
+	}
 	public void setactivity_specValue(Cls activity_spec) {
 		ModelUtilities.setOwnSlotValue(this, "activity_spec", activity_spec);	}
 	public Cls getactivity_specValue() {
@@ -91,14 +96,14 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 	 * 	(e.g., all instances of Medication) and excluded_activities. Using an activities_to_modify expression is preferred.
 	 */
 
-	public Collection activitiesToModify(GuidelineInterpreter interpreter) {
+	public Collection<String> activitiesToModify(GuidelineInterpreter interpreter) {
 		logger.debug("Evaluate_Modify_Activity.activitiesToModify");
-		Collection activitiesToModify = null;
+		Collection<String> activitiesToModify = null;
 		if (getactivities_to_modifyValue() != null) {
 			try {
 				activitiesToModify = evaluateActivitiesToModify(interpreter);
 			} catch (Exception e) {
-				logger.error("Problem evaluating activities to delete", e);
+				logger.error("Problem evaluating activities to delete query", e);
 
 			}
 		} else {
@@ -128,11 +133,11 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 
 	}
 
-	private Collection evaluateActivitiesToModify(GuidelineInterpreter interpreter)
+	private Collection<String> evaluateActivitiesToModify(GuidelineInterpreter interpreter)
 			throws PCA_Session_Exception {
 
 		logger.debug("Evaluate_Modify_Activity.evaluateActivitiesToModify ");
-		Collection activitiesToModifyCollection = null;
+		Collection<String> activitiesToModifyCollection = null;
 		Instance query = getactivities_to_modifyValue();
 		if (query == null) {
 			throw new PCA_Session_Exception("Null activity_to_modify in "+this.getName());
@@ -203,7 +208,77 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		if (!isRuledIn(interpreter) || (insufficientSpec()))
 			return;
 		else {
-			Collection activitiesToModify = activitiesToModify(interpreter);
+			Collection<String> activitiesToModify = activitiesToModify(interpreter);
+			if (getactivity_spec_candidateValue() == null) {
+				doActionWithoutActionSpecCandidateQuery(activitiesToModify, interpreter);
+			} else {
+				doActionWithActionSpecCandidateQuery(activitiesToModify, interpreter);
+			}
+		}
+	}
+	
+	private void doActionWithActionSpecCandidateQuery(Collection<String> activitiesToModify, GuidelineInterpreter interpreter) {
+		System.out.println("Making action spec candidate query");
+		Collection<Choice_Evaluation> changeEvaluations = new ArrayList<Choice_Evaluation>(); 
+		Collection<Instance> actionSpecCandidates = null;
+		try {
+			actionSpecCandidates = getActionSpecCandidates(interpreter);
+		} catch (Exception e) {
+			logger.error("No action spec candidates for "+this.getBrowserText());
+			return;
+		}
+		for (String activityToModify : activitiesToModify) {
+			Instance activitySpec = matchActivityToModifyWithActivitySpec(activityToModify, actionSpecCandidates, interpreter);
+			if (activitySpec == null) {
+				logger.error("No activity specification for activity to modify"+activityToModify);
+			} else {
+				Collection<Instance> dummyList = new ArrayList<Instance>();
+				dummyList.add(activitySpec);
+				Change_Attribute_Evaluation changeEval = evaluateModifyActivityIntensity(dummyList, interpreter, null, activityToModify);	
+				Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
+				if (changeEval != null) {
+					choiceEvaluation.change_attribute_eval(changeEval);
+					changeEvaluations.add(choiceEvaluation);
+				}
+			} 
+		}
+		addChangeEvaluation( changeEvaluations,  interpreter);
+	}
+	
+	private Collection<Instance>  getActionSpecCandidates(GuidelineInterpreter interpreter) 
+			throws PCA_Session_Exception {
+		Collection<Instance> actionSpecCandidates = null;
+		logger.debug("Evaluate_Modify_Activity.evaluateActivitiesToModify ");
+		Instance query = getactivity_spec_candidateValue();
+		if (query == null) {
+			throw new PCA_Session_Exception("Null activity spec candidate query in "+this.getName());
+		} else {
+			if (query instanceof PAL_Query)
+				actionSpecCandidates = ((PAL_Query)query).doQuery(interpreter);
+			else if (query instanceof Structured_Query)
+				actionSpecCandidates = ((Set_Expression)((Structured_Query)query).evaluate_expression(interpreter)).getset_elementsValue();
+			if (actionSpecCandidates == null)  {
+				logger.warn("No activity spec after evaluating "+query.getBrowserText());
+			}
+			return actionSpecCandidates;
+		}
+
+	}
+	
+	private Instance matchActivityToModifyWithActivitySpec(String activityToModify, Collection<Instance> actionSpecCandidates, GuidelineInterpreter interpreter) {
+		for (Instance actionSpecCandidate : actionSpecCandidates) {
+			// generic drug of Guideline Drug
+			Cls matchingCls = (Cls)(actionSpecCandidate.getOwnSlotValue((Slot)getactivity_spec_keyValue()));
+			//if activityToModify is a subclass of matchingCls
+			KnowledgeBase kb = interpreter.getKBmanager().getKB();
+			Cls activityToModifyCls = kb.getCls(activityToModify);
+			if (activityToModifyCls == (matchingCls) || activityToModifyCls.hasSuperclass(matchingCls))
+				return actionSpecCandidate;
+		}
+		return null;
+	}
+			
+	private void doActionWithoutActionSpecCandidateQuery(Collection<String> activitiesToModify, GuidelineInterpreter interpreter) {
 			Collection changeEvaluations = new ArrayList(); 
 			Cls activitySpecClass = (Cls) getactivity_specValue();    //e.g., Guideline_Drug
 			Slot activitySpecKey = (Slot)getactivity_spec_keyValue(); //e.g., drug_name
@@ -243,21 +318,25 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 									currentActivity+" activitySpec is null");
 						}
 					}
-					if (changeEvaluations.size ()> 0) {
-						logger.debug("Evaluate_Modify_Activity_Intensity.doAction: "+
-								"****Add evaluated choice number=" + changeEvaluations.size ());
-						Guideline_Activity_Evaluations modifyEvaluations =
-								new Guideline_Activity_Evaluations(
-										this.makeGuideline_Entity(interpreter.getCurrentGuidelineID()),
-										Evaluation_Type.change_attribute,
-										(Choice_Evaluation[])changeEvaluations.toArray(new Choice_Evaluation[0]),
-										interpreter.getCurrentGuidelineID());
-						interpreter.addEvaluatedChoice(modifyEvaluations);
-					} else logger.warn("Evaluate_Modify_Activity_Intensity.doAction: "+
-							"No dose change record");
+					addChangeEvaluation( changeEvaluations,  interpreter);
 
 
 		} //*/
+	
+	private void addChangeEvaluation(Collection changeEvaluations, GuidelineInterpreter interpreter) {
+		if (changeEvaluations.size ()> 0) {
+			logger.debug("Evaluate_Modify_Activity_Intensity.doAction: "+
+					"****Add evaluated choice number=" + changeEvaluations.size ());
+			Guideline_Activity_Evaluations modifyEvaluations =
+					new Guideline_Activity_Evaluations(
+							this.makeGuideline_Entity(interpreter.getCurrentGuidelineID()),
+							Evaluation_Type.change_attribute,
+							(Choice_Evaluation[])changeEvaluations.toArray(new Choice_Evaluation[0]),
+							interpreter.getCurrentGuidelineID());
+			interpreter.addEvaluatedChoice(modifyEvaluations);
+		} else logger.warn("Evaluate_Modify_Activity_Intensity.doAction: "+
+				"No dose change record");
+		
 	}
 
 
@@ -346,7 +425,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 				}
 				// if current activity level not is less than the maximum level
 				// then
-				if (changeToNextLevel(interpreter, currentActivityLevel, evaluateObject)) {
+				if ((currentActivityLevel == null) || (changeToNextLevel(interpreter, currentActivityLevel, evaluateObject))) {
 					Collection<Matched_Data> adverseReactionCollection  = null;
 					Collection<Matched_Data> stopControllableIntensifyConditionCollection = null;
 					Collection<Matched_Data> stopUncontrollableIntensifyConditionCollection = null;

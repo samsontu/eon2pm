@@ -81,6 +81,18 @@ public class Guideline_Drug extends Drug_Usage {
 		return ((Instance) ModelUtilities.getOwnSlotValue(this, "drug_usage"));
 	}
 
+	public void setincrease_dose_ceilingValue(float increase_dose_ceiling) {
+		ModelUtilities.setOwnSlotValue(this, "increase_dose_ceiling", new Float(increase_dose_ceiling));	}
+	public float getincrease_dose_ceilingValue() {
+		return ((Float) ModelUtilities.getOwnSlotValue(this, "increase_dose_ceiling")).floatValue();
+	}
+
+	public void setmax_recommended_doseValue(float max_recommended_dose) {
+		ModelUtilities.setOwnSlotValue(this, "max_recommended_dose", new Float(max_recommended_dose));	}
+	public float getmax_recommended_doseValue() {
+		return ((Float) ModelUtilities.getOwnSlotValue(this, "max_recommended_dose")).floatValue();
+	}
+
 	public void setstarting_doseValue(float starting_dose) {
 		ModelUtilities.setOwnSlotValue(this, "starting_dose", new Float(starting_dose));	}
 	public float getstarting_doseValue() {

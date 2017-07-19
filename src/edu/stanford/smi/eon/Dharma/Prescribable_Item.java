@@ -68,12 +68,6 @@ public class Prescribable_Item extends Activity_Specification {
 		return ((String) ModelUtilities.getOwnSlotValue(this, "daily_dose_unit"));
 	}
 
-	public void setmaximum_daily_doseValue(float maximum_daily_dose) {
-		ModelUtilities.setOwnSlotValue(this, "maximum_daily_dose", new Float(maximum_daily_dose));	}
-	public float getmaximum_daily_doseValue() {
-		return ((Float) ModelUtilities.getOwnSlotValue(this, "maximum_daily_dose")).floatValue();
-	}
-
 	public void setquantity_per_prescription_unitValue(String quantity_per_prescription_unit) {
 		ModelUtilities.setOwnSlotValue(this, "quantity_per_prescription_unit", quantity_per_prescription_unit);	}
 	public String getquantity_per_prescription_unitValue() {

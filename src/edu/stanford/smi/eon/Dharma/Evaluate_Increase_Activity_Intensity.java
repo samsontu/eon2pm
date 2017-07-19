@@ -89,6 +89,7 @@ public class Evaluate_Increase_Activity_Intensity extends Evaluate_Modify_Activi
 
   Cls getNextLevel(GuidelineInterpreter interpreter,
     Cls currentActivityLevel, Instance evaluateObject) throws Exception {
+	if (currentActivityLevel == null) return null;
     Slot next = getKnowledgeBase().getSlot("next");
     if (next != null) {
       Object nextLevel = currentActivityLevel.getOwnSlotValue(next);
