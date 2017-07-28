@@ -411,7 +411,7 @@ public  class ClientUtil {
 					case Evaluation_Type._change_attribute:
 						itsWriter.println("<li>"+evaluation.change_attribute_eval().name+"(change "+
 								evaluation.change_attribute_eval().attribute_name+ ": "+
-								evaluation.change_attribute_eval().change_direction+ " to " +
+								evaluation.change_attribute_eval().change_direction+ (evaluation.change_attribute_eval().level != "" ? " to ": "") +
 								evaluation.change_attribute_eval().level +"<ul><li>" +
 								evaluation.change_attribute_eval().preference);
 						hasComment = printEvaluation(itsWriter, kb, evaluation.change_attribute_eval().beneficial_interactions, 
