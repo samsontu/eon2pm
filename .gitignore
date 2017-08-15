@@ -7,3 +7,7 @@ bin/*
 logs/*
 protege.properties
 *.class
+
+*.class
+
+*.class
