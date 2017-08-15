@@ -1,0 +1,1 @@
+./GenericATHENA.sh ATHENA_GlycemicControl.pprj ini/DMGlycemicControlTestingEnvironment.ini
