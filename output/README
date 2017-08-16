@@ -1,0 +1,1 @@
+The "output" directory is where the output of running the execution engine in Protege test environment is stored. Files in this directory should not be tracked by git.
