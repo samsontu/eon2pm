@@ -54,8 +54,8 @@ public class WhereComparisonFilter implements AbstractWhereFilter {
 	public boolean evaluate(Instance instance, GuidelineInterpreter guidelineManager) throws KnowledgeBaseException {
 		KnowledgeBase kb = instance.getKnowledgeBase();
 		if (value == null) {
-			logger.warn("WhereComparisonFilter.evaluate instance: "+ this.toString()+ " attribute: "+attribute+
-				" opeator: "+ comparison_operator + " has null value");
+//			logger.warn("WhereComparisonFilter.evaluate instance: "+ this.toString()+ " attribute: "+attribute+
+//				" operator: "+ comparison_operator + " has null value");
 			return false;
 //			throw new KnowledgeBaseException("WhereComparisonFilter.evaluate attribute: "+attribute+
 //					" opeator: "+ comparison_operator + " has null value");

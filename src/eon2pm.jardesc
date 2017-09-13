@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="MacRoman" standalone="no"?>
 <jardesc>
-    <jar path="eon2pm/lib/edu.stanford.smi.eon.pca/eonpm.jar"/>
+    <jar path="eon2pm/lib/plugins/edu.stanford.smi.eon.pca/eonpm.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/eon2pm/src/eon2pm.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>

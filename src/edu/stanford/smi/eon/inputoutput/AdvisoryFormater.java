@@ -342,9 +342,9 @@ public class AdvisoryFormater {
 				rel.setRelation_type("do_not_add_uncontrollable_condition");
 				drugRels.add(rel);
 			}
-		if (drugRels.isEmpty())
-			return null;
-		else
+//		if (drugRels.isEmpty())
+//			return null;
+//		else
 			return drugRels;
 	}
 		
