@@ -1,13 +1,8 @@
 output/*
-data/*
 kbs/*
 .classpath
 .project
 bin/*
 logs/*
 protege.properties
-*.class
-
-*.class
-
 *.class
