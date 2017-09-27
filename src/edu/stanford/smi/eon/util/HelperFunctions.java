@@ -296,17 +296,21 @@ public class HelperFunctions {
 				currentDrug,
 				new Guideline_Entity("","","",""),
 				currentDrug,
-				new Matched_Data[0],
-				new Matched_Data[0],
-				new Matched_Data[0],
-				new Matched_Data[0],
-				new Matched_Data[0],
-				new Matched_Data[0],
-				new Matched_Data[0],
-				Truth_Value._false,
-				new Action_Spec_Record[0],
-				Preference.neutral, 
-				null, 0);
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    new Matched_Data[0],
+			    Truth_Value._false,
+			    new Action_Spec_Record[0],
+			    Preference.neutral,
+			    null,
+			    0);
 	}
 	/*
    public static void main(String[] argv) {

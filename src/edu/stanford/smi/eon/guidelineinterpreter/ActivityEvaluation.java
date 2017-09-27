@@ -27,23 +27,24 @@ import java.io.Serializable;
 
 public class ActivityEvaluation implements Serializable {
 
-  public Collection beneficialInteractions =null;
-  public Collection compellingIndications = null;
-  public Collection contraindications = null;
-  public Collection harmful_interactions = null;
-  public Collection relative_contraindications = null;
-  public Collection relative_indications = null;
-  public Collection stop_add_controllable_conditions = null;
-  public Collection stop_add_uncontrollable_conditions = null;
-  public Collection stop_intensify_conditions = null;
-  public Collection side_effects = null;
-  public Collection current_use = null;
-  public Truth_Value prior_use = Truth_Value.unknown;
-  public Truth_Value at_maximum_intensity = Truth_Value.unknown;
-  public Truth_Value at_minimum_intensity = Truth_Value.unknown;
+	public Collection is_first_line_drug_for =null;
+	public Collection is_second_line_drug_for = null;
+	public Collection is_third_line_drug_for = null;
+	public Collection beneficialInteractions =null;
+	public Collection compellingIndications = null;
+	public Collection contraindications = null;
+	public Collection harmful_interactions = null;
+	public Collection relative_contraindications = null;
+	public Collection relative_indications = null;
+	public Collection stop_add_controllable_conditions = null;
+	public Collection stop_add_uncontrollable_conditions = null;
+	public Collection stop_intensify_conditions = null;
+	public Collection side_effects = null;
+	public Collection current_use = null;
+	public Truth_Value prior_use = Truth_Value.unknown;
+	public Truth_Value at_maximum_intensity = Truth_Value.unknown;
+	public Truth_Value at_minimum_intensity = Truth_Value.unknown;
 
-  public ActivityEvaluation() {
-  }
-
-  
+	public ActivityEvaluation() {
+	}
 }

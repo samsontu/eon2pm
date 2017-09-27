@@ -45,6 +45,24 @@ public class Drug_Usage extends Activity_Specification {
 		super(kb, id);
 	}
 
+	public void setis_first_line_drug_forValue(Collection is_first_line_drug_for) {
+		ModelUtilities.setOwnSlotValues(this, "is_first_line_drug_for", is_first_line_drug_for);	}
+	public Collection getis_first_line_drug_forValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "is_first_line_drug_for");
+	}
+
+	public void setis_second_line_drug_forValue(Collection is_second_line_drug_for) {
+		ModelUtilities.setOwnSlotValues(this, "is_second_line_drug_for", is_second_line_drug_for);	}
+	public Collection getis_second_line_drug_forValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "is_second_line_drug_for");
+	}
+
+	public void setis_third_line_drug_forValue(Collection is_third_line_drug_for) {
+		ModelUtilities.setOwnSlotValues(this, "is_third_line_drug_for", is_third_line_drug_for);	}
+	public Collection getis_third_line_drug_forValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "is_third_line_drug_for");
+	}
+
 	public void setDrug_Partners_To_AvoidValue(Collection Drug_Partners_To_Avoid) {
 		ModelUtilities.setOwnSlotValues(this, "Drug_Partners_To_Avoid", Drug_Partners_To_Avoid);	}
 	public Collection getDrug_Partners_To_AvoidValue(){
@@ -212,6 +230,12 @@ public class Drug_Usage extends Activity_Specification {
 				getComplication_FactorValue(), currentProblems);
 		logger.debug("Drug_Usage evaluate: start "+this.getDrug_Class_NameValue());
 		if (complicatingFactor.isEmpty()) {
+			evaluation.is_first_line_drug_for =interpreter.matchData("",
+					getis_first_line_drug_forValue(), currentProblems);
+			evaluation.is_second_line_drug_for = interpreter.matchData("",
+					getis_second_line_drug_forValue(), currentProblems);
+			evaluation.is_third_line_drug_for = interpreter.matchData("",
+					getis_third_line_drug_forValue(), currentProblems);
 			evaluation.beneficialInteractions =interpreter.matchData("",
 					getDrug_PartnersValue(), currentMeds);
 			evaluation.compellingIndications = interpreter.matchData("",
@@ -331,6 +355,9 @@ public class Drug_Usage extends Activity_Specification {
 					prettyName+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), 
 					prettyName, 
 					this.makeGuideline_Entity(interpreter.guideline.getName()), getDrug_Class_NameValue().getName(),
+					(Matched_Data[]) eval.is_first_line_drug_for.toArray(new Matched_Data[0]),
+					(Matched_Data[]) eval.is_second_line_drug_for.toArray(new Matched_Data[0]) ,
+					(Matched_Data[]) eval.is_third_line_drug_for.toArray(new Matched_Data[0]),
 					(Matched_Data[]) eval.beneficialInteractions.toArray(new Matched_Data[0]),
 					(Matched_Data[]) eval.compellingIndications.toArray(new Matched_Data[0]),
 					(Matched_Data[]) eval.contraindications.toArray(new Matched_Data[0]),
@@ -465,6 +492,9 @@ public class Drug_Usage extends Activity_Specification {
 						currentDrug,
 						this.makeGuideline_Entity(interpreter.guideline.getName()),
 						getDrug_Class_NameValue().getName(),
+						(Matched_Data[]) eval.is_first_line_drug_for.toArray(new Matched_Data[0]),
+						(Matched_Data[]) eval.is_second_line_drug_for.toArray(new Matched_Data[0]) ,
+						(Matched_Data[]) eval.is_third_line_drug_for.toArray(new Matched_Data[0]),
 						(Matched_Data[]) eval.beneficialInteractions.toArray(new Matched_Data[0]),
 						(Matched_Data[]) eval.compellingIndications.toArray(new Matched_Data[0]),
 						(Matched_Data[]) eval.contraindications.toArray(new Matched_Data[0]),

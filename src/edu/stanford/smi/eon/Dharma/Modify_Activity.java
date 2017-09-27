@@ -94,6 +94,9 @@ private Direction getDirection(String direction) {
 public void doAction (Action_To_Choose action,
 	    Guideline_Action_Choices currentDecision,
 	    GuidelineInterpreter interpreter) {
+	Matched_Data[] is_first_line_drug_for =null;
+	Matched_Data[] is_second_line_drug_for =null;
+	Matched_Data[] is_third_line_drug_for =null;
 	Matched_Data[] beneficial_interactions =null;
 	Matched_Data[] compelling_indications=null;
 	Matched_Data[] contraindications=null;
@@ -137,22 +140,27 @@ public void doAction (Action_To_Choose action,
 				logger.error("Modify_Activity.doAction: Exception evaluating (((Expression)getvalueValue()).evaluate_expression(interpreter)", e);
 					        	
 	        }
+	        
 	        changeEval = new Change_Attribute_Evaluation("",
-	                    currentActivity,
-	                    interpreter.getCurrentGuidelineID(),
-	                    getattributeValue(),
-	                    level,
-						beneficial_interactions,
-						compelling_indications,
-						contraindications,
-						harmful_interactions,
-						relative_contraindications,
-						relative_indications,
-	                    new Matched_Data[0],
-	                    new Matched_Data[0],
-	                    getDirection(getdirectionValue()), //Truth_Value._true,
-	                    new Action_Spec_Record[0],
-	                    Preference.neutral, this.getfine_grain_priorityValue());
+					currentActivity,
+					interpreter.getCurrentGuidelineID(),
+					getattributeValue(),
+					level,
+					is_first_line_drug_for,
+					is_second_line_drug_for,
+					is_third_line_drug_for,
+					beneficial_interactions,
+					compelling_indications,
+					contraindications,
+					harmful_interactions,
+					relative_contraindications,
+					relative_indications,
+					null,  //side_effects
+					null, //do_not_intensify_conditions
+					getDirection(getdirectionValue()), //Truth_Value._true,
+					new Action_Spec_Record[0],
+					Preference.neutral, this.getfine_grain_priorityValue());
+	        
 	         String patient_id = interpreter.getDBmanager().getCaseID();
 	         Medication addedMed = (Medication)interpreter.getDBmanager().createInstance("Medication");
 	         addedMed.setSlotsValues(0, "",

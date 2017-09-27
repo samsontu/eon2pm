@@ -122,9 +122,24 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 					}
 				} else {
 					delEval = new Delete_Evaluation("",
-							currentActivity, this.makeGuideline_Entity(interpreter.guideline.getName()),
-							null, new Matched_Data[0], new Matched_Data[0], new Matched_Data[0],new Matched_Data[0], new Matched_Data[0],new Matched_Data[0], new Matched_Data[0],Truth_Value._true, 
-							null, Preference.preferred, null, 0);
+						    currentActivity,
+						    this.makeGuideline_Entity(interpreter.guideline.getName()),
+						    null,
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    new Matched_Data[0],
+						    Truth_Value._true,
+						    null,
+						    Preference.preferred,
+						    null,
+						    0);
 				}
 				currentActivitiesToStop.add(delEval);
 			}
