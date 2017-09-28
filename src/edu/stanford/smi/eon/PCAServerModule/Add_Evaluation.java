@@ -60,6 +60,9 @@ final public class Add_Evaluation implements java.io.Serializable {
   public java.lang.String name; //drug class pretty name
   public edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id;
   public java.lang.String activity_to_start;  //drug_class :NAME
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications;
@@ -82,7 +85,10 @@ final public class Add_Evaluation implements java.io.Serializable {
     java.lang.String name,
     edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id,
     java.lang.String activity_to_start,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for,
+     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions,
@@ -101,6 +107,9 @@ final public class Add_Evaluation implements java.io.Serializable {
     this.name = name;
     this.guideline_id = guideline_id;
     this.activity_to_start = activity_to_start;
+    this.is_first_line_drug_for = is_first_line_drug_for;
+    this.is_second_line_drug_for = is_second_line_drug_for;
+    this.is_third_line_drug_for = is_third_line_drug_for;
     this.beneficial_interactions = beneficial_interactions;
     this.compelling_indications = compelling_indications;
     this.contraindications = contraindications;

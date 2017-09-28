@@ -54,61 +54,69 @@ import java.util.Collection;
     };
 </pre>
 </p>
-*/
+ */
 final public class Delete_Evaluation implements java.io.Serializable {
-  public java.lang.String description;
-  public java.lang.String name;
-  public edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id;
-  public java.lang.String activity_to_delete;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications;
-  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] side_effects;
-  public edu.stanford.smi.eon.PCAServerModule.Truth_Value prior_use;
-  public edu.stanford.smi.eon.PCAServerModule.Preference preference;
-  public edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages;
-  public Collection<String> specific_drug;
-  public int fine_grain_priority;
-  
-  public Delete_Evaluation() {
-  }
-  public Delete_Evaluation(
-    java.lang.String description,
-    java.lang.String name,
-    edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id,
-    java.lang.String activity_to_delete,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications,
-    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] side_effects,
-    edu.stanford.smi.eon.PCAServerModule.Truth_Value prior_use,
-    edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages,
-    edu.stanford.smi.eon.PCAServerModule.Preference preference,
-    Collection<String> specific_drug,
-    int fine_grain_priority
-  ) {
-    this.description = description;
-    this.name = name;
-    this.guideline_id = guideline_id;
-    this.activity_to_delete = activity_to_delete;
-    this.beneficial_interactions = beneficial_interactions;
-    this.compelling_indications = compelling_indications;
-    this.contraindications = contraindications;
-    this.harmful_interactions = harmful_interactions;
-    this.relative_contraindications = relative_contraindications;
-    this.relative_indications = relative_indications;
-    this.side_effects = side_effects;
-    this.prior_use = prior_use;
-    this.messages = messages;
-    this.preference = preference;
-    this.specific_drug = specific_drug;
-    this.fine_grain_priority = fine_grain_priority;
-  }
+	public java.lang.String description;
+	public java.lang.String name;
+	public edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id;
+	public java.lang.String activity_to_delete;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications;
+	public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] side_effects;
+	public edu.stanford.smi.eon.PCAServerModule.Truth_Value prior_use;
+	public edu.stanford.smi.eon.PCAServerModule.Preference preference;
+	public edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages;
+	public Collection<String> specific_drug;
+	public int fine_grain_priority;
+
+	public Delete_Evaluation(
+			java.lang.String description,
+			java.lang.String name,
+			edu.stanford.smi.eon.PCAServerModule.Guideline_Entity guideline_id,
+			java.lang.String activity_to_delete,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] harmful_interactions,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_contraindications,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications,
+			edu.stanford.smi.eon.PCAServerModule.Matched_Data[] side_effects,
+			edu.stanford.smi.eon.PCAServerModule.Truth_Value prior_use,
+			edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages,
+			edu.stanford.smi.eon.PCAServerModule.Preference preference,
+			Collection<String> specific_drug,
+			int fine_grain_priority
+			) {
+		this.description = description;
+		this.name = name;
+		this.guideline_id = guideline_id;
+		this.activity_to_delete = activity_to_delete;
+		this.is_first_line_drug_for = is_first_line_drug_for;
+		this.is_second_line_drug_for = is_second_line_drug_for;
+		this.is_third_line_drug_for = is_third_line_drug_for;
+		this.beneficial_interactions = beneficial_interactions;
+		this.compelling_indications = compelling_indications;
+		this.contraindications = contraindications;
+		this.harmful_interactions = harmful_interactions;
+		this.relative_contraindications = relative_contraindications;
+		this.relative_indications = relative_indications;
+		this.side_effects = side_effects;
+		this.prior_use = prior_use;
+		this.messages = messages;
+		this.preference = preference;
+		this.specific_drug = specific_drug;
+		this.fine_grain_priority = fine_grain_priority;
+	}
+
 
 }

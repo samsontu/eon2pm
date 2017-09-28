@@ -53,6 +53,9 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
   public java.lang.String guideline_id;
   public java.lang.String attribute_name;
   public java.lang.String level;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications;
@@ -74,6 +77,9 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     java.lang.String guideline_id,
     java.lang.String attribute_name,
     java.lang.String level,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_first_line_drug_for,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_second_line_drug_for,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] is_third_line_drug_for,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] beneficial_interactions,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] compelling_indications,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] contraindications,
@@ -92,6 +98,9 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     this.guideline_id = guideline_id;
     this.attribute_name = attribute_name;
     this.level = level;
+    this.is_first_line_drug_for = is_first_line_drug_for;
+    this.is_second_line_drug_for = is_second_line_drug_for;
+    this.is_third_line_drug_for = is_third_line_drug_for;
     this.beneficial_interactions = beneficial_interactions;
     this.compelling_indications=compelling_indications;
     this.contraindications =contraindications;
