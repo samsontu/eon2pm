@@ -6,3 +6,5 @@ bin/*
 logs/*
 protege.properties
 *.class
+*.log
+

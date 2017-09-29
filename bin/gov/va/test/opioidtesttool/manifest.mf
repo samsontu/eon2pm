@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: gov.va.test.opioidtesttool.TestingEnvironment
-
-Name: gov.va.test.opioidtesttool.TestingEnvironment
-Tab-Widget: True
-
-
