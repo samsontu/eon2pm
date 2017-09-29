@@ -46,21 +46,21 @@ public class Drug_Usage extends Activity_Specification {
 	}
 
 	public void setis_first_line_drug_forValue(Collection is_first_line_drug_for) {
-		ModelUtilities.setOwnSlotValues(this, "is_first_line_drug_for", is_first_line_drug_for);	}
+		ModelUtilities.setOwnSlotValues(this, "is_first-line_drug_for", is_first_line_drug_for);	}
 	public Collection getis_first_line_drug_forValue(){
-		return  ModelUtilities.getOwnSlotValues(this, "is_first_line_drug_for");
+		return  ModelUtilities.getOwnSlotValues(this, "is_first-line_drug_for");
 	}
 
 	public void setis_second_line_drug_forValue(Collection is_second_line_drug_for) {
-		ModelUtilities.setOwnSlotValues(this, "is_second_line_drug_for", is_second_line_drug_for);	}
+		ModelUtilities.setOwnSlotValues(this, "is_second-line_drug_for", is_second_line_drug_for);	}
 	public Collection getis_second_line_drug_forValue(){
-		return  ModelUtilities.getOwnSlotValues(this, "is_second_line_drug_for");
+		return  ModelUtilities.getOwnSlotValues(this, "is_second-line_drug_for");
 	}
 
 	public void setis_third_line_drug_forValue(Collection is_third_line_drug_for) {
-		ModelUtilities.setOwnSlotValues(this, "is_third_line_drug_for", is_third_line_drug_for);	}
+		ModelUtilities.setOwnSlotValues(this, "is_third-line_drug_for", is_third_line_drug_for);	}
 	public Collection getis_third_line_drug_forValue(){
-		return  ModelUtilities.getOwnSlotValues(this, "is_third_line_drug_for");
+		return  ModelUtilities.getOwnSlotValues(this, "is_third-line_drug_for");
 	}
 
 	public void setDrug_Partners_To_AvoidValue(Collection Drug_Partners_To_Avoid) {
@@ -277,7 +277,8 @@ public class Drug_Usage extends Activity_Specification {
 	}
 
 
-	public Add_Evaluation evaluateAdd (GuidelineInterpreter interpreter, int fine_grain_priority, Delete_Evaluation delEval)
+	public Add_Evaluation evaluateAdd (GuidelineInterpreter interpreter, int fine_grain_priority, 
+			Delete_Evaluation delEval, Collection<Slot> recommendationBasis)
 			throws PCA_Session_Exception {
 		Collection evaluatedAddCollateralActions = evaluateCollateralActions(interpreter, getCollateralActionsByType("Recommend_Add"));
 		Collection evaluatedBlockedCollateralActions = evaluateCollateralActions(interpreter,getCollateralActionsByType("Blocked_Add"));
@@ -290,8 +291,7 @@ public class Drug_Usage extends Activity_Specification {
 					(addEval.prior_use.equals(Truth_Value._true) ) || 
 					(addEval.do_not_start_uncontrollable_conditions.length > 0))
 				addEval.preference = Preference.ruled_out;
-			else if ((addEval.compelling_indications.length > 0) ||
-					(addEval.relative_indications.length > 0)) {
+			else if (isRecommended(addEval, recommendationBasis, interpreter)) {
 				if (addEval.do_not_start_controllable_conditions.length > 0) {
 					addMedicationInstance(interpreter, addEval, "Blocked_Add");
 					addEval.preference = Preference.blocked;
@@ -308,6 +308,54 @@ public class Drug_Usage extends Activity_Specification {
 			return addEval;
 		}
 		else  return null;
+	}
+	
+	public boolean isRecommended(Add_Evaluation addEval, Collection<Slot> recommendationBasis,
+			GuidelineInterpreter interpreter) {
+		boolean isRecommended = false;
+		KnowledgeBase kb = interpreter.getKBmanager().getKB();
+		Collection<Slot> augmentedRecommendationBasis = new ArrayList<Slot>();
+		if (recommendationBasis.isEmpty()) {
+			augmentedRecommendationBasis.add(kb.getSlot("Compelling_Indications"));
+			augmentedRecommendationBasis.add(kb.getSlot("Relative_Indications"));
+		} else {
+			augmentedRecommendationBasis.addAll(recommendationBasis);
+		}
+		for (Slot recommBasis : augmentedRecommendationBasis) {
+			switch(recommBasis.getName()) {
+			case "Compelling_Indications" :
+				if (addEval.compelling_indications.length > 0) {
+					isRecommended = true;
+					addEval.recommendationBasis="compelling indication";
+					break;
+				}
+			case "Relative_Indications" :
+				if (addEval.relative_indications.length > 0) {
+					isRecommended = true;
+					addEval.recommendationBasis="relative indication";
+					break;
+				}
+			case "is_first-line_drug_for" :
+				if (addEval.is_first_line_drug_for.length > 0) {
+					isRecommended = true;
+					addEval.recommendationBasis="is first-line drug for";
+					break;
+				}
+			case "is_second-line_drug_for" :
+				if (addEval.is_second_line_drug_for.length > 0) {
+					isRecommended = true;
+					addEval.recommendationBasis="is second-line drug for";
+					break;
+				}
+			case "is_third-line_drug_for" :
+				if (addEval.is_third_line_drug_for.length > 0) {
+					isRecommended = true;
+					addEval.recommendationBasis="is third-line drug for";
+					break;
+				}
+			}
+		}
+		return isRecommended;
 	}
 	
 	public Add_Evaluation processAddActivity (GuidelineInterpreter interpreter, int fine_grain_priority, Delete_Evaluation delEval) {
@@ -369,7 +417,7 @@ public class Drug_Usage extends Activity_Specification {
 							(Matched_Data[]) eval.side_effects.toArray(new Matched_Data[0]),
 							(Matched_Data[])eval.stop_add_controllable_conditions.toArray(new Matched_Data[0]),
 							(Matched_Data[])eval.stop_add_uncontrollable_conditions.toArray(new Matched_Data[0]),
-							Preference.neutral, getPreferredDrugs(drugs), fine_grain_priority);
+							Preference.neutral, getPreferredDrugs(drugs), fine_grain_priority, null);
 			/*			Medication addedMed =  (Medication)dataHandler.createInstance("Medication");
 			addedMed.setSlotsValues( (float)0.0,"",
 					getDrug_Class_NameValue().getName(), 0, "",
@@ -573,7 +621,8 @@ public class Drug_Usage extends Activity_Specification {
 
 	static Collection  evaluateSubstitute(GuidelineInterpreter interpreter,
 			Delete_Evaluation delEval,
-			Collection<Drug_Usage> substitutionCandidates, int fine_grain_priority )
+			Collection<Drug_Usage> substitutionCandidates, int fine_grain_priority, 
+			Collection<Slot>  recommendationBasis)
 					throws PCA_Session_Exception {
 
 		//returns a collection of ADD_Evaluations
@@ -597,7 +646,7 @@ public class Drug_Usage extends Activity_Specification {
 		for (Drug_Usage drugToAdd : substitutionCandidates){
 			//Drug_Usage drugToAdd = (Drug_Usage)candidate.next();
 			logger.debug("Drug_Usage.evaluateSubstitute: current drug contraindicated, checking " + drugToAdd.getlabelValue());
-			addEval = drugToAdd.evaluateAdd(interpreter, fine_grain_priority, delEval);
+			addEval = drugToAdd.evaluateAdd(interpreter, fine_grain_priority, delEval, recommendationBasis);
 			/*				if (addEval != null) {
 					logger.debug("Drug_Usage.evaluateSubstitute: addEval 0 candidate = " +
 							addEval.activity_to_start + " compelling_ind # "+

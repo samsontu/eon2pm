@@ -263,7 +263,8 @@ public class AdvisoryFormater {
 		toAdd.setDrug_class(addEval.name);
 		toAdd.setDrug_to_add_string(addEval.description);
 		toAdd.setFine_grain_priority(addEval.fine_grain_priority);
-		Collection<Evaluated_Drug_Relation> evalDrugRels = translateEvaluatedDrugRelations(addEval.compelling_indications,
+		Collection<Evaluated_Drug_Relation> evalDrugRels = translateEvaluatedDrugRelations(addEval.is_first_line_drug_for,
+				addEval.is_second_line_drug_for, addEval.is_third_line_drug_for, addEval.compelling_indications,
 				addEval.relative_indications, addEval.contraindications, addEval.relative_contraindications, addEval.beneficial_interactions,
 				addEval.harmful_interactions, addEval.side_effects, addEval.do_not_start_controllable_conditions, addEval.do_not_start_uncontrollable_conditions);
 		if ((evalDrugRels != null) && (!evalDrugRels.isEmpty()))
@@ -271,6 +272,9 @@ public class AdvisoryFormater {
 	}
 
 	private static Collection<Evaluated_Drug_Relation> translateEvaluatedDrugRelations(
+			Matched_Data[] is_first_line_drug_for,
+			Matched_Data[] is_second_line_drug_for,
+			Matched_Data[] is_third_line_drug_for,
 			Matched_Data[] compelling_indications,
 			Matched_Data[] relative_indications,
 			Matched_Data[] contraindications,
@@ -281,71 +285,46 @@ public class AdvisoryFormater {
 			Matched_Data[] do_not_start_controllable_conditions,
 			Matched_Data[] do_not_start_uncontrollable_conditions) {
 		Collection<Evaluated_Drug_Relation> drugRels = new ArrayList<Evaluated_Drug_Relation>();
+		for (Matched_Data source : is_first_line_drug_for) {
+			drugRels.add(createRelation( source, "is_first_line_drug_for"));		}
+		for (Matched_Data source : is_third_line_drug_for) {
+			drugRels.add(createRelation( source, "is_second_line_drug_for"));		}
+		for (Matched_Data source : is_second_line_drug_for) {
+			drugRels.add(createRelation( source, "is_third_line_drug_for"));		}
 		for (Matched_Data source : compelling_indications) {
-			//System.out.println("compelling indication: "+ getCondition(source)) ;
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("compelling_indication");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "compelling_indications"));		}
 		for (Matched_Data source : relative_indications) {
-			//System.out.println("relative indication: "+ getCondition(source)) ;
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("relative_indication");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "relative_indications"));		}
 		for (Matched_Data source : contraindications) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("strong_contraindication");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "contraindications"));		}
 		for (Matched_Data source : relative_contraindications) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("relative_contraindication");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "relative_contraindications"));		}
 		for (Matched_Data source : good_drug_partners) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("good_drug_partner");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "good_drug_partners"));		}
 		for (Matched_Data source : bad_drug_partners) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			rel.setRelation_type("bad_drug_partner");
-			drugRels.add(rel);
-		}
+			drugRels.add(createRelation( source, "bad_drug_partners"));		}
 		for (Matched_Data source : side_effects) {
-			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-			rel.setCondition_or_drug(getCondition(source));
-			// ToDo
+			Evaluated_Drug_Relation rel = createRelation( source, "adverse_reaction");
 			rel.setSubstance(getSubstance(source));
-			rel.setRelation_type("adverse_reaction");
-			drugRels.add(rel);
-		}
+			drugRels.add(rel);		}
 		if (do_not_start_controllable_conditions != null) {
 			for (Matched_Data source : do_not_start_controllable_conditions) {
-				Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-				rel.setCondition_or_drug(getCondition(source));
-				rel.setRelation_type("do_not_add_controllable_condition");
-				drugRels.add(rel);
-			}
+				drugRels.add(createRelation( source, "do_not_add_controllable_condition"));}
 		}
 		if (do_not_start_uncontrollable_conditions != null)
 			for (Matched_Data source : do_not_start_uncontrollable_conditions) {
-				Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
-				rel.setCondition_or_drug(getCondition(source));
-				rel.setRelation_type("do_not_add_uncontrollable_condition");
-				drugRels.add(rel);
-			}
+				drugRels.add(createRelation( source, "do_not_add_uncontrollable_condition"));}
 //		if (drugRels.isEmpty())
 //			return null;
 //		else
-			return drugRels;
+		return drugRels;
+	}
+	
+	private static Evaluated_Drug_Relation  createRelation(Matched_Data source, String relName) {
+		Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
+		rel.setCondition_or_drug(getCondition(source));
+		rel.setRelation_type(relName);
+		return rel;
 	}
 		
 	private static String getCondition(Matched_Data source) {
@@ -386,7 +365,8 @@ public class AdvisoryFormater {
 			toDelete.setAssociated_substitution_drug(replacing);
 			toDelete.setDrug_class(delEval.activity_to_delete);
 			toDelete.setFine_grain_priority(delEval.fine_grain_priority);
-			Collection<Evaluated_Drug_Relation> evalDrugRels = translateEvaluatedDrugRelations(delEval.compelling_indications,
+			Collection<Evaluated_Drug_Relation> evalDrugRels = translateEvaluatedDrugRelations(delEval.is_first_line_drug_for,
+					delEval.is_second_line_drug_for, delEval.is_third_line_drug_for, delEval.compelling_indications,
 					delEval.relative_indications, delEval.contraindications, delEval.relative_contraindications, delEval.beneficial_interactions,
 					delEval.harmful_interactions, delEval.side_effects, null, null);
 			if (evalDrugRels != null && !evalDrugRels.isEmpty())
@@ -400,7 +380,8 @@ public class AdvisoryFormater {
 	private static void setChangeDoseEvaluation(Increase_Decrease_Dose_Recommendation toChange, Change_Attribute_Evaluation changeEval) {
 		toChange.setPreference(changeEval.preference.toString());
 		toChange.setFine_grain_priority(changeEval.fine_grain_priority);
-		Collection<Evaluated_Drug_Relation> drugRels = translateEvaluatedDrugRelations(changeEval.compelling_indications,
+		Collection<Evaluated_Drug_Relation> drugRels = translateEvaluatedDrugRelations(changeEval.is_first_line_drug_for,
+				changeEval.is_second_line_drug_for, changeEval.is_third_line_drug_for, changeEval.compelling_indications,
 				changeEval.relative_indications, changeEval.contraindications, changeEval.relative_contraindications, changeEval.beneficial_interactions,
 				changeEval.harmful_interactions, changeEval.adverse_reactions, null, null);
 		// add adverse reactions to specific drug

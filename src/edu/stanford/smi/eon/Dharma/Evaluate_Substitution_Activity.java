@@ -83,6 +83,12 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 	public Cls getactivity_specValue() {
 		return ((Cls) ModelUtilities.getOwnSlotValue(this, "activity_spec"));
 	}
+	
+	public void setrecommendation_basisValue(Collection recommendationBais) {
+		ModelUtilities.setOwnSlotValues(this, "recommendation_basis", recommendationBais);	}
+	public Collection getrecommendation_basisValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "recommendation_basis");
+	}
 	// __Code above is automatically generated. Do not change
 
 	private class Substitution_Pair {
@@ -256,7 +262,8 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 					try {
 						// returns a collection of add_evaluations
 						evaluatedSubs = Drug_Usage.evaluateSubstitute(interpreter, activitiesToStop[i],
-								alternativeWOCurrentActivities, this.getfine_grain_priorityValue());
+								alternativeWOCurrentActivities, this.getfine_grain_priorityValue(),
+								this.getrecommendation_basisValue());
 					} catch (Exception e) {
 						logger.error(e.getMessage(), e);
 					}

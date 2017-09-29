@@ -60,6 +60,11 @@ public class Evaluate_Start_Activity extends Evaluate_Activity_Act {
 	public Collection getalternativesValue(){
 		return  ModelUtilities.getOwnSlotValues(this, "alternatives");
 	}
+	public void setrecommendation_basisValue(Collection recommendationBais) {
+		ModelUtilities.setOwnSlotValues(this, "recommendation_basis", recommendationBais);	}
+	public Collection getrecommendation_basisValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "recommendation_basis");
+	}
 	// __Code above is automatically generated. Do not change
 
 	public void doAction(
@@ -80,8 +85,9 @@ public class Evaluate_Start_Activity extends Evaluate_Activity_Act {
 			}
 		}
 
-		// each item in alternatives is a Drug Indication.
+		// each item in alternatives is a Drug Usage.
 		// each item in addEvaluation is an Add_Evaluation structure
+		Collection<Slot> recommendationBais = getrecommendation_basisValue();
 		Collection alternatives = getalternativesValue();
 		List addEvaluations = new ArrayList();
 		// addEvaluations is a collection of Choice_Evaluation instances
@@ -89,7 +95,8 @@ public class Evaluate_Start_Activity extends Evaluate_Activity_Act {
 			Drug_Usage activity = (Drug_Usage) i.next();
 			Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
 			try {
-				Add_Evaluation addEval =  activity.evaluateAdd(interpreter, this.getfine_grain_priorityValue(), null);
+				Add_Evaluation addEval =  activity.evaluateAdd(interpreter, 
+						this.getfine_grain_priorityValue(), null, recommendationBais);
 				if (addEval != null) {
 					choiceEvaluation.add_eval(addEval);
 					addEvaluations.add(choiceEvaluation);

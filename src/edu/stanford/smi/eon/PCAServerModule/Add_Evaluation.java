@@ -77,6 +77,7 @@ final public class Add_Evaluation implements java.io.Serializable {
   public edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages;
   public Collection<String> specific_drug;
   public int fine_grain_priority;
+  public String recommendationBasis;
   
   public Add_Evaluation() {
   }
@@ -101,7 +102,8 @@ final public class Add_Evaluation implements java.io.Serializable {
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_start_uncontrollable_conditions,
     edu.stanford.smi.eon.PCAServerModule.Preference preference,
     Collection<String> specific_drug,
-    int fine_grain_priority
+    int fine_grain_priority,
+    String recommendationBasis
   ) {
     this.description = description;
     this.name = name;
@@ -124,6 +126,7 @@ final public class Add_Evaluation implements java.io.Serializable {
     this.do_not_start_controllable_conditions = do_not_start_controllable_conditions;
     this.do_not_start_uncontrollable_conditions = do_not_start_uncontrollable_conditions;
     this.fine_grain_priority = fine_grain_priority;
+    this.recommendationBasis = recommendationBasis;
   }
 
 }
