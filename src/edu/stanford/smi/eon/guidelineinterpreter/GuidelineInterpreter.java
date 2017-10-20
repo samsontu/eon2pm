@@ -584,7 +584,7 @@ public class GuidelineInterpreter implements Serializable, PaddaGEE {
 							" is a subclass of "+ drugClass.getName());
 					String[] notUsed = new String[0];
 //					drugClassName[0] = drugClass.getBrowserText();
-					Matched_Data resultMatch= new Matched_Data(substance, symptom, notUsed);
+					Matched_Data resultMatch= new Matched_Data(substanceCls.getBrowserText(), symptom, notUsed);
 					matchedAdverseEvents.add(resultMatch);
 				} else logger.debug("GuidelineIterpreter matchAdverseEvents: "+ substance
 						+ " is not a subclass of "+ drugClass.getName());
