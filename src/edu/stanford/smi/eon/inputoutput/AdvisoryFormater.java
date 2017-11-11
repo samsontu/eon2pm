@@ -292,17 +292,17 @@ public class AdvisoryFormater {
 		for (Matched_Data source : is_second_line_drug_for) {
 			drugRels.add(createRelation( source, "is_third_line_drug_for"));		}
 		for (Matched_Data source : compelling_indications) {
-			drugRels.add(createRelation( source, "compelling_indications"));		}
+			drugRels.add(createRelation( source, "compelling_indication"));		}
 		for (Matched_Data source : relative_indications) {
-			drugRels.add(createRelation( source, "relative_indications"));		}
+			drugRels.add(createRelation( source, "relative_indication"));		}
 		for (Matched_Data source : contraindications) {
-			drugRels.add(createRelation( source, "contraindications"));		}
+			drugRels.add(createRelation( source, "strong_contraindication"));		}
 		for (Matched_Data source : relative_contraindications) {
-			drugRels.add(createRelation( source, "relative_contraindications"));		}
+			drugRels.add(createRelation( source, "relative_contraindication"));		}
 		for (Matched_Data source : good_drug_partners) {
-			drugRels.add(createRelation( source, "good_drug_partners"));		}
+			drugRels.add(createRelation( source, "good_drug_partner"));		}
 		for (Matched_Data source : bad_drug_partners) {
-			drugRels.add(createRelation( source, "bad_drug_partners"));		}
+			drugRels.add(createRelation( source, "bad_drug_partner"));		}
 		for (Matched_Data source : side_effects) {
 			Evaluated_Drug_Relation rel = createRelation( source, "adverse_reaction");
 			rel.setSubstance(getSubstance(source));
