@@ -287,9 +287,9 @@ public class AdvisoryFormater {
 		Collection<Evaluated_Drug_Relation> drugRels = new ArrayList<Evaluated_Drug_Relation>();
 		for (Matched_Data source : is_first_line_drug_for) {
 			drugRels.add(createRelation( source, "is_first_line_drug_for"));		}
-		for (Matched_Data source : is_third_line_drug_for) {
-			drugRels.add(createRelation( source, "is_second_line_drug_for"));		}
 		for (Matched_Data source : is_second_line_drug_for) {
+			drugRels.add(createRelation( source, "is_second_line_drug_for"));		}
+		for (Matched_Data source : is_third_line_drug_for) {
 			drugRels.add(createRelation( source, "is_third_line_drug_for"));		}
 		for (Matched_Data source : compelling_indications) {
 			drugRels.add(createRelation( source, "compelling_indication"));		}

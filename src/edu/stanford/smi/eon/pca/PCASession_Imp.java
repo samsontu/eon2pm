@@ -2547,8 +2547,10 @@ public class PCASession_Imp {
 
 		if (rec.getAssociated_substitution_drug() != null) {
 			if (rec.getAssociated_substitution_drug().getDrug_action_type().equals("add")) {
-				itsWriter.print("<b>Associated Drug Action:</b> "+rec.getAssociated_substitution_drug().getDrug_action_type());
-				itsWriter.println(" "+rec.getAssociated_substitution_drug().getDrug_to_add_string());
+				printAddDeleteDrug(itsWriter, rec.getAssociated_substitution_drug());
+				//itsWriter.print("<b>Associated Drug Action:</b> "+rec.getAssociated_substitution_drug().getDrug_action_type());
+				//itsWriter.println(" "+rec.getAssociated_substitution_drug().getDrug_to_add_string());
+				
 			} else {
 				itsWriter.print("<b>Associated Drug Action:</b> "+rec.getAssociated_substitution_drug().getDrug_action_type());
 				itsWriter.println(" "+rec.getAssociated_substitution_drug().getSpecific_drug().toString());
