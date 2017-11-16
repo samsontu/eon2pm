@@ -2551,10 +2551,10 @@ public class PCASession_Imp {
 				//itsWriter.print("<b>Associated Drug Action:</b> "+rec.getAssociated_substitution_drug().getDrug_action_type());
 				//itsWriter.println(" "+rec.getAssociated_substitution_drug().getDrug_to_add_string());
 				
-			} else {
+			} /* else {
 				itsWriter.print("<b>Associated Drug Action:</b> "+rec.getAssociated_substitution_drug().getDrug_action_type());
 				itsWriter.println(" "+rec.getAssociated_substitution_drug().getSpecific_drug().toString());
-			}
+			} */
 		}
 		//		if (rec.getDrug_class() != null)
 		//			itsWriter.println("<b>Drug Class: </b>"+rec.getDrug_class());
