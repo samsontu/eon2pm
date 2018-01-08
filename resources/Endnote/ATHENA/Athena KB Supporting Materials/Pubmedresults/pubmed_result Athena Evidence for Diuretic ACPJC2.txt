@@ -1,0 +1,32 @@
+
+PMID- 16262220
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20051102
+DCOM- 20051205
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 143
+IP  - 3
+DP  - 2005 Nov-Dec
+TI  - Amlodipine or lisinopril was not better than chlorthalidone for reducing CVD risk
+      in hypertensive black or nonblack patients.
+PG  - 63
+AD  - Providence Portland Medical Center, Portland, Oregon, USA.
+FAU - Jain, Meera
+AU  - Jain M
+FAU - Rosenberg, Mark
+AU  - Rosenberg M
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - JAMA. 2005 Apr 6;293(13):1595-608. PMID: 15811979
+EDAT- 2005/11/03 09:00
+MHDA- 2005/11/03 09:01
+AID - ACPJC-2005-143-3-063 [pii]
+PST - ppublish
+SO  - ACP J Club. 2005 Nov-Dec;143(3):63.

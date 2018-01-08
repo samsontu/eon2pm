@@ -1,0 +1,121 @@
+
+PMID- 15862063
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20050502
+DCOM- 20050615
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 142
+IP  - 3
+DP  - 2005 May-Jun
+TI  - Diuretic-based therapy reduced cardiovascular mortality in older patients with
+      isolated systolic hypertension and diabetes.
+PG  - 64
+AD  - King Faisal Specialist Hospital and Research Center, Riyadh, Saudi Arabia.
+FAU - Alkhenizan, Abdullah
+AU  - Alkhenizan A
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Am J Cardiol. 2005 Jan 1;95(1):29-35. PMID: 15619390
+EDAT- 2005/05/03 09:00
+MHDA- 2005/05/03 09:01
+AID - ACPJC-2005-142-3-064 [pii]
+PST - ppublish
+SO  - ACP J Club. 2005 May-Jun;142(3):64.
+
+PMID- 15122835
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20040504
+DCOM- 20040601
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 140
+IP  - 3
+DP  - 2004 May-Jun
+TI  - Review: commonly used antihypertensive therapies and targeted blood
+      pressure-lowering regimens reduce cardiovascular events.
+PG  - 72
+AD  - University of Alberta, Edmonton, Alberta, Canada.
+FAU - McAlister, Finlay A
+AU  - McAlister FA
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Lancet. 2003 Nov 8;362(9395):1527-35. PMID: 14615107
+EDAT- 2004/05/05 05:00
+MHDA- 2004/05/05 05:01
+AID - ACPJC-2004-140-3-072 [pii]
+PST - ppublish
+SO  - ACP J Club. 2004 May-Jun;140(3):72.
+
+PMID- 14711274
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20040108
+DCOM- 20040130
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 140
+IP  - 1
+DP  - 2004 Jan-Feb
+TI  - Review: Low-dose diuretics are the best first-line antihypertensive therapy.
+PG  - 3
+AD  - University of Florida College of Medicine, Gainesville, Florida, USA.
+FAU - Davidson, Richard A
+AU  - Davidson RA
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - JAMA. 2003 May 21;289(19):2534-44. PMID: 12759325
+EDAT- 2004/01/09 05:00
+MHDA- 2004/01/09 05:01
+AID - ACPJC-2004-140-1-003 [pii]
+PST - ppublish
+SO  - ACP J Club. 2004 Jan-Feb;140(1):3.
+
+PMID- 12841711
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20030704
+DCOM- 20030729
+LR  - 20031201
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 139
+IP  - 1
+DP  - 2003 Jul-Aug
+TI  - Amlodipine or lisinopril was not better than chlorthalidone in lowering CHD risk 
+      in hypertension.
+PG  - 7
+AD  - University of Washington, Seattle, Washington, USA.
+FAU - Psaty, Bruce M
+AU  - Psaty BM
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - JAMA. 2002 Dec 18;288(23):2981-97. PMID: 12479763
+CIN - ACP J Club. 2003 Nov-Dec;139(3):A15; author reply A15. PMID: 14594435
+EDAT- 2003/07/05 05:00
+MHDA- 2003/07/05 05:01
+AID - ACPJC-2003-139-1-007 [pii]
+PST - ppublish
+SO  - ACP J Club. 2003 Jul-Aug;139(1):7.

@@ -1,0 +1,33 @@
+
+PMID- 11829548
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20020206
+DCOM- 20020220
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 136
+IP  - 1
+DP  - 2002 Jan-Feb
+TI  - Carvedilol reduced mortality and morbidity caused by myocardial infarction in
+      patients with left ventricular dysfunction.
+PG  - 7
+AD  - University of Iowa Hospitals and Clinics, Iowa City, Iowa, USA.
+FAU - Jagasia, Dinesh H
+AU  - Jagasia DH
+FAU - Shivkumar, Kalyanam
+AU  - Shivkumar K
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Lancet. 2001 May 5;357(9266):1385-90. PMID: 11356434
+EDAT- 2002/02/07 10:00
+MHDA- 2002/02/07 10:01
+AID - ACPJC-2002-136-1-007 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 Jan-Feb;136(1):7.

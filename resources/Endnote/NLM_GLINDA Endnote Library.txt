@@ -1,0 +1,79 @@
+﻿1.	CPGs may not be best for older patients. Healthcare benchmarks and quality improvement, 2005. 12(10): p. 115-7.
+2.	Backlund, L., et al., The role of guidelines and the patient's life-style in GPs' management of hypercholesterolaemia. BMC Fam Pract, 2004. 5: p. 3.
+3.	Bayliss, E.A., et al., Processes of care desired by elderly patients with multimorbidities. Fam Pract, 2008. 25(4): p. 287-93.
+4.	Bennahum, D.A., et al., Life expectancy, comorbidity, and quality of life. A framework of reference for medical decisions. Clin Geriatr Med, 1997. 13(1): p. 33-53.
+5.	Black, B.S., et al., Health problems and correlates of pain in nursing home residents with advanced dementia. Alzheimer Dis Assoc Disord, 2006. 20(4): p. 283-90.
+6.	Bleichrodt, H., D. Crainich, and L. Eeckhoudt, The effect of comorbidities on treatment decisions. J Health Econ, 2003. 22(5): p. 805-20.
+7.	Bosworth, H.B., et al., Depression and other determinants of values placed on current health state by stroke patients: evidence from the VA Acute Stroke (VASt) study. Stroke, 2000. 31(11): p. 2603-9.
+8.	Bouma, B.J., et al., Which elderly patients with severe aortic stenosis benefit from surgical treatment? An aid to clinical decision making. J Heart Valve Dis, 2004. 13(3): p. 374-81.
+9.	Boyd, C.M., et al., Guided care for multimorbid older adults. Gerontologist, The, 2007. 47(5): p. 697-704.
+10.	Boyd, C.M., et al., Clinical practice guidelines and quality of care for older patients with multiple comorbid diseases: implications for pay for performance. JAMA, 2005. 294(6): p. 716-724.
+11.	Boyd, C.M. and B. Leff, Quality of care for older patients with diabetes mellitus with comorbidity. J Am Geriatr Soc, 2006. 54(3): p. 553-4; author reply 554.
+12.	Boyd, C.M., et al., From Bedside to Bench: summary from the American Geriatrics Society/National Institute on Aging Research Conference on Comorbidity and Multiple Morbidity in Older Adults. Aging Clin Exp Res, 2008. 20(3): p. 181-8.
+13.	Boyd, C.M., et al., Framework for evaluating disease severity measures in older adults with comorbidity. J Gerontol A Biol Sci Med Sci, 2007. 62(3): p. 286-95.
+14.	Boyd, C.M., et al., Frailty, hospitalization, and progression of disability in a cohort of disabled older women. Am J Med, 2005. 118(11): p. 1225-31.
+15.	Brailer, D.J., et al., Comorbidity-adjusted complication risk: a new outcome quality measure. Med Care, 1996. 34(5): p. 490-505.
+16.	Brown, K.R., Treatment of concomitant carotid and coronary artery disease. Decision-making regarding surgical options. J Cardiovasc Surg (Torino), 2003. 44(3): p. 395-9.
+17.	Butt, A.A., et al., Co-morbid medical and psychiatric illness and substance abuse in HCV-infected and uninfected veterans. J Viral Hepat, 2007. 14(12): p. 890-6.
+18.	de Jonge, P., F.J. Huyse, and F.C. Stiefel, Case and care complexity in the medically ill. Med Clin North Am, 2006. 90(4): p. 679-92.
+19.	Deschler, B., et al., Treatment decision-making for older patients with high-risk myelodysplastic syndrome or acute myeloid leukemia: problems and approaches. Haematologica, 2006. 91(11): p. 1513-22.
+20.	Durso, S.C., Using clinical guidelines designed for older adults with diabetes mellitus and complex health status, in JAMA. 2006. p. 1935-40.
+21.	Durso, S.C., Using clinical guidelines designed for older adults with diabetes mellitus and complex health status. JAMA, 2006. 295(16): p. 1935-40.
+22.	Elliott, R.A., et al., Strategies for coping in a complex world: adherence behavior among older adults with chronic illness. J Gen Intern Med, 2007. 22(6): p. 805-10.
+23.	Fazel, S., T. Hope, and R. Jacoby, Effect of cognitive impairment and premorbid intelligence on treatment preferences for life-sustaining medical therapy. Am J Psychiatry, 2000. 157(6): p. 1009-11.
+24.	First, M.B., Mutually exclusive versus co-occurring diagnostic categories: the challenge of diagnostic comorbidity. Psychopathology, 2005. 38(4): p. 206-10.
+25.	Fleming, S.T., et al., Comorbidity as a predictor of stage of illness for patients with breast cancer. Med Care, 2005. 43(2): p. 132-40.
+26.	Fleming, S.T., et al., A comprehensive prognostic index to predict survival based on multiple comorbidities: a focus on breast cancer. Med Care, 1999. 37(6): p. 601-14.
+27.	Fouad, M.N., et al., Comorbidity independently predicted death in older prostate cancer patients, more of whom died with than from their disease. J Clin Epidemiol, 2004. 57(7): p. 721-9.
+28.	Fraenkel, L. and T.R. Fried, Individualized medical decision making: necessary, achievable, but not yet attainable. Arch Intern Med, 2010. 170(6): p. 566-9.
+29.	Fried, T.R., et al., Views of older persons with multiple morbidities on competing outcomes and clinical decision-making. J Am Geriatr Soc, 2008. 56(10): p. 1839-44.
+30.	Fryback, D.G. and W.F. Lawrence, Jr., Dollars may not buy as many QALYs as we think: a problem with defining quality-of-life adjustments. Med Decis Making, 1997. 17(3): p. 276-84.
+31.	Fu, A.Z. and M.W. Kattan, Utilities should not be multiplied: evidence from the preference-based scores in the United States. Med Care, 2008. 46(9): p. 984-90.
+32.	Gaynes, B.N., et al., Prevalence and comorbidity of psychiatric diagnoses based on reference standard in an HIV+ patient population. Psychosom Med, 2008. 70(4): p. 505-11.
+33.	Georg, G., B. Seroussi, and J. Bouaud, Synthesis of elementary single-disease recommendations to support guideline-based therapeutic decision for complex polypathological patients. Stud Health Technol Inform, 2004. 107(Pt 1): p. 38-42.
+34.	Gross, C.P., et al., Multimorbidity and survival in older persons with colorectal cancer. J Am Geriatr Soc, 2006. 54(12): p. 1898-904.
+35.	Gross, C.P., et al., The impact of chronic illnesses on the use and effectiveness of adjuvant chemotherapy for colon cancer. Cancer, 2007. 109(12): p. 2410-9.
+36.	Gross, C.P., et al., The effect of age and chronic illness on life expectancy after a diagnosis of colorectal cancer: implications for screening, in Ann Intern Med. 2006. p. 646-53.
+37.	Gross, C.P., et al., The effect of age and chronic illness on life expectancy after a diagnosis of colorectal cancer: implications for screening. Ann Intern Med, 2006. 145(9): p. 646-53.
+38.	Hall, S.F., P.A. Groome, and D. Rothwell, The impact of comorbidity on the survival of patients with squamous cell carcinoma of the head and neck. Head Neck, 2000. 22(4): p. 317-22.
+39.	Halvorsen, K., et al., Priority dilemmas in dialysis: the impact of old age. J Med Ethics, 2008. 34(8): p. 585-9.
+40.	Hamel, M.B., et al., Age-related differences in care preferences, treatment decisions, and clinical outcomes of seriously ill hospitalized adults: lessons from SUPPORT. J Am Geriatr Soc, 2000. 48(5 Suppl): p. S176-82.
+41.	Harris, M.F. and N.A. Zwar, Care of patients with chronic disease: the challenge for general practice. Med J Aust, 2007. 187(2): p. 104-7.
+42.	Harris, R.A. and R.F. Nease, Jr., The importance of patient preferences for comorbidities in cost-effectiveness analyses. J Health Econ, 1997. 16(1): p. 113-9.
+43.	Houterman, S., et al., Comorbidity has negligible impact on treatment and complications but influences survival in breast cancer patients. Br J Cancer, 2004. 90(12): p. 2332-7.
+44.	Hurwitz, E.L. and H. Morgenstern, The effect of comorbidity on care seeking for back problems in the United States. Ann Epidemiol, 1999. 9(4): p. 262-70.
+45.	Jamal, M.K., et al., Impact of major co-morbidities on mortality and complications after gastric bypass. Surg Obes Relat Dis, 2005. 1(6): p. 511-6.
+46.	Jassal, S.V., et al., Kidney transplantation in the elderly: a decision analysis. J Am Soc Nephrol, 2003. 14(1): p. 187-96.
+47.	Krum, H. and R.E. Gilbert, Demographics and concomitant disorders in heart failure. Lancet, 2003. 362(9378): p. 147-58.
+48.	Labonte, L., et al., Utility of comorbidity assessment in predicting transplantation-related toxicity following autologous hematopoietic stem cell transplantation for multiple myeloma. Biol Blood Marrow Transplant, 2008. 14(9): p. 1039-44.
+49.	Macleod, U., et al., Comorbidity and socioeconomic deprivation: an observational study of the prevalence of comorbidity in general practice. Eur J Gen Pract, 2004. 10(1): p. 24-6.
+50.	Mandelblatt, J.S., et al., Breast cancer screening for elderly women with and without comorbid conditions. A decision analysis model. Ann Intern Med, 1992. 116(9): p. 722-30.
+51.	Marr, P.L., et al., Comorbidity and primary treatment for localized prostate cancer: data from CaPSURE. J Urol, 2006. 175(4): p. 1326-31.
+52.	McElroy, S.L., Diagnosing and treating comorbid (complicated) bipolar disorder. J Clin Psychiatry, 2004. 65 Suppl 15: p. 35-44.
+53.	McLaughlin, T.J., et al., The effect of comorbidity on use of thrombolysis or aspirin in patients with acute myocardial infarction eligible for treatment. J Gen Intern Med, 1997. 12(1): p. 1-6.
+54.	Obermayr, R.P. and K.H. Tragl, [Perspectives on treatment of hypertension in elderly patients]. Wien Med Wochenschr, 2004. 154(1-2): p. 15-9.
+55.	Palmer, B.W. and D.V. Jeste, Relationship of individual cognitive abilities to specific components of decisional capacity among middle-aged and older patients with schizophrenia. Schizophr Bull, 2006. 32(1): p. 98-106.
+56.	Penrod, J.D., et al., Heterogeneity in hip fracture patients: age, functional status, and comorbidity. J Am Geriatr Soc, 2007. 55(3): p. 407-13.
+57.	Perkins, S., et al., Why do adolescents with bulimia nervosa choose not to involve their parents in treatment? Eur Child Adolesc Psychiatry, 2005. 14(7): p. 376-85.
+58.	Piccirillo, J.F., et al., Prognostic importance of comorbidity in a hospital-based cancer registry. JAMA, 2004. 291(20): p. 2441-7.
+59.	Post, P.N., et al., Comorbidity in patients with prostate cancer and its relevance to treatment choice. BJU Int, 1999. 84(6): p. 652-6.
+60.	Post, P.N., A.M. Stiggelbout, and P.P. Wakker, The utility of health states after stroke: a systematic review of the literature. Stroke, 2001. 32(6): p. 1425-9.
+61.	Safford, M.M., J.J. Allison, and C.I. Kiefe, Patient complexity: more than comorbidity. the vector model of complexity. J Gen Intern Med, 2007. 22 Suppl 3: p. 382-90.
+62.	Safford, M.M., et al., Patient complexity in quality comparisons for glycemic control: An observational study. Implement Sci, 2009. 4(2).
+63.	Sanabria, A., et al., Factors that influence treatment decision in older patients with resectable head and neck cancer. Laryngoscope, 2007. 117(5): p. 835-40.
+64.	Sarasin, F.P., Decision analysis and the implementation of evidence-based medicine. QJM, 1999. 92(11): p. 669-71.
+65.	Seve, P., et al., The influence of comorbidities, age, and performance status on the prognosis and treatment of patients with metastatic carcinomas of unknown primary site: a population-based study. Cancer, 2006. 106(9): p. 2058-66.
+66.	Sheeder, J., et al., Cervicitis: to treat or not to treat? The role of patient preferences and decision analysis. J Adolesc Health, 2006. 39(6): p. 887-92.
+67.	Shimizu, F., et al., Decision analyses in consideration of treatment strategies for patients with biochemical failure after curative therapy on clinically localized prostate cancer in the prostate-specific antigen era. Jpn J Clin Oncol, 2007. 37(10): p. 763-74.
+68.	Sieben-Hein, D. and E.A. Steinmiller, Working with complex care patients. J Pediatr Nurs, 2005. 20(5): p. 389-95.
+69.	Silverman, M., et al., To treat or not to treat: issues in decisions not to treat older persons with cognitive impairment, depression, and incontinence. J Am Geriatr Soc, 1997. 45(9): p. 1094-101.
+70.	Smolders, M., et al., The impact of co-morbidity on GPs' pharmacological treatment decisions for patients with an anxiety disorder. Fam Pract, 2007. 24(6): p. 538-46.
+71.	Tinetti, M.E., S.T. Bogardus, and J.V. Agostini, Potential pitfalls of disease-specific guidelines for patients with multiple conditions, in N Engl J Med. 2004. p. 2870-4.
+72.	Tinetti, M.E., et al., Health outcome priorities among competing cardiovascular, fall injury, and medication-related symptom outcomes. J Am Geriatr Soc, 2008. 56(8): p. 1409-16.
+73.	Toto, R.D., Treatment of hypertension in chronic kidney disease. Semin Nephrol, 2005. 25(6): p. 435-9.
+74.	Tuominen, U., et al., The effect of co-morbidities on health-related quality of life in patients placed on the waiting list for total joint replacement. Health Qual Life Outcomes, 2007. 5: p. 16.
+75.	Turgay, A., Treatment of comorbidity in conduct disorder with attention-deficit hyperactivity disorder (ADHD). Essent Psychopharmacol, 2005. 6(5): p. 277-90.
+76.	Upshur, R.E., Looking for rules in a world of exceptions: reflections on evidence-based practice. Perspect Biol Med, 2005. 48(4): p. 477-89.
+77.	van Weel, C. and F.G. Schellevis, Comorbidity and guidelines: conflicting interests. Lancet, 2006. 367(9510): p. 550-1.
+78.	Vassilopoulos, D., C. Camisa, and R.M. Strauss, Selected drug complications and treatment conflicts in the presence of coexistent diseases. Rheum Dis Clin North Am, 1999. 25(3): p. 745-77, x.
+79.	Wolff, J.L., et al., Newly reported chronic conditions and onset of functional dependency. Journal of the American Geriatrics Society, 2005. 53(5): p. 851-855.

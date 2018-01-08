@@ -1,0 +1,54 @@
+<1>
+Accession Number
+  00021607-199711000-00001
+Title
+  Ramipril reduced long-term mortality after MI.
+Source
+  ACP Journal Club.  v127:p.57, Nov-Dec, 1997.
+Abstract
+  Objective: 
+
+  To determine the long-term survival benefit of ramipril for congestive heart failure (CHF) after myocardial infarction (MI).
+
+  Design: 
+
+  Randomized, double-blind, placebo-controlled trial with 3-year follow-up after the end of the study.
+
+  Setting: 
+
+  30 clinical centers in the United Kingdom.
+
+  Patients: 
+
+  603 patients (mean age 65 y, 75% men) with confirmed MI complicated by CHF defined as left ventricular failure on erect posteroanterior chest radiograph, auscultatory evidence of pulmonary edema, or a third heart sound plus persistent tachycardia. Exclusion criteria were clinical instability, contraindications to angiotensin-converting enzyme (ACE) inhibitors, heart failure of primary valvular or congenital origin, or overt CHF that required ACE inhibitors. Follow-up was > 99% and 100% for death.
+
+  Intervention: 
+
+  Treatment was started 2 to 9 days after MI. 302 patients were allocated to ramipril, 1.25 to 2.5 mg twice daily titrated up to 2.5 to 5.0 mg twice daily, and 301 patients were allocated to placebo. Overt CHF was treated with open-label ACE inhibitors. At the end of the 15-month study, patients stopped their double-blind assigned medication and were treated at the discretion of their physicians. 
+
+  Main outcome measure: 
+
+  Total mortality 3 years after the end of the trial.
+
+  Main results: 
+
+  At discharge from the hospital, 13.7% of patients allocated to ramipril and 5.3% of patients allocated to placebo were not taking their assigned medication. 3 years after the end of the study (minimum follow-up of 42 mo, mean 59 mo), 83 deaths (28%) had occurred in the ramipril group and 117 deaths (39%) had occurred in the placebo group (P = 0.002) (Table).
+
+  Ramipril vs placebo for congestive heart failure*: 
+
+  Ramipril EER:28%
+
+  Placebo CER:39%
+
+  RRR (95% CI):36% (15 to 52)
+
+  ARR |EER-CER|:11%
+
+  NNT (CI):9 (5 to 26)
+
+  Conclusion: 
+
+  Ramipril reduced long-term mortality in patients with congestive heart failure after myocardial infarction.
+
+
+

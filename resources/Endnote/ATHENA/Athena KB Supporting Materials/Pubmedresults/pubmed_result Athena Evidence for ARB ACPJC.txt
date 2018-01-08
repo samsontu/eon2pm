@@ -1,0 +1,252 @@
+
+PMID- 15862059
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20050502
+DCOM- 20050615
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 142
+IP  - 3
+DP  - 2005 May-Jun
+TI  - Candesartan reduced cardiovascular mortality and morbidity in chronic heart
+      failure with low ejection fraction.
+PG  - 60
+AD  - University of Alberta, Edmonton, Alberta, Canada.
+FAU - Majumdar, Sumit R
+AU  - Majumdar SR
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Circulation. 2004 Oct 26;110(17):2618-26. PMID: 15492298
+EDAT- 2005/05/03 09:00
+MHDA- 2005/05/03 09:01
+AID - ACPJC-2005-142-3-060 [pii]
+PST - ppublish
+SO  - ACP J Club. 2005 May-Jun;142(3):60.
+
+PMID- 15122853
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20040504
+DCOM- 20040505
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 140
+IP  - 2
+DP  - 2004 Mar-Apr
+TI  - Candesartan reduced mortality and hospital admissions in chronic heart failure.
+PG  - 32-3
+AD  - University of Michigan, Ann Arbor, Michigan, USA.
+FAU - Pitt, Bertram
+AU  - Pitt B
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Lancet. 2003 Sep 6;362(9386):759-66. PMID: 13678868
+CON - Lancet. 2003 Sep 6;362(9386):767-71. PMID: 13678869
+CON - Lancet. 2003 Sep 6;362(9386):772-6. PMID: 13678870
+CON - Lancet. 2003 Sep 6;362(9386):777-81. PMID: 13678871
+EDAT- 2004/05/05 05:00
+MHDA- 2004/05/05 05:01
+AID - ACPJC-2004-140-2-032 [pii]
+PST - ppublish
+SO  - ACP J Club. 2004 Mar-Apr;140(2):32-3.
+
+PMID- 12614122
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20030304
+DCOM- 20030325
+LR  - 20031104
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 138
+IP  - 2
+DP  - 2003 Mar-Apr
+TI  - Losartan was more effective than atenolol for isolated systolic hypertension and 
+      left ventricular hypertrophy.
+PG  - 37
+AD  - University of Virginia, Charlottesville, Virginia, USA.
+FAU - Rembold, Christopher M
+AU  - Rembold CM
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - JAMA. 2002 Sep 25;288(12):1491-8. PMID: 12243636
+EDAT- 2003/03/05 04:00
+MHDA- 2003/03/05 04:01
+AID - ACPJC-2003-138-2-037 [pii]
+PST - ppublish
+SO  - ACP J Club. 2003 Mar-Apr;138(2):37.
+
+PMID- 12418827
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20021106
+DCOM- 20030204
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 137
+IP  - 3
+DP  - 2002 Nov-Dec
+TI  - Losartan reduced cardiovascular morbidity and mortality more than atenolol in
+      patients with diabetes and essential hypertension.
+PG  - 87
+AD  - Regional Nephrology Associates and UMDNJ-SOM, Stratford, New Jersey, USA.
+FAU - Blecker, David
+AU  - Blecker D
+FAU - Blecker, Saul B
+AU  - Blecker SB
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Lancet. 2002 Mar 23;359(9311):1004-10. PMID: 11937179
+EDAT- 2002/11/07 04:00
+MHDA- 2002/11/07 04:01
+AID - ACPJC-2002-137-3-087 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 Nov-Dec;137(3):87.
+
+PMID- 12418826
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20021106
+DCOM- 20030204
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 137
+IP  - 3
+DP  - 2002 Nov-Dec
+TI  - Losartan reduced strokes and new-onset diabetes more than atenolol in essential
+      hypertension.
+PG  - 86
+AD  - Regional Nephrology Associates and UMDNJ-SOM, Stratford, New Jersey, USA.
+FAU - Blecker, David
+AU  - Blecker D
+FAU - Blecker, Saul B
+AU  - Blecker SB
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - Lancet. 2002 Mar 23;359(9311):995-1003. PMID: 11937178
+EDAT- 2002/11/07 04:00
+MHDA- 2002/11/07 04:01
+AID - ACPJC-2002-137-3-086 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 Nov-Dec;137(3):86.
+
+PMID- 11985425
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20020502
+DCOM- 20020523
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 136
+IP  - 3
+DP  - 2002 May-Jun
+TI  - Losartan was renoprotective in diabetic nephropathy independent of its effect on 
+      blood pressure.
+PG  - 82-4
+AD  - McMaster University, Hamilton, Ontario, Canada.
+FAU - Rabbat, Christian G
+AU  - Rabbat CG
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - N Engl J Med. 2001 Sep 20;345(12):861-9. PMID: 11565518
+EDAT- 2002/05/03 10:00
+MHDA- 2002/05/03 10:01
+AID - ACPJC-2002-136-3-084 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 May-Jun;136(3):82-4.
+
+PMID- 11985424
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20020502
+DCOM- 20020523
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 136
+IP  - 3
+DP  - 2002 May-Jun
+TI  - Irbesartan reduced progression of nephropathy caused by type 2 diabetes
+      independent of the effect on blood pressure.
+PG  - 82-4
+AD  - McMaster University, Hamilton, Ontario, Canada.
+FAU - Rabbat, Christian G
+AU  - Rabbat CG
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - N Engl J Med. 2001 Sep 20;345(12):851-60. PMID: 11565517
+EDAT- 2002/05/03 10:00
+MHDA- 2002/05/03 10:01
+AID - ACPJC-2002-136-3-083 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 May-Jun;136(3):82-4.
+
+PMID- 11985423
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DA  - 20020502
+DCOM- 20020523
+LR  - 20031103
+PUBM- Print
+IS  - 1056-8751 (Print)
+VI  - 136
+IP  - 3
+DP  - 2002 May-Jun
+TI  - Irbesartan was renoprotective in patients with type 2 diabetes, hypertension, and
+      microalbuminuria.
+PG  - 82-4
+AD  - McMaster University, Hamilton, Ontario, Canada.
+FAU - Rabbat, Christian G
+AU  - Rabbat CG
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+PL  - United States
+TA  - ACP J Club
+JT  - ACP journal club
+JID - 9104824
+CON - N Engl J Med. 2001 Sep 20;345(12):870-8. PMID: 11565519
+EDAT- 2002/05/03 10:00
+MHDA- 2002/05/03 10:01
+AID - ACPJC-2002-136-3-082 [pii]
+PST - ppublish
+SO  - ACP J Club. 2002 May-Jun;136(3):82-4.

@@ -1,0 +1,241 @@
+PMID- 15360788
+OWN - NLM
+STAT- MEDLINE
+DA  - 20040913
+DCOM- 20050607
+LR  - 20060425
+PUBM- Print
+VI  - 11
+IP  - Pt 1
+DP  - 2004
+TI  - Evaluating provider adherence in a trial of a guideline-based decision
+      support system for hypertension.
+PG  - 125-9
+AB  - Measurement of provider adherence to a guideline-based decision support
+      system (DSS) presents a number of important challenges. Establishing a
+      causal relationship between the DSS and change in concordance requires
+      consideration of both the primary intention of the guideline and different
+      ways providers attempt to satisfy the guideline. During our work with a
+      guideline-based decision support system for hypertension, ATHENA DSS, we
+      document a number of subtle deviations from the strict hypertension
+      guideline recommendations that ultimately demonstrate provider adherence.
+      We believe that understanding these complexities is crucial to any valid
+      evaluation of provider adherence. We also describe the development of an
+      advisory evaluation engine that automates the interpretation of clinician
+      adherence with the DSS on multiple levels, facilitating the high volume of
+      complex data analysis that is created in a clinical trial of a
+      guideline-based DSS.
+AD  - Stanford Medical Informatics, Stanford University School of Medicine, MSOB
+      X-215, Stanford, CA 94305, USA.
+FAU - Chan, A S
+AU  - Chan AS
+FAU - Coleman, R W
+AU  - Coleman RW
+FAU - Martins, S B
+AU  - Martins SB
+FAU - Advani, A
+AU  - Advani A
+FAU - Musen, M A
+AU  - Musen MA
+FAU - Bosworth, H B
+AU  - Bosworth HB
+FAU - Oddone, E Z
+AU  - Oddone EZ
+FAU - Shlipak, M G
+AU  - Shlipak MG
+FAU - Hoffman, B B
+AU  - Hoffman BB
+FAU - Goldstein, M K
+AU  - Goldstein MK
+LA  - eng
+GR  - 5R01 LM 06806/LM/NLM
+GR  - LM 07033/LM/NLM
+PT  - Journal Article
+PL  - Netherlands
+TA  - Medinfo
+JT  - Medinfo. MEDINFO.
+JID - 7600347
+SB  - IM
+MH  - *Decision Support Systems, Clinical
+MH  - *Drug Therapy, Computer-Assisted
+MH  - *Guideline Adherence
+MH  - Humans
+MH  - Hypertension/*drug therapy
+MH  - Medical Records Systems, Computerized
+MH  - *Practice Guidelines
+MH  - Research Support, N.I.H., Extramural
+MH  - Research Support, U.S. Gov't, Non-P.H.S.
+MH  - Research Support, U.S. Gov't, P.H.S.
+MH  - United States
+MH  - United States Department of Veterans Affairs
+MH  - User-Computer Interface
+EDAT- 2004/09/14 05:00
+MHDA- 2005/06/09 09:00
+AID - D040004164 [pii]
+PST - ppublish
+SO  - Medinfo. 2004;11(Pt 1):125-9.
+
+PMID- 15187064
+OWN - NLM
+STAT- MEDLINE
+DA  - 20040908
+DCOM- 20041001
+LR  - 20041117
+PUBM- Print-Electronic
+IS  - 1067-5027 (Print)
+VI  - 11
+IP  - 5
+DP  - 2004 Sep-Oct
+TI  - Translating research into practice: organizational issues in implementing
+      automated decision support for hypertension in three medical centers.
+PG  - 368-76
+AB  - Information technology can support the implementation of clinical research
+      findings in practice settings. Technology can address the quality gap in
+      health care by providing automated decision support to clinicians that
+      integrates guideline knowledge with electronic patient data to present
+      real-time, patient-specific recommendations. However, technical success in
+      implementing decision support systems may not translate directly into
+      system use by clinicians. Successful technology integration into clinical
+      work settings requires explicit attention to the organizational context.
+      We describe the application of a "sociotechnical" approach to integration
+      of ATHENA DSS, a decision support system for the treatment of
+      hypertension, into geographically dispersed primary care clinics. We
+      applied an iterative technical design in response to organizational input
+      and obtained ongoing endorsements of the project by the organization's
+      administrative and clinical leadership. Conscious attention to
+      organizational context at the time of development, deployment, and
+      maintenance of the system was associated with extensive clinician use of
+      the system.
+AD  - Geriatrics Research Education and Clinical Center, 182 B, VA Palo Alto
+      Health Care System, 3801 Miranda Avenue, CA 94304, USA.
+      goldstein@stanford.edu
+FAU - Goldstein, Mary K
+AU  - Goldstein MK
+FAU - Coleman, Robert W
+AU  - Coleman RW
+FAU - Tu, Samson W
+AU  - Tu SW
+FAU - Shankar, Ravi D
+AU  - Shankar RD
+FAU - O'Connor, Martin J
+AU  - O'Connor MJ
+FAU - Musen, Mark A
+AU  - Musen MA
+FAU - Martins, Susana B
+AU  - Martins SB
+FAU - Lavori, Philip W
+AU  - Lavori PW
+FAU - Shlipak, Michael G
+AU  - Shlipak MG
+FAU - Oddone, Eugene
+AU  - Oddone E
+FAU - Advani, Aneel A
+AU  - Advani AA
+FAU - Gholami, Parisa
+AU  - Gholami P
+FAU - Hoffman, Brian B
+AU  - Hoffman BB
+LA  - eng
+GR  - LM05708/LM/NLM
+GR  - LM06245/LM/NLM
+PT  - Journal Article
+DEP - 20040607
+PL  - United States
+TA  - J Am Med Inform Assoc
+JT  - Journal of the American Medical Informatics Association :  JAMIA.
+JID - 9430800
+SB  - IM
+MH  - Academic Medical Centers/*organization & administration
+MH  - Artificial Intelligence
+MH  - Decision Support Systems, Clinical/*organization & administration
+MH  - Humans
+MH  - Hypertension/*therapy
+MH  - Medical Records Systems, Computerized
+MH  - Organizational Innovation
+MH  - Research Support, U.S. Gov't, Non-P.H.S.
+MH  - Research Support, U.S. Gov't, P.H.S.
+MH  - Systems Integration
+MH  - *Therapy, Computer-Assisted
+MH  - User-Computer Interface
+EDAT- 2004/06/10 05:00
+MHDA- 2004/10/02 05:00
+PHST- 2004/06/07 [aheadofprint]
+AID - 10.1197/jamia.M1534 [doi]
+AID - M1534 [pii]
+PST - ppublish
+SO  - J Am Med Inform Assoc. 2004 Sep-Oct;11(5):368-76. Epub 2004 Jun 7.
+
+PMID- 11079893
+OWN - NLM
+STAT- MEDLINE
+DA  - 20010110
+DCOM- 20010308
+LR  - 20041117
+PUBM- Print
+IS  - 1531-605X (Print)
+DP  - 2000
+TI  - Implementing clinical practice guidelines while taking account of changing
+      evidence: ATHENA DSS, an easily modifiable decision-support system for
+      managing hypertension in primary care.
+PG  - 300-4
+AB  - This paper describes the ATHENA Decision Support System (DSS), which
+      operationalizes guidelines for hypertension using the EON architecture.
+      ATHENA DSS encourages blood pressure control and recommends
+      guideline-concordant choice of drug therapy in relation to comorbid
+      diseases. ATHENA DSS has an easily modifiable knowledge base that
+      specifies eligibility criteria, risk stratification, blood pressure
+      targets, relevant comorbid diseases, guideline-recommended drug classes
+      for patients with comorbid disease, preferred drugs within each drug
+      class, and clinical messages. Because evidence for best management of
+      hypertension evolves continually, ATHENA DSS is designed to allow clinical
+      experts to customize the knowledge base to incorporate new evidence or to
+      reflect local interpretations of guideline ambiguities. Together with its
+      database mediator Athenaeum, ATHENA DSS has physical and logical data
+      independence from the legacy Computerized Patient Record System (CPRS)
+      supplying the patient data, so it can be integrated into a variety of
+      electronic medical record systems.
+AD  - Department of Medicine, Stanford University School of Medicine, Stanford,
+      CA, USA.
+FAU - Goldstein, M K
+AU  - Goldstein MK
+FAU - Hoffman, B B
+AU  - Hoffman BB
+FAU - Coleman, R W
+AU  - Coleman RW
+FAU - Musen, M A
+AU  - Musen MA
+FAU - Tu, S W
+AU  - Tu SW
+FAU - Advani, A
+AU  - Advani A
+FAU - Shankar, R
+AU  - Shankar R
+FAU - O'Connor, M
+AU  - O'Connor M
+LA  - eng
+GR  - LM05708/LM/NLM
+GR  - LM06245/LM/NLM
+PT  - Journal Article
+PL  - United States
+TA  - Proc AMIA Symp
+JT  - Proceedings / AMIA ... Annual Symposium. AMIA Symposium.
+JID - 100883449
+SB  - IM
+MH  - Artificial Intelligence
+MH  - *Decision Support Systems, Clinical
+MH  - Humans
+MH  - Hypertension/*therapy
+MH  - Medical Records Systems, Computerized
+MH  - *Practice Guidelines
+MH  - Primary Health Care
+MH  - Reminder Systems
+MH  - Research Support, U.S. Gov't, Non-P.H.S.
+MH  - Research Support, U.S. Gov't, P.H.S.
+MH  - Systems Integration
+MH  - *Therapy, Computer-Assisted
+EDAT- 2000/11/18 11:00
+MHDA- 2001/03/10 10:01
+AID - D200559 [pii]
+PST - ppublish
+SO  - Proc AMIA Symp. 2000;:300-4.
+

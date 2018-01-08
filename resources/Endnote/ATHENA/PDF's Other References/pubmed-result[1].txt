@@ -1,0 +1,108 @@
+PMID- 16622171
+OWN - NLM
+STAT- MEDLINE
+DA  - 20060724
+DCOM- 20060810
+LR  - 20061115
+PUBM- Print-Electronic
+IS  - 1067-5027 (Print)
+VI  - 13
+IP  - 4
+DP  - 2006 Jul-Aug
+TI  - Prescribers' responses to alerts during medication ordering in the long
+      term care setting.
+PG  - 385-90
+AB  - OBJECTIVE: Computerized physician order entry with clinical decision
+      support has been shown to improve medication safety in adult inpatients,
+      but few data are available regarding its usefulness in the long-term care
+      setting. The objective of this study was to examine opportunities for
+      improving medication safety in that clinical setting by determining the
+      proportion of medication orders that would generate a warning message to
+      the prescriber via a computerized clinical decision support system and
+      assessing the extent to which these alerts would affect prescribers'
+      actions. DESIGN: The study was set within a randomized controlled trial of
+      computerized clinical decision support conducted in the long-stay units of
+      a large, academically-affiliated long-term care facility. In March 2002, a
+      computer-based clinical decision support system (CDSS) was added to an
+      existing computerized physician order entry (CPOE) system. Over a
+      subsequent one-year study period, prescribers ordering drugs for residents
+      on three resident-care units of the facility were presented with alerts;
+      these alerts were not displayed to prescribers in the four control units.
+      MEASUREMENTS: We assessed the frequency of drug orders associated with
+      various categories of alerts across all participating units of the
+      facility. To assess the impact of actually receiving an alert on
+      prescriber behavior during drug ordering, we calculated separately for the
+      intervention and control units the proportion of the alerts, within each
+      category, that were followed by an appropriate action and estimated the
+      relative risk of an appropriate action in the intervention units compared
+      to the control units. RESULTS: During the 12 months of the study, there
+      were 445 residents on the participating units of the facility,
+      contributing 3,726 resident-months of observation time. During this
+      period, 47,997 medication orders were entered through the CPOE
+      system-approximately 9 medication orders per resident per month. 9,414
+      alerts were triggered (2.5 alerts per resident-month). The alert
+      categories most often triggered were related to risks of central nervous
+      system side-effects such as over-sedation (20%). Alerts for risk of
+      drug-associated constipation (13%) or renal insufficiency/electrolyte
+      imbalance (12%) were also common. Twelve percent of the alerts were
+      related to orders for warfarin. Overall, prescribers who received alerts
+      were only slightly more likely to take an appropriate action (relative
+      risk 1.11, 95% confidence interval 1.00, 1.22). Alerts related to orders
+      for warfarin or central nervous system side effects were most likely to
+      engender an appropriate action, such as ordering a recommended laboratory
+      test or canceling an ordered drug. CONCLUSION: Long-term care facilities
+      must implement new system-level approaches with the potential to improve
+      medication safety for their residents. The number of medication orders
+      that triggered a warning message in this study suggests that CPOE with a
+      clinical decision support system may represent one such tool. However, the
+      relatively low rate of response to these alerts suggests that further
+      refinements to such systems are required, and that their impact on
+      medication errors and adverse drug events must be carefully assessed.
+AD  - Meyers Primary Care Institute, 630 Plantation Street, Worcester, MA 01605,
+      USA.
+FAU - Judge, James
+AU  - Judge J
+FAU - Field, Terry S
+AU  - Field TS
+FAU - DeFlorio, Martin
+AU  - DeFlorio M
+FAU - Laprino, Jane
+AU  - Laprino J
+FAU - Auger, Jill
+AU  - Auger J
+FAU - Rochon, Paula
+AU  - Rochon P
+FAU - Bates, David W
+AU  - Bates DW
+FAU - Gurwitz, Jerry H
+AU  - Gurwitz JH
+LA  - eng
+GR  - HS010481/HS/AHCPR
+GR  - HS15430/HS/AHCPR
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, P.H.S. 
+DEP - 20060418
+PL  - United States
+TA  - J Am Med Inform Assoc
+JT  - Journal of the American Medical Informatics Association : JAMIA
+JID - 9430800
+SB  - IM
+MH  - *Decision Support Systems, Clinical
+MH  - *Drug Therapy, Computer-Assisted
+MH  - Humans
+MH  - Internship and Residency
+MH  - *Long-Term Care
+MH  - *Medical Order Entry Systems
+MH  - Medication Errors
+MH  - Medication Systems, Hospital
+MH  - Randomized Controlled Trials
+MH  - *Reminder Systems
+MH  - User-Computer Interface
+EDAT- 2006/04/20 09:00
+MHDA- 2006/08/11 09:00
+PHST- 2006/04/18 [aheadofprint]
+AID - M1945 [pii]
+AID - 10.1197/jamia.M1945 [doi]
+PST - ppublish
+SO  - J Am Med Inform Assoc. 2006 Jul-Aug;13(4):385-90. Epub 2006 Apr 18.
+

@@ -1,0 +1,10 @@
+﻿1.	Bosworth HB, Olsen MK, McCant F, Harrelson M, Gentry P, Rose C, et al. Hypertension Intervention Nurse Telemedicine Study (HINTS): testing a multifactorial tailored behavioral/educational and a medication management intervention for blood pressure control. Am Heart J. 2007 Jun;153(6):918-24.
+2.	Das AK, Ahmed BA, Garten Y, Robin JI, Goldstein MK. Knowledge-based method for building patient decision-analytic tools. AMIA Annu Symp Proc. 2006:175-9.
+3.	Gerson LB, Ullah N, Hastie T, Goldstein MK. Does cancer risk affect health-related quality of life in patients with Barrett's esophagus? Gastrointest Endosc. 2007 Jan;65(1):16-25.
+4.	Heidenreich PA, Gholami P, Sahay A, Massie B, Goldstein MK. Clinical reminders attached to echocardiography reports of patients with reduced left ventricular ejection fraction increase use of beta-blockers: a randomized trial. Circulation. 2007 Jun 5;115(22):2829-34.
+5.	Johnson CD, Zeiger RF, Das AK, Goldstein MK. Task analysis of writing hospital admission orders: evidence of a problem-based approach. AMIA Annu Symp Proc. 2006:389-93.
+6.	Lin ND, Martins SB, Chan AS, Coleman RW, Bosworth HB, Oddone EZ, et al. Identifying barriers to hypertension guideline adherence using clinician feedback at the point of care. AMIA Annu Symp Proc. 2006:494-8.
+7.	Martins SB, Lai S, Tu S, Shankar R, Hastings SN, Hoffman BB, et al. Offline testing of the ATHENA Hypertension decision support system knowledge base to improve the accuracy of recommendations. AMIA Annu Symp Proc. 2006:539-43.
+8.	Peralta CA, Shlipak MG, Wassel-Fyr C, Bosworth H, Hoffman B, Martins S, et al. Association of antihypertensive therapy and diastolic hypotension in chronic kidney disease. Hypertension. 2007 Sep;50(3):474-80.
+9.	Tu SW, Hrabak KM, Campbell JR, Glasgow J, Nyman MA, McClure R, et al. Use of declarative statements in creating and maintaining computer-interpretable knowledge bases for guideline-based care. AMIA Annu Symp Proc. 2006:784-8.
+10.	Young O, Shahar Y, Liel Y, Lunenfeld E, Bar G, Shalom E, et al. Runtime application of Hybrid-Asbru clinical guidelines. J Biomed Inform. 2007 Oct;40(5):507-26.
