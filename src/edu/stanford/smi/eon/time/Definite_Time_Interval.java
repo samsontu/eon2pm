@@ -160,8 +160,7 @@ public class Definite_Time_Interval extends Absolute_Time_Interval {
 		int lengthInDays = 0;
 
 		if ((startTime == null) && (stopTime == null)) {
-			logger.error("Definite time interval "+label+" has null start and stop times");
-			throw new Exception("Definite time interval "+label+" has null start and stop times");
+			logger.warn("Definite time interval "+label+" has null start and stop times");
 		}
 		//logger.debug("Definite_Time_Interval constructor - granularity: "+ granularity+" howMany: "+howMany+
 		//  " label: "+label+" polarity: "+polarity);

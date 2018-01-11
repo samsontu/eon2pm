@@ -1,0 +1,2615 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="HTNnoCKD_noMeds_DM2_1">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_noMeds_noDM2_2">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_noMeds_DM2_atGoal_3">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">89</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">135</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">60</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_noDM2_atGoal_4">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">89</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">145</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">60</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_thiazideX_noMeds_2">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_thiazideX_ACEARBx_noMeds_3">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.6</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_thiazideX_ACEARBx_DHPCCBx_noMeds_4">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+        <item>
+            <field1 label="Substance">amlodipine_besylate</field1>
+            <field2 label="Reaction">Anaphylaxis</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.6</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_1st2nd3rdX_noMeds_4a">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Unspecified Heart Block and no pacemaker</field1>
+            <field2 label="Name">Unspecified Heart Block and no pacemaker</field2>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+        <item>
+            <field1 label="Substance">amlodipine_besylate</field1>
+            <field2 label="Reaction">Anaphylaxis</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.6</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_HCT_5">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_chlorthalidone_6">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">chlorthalidone</field1>
+            <field2 label="Daily Dose">12.5</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_valsartan_7">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">80</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">valsartan</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_losartan_8">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">losartan</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_lisinopril_9">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_enalaprilMax_10">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">enalapril</field1>
+            <field2 label="Daily Dose">40</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_amlodipine_11">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">amlodipine_besylate</field1>
+            <field2 label="Daily Dose">5</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_BB_12">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">propranolol</field1>
+            <field2 label="Daily Dose">80</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrugHCTZx_noSubACEARBx_20">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.6</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrugchlorthalidoneX_SubACEARB_21">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">chlorthalidone</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">120</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_lisinoprilX_subThiazide_22">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.7</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_OneDrug_lisinoprilX_noSubThiazide_23">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">5.7</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">125</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_TwoDrugs_HCTZ_lisinopril_DHPx_DM2_30">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+		        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+		        <item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">25</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">rash</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+		<item>
+            <field1 label="Substance">amlodipine_besylate</field1>
+            <field2 label="Reaction">Anaphylaxis</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="HTNnoCKD_TwoDrugs_HCTZ_BB_ACEARBx_DHPx_DM2_31">
+    <meds>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Bromfenac</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+		<item>
+            <field1 label="Drug">hydrochlorothiazide</field1>
+            <field2 label="Daily Dose">10</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+		        <item>
+            <field1 label="Drug">propranolol</field1>
+            <field2 label="Daily Dose">80</field2>
+            <start>Mon Jun 03 10:23:00 PDT 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name"/>
+            <start>Mon Jun 03 10:23:24 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">95</field2>
+            <start>Mon Jun 03 10:21:03 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">160</field2>
+            <start>Mon Jun 03 10:21:37 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Pulse</field1>
+            <field2 label="Value">68</field2>
+            <start>Mon Jun 03 18:47:13 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">lisinopril</field1>
+            <field2 label="Reaction">ANGIOEDEMA</field2>
+            <start>Thu Nov 22 08:40:58 PST 2012</start>
+        </item>
+		<item>
+            <field1 label="Substance">amlodipine_besylate</field1>
+            <field2 label="Reaction">Anaphylaxis</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Potassium</field1>
+            <field2 label="Value">4.1</field2>
+            <start>Sun Jun 30 18:49:55 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Sodium</field1>
+            <field2 label="Value">132</field2>
+            <start>Sun Jun 30 18:50:35 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">LDL_Cholesterol</field1>
+            <field2 label="Value">190</field2>
+            <start>Sat Jun 15 18:51:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HDL_Cholesterol</field1>
+            <field2 label="Value">40</field2>
+            <start>Sun Jun 30 18:51:31 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.8</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Sun Jun 30 18:52:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">9</field2>
+            <start>Sat Jun 15 18:52:33 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Uric_Acid</field1>
+            <field2 label="Value">5.0</field2>
+            <start>Sun Jun 30 18:52:54 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">72</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White_Non-Hispanic</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">simvastatin</field1>
+            <field2 label="MPR"> 0.6</field2>
+            <start>Wed Jul 03 10:21:08 PDT 2013</start>
+        </item>
+    </mpr>
+</patient>
+</patientdata>

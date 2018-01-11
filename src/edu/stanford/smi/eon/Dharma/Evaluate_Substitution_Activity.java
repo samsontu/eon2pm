@@ -255,7 +255,10 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 						interpreter.complianceLevel, compare, activitySpecClass);
 
 				/* For each substitution candidate, see if the candidate can be  */
-				for (int i = 0;i < activitiesToStop.length ;i++) {
+				if  (( alternativeWOCurrentActivities == null) || (alternativeWOCurrentActivities.size() ==0)) {
+					logger.warn("No available substitution candidate for Evaluate_Substitution_Activity instance '"+ this.getBrowserText()+"'"); 
+				} else {
+					for (int i = 0;i < activitiesToStop.length ;i++) {
 					evaluatedSubs = null;
 					logger.debug("Evaluate_Substitution_Activity.doAction: i= "+i+
 							" activity to stop: "+activitiesToStop[i]);
@@ -265,6 +268,7 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 								alternativeWOCurrentActivities, this.getfine_grain_priorityValue(),
 								this.getrecommendation_basisValue());
 					} catch (Exception e) {
+						
 						logger.error(e.getMessage(), e);
 					}
 					logger.debug("Evaluate_Substitution_Activity.doAction: evaluatedSubs "+
@@ -284,6 +288,7 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 						}
 					}
 				}
+			}
 			}
 			logger.debug("Evaluate_Substitution_Activity.doAction: 2 "+getlabelValue());
 			Collection subEvalCollection = new ArrayList();

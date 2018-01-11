@@ -636,8 +636,8 @@ public class Drug_Usage extends Activity_Specification {
 		}
 		logger.debug("Drug_Usage.evaluateSubstitute: current drug "+delEval.name);
 		if (( substitutionCandidates == null) || (substitutionCandidates.size() ==0)) {
-			logger.debug("Drug_Usage evaluateSubstitute: No substitution candidate in evaluateSubstitute" );
-			throw new PCA_Session_Exception ("No substitution candidate in evaluateSubstitute");
+			logger.warn("Drug_Usage evaluateSubstitute: No substitution candidate in evaluateSubstitute" );
+			 throw new PCA_Session_Exception ("No substitution candidate in evaluateSubstitute");
 		}
 		logger.debug("Drug_Usage.evaluateSubstitute 2: delEval "+delEval.toString());
 

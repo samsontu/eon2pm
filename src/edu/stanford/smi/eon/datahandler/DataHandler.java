@@ -404,6 +404,7 @@ public class DataHandler {
 		if (addProtegeInstance) {
 			Definite_Time_Interval interval = (Definite_Time_Interval)createInstance("Definite_Time_Interval");		
 			try {
+				if (startTime == null) logger.warn("The medication "+ med +" has no start time");
 				interval.setSlotsValues("["+startTime+","+stopTime+"]", startTime, stopTime, this);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -542,7 +543,7 @@ public class DataHandler {
 	 */
 	public void cacheQualitativeData(String domainTerm, String value,
 			String date) {
-		currentProblems.put(domainTerm, date);
+		currentProblems.put(domainTerm.trim(), date);
 		//		System.out.println("domainterm: "+domainTerm+" value: "+value);
 		Definite_Time_Point timePoint = null;
 		if ((date != null) && !date.equals("")) {
@@ -552,7 +553,7 @@ public class DataHandler {
 		if (value == null)
 			value = "";
 		Note_Entry noteEntry = (Note_Entry) createInstance("Note_Entry");
-		noteEntry.setSlotsValues(domainTerm, patient_id, timePoint, value);
+		noteEntry.setSlotsValues(domainTerm.trim(), patient_id, timePoint, value.trim());
 	}
 
 	public void cacheNoteEntry(String problem, String date) {
@@ -562,9 +563,10 @@ public class DataHandler {
 			timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
 			timePoint.setDateValue(date);
 		}
-		currentProblems.put(problem, date);
+		String noWhiteSpaceProblem = problem.trim();
+		currentProblems.put(noWhiteSpaceProblem, date);
 		Note_Entry noteEntry = (Note_Entry) createInstance("Note_Entry");
-		noteEntry.setSlotsValues(problem, patient_id, timePoint, "");
+		noteEntry.setSlotsValues(noWhiteSpaceProblem, patient_id, timePoint, "");
 
 	}
 
