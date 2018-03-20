@@ -399,7 +399,7 @@ public class Drug_Usage extends Activity_Specification {
 			String prettyName = getDrugClassPrettyName();
 			logger.debug("in Drug_Usage.addActivity: creating Medication recom "+
 					"instance for " + getDrug_Class_NameValue().getName() );
-			String preferredDrugsString = getPreferredDrugsString(possibleDrugs, prettyName);
+			String preferredDrugsString = getPreferredDrugsString(possibleDrugs, prettyName, interpreter);
 			Add_Evaluation addEval= new Add_Evaluation(
 					prettyName+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), //description
 					prettyName,                                                                         //name
@@ -436,7 +436,7 @@ public class Drug_Usage extends Activity_Specification {
 		Collection<String> drugs = new ArrayList<String>();
 		for (Guideline_Drug drug : possibleDrugs) {
 			if (drug.preferred(interpreter)) {
-				drugs.add(drug.getActivityName() + "(preferred)");
+				drugs.add(drug.getActivityName() + " (preferred)");
 			} else
 				drugs.add(drug.getActivityName());
 		}
@@ -478,17 +478,22 @@ public class Drug_Usage extends Activity_Specification {
 	}
 
 
-	public String getPreferredDrugsString(Collection<Guideline_Drug> preferredDrugs, String drugClassName) {
-		boolean firstPreferred = true;
+	public String getPreferredDrugsString(Collection<Guideline_Drug> possibleDrugs, String drugClassName, GuidelineInterpreter interpreter) {
+		boolean firstPossible = true;
 		String preferredDrugsString ="";
-		for (Guideline_Drug drug : preferredDrugs) {
+		String drugLabel = "";
+		for (Guideline_Drug drug : possibleDrugs) {
 			if (drug.getActivityName().equals(drugClassName))
 				continue;
-			if (firstPreferred) {
-				preferredDrugsString = preferredDrugsString + drug.getActivityName();
-				firstPreferred = false;
+			if (drug.preferred(interpreter)) {
+				drugLabel = drug.getActivityName() + " (preferred)";
 			} else
-				preferredDrugsString = preferredDrugsString + ", "+drug.getActivityName();
+				drugLabel = drug.getActivityName();
+			if (firstPossible) {
+				preferredDrugsString = preferredDrugsString + drugLabel;
+				firstPossible = false;
+			} else
+				preferredDrugsString = preferredDrugsString + ", "+drugLabel;
 		}
 		return preferredDrugsString;	
 
