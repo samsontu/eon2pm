@@ -588,7 +588,7 @@ public  class ClientUtil {
 			boolean firstDrug = true;
 			for (String drug : evaluation.specific_drug) {
 				if (firstDrug) {
-					itsWriter.print("<li>preferred drug: "+drug);
+					itsWriter.print("<li>specific drug(s): "+drug);
 					firstDrug = false;
 				} else {
 					itsWriter.print(", "+drug);

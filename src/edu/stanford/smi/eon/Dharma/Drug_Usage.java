@@ -31,6 +31,7 @@ import java.util.*;
 import edu.stanford.smi.protege.model.*;
 import edu.stanford.smi.eon.guidelineinterpreter.*;
 import edu.stanford.smi.eon.PCAServerModule.*;
+import edu.stanford.smi.eon.criterion.Criterion;
 import edu.stanford.smi.eon.kbhandler.*;
 import edu.stanford.smi.eon.datahandler.*;
 
@@ -394,15 +395,16 @@ public class Drug_Usage extends Activity_Specification {
 		}
 		if (eval !=null) {
 			DataHandler dataHandler = interpreter.getDBmanager();
-			Collection<Guideline_Drug> drugs = getPreferredDrugs(interpreter);
+			Collection<Guideline_Drug> possibleDrugs = getPossbileDrugs(interpreter);
 			String prettyName = getDrugClassPrettyName();
 			logger.debug("in Drug_Usage.addActivity: creating Medication recom "+
 					"instance for " + getDrug_Class_NameValue().getName() );
-			String preferredDrugsString = getPreferredDrugsString(drugs, prettyName);
+			String preferredDrugsString = getPreferredDrugsString(possibleDrugs, prettyName);
 			Add_Evaluation addEval= new Add_Evaluation(
-					prettyName+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), 
-					prettyName, 
-					this.makeGuideline_Entity(interpreter.guideline.getName()), getDrug_Class_NameValue().getName(),
+					prettyName+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), //description
+					prettyName,                                                                         //name
+					this.makeGuideline_Entity(interpreter.guideline.getName()), 
+					getDrug_Class_NameValue().getName(),                                                //activity to start
 					(Matched_Data[]) eval.is_first_line_drug_for.toArray(new Matched_Data[0]),
 					(Matched_Data[]) eval.is_second_line_drug_for.toArray(new Matched_Data[0]) ,
 					(Matched_Data[]) eval.is_third_line_drug_for.toArray(new Matched_Data[0]),
@@ -417,7 +419,7 @@ public class Drug_Usage extends Activity_Specification {
 							(Matched_Data[]) eval.side_effects.toArray(new Matched_Data[0]),
 							(Matched_Data[])eval.stop_add_controllable_conditions.toArray(new Matched_Data[0]),
 							(Matched_Data[])eval.stop_add_uncontrollable_conditions.toArray(new Matched_Data[0]),
-							Preference.neutral, getPreferredDrugs(drugs), fine_grain_priority, null);
+							Preference.neutral, getPreferredDrugs(possibleDrugs, interpreter), fine_grain_priority, null);
 			/*			Medication addedMed =  (Medication)dataHandler.createInstance("Medication");
 			addedMed.setSlotsValues( (float)0.0,"",
 					getDrug_Class_NameValue().getName(), 0, "",
@@ -428,6 +430,20 @@ public class Drug_Usage extends Activity_Specification {
 			logger.error("Drug_Usage.addActivity : null activity evaluation for "+this.getBrowserText());
 			return null;
 		}
+	}
+
+	private Collection<String> getPreferredDrugs(Collection<Guideline_Drug> possibleDrugs, GuidelineInterpreter interpreter) {
+		Collection<String> drugs = new ArrayList<String>();
+		for (Guideline_Drug drug : possibleDrugs) {
+			if (drug.preferred(interpreter)) {
+				drugs.add(drug.getActivityName() + "(preferred)");
+			} else
+				drugs.add(drug.getActivityName());
+		}
+		if (!drugs.isEmpty()) 
+			return drugs;	
+		else
+			return null;
 	}
 
 	public void addMedicationInstance(GuidelineInterpreter interpreter, Add_Evaluation addEval, 
@@ -478,32 +494,18 @@ public class Drug_Usage extends Activity_Specification {
 
 	}
 
-	public Collection<String> getPreferredDrugs(Collection<Guideline_Drug> preferredDrugs) {
-		boolean firstPreferred = true;
-		Collection<String> drugs = new ArrayList<String>();
-		for (Guideline_Drug drug : preferredDrugs) {
-			if (firstPreferred) {
-				drugs.add(drug.getActivityName());
-				firstPreferred = false;
-			} else
-				drugs.add(drug.getActivityName());
-		}
-		if (!drugs.isEmpty()) 
-			return drugs;	
-		else
-			return null;
-
-	}
+	
 
 	/**
 	 * 
+	 * @param drugs 
 	 * @param interpreter
 	 * @return A (possibly empty) collection of preferred or default guideline drugs
 	 * 
 	 * If there is at least one drug that is ruled in and not ruled out, return only these drugs
 	 * else return those that are not ruled out.
 	 */
-	public Collection<Guideline_Drug> getPreferredDrugs(GuidelineInterpreter interpreter) {
+	public Collection<Guideline_Drug> getPossbileDrugs(GuidelineInterpreter interpreter) {
 		Collection<Guideline_Drug> listedDrugs = (Collection<Guideline_Drug>)getformulary_preferred_drug_in_classValue();
 		Collection <Guideline_Drug> possibleDrugs = new ArrayList<Guideline_Drug>();
 		Collection <Guideline_Drug> preferredDrugs = new ArrayList<Guideline_Drug>();

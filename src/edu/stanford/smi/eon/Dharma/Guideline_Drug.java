@@ -99,13 +99,19 @@ public class Guideline_Drug extends Drug_Usage {
 		return ((Float) ModelUtilities.getOwnSlotValue(this, "starting_dose")).floatValue();
 	}
 
-	public void setrule_outValue(Instance rule_out) {
+	public void setrule_outdValue(Instance rule_out) {
 		ModelUtilities.setOwnSlotValue(this, "rule_out", rule_out);	}
 	public Instance getrule_outValue() {
 		return ((Instance) ModelUtilities.getOwnSlotValue(this, "rule_out"));
 	}
 
-	public void setdose_strength_unitValue(Cls dose_strength_unit) {
+	public void setcondition_for_being_preferredValue(Instance condition_for_being_preferred) {
+		ModelUtilities.setOwnSlotValue(this, "condition_for_being_preferred", condition_for_being_preferred);	}
+	public Instance getcondition_for_being_preferredValue() {
+		return ((Instance) ModelUtilities.getOwnSlotValue(this, "condition_for_being_preferred"));
+	}
+
+		public void setdose_strength_unitValue(Cls dose_strength_unit) {
 		ModelUtilities.setOwnSlotValue(this, "dose_strength_unit", dose_strength_unit);	}
 	public Cls getdose_strength_unitValue() {
 		return ((Cls) ModelUtilities.getOwnSlotValue(this, "dose_strength_unit"));
@@ -150,6 +156,22 @@ public class Guideline_Drug extends Drug_Usage {
     }
     return false;
   }
+  
+  protected boolean preferred(GuidelineInterpreter interpreter) {
+	    Instance preferredCondition = getcondition_for_being_preferredValue();
+	    Criteria_Evaluation evaluation = null;
+	    if (preferredCondition != null) {
+	      try {
+	        evaluation = (Criteria_Evaluation) ((Criterion)preferredCondition).evaluate(interpreter, false);
+	        if (PCAInterfaceUtil.mapTruthValue(evaluation.truth_value))    // condition_for_being_preferred condition holds
+	        return true;
+	      } catch (Exception e) {
+	        e.printStackTrace();
+	        return false;
+	      }
+	    }
+	    return false;
+	  }
 
   protected String getActivityName() {
     String drugName = getlabelValue();
