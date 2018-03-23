@@ -86,8 +86,9 @@ public class Set_Expression extends Expression {
 				Object element = i.next();
 				if (element instanceof DefaultInstance) {
 					elementText =((DefaultInstance)element).getBrowserText();
-				} else
-					elementText = element.toString();
+				} else if (element instanceof String)
+					elementText = edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString((String)element, this.getKnowledgeBase());
+				else elementText = element.toString();
 				if ((elementText == null) || (elementText.equals(""))) {
 					continue;
 				}

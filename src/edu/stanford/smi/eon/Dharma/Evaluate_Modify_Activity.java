@@ -456,7 +456,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						}
 						mood = getRecommendationMood(preference);
 						changeEval = new Change_Attribute_Evaluation("",
-								currentActivity,
+								edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString(currentActivity, this.getKnowledgeBase()),
 								interpreter.getCurrentGuidelineID(),
 								getattributeValue(),
 								(nextLevel != null) ? nextLevel.getName() : "",

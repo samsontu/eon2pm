@@ -74,16 +74,18 @@ public class Variable_ValueSet extends DefaultSimpleInstance {
 			Object value = evaluatedResult.getOwnSlotValue(slot);
 			String newString = "";
 			if (value != null) {
-				if (value instanceof Instance) 
+				if (value instanceof Frame) 
 					newString = ((Instance)value).getBrowserText();
-				else 
-					newString = value.toString();
+				else if (value instanceof String) {
+					newString = edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString((String)value, this.getKnowledgeBase());
+				}
+				else 	newString = value.toString();
 				inputString = HelperFunctions.replaceSubstringWOQuotes(inputString, ((Property_Value)propertyValue).getstring_nameValue(),  newString);
 			}
 		}
 		return inputString;
 	}
-
+	
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager)
 		      throws PCA_Session_Exception {
 				if (getderivation_expressionValue() != null) {

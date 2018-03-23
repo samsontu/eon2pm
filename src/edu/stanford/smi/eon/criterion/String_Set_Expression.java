@@ -58,6 +58,7 @@ public class String_Set_Expression extends Set_Expression {
 		String text = "";
 		String elementText = "";
 		boolean first = true;
+		KnowledgeBase kb = this.getKnowledgeBase();
 		if (elements == null) return text;
 		else {
 			for (Iterator i = elements.iterator(); i.hasNext();) {
@@ -66,6 +67,7 @@ public class String_Set_Expression extends Set_Expression {
 					continue;
 				}
 				else {
+					element = edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString(element, kb);
 					if (first) {
 						first = false;
 						text = text.concat(element);

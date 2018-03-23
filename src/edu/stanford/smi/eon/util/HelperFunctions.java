@@ -34,6 +34,8 @@ import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.criterion.Criterion;
 import edu.stanford.smi.eon.kbhandler.PCAInterfaceUtil;
 import edu.stanford.smi.eon.time.Absolute_Time_Point;
+import edu.stanford.smi.protege.model.Frame;
+import edu.stanford.smi.protege.model.KnowledgeBase;
 
 
 
@@ -56,6 +58,16 @@ public class HelperFunctions {
 		}
 		return original;
 	}
+	
+	public static String getBrowserTextFromString(String element, KnowledgeBase kb) {
+		Frame frame = kb.getInstance(element);
+		frame= (frame != null )? frame : kb.getCls(element) ;
+		frame = (frame != null) ? frame : kb.getSlot(element);
+		element = (frame != null) ? frame.getBrowserText() : element;
+		return element;
+	}
+
+
 
 	public static String replaceSubstringWOQuotes(String original, String oldSub, String newSub) {
 		int oldSubLength = oldSub.length();

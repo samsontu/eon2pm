@@ -363,9 +363,17 @@ public class DataHandler {
 					if (PRTime != null) existingMed.setPRT(PRTime);	
 					return;
 				} else {
-					// Generate note entry
-					Note_Entry note = (Note_Entry) createInstance("Note_Entry");
-					note.setSlotsValues(Constants.DuplicateDrug, patient_id, null, med);				
+					// Generate note entry if there is  no previous duplicate_drug note entry
+					Note_Entry note = null;
+					Collection<WhereComparisonFilter> comparisons = new ArrayList<WhereComparisonFilter>();
+					comparisons.add(new WhereComparisonFilter("domain_term", DharmaPaddaConstants.eq, Constants.DuplicateDrug));
+					comparisons.add(new WhereComparisonFilter("value", DharmaPaddaConstants.eq, med));
+					WhereFilter where = new WhereFilter(DharmaPaddaConstants.AND, comparisons);
+					Collection existingDupNoteEntry = kbmanager.findInstances("Note_Entry", where);
+					if (existingDupNoteEntry.isEmpty()) {
+						note = (Note_Entry) createInstance("Note_Entry");
+						note.setSlotsValues(Constants.DuplicateDrug, patient_id, null, med);	
+					}
 					status = Constants.active;
 					if (cumulative) { // Case: cumulative flag set, add doses
 						existingMed.setDaily_dose( existingMed.getDaily_dose() + dailyDose);

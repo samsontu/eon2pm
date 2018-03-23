@@ -85,7 +85,7 @@ public class Expression extends DefaultSimpleInstance {
 		// stub for getting support (e.g., relevant data) in evaluating criteria. See Structured_Query
 		return "";
 	}
-
+	
 
 	public Expression evaluate_expression(GuidelineInterpreter guidelineManager)
 	throws PCA_Session_Exception {
