@@ -156,9 +156,11 @@ public class Action_Choice extends Action_Like_Step {
     // Construct steps as an array of Action_Spec_Record
     Action_Spec_Record step;
     Collection<Action_Spec_Record> steps = new ArrayList<Action_Spec_Record>();
-    for (Action_Specification i: (Collection<Action_Specification>)getactionsValue()) {
-      step = i.evaluateActionSpec(gmanager);
-      if (step != null) steps.add(step);
+    if (preference.equals(Preference.preferred)) {
+    		for (Action_Specification i: (Collection<Action_Specification>)getactionsValue()) {
+    			step = i.evaluateActionSpec(gmanager);
+    			if (step != null) steps.add(step);
+    		}
     }
     Action_To_Choose choice = new Action_To_Choose (getName(), preference,
       support, (Action_Spec_Record[]) steps.toArray(new Action_Spec_Record[0]),
