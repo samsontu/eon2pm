@@ -9,7 +9,7 @@ public class Message extends Action_Spec_Record {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	  public int fine_grain_priority;
+	  //public int fine_grain_priority;
 	  public java.lang.String message_type;
 	  public java.lang.String rule_in_criteria;
 	  public java.lang.String message;

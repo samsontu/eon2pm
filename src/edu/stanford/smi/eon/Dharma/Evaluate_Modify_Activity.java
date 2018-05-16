@@ -218,7 +218,6 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 	}
 	
 	private void doActionWithActionSpecCandidateQuery(Collection<String> activitiesToModify, GuidelineInterpreter interpreter) {
-		System.out.println("Making action spec candidate query");
 		Collection<Choice_Evaluation> changeEvaluations = new ArrayList<Choice_Evaluation>(); 
 		Collection<Instance> actionSpecCandidates = null;
 		try {

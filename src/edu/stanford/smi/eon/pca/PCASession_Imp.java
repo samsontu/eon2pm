@@ -2658,16 +2658,19 @@ public class PCASession_Imp {
 				gov.va.athena.advisory.Message m = (gov.va.athena.advisory.Message)action;
 				if (m.getMessage_type() != null)
 					printlnWithIndent(itsWriter, "Message Type: " + m.getMessage_type(), indent);
+				printlnWithIndent(itsWriter, "Fine-grain priority: "+m.getFine_grain_priority(), indent);
 				if (m.getMessage() != null)
 					printlnWithIndent(itsWriter, "Message: " + m.getMessage() , indent);
 			} else if (action instanceof gov.va.athena.advisory.Referral) {
 				gov.va.athena.advisory.Referral referral = (gov.va.athena.advisory.Referral)action;
+				printlnWithIndent(itsWriter, "Fine-grain priority: "+referral.getFine_grain_priority(), indent);
 				printlnWithIndent(itsWriter, "Refer to: "+referral.getWho_to(), indent);
 				if (referral.getWhen() != null)
 					printlnWithIndent(itsWriter, "When: "+referral.getWhen(), indent);
 			} else if (action instanceof gov.va.athena.advisory.Order_TestProcedure) {
 				gov.va.athena.advisory.Order_TestProcedure test = (gov.va.athena.advisory.Order_TestProcedure)action;
 				printlnWithIndent(itsWriter, "Test or Procedure: "+test.getTest_or_procedure(), indent);
+				printlnWithIndent(itsWriter, "Fine-grain priority: "+test.getFine_grain_priority(), indent);
 				if (test.getWhen() != null)
 					printlnWithIndent(itsWriter, "When: "+test.getWhen(), indent);
 			}

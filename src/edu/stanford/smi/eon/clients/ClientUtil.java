@@ -312,14 +312,16 @@ public  class ClientUtil {
 				}
 			}
 			if (messageType != null)
-				sentence += "["+messageType+"] ";
+				sentence += "["+messageType+"; fine-grain-priority="+actionSpec.fine_grain_priority+"] ";
 			sentence += ((Message)actionSpec).message;
 		} else if (actionSpec.action_spec_class.equals("Order_TestProcedure")) {
-			sentence += "Order test or procedure:" + ((Order_TestProcedure)actionSpec).test_or_procedure;
+			sentence += "Order test or procedure:" + ((Order_TestProcedure)actionSpec).test_or_procedure 
+					    + "fine-grain priority: "+ (actionSpec.fine_grain_priority);
 		} else {
 			sentence += (actionSpec.action_spec_class != null) ? actionSpec.action_spec_class + " " : "";
 			sentence += (actionSpec.name != null) ? actionSpec.name + " " : "";
 			sentence += (actionSpec.text != null) ? actionSpec.text + " " : "";
+			sentence += "fine-grain priority: "+ (actionSpec.fine_grain_priority);
 
 		}
 		if ((actionSpec.subsidiary_message != null) && !(actionSpec.subsidiary_message.isEmpty())){
@@ -763,7 +765,7 @@ public  class ClientUtil {
 							references.concat(";"+url);
 					}
 					}
-					itsWriter.println("<li>" +actionSpec.message+"("+ references+")");
+					itsWriter.println("<li>" +actionSpec.message+"(fine-grain priority: "+ actionSpec.fine_grain_priority+ references+")");
 
 				}
 				if (hasPrintedTitle) itsWriter.println("</ul>");

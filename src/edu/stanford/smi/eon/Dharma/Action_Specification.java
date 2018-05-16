@@ -119,10 +119,13 @@ public abstract class Action_Specification extends Guideline_Model_Entity {
 		ModelUtilities.setOwnSlotValue(this, "fine-grain_priority", fine_grain_priority);	}
 	public int getfine_grain_priorityValue(){
 		Integer value = (Integer)ModelUtilities.getOwnSlotValue(this, "fine-grain_priority");
-		if (value != null)
+		if (value != null) {
+			// System.out.println("Action spec "+ this.getBrowserText()+" fine-grain priority: "+value.toString()+"/"+value.intValue());
 			return  value.intValue();
-		else
+		} else {
+			// System.out.println("Action spec "+ this.getBrowserText()+" fine-grain priority: null = 0");
 			return 0;
+		}
 	}
 	
 	public void setcollateral_actionsValue(Collection collateral_actions) {
