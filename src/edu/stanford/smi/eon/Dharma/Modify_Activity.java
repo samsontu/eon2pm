@@ -157,6 +157,7 @@ public void doAction (Action_To_Choose action,
 					relative_indications,
 					null,  //side_effects
 					null, //do_not_intensify_conditions
+					null, //do_not_decrease_dose_conditions
 					getDirection(getdirectionValue()), //Truth_Value._true,
 					new Action_Spec_Record[0],
 					Preference.neutral, this.getfine_grain_priorityValue());

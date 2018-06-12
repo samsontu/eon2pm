@@ -47,17 +47,17 @@
         </item>
         <item>
             <field1 label="Lab">Bicarbonate</field1>
-            <field2 label="Value">25</field2>
+            <field2 label="Value">22</field2>
             <start>Tue Jun 11 18:54:08 PDT 2013</start>
         </item>
         <item>
             <field1 label="Lab">AST</field1>
-            <field2 label="Value">40</field2>
+            <field2 label="Value">146</field2>
             <start>Tue Jun 11 18:54:08 PDT 2013</start>
         </item>
         <item>
             <field1 label="Lab">ALT</field1>
-            <field2 label="Value">40</field2>
+            <field2 label="Value">140</field2>
             <start>Tue Jun 11 18:54:08 PDT 2013</start>
         </item>
     </labs>
@@ -1782,6 +1782,108 @@
         </item>
     </mpr>
 </patient>
+<patient name="onMF_MFmax_addglip_pio_saxB_CVD_empaB17a">
+    <meds>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="Daily Dose">2555</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Wed Feb 27 11:20:38 PST 2013</start>
+        </item>
+		<item>
+            <field1 label="Dx">CVD_DM</field1>
+            <field2 label="Name">CVD DM</field2>
+            <start>Sat Feb 02 23:00:00 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">10</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2012</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.5</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">25</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">65</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="MPR"> 70</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="MPR"> 91</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+        </item>
+    </mpr>
+</patient>
 <patient name="onMF_MFx_eGFR29_subGlip_Sax_Pio27_18">
     <meds>
         <item>
@@ -2704,7 +2806,7 @@
             <field2 label="Name">Diabetes Type 2</field2>
             <start>Wed Feb 27 10:26:36 PST 2013</start>
         </item>
-		<item>
+        <item>
             <field1 label="Dx">Bladder_Cancer</field1>
             <field2 label="Name">Bladder Cancer</field2>
             <start>Wed Feb 27 10:26:36 PST 2013</start>
@@ -3073,6 +3175,184 @@
 </patient>
 <patient name="Woman_noMeds_oldHbA1c_55_32">
     <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Wed Feb 27 11:20:38 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">10</field2>
+            <start>Sun Jul 01 18:54:08 PDT 2012</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.5</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">25</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">18</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="MPR"> 91</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="Woman_noMeds_oldHbA1c_nonEncoded_55_32a">
+    <meds>
+        <item>
+            <field1 label="Drug">GLYBURIDE</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Wed Feb 27 11:20:38 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">10</field2>
+            <start>Sun Jul 01 18:54:08 PDT 2012</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.5</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">25</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">18</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Female</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="MPR"> 91</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="Woman_noMeds_oldHbA1c_nonEncoded_nphInsulin_32a">
+    <meds>
+        <item>
+            <field1 label="Drug">GLYBURIDE</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
+        <item>
+            <field1 label="Drug">Nph_Insulin</field1>
+            <field2 label="Daily Dose"> 20</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
     </meds>
     <dx>
         <item>
@@ -13278,7 +13558,7 @@
             <field2 label="Daily Dose">40</field2>
             <start>Wed Feb 27 11:21:03 PST 2013</start>
             <end/>
-		</item>
+        </item>
         <item>
             <field1 label="Drug">GLIPIZIDE_XL</field1>
             <field2 label="Daily Dose">20</field2>
@@ -13435,12 +13715,12 @@
         <item>
             <field1 label="Lab">eGFR</field1>
             <field2 label="Value">80</field2>
-            <start>Tue Jan 11 18:54:08 PDT 2013</start>
+            <start>Fri Jan 11 17:54:08 PST 2013</start>
         </item>
         <item>
             <field1 label="Lab">Creatinine</field1>
             <field2 label="Value">1.03</field2>
-            <start>Tue Jan 11 18:54:08 PDT 2013</start>
+            <start>Fri Jan 11 17:54:08 PST 2013</start>
         </item>
         <item>
             <field1 label="Lab">Bicarbonate</field1>
@@ -13533,6 +13813,152 @@
         <item>
             <field1 label="Lab">eGFR</field1>
             <field2 label="Value">44</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.5</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">25</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">65</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="MPR"> 91</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+        </item>
+    </mpr>
+</patient>
+<patient name="noMeds_AddMF_simple_0">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">DM-Type2</field1>
+            <field2 label="Name">Diabetes Type 2</field2>
+            <start>Wed Feb 27 11:20:38 PST 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">10</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Creatinine</field1>
+            <field2 label="Value">1.5</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">25</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">AST</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">ALT</field1>
+            <field2 label="Value">40</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">57</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">White</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="noDM_MFmax_Addglip_sax_pio_00">
+    <meds>
+        <item>
+            <field1 label="Drug">METFORMIN</field1>
+            <field2 label="Daily Dose">2550</field2>
+            <start>Wed Feb 27 11:21:03 PST 2013</start>
+            <end/>
+        </item>
+    </meds>
+    <dx>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">120</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">10</field2>
+            <start>Tue Jun 11 18:54:08 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">80</field2>
             <start>Tue Jun 11 18:54:08 PDT 2013</start>
         </item>
         <item>

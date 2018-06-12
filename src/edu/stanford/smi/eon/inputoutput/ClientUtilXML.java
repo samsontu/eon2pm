@@ -1,17 +1,26 @@
 package edu.stanford.smi.eon.inputoutput;
 
 import edu.stanford.smi.eon.inputoutput.EONXSDConstants;
+import edu.stanford.smi.eon.kbhandler.KBHandler;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.clients.ClientUtil;
 import edu.stanford.smi.eon.util.HelperFunctions;
 import edu.stanford.smi.protege.model.KnowledgeBase;
 
+import java.io.StringWriter;
+import java.io.Writer;
 import java.util.*;
 
 import org.apache.log4j.*;
 import org.w3c.dom.*;
 
 import javax.xml.parsers.*;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 
 public class ClientUtilXML  {
@@ -21,6 +30,30 @@ public class ClientUtilXML  {
 
 	static Logger logger = Logger.getLogger(ClientUtil.class);
 
+
+	public static String generateXMLAdvisory(String ptID, Guideline_Service_Record[] dssOutput,
+			KBHandler kbmanager, String guidelineName ) {
+		Document xmlDoc = ClientUtilXML.makeXMLOutput( dssOutput, ptID, guidelineName, kbmanager.getKB());											
+		TransformerFactory transformerFactory = TransformerFactory.newInstance();
+		String advisoryXML = null;
+		Transformer transformer;
+		try {
+			transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(xmlDoc);
+			Writer outWriter = new StringWriter();  
+			StreamResult result = new StreamResult( outWriter ); 
+			transformer.transform(source, result);
+			advisoryXML = result.getWriter().toString();
+		} catch (TransformerConfigurationException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return advisoryXML;
+		
+	}
 
 	public static Document makeXMLOutput(Guideline_Service_Record[] dssOutput, String caseID, String guidelineID, KnowledgeBase kb) {
 		//itsWriter.println("<hr>");
@@ -147,9 +180,13 @@ public class ClientUtilXML  {
 //		
 		addSimpleValue(doc, activityRoot, EONXSDConstants.PRIORUSE, evaluation.prior_use.toString() );
 		addSimpleValue(doc, activityRoot, EONXSDConstants.PREFERENCE, evaluation.preference.toString() );
+		addSimpleValue(doc, activityRoot, EONXSDConstants.FINEGRAINPRIORTY, Integer.toString(evaluation.fine_grain_priority ));
+		addSimpleValue(doc, activityRoot, EONXSDConstants.RECOMMENDATIONBASIS, evaluation.recommendationBasis);
 		addCommonEvaluations(doc,activityRoot, evaluation.name, evaluation.activity_to_start, evaluation.compelling_indications, evaluation.relative_indications,
 				evaluation.contraindications, evaluation.relative_contraindications, evaluation.side_effects,
-				evaluation.beneficial_interactions, evaluation.harmful_interactions, evaluation.messages, guidelineID);
+				evaluation.beneficial_interactions, evaluation.harmful_interactions, 
+				evaluation.is_first_line_drug_for, evaluation.is_second_line_drug_for, evaluation.is_third_line_drug_for,
+				evaluation.messages, guidelineID);
 //		
 	}
 
@@ -157,14 +194,18 @@ public class ClientUtilXML  {
 		//
 		//addSimpleValue(doc, Element, EONXSDConstants.PRIORUSE, evaluation.prior_use.toString() );
 		addSimpleValue(doc, activityRoot, EONXSDConstants.PREFERENCE, evaluation.preference.toString() );
+		addSimpleValue(doc, activityRoot, EONXSDConstants.FINEGRAINPRIORTY, Integer.toString(evaluation.fine_grain_priority ));
 		addCommonEvaluations(doc,activityRoot, evaluation.name, evaluation.activity_to_delete, evaluation.compelling_indications, evaluation.relative_indications,
 				evaluation.contraindications, evaluation.relative_contraindications, evaluation.side_effects,
-				evaluation.beneficial_interactions, evaluation.harmful_interactions, evaluation.messages, guidelineID);
+				evaluation.beneficial_interactions, evaluation.harmful_interactions, 
+				evaluation.is_first_line_drug_for, evaluation.is_second_line_drug_for, evaluation.is_third_line_drug_for,
+				evaluation.messages, guidelineID);
 		//
 	}
 
 	private static void createChangeAttributeEvaluation(Document doc, Element activityRoot, String activity,  Change_Attribute_Evaluation evaluation, String guidelineID) {
 		Element changeAttributeElement = doc.createElement(EONXSDConstants.CHANGEATTRIBUTE);
+		addSimpleValue(doc, activityRoot, EONXSDConstants.FINEGRAINPRIORTY, Integer.toString(evaluation.fine_grain_priority ));
 		addSimpleValue(doc, changeAttributeElement, EONXSDConstants.NAME, evaluation.name );
 		addSimpleValue(doc, changeAttributeElement, EONXSDConstants.DESCRIPTION, evaluation.description );
 		addSimpleValue(doc, changeAttributeElement, EONXSDConstants.ATTRIBUTENAME, evaluation.attribute_name );
@@ -216,6 +257,7 @@ public class ClientUtilXML  {
 			Substitute_Evaluation evaluation, String guidelineID) {
 		Delete_Evaluation toDelete = null;
 		Add_Evaluation[] toAdd = evaluation.activities_to_start;
+		addSimpleValue(doc, activityRoot, EONXSDConstants.FINEGRAINPRIORTY, Integer.toString(evaluation.fine_grain_priority ));
 
 		for (Delete_Evaluation del : evaluation.activities_to_replace){
 			// get the evaluation corresponding to activity
@@ -283,11 +325,19 @@ public class ClientUtilXML  {
 			activitiesEvals.put(activity, evals);
 		}
 	}
+	
+	/*
+	 * hasComment = printEvaluation(itsWriter, kb, evaluation.is_first_line_drug_for, evaluation.is_second_line_drug_for,
+					evaluation.is_third_line_drug_for,evaluation.beneficial_interactions, evaluation.harmful_interactions, 
+					evaluation.compelling_indications, evaluation.contraindications, evaluation.relative_indications, 
+					evaluation.relative_contraindications, evaluation.side_effects, null);
+	 */
 
 	public static void 		addCommonEvaluations(Document doc, Element activityElement, String name, String activity,
 			Matched_Data[] compelling_indications, Matched_Data[] relative_indications,
 			Matched_Data[] contraindications, Matched_Data[] relative_contraindications, Matched_Data[] side_effects,
-			Matched_Data[] beneficial_interactions, Matched_Data[] harmful_interactions, 
+			Matched_Data[] beneficial_interactions, Matched_Data[] harmful_interactions, Matched_Data[] is_first_line_drug_for,
+			Matched_Data[] is_second_line_drug_for,Matched_Data[] is_third_line_drug_for,
 			Action_Spec_Record[] messages, String guidelineID) {
 		addSimpleValue(doc, activityElement, EONXSDConstants.NAME, name);
 		addSimpleValue(doc, activityElement, EONXSDConstants.ACTIVITY, activity);
@@ -298,14 +348,19 @@ public class ClientUtilXML  {
 		addSimpleValues(doc, activityElement, EONXSDConstants.HARMFULINTERACTIONS, getMatchedGuidelineTerm(harmful_interactions));
 		addSimpleValues(doc, activityElement, EONXSDConstants.BENEFICIALINTERACTIONS, getMatchedGuidelineTerm(beneficial_interactions));
 		addSimpleValues(doc, activityElement, EONXSDConstants.SIDEEFFECTS, getMatchedGuidelineTerm(side_effects));
+		addSimpleValues(doc, activityElement, EONXSDConstants.ISFIRSTLINEDRUGFOR, getMatchedGuidelineTerm(is_first_line_drug_for));
+		addSimpleValues(doc, activityElement, EONXSDConstants.ISSECONDLINEDRUGFOR, getMatchedGuidelineTerm(is_second_line_drug_for));
+		addSimpleValues(doc, activityElement, EONXSDConstants.ISTHIRDLINEDRUGFOR, getMatchedGuidelineTerm(is_third_line_drug_for));
 		addMessages(doc, activityElement, messages);
 		addSimpleValue(doc, activityElement, EONXSDConstants.GUIDELINEID, guidelineID);
 	}
 // Process collateral actions
 	public static void 	addMessages(Document doc, Element activityElement, Action_Spec_Record[] messages ) {
-		for (Action_Spec_Record action: messages ) {
-//			addSimpleValue(doc, activityElement, EONXSDConstants.MESSAGES, message.text );
-			addOneActionNode(doc, activityElement, action);
+		if (messages != null) {
+			for (Action_Spec_Record action: messages ) {
+	//			addSimpleValue(doc, activityElement, EONXSDConstants.MESSAGES, message.text );
+				addOneActionNode(doc, activityElement, action);
+			}
 		}
 	}
 

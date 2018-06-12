@@ -64,6 +64,7 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] adverse_reactions;
   public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_intensify_conditions;
+  public edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_decrease_dose_conditions;
   public edu.stanford.smi.eon.PCAServerModule.Direction change_direction;
   public edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages;
   public edu.stanford.smi.eon.PCAServerModule.Preference preference;
@@ -88,6 +89,7 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] relative_indications,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] adverse_reactions,
     edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_intensify_conditions,
+    edu.stanford.smi.eon.PCAServerModule.Matched_Data[] do_not_decrease_dose_conditions,
     edu.stanford.smi.eon.PCAServerModule.Direction change_direction,
     edu.stanford.smi.eon.PCAServerModule.Action_Spec_Record[] messages,
     edu.stanford.smi.eon.PCAServerModule.Preference preference,
@@ -108,6 +110,7 @@ final public class Change_Attribute_Evaluation implements java.io.Serializable {
     this.relative_contraindications =relative_contraindications;
     this.relative_indications = relative_indications;
     this.do_not_intensify_conditions = do_not_intensify_conditions;
+    this.do_not_decrease_dose_conditions = do_not_decrease_dose_conditions;
     this.change_direction = change_direction;
     this.messages = messages;
     this.adverse_reactions = adverse_reactions;

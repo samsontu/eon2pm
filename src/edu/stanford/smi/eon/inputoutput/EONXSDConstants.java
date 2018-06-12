@@ -34,6 +34,9 @@ public class EONXSDConstants {
 	public static final String SIDEEFFECTS = "side_effects";
 	public static final String BENEFICIALINTERACTIONS = "good_drug_partner";
 	public static final String HARMFULINTERACTIONS = "bad_drug_partner";
+	public static final String ISFIRSTLINEDRUGFOR = "is_first_line_drug_for";
+	public static final String ISSECONDLINEDRUGFOR = "is_second_line_drug_for";
+	public static final String ISTHIRDLINEDRUGFOR = "is_third_line_drug_for";
 	public static final String ATTRIBUTENAME = "attribute_name";
 	public static final String LEVEL = "level";
 	public static final String CHANGEDIRECTION = "change_direction";
@@ -91,6 +94,7 @@ public class EONXSDConstants {
 	public static final String WHENUPPERBOUNDUNIT = "when_upper_bound_unit";
 	public static final String WHOTO = "who_to";
 	public static final String PERFORMANCEMEASURE = "kb_goal_id";
+	public static final String RECOMMENDATIONBASIS = "recommendationBasis";
 	public static String CRITERION = "criterion";
 	public static String CRITERIONTYPE = "criterion_type";
 	public static String DATA = "data";

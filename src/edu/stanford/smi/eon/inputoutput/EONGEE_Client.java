@@ -277,7 +277,7 @@ public class EONGEE_Client extends Object {
 
 			// outputFile = saveComputedRecommendations(ptIDGenerated, caseData, dssOutput, kbmanager);
 			HTMLAdvisory = saveComputedRecommendations(ptID, caseData, dssOutput, kbmanager, currentTime);
-			XMLAdvisory = generateXMLAdvisory(ptID, dssOutput, kbmanager, currentTime);
+			XMLAdvisory = ClientUtilXML.generateXMLAdvisory(ptID, dssOutput, kbmanager, guidelineName);
 			m_pca.finishSession();
 		}
 		catch (Exception e) {
@@ -337,29 +337,6 @@ public class EONGEE_Client extends Object {
 		return dssOutput;
 	}
 	
-	public String generateXMLAdvisory(String ptID, Guideline_Service_Record[] dssOutput,
-			KBHandler kbmanager, String currentTime ) {
-		Document xmlDoc = ClientUtilXML.makeXMLOutput( dssOutput, ptID, guidelineName, kbmanager.getKB());											
-		TransformerFactory transformerFactory = TransformerFactory.newInstance();
-		String advisoryXML = null;
-		Transformer transformer;
-		try {
-			transformer = transformerFactory.newTransformer();
-			DOMSource source = new DOMSource(xmlDoc);
-			Writer outWriter = new StringWriter();  
-			StreamResult result = new StreamResult( outWriter ); 
-			transformer.transform(source, result);
-			advisoryXML = result.getWriter().toString();
-		} catch (TransformerConfigurationException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (TransformerException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return advisoryXML;
-		
-	}
 
 	public String saveComputedRecommendations(String ptID, String caseData, Guideline_Service_Record[] dssOutput,
 			KBHandler kbmanager, String currentTime) {

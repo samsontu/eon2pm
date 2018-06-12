@@ -2568,7 +2568,7 @@ public class PCASession_Imp {
 	private void printEvaluatedDrugRelatins(PrintWriter itsWriter, Collection<Evaluated_Drug_Relation> evals) {
 		List<String> reltypes = Arrays.asList("compelling_indication", "relative_indication", 
 				"strong_contraindication", "relative_contraindication", "bad_drug_partner", "good_drug_partner", 
-				"do_not_add_controllable_condition", "do_not_add_uncontrollable_condition", "do_not_intensify_condition",
+				"do_not_add_controllable_condition", "do_not_add_uncontrollable_condition", "do_not_intensify_condition", "do_not_decrease_dose_condition",
 				"is_first_line_drug_for", "is_second_line_drug_for", "is_third_line_drug_for");
 		for (String reltype : reltypes ) {
 			String rels = "";

@@ -427,6 +427,12 @@ public  class ClientUtil {
 						if (!evalComment.equals("")) {
 							itsWriter.println("<li>do not intensify conditions: "+ evalComment);
 						}
+						
+						evalComment =  mkStringMatchedDataList(
+								evaluation.change_attribute_eval().do_not_decrease_dose_conditions);
+						if (!evalComment.equals("")) {
+							itsWriter.println("<li>do not decrease dose conditions: "+ evalComment);
+						}
 						String priorityText = " <li> fine-grained priority: "+evaluation.change_attribute_eval().fine_grain_priority;
 						itsWriter.println(priorityText+"</ul>)");
 						if (evaluation.change_attribute_eval().messages != null) {

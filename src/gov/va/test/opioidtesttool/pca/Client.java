@@ -3,6 +3,7 @@ package gov.va.test.opioidtesttool.pca;
 import edu.stanford.smi.eon.Dharma.Management_Guideline;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.inputoutput.AdvisoryFormater;
+import edu.stanford.smi.eon.inputoutput.ClientUtilXML;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
 import edu.stanford.smi.eon.kbhandler.WhereComparisonFilter;
 import edu.stanford.smi.eon.clients.*;
@@ -10,10 +11,20 @@ import edu.stanford.smi.eon.execEngine.IEON;
 import gov.va.athena.advisory.Advisory;
 import gov.va.test.opioidtesttool.GlobalVars;
 
+
 import java.util.*;
+
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 import java.io.*;
 
 import org.apache.log4j.Logger;
+import org.w3c.dom.Document;
 
 
 /*
@@ -240,11 +251,13 @@ public class Client extends Object {
 		String filePrefix = outputdir + "/" + ptID.replace(' ', '_');
 
 		File debugOutput= new File(filePrefix + ".html");
+		File xmlOutput = new File(filePrefix+".xml");
 //		File briefOutput= new File(filePrefix + "-BRIEF.html");
 
 		try {
 			/* First write debug page*/
 			PrintWriter debugWriter = new PrintWriter (new FileWriter(debugOutput), true);
+			PrintWriter xmlWriter = new PrintWriter (new FileWriter(xmlOutput), true);
 //			PrintWriter briefWriter = new PrintWriter( new FileWriter(briefOutput), true);
 			ClientUtil.printHeader(debugWriter, ptID.replace('_', ' ')); //m_pca.patient_id());
 			debugWriter.print(caseData);
@@ -255,6 +268,8 @@ public class Client extends Object {
 					ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
 					//BriefOutput.showResult(dssOutput[j], briefWriter, Compliance_Level.strict);
 				}
+				//Generate XML output
+				xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
 				logger.debug("is eligible? guidelineName:"+ guidelineName + " "+isEligible(dssOutput, guidelineName));
 				if (isEligible(dssOutput, guidelineName)){
 					Collection subguidelines = subGuidelines(kbmanager, guidelineName);
@@ -270,6 +285,7 @@ public class Client extends Object {
 									for (int j=0; j< dssOutput.length; j++) {
 										ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
 									}
+									xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
 								}
 							} catch (Exception e) {
 								logger.error("Exception in computing advisory for "+ getGuidelineId(sub));
@@ -285,6 +301,7 @@ public class Client extends Object {
 				debugWriter.print(additionalOutput);
 //			briefWriter.close();
 			debugWriter.close();
+			xmlWriter.close();
 
 			/* Now write brief output page*/
 
@@ -348,6 +365,7 @@ public class Client extends Object {
 		}
 		return null;
 	}
+	
 
 }
 

@@ -41,6 +41,8 @@ import org.apache.log4j.*;
  *  for selection of drug class (e.g. beta blocker)
  */
 public class Drug_Usage extends Activity_Specification {
+	static int debugFlag = 4;
+	static Logger logger = Logger.getLogger(Drug_Usage.class);
 
 	public Drug_Usage(KnowledgeBase kb, FrameID id ) {
 		super(kb, id);
@@ -148,6 +150,12 @@ public class Drug_Usage extends Activity_Specification {
 		return  ModelUtilities.getOwnSlotValues(this, "Do_Not_Intensify_Conditions");
 	}
 
+	public void setDo_Not_Decrease_Dose_ConditionsValue(Collection criteria) {
+		ModelUtilities.setOwnSlotValues(this, "Do_Not_Intensify_Conditions", criteria);	}
+	public Collection getDo_Not_Decrease_Dose_ConditionsValue(){
+		return  ModelUtilities.getOwnSlotValues(this, "Do_Not_Intensify_Conditions");
+	}
+
 	public Collection getDo_Not_Start_Controllable_Conditions () {
 		Collection<Instance> conditions = new ArrayList<Instance>();
 		Cls metaClass = this.getKnowledgeBase().getCls("Diagnostic_Term_Metaclass");
@@ -213,8 +221,38 @@ public class Drug_Usage extends Activity_Specification {
 
 	}
 
-	static int debugFlag = 4;
-	static Logger logger = Logger.getLogger(Drug_Usage.class);
+	public Collection getDo_Not_Decrease_Dose_Controllable_Conditions () {
+		Collection<Instance> conditions = new ArrayList<Instance>();
+		Cls metaClass = this.getKnowledgeBase().getCls("Diagnostic_Term_Metaclass");
+		Slot controllableSlot = this.getKnowledgeBase().getSlot("controllable");
+		if ((metaClass != null) && (controllableSlot != null)) {
+			for (Object o: getDo_Not_Decrease_Dose_ConditionsValue()) {
+				Boolean controllable = (Boolean) ((Frame)o).getOwnSlotValue(controllableSlot);
+				if (((Instance) o).hasDirectType(metaClass) && (controllable != null && controllable.booleanValue())) {
+					conditions.add((Instance)o);
+				}
+			}
+		} else
+			logger.error("Null Diagnostic_Term_Metaclass or null controllable slot");
+		return conditions;
+	}
+
+	public Collection getDo_Not_Decrease_Dose_Uncontrollable_Conditions () {
+		Collection<Instance> conditions = new ArrayList<Instance>();
+		Cls metaClass = this.getKnowledgeBase().getCls("Diagnostic_Term_Metaclass");
+		Slot controllableSlot = this.getKnowledgeBase().getSlot("controllable");
+		if ((metaClass != null) && (controllableSlot != null)) {
+			for (Object o: getDo_Not_Decrease_Dose_ConditionsValue()) {
+				Boolean controllable = (Boolean) ((Frame)o).getOwnSlotValue(controllableSlot);
+				if ((controllable == null) || (((Instance) o).hasDirectType(metaClass) && !controllable.booleanValue()))  {
+					conditions.add((Instance)o);
+				}
+			}
+		} else
+			logger.error("Null Diagnostic_Term_Metaclass or null controllable slot");
+		return conditions;
+
+	}
 
 	ActivityEvaluation evaluate(GuidelineInterpreter interpreter) {
 		ActivityEvaluation evaluation = new ActivityEvaluation();
@@ -744,5 +782,10 @@ public class Drug_Usage extends Activity_Specification {
 	public Collection getDo_Not_Intensify_Conditions(boolean controllable) {
 		// Return Do Not Intensify condition (controllable or uncontrollable)
 		return controllable ? this.getDo_Not_Intensify_Controllable_Conditions() : this.getDo_Not_Intensify_Uncontrollable_Conditions();
+	}
+	
+	public Collection getDo_Not_Decrease_Dose_Conditions(boolean controllable) {
+		// Return Do Not Intensify condition (controllable or uncontrollable)
+		return controllable ? this.getDo_Not_Decrease_Dose_Controllable_Conditions() : this.getDo_Not_Decrease_Dose_Uncontrollable_Conditions();
 	}
 }

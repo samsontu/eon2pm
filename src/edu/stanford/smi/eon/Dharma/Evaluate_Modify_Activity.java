@@ -379,6 +379,18 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		else return null;
 	}
 
+	private Collection<Matched_Data> matchDoNotDecreaseDoseConditions(String currentActivity, GuidelineInterpreter interpreter, boolean controllable) {
+		Collection<Drug_Usage> drugUsages = getDrugUsages( currentActivity,  interpreter);
+		Collection<Matched_Data> doNotDecreaseDose= new ArrayList<Matched_Data>();
+		for (Drug_Usage drugUsage: drugUsages) {
+			Collection<Matched_Data> matched = interpreter.matchData("",
+					drugUsage.getDo_Not_Decrease_Dose_Conditions(controllable), interpreter.getDBmanager().currentProblems());
+			doNotDecreaseDose.addAll(matched);
+		}
+		if (!doNotDecreaseDose.isEmpty())
+			return doNotDecreaseDose;
+		else return null;
+	}
 
 
 	private Action_Spec_Record[] generateMessages (GuidelineInterpreter interpreter,
@@ -429,6 +441,9 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 					Collection<Matched_Data> stopControllableIntensifyConditionCollection = null;
 					Collection<Matched_Data> stopUncontrollableIntensifyConditionCollection = null;
 					Collection<Matched_Data> stopIntensifyConditionCollection = new ArrayList<Matched_Data>();
+					Collection<Matched_Data> stopControllableDecreaseDoseConditionCollection = null;
+					Collection<Matched_Data> stopUncontrollableDecreaseDoseConditionCollection = null;
+					Collection<Matched_Data> stopDecreaseDoseConditionCollection = new ArrayList<Matched_Data>();
 					Matched_Data[] addverseReactionArray = null;
 
 					Cls nextLevel = getNextLevel(interpreter, currentActivityLevel, evaluateObject);
@@ -437,6 +452,8 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						adverseReactionCollection =  interpreter.matchAdverseEvents(specificDrugCls);
 						stopControllableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, true); ;
 						stopUncontrollableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, false); ;
+						stopControllableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, true); ;
+						stopUncontrollableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, false); ;
 						if (adverseReactionCollection != null) {
 							addverseReactionArray = adverseReactionCollection.toArray(new Matched_Data[adverseReactionCollection.size()]);
 						}
@@ -444,6 +461,10 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 							stopIntensifyConditionCollection.addAll(stopControllableIntensifyConditionCollection);
 						if (stopUncontrollableIntensifyConditionCollection != null)
 							stopIntensifyConditionCollection.addAll(stopUncontrollableIntensifyConditionCollection);
+						if (stopControllableDecreaseDoseConditionCollection != null)
+							stopDecreaseDoseConditionCollection.addAll(stopControllableDecreaseDoseConditionCollection);
+						if (stopUncontrollableDecreaseDoseConditionCollection != null)
+							stopDecreaseDoseConditionCollection.addAll(stopUncontrollableDecreaseDoseConditionCollection);
 					}
 					if (stopUncontrollableIntensifyConditionCollection == null) {
 						Preference preference = null;
@@ -470,6 +491,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 								(activityEval != null) ? (Matched_Data[]) activityEval.relative_indications.toArray(new Matched_Data[0]) : null,
 								addverseReactionArray,  //side_effects
 								( Matched_Data[])stopIntensifyConditionCollection.toArray(new Matched_Data[stopIntensifyConditionCollection.size()]), 
+								( Matched_Data[])stopDecreaseDoseConditionCollection.toArray(new Matched_Data[stopDecreaseDoseConditionCollection.size()]), 
 								direction(), //Truth_Value._true,
 								generateMessages(interpreter, currentActivity, evaluateObject, preference),
 								preference, this.getfine_grain_priorityValue());

@@ -391,6 +391,12 @@ public class AdvisoryFormater {
 			rel.setRelation_type("do_not_intensify_condition");
 			drugRels.add(rel);
 		}
+		for (Matched_Data source : changeEval.do_not_decrease_dose_conditions) {
+			Evaluated_Drug_Relation rel = new DefaultEvaluated_Drug_Relation();
+			rel.setCondition_or_drug(getCondition(source));
+			rel.setRelation_type("do_not_decrease_dose_conditions");
+			drugRels.add(rel);
+		}
 		if (changeEval.change_direction.equals(Direction.up))
 			toChange.setDrug_action_type("increase_dose");
 		else

@@ -62,4 +62,15 @@ public class Evaluate_Decrease_Activity_Intensity extends Evaluate_Modify_Activi
     return Direction.down;
   }
 
+  Cls getNextLevel(GuidelineInterpreter interpreter,
+		    Cls currentActivityLevel, Instance evaluateObject) throws Exception {
+			if (currentActivityLevel == null) return null;
+		    Slot previous = getKnowledgeBase().getSlot("previous");
+		    if (previous != null) {
+		      Object nextLevel = currentActivityLevel.getOwnSlotValue(previous);
+		      if (nextLevel != null) return (Cls)nextLevel;
+		      else throw new Exception("Evaluate_Modify_Activity.getNextLevel: no next level");
+		    } else throw new Exception("Evaluate_Modify_Activity.getNextLevel: no next slot");
+		  }
+
 }
