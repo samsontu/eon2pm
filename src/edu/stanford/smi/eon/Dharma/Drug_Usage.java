@@ -366,32 +366,32 @@ public class Drug_Usage extends Activity_Specification {
 				if (addEval.compelling_indications.length > 0) {
 					isRecommended = true;
 					addEval.recommendationBasis="compelling indication";
-					break;
 				}
+				break;
 			case "Relative_Indications" :
 				if (addEval.relative_indications.length > 0) {
 					isRecommended = true;
 					addEval.recommendationBasis="relative indication";
-					break;
 				}
+				break;
 			case "is_first-line_drug_for" :
 				if (addEval.is_first_line_drug_for.length > 0) {
 					isRecommended = true;
 					addEval.recommendationBasis="is first-line drug for";
-					break;
 				}
+				break;
 			case "is_second-line_drug_for" :
 				if (addEval.is_second_line_drug_for.length > 0) {
 					isRecommended = true;
 					addEval.recommendationBasis="is second-line drug for";
-					break;
 				}
+				break;
 			case "is_third-line_drug_for" :
 				if (addEval.is_third_line_drug_for.length > 0) {
 					isRecommended = true;
 					addEval.recommendationBasis="is third-line drug for";
-					break;
 				}
+				break;
 			}
 		}
 		return isRecommended;
