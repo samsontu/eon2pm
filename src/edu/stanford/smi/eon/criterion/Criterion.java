@@ -59,8 +59,8 @@ public class Criterion extends Expression {
 
 	public Criteria_Evaluation evaluate(GuidelineInterpreter guidelineManager,
 			boolean doAll) throws PCA_Session_Exception {
-		Criteria_Evaluation evaluation;
-		//System.out.println("Criteria(this.getlabelValue):"+ this.getlabelValue());
+		/* Criteria_Evaluation evaluation;
+		
 		if ((evaluation = (Criteria_Evaluation) guidelineManager.evalManager
 				.ask(this)) != null) {
 			
@@ -73,7 +73,8 @@ public class Criterion extends Expression {
 				guidelineManager.evalManager.tell(this, evaluation);
 			}
 			return evaluation;
-		}
+		} */
+		return ownEvaluate(guidelineManager, doAll);
 	}
 
 	protected Criteria_Evaluation ownEvaluate(
