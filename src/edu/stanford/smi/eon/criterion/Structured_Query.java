@@ -218,7 +218,7 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 		Collection whereRestrictions = getwhere_restrictionValue();
 		String aggregator = getaggregation_operatorValue();
 		Instance attribute = getattributeValue();
-		Expression result =  (Expression)glmanager.evalManager.ask(this);
+		Expression result =  null; // 2018/07/10 stop caching express/criteria evaluation results(Expression)glmanager.evalManager.ask(this);
 
 		if (result == null) {
 			logger.debug("Structured_Query.evaluate_expression "+getlabelValue());

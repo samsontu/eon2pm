@@ -108,13 +108,13 @@ public class Expression_Comparison_Criterion extends Comparison_Criterion {
 			 try {
 				 result = parameter.evaluate_expression(guidelineManager);
 			 } catch (Exception e){
-				 logger.error("Error evaluating expression in "+parameter.getBrowserText());
+				 logger.error("Exception evaluating expression in "+parameter.getBrowserText());
 				 e.printStackTrace();
 			 }
-			 if (result == null) {
-				 logger.error("Error evaluating "+parameter.getBrowserText()+ ": No evaluation result");
-				 return null;
-			 }
+//			 if (result == null) {
+//				 logger.warn("Warning evaluating "+parameter.getBrowserText()+ ": No evaluation result");
+//				 return null;
+//			 }
 			 /*			if (result instanceof Set_Expression) {
 				Collection elements = ((Set_Expression)result).getset_elementsValue();
 				if (elements.size() > 1) {

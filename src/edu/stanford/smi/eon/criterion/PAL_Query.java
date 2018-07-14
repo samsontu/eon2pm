@@ -52,7 +52,7 @@ public class PAL_Query extends Expression {
 		super(kb, id);
 	}
 
-  static  Logger  logger = Logger.getLogger(PAL_Query.class);
+	static  Logger  logger = Logger.getLogger(PAL_Query.class);
 
 	public void setcase_variableValue(String case_variable) {
 		ModelUtilities.setOwnSlotValue(this, "case_variable", case_variable);	}
@@ -71,118 +71,116 @@ public class PAL_Query extends Expression {
 	public Instance getkey_slotValue() {
 		return ((Instance) ModelUtilities.getOwnSlotValue(this, "key_slot"));
 	}
-// __Code above is automatically generated. Do not change
+	// __Code above is automatically generated. Do not change
 
-  private Instance instantiateCase (Instance genericQuery,
-       GuidelineInterpreter guidelineManager) throws PCA_Session_Exception{
-    KnowledgeBase kb = this.getKnowledgeBase();
-    Slot PALStatement = kb.getSlot(":PAL-STATEMENT");
-    Slot PALRange=kb.getSlot(":PAL-RANGE");
-    Slot PALName=kb.getSlot(":PAL-NAME");
-    Object rawconstraintStatement = genericQuery.getOwnSlotValue(PALStatement);
-    if (rawconstraintStatement != null) {
-      String constraintStatement = (String)rawconstraintStatement;
-      //logger.debug("PAL_Criterion.instantiateCase: constraint "+constraintStatement);
-      String case_variableValue = getcase_variableValue();
-      String caseID= guidelineManager.getDBmanager().getCaseID();
-      constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, case_variableValue,
-    		  caseID);
-      Instance newInstance = guidelineManager.getDBmanager().createInstance("PAL-QUERY");
-      newInstance.setOwnSlotValue(PALStatement, constraintStatement);
-      newInstance.setOwnSlotValue(PALRange, genericQuery.getOwnSlotValue(PALRange));
-      newInstance.setOwnSlotValue(PALName, genericQuery.getOwnSlotValue(PALName));
-      //logger.debug("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
-      guidelineManager.getDBmanager().registerInstance(newInstance);
-      return newInstance;
-    } else {
-      throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
-    }
+	private Instance instantiateCase (Instance genericQuery,
+			GuidelineInterpreter guidelineManager) throws PCA_Session_Exception{
+		KnowledgeBase kb = this.getKnowledgeBase();
+		Slot PALStatement = kb.getSlot(":PAL-STATEMENT");
+		Slot PALRange=kb.getSlot(":PAL-RANGE");
+		Slot PALName=kb.getSlot(":PAL-NAME");
+		Object rawconstraintStatement = genericQuery.getOwnSlotValue(PALStatement);
+		if (rawconstraintStatement != null) {
+			String constraintStatement = (String)rawconstraintStatement;
+			//logger.debug("PAL_Criterion.instantiateCase: constraint "+constraintStatement);
+			String case_variableValue = getcase_variableValue();
+			String caseID= guidelineManager.getDBmanager().getCaseID();
+			constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, case_variableValue,
+					caseID);
+			Instance newInstance = guidelineManager.getDBmanager().createInstance("PAL-QUERY");
+			newInstance.setOwnSlotValue(PALStatement, constraintStatement);
+			newInstance.setOwnSlotValue(PALRange, genericQuery.getOwnSlotValue(PALRange));
+			newInstance.setOwnSlotValue(PALName, genericQuery.getOwnSlotValue(PALName));
+			//logger.debug("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
+			guidelineManager.getDBmanager().registerInstance(newInstance);
+			return newInstance;
+		} else {
+			throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
+		}
 
-  }
+	}
 
 
-  public Collection doQuery(GuidelineInterpreter guidelineManager)
-		  throws  PCA_Session_Exception {
-	  Collection activitiesToStopCollection = null;
-	  if ((activitiesToStopCollection = (Collection) guidelineManager.evalManager
-			  .ask(this)) != null) {
-		  if (activitiesToStopCollection.isEmpty()) {
-			  return null;
-		  } else {
-			  return activitiesToStopCollection;
-		  }
-	  } else {
-		  activitiesToStopCollection = new ArrayList();
-		  Instance query = getPAL_queryValue();
-		  if (query == null) {
-			  throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance "+this.getName());
-		  } else {
+	public Collection doQuery(GuidelineInterpreter guidelineManager)
+			throws  PCA_Session_Exception {
+		Collection activitiesToStopCollection = null;
+		if ((activitiesToStopCollection = (Collection) guidelineManager.evalManager
+				.ask(this)) != null) {
+			if (activitiesToStopCollection.isEmpty()) {
+				return null;
+			} else {
+				return activitiesToStopCollection;
+			}
+		} else {
+			activitiesToStopCollection = new ArrayList();
+			Instance query = getPAL_queryValue();
+			if (query == null) {
+				throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance "+this.getName());
+			} else {
 
-			  query = instantiateCase(query, guidelineManager);
-			  EvaluationPolicy evalPolicy = new EvaluationPolicy();
-			  QueryEngine evalEngine = new QueryEvaluationEngine(evalPolicy,
-					  guidelineManager.getKBmanager().getKB());
-			  GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
-			  logger.debug("PAL_Query.doQuery "+ this.getBrowserText()+"/"+ this.getName());
-			  QueryEngineResponse response = evalEngine.askSingleQuery(
-					  query);
-			  Collection queryResult = null;
+				query = instantiateCase(query, guidelineManager);
+				EvaluationPolicy evalPolicy = new EvaluationPolicy();
+				QueryEngine evalEngine = new QueryEvaluationEngine(evalPolicy,
+						guidelineManager.getKBmanager().getKB());
+				GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
+				logger.debug("PAL_Query.doQuery "+ this.getBrowserText()+"/"+ this.getName());
+				QueryEngineResponse response = evalEngine.askSingleQuery(
+						query);
+				Collection queryResult = null;
 
-			  if (response.queryHasAtLeastOneAnswer(query)) {
-				  queryResult = response.getQueryAnswers();
-				  for (Iterator i=queryResult.iterator(); i.hasNext();) {
-					  QueryAnswer result = (QueryAnswer)i.next();
-					  Collection allVariableBindings = result.getAllVariableValueBindings();
-					  for (Iterator k=allVariableBindings.iterator(); k.hasNext();) {
-						  VariableValueBinding binding = (VariableValueBinding)k.next();
-						  logger.debug("answer "+": binding - variable="+ binding.getVariableName() +
-								  " value="+binding.getVariableValue());
-						  Instance queryResultInstance = (Instance)binding.getVariableValue();
-						  Cls queryResultCls = queryResultInstance.getDirectType();
-						  if (getkey_slotValue() != null)  {
-							  Object value = queryResultInstance.getOwnSlotValue((Slot)getkey_slotValue());
-							  if (!activitiesToStopCollection.contains(value))
-								  activitiesToStopCollection.add(value);
-						  } else {
-							  if (!activitiesToStopCollection.contains(queryResultInstance) )
-								  activitiesToStopCollection.add(queryResultInstance);
-						  }
-					  }
-				  }
+				if (response.queryHasAtLeastOneAnswer(query)) {
+					queryResult = response.getQueryAnswers();
+					for (Iterator i=queryResult.iterator(); i.hasNext();) {
+						QueryAnswer result = (QueryAnswer)i.next();
+						Collection allVariableBindings = result.getAllVariableValueBindings();
+						for (Iterator k=allVariableBindings.iterator(); k.hasNext();) {
+							VariableValueBinding binding = (VariableValueBinding)k.next();
+							logger.debug("answer "+": binding - variable="+ binding.getVariableName() +
+									" value="+binding.getVariableValue());
+							Instance queryResultInstance = (Instance)binding.getVariableValue();
+							Cls queryResultCls = queryResultInstance.getDirectType();
+							if (getkey_slotValue() != null)  {
+								Object value = queryResultInstance.getOwnSlotValue((Slot)getkey_slotValue());
+								if (!activitiesToStopCollection.contains(value))
+									activitiesToStopCollection.add(value);
+							} else {
+								if (!activitiesToStopCollection.contains(queryResultInstance) )
+									activitiesToStopCollection.add(queryResultInstance);
+							}
+						} //for
+					}//for
+				} else {
+					logger.warn("No results from evaluating "+this.getBrowserText()
+					+ "' ("+this.getName()+") ");
+				}
+				guidelineManager.evalManager.tell(this, activitiesToStopCollection);
+				if (activitiesToStopCollection.isEmpty()) {
+					return null;
+				} else {
+					return activitiesToStopCollection;
+				}
+			} //else   query != null
+		}
+	}
 
-			  } else {
-				  logger.warn("No results from evaluating "+this.getBrowserText()
-						  + "' ("+this.getName()+") ");
-
-			  }
-			  guidelineManager.evalManager.tell(this, activitiesToStopCollection);
-			  if (activitiesToStopCollection.isEmpty()) {
-				  return null;
-			  } else {
-				  return activitiesToStopCollection;
-			  }
-		  }
-	  }
-  }
-  
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager) {
 		java.util.Date startTime = new java.util.Date();
 		Set_Expression set = (Set_Expression)glmanager.getDBmanager().createInstance(
-		"Set_Expression");
+				"Set_Expression");
 		try {
-		  Collection result = doQuery(glmanager);
-		  if (result != null) {
-		    set.setset_elementsValue(result);
-		    //GuidelineInterpreter.currentGuidelineInterpreter = null;
-			java.util.Date stopTime = new java.util.Date();
-		    logger.debug("PAL Query ownEvaluate() "+getlabelValue()+": taking @@@@@@@@@ "+ (stopTime.getTime() - startTime.getTime())+" @@@@@@@@@ milliseconds" );
-		    return set;
-		  } else return null;
+			Collection result = doQuery(glmanager);
+			if (result != null) {
+				set.setset_elementsValue(result);
+				//GuidelineInterpreter.currentGuidelineInterpreter = null;
+				java.util.Date stopTime = new java.util.Date();
+				logger.debug("PAL Query ownEvaluate() "+getlabelValue()+": taking @@@@@@@@@ "+ (stopTime.getTime() - startTime.getTime())+" @@@@@@@@@ milliseconds" );
+				return set;
+			} else return null;
 		} catch (Exception e) {
 			logger.debug("PAL_Query.evaluate_expression exception: "+e.getMessage(), e);
 			e.printStackTrace();
 			return null;
 		}
 	}
-   
+
 }

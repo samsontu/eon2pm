@@ -89,7 +89,7 @@ public class Client extends Object {
 			GlobalVars.cumulateDose = true;
 		else
 			GlobalVars.cumulateDose=cumulateDoseStr.equals("TRUE");
-		
+
 		user = settings.getProperty("USER");;
 		password = settings.getProperty("PASSWORD");
 
@@ -159,7 +159,7 @@ public class Client extends Object {
 		try {
 			PCAServer_i PCAImp = new PCAServer_i();
 			PCAImp.kbManager = kbManager;
-//			PCAImp.setServerLog(serverLogFile);
+			//			PCAImp.setServerLog(serverLogFile);
 			PCAImp.kbURLString = kbURL;
 			m_pca = PCAImp.open_pca_session("", "", "", initFile );
 			System.out.println(" complete open_pca_session ");
@@ -245,66 +245,28 @@ public class Client extends Object {
 		return dssOutput;
 	}
 
-	public String saveComputedRecommendations(String ptID, String caseData, Guideline_Service_Record[] dssOutput, String outputdir,
-			KBHandler kbmanager, String additionalOutput) {
+	public String saveComputedRecommendations(String ptID, String caseData, Guideline_Service_Record[] dssOutput, 
+			String outputdir, KBHandler kbmanager, String additionalOutput) {
 
 		String filePrefix = outputdir + "/" + ptID.replace(' ', '_');
-
 		File debugOutput= new File(filePrefix + ".html");
-		File xmlOutput = new File(filePrefix+".xml");
-//		File briefOutput= new File(filePrefix + "-BRIEF.html");
-
 		try {
 			/* First write debug page*/
 			PrintWriter debugWriter = new PrintWriter (new FileWriter(debugOutput), true);
-			PrintWriter xmlWriter = new PrintWriter (new FileWriter(xmlOutput), true);
-//			PrintWriter briefWriter = new PrintWriter( new FileWriter(briefOutput), true);
+			//			PrintWriter briefWriter = new PrintWriter( new FileWriter(briefOutput), true);
 			ClientUtil.printHeader(debugWriter, ptID.replace('_', ' ')); //m_pca.patient_id());
 			debugWriter.print(caseData);
-
 			if (dssOutput != null) {
-				for (int j=0; j< dssOutput.length; j++) {
-					debugWriter.println("<h1 align=\"center\">"+guidelineName+"</h1>");
-					ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
-					//BriefOutput.showResult(dssOutput[j], briefWriter, Compliance_Level.strict);
-				}
+				printHTMLOutput(debugWriter, ptID, dssOutput, kbmanager, additionalOutput);
 				//Generate XML output
-				xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
-				logger.debug("is eligible? guidelineName:"+ guidelineName + " "+isEligible(dssOutput, guidelineName));
-				if (isEligible(dssOutput, guidelineName)){
-					Collection subguidelines = subGuidelines(kbmanager, guidelineName);
-					if (subguidelines != null ) {
-						for (Iterator i=subguidelines.iterator(); i.hasNext(); ) {
-							Management_Guideline sub=(Management_Guideline)i.next();
-							try {
-								logger.info("executing subguideline: "+getGuidelineId(sub));
-								m_pca.setGuideline(getGuidelineId(sub)); 
-								dssOutput = m_pca.updateAdvisories();
-								if (dssOutput != null) {
-									debugWriter.println("<h2>"+getGuidelineId(sub)+"</h2>");
-									for (int j=0; j< dssOutput.length; j++) {
-										ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
-									}
-									xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
-								}
-							} catch (Exception e) {
-								logger.error("Exception in computing advisory for "+ getGuidelineId(sub));
-								logger.error(e.getMessage());
-								e.printStackTrace();
-							}
-						}
-					}
+				if (GlobalVars.XMLOutput == true) {
+					File xmlOutput = new File(filePrefix+".xml");
+					PrintWriter xmlWriter = new PrintWriter (new FileWriter(xmlOutput), true);
+					printXMLOutput( xmlWriter,  ptID, dssOutput, kbmanager,  additionalOutput);
+					xmlWriter.close();
 				}
-
 			}
-			if (additionalOutput != null)
-				debugWriter.print(additionalOutput);
-//			briefWriter.close();
 			debugWriter.close();
-			xmlWriter.close();
-
-			/* Now write brief output page*/
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -317,55 +279,118 @@ public class Client extends Object {
 
 		return filePrefix;      
 	}
+		
+		public void printHTMLOutput(PrintWriter debugWriter, String ptID, Guideline_Service_Record[] dssOutput, 
+				KBHandler kbmanager, String additionalOutput) {
+			for (int j=0; j< dssOutput.length; j++) {
+				debugWriter.println("<h1 align=\"center\">"+guidelineName+"</h1>");
+				ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
+				//BriefOutput.showResult(dssOutput[j], briefWriter, Compliance_Level.strict);
+			}
+			if (isEligible(dssOutput, guidelineName)){
+				Collection subguidelines = subGuidelines(kbmanager, guidelineName);
+				if (subguidelines != null ) {
+					for (Iterator i=subguidelines.iterator(); i.hasNext(); ) {
+						Management_Guideline sub=(Management_Guideline)i.next();
+						try {
+							logger.info("executing subguideline: "+getGuidelineId(sub));
+							m_pca.setGuideline(getGuidelineId(sub)); 
+							dssOutput = m_pca.updateAdvisories();
+							if (dssOutput != null) {
+								debugWriter.println("<h2>"+getGuidelineId(sub)+"</h2>");
+								for (int j=0; j< dssOutput.length; j++) {
+									ClientUtil.showResultWithKB(dssOutput[j], debugWriter, kbmanager.getKB());
+								}
+							}
+						} catch (Exception e) {
+							logger.error("Exception in computing advisory for "+ getGuidelineId(sub));
+							logger.error(e.getMessage());
+							e.printStackTrace();
+						}
+					}
+					if (additionalOutput != null)
+						debugWriter.print(additionalOutput);
+				}
+			}
+		}
 
-	static boolean isEligible( Guideline_Service_Record[] dssOutput, String guidelineName) {
-		boolean isEligible = false;
-		for (int j=0; j < dssOutput.length; j=j+1){
-			if (dssOutput[j].subject_classification != null) {
-				for (int i=0; i < dssOutput[j].subject_classification.length; i++) {
-					if (dssOutput[j].subject_classification[i] != null) {
-						Conclusion classification = (Conclusion)dssOutput[j].subject_classification[i];
-						logger.debug("parameter: " +classification.parameter);
-						if (classification.parameter.equals(guidelineName)){
-							logger.debug("Client.isEligible "+classification.value);
-							isEligible = classification.value.equals(Truth_Value._true.toString());
-							return isEligible;
+		public void printXMLOutput(PrintWriter xmlWriter, String ptID, Guideline_Service_Record[] dssOutput, 
+				KBHandler kbmanager, String additionalOutput) {
+			xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
+			logger.debug("is eligible? guidelineName:"+ guidelineName + " "+isEligible(dssOutput, guidelineName));
+			if (isEligible(dssOutput, guidelineName)){
+				Collection subguidelines = subGuidelines(kbmanager, guidelineName);
+				if (subguidelines != null ) {
+					for (Iterator i=subguidelines.iterator(); i.hasNext(); ) {
+						Management_Guideline sub=(Management_Guideline)i.next();
+						try {
+							logger.info("executing subguideline: "+getGuidelineId(sub));
+							m_pca.setGuideline(getGuidelineId(sub)); 
+							dssOutput = m_pca.updateAdvisories();
+							if (dssOutput != null) {
+								xmlWriter.print(ClientUtilXML.generateXMLAdvisory( ptID, dssOutput, kbmanager, guidelineName ));
+							}
+						} catch (Exception e) {
+							logger.error("Exception in computing advisory for "+ getGuidelineId(sub));
+							logger.error(e.getMessage());
+							e.printStackTrace();
+						}
+					}
+				}
+				if (additionalOutput != null)
+					xmlWriter.print(additionalOutput);
+			}
+
+		}
+
+		static boolean isEligible( Guideline_Service_Record[] dssOutput, String guidelineName) {
+			boolean isEligible = false;
+			for (int j=0; j < dssOutput.length; j=j+1){
+				if (dssOutput[j].subject_classification != null) {
+					for (int i=0; i < dssOutput[j].subject_classification.length; i++) {
+						if (dssOutput[j].subject_classification[i] != null) {
+							Conclusion classification = (Conclusion)dssOutput[j].subject_classification[i];
+							logger.debug("parameter: " +classification.parameter);
+							if (classification.parameter.equals(guidelineName)){
+								logger.debug("Client.isEligible "+classification.value);
+								isEligible = classification.value.equals(Truth_Value._true.toString());
+								return isEligible;
+							}
 						}
 					}
 				}
 			}
+			return isEligible;
 		}
-		return isEligible;
-	}
 
 
-	static String getGuidelineId( Management_Guideline guideline) {
-		logger.debug("gov.va.test.opioidtesttool.pca.Client.getGuidelienId: "+guideline.getBrowserText()+".");
-		return guideline.getBrowserText();
-	}
-
-	static Collection subGuidelines( KBHandler kbManager, String guidelineId) {
-		Management_Guideline topGL = getGuideline(kbManager, guidelineId);
-		logger.debug("topguideline: " + topGL);
-		logger.debug(kbManager.getKB().getSlot("subguidelines").toString());
-		return topGL.getOwnSlotValues(kbManager.getKB().getSlot("subguidelines"));
-	}
-
-	static Management_Guideline getGuideline(KBHandler kbManager, String guidelineId) {
-		Management_Guideline gl = null;
-		Collection guidelines  =  (kbManager.findInstances("Management_Guideline",
-				new WhereComparisonFilter("label", "eq", guidelineId), null));
-		if (guidelines == null || guidelines.isEmpty()) {
-			logger.error("guideline not found"+ guidelineId);
+		static String getGuidelineId( Management_Guideline guideline) {
+			logger.debug("gov.va.test.opioidtesttool.pca.Client.getGuidelienId: "+guideline.getBrowserText()+".");
+			return guideline.getBrowserText();
 		}
-		if (guidelines.size() > 1) {
-			logger.error("guideline ambiguous" + guidelineId);
-		} else {
-			return (Management_Guideline) (guidelines.toArray())[0];
-		}
-		return null;
-	}
-	
 
-}
+		static Collection subGuidelines( KBHandler kbManager, String guidelineId) {
+			Management_Guideline topGL = getGuideline(kbManager, guidelineId);
+			logger.debug("topguideline: " + topGL);
+			logger.debug(kbManager.getKB().getSlot("subguidelines").toString());
+			return topGL.getOwnSlotValues(kbManager.getKB().getSlot("subguidelines"));
+		}
+
+		static Management_Guideline getGuideline(KBHandler kbManager, String guidelineId) {
+			Management_Guideline gl = null;
+			Collection guidelines  =  (kbManager.findInstances("Management_Guideline",
+					new WhereComparisonFilter("label", "eq", guidelineId), null));
+			if (guidelines == null || guidelines.isEmpty()) {
+				logger.error("guideline not found"+ guidelineId);
+			}
+			if (guidelines.size() > 1) {
+				logger.error("guideline ambiguous" + guidelineId);
+			} else {
+				return (Management_Guideline) (guidelines.toArray())[0];
+			}
+			return null;
+		}
+
+
+	}
 

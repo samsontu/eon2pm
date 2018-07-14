@@ -49,7 +49,7 @@ public class PAL_Criterion extends Criterion {
 	public PAL_Criterion(KnowledgeBase kb, FrameID id ) {
 		super(kb, id);
 	}
-  static  Logger  logger = Logger.getLogger(PAL_Criterion.class);
+	static  Logger  logger = Logger.getLogger(PAL_Criterion.class);
 
 	public void setcase_variableValue(String case_variable) {
 		ModelUtilities.setOwnSlotValue(this, "case_variable", case_variable);	}
@@ -62,102 +62,105 @@ public class PAL_Criterion extends Criterion {
 	public Instance getPAL_constraintValue() {
 		return ((Instance) ModelUtilities.getOwnSlotValue(this, "PAL_constraint"));
 	}
-// __Code above is automatically generated. Do not change
+	// __Code above is automatically generated. Do not change
 
 
-  public synchronized Criteria_Evaluation ownEvaluate(GuidelineInterpreter guidelineManager, boolean doAll)
-    throws PCA_Session_Exception {
-	java.util.Date startTime = new java.util.Date();
-    GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
-    Criteria_Evaluation evaluation = null;
-    EvaluationPolicy evalPolicy = new EvaluationPolicy();
-    //evalPolicy.setTracingEnabled(true);
-    //evalPolicy.addPredicateToTraceList("exists");
-    ConstraintEvaluationEngine evalEngine = new ConstraintEvaluationEngine(evalPolicy,
-      guidelineManager.getKBmanager().getKB());
-    ConstraintEngineResponse response = null;
-    if (getcase_variableValue() != null) {
-      response = evalEngine.checkSingleStatement(instantiateCase(getPAL_constraintValue(),
-        guidelineManager));
-    } else {
-      response = evalEngine.checkSingleStatement(
-        getPAL_constraintValue());
-    }
- 
-    if (response.areThereValidationErrors() || response.areThereRuntimeErrors()) {
-      Collection errors = null;
-      if (response.areThereValidationErrors()) {
-        errors = response.getValidationErrors();
-        if ((errors != null) && (!errors.isEmpty())) {
-          for (Iterator i=errors.iterator(); i.hasNext();) {
-            ValidationError error = (ValidationError)i.next();
-            logger.error(error.getDescription());
-          }
-        }
-        logger.error(" PAL validation error in "+this.getName()+ "; "+this.getBrowserText());
-        throw new PCA_Session_Exception(" PAL validation error in "+this.getName());
-      } 
-      if (response.areThereRuntimeErrors()) {
-        errors = response.getRuntimeErrors();
-        if ((errors != null) && (!errors.isEmpty())) {
-          for (Iterator i=errors.iterator(); i.hasNext();) {
-            RuntimeError error = (RuntimeError)i.next();
-            logger.error(error.getDescription());  
-          }
-        }
-        logger.error(" PAL runtime error in "+this.getName()+ "; "+this.getBrowserText());
-        throw new PCA_Session_Exception("PAL runtime error in "+this.getName());
-      } 
-    } else {
-    if (response.areThereConstraintViolations()) {
-      // the predicate evaluate to false
-      logger.debug("PAL_Criterion ownEvaluate() "+getlabelValue()+" has constraint violation");
-      evaluation = new Criteria_Evaluation(Logical_Operator.ATOMIC,
-        Truth_Value._false,
-        new Criteria_Evaluation[0],
-        this.makeGuideline_Entity(),
-        null);
-    } else {
-      logger.debug("PAL_Criterion ownEvaluate() "+getlabelValue()+" has no constraint violation");
-      evaluation = new Criteria_Evaluation(Logical_Operator.ATOMIC,
-        Truth_Value._true,
-        new Criteria_Evaluation[0],
-        this.makeGuideline_Entity(),
-        null);
-    }
-    }
-    //GuidelineInterpreter.currentGuidelineInterpreter = null;
-	java.util.Date stopTime = new java.util.Date();
-    logger.debug("PAL Criterion ownEvaluate() "+getlabelValue()+": taking @@@@@@@@@ "+ (stopTime.getTime() - startTime.getTime())+" @@@@@@@@@ milliseconds" );
-    return evaluation;
-  }
+	public synchronized Criteria_Evaluation ownEvaluate(GuidelineInterpreter guidelineManager, boolean doAll)
+			throws PCA_Session_Exception {
+		Criteria_Evaluation evaluation = (Criteria_Evaluation) guidelineManager.evalManager.ask(this);
+		if (evaluation  != null) return evaluation;
+		// evaluation == null
+		java.util.Date startTime = new java.util.Date();
+		GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
+		EvaluationPolicy evalPolicy = new EvaluationPolicy();
+		//evalPolicy.setTracingEnabled(true);
+		//evalPolicy.addPredicateToTraceList("exists");
+		ConstraintEvaluationEngine evalEngine = new ConstraintEvaluationEngine(evalPolicy,
+				guidelineManager.getKBmanager().getKB());
+		ConstraintEngineResponse response = null;
+		if (getcase_variableValue() != null) {
+			response = evalEngine.checkSingleStatement(instantiateCase(getPAL_constraintValue(),
+					guidelineManager));
+		} else {
+			response = evalEngine.checkSingleStatement(
+					getPAL_constraintValue());
+		}
 
-  private Instance instantiateCase (Instance genericConstraint,
-       GuidelineInterpreter guidelineManager) throws PCA_Session_Exception{
-    KnowledgeBase kb = this.getKnowledgeBase();
-    Slot PALStatement = kb.getSlot(":PAL-STATEMENT");
-    Slot PALRange=kb.getSlot(":PAL-RANGE");
-    Slot PALName=kb.getSlot(":PAL-NAME");
-    Object rawconstraintStatement = genericConstraint.getOwnSlotValue(PALStatement);
-    //logger.debug("PAL_Criterion instantiateCase() 1 "+getlabelValue());
-    if (rawconstraintStatement != null) {
-      String constraintStatement = (String)rawconstraintStatement;
-      
-      constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, getcase_variableValue(),
-        guidelineManager.getDBmanager().getCaseID());
-      Instance newInstance = guidelineManager.getDBmanager().createInstance(":PAL-CONSTRAINT");
-      newInstance.setOwnSlotValue(PALStatement, constraintStatement);
-      newInstance.setOwnSlotValue(PALRange, genericConstraint.getOwnSlotValue(PALRange));
-      newInstance.setOwnSlotValue(PALName, genericConstraint.getOwnSlotValue(PALName));
-      guidelineManager.getDBmanager().registerInstance(newInstance);
-      //("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
-      //logger.debug("PAL_Criterion instantiateCase() 2 "+getlabelValue());
+		if (response.areThereValidationErrors() || response.areThereRuntimeErrors()) {
+			Collection errors = null;
+			if (response.areThereValidationErrors()) {
+				errors = response.getValidationErrors();
+				if ((errors != null) && (!errors.isEmpty())) {
+					for (Iterator i=errors.iterator(); i.hasNext();) {
+						ValidationError error = (ValidationError)i.next();
+						logger.error(error.getDescription());
+					}
+				}
+				logger.error(" PAL validation error in "+this.getName()+ "; "+this.getBrowserText());
+				throw new PCA_Session_Exception(" PAL validation error in "+this.getName());
+			} 
+			if (response.areThereRuntimeErrors()) {
+				errors = response.getRuntimeErrors();
+				if ((errors != null) && (!errors.isEmpty())) {
+					for (Iterator i=errors.iterator(); i.hasNext();) {
+						RuntimeError error = (RuntimeError)i.next();
+						logger.error(error.getDescription());  
+					}
+				}
+				logger.error(" PAL runtime error in "+this.getName()+ "; "+this.getBrowserText());
+				throw new PCA_Session_Exception("PAL runtime error in "+this.getName());
+			} 
+		} else {
+			if (response.areThereConstraintViolations()) {
+				// the predicate evaluate to false
+				logger.debug("PAL_Criterion ownEvaluate() "+getlabelValue()+" has constraint violation");
+				evaluation = new Criteria_Evaluation(Logical_Operator.ATOMIC,
+						Truth_Value._false,
+						new Criteria_Evaluation[0],
+						this.makeGuideline_Entity(),
+						null);
+			} else {
+				logger.debug("PAL_Criterion ownEvaluate() "+getlabelValue()+" has no constraint violation");
+				evaluation = new Criteria_Evaluation(Logical_Operator.ATOMIC,
+						Truth_Value._true,
+						new Criteria_Evaluation[0],
+						this.makeGuideline_Entity(),
+						null);
+			}
+		}
+		//GuidelineInterpreter.currentGuidelineInterpreter = null;
+		java.util.Date stopTime = new java.util.Date();
+		logger.debug("PAL Criterion ownEvaluate() "+getlabelValue()+": taking @@@@@@@@@ "+ (stopTime.getTime() - startTime.getTime())+" @@@@@@@@@ milliseconds" );
+		guidelineManager.evalManager.tell(this, evaluation);
+		return evaluation;
+	}
 
-      return newInstance;
-    } else {
-      throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
-    }
+	private Instance instantiateCase (Instance genericConstraint,
+			GuidelineInterpreter guidelineManager) throws PCA_Session_Exception{
+		KnowledgeBase kb = this.getKnowledgeBase();
+		Slot PALStatement = kb.getSlot(":PAL-STATEMENT");
+		Slot PALRange=kb.getSlot(":PAL-RANGE");
+		Slot PALName=kb.getSlot(":PAL-NAME");
+		Object rawconstraintStatement = genericConstraint.getOwnSlotValue(PALStatement);
+		//logger.debug("PAL_Criterion instantiateCase() 1 "+getlabelValue());
+		if (rawconstraintStatement != null) {
+			String constraintStatement = (String)rawconstraintStatement;
 
-  }
+			constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, getcase_variableValue(),
+					guidelineManager.getDBmanager().getCaseID());
+			Instance newInstance = guidelineManager.getDBmanager().createInstance(":PAL-CONSTRAINT");
+			newInstance.setOwnSlotValue(PALStatement, constraintStatement);
+			newInstance.setOwnSlotValue(PALRange, genericConstraint.getOwnSlotValue(PALRange));
+			newInstance.setOwnSlotValue(PALName, genericConstraint.getOwnSlotValue(PALName));
+			guidelineManager.getDBmanager().registerInstance(newInstance);
+			//("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
+			//logger.debug("PAL_Criterion instantiateCase() 2 "+getlabelValue());
+
+			return newInstance;
+		} else {
+			throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
+		}
+
+	}
 
 }

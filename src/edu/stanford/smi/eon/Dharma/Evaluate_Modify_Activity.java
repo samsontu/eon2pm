@@ -226,22 +226,24 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 			logger.error("No action spec candidates for "+this.getBrowserText());
 			return;
 		}
-		for (String activityToModify : activitiesToModify) {
-			Instance activitySpec = matchActivityToModifyWithActivitySpec(activityToModify, actionSpecCandidates, interpreter);
-			if (activitySpec == null) {
-				logger.error("No activity specification for activity to modify"+activityToModify);
-			} else {
-				Collection<Instance> dummyList = new ArrayList<Instance>();
-				dummyList.add(activitySpec);
-				Change_Attribute_Evaluation changeEval = evaluateModifyActivityIntensity(dummyList, interpreter, null, activityToModify);	
-				Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
-				if (changeEval != null) {
-					choiceEvaluation.change_attribute_eval(changeEval);
-					changeEvaluations.add(choiceEvaluation);
-				}
-			} 
+		if (activitiesToModify != null) {
+			for (String activityToModify : activitiesToModify) {
+				Instance activitySpec = matchActivityToModifyWithActivitySpec(activityToModify, actionSpecCandidates, interpreter);
+				if (activitySpec == null) {
+					logger.error("No activity specification for activity to modify"+activityToModify);
+				} else {
+					Collection<Instance> dummyList = new ArrayList<Instance>();
+					dummyList.add(activitySpec);
+					Change_Attribute_Evaluation changeEval = evaluateModifyActivityIntensity(dummyList, interpreter, null, activityToModify);	
+					Choice_Evaluation choiceEvaluation = new Choice_Evaluation();
+					if (changeEval != null) {
+						choiceEvaluation.change_attribute_eval(changeEval);
+						changeEvaluations.add(choiceEvaluation);
+					}
+				} 
+			}
+			addChangeEvaluation( changeEvaluations,  interpreter);
 		}
-		addChangeEvaluation( changeEvaluations,  interpreter);
 	}
 	
 	private Collection<Instance>  getActionSpecCandidates(GuidelineInterpreter interpreter) 

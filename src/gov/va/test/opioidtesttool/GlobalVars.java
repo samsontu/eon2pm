@@ -18,6 +18,7 @@ public class GlobalVars {
     public static String database = null;
     public static String XMLDataFile = null;
     public static boolean cumulateDose = true;
+    public static boolean XMLOutput = false;
 
     // Variables that are important for running environment standalone
     public static String kbURL = null;

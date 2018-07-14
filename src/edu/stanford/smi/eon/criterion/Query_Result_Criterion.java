@@ -84,18 +84,19 @@ public class Query_Result_Criterion extends Criterion {
 				null ); //support
 		// query can be a PAL_Query (which may tell evalManager an empty collection if query results in no instance) or 
 		//   a Structured_Query (which tells evalManager a null if there is query results in no instance)
-		Object cached = guidelineManager.evalManager.ask(query);
-		if (cached == null) {
-			result = query.evaluate_expression(guidelineManager);
-			if (result != null) {
-				presence = true;
-				try { 
-					support = query.getSupport(((Set_Expression)result).getset_elementsValue());
-				} catch (Exception e) {
-					// Not a set result, cannot generate support
-				}
+		// 2018/07/10: No longer try to cache evaluation results
+		//Object cached = null; // guidelineManager.evalManager.ask(query);
+		//if (cached == null) {
+		result = query.evaluate_expression(guidelineManager);
+		if (result != null) {
+			presence = true;
+			try { 
+				support = query.getSupport(((Set_Expression)result).getset_elementsValue());
+			} catch (Exception e) {
+				// Not a set result, cannot generate support
 			}
-		} else if (cached instanceof Collection) {
+		}
+/*		} else if (cached instanceof Collection) {
 			if (((Collection)cached).isEmpty()) presence = false;
 			else { 
 				presence = true;
@@ -105,7 +106,7 @@ public class Query_Result_Criterion extends Criterion {
 					// Not a set result, cannot generate support
 				}
 			}
-		} else presence = true;
+		} else presence = true;*/
 		evaluation.truth_value = 
 				(ispresenceValue()) ? ((presence) ? Truth_Value._true : Truth_Value._false)
 						: ((!presence) ? Truth_Value._true : Truth_Value._false);
