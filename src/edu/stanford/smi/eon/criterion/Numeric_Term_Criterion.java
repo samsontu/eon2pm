@@ -27,24 +27,13 @@
 package edu.stanford.smi.eon.criterion;
 
 import java.util.*;
-import java.io.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
 import edu.stanford.smi.protege.model.*;
-import edu.stanford.smi.protege.util.*;
 import edu.stanford.smi.eon.util.*;
 import edu.stanford.smi.eon.guidelineinterpreter.*;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.kbhandler.*;
-import edu.stanford.smi.eon.datahandler.*;
-import edu.stanford.smi.eon.time.*;
-import edu.stanford.smi.protegex.pal.engine.*; 
-import edu.stanford.smi.protegex.pal.parser.*;
-import edu.stanford.smi.protegex.pal.relations.*;
-import edu.stanford.smi.protegex.pal.*;
-
 import org.apache.log4j.*;
 /** 
  */
@@ -109,9 +98,6 @@ public class Numeric_Term_Criterion extends Comparison_Criterion {
 		return ((String) ModelUtilities.getOwnSlotValue(this, "unit"));
 	}
 	// __Code above is automatically generated. Do not change
-
-	private static SimpleDateFormat internalDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-	private static SimpleDateFormat externalDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 	
 	public Criteria_Evaluation ownEvaluate(GuidelineInterpreter guidelineManager, boolean doAll)
 			throws PCA_Session_Exception {
@@ -242,13 +228,16 @@ public class Numeric_Term_Criterion extends Comparison_Criterion {
 				Date date;
 				String displayedDate;
 				try {
-					date = internalDateFormat.parse(queryValue.valid_time);
-					displayedDate = externalDateFormat.format(date);
+					System.out.println(queryValue.valid_time);
+					date = HelperFunctions.internalDateFormatter.parse(queryValue.valid_time);
+					System.out.println(date);
+					displayedDate = HelperFunctions.formatDisplayDate(date);
+					System.out.println(displayedDate);
 				} catch (ParseException e) {
 					logger.error("'"+this.getBrowserText() +"' "+queryValue.valid_time + " cannot be put into MM-dd-yyyy format");
 					displayedDate = queryValue.valid_time;
 				}
-				evaluation.support = evaluation.support +"("+valueString +":"+
+				evaluation.support = evaluation.support +"("+valueString +"@"+
 						displayedDate+")";
 			} else {
 				evaluation.support = evaluation.support +"("+valueString+")";

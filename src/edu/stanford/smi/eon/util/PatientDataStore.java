@@ -34,8 +34,6 @@ public class PatientDataStore {
     public TETableModel demoGraphicsData = null;
     public TETableModel cptData = null;
 
-	public static SimpleDateFormat formatter = new SimpleDateFormat ("yyyy-MM-dd");
-
     // this just stores all TETableModels, makes it easier
     // to loop through all TETableModels
     private final static String KEYS[] = { "meds", "dx", "clinicalSigns", "adr", "labs", "demographics", "cpt" };
@@ -202,13 +200,13 @@ public class PatientDataStore {
 		  System.out.println(" \t\t domain: " + f1 + " value: " + f2);
 	    }
 	    if ( numDates == 1 ) {
-		  d1 = formatter.format(tbModel.getStart(x));
+		  d1 = HelperFunctions.internalDateFormatter.format(tbModel.getStart(x));
 		  System.out.println(" \t\t domain: " + f1 + " value: " + f2 +
 		                     " start: " + d1);
 	    }
 	    if ( numDates == 2 ) {
-		  d1 = formatter.format(tbModel.getStart(x));
-		  d2 = formatter.format(tbModel.getEnd(x));
+		  d1 = HelperFunctions.internalDateFormatter.format(tbModel.getStart(x));
+		  d2 = HelperFunctions.internalDateFormatter.format(tbModel.getEnd(x));
 		  System.out.println(" \t\t domain: " + f1 + " value: " + f2 +
 		                     " start: " + d1 + " end: " + d2);
 	    }

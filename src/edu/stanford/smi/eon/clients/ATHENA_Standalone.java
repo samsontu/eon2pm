@@ -23,6 +23,8 @@
 package edu.stanford.smi.eon.clients;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
+import edu.stanford.smi.eon.util.HelperFunctions;
+
 import java.io.*;
 import java.util.Collection;
 
@@ -82,9 +84,7 @@ public class ATHENA_Standalone extends Object {
 			System.exit(-1);
 		} 
 		String recommendations = null;
-		java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat(
-				"yyyy-MM-dd");
-		String currentTime = formatter.format(startTime);
+		String currentTime = HelperFunctions.internalDateFormatter.format(startTime);
 
 		try {
 			String htmlFile = outputdir+pid+ guidelineId.replace(' ', '_').replace('\\',  '_').replace('/', '_') +".html";

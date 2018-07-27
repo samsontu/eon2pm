@@ -22,15 +22,11 @@
  */
 package edu.stanford.smi.eon.clients;
 
-import edu.stanford.smi.eon.Dharma.Modify_Activity;
-import edu.stanford.smi.eon.Dharma.Action_Specification;
 import edu.stanford.smi.eon.PCAServerModule.*;
-import edu.stanford.smi.eon.criterion.Criterion;
 import edu.stanford.smi.eon.guidelineinterpreter.DharmaPaddaConstants;
 import edu.stanford.smi.eon.util.HelperFunctions;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import edu.stanford.smi.protege.model.*;
@@ -86,7 +82,8 @@ public  class ClientUtil {
 			return;
 		}
 		String kbSource = kb.getProject().getProjectURI().getSchemeSpecificPart();
-		itsWriter.println("<p><b> KB loaded from "+kbSource+"</b>(last modified: "+convertDate((new File(kbSource)).lastModified())+")</p><p></p>");
+		itsWriter.println("<p><b> KB loaded from "+kbSource+"</b>(last modified: "+
+				HelperFunctions.formatDisplayDate((new File(kbSource)).lastModified())+")</p><p></p>");
 		printClassification(dssOutput, itsWriter);
 		printAssumptions(dssOutput, itsWriter);
 		printScenarioChoices(dssOutput,itsWriter);
@@ -97,12 +94,6 @@ public  class ClientUtil {
 
 	}
 	
-	private static String convertDate(long datenum) {
-		Date date = new Date(datenum);
-		SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-		return df.format(date);
-	}
-
 	private static void printClassification (Guideline_Service_Record dssOutput,
 			PrintWriter itsWriter) {
 		if (dssOutput.subject_classification != null) {

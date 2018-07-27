@@ -41,8 +41,9 @@ import edu.stanford.smi.protege.model.KnowledgeBase;
 
 public class HelperFunctions {
 	private static Day dayObj = new Day();
-	private static SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-	private static SimpleDateFormat sourceFormat = new SimpleDateFormat("EEE MMM dd kk:mm:ss zzz yyyy");
+	public static SimpleDateFormat internalDateFormatter = new SimpleDateFormat("yyyy-MM-dd");
+	private static SimpleDateFormat sourceFormatter = new SimpleDateFormat("EEE MMM dd kk:mm:ss zzz yyyy");
+	private static SimpleDateFormat externalDateFormatter = new SimpleDateFormat("MM/dd/yyyy");
 	static Logger logger = Logger.getLogger(HelperFunctions.class);
 
 	public static String replaceSubstring(String original, String oldSub, String newSub) {
@@ -71,7 +72,6 @@ public class HelperFunctions {
 
 	public static String replaceSubstringWOQuotes(String original, String oldSub, String newSub) {
 		int oldSubLength = oldSub.length();
-		int originalSubLength = original.length();
 		int index = -1;
 		if (oldSubLength > 0) {
 			while ((index = original.lastIndexOf(oldSub))>= 0 ) {
@@ -88,14 +88,41 @@ public class HelperFunctions {
 		String formattedDate = "";
 		if (datetime != null) {
 			try {
-				date = sourceFormat.parse(datetime);
-				formattedDate = formatter.format(date);
+				date = sourceFormatter.parse(datetime);
+				formattedDate = internalDateFormatter.format(date);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		return formattedDate;
+	}
+	
+    /**
+     * Try to formats a yyyy-MM-dd string into a MM-dd-yyy string. If not successful, return original string
+     * @param any string
+     * @return the formatted MM/dd/yyyy string if the input string has the format yyyy-MM-dd, else return the original string
+     */
+	public static String formatDisplayDate(String stdDate) {
+		String formattedDate = null;
+		try {
+			Date parsedInput = internalDateFormatter.parse(stdDate);
+			if (parsedInput != null) {
+				formattedDate = externalDateFormatter.format(parsedInput);
+				return formattedDate;
+			} else
+				return stdDate;
+		} catch (ParseException e) { // stdDate is nulll
+			return stdDate;
+		}
+	}
+	public static String formatDisplayDate(long datenum) {
+		Date date = new Date(datenum);
+		return externalDateFormatter.format(date);
+	}
+
+	public static String formatDisplayDate(Date date) {
+		return externalDateFormatter.format(date);
 	}
 
 
@@ -117,7 +144,7 @@ public class HelperFunctions {
 		// datetime has the form: yyyy-mm-dd hh:mm:ss:mmm 
 
 		Date date;
-		date = formatter.parse(dateString);
+		date = internalDateFormatter.parse(dateString);
 
 		// get a calendar using the default time zone and locale.  
 		Calendar calendar = Calendar.getInstance();  

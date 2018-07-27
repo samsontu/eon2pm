@@ -2,25 +2,11 @@ package edu.stanford.smi.eon.siteCustomization;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.Format;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import edu.stanford.smi.eon.PCAServerModule.Compliance_Level;
-import edu.stanford.smi.eon.PCAServerModule.Improper_Data_Exception;
-import edu.stanford.smi.eon.PCAServerModule.PCA_Initialization_Exception;
-import edu.stanford.smi.eon.PCAServerModule.Patient_Data;
-import edu.stanford.smi.eon.execEngine.DataSource;
 import edu.stanford.smi.eon.execEngine.IDataSource;
-import edu.stanford.smi.eon.pca.PCASession_Imp;
 
 public class BMIROutPatientDataSource extends BMIRDataSource implements IDataSource {
 	private Connection con = null;
@@ -32,8 +18,6 @@ public class BMIROutPatientDataSource extends BMIRDataSource implements IDataSou
 	private String LabQuery;
 	private String DemographicsQuery;
 	private String AgeQuery;
-	private SimpleDateFormat inputFormat = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
-	private SimpleDateFormat dfm = new SimpleDateFormat("yyyy-MM-dd");
 	
 	BMIROutPatientDataSource(Connection con, String DBINIfile) {
 		this.con = con;

@@ -2,25 +2,16 @@ package gov.va.test.opioidtesttool.degui;
 
 import gov.va.test.opioidtesttool.*;
 
-import java.awt.*;
 import java.util.*;
 import java.text.*;
-import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.awt.event.*;
 
-import javax.swing.*;
-import javax.swing.table.*;
 import javax.swing.tree.*;
-import javax.swing.border.*;
 import javax.swing.event.*;
 
-import java.text.SimpleDateFormat;
-
-import edu.stanford.smi.protege.model.*;
-import sun.awt.*;
-import sun.awt.windows.*;
+import edu.stanford.smi.eon.util.HelperFunctions;
 
 
 /*
@@ -64,8 +55,7 @@ public class DEEvents implements ActionListener, TreeSelectionListener {
 		/* Called from DEPanel New Drug, Button */
 		long t = System.currentTimeMillis();
 		try {
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-			Date date = dateFormat.parse(GlobalVars.sessionTime);
+			Date date = HelperFunctions.internalDateFormatter.parse(GlobalVars.sessionTime);
 			t = date.getTime();
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

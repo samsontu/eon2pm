@@ -5,23 +5,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.Format;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-import edu.stanford.smi.eon.PCAServerModule.Compliance_Level;
-import edu.stanford.smi.eon.PCAServerModule.Improper_Data_Exception;
-import edu.stanford.smi.eon.PCAServerModule.PCA_Initialization_Exception;
-import edu.stanford.smi.eon.PCAServerModule.Patient_Data;
-import edu.stanford.smi.eon.execEngine.DataSource;
 import edu.stanford.smi.eon.execEngine.IDataSource;
-import edu.stanford.smi.eon.kbhandler.KBHandler;
-import edu.stanford.smi.eon.pca.PCASession_Imp;
 
 public class BMIRInPatientDataSource extends BMIRDataSource implements IDataSource {
 	private Connection con = null;
@@ -33,8 +21,6 @@ public class BMIRInPatientDataSource extends BMIRDataSource implements IDataSour
 	private String LabQuery;
 	private String DemographicsQuery;
 	private String AgeQuery;
-	private SimpleDateFormat inputFormat = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
-	private SimpleDateFormat dfm = new SimpleDateFormat("yyyy-MM-dd");
 	private String HospitalizationQuery;
 
 	BMIRInPatientDataSource(Connection con, String DBINIfile) {
@@ -76,7 +62,7 @@ public class BMIRInPatientDataSource extends BMIRDataSource implements IDataSour
 			while (rs.next()) {
 				String admissionDate = rs.getString("admission_date");
 				String dischargeDate = rs.getString("discharge_date");
-				String admissionDiagnosis =rs.getString("admission_diagnosis");
+				rs.getString("admission_diagnosis");
 				String lengthOfStay =rs.getString("length_of_stay");
 				String disposition =rs.getString("disposition");
 				try {

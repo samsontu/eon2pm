@@ -144,10 +144,10 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		} else {
 			if (query instanceof PAL_Query)
 				activitiesToModifyCollection = ((PAL_Query)query).doQuery(interpreter);
-			else if (query instanceof Structured_Query)
-				activitiesToModifyCollection = ((Set_Expression)((Structured_Query)query).evaluate_expression(interpreter)).getset_elementsValue();
-			if (activitiesToModifyCollection == null)  {
-				logger.warn("No activity to modify after evaluating "+query.getBrowserText());
+			else if (query instanceof Structured_Query) {
+				Set_Expression queryResult = (Set_Expression)((Structured_Query)query).evaluate_expression(interpreter);
+				if (queryResult != null) activitiesToModifyCollection = queryResult.getset_elementsValue();
+				else logger.warn("No activity to modify after evaluating "+query.getBrowserText());
 			}
 			return activitiesToModifyCollection;
 		}

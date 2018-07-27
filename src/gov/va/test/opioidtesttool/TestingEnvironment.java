@@ -16,6 +16,7 @@ import edu.stanford.smi.protege.resource.*;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.criterion.Date_Expression;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
+import edu.stanford.smi.eon.util.HelperFunctions;
 
 import org.apache.log4j.*;
 
@@ -98,9 +99,7 @@ public class TestingEnvironment extends AbstractTabWidget {
 			logger.error("NO EON_HOME SET!@%$!@$!");
 		}
 
-		java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat(
-				"yyyy-MM-dd");
-		String currentTime = formatter.format(new java.util.Date());
+		String currentTime = HelperFunctions.internalDateFormatter.format(new java.util.Date());
 
 		Properties p = GlobalVars.settings;
 		GlobalVars.kbURL = p.getProperty("SERVERKB", "");

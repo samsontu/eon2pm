@@ -6,8 +6,6 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -18,7 +16,6 @@ import java.util.Vector;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import edu.stanford.smi.eon.PCAServerModule.Compliance_Level;
 import edu.stanford.smi.eon.PCAServerModule.Guideline_Service_Record;
 import edu.stanford.smi.eon.PCAServerModule.Improper_Data_Exception;
 import edu.stanford.smi.eon.PCAServerModule.PCAServer_i;
@@ -30,9 +27,9 @@ import edu.stanford.smi.eon.clients.ClientUtil;
 import edu.stanford.smi.eon.execEngine.IEON;
 import edu.stanford.smi.eon.inputoutput.AdvisoryFormater;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
+import edu.stanford.smi.eon.util.HelperFunctions;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.KnowledgeBase;
-import edu.stanford.smi.protege.model.Project;
 import gov.va.athena.advisory.Advisory;
 import gov.va.test.opioidtesttool.*;
 import gov.va.test.opioidtesttool.degui.MainEntryPanel;
@@ -135,15 +132,14 @@ public class RegressionBatchClient {
 		 * GlobalVars.outputdir);
 		 */
 
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		//get current date time with Date()
 		Date date = new Date();
 
 		Properties p = GlobalVars.settings;
-		GlobalVars.sessionTime = p.getProperty("SESSIONTIME", dateFormat.format(date));
+		GlobalVars.sessionTime = p.getProperty("SESSIONTIME", HelperFunctions.internalDateFormatter.format(date));
 		GlobalVars.kbLabel = p.getProperty("KBLABEL", "");
 		GlobalVars.guidelineName = p.getProperty("GUIDELINEID", "");
-		GlobalVars.runtimeDate = dateFormat.format(date);
+		GlobalVars.runtimeDate = HelperFunctions.internalDateFormatter.format(date);
 		String cumulateDoseStr = p.getProperty("CUMULATEDOSE");
 		if ((cumulateDoseStr == null) || cumulateDoseStr.equals(""))
 			GlobalVars.cumulateDose = true;

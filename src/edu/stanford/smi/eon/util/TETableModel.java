@@ -127,7 +127,6 @@ public class TETableModel extends DefaultTableModel {
 		int x, rows;
 		Patient_Data ptData;
 		Collection patientDataList = new ArrayList();
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 		rows = getRowCount();
 		for (x = 0; x < rows; x++) {
@@ -136,9 +135,9 @@ public class TETableModel extends DefaultTableModel {
 			String f2 = getSecondField(x);
 			String d1 = "", d2 = "";
 			if (numDates >= 1)
-				d1 = formatter.format(getStart(x));
+				d1 = HelperFunctions.internalDateFormatter.format(getStart(x));
 			if (numDates >= 2)
-				d2 = formatter.format(getEnd(x));
+				d2 = HelperFunctions.internalDateFormatter.format(getEnd(x));
 
 			/*
 			 * see if there is a data type over ride for this for this domain

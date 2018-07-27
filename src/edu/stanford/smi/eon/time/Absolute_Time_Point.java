@@ -27,13 +27,10 @@
 package edu.stanford.smi.eon.time;
 
 import java.text.ParseException;
-import java.util.*;
+
+import edu.stanford.smi.eon.util.Day;
+import edu.stanford.smi.eon.util.HelperFunctions;
 import edu.stanford.smi.protege.model.*;
-import edu.stanford.smi.protege.util.*;
-import edu.stanford.smi.eon.util.*;
-import edu.stanford.smi.eon.kbhandler.*;
-import edu.stanford.smi.eon.datahandler.DataHandler;
-import edu.stanford.smi.eon.guidelineinterpreter.GuidelineInterpreter;
 
 import org.apache.log4j.*;
 
@@ -47,7 +44,7 @@ public abstract class Absolute_Time_Point extends Abstract_Time_Point {
 		super(kb, id);
 	}
 
-  static Logger logger = Logger.getLogger(Absolute_Time_Point.class);
+	static Logger logger = Logger.getLogger(Absolute_Time_Point.class);
 
 	public void setmonth_nameValue(int month_name) {
 		ModelUtilities.setOwnSlotValue(this, "month_name", new  Integer(month_name));	}
@@ -81,9 +78,9 @@ public abstract class Absolute_Time_Point extends Abstract_Time_Point {
 			return 0;
 		}
 	}
-// __Code above is automatically generated. Do not change
+	// __Code above is automatically generated. Do not change
 
-  
+
 	public void setDateValue(String date) {
 
 		try {
@@ -103,26 +100,26 @@ public abstract class Absolute_Time_Point extends Abstract_Time_Point {
 		setdayValue(Integer.parseInt(date.substring(seconddash+1, limit )));
 		setmonth_nameValue(Integer.parseInt(date.substring(firstdash+1, seconddash)));
 	}
-  
-  
-/*  public void setDateValue(String date, String granule){
+
+
+	/*  public void setDateValue(String date, String granule){
 	  setDateValue(date);
 	  if (granule == edu.stanford.smi.eon.datahandler.Constants.minute) {
 		  setsystem_timeValue((int)HelperFunctions.Day2Int2(date) * 60 * 24);
 	  }
   }
-*/
-  public void setDateValue(int julianDay) {
-    Day dayutil = new Day();
-    dayutil.fromJulian(julianDay);
-    setdayValue( dayutil.getDay());
-    setyear_CEValue(dayutil.getYear());
-    setsystem_timeValue(julianDay);
-    setmonth_nameValue( dayutil.getMonth());
-    setlabelValue(dayutil.getMonth()+"/"+dayutil.getDay()+"/"+dayutil.getYear());
-    logger.debug("in Absolute_Time_Point: setDateValue "+ dayutil.toString());
-  }
-  
+	 */
+	public void setDateValue(int julianDay) {
+		Day dayutil = new Day();
+		dayutil.fromJulian(julianDay);
+		setdayValue( dayutil.getDay());
+		setyear_CEValue(dayutil.getYear());
+		setsystem_timeValue(julianDay);
+		setmonth_nameValue( dayutil.getMonth());
+		setlabelValue(dayutil.toString());
+		logger.debug("in Absolute_Time_Point: setDateValue "+ dayutil.toString());
+	}
+
 	public void setDateValue(String date, int sessionTime) {
 		try {
 			int systemTime = (int) HelperFunctions.Day2Int2(date); 
@@ -144,29 +141,26 @@ public abstract class Absolute_Time_Point extends Abstract_Time_Point {
 		setmonth_nameValue(Integer.parseInt(date.substring(firstdash+1, seconddash)));
 	}  
 
-  public void setDateValue(int julianDay, int sessionTime) {
-    Day dayutil = new Day();
-    dayutil.fromJulian(julianDay);
-    setdayValue( dayutil.getDay());
-    setyear_CEValue(dayutil.getYear());
-    setsystem_timeValue(julianDay);
-    this.setdays_from_current_timeValue(sessionTime - julianDay);
-    setmonth_nameValue( dayutil.getMonth());
-    setlabelValue(dayutil.getMonth()+"/"+dayutil.getDay()+"/"+dayutil.getYear());
-    logger.debug("in Absolute_Time_Point: setDateValue "+ dayutil.toString());
-  }
+	public void setDateValue(int julianDay, int sessionTime) {
+		Day dayutil = new Day();
+		dayutil.fromJulian(julianDay);
+		setdayValue( dayutil.getDay());
+		setyear_CEValue(dayutil.getYear());
+		setsystem_timeValue(julianDay);
+		this.setdays_from_current_timeValue(sessionTime - julianDay);
+		setmonth_nameValue( dayutil.getMonth());
+		setlabelValue(dayutil.toString());
+		//setlabelValue(dayutil.getMonth()+"/"+dayutil.getDay()+"/"+dayutil.getYear());
+		logger.debug("in Absolute_Time_Point: setDateValue "+ dayutil.toString());
+	}
 
-  public static String getSystemTimeUnit() {
-	    return "day";
-	  }
+	public static String getSystemTimeUnit() {
+		return "day";
+	}
 
-    public String stringValue() {
-    return getyear_CEValue() + "-" + getmonth_nameValue() + "-" +
-      getdayValue();
-    }
-    public String toString() {
-      return stringValue();
-    }
-  
+	public String toString() {
+		return getlabelValue();
+	}
+
 
 }

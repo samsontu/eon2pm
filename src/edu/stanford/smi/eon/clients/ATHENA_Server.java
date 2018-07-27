@@ -31,9 +31,9 @@
 package edu.stanford.smi.eon.clients;
 import edu.stanford.smi.eon.PCAServerModule.*;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
-import java.io.*;
-import java.text.SimpleDateFormat;
+import edu.stanford.smi.eon.util.HelperFunctions;
 
+import java.io.*;
 import org.apache.log4j.*;
 
 
@@ -121,7 +121,6 @@ public class ATHENA_Server extends Object {
 		//outFilePath should be path+pid+extension
 		String caseData=null;
 		java.util.Date startTime = new java.util.Date();
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			caseData =  readFileAsString(child.getPath());
 		} catch (java.io.IOException e) {
@@ -131,7 +130,7 @@ public class ATHENA_Server extends Object {
 		String recommendations = null;
 		try {
 			System.out.println("-----------------------------------------");
-			recommendations = pca.topLevelComputeAdvisory( pid, caseData,  formatter.format(startTime), guidelineId, HTMLFileName );
+			recommendations = pca.topLevelComputeAdvisory( pid, caseData,  HelperFunctions.internalDateFormatter.format(startTime), guidelineId, HTMLFileName );
 			System.out.println("-----------------------------------------");
 			//String fileName = outFilePath+pid+fileExtension
 			//File outFilePath = new File(fileName);;

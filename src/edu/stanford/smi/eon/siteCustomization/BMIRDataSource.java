@@ -10,12 +10,11 @@ import org.apache.log4j.Logger;
 
 import edu.stanford.smi.eon.execEngine.DataSource;
 import edu.stanford.smi.eon.execEngine.IDataSource;
+import edu.stanford.smi.eon.util.HelperFunctions;
 
 public abstract class BMIRDataSource extends DataSource implements IDataSource {
 	static Logger logger = Logger.getLogger(BMIRDataSource.class);
 	private SimpleDateFormat inputFormat = new SimpleDateFormat("EEE MMM dd hh:mm:ss zzz yyyy");
-	private SimpleDateFormat dfm = new SimpleDateFormat("yyyy-MM-dd");
-	
 	protected void loadMed(Connection con, String patientID, String episodeID, String sessionTime, String queryString) throws SQLException {
 		Statement stmt = null;
 		logger.info("med query: "+ queryString);
@@ -96,7 +95,7 @@ public abstract class BMIRDataSource extends DataSource implements IDataSource {
 		logger.info("Input Date: "+theDate);
 		String resultDate = null;
 		try {
-			resultDate = dfm.format(inputFormat.parse(theDate));
+			resultDate = HelperFunctions.internalDateFormatter.format(inputFormat.parse(theDate));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

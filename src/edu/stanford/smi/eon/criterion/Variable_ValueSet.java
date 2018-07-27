@@ -80,6 +80,8 @@ public class Variable_ValueSet extends DefaultSimpleInstance {
 					newString = edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString((String)value, this.getKnowledgeBase());
 				}
 				else 	newString = value.toString();
+				// if value has the format "yyyy-MM-DD",change it to "MM/dd/yyyy"; otherwise no change
+				//newString = HelperFunctions.formatDisplayDate(newString);
 				inputString = HelperFunctions.replaceSubstringWOQuotes(inputString, ((Property_Value)propertyValue).getstring_nameValue(),  newString);
 			}
 		}

@@ -71,9 +71,6 @@ public class DataHandler {
 
 	private Map RuntimeProtegeInstances = null;
 
-	//	private SimpleDateFormat defaultDateFormat = new SimpleDateFormat(
-	//	"yyyy-MM-dd hh:mm:ss.SSS");
-
 	private WhereComparisonFilter caseSelector = null;
 
 	static Logger logger = Logger.getLogger(DataHandler.class);

@@ -504,12 +504,10 @@ public class PCASession_Imp {
 
 	public String setDummyCase() {
 		Date currentTime = new java.util.Date();
-		java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat(
-				"yyyy-MM-dd");
 		String patient_id = Long.toString(currentTime.getTime());
-		dataManager.changeCase(patient_id, formatter.format(currentTime));
+		dataManager.changeCase(patient_id, HelperFunctions.internalDateFormatter.format(currentTime));
 		this.patient_id = patient_id;
-		this.session_time = formatter.format(currentTime);
+		this.session_time = HelperFunctions.internalDateFormatter.format(currentTime);
 		PaddaGEE guidelineManager;
 
 		for (Iterator i = guidelineManagers.values().iterator(); i.hasNext();) {
@@ -522,11 +520,9 @@ public class PCASession_Imp {
 
 	public String setDummyCase(String patient_id) {
 		Date currentTime = new java.util.Date();
-		java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat(
-				"yyyy-MM-dd");
-		dataManager.changeCase(patient_id, formatter.format(currentTime));
+		dataManager.changeCase(patient_id, HelperFunctions.internalDateFormatter.format(currentTime));
 		this.patient_id = patient_id;
-		this.session_time = formatter.format(currentTime);
+		this.session_time = HelperFunctions.internalDateFormatter.format(currentTime);
 		PaddaGEE guidelineManager;
 
 		for (Iterator i = guidelineManagers.values().iterator(); i.hasNext();) {
@@ -1774,7 +1770,7 @@ public class PCASession_Imp {
 				} else {
 					valueString = results.get(key).toString();
 				}
-				timestamp = ((Absolute_Time_Point) timePoint).stringValue();
+				timestamp = ((Absolute_Time_Point) timePoint).toString();
 				if (first) {
 					first = false;
 					if (flag.equals(IEON.HTML)) {
@@ -1869,7 +1865,7 @@ public class PCASession_Imp {
 								+ " is either not in KB or not an instance of Interval-Valued_AtomicTest_Metaclass");
 						valueString = results.get(key).toString();
 					}
-					timestamp = ((Absolute_Time_Point) timePoint).stringValue();
+					timestamp = ((Absolute_Time_Point) timePoint).toString();
 					if (first) {
 						first = false;
 						itsWriter.println("<tr><td width=\"200\">" + labName
@@ -2016,7 +2012,7 @@ public class PCASession_Imp {
 					timestamp = "";
 					if (QualitativeEntry.getValid_time() != null) {
 						timestamp = ((Definite_Time_Point) QualitativeEntry
-								.getValid_time()).stringValue();
+								.getValid_time()).toString();
 					}
 					if (flag.equals(IEON.HTML)) {
 						itsWriter.println("<tr><td width=\"200\">"

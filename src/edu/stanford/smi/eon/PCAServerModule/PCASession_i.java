@@ -377,18 +377,6 @@ public class PCASession_i implements
 		guidelineManagers = pcaSessionImp.guidelineManagers;
 
 		return patient_id;
-		/*
-		 * Date currentTime = new java.util.Date(); java.text.SimpleDateFormat
-		 * formatter = new java.text.SimpleDateFormat ("yyyy-MM-dd"); String
-		 * patient_id = Long.toString(currentTime.getTime()) ;
-		 * dataManager.changeCase(patient_id, formatter.format(currentTime));
-		 * this.patient_id=patient_id; this.session_time =
-		 * formatter.format(currentTime); PaddaGEE guidelineManager; for
-		 * (Iterator i=guidelineManagers.values().iterator(); i.hasNext();) {
-		 * guidelineManager = (PaddaGEE)i.next();
-		 * guidelineManager.resetAdvisories();
-		 * guidelineManager.setDBmanager(dataManager); } return patient_id;
-		 */
 	}
 
 	public String setDummyCase(String patient_id) {
@@ -407,30 +395,7 @@ public class PCASession_i implements
 		pcaSessionImp.setCase(patient_id, session_time);
 		dataManager = pcaSessionImp.getDataManager();
 		guidelineManagers = pcaSessionImp.guidelineManagers;
-		/*
-		 * dataManager.changeCase(patient_id, session_time);
-		 * this.patient_id=patient_id; this.session_time = session_time; Date
-		 * currentTime = new java.util.Date(); java.text.SimpleDateFormat
-		 * formatter = new java.text.SimpleDateFormat ("yyyy-MM-dd");
-		 * this.logln("PID"+patient_id+"\t["+formatter.format(currentTime)+"]");
-		 * Date startTime = startTiming("\tstarting loading case"); try {
-		 * dataManager.loadData(); } catch (Exception e) { e.printStackTrace();
-		 * throw new PCA_Initialization_Exception
-		 * ("Problem loading patient data for "+patient_id); }
-		 * 
-		 * stopTiming("\tfinished loading case", startTime);
-		 * 
-		 * // reinitialize Guideline Manager PaddaGEE guidelineManager; for
-		 * (Iterator i=guidelineManagers.values().iterator(); i.hasNext();) {
-		 * guidelineManager = (PaddaGEE)i.next();
-		 * guidelineManager.resetAdvisories();
-		 * guidelineManager.setDBmanager(dataManager); } Runtime rt =
-		 * Runtime.getRuntime();
-		 * logger.debug("PCASession_i.setCase() Free memory: "+
-		 * rt.freeMemory()+" Total memory: "+ rt.totalMemory(), 0); rt.gc();
-		 * logger.debug("PCASession_i.setCase() Post GC Free memory: "+
-		 * rt.freeMemory()+" Total memory: "+ rt.totalMemory(), 0);
-		 */}
+	}
 
 	/**
 	 * <p>

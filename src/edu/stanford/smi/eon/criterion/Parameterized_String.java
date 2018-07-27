@@ -46,6 +46,7 @@ import java.util.*;
 
 import edu.stanford.smi.eon.PCAServerModule.PCA_Session_Exception;
 import edu.stanford.smi.eon.guidelineinterpreter.GuidelineInterpreter;
+import edu.stanford.smi.eon.util.HelperFunctions;
 import edu.stanford.smi.protege.model.FrameID;
 import edu.stanford.smi.protege.model.Instance;
 import edu.stanford.smi.protege.model.KnowledgeBase;
