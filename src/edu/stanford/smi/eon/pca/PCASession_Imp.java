@@ -855,12 +855,12 @@ public class PCASession_Imp {
 				finishSession();
 			}
 			catch (Exception e) {
-				System.out.println("computeAndSaveAdvisory error for  patient: " + ptID);
+				logger.error("computeAndSaveAdvisory error for  patient: " + ptID);
 				e.printStackTrace();
 			}
 
 		} else {
-			System.out.println("ptDataArray is null for patient case "+ptID);
+			logger.error("ptDataArray is null for patient case "+ptID);
 		}
 		return XMLAdvisory;
 	}
@@ -896,12 +896,12 @@ public class PCASession_Imp {
 				finishSession();
 			}
 			catch (Exception e) {
-				System.out.println("configuredTopLevelComputeAdvisory error for  patient: " + ptID);
+				logger.error("configuredTopLevelComputeAdvisory error for  patient: " + ptID);
 				e.printStackTrace();
 			}
 
 		} else {
-			System.out.println("ptDataArray is null for patient case "+ptID);
+			logger.error("ptDataArray is null for patient case "+ptID);
 		}
 		return XMLAdvisory;		
 

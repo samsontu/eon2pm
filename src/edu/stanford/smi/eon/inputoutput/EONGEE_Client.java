@@ -62,58 +62,13 @@ public class EONGEE_Client extends Object {
 	}
 
 
-/*	public void setUpKBHandler() {
-		if (kbURL == null) {
-			System.out.println("Error: Knowledge Base Location Unspecified ");
-			System.exit(0);
-		}
 
-		try {
-			m_kbHandler = new KBHandler(kbURL);
-			System.out.println(" Knowledge Base Handler Successfully set up ");
-		}
-		catch (Exception e) {
-			System.out.println("setUpKBHandler error with kbURL: " + kbURL);
-			e.printStackTrace();
-			System.exit(0);
-		}
-	}
-*/
-/*	public void setUpGuidelineInterpreter(KBHandler kbManager, String guidelineName, String databaseName) {
-
-		m_pca = null;
-
-		if (kbManager == null || guidelineName == null || databaseName == null) {
-			System.out.println(" setUpGuidelineInterpreter: input argument(s) null ");
-			System.exit(0);
-		}
-
-		try {
-			PCAServer_i PCAImp = new PCAServer_i();
-			PCAImp.kbManager = kbManager;
-			PCAImp.setServerLog(serverLogFile);
-			PCAImp.kbURLString = kbURL;
-			m_pca = PCAImp.open_pca_session(database, user, password, null);
-			System.out.println(" complete open_pca_session ");
-			m_pca.setGuideline(guidelineName);
-			System.out.println(" completed setting guideline: " + guidelineName );
-
-			m_pca.compliance(Compliance_Level.strict);
-
-		} catch(Exception se) {
-			System.out.println("Exception raised during creation of PCAServer_i " +
-					se.toString());
-			System.exit(0);
-		}
-
-	}
-*/
 	public void setUpGuidelineInterpreter(KBHandler kbManager, String guidelineName) {
 
 		m_pca = null;
 
 		if (kbManager == null || guidelineName == null) {
-			System.out.println(" setUpGuidelineInterpreter: input argument(s) null ");
+			logger.error(" setUpGuidelineInterpreter: input argument(s) null ");
 			System.exit(0);
 		}
 
@@ -122,24 +77,20 @@ public class EONGEE_Client extends Object {
 
 			PCAImp.kbManager = kbManager;
 
-			// System.out.println(serverLogFile);
-			// PCAImp.setServerLog(serverLogFile);
-			//PCAImp.kbURLString = kbURL;
-
 			m_pca = PCAImp.open_pca_session("", "", "", "");
 
-			System.out.println(" complete open_pca_session ");
+			logger.info(" complete open_pca_session ");
 
 			m_pca.setGuideline(guidelineName);
 
 			this.guidelineName = guidelineName;			
 
-			System.out.println(" completed setting guideline: " + guidelineName );
+			logger.info(" completed setting guideline: " + guidelineName );
 
 			m_pca.compliance(Compliance_Level.strict);
 
 		} catch(Exception se) {
-			System.out.println("Exception raised during creation of PCAServer_i " +
+			logger.error("Exception raised during creation of PCAServer_i " +
 					se.toString());
 			System.exit(0);
 		}

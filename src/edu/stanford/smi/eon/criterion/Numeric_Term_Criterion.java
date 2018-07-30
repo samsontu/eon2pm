@@ -228,11 +228,8 @@ public class Numeric_Term_Criterion extends Comparison_Criterion {
 				Date date;
 				String displayedDate;
 				try {
-					System.out.println(queryValue.valid_time);
 					date = HelperFunctions.internalDateFormatter.parse(queryValue.valid_time);
-					System.out.println(date);
 					displayedDate = HelperFunctions.formatDisplayDate(date);
-					System.out.println(displayedDate);
 				} catch (ParseException e) {
 					logger.error("'"+this.getBrowserText() +"' "+queryValue.valid_time + " cannot be put into MM-dd-yyyy format");
 					displayedDate = queryValue.valid_time;

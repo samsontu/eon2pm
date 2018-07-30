@@ -71,7 +71,7 @@ public class BMIRInPatientDataSource extends BMIRDataSource implements IDataSour
 					aDataImporter.cacheNoteEntry("Disposition", disposition, dischargeDate);
 					//aDataImporter.cacheAdverseEvent("lisinopril", "angioedema", "1979-06-01");
 					aDataImporter.cacheNumericEntry("Left Ventricular Ejection fraction", 25, "1979-06-01");
-					//System.out.println("Disposition: "+disposition);
+					logger.info("Disposition: "+disposition);
 					//aDataImporter.cacheNoteEntry("Principal_Diagnosis", admissionDiagnosis, admissionDate);
 					aDataImporter.setEpisodePeriod("FocusAdmissionPeriod", admissionDate, dischargeDate);
 					aDataImporter.cacheNumericEntry("eGFR", 65, "1979-6-01");

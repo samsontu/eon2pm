@@ -549,7 +549,7 @@ public class DataHandler {
 	public void cacheQualitativeData(String domainTerm, String value,
 			String date) {
 		currentProblems.put(domainTerm.trim(), date);
-		//		System.out.println("domainterm: "+domainTerm+" value: "+value);
+		//		logger.debug("domainterm: "+domainTerm+" value: "+value);
 		Definite_Time_Point timePoint = null;
 		if ((date != null) && !date.equals("")) {
 			timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
@@ -1112,7 +1112,7 @@ public class DataHandler {
 				if (result != null)
 					value = result.value;
 			} catch (Exception e) {
-				System.out.println("getDemographics exception "
+				logger.error("getDemographics exception "
 						+ label);
 			}
 		}
@@ -1388,7 +1388,7 @@ public class DataHandler {
 							}
 						}
 					} catch (Exception e) {
-						System.out.println("doQualitativeQuery exception "
+						logger.error("doQualitativeQuery exception "
 								+ e.getMessage());
 						throw new PCA_Session_Exception(e.getMessage());
 					}

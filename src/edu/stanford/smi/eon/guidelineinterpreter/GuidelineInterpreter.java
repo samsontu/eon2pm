@@ -324,9 +324,9 @@ public class GuidelineInterpreter implements Serializable, PaddaGEE {
 
 			guidelineGoal = new Guideline_Goal(guideLine, HelperFunctions.dummyJustification(),
 					HelperFunctions.dummyCriteriaEvaluation(), Goal_State.none, null, null, 0, null, true, null, null, null);
-			//System.out.println("[5] guideline_Goal");
+			//logger.debug("[5] guideline_Goal");
 			if (goalCriterion != null) {
-				// System.out.println("this.getCurrentGuidelineID():" + "[" + this.getCurrentGuidelineID() + "]");
+				// logger.debug("this.getCurrentGuidelineID():" + "[" + this.getCurrentGuidelineID() + "]");
 				goalAchievement = goalCriterion.evaluate(this, false);
 
 				logger.debug("in computeGoals - evaluation result: truth_value=" +goalAchievement.truth_value );
@@ -341,13 +341,13 @@ public class GuidelineInterpreter implements Serializable, PaddaGEE {
 
 				guidelineGoal.fine_grain_priority = fine_grain_priority;
 
-				//        System.out.println("guidelineGoal:" + guidelineGoal);
+				//        logger.debug("guidelineGoal:" + guidelineGoal);
 				if (goalAchievement.truth_value.equals(Truth_Value._true))
 					guidelineGoal.achieved = Goal_State.achieved;
 				else if (goalAchievement.truth_value.equals(Truth_Value._false))
 					guidelineGoal.achieved = Goal_State.failed;
 				else guidelineGoal.achieved = Goal_State.unknown;
-				//        System.out.println("+guidelineGoal.achieved: [" + guidelineGoal.achieved + "]");
+				//        logger.debug("+guidelineGoal.achieved: [" + guidelineGoal.achieved + "]");
 				goals.add(guidelineGoal);
 			} else {
 				logger.debug("in computeGoals - no goal criterion; assume achieved");

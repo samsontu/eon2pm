@@ -64,7 +64,7 @@ public class Criterion extends Expression {
 		if ((evaluation = (Criteria_Evaluation) guidelineManager.evalManager
 				.ask(this)) != null) {
 			
-			//System.out.println("evaluation->" + evaluation.support);
+			//logger.debug("evaluation->" + evaluation.support);
 			return evaluation;
 		} else {
 			logger.debug("Criterion.evaluate " + getlabelValue());

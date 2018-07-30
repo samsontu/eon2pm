@@ -120,10 +120,10 @@ public abstract class Action_Specification extends Guideline_Model_Entity {
 	public int getfine_grain_priorityValue(){
 		Integer value = (Integer)ModelUtilities.getOwnSlotValue(this, "fine-grain_priority");
 		if (value != null) {
-			// System.out.println("Action spec "+ this.getBrowserText()+" fine-grain priority: "+value.toString()+"/"+value.intValue());
+			// logger.debug("Action spec "+ this.getBrowserText()+" fine-grain priority: "+value.toString()+"/"+value.intValue());
 			return  value.intValue();
 		} else {
-			// System.out.println("Action spec "+ this.getBrowserText()+" fine-grain priority: null = 0");
+			// logger.debug("Action spec "+ this.getBrowserText()+" fine-grain priority: null = 0");
 			return 0;
 		}
 	}

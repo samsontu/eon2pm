@@ -34,7 +34,6 @@ public class BMIRDataSourceFactory implements IDataSourceFactory {
 		String dbPassword = settings.getProperty("PWORD", "");
 		String sessionType = settings.getProperty("SESSIONTYPE");
 		Class.forName("com.mysql.jdbc.Driver");
-		System.out.println("--------Connecting to the Glinda DB Server"+host+" "+dbUser+" "+ dbPassword);	
 		logger.info("BMIRDataSource args: "+host+" "+dbUser+" "+ dbPassword);
 		Connection con = DriverManager.getConnection (host, dbUser, dbPassword);
 		if (sessionType.equals("Outpatient")) { 

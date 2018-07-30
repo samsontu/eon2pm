@@ -43,21 +43,7 @@ public class LegacyDataSource {
   public LegacyDataSource(String dbname, String user,
                      String password, String initFile, DataHandler glDataHandler) throws PCA_Initialization_Exception {
     this.glDataHandler =  glDataHandler;
-/*    if (!dbname.equals("")) {
-      try {
-        chronus2= new ChronusSession(initFile);
-        //logger.info("DataSource.DataSource(...): password = '"+password+"'");
-        chronus2.openDatabase(dbname, user, password);
-		System.out.println("DataSource Chronus initialized !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-      } catch (Throwable e) {
-        logger.error("Error starting Chronus: " , e);
 
-        throw new PCA_Initialization_Exception("database not found");
-      }
-    }
-
-    checkIfHandlingOpioidTherapy(initFile);
-*/
   }
   static Logger logger = Logger.getLogger(LegacyDataSource.class);
 
@@ -71,7 +57,7 @@ public class LegacyDataSource {
    * SERVERKB for the string "Opioid"
    */
   private void checkIfHandlingOpioidTherapy(String initFile) {
-    System.out.println(" checkIfHandlingOpioidTherapy " + initFile);
+    logger.info(" checkIfHandlingOpioidTherapy " + initFile);
 	m_isHandlingOpioidTherapy = false;
 	if (initFile == null || initFile.length() <= 0) {
       return;
@@ -89,7 +75,7 @@ public class LegacyDataSource {
     }
 
 	String kbPath = settings.getProperty("SERVERKB", "");
-	System.out.println("checkIfHandlingOpioidTherapy() - kbPath: " + kbPath);
+	logger.info("checkIfHandlingOpioidTherapy() - kbPath: " + kbPath);
 	if (kbPath == null || kbPath.length() <= 0) {
       return;
     }
