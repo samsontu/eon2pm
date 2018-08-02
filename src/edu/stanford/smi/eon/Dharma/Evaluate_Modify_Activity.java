@@ -360,35 +360,37 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		throw new Exception("Evaluate_Modify_Activity.direction: not implemented");
 	}
 
-	private Collection<Drug_Usage>getDrugUsages(String currentActivity, GuidelineInterpreter interpreter) {
+/*	private Collection<Drug_Usage>getDrugUsages(String currentActivity, GuidelineInterpreter interpreter) {
 		WhereComparisonFilter filter=  new WhereComparisonFilter("Drug_Class_Name", DharmaPaddaConstants.superclass_of,
 				currentActivity);
 		Collection<Drug_Usage> superActivitySpec = interpreter.getKBmanager().findInstances(
 				"Drug_Usage", filter, interpreter);
 		return superActivitySpec;
 	}
-
-	private Collection<Matched_Data> matchDoNotIntensifyConditions(String currentActivity, GuidelineInterpreter interpreter, boolean controllable) {
-		Collection<Drug_Usage> drugUsages = getDrugUsages( currentActivity,  interpreter);
+*/
+	private Collection<Matched_Data> matchDoNotIntensifyConditions(String currentActivity, GuidelineInterpreter interpreter, 
+			Drug_Usage drugUsage, boolean controllable) {
+		//Collection<Drug_Usage> drugUsages = getDrugUsages( currentActivity,  interpreter);
 		Collection<Matched_Data> doNotIntensify= new ArrayList<Matched_Data>();
-		for (Drug_Usage drugUsage: drugUsages) {
+//		for (Drug_Usage drugUsage: drugUsages) {
 			Collection<Matched_Data> matched = interpreter.matchData("",
 					drugUsage.getDo_Not_Intensify_Conditions(controllable), interpreter.getDBmanager().currentProblems());
 			doNotIntensify.addAll(matched);
-		}
+//		}
 		if (!doNotIntensify.isEmpty())
 			return doNotIntensify;
 		else return null;
 	}
 
-	private Collection<Matched_Data> matchDoNotDecreaseDoseConditions(String currentActivity, GuidelineInterpreter interpreter, boolean controllable) {
-		Collection<Drug_Usage> drugUsages = getDrugUsages( currentActivity,  interpreter);
+	private Collection<Matched_Data> matchDoNotDecreaseDoseConditions(String currentActivity, GuidelineInterpreter interpreter, 
+			Drug_Usage drugUsage, boolean controllable) {
+//		Collection<Drug_Usage> drugUsages = getDrugUsages( currentActivity,  interpreter);
 		Collection<Matched_Data> doNotDecreaseDose= new ArrayList<Matched_Data>();
-		for (Drug_Usage drugUsage: drugUsages) {
+//		for (Drug_Usage drugUsage: drugUsages) {
 			Collection<Matched_Data> matched = interpreter.matchData("",
 					drugUsage.getDo_Not_Decrease_Dose_Conditions(controllable), interpreter.getDBmanager().currentProblems());
 			doNotDecreaseDose.addAll(matched);
-		}
+//		}
 		if (!doNotDecreaseDose.isEmpty())
 			return doNotDecreaseDose;
 		else return null;
@@ -452,10 +454,10 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 					Cls specificDrugCls = interpreter.getKBmanager().getCls(currentActivity);
 					if (specificDrugCls != null) {
 						adverseReactionCollection =  interpreter.matchAdverseEvents(specificDrugCls);
-						stopControllableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, true); ;
-						stopUncontrollableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, false); ;
-						stopControllableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, true); ;
-						stopUncontrollableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, false); ;
+						stopControllableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, drugUsage, true); ;
+						stopUncontrollableIntensifyConditionCollection = matchDoNotIntensifyConditions(currentActivity, interpreter, drugUsage, false); ;
+						stopControllableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, drugUsage, true); ;
+						stopUncontrollableDecreaseDoseConditionCollection = matchDoNotDecreaseDoseConditions(currentActivity, interpreter, drugUsage, false); ;
 						if (adverseReactionCollection != null) {
 							addverseReactionArray = adverseReactionCollection.toArray(new Matched_Data[adverseReactionCollection.size()]);
 						}

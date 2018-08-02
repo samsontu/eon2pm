@@ -16,3 +16,4 @@ protege.properties
 lib/protege.properties
 
 *.properties
+*.html

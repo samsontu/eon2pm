@@ -151,9 +151,9 @@ public class Drug_Usage extends Activity_Specification {
 	}
 
 	public void setDo_Not_Decrease_Dose_ConditionsValue(Collection criteria) {
-		ModelUtilities.setOwnSlotValues(this, "Do_Not_Intensify_Conditions", criteria);	}
+		ModelUtilities.setOwnSlotValues(this, "Do_Not_Decrease_Dose_Conditions", criteria);	}
 	public Collection getDo_Not_Decrease_Dose_ConditionsValue(){
-		return  ModelUtilities.getOwnSlotValues(this, "Do_Not_Intensify_Conditions");
+		return  ModelUtilities.getOwnSlotValues(this, "Do_Not_Decrease_Dose_Conditions");
 	}
 
 	public Collection getDo_Not_Start_Controllable_Conditions () {
