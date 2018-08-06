@@ -192,7 +192,7 @@ public class Evaluate_Stop_Activity extends Evaluate_Activity_Act {
 	private Matched_Data evaluateActivitiesToDelete(GuidelineInterpreter guidelineManager)
 			throws PCA_Session_Exception {
 		logger.debug("Evaluate_Substitution_Activity.evaluateActivitiesToDelete ");
-		Collection activitiesToStopCollection = null;
+		Collection<String> activitiesToStopCollection = null;
 		Matched_Data activitiesToStopData = null;
 		Instance query = getactivity_to_stopValue();
 		if (query == null) {
@@ -209,7 +209,9 @@ public class Evaluate_Stop_Activity extends Evaluate_Activity_Act {
 				logger.warn("No activity to stop after evaluating "+query.getBrowserText());
 				return null;
 			} else {
-				String[] activitiesToStop= (String[]) activitiesToStopCollection.toArray( new String[0]);
+				// remove duplicates
+				Set<String> activitiesToStopSet = new HashSet<String>(activitiesToStopCollection);
+				String[] activitiesToStop= (String[]) activitiesToStopSet.toArray( new String[0]);
 				activitiesToStopData = new Matched_Data("", "", activitiesToStop);
 				return activitiesToStopData;
 			}

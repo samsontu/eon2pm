@@ -358,7 +358,8 @@ public class Evaluate_Substitution_Activity extends Evaluate_Activity_Act {
 				logger.error("Evaluate_Substitution_Activity.evaluateActivitiesToDelete: No activities to stop");
 				throw new PCA_Session_Exception("Evaluate_Substitution_Activity.evaluateActivitiesToDelete: No activities to stop");
 			} else {
-				String[] activitiesToStop= (String[]) activitiesToStopCollection.toArray( new String[0]);
+				Set<String> activitiesToStopSet = new HashSet<String>(activitiesToStopCollection);
+				String[] activitiesToStop= (String[]) activitiesToStopSet.toArray( new String[0]);
 				activitiesToStopData = new Matched_Data("", "", activitiesToStop);
 				return activitiesToStopData;
 			}
