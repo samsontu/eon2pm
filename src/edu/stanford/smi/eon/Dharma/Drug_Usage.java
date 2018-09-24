@@ -439,7 +439,7 @@ public class Drug_Usage extends Activity_Specification {
 					"instance for " + getDrug_Class_NameValue().getName() );
 			String preferredDrugsString = getPreferredDrugsString(possibleDrugs, prettyName, interpreter);
 			Add_Evaluation addEval= new Add_Evaluation(
-					prettyName+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), //description
+					prettyName+ " "+ (preferredDrugsString.equals("") ? "" : "("+preferredDrugsString +")"), //description
 					prettyName,                                                                         //name
 					this.makeGuideline_Entity(interpreter.guideline.getName()), 
 					getDrug_Class_NameValue().getName(),                                                //activity to start
