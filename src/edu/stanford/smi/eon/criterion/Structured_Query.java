@@ -67,7 +67,7 @@ public class Structured_Query extends Expression {
 	public Cls gettypeValue() {
 		return ((Cls) ModelUtilities.getOwnSlotValue(this, "type"));
 	}
-//	__Code above is automatically generated. Do not change
+	//	__Code above is automatically generated. Do not change
 
 	private Instance getMostRecent(Collection instances) {
 		// Return most recent of instances; otherwise return null
@@ -77,7 +77,7 @@ public class Structured_Query extends Expression {
 			logger.error(this.getBrowserText()+" is a generalized structured query on instances that have no temporal attribute. Returning null");
 		return null;
 	}
-	
+
 	private Instance getMostRecentEPREntity(Collection instances) {
 		// Return most recent of instances; otherwise return any instance
 		TreeMap sort = new TreeMap();
@@ -106,7 +106,7 @@ public class Structured_Query extends Expression {
 	}
 
 
-protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
+	protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 		logger.debug("Structured_Query.getProtegeAttributeValue instance=" +instance.toString()+
 				" slot=" +slot.getName());
 		Object attributeValue=null;
@@ -161,7 +161,7 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 
 
 
-	protected Expression getAttributeValues (GuidelineInterpreter glmanager, Collection instances, Slot slot) 
+	protected Set_Expression getAttributeValues (GuidelineInterpreter glmanager, Collection instances, Slot slot) 
 			throws PCA_Session_Exception {
 		Set_Expression attributeValues = null;
 		Collection values = new ArrayList();
@@ -184,8 +184,9 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 		}
 		return null;
 	}
-	
-	public Collection <Instance> getFilteredInstances(GuidelineInterpreter glmanager, WhereFilter filter) {
+
+	public Collection <Instance> getFilteredInstances(GuidelineInterpreter glmanager, WhereFilter filter) 
+			throws PCA_Session_Exception {
 		Collection<Instance> instances = null;
 		KBHandler kb = glmanager.getKBmanager();
 		if (filter != null) {
@@ -195,7 +196,7 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 			// get all instances of 
 			if (gettypeValue() == null) {
 				logger.error("Structured query "+this.getBrowserText()+" has null type");
-				return null;
+				throw new PCA_Session_Exception("Structured query "+this.getBrowserText()+" has null type");
 			} else instances = kb.getKB().getInstances(gettypeValue());
 		}
 		if (this.gettypeValue().hasSuperclass(this.getKnowledgeBase().getCls("EPR_Entity"))){
@@ -208,7 +209,7 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 		}
 		return instances;
 	}
-	
+
 
 	public Expression evaluate_expression(GuidelineInterpreter glmanager)
 			throws PCA_Session_Exception {
@@ -220,69 +221,141 @@ protected Object getProtegeAttributeValue( Instance instance, Slot slot) {
 		Instance attribute = getattributeValue();
 		Expression result =  null; // 2018/07/10 stop caching express/criteria evaluation results(Expression)glmanager.evalManager.ask(this);
 
-		if (result == null) {
-			logger.debug("Structured_Query.evaluate_expression "+getlabelValue());
+		logger.debug("Structured_Query.evaluate_expression "+getlabelValue());
 
-			if ((whereRestrictions != null) && !(whereRestrictions.isEmpty())){
-				logger.debug(whereRestrictions.toString());
-				Collection ANDRestrictions = new ArrayList();
-				for (Iterator i = whereRestrictions.iterator(); i.hasNext();) {
-					ANDRestrictions.add(((Filter)i.next()).constructExpression(glmanager));
-				}
-				logger.debug(ANDRestrictions.toString());
-				filter = new WhereFilter(DharmaPaddaConstants.AND, ANDRestrictions);
+		if ((whereRestrictions != null) && !(whereRestrictions.isEmpty())){
+			logger.debug(whereRestrictions.toString());
+			Collection ANDRestrictions = new ArrayList();
+			for (Iterator i = whereRestrictions.iterator(); i.hasNext();) {
+				ANDRestrictions.add(((Filter)i.next()).constructExpression(glmanager));
 			}
-			instances = getFilteredInstances(glmanager, filter);
-
-			if (aggregator != null){
-				if (aggregator.equals("most_recent")) {
-					Instance  mostRecent = getMostRecent(instances);
-					if (mostRecent != null) {
-						if (attribute != null) 
-							result = getAttributeValue(glmanager, mostRecent, (Slot)attribute);
-						else {
-							logger.debug("With most_recent aggregator, Query attribute = null");
-							result = (Set_Expression)glmanager.getDBmanager().createInstance(
-									"Set_Expression");
-							Collection singleton = new ArrayList();
-							singleton.add(mostRecent);
-							((Set_Expression)result).setset_elementsValue(singleton);
-						}
-					} else logger.debug("With most_recent aggregator, Query result = null");
-				} else if (aggregator.equals("count")) {
-					result = (Numeric_Constant)glmanager.getDBmanager().createInstance("Numeric_Constant");
-					((Numeric_Constant)result).setvalueValue((float) instances.size());
-					/*				} else if (aggregator.equals("minimum")){
-
-			} else if (aggregator.equals("average")){
-					 */					
-				} else {
-					logger.error("Unsupported aggregation_operator "+aggregator);
-					throw new PCA_Session_Exception("Unsupported aggregation_operator "+aggregator);
-				}
-
-			} else {
-				if (instances != null && !instances.isEmpty()){
-					if (attribute != null) {
-						result = getAttributeValues(glmanager, instances, (Slot)attribute) ;             
-					} else {
+			logger.debug(ANDRestrictions.toString());
+			filter = new WhereFilter(DharmaPaddaConstants.AND, ANDRestrictions);
+		}
+		instances = getFilteredInstances(glmanager, filter);
+		// instances is not null. It may be an empty collection
+		/* 
+		 * aggregator = most_recent, if instances are Observations, then find the most recent observation, 
+		 * otherwise find any instance. If attribute is not null, return the attribute value of the most recent observation
+		 * otherwise return the most recent instance.
+		 * 
+		 * aggregaor = maximum or minimum: if the instances are Numeric_Entry, find the instance whose value is maximum or minimum
+		 * otherwise return null. If attribute is not null, return the attribute value of the found instance 
+		 * otherwise return the found max/min instance
+		 * 
+		 * aggregator = count: return the count of instances. Ignore the attribute slot.
+		 * 
+		 * aggregator is average:, if the instances are Numeric_Entry, return the average of the values. Ignore the attribute slot
+		 * otherwise return null
+		 */
+		if (aggregator != null){
+			if (aggregator.equals("most_recent") || (aggregator.equals("maximum")) || aggregator.equals("minimum")) {
+				Instance  selectInstance = null;
+				if (aggregator.equals("most_recent"))
+					selectInstance = getMostRecent(instances);
+				else
+					selectInstance = getMaxOrMin(instances, aggregator,  glmanager);
+				if (selectInstance != null) {
+					if (attribute != null) 
+						result = getAttributeValue(glmanager, selectInstance, (Slot)attribute);
+					else {
+						logger.debug("With aggregator "+ aggregator +" , Query attribute = null");
 						result = (Set_Expression)glmanager.getDBmanager().createInstance(
 								"Set_Expression");
-						((Set_Expression)result).setset_elementsValue(instances);
+						Collection singleton = new ArrayList();
+						singleton.add(selectInstance);
+						((Set_Expression)result).setset_elementsValue(singleton);
 					}
-					// aggregation makes sense only if there is a selection attribute
-				} 
-			} 
-			if (result != null) {
-				glmanager.evalManager.tell(this, result);
+				} else logger.debug("With aggregator "+ aggregator + " , Query result = null");
+			} else if (aggregator.equals("count")) {
+				result = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+						"Numeric_Constant");
+				((Numeric_Constant)result).setvalueValue((float) instances.size());
+			} else if (aggregator.equals("average")) {
+				result = getAverage(instances, glmanager);
+			} else 
+			{
+				logger.error("Unsupported aggregation_operator "+aggregator);
+				throw new PCA_Session_Exception("Unsupported aggregation_operator "+aggregator);
 			}
-		}
+		} else { //aggregator == null
+			if (instances != null && !instances.isEmpty()){
+				if (attribute != null) {
+					result = getAttributeValues(glmanager, instances, (Slot)attribute) ;             
+				} else {
+					result = (Set_Expression)glmanager.getDBmanager().createInstance(
+							"Set_Expression");
+					((Set_Expression)result).setset_elementsValue(instances);
+				}
+			} 
+		} 
 		java.util.Date stopTime = new java.util.Date();
 		logger.debug("Structured Query evaluate_expression() "+getlabelValue()+": taking @@@@@@@@@ "+ 
 				(stopTime.getTime() - startTime.getTime())+" @@@@@@@@@ milliseconds" );
 		return result;
 	}
 	
+	private Instance getMaxOrMin(Collection instances, String aggregator, GuidelineInterpreter glmanager) {
+		Instance selectInstance = null;
+		if (this.gettypeValue().equals(this.getKnowledgeBase().getCls("Numeric_Entry"))) {
+			float accumulator = (float)0.0;
+			boolean first = true;
+			for (Numeric_Entry instance : (Collection<Numeric_Entry>)instances) {
+				if (first == true) {
+					accumulator = instance.getValue();
+					selectInstance = instance;
+					first = false;
+				} else {
+					if (aggregator.equals("minimum")) {
+						if (accumulator > instance.getValue()) {
+							accumulator = instance.getValue();
+							selectInstance = instance;
+						}
+					} else if (aggregator.equals("maximum")){
+						if (accumulator < instance.getValue()) {
+							accumulator = instance.getValue();
+							selectInstance = instance;
+						}
+					} 
+				}
+			}
+		} else {
+			logger.error(this.getBrowserText()+" is a structured query on non-Numeric_Entry instances that have no value attribute. Returning null");
+		}
+		return selectInstance;
+	}
+
+	private Numeric_Constant getAverage(Collection<Instance> instances, GuidelineInterpreter glmanager) 
+			throws PCA_Session_Exception {
+		boolean first = true;
+		float sum = (float)0.0;
+		int count = 0;
+		Numeric_Constant result = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+				"Numeric_Constant");
+		if ((instances == null) || instances.isEmpty()) {
+			logger.error("Trying to take the average of an empty list returned by structure query" +this.getBrowserText());
+			throw new PCA_Session_Exception("Trying to take the average of an empty list returned by structure query" +this.getBrowserText());
+		} else {
+			for (Instance i : instances ) {
+				if (i instanceof Numeric_Entry) {
+					if (first == true) {
+						sum = ((Numeric_Entry)i).getValue();
+						first = false;
+					} else {
+						sum = sum + ((Numeric_Entry)i).getValue();
+						count = count + 1;
+					}
+				} else {
+					logger.error("Trying to get numeric value of non-Numeric_Entry instance "+i.getBrowserText());
+					throw new PCA_Session_Exception("Trying to get numeric value of non-Numeric_Entry instance "+i.getBrowserText());
+				}
+			}
+			result.setvalueValue((float) (sum / count));
+		}
+		return result;
+	}
+	
+
 	public String getSupport(Collection queryResults) {
 		String support = "";
 		boolean first = true;
