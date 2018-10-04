@@ -235,18 +235,24 @@ public class Structured_Query extends Expression {
 		instances = getFilteredInstances(glmanager, filter);
 		// instances is not null. It may be an empty collection
 		/* 
-		 * aggregator = most_recent, if instances are Observations, then find the most recent observation, 
-		 * otherwise find any instance. If attribute is not null, return the attribute value of the most recent observation
-		 * otherwise return the most recent instance.
-		 * 
-		 * aggregaor = maximum or minimum: if the instances are Numeric_Entry, find the instance whose value is maximum or minimum
-		 * otherwise return null. If attribute is not null, return the attribute value of the found instance 
-		 * otherwise return the found max/min instance
-		 * 
-		 * aggregator = count: return the count of instances. Ignore the attribute slot.
-		 * 
-		 * aggregator is average:, if the instances are Numeric_Entry, return the average of the values. Ignore the attribute slot
-		 * otherwise return null
+			aggregator = most_recent: 
+			1. if instances are Observations, then find the most recent observation O, 
+			  otherwise O is some (any) instance that satisfies the filtering condition. 
+			2. If attribute slot is not null, return the attribute value of O as an instance of Expression (e.g., Set, Qualitative_Constant, Numeric_Constant)
+			  else return O as a singleton set (i.e., set of one element)
+			 
+			aggregaor = maximum or minimum: 
+			1. if the instances are Numeric_Entry, find the instance M whose value is maximum or minimum
+			 else M is null. 
+			2. If attribute is not null, return the attribute value of M as an instance of Expression (e.g., Set, Qualitative_Constant, Numeric_Constant) 
+			 otherwise return M as a singleton set
+			 
+			aggregator = count: 
+			return the count of instances satisfying the filtering condition. (Ignore the attribute slot).
+			 
+			aggregator is average:
+			if the instances are Numeric_Entry, return the average of the values. (Ignore the attribute slot);
+			else return null
 		 */
 		if (aggregator != null){
 			if (aggregator.equals("most_recent") || (aggregator.equals("maximum")) || aggregator.equals("minimum")) {
