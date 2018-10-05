@@ -307,7 +307,12 @@ public  class ClientUtil {
 			sentence += ((Message)actionSpec).message;
 		} else if (actionSpec.action_spec_class.equals("Order_TestProcedure")) {
 			sentence += "Order test or procedure:" + ((Order_TestProcedure)actionSpec).test_or_procedure 
-					    + "fine-grain priority: "+ (actionSpec.fine_grain_priority);
+					    + " fine-grain priority: "+ (actionSpec.fine_grain_priority);
+			if (actionSpec.collateral_actions != null && !actionSpec.collateral_actions.isEmpty()) {
+				for (Action_Spec_Record action : actionSpec.collateral_actions) {
+					sentence += printActionSpec(action, kb);
+				}
+			}
 		} else {
 			sentence += (actionSpec.action_spec_class != null) ? actionSpec.action_spec_class + " " : "";
 			sentence += (actionSpec.name != null) ? actionSpec.name + " " : "";

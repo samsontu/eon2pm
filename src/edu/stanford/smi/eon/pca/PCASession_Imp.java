@@ -2675,6 +2675,10 @@ public class PCASession_Imp {
 				for (String m : action.getSubsidiary_message()) {
 					printlnWithIndent(itsWriter, "Subsidiary message: "+m, indent);
 				}
+			if (action.getCollateral_action() != null) 
+				for (Action a : action.getCollateral_action()) {
+					printAction(itsWriter, a, indent+5);
+				}
 		}
 
 	}
