@@ -40,13 +40,13 @@ package edu.stanford.smi.eon.PCAServerModule;
 </p>
 */
 final public class PCA_Initialization_Exception extends org.omg.CORBA.UserException implements java.io.Serializable {
-  public java.lang.String msg;
+  //public java.lang.String msg; modified 2018/10/08
   public PCA_Initialization_Exception() {
   }
   public PCA_Initialization_Exception(
     java.lang.String msg
   ) {
-    this.msg = msg;
+	  super(msg);
   }
 
 }

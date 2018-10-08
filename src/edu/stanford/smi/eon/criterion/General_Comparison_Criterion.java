@@ -240,7 +240,7 @@ public class General_Comparison_Criterion extends Comparison_Criterion {
 
 			} catch (PCA_Session_Exception e) {
 				logger.error("evaluating general comparison criterion - value field of "+
-						this.toString() + " is not a number - " + e.msg);
+						this.toString() + " is not a number - " + e.getMessage());
 				return null;
 			}
 			termValue = Float.parseFloat(valueString);

@@ -40,13 +40,13 @@ package edu.stanford.smi.eon.PCAServerModule;
 </p>
 */
 final public class PCA_Session_Exception extends Exception implements java.io.Serializable {
-  public java.lang.String msg;
+  //public java.lang.String msg; 2018/10/08 change to use super's msg
   public PCA_Session_Exception() {
   }
   public PCA_Session_Exception(
     java.lang.String msg
   ) {
-    this.msg = msg;
+	  super(msg);
   }
 
 }

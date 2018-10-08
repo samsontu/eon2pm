@@ -40,13 +40,13 @@ package edu.stanford.smi.eon.PCAServerModule;
 </p>
 */
 final public class Improper_Data_Exception extends org.omg.CORBA.UserException implements java.io.Serializable {
-  public java.lang.String msg;
+  //public java.lang.String msg; 2018/10/08 change to use super's msg
   public Improper_Data_Exception() {
   }
   public Improper_Data_Exception(
     java.lang.String msg
   ) {
-    this.msg = msg;
+	  super(msg);
   }
 
 }
