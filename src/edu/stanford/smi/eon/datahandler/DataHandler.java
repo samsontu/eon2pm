@@ -306,7 +306,7 @@ public class DataHandler {
 	}
 
 	public void cachePrescription (String med, float dailyDose,
-			String startTime, String stopTime, boolean cumulative, String assessedStatus, float MPR, String PRT) {
+			String startTime, String stopTime, boolean cumulative, String assessedStatus, int MPR, String PRT) {
 		putPrescription(med, dailyDose, startTime, stopTime, cumulative, assessedStatus, MPR, PRT);
 
 	}
@@ -335,7 +335,7 @@ public class DataHandler {
 	the later of the start times. 
 */
 	private void putPrescription(String med, float dailyDose,
-			String startTime, String stopTime, boolean cumulative, String status, float MPR, String PRT) {
+			String startTime, String stopTime, boolean cumulative, String status, int MPR, String PRT) {
 		boolean addProtegeInstance = false;
 		boolean indexNewPrescription = false;
 
@@ -374,7 +374,7 @@ public class DataHandler {
 					status = Constants.active;
 					if (cumulative) { // Case: cumulative flag set, add doses
 						existingMed.setDaily_dose( existingMed.getDaily_dose() + dailyDose);
-						if (MPR != 0.0) existingMed.setMedicationPossessionRatio(MPR);
+						if (MPR != 0) existingMed.setMedicationPossessionRatio(MPR);
 						if (PRTime != null) existingMed.setPRT(PRTime);
 						return;
 					} else  {
@@ -448,13 +448,13 @@ public class DataHandler {
 
 	public void cachePrescription(String med, float dailyDose,
 			String startTime, String stopTime, boolean cumulative, String assessedStatus) {
-		putPrescription(med, dailyDose, startTime, stopTime, cumulative, assessedStatus, (float)0.0, null);
+		putPrescription(med, dailyDose, startTime, stopTime, cumulative, assessedStatus, (int)0, null);
 	}
 
 
 	public void updatePrescription(Data_Operation_Type operation,
 			String drugName, float dailyDose, String dailyDoseUnit, 
-			String startTime, String stopTime, boolean cumulative, String sig, float MPR, String PRT) {
+			String startTime, String stopTime, boolean cumulative, String sig, int MPR, String PRT) {
 		switch (operation.value()) {
 		case Data_Operation_Type._modify:
 			cachePrescription(drugName, dailyDose, startTime, stopTime, cumulative, sig, MPR, PRT);

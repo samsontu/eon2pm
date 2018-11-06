@@ -130,13 +130,13 @@ public class PCAInterface {
 	return prescData;
     }
 
-    public static Prescription_Data mprPrescription(String name, Float mpr, String releaseDate) {
+    public static Prescription_Data mprPrescription(String name, Integer mpr, String releaseDate) {
     	Prescription_Data prescData = new Prescription_Data();
     	prescData.operation = Data_Operation_Type.modify;
     	prescData.drug_name = name;
     	prescData.daily_dose = (float)0.0;
     	prescData.daily_dose_unit = "";
-    	prescData.medication_possession_ratio = mpr.floatValue();
+    	prescData.medication_possession_ratio = mpr.intValue();
     	prescData.present_release_time = releaseDate;
     	prescData.start_time = "";
     	prescData.sig = "";

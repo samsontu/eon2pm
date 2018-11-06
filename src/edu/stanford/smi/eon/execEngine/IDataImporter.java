@@ -18,7 +18,7 @@ public interface IDataImporter {
 			String startTime, String stopTime, boolean cumulative, String assessedStatus);
 	
 	public void cachePrescription (String med, float dailyDose,
-			String startTime, String stopTime, boolean cumulative, String assessedStatus, float MPR, String PRT);
+			String startTime, String stopTime, boolean cumulative, String assessedStatus, int MPR, String PRT);
 
 	public void changeCase(String caseID, String sessionTime) ;
 

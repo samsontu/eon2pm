@@ -26,7 +26,7 @@ public class DataImporter implements IDataImporter {
 	}
 	
 	public void cachePrescription (String med, float dailyDose,
-			String startTime, String stopTime, boolean cumulative, String assessedStatus, float MPR, String PRT) {
+			String startTime, String stopTime, boolean cumulative, String assessedStatus, int MPR, String PRT) {
 		dataManager.cachePrescription(med, dailyDose, startTime, stopTime, cumulative, assessedStatus, MPR, PRT);
 	}
 

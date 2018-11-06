@@ -1969,7 +1969,7 @@ public class PCASession_Imp {
 						+ "]";
 					else
 						timeString = timeString + " ]";
-					if (aMed.getMedicationPossessionRatio() != (float)0.0) {
+					if (aMed.getMedicationPossessionRatio() != (int)0) {
 						mprString = "{"+aMed.getMedicationPossessionRatio()+
 								((aMed.getPRT() !=null) ? ", "+ ((Definite_Time_Point)aMed.getPRT()).getlabelValue() : "") + "}";
 					}

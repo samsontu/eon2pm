@@ -52,7 +52,7 @@ final public class Prescription_Data implements java.io.Serializable {
   public java.lang.String drug_name;
   public float daily_dose;
   public java.lang.String daily_dose_unit;
-  public float medication_possession_ratio;
+  public int medication_possession_ratio;
   public java.lang.String present_release_time = null;
   public java.lang.String start_time;
   public java.lang.String stop_time;
@@ -64,7 +64,7 @@ final public class Prescription_Data implements java.io.Serializable {
     java.lang.String drug_name,
     float daily_dose,
     java.lang.String daily_dose_unit,
-    float medication_possession_ratio,
+    int medication_possession_ratio,
     java.lang.String present_release_time,
     java.lang.String start_time,
     java.lang.String stop_time,

@@ -151,14 +151,14 @@ public class Medication extends EPR_Entity {
 		return ((String) ModelUtilities.getOwnSlotValue(this, "status"));
 	}
 	
-	public void setMedicationPossessionRatio(float MPR) {
-		ModelUtilities.setOwnSlotValue(this, "medication_possession_ratio", new Float(MPR));
+	public void setMedicationPossessionRatio(int MPR) {
+		ModelUtilities.setOwnSlotValue(this, "medication_possession_ratio", new Integer(MPR));
 		pcs.firePropertyChange("medication_possession_ratio", ModelUtilities.getOwnSlotValue(this, "medication_possession_ratio"), new Float(MPR));
 	}
-	public float getMedicationPossessionRatio() {
+	public int getMedicationPossessionRatio() {
 	    if (ModelUtilities.getOwnSlotValue(this, "medication_possession_ratio") != null)
-			  return ((Float) ModelUtilities.getOwnSlotValue(this, "medication_possession_ratio")).floatValue();
-	    else return (float)0.0;
+			  return ((Integer) ModelUtilities.getOwnSlotValue(this, "medication_possession_ratio")).intValue();
+	    else return (int)0;
 		}
 
 	public void setPRT(Instance PRT) {
@@ -189,7 +189,7 @@ public class Medication extends EPR_Entity {
 			String prescription_id,
 			String route,
 			String status,
-			Instance valid_time, float MPR, Instance PRT) {
+			Instance valid_time, int MPR, Instance PRT) {
 		setDaily_dose(daily_dose);
 		setDaily_dose_unit(daily_dose_unit);
 		setDrug_name(drug_name);

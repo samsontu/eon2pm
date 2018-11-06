@@ -210,7 +210,7 @@ public class TETableModel extends DefaultTableModel {
 				}
 			} else if (cur_pcaDataType.equals(PCA_MPR)){
 				//data has the form f1=drugname, f2= numeric mpr, d1=present release date
-				ptData.prescription(PCAInterface.mprPrescription(f1, Float.valueOf(f2), d1));
+				ptData.prescription(PCAInterface.mprPrescription(f1, Integer.parseInt(f2.trim()), d1));
 			} else {	
 				throw new RuntimeException("Unknown data type requested");
 			}

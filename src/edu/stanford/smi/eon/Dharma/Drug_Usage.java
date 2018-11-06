@@ -496,7 +496,7 @@ public class Drug_Usage extends Activity_Specification {
 		addedMed.setSlotsValues( (float)0.0,"",
 				getDrug_Class_NameValue().getName(), 0, "",
 				getKnowledgeBase().getCls(medMood),
-				dataHandler.getCaseID(), "", "", Constants.active,   null, (float)0.0, null);
+				dataHandler.getCaseID(), "", "", Constants.active,   null, (int)0, null);
 
 
 	}
@@ -750,7 +750,7 @@ public class Drug_Usage extends Activity_Specification {
 			deletedMed.setSlotsValues(
 					0, "", delEval.name,
 					0, "",interpreter.getKBmanager().getKB().getCls("Recommend_Delete"),
-					interpreter.getDBmanager().getCaseID(), "", "", Constants.active, null, (float)0.0, null );
+					interpreter.getDBmanager().getCaseID(), "", "", Constants.active, null, (int)0, null );
 		}
 		if (addEvals.size()> 0) return  addEvals;
 		else return null;

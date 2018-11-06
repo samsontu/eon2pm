@@ -504,7 +504,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						addedMed.setSlotsValues((float)0.0, "",
 								currentActivity, 0, "",
 								mood,
-								patient_id, "", "", Constants.active, null, (float)0.0, null );
+								patient_id, "", "", Constants.active, null, (int)0, null );
 					} else {
 						String uncontrollableCondition = "";
 						boolean first = true;

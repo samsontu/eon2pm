@@ -167,7 +167,7 @@ public void doAction (Action_To_Choose action,
 	         addedMed.setSlotsValues(0, "",
 	                    currentActivity, 0, "",
 	                    getRecommendationMood(),
-	                    patient_id, "", "", Constants.active, null, (float)0.0, null );
+	                    patient_id, "", "", Constants.active, null, (int)0, null );
 	         
 	         choiceEvaluation.change_attribute_eval(changeEval);
 	         changeEvaluations.add(choiceEvaluation);
