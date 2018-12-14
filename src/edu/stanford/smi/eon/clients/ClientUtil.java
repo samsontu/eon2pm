@@ -618,7 +618,7 @@ public  class ClientUtil {
 		}
 
 		if (evaluation.prior_use.value() == Truth_Value._true.value()) {
-			itsWriter.println("<li>Already being used");
+			itsWriter.println("<li>Drug of same class already being used");
 			hasComment = true;
 		}
 		itsWriter.println("<li>preference: "+printPreferenceValue(evaluation.preference));
