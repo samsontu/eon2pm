@@ -106,4 +106,8 @@ public class Definite_Time_Point extends Absolute_Time_Point {
 	return result;
 	
  }
+ 
+ public String toString() {
+	 return this.getBrowserText();
+ }
 }
