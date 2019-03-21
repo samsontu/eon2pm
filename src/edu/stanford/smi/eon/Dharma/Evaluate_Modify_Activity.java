@@ -418,6 +418,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 					"Drug_Usage", filter, interpreter);
 			Drug_Usage drugUsage = getDrugUsage( currentActivity,  superActivitySpec, interpreter);
 			// Do not add "blocked" collateral actions from drug usage
+			if (!(drugUsage == drugSpec))
 			messages.addAll(drugUsage.evaluateCollateralActions(interpreter,
 					drugUsage.getCollateralActionsByType(getRecommendationMood(Preference.preferred).getName())));
 			return (Action_Spec_Record[])messages.toArray(new Action_Spec_Record[0]);
