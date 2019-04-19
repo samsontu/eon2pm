@@ -350,7 +350,6 @@ public class RegressionBatchClient {
 			e.printStackTrace();
 			System.exit(0);
 		}
-		
 		for (PatientDataStore p: (GlobalVars.pds)) {
 			String patientId = p.getName();
 			String advioryHTML = null;
@@ -363,6 +362,7 @@ public class RegressionBatchClient {
 							" dose: "+med.getOwnSlotValue(GlobalVars.kb.getSlot("daily_dose")));
 				}
 				pcaSession.resetAdvisories();
+				System.out.println("****** Frame count: *****" + GlobalVars.kb.getFrameCount());
 				pcaSession.setCase(patientId, GlobalVars.sessionTime);
 				for (Instance med : GlobalVars.kb.getCls("Medication").getInstances()) {
 					logger.debug("After reset advisory and set case med: "+med.getOwnSlotValue(GlobalVars.kb.getSlot("drug_name"))+ 
@@ -380,8 +380,8 @@ public class RegressionBatchClient {
 				for (Advisory advisory: advisories)
 					advioryHTML = advioryHTML+pcaSession.printAdvisory(advisory, IEON.HTML)+"<br><br>";
 				caseData = pcaSession.printData();
-				String htmlOutput = generateOutput(patientId, caseData, dssOutput, GlobalVars.kb, advioryHTML);			
-				concatenatedResult = concatenatedResult + htmlOutput;
+				String htmlOutput = generateOutput(patientId, caseData, dssOutput, GlobalVars.kb, advioryHTML);	
+				concatenatedResult = concatenatedResult + htmlOutput ;
 				String fileName = makeFileNameStem(patientId);
 				writeToFile(GlobalVars.outputdir, fileName+"-new", htmlOutput, patientId);
 				String archiveDirName = GlobalVars.archivedir+GlobalVars.DirDelimiter+ 

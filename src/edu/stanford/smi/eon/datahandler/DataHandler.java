@@ -177,6 +177,7 @@ public class DataHandler {
 			logger.debug("After clearRuntimeInstance med: "+med.getOwnSlotValue(kbmanager.getKB().getSlot("drug_name"))+ 
 					" dose: "+med.getOwnSlotValue(kbmanager.getKB().getSlot("daily_dose")));
 		}
+		System.out.println("****** Frame count in datamanager.changeCase; after clearRuntimeInstances: *****" + GlobalVars.kb.getFrameCount());
 		setCaseSelector(case_id);
 		cacheQualitativeData(DharmaPaddaConstants.SessionTime, sessionTime, sessionTime);
 		/*Note_Entry sessionNote = (Note_Entry)createInstance(DharmaPaddaConstants.Qualitative_Observation);
