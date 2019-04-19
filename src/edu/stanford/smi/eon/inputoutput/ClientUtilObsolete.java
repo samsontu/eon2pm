@@ -470,7 +470,7 @@ public  class ClientUtilObsolete {
 		// "(based on "+evaluation.guideline_id.entity_id+")");
 		content += "<ul>";
 		if (evaluation.prior_use.value() == Truth_Value._true.value()) {
-			content += "<li>Already being used";
+			content += "<li>Drug of same class already being used";
 			hasComment = true;
 		}
 		evalComment= mkStringMatchedDataList(

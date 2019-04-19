@@ -295,6 +295,14 @@ public class Drug_Usage extends Activity_Specification {
 					getDo_Not_Intensify_ConditionsValue(), currentProblems);
 			evaluation.side_effects = matchAllAdverseEvents(interpreter);
 			evaluation.current_use = interpreter.matchData("",thisDrugClass, currentMeds);
+			// 1. check to see if should prescribed at most one condition is true
+			// 2. if yes, find most general class for which the condition is true
+			// 3. check to see if there is already a prescribed med of this class
+			if (evaluation.current_use.isEmpty()) {
+				Object atMostOneObj = getDrug_Class_NameValue().getTemplateSlotValue(kb.getKB().getSlot("should_prescribe_at_most_one"));
+				boolean atMostOne = (atMostOneObj != null) ? true : false;
+				if (atMostOne) evaluation.current_use = existingMedOfTheSameClass(interpreter, getDrug_Class_NameValue(), currentMeds);
+			}
 			interpreter.putEvaluation(this, evaluation);
 			logger.debug("Drug_Usage evaluate: "+this.getDrug_Class_NameValue()+
 					" completed evaluation");
@@ -772,6 +780,19 @@ public class Drug_Usage extends Activity_Specification {
 			}
 		}
 		return notOK;
+	}
+	
+	private Collection existingMedOfTheSameClass(GuidelineInterpreter interpreter, Cls drugClass, Collection currentMeds) {
+		//find most general class for which the condition is true
+		//check to see if there is already a prescribed med of this classCollection medsInUse = null;
+		Collection medsInUse;
+		Collection<Cls> supers = drugClass.getSuperclasses();
+		Collection<Cls> supersInSameClass = new ArrayList<Cls>();
+		for (Cls superCls : supers) {
+			if (superCls.getTemplateSlotValue(interpreter.getKBmanager().getKB().getSlot("should_prescribe_at_most_one")) != null)
+				supersInSameClass.add(superCls);
+		}
+		return  interpreter.matchData("",supersInSameClass, currentMeds);
 	}
 
 

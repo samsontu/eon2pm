@@ -154,8 +154,9 @@ public class Structured_Query extends Expression {
 				singleton.add(value);
 				((Set_Expression)attributeValue).setset_elementsValue(singleton);
 			}
-		}
-		logger.debug("Structured_Query.getAttributeValue attributeValue = "+attributeValue.toString());
+			logger.debug("Structured_Query.getAttributeValue attributeValue = "+attributeValue.toString());
+		} else logger.error("No attribute value for "+instance.getBrowserText()+ " attribute "+slot.getBrowserText());
+		
 		return attributeValue;
 	}
 
