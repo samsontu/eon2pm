@@ -99,17 +99,17 @@ public class RegressionBatchClient {
 
 	static Logger logger = Logger.getLogger(RegressionBatchClient.class);
 
-	public static void initialize(String initFile) {
+	public static void initialize(String initFile, String kbURLString) {
 		// Get Init File from environment
 		GlobalVars.initFile = initFile;
 		System.out.println("Initializing RegressionBatchClient");
-		loadInitFile();
+		loadInitFile(kbURLString);
 		loadPatientData();
 		GlobalVars.standAlone = true;
 
 	}
 
-	public static void loadInitFile() {
+	public static void loadInitFile(String kbURLString) {
 		System.out.println("Initfile: " + GlobalVars.initFile);
 		// Load init file
 		GlobalVars.settings = new Properties();
@@ -147,7 +147,7 @@ public class RegressionBatchClient {
 			GlobalVars.cumulateDose=cumulateDoseStr.equals("TRUE");
 		try {
 			GlobalVars.XMLDataFile = getPath(p.getProperty("XMLDATAFILE", ""));
-			GlobalVars.kbURL = getPath(p.getProperty("KBPATH", ""));
+			GlobalVars.kbURL = getPath(p.getProperty("KBPATH", kbURLString));
 			GlobalVars.outputdir = getPath(p.getProperty("WORKINGDIR", ""));
 			GlobalVars.archivedir = getPath(p.getProperty("ARCHIVEDIR"));
 		} catch (Exception e) {
@@ -317,17 +317,20 @@ public class RegressionBatchClient {
 
 		String caseData = null;
 		Guideline_Service_Record[] dssOutput = null;
+		String kbURLString = null;
 		PCAServer_i PCAImp =  new PCAServer_i();;
-		if (args.length != 1) {
+		if (args.length < 1) {
 			System.out
-			.println("BatchClient needs initialization as argument");
+			.println("BatchClient needs at an initialization file as argument");
 			return;
 		}
 
 		// Set everything up
 
 		GlobalVars.initFile = new String(args[0]);
-		initialize(GlobalVars.initFile);
+		if (args.length == 2)
+			kbURLString = new String(args[1]);
+		initialize(GlobalVars.initFile, kbURLString);
 		Collection error_messages = new Vector();
 
 		logger.info("Loading project " + GlobalVars.kbURL);
