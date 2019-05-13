@@ -1,1 +1,1 @@
-BatchGeneric.bat C:\ATHENA_TestEnvironment_Repo ini\BatchDMGlycemicControlDashboard.ini > ..\testresult\BatchDMGlyCntrlDash.log
+BatchGeneric.bat C:\apps\eon2m ini\BatchDMGlycemicControlDashboard.ini > ..\testresult\BatchDMGlyCntrlDash.log
