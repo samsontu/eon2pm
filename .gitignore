@@ -4,6 +4,7 @@ kbs/*
 .project
 bin/*
 logs/*
+jre/*
 protege.properties
 *.class
 *.log
