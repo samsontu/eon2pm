@@ -4,4 +4,7 @@ rem It is required that a testresult directory with "working" and "archive" subd
 
 set EONHOME=[EON Installation Directory]
 set INIFILE=[Ini file to be used]
-BatchGeneric.bat %EONHOME ini\BatchTemplate.ini > ..\testresult\BatchTemplate.log
+set KBPATH=[Absolute Path to KB to be used]
+set LOGFILE=[Log file to record console output]
+
+BatchGeneric.bat %EONHOME %KBPATH% "ini\%INIFILE%" > "..\testresult\%LOGFILE"

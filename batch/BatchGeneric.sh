@@ -1,4 +1,5 @@
 #!/bin/sh
+
 MAXIMUM_MEMORY=-Xmx512M
 OPTIONS=$MAXIMUM_MEMORY
 EONHOME=$1
@@ -17,7 +18,4 @@ GUIDELINEJARS=$PCADIR/eonpm.jar:$PCADIR/AthenaPerformanceMetrics.jar:$LIB/plugin
 TESTJARS=$LIB/jcalendar.jar:$LIB/gov.va.test.opioidtesttool/EONTestingEnvironment.jar:$LIB/gov.va.test.opioidtesttool/test.jar
 CLASSPATH=$PROTEGEJARS:$GUIDELINEJARS:$TESTJARS
 
-$JRE/bin/java $OPTIONS  -Dprotege.dir=$LIB   -cp $CLASSPATH -DEON_HOME=$EONHOME   -DTestEnvironmentINI=$TestEnvironmentINI edu.stanford.smi.protege.Application $GUIDELINEFILE
-
-
-
+$JRE/bin/java $OPTIONS  -Dprotege.dir=$LIB   -cp $CLASSPATH -DEON_HOME=$EONHOME   gov.va.test.opioidtesttool.pca.RegressionBatchClient $TestEnvironmentINI $GUIDELINEFILE
