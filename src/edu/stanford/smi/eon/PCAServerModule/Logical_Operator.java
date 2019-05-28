@@ -58,7 +58,7 @@ public class Logical_Operator implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Logical_Operator from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Logical_Operator from_int(int $value) throws Exception {
     switch($value) {
     case _AND:
       return AND;
@@ -69,7 +69,7 @@ public class Logical_Operator implements java.io.Serializable {
     case _NOT:
       return NOT;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (4 - 1) + "]: " + $value);
+      throw new Exception ("Illegal logical operator; Enum out of range: [0.." + (4 - 1) + "]: " + $value);
     }
   }
 

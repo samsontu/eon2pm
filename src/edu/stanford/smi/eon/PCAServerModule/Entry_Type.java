@@ -52,14 +52,14 @@ public class Entry_Type implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Entry_Type from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Entry_Type from_int(int $value) throws Exception {
     switch($value) {
     case _adverse_event:
       return adverse_event;
     case _problem:
       return problem;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (2 - 1) + "]: " + $value);
+      throw new Exception("Bad parameter: Entry type enum out of range: [0.." + (2 - 1) + "]: " + $value);
     }
   }
   public java.lang.String toString() {

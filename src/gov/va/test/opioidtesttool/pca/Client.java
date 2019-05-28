@@ -193,7 +193,8 @@ public class Client extends Object {
 		try {
 			m_pca.resetAdvisories();
 			m_pca.setCase(ptID, GlobalVars.sessionTime);
-			dssOutput = m_pca.computeAdvisories();
+			//dssOutput = m_pca.computeAdvisories();
+			dssOutput = m_pca.computeAndStoreAdvisories(outputdir);
 			System.out.println(" computeAdvisories completed for patient " + ptID);
 
 			caseData = m_pca.printData();
@@ -225,8 +226,8 @@ public class Client extends Object {
 			m_pca.setCumulativeFlag(GlobalVars.cumulateDose);
 			m_pca.updateData(data);
 			//dssOutput = m_pca.updateAdvisories();
-			// dssOutput = m_pca.computeAndStoreAdvisories(outputdir);
-			dssOutput = m_pca.computeAdvisories();
+			dssOutput = m_pca.computeAndStoreAdvisories(outputdir);
+			//dssOutput = m_pca.computeAdvisories();
 			System.out.println(" updateAdvisories completed for patient " + patient_id);			
 			Collection<Advisory> advisories = AdvisoryFormater.javaTransform(dssOutput, patient_id, null, guidelineName, GlobalVars.sessionTime, null, null, GlobalVars.kb);
 			caseData = m_pca.printData();

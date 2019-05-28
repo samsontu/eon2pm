@@ -53,14 +53,14 @@ public class Data_To_Collect_Type implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static Data_To_Collect_Type from_int(int $value) {
+  public static Data_To_Collect_Type from_int(int $value) throws Exception {
     switch($value) {
     case _data_entry:
       return data_entry;
     case _template:
       return template;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
+      throw new Exception("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
     }
   }
 

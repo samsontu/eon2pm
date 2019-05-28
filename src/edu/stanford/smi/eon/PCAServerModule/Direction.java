@@ -52,14 +52,14 @@ public class Direction implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Direction from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Direction from_int(int $value) throws Exception {
     switch($value) {
     case _up:
       return up;
     case _down:
       return down;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (2 - 1) + "]: " + $value);
+      throw new Exception("Change attribute direction Enum out of range: [0.." + (2 - 1) + "]: " + $value);
     }
   }
   

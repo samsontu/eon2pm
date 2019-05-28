@@ -61,7 +61,7 @@ public class Patient_Data_Type implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type from_int(int $value) throws Exception {
     switch($value) {
     case _numeric_data:
       return numeric_data;
@@ -76,7 +76,7 @@ public class Patient_Data_Type implements java.io.Serializable {
       case _encounter:
         return encounter;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
+      throw new Exception("Illegal datatype; Enum out of range: [0.." + (3 - 1) + "]: " + $value);
     }
   }
 

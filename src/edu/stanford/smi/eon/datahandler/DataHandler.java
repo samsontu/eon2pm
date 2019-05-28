@@ -315,16 +315,19 @@ public class DataHandler {
 /*	When the client program sends prescriptions to the execution engine, it passes in 
  * as arguments a drug name, a “dailyDose”, a “startTime”, a “stopTime”, a “cumulative” 
  * boolean flag and an “assessedStatus” (ignoring MPR for the moment). 
+ * The "assessedStatus" can be "active" or "hold". For now we'll  treat "hold" in the 
+ * same way as "active" although the Medication record should have "hold" in the status
+ * field.
 
 	If there is an active duplicate med 
-	(i.e., same drug name and (assessedStatus = ‘active’ or stopTime is after session time))
+	(i.e., same drug name and (assessedStatus = ‘active’ or 'hold' or stopTime is after session time))
 	     Add “DuplicateDrug” note entry with domain_term = drug_name that’s duplicated
 	     If the “cumulative” flag is true add the new dose to the existing dose
 	     If the the “cumulative” flag is false
 	               If either (existing or new) prescription has no start time, ignore it 
 	               else use the prescription that’s “more current” (i.e., has later start time)
 	
-	If the new med is not “active”, a new Protege med instance is created but 
+	If the new med is not “active” or "hold", a new Protege med instance is created but 
 	it’s not added to the index of “active” meds. There is no checking of whether 
 	there is already an Protege med instance whose time overlaps with the new one.
 
@@ -349,16 +352,24 @@ public class DataHandler {
 		// Case: no previous active med
 		if (existingMed == null) {
 			addProtegeInstance = true;
-			if ((status.equals(Constants.active)) || timeAfterSessionTime(stopTime)) {
+			indexNewPrescription = true;
+			if (!(status.equals(Constants.active)) && !(status.equals(Constants.hold))) {
+				logger.info("Status parameter ('"+ status+ "') of "+med+ " not 'active' or 'hold', assume to be active");
 				status = Constants.active;
-				indexNewPrescription = true;
-			} 
+			}
 		} else {
-			// Case: previous active med
-			if ((status.equals(Constants.active)) || timeAfterSessionTime(stopTime)) {
+			// Case: previous active or hold med
+			if ((status.equals(Constants.active)) || (status.equals(Constants.hold)) || timeAfterSessionTime(stopTime)) {
 				if (dailyDose == 0.0) {
-					if (MPR != 0.0) existingMed.setMedicationPossessionRatio(MPR);
-					if (PRTime != null) existingMed.setPRT(PRTime);	
+					if (MPR != 0) {
+						existingMed.setMedicationPossessionRatio(MPR);
+						logger.info("Daily dose of duplicate drug "+med+" is 0.0. Protege testing environment use MPR "+MPR+ " as value");
+						if (PRTime != null) existingMed.setPRT(PRTime);	
+					}
+					if ((status != null) && !(status == "")) {
+						logger.info("Status of "+med+ " reset to '"+status);
+						existingMed.setStatus(status);
+					}
 					return;
 				} else {
 					// Generate note entry if there is  no previous duplicate_drug note entry
@@ -372,18 +383,19 @@ public class DataHandler {
 						note = (Note_Entry) createInstance("Note_Entry");
 						note.setSlotsValues(Constants.DuplicateDrug, patient_id, null, med);	
 					}
-					status = Constants.active;
 					if (cumulative) { // Case: cumulative flag set, add doses
 						existingMed.setDaily_dose( existingMed.getDaily_dose() + dailyDose);
 						if (MPR != 0) existingMed.setMedicationPossessionRatio(MPR);
 						if (PRTime != null) existingMed.setPRT(PRTime);
+						if (status.equals(Constants.hold)) existingMed.setStatus(status);
 						return;
 					} else  {
 						//Find the prescription with earlier start time
 						if ((startTime == null) || (startTime.equals(""))) {
-							logger.warn("Null or empty start time in second duplicate prescription for "+med);
-							indexNewPrescription = false;
-							addProtegeInstance = false;
+							logger.warn("Cumulative flag=false, but null or empty start time in second duplicate prescription for "+med+". Second prescription ignored");
+							//indexNewPrescription = false;
+							//addProtegeInstance = false;
+							return;
 						} else {
 							Definite_Time_Interval firstValidInterval = ((Definite_Time_Interval)existingMed.getValid_time());
 							if (firstValidInterval != null) {
@@ -394,9 +406,11 @@ public class DataHandler {
 									addProtegeInstance = false;
 								else
 									addProtegeInstance = true;
-							} else { //use new prescription
+							} else { //Existing prescription's valid time is null; use new prescription
+								logger.warn("Cumulative flag=false, but first prescripiton for "+med+" has no start time. Use second prescription");
 								addProtegeInstance = true;
 								indexNewPrescription = true;
+								if (status.equals(Constants.hold)) existingMed.setStatus(status);
 							}
 						}
 					}
@@ -415,7 +429,7 @@ public class DataHandler {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			if ((status.equals(Constants.active)) || timeAfterSessionTime(stopTime)) {
+			if ((status.equals(Constants.active)) || (status.equals(Constants.hold)) || timeAfterSessionTime(stopTime)) {
 				if (existingMed != null)
 					existingMed.setSlotsValues(dailyDose, "", med, 0, "", null,
 							patient_id, "", "", status, interval, MPR, PRTime);
@@ -459,6 +473,7 @@ public class DataHandler {
 		switch (operation.value()) {
 		case Data_Operation_Type._modify:
 			cachePrescription(drugName, dailyDose, startTime, stopTime, cumulative, sig, MPR, PRT);
+			break;
 		case Data_Operation_Type._add:
 			cachePrescription(drugName, dailyDose, startTime, stopTime, cumulative, sig, MPR, PRT);
 			break;

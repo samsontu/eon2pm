@@ -58,7 +58,7 @@ public class Evaluation_Type implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Evaluation_Type from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Evaluation_Type from_int(int $value) throws Exception {
     switch($value) {
     case _add:
       return add;
@@ -69,7 +69,7 @@ public class Evaluation_Type implements java.io.Serializable {
     case _substitute:
       return substitute;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (4 - 1) + "]: " + $value);
+      throw new Exception("Illegal action type: Enum out of range: [0.." + (4 - 1) + "]: " + $value);
     }
   }
   public java.lang.String toString() {

@@ -40,7 +40,7 @@ import java.util.*;
 import java.io.*;
 
 import org.apache.log4j.*;
-import org.omg.CORBA.SystemException;
+
 
 
 public class PCAServer extends Frame{

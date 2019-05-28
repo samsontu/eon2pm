@@ -9,7 +9,6 @@ LIB=$EONHOME/lib
 
 JRE=$JAVA_HOME
 PCADIR=$LIB/plugins/edu.stanford.smi.eon.pca
-
 PATH=$PATH:JRE/bin
 
 
@@ -19,3 +18,4 @@ TESTJARS=$LIB/jcalendar.jar:$LIB/gov.va.test.opioidtesttool/EONTestingEnvironmen
 CLASSPATH=$PROTEGEJARS:$GUIDELINEJARS:$TESTJARS
 
 $JRE/bin/java $OPTIONS  -Dprotege.dir=$LIB   -cp $CLASSPATH -DEON_HOME=$EONHOME   gov.va.test.opioidtesttool.pca.RegressionBatchClient $TestEnvironmentINI $GUIDELINEFILE
+

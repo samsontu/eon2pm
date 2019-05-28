@@ -1204,111 +1204,126 @@ public class PCASession_Imp {
 			Patient_Data dataElement = data[i];
 			switch (dataElement.discriminator().value()) {
 			case Patient_Data_Type._numeric_data:
-				logger.debug("in updateData - Numeric Data: operation "
-						+ dataElement.numeric().operation + " domain term:"
-						+ dataElement.numeric().domain_term + "; value: "
-						+ dataElement.numeric().value + "; unit: "
-						+ dataElement.numeric().unit + "; time: "
-						+ dataElement.numeric().valid_time);
-				if ((dataElement.numeric().valid_time != null) && !dataElement.numeric().valid_time.equals("")) {
-					try {
-						int numericTime = (int) (HelperFunctions.Day2Int2(dataElement.numeric().valid_time));
-						if (numericTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
-							dataManager.updateNumericData(dataElement.numeric().operation,
-									dataElement.numeric().domain_term.trim(),
-									dataElement.numeric().unit,
-									dataElement.numeric().valid_time,
-									dataElement.numeric().value);
-						} else
-							logger.info(dataElement.numeric().domain_term + "'s valid time is after session time");
-					} catch (ParseException e) {
-						logger.error("Either session time "+this.session_time()+ " or "+ dataElement.numeric().domain_term+" time "+dataElement.numeric().valid_time +
-								" is not valid");
-					}
-				} else {
-					logger.info(dataElement.numeric().domain_term  + " has null or empty valid time");
-				}
-				break;
-			case Patient_Data_Type._prescription_data:
-				if (dataElement.prescription() != null) {
-					logger.debug("in updateData -Prescription Data: drug_name:"
-							+ dataElement.prescription().drug_name + "; dose: "
-							+ dataElement.prescription().daily_dose
-							+ "; unit: "
-							+ dataElement.prescription().daily_dose_unit
-							+ "; start time: "
-							+ dataElement.prescription().start_time  
-							+ "; stop time: "
-							+ dataElement.prescription().stop_time+ "; sig: "
-							+ dataElement.prescription().sig);
-					if ((dataElement.prescription().start_time != null) && !dataElement.prescription().start_time.equals("")) {
+				try {
+					logger.debug("in updateData - Numeric Data: operation "
+							+ dataElement.numeric().operation + " domain term:"
+							+ dataElement.numeric().domain_term + "; value: "
+							+ dataElement.numeric().value + "; unit: "
+							+ dataElement.numeric().unit + "; time: "
+							+ dataElement.numeric().valid_time);
+					if ((dataElement.numeric().valid_time != null) && !dataElement.numeric().valid_time.equals("")) {
 						try {
-							int prescriptionStartTime = (int) (HelperFunctions.Day2Int2(dataElement.prescription().start_time));
-							if (prescriptionStartTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
-								dataManager.updatePrescription(
-										dataElement.prescription().operation,
-										dataElement.prescription().drug_name.trim(),
-										dataElement.prescription().daily_dose,
-										dataElement.prescription().daily_dose_unit,
-										dataElement.prescription().start_time,
-										dataElement.prescription().stop_time,
-										getCumulativeFlag(),
-										dataElement.prescription().sig,
-										dataElement.prescription().medication_possession_ratio,
-										dataElement.prescription().present_release_time);
+							int numericTime = (int) (HelperFunctions.Day2Int2(dataElement.numeric().valid_time));
+							if (numericTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
+								dataManager.updateNumericData(dataElement.numeric().operation,
+										dataElement.numeric().domain_term.trim(),
+										dataElement.numeric().unit,
+										dataElement.numeric().valid_time,
+										dataElement.numeric().value);
 							} else
-								logger.info(dataElement.prescription().drug_name.trim() + "'s start time is after session time");
+								logger.info(dataElement.numeric().domain_term + "'s valid time is after session time");
 						} catch (ParseException e) {
-							logger.error("Either session time "+this.session_time()+ " or "+ dataElement.prescription().drug_name.trim()+" start time "+dataElement.prescription().start_time +
+							logger.error("Either session time "+this.session_time()+ " or "+ dataElement.numeric().domain_term+" time "+dataElement.numeric().valid_time +
 									" is not valid");
 						}
 					} else {
-						dataManager.updatePrescription(
-								dataElement.prescription().operation,
-								dataElement.prescription().drug_name.trim(),
-								dataElement.prescription().daily_dose,
-								dataElement.prescription().daily_dose_unit,
-								dataElement.prescription().start_time,
-								dataElement.prescription().stop_time,
-								getCumulativeFlag(),
-								dataElement.prescription().sig,
-								dataElement.prescription().medication_possession_ratio,
-								dataElement.prescription().present_release_time);
+						logger.info(dataElement.numeric().domain_term  + " has null or empty valid time");
 					}
-				} else
-					logger.warn("in updateData - null prescription");
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				break;
+			case Patient_Data_Type._prescription_data:
+				try {
+					if (dataElement.prescription() != null) {
+						logger.debug("in updateData -Prescription Data: drug_name:"
+								+ dataElement.prescription().drug_name + "; dose: "
+								+ dataElement.prescription().daily_dose
+								+ "; unit: "
+								+ dataElement.prescription().daily_dose_unit
+								+ "; start time: "
+								+ dataElement.prescription().start_time  
+								+ "; stop time: "
+								+ dataElement.prescription().stop_time+ "; sig: "
+								+ dataElement.prescription().sig);
+						if ((dataElement.prescription().start_time != null) && !dataElement.prescription().start_time.equals("")) {
+							try {
+								int prescriptionStartTime = (int) (HelperFunctions.Day2Int2(dataElement.prescription().start_time));
+								if (prescriptionStartTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
+									dataManager.updatePrescription(
+											dataElement.prescription().operation,
+											dataElement.prescription().drug_name.trim(),
+											dataElement.prescription().daily_dose,
+											dataElement.prescription().daily_dose_unit,
+											dataElement.prescription().start_time,
+											dataElement.prescription().stop_time,
+											getCumulativeFlag(),
+											dataElement.prescription().sig,
+											dataElement.prescription().medication_possession_ratio,
+											dataElement.prescription().present_release_time);
+								} else
+									logger.info(dataElement.prescription().drug_name.trim() + "'s start time is after session time");
+							} catch (ParseException e) {
+								logger.error("Either session time "+this.session_time()+ " or "+ dataElement.prescription().drug_name.trim()+" start time "+dataElement.prescription().start_time +
+										" is not valid");
+							}
+						} else {
+							dataManager.updatePrescription(
+									dataElement.prescription().operation,
+									dataElement.prescription().drug_name.trim(),
+									dataElement.prescription().daily_dose,
+									dataElement.prescription().daily_dose_unit,
+									dataElement.prescription().start_time,
+									dataElement.prescription().stop_time,
+									getCumulativeFlag(),
+									dataElement.prescription().sig,
+									dataElement.prescription().medication_possession_ratio,
+									dataElement.prescription().present_release_time);
+						}
+					} else
+						logger.warn("in updateData - null prescription");
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				break;
 			case Patient_Data_Type._note_entry_data:
-				logger.debug("in updateData - Note Etnry Data: operation "
-						+ dataElement.note_data().operation + " entry_type:"
-						+ dataElement.note_data().entry_type + " domain term:"
-						+ dataElement.note_data().domain_term + "; value: "
-						+ dataElement.note_data().value);
-				if ((dataElement.note_data().valid_time != null) && !dataElement.note_data().valid_time.equals("")) {
-					int noteTime = (int) (HelperFunctions.DateTime2Int(dataElement.note_data().valid_time)/(60 * 24));
-					try {
-						if (noteTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
-							dataManager.updateNoteEntry(dataElement.note_data().operation,
-									dataElement.note_data().entry_type,
-									dataElement.note_data().domain_term.trim(),
-									dataElement.note_data().value,
-									dataElement.note_data().valid_time);
-						} else
-							logger.info(dataElement.note_data().domain_term + "'s valid time is after session time");
-					} catch (ParseException e) {
-						logger.error("Either session time "+this.session_time()+ " or "+ dataElement.note_data().domain_term+" time "+dataElement.note_data().valid_time +
-								" is not valid");
+				try {
+					logger.debug("in updateData - Note Etnry Data: operation "
+							+ dataElement.note_data().operation + " entry_type:"
+							+ dataElement.note_data().entry_type + " domain term:"
+							+ dataElement.note_data().domain_term + "; value: "
+							+ dataElement.note_data().value);
+					if ((dataElement.note_data().valid_time != null) && !dataElement.note_data().valid_time.equals("")) {
+						int noteTime = (int) (HelperFunctions.DateTime2Int(dataElement.note_data().valid_time)/(60 * 24));
+						try {
+							if (noteTime <= ((int) HelperFunctions.Day2Int2(this.session_time))) {
+								dataManager.updateNoteEntry(dataElement.note_data().operation,
+										dataElement.note_data().entry_type,
+										dataElement.note_data().domain_term.trim(),
+										dataElement.note_data().value,
+										dataElement.note_data().valid_time);
+							} else
+								logger.info(dataElement.note_data().domain_term + "'s valid time is after session time");
+						} catch (ParseException e) {
+							logger.error("Either session time "+this.session_time()+ " or "+ dataElement.note_data().domain_term+" time "+dataElement.note_data().valid_time +
+									" is not valid");
+						}
+					} else {
+						if ((!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Sex) && 
+								!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Race)))
+								logger.info(dataElement.note_data().domain_term  + " has null or empty valid time");
+						//Sex and Race has no valid time
+						dataManager.updateNoteEntry(dataElement.note_data().operation,
+								dataElement.note_data().entry_type,
+								dataElement.note_data().domain_term.trim(),
+								dataElement.note_data().value,
+								null);
 					}
-				} else {
-					if ((!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Sex) && 
-							!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Race)))
-							logger.info(dataElement.note_data().domain_term  + " has null or empty valid time");
-					//Sex and Race has no valid time
-					dataManager.updateNoteEntry(dataElement.note_data().operation,
-							dataElement.note_data().entry_type,
-							dataElement.note_data().domain_term.trim(),
-							dataElement.note_data().value,
-							null);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 
 				break;
@@ -1974,7 +1989,7 @@ public class PCASession_Imp {
 								((aMed.getPRT() !=null) ? ", "+ ((Definite_Time_Point)aMed.getPRT()).getlabelValue() : "") + "}";
 					}
 				}
-				itsWriter.print(aMed.getDrug_name() + "("
+				itsWriter.print(aMed.getDrug_name() + "(" +aMed.getStatus()+", "
 						+ aMed.getDaily_dose() + timeString + mprString+ ") ");
 			}
 		}

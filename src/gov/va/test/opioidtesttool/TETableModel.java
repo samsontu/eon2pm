@@ -36,6 +36,7 @@ public class TETableModel extends DefaultTableModel {
 	public final static String PCA_NOTE = "NOTE";
 	public final static String PCA_NOTE_OR_NUMERIC = "NOTE_OR_NUMERIC";
 	public final static String PCA_MPR = "MPR";
+	public final static String PCA_STATUS = "STATUS";
 	private int numFields;
 	private boolean require2ndField;
 	private int numDates;
@@ -211,6 +212,9 @@ public class TETableModel extends DefaultTableModel {
 			} else if (cur_pcaDataType.equals(PCA_MPR)){
 				//data has the form f1=drugname, f2= numeric mpr, d1=present release date
 				ptData.prescription(PCAInterface.mprPrescription(f1, Integer.parseInt(f2.trim()), d1));
+			} else if (cur_pcaDataType.equals(PCA_STATUS)){
+				//data has the form f1=drugname, f2= status, d1= a date (ignored)
+				ptData.prescription(PCAInterface.statusPrescription(f1, f2, d1));
 			} else {	
 				throw new RuntimeException("Unknown data type requested");
 			}
@@ -322,7 +326,6 @@ public class TETableModel extends DefaultTableModel {
 					f = inl.item(0);
 					f = f.getFirstChild();
 					if (f != null) {
-						//System.err.println(f.getNodeValue());
 						start = sdf.parse(f.getNodeValue());
 					}
 				}
