@@ -2,9 +2,10 @@ Setlocal
 set MAXIMUM_MEMORY=-Xmx1256M
 set OPTIONS=%MAXIMUM_MEMORY%
 set EONHOME=%1
+set KB=%2
 
 set LIB=%EONHOME%\lib
-set TestEnvironmentINI=%EONHOME%\%2
+set TestEnvironmentINI=%EONHOME%\%3
 
 
 set JRE=%EONHOME%\jre
@@ -18,6 +19,6 @@ set GUIDELINEJARS=%PCADIR%\eonpm.jar;%PCADIR%\AthenaPerformanceMetrics.jar;%PCAD
 set TESTJARS=%LIB%\jcalendar.jar;%LIB%\gov.va.test.opioidtesttool\EONTestingEnvironment.jar;%LIB%\gov.va.test.opioidtesttool\test.jar
 set CLASSPATH="%PROTEGEJARS%;%GUIDELINEJARS%;%TESTJARS%"
 
-%JRE%\bin\java %OPTIONS%  -Dprotege.dir="%LIB%"   -cp %CLASSPATH%  -DEON_HOME="%EONHOME%" gov.va.test.opioidtesttool.pca.RegressionBatchClient "%TestEnvironmentINI%" 
+%JRE%\bin\java %OPTIONS%  -Dprotege.dir="%LIB%"   -cp %CLASSPATH%  -DEON_HOME="%EONHOME%" gov.va.test.opioidtesttool.pca.RegressionBatchClient "%TestEnvironmentINI%" "%KB%"
 
 
