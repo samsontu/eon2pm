@@ -57,7 +57,7 @@ public class Preference implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Preference from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Preference from_int(int $value) throws Exception {
     switch($value) {
     case _preferred:
       return preferred;
@@ -68,7 +68,7 @@ public class Preference implements java.io.Serializable {
     case _blocked:
         return blocked;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 ) + "]: " + $value);
+      throw new Exception("Bad parameter for Preference"+"Enum out of range: [0.." + (3 ) + "]: " + $value);
     }
   }
 

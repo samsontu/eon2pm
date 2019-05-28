@@ -55,7 +55,7 @@ public class Truth_Value implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Truth_Value from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Truth_Value from_int(int $value) throws Exception {
     switch($value) {
     case __true:
       return _true;
@@ -64,7 +64,7 @@ public class Truth_Value implements java.io.Serializable {
     case _unknown:
       return unknown;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
+		throw new Exception("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
     }
   }
   public java.lang.String toString() {

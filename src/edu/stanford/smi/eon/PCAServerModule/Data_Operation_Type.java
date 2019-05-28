@@ -55,7 +55,7 @@ public class Data_Operation_Type implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Data_Operation_Type from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Data_Operation_Type from_int(int $value) throws Exception {
     switch($value) {
     case _add:
       return add;
@@ -64,7 +64,7 @@ public class Data_Operation_Type implements java.io.Serializable {
     case _delete:
       return delete;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
+      throw new Exception("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
     }
   }
 }

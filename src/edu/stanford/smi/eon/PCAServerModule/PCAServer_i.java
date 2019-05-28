@@ -54,9 +54,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.*;
 
-import org.omg.CORBA.*;
-import org.omg.CORBA.SystemException;
-
 public class PCAServer_i { 
 	public KBHandler kbManager;
 	public String kbURLString;

@@ -21,6 +21,7 @@
  *
  */
 package edu.stanford.smi.eon.PCAServerModule;
+import org.apache.log4j.*;
 /**
 <p>
 <ul>
@@ -41,6 +42,7 @@ package edu.stanford.smi.eon.PCAServerModule;
 </p>
 */
 public class Compliance_Level implements java.io.Serializable {
+  static Logger logger = Logger.getLogger(Compliance_Level.class);
   final public static int _strict = 0;
   final public static int _permissive = 1;
   final public static edu.stanford.smi.eon.PCAServerModule.Compliance_Level strict = new edu.stanford.smi.eon.PCAServerModule.Compliance_Level(_strict);
@@ -59,7 +61,10 @@ public class Compliance_Level implements java.io.Serializable {
     case _permissive:
       return permissive;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (2 - 1) + "]: " + $value);
+    	//Compliance level is no longer used. The execution engine always operates in strict mode
+    	logger.error("Bad parameter: Enum out of range: [0.." + (2 - 1) + "]: " + $value);
+    	return strict;
+      //throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (2 - 1) + "]: " + $value);
     }
   }
   public java.lang.String toString() {

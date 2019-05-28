@@ -58,7 +58,7 @@ public class Goal_State implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.Goal_State from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.Goal_State from_int(int $value) throws Exception {
     switch($value) {
     case _achieved:
       return achieved;
@@ -69,7 +69,7 @@ public class Goal_State implements java.io.Serializable {
     case _unknown:
       return unknown;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (4 - 1) + "]: " + $value);
+      throw new Exception("Illegal goal state; Enum out of range: [0.." + (4 - 1) + "]: " + $value);
     }
   }
   public java.lang.String toString() {

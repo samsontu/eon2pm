@@ -52,30 +52,30 @@ final public class Patient_Data implements java.io.Serializable {
   public edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type discriminator() {
     return _disc;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Numeric_Data numeric() {
+  public edu.stanford.smi.eon.PCAServerModule.Numeric_Data numeric() throws Exception {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type.numeric_data.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("numeric");
+      throw new Exception("Bad operation "+"numeric");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Numeric_Data) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Prescription_Data prescription() {
+  public edu.stanford.smi.eon.PCAServerModule.Prescription_Data prescription() throws Exception {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type.prescription_data.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("prescription");
+      throw new Exception("Bad operation "+"prescription");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Prescription_Data) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Note_Entry_Data note_data() {
+  public edu.stanford.smi.eon.PCAServerModule.Note_Entry_Data note_data() throws Exception {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Patient_Data_Type.note_entry_data.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("note_data");
+      throw new Exception("Bad operation "+"note_data");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Note_Entry_Data) _object;
   }

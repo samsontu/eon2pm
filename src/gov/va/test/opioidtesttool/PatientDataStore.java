@@ -34,10 +34,11 @@ public class PatientDataStore {
 	public TETableModel demoGraphicsData = null;
 	public TETableModel cptData = null;
 	public TETableModel mprData = null;
+	public TETableModel statusData = null;
 
 	// this just stores all TETableModels, makes it easier
 	// to loop through all TETableModels
-	private final static String KEYS[] = { "meds", "dx", "clinicalSigns", "adr", "labs", "demographics", "cpt", "mpr"};
+	private final static String KEYS[] = { "meds", "dx", "clinicalSigns", "adr", "labs", "demographics", "cpt", "mpr", "status"};
 	private Hashtable ht  = null;
 
 	public PatientDataStore(String _name) {
@@ -101,6 +102,10 @@ public class PatientDataStore {
 		String[] mprFieldLabels = {"Drug", "MPR"};
 		mprData = new TETableModel(mprFieldLabels, true, 1, TETableModel.PCA_MPR, null, true);
 		ht.put(KEYS[7], mprData);
+		
+		String[] statusFieldLabels = {"Drug", "Status"};
+		statusData = new TETableModel(statusFieldLabels, false, 1, TETableModel.PCA_STATUS, null, true);
+		ht.put(KEYS[8], statusData);
 	}
 
 

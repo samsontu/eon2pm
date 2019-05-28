@@ -471,14 +471,17 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						if (stopUncontrollableDecreaseDoseConditionCollection != null)
 							stopDecreaseDoseConditionCollection.addAll(stopUncontrollableDecreaseDoseConditionCollection);
 					}
-					if (stopUncontrollableIntensifyConditionCollection == null) {
+					if (noUncontrollableModifyCondition(stopUncontrollableIntensifyConditionCollection, 
+							stopUncontrollableDecreaseDoseConditionCollection)) {
 						Preference preference = null;
 						Cls mood = null;
-						if (stopControllableIntensifyConditionCollection == null) {
+						if (noControllableModify(stopControllableIntensifyConditionCollection, stopControllableDecreaseDoseConditionCollection)) {
 							preference = Preference.preferred;
 						} else {
 							preference = Preference.blocked;
 						}
+						
+						
 						mood = getRecommendationMood(preference);
 						changeEval = new Change_Attribute_Evaluation("",
 								edu.stanford.smi.eon.util.HelperFunctions.getBrowserTextFromString(currentActivity, this.getKnowledgeBase()),
@@ -508,16 +511,18 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 								patient_id, "", "", Constants.active, null, (int)0, null );
 					} else {
 						String uncontrollableCondition = "";
+						Collection<Matched_Data> uncontrollableConditions = (this.direction() == Direction.up) ? stopUncontrollableIntensifyConditionCollection : stopUncontrollableDecreaseDoseConditionCollection;
 						boolean first = true;
-						for (Matched_Data m : stopUncontrollableIntensifyConditionCollection) {
+						for (Matched_Data m : uncontrollableConditions) {
 							if (first) {
 								uncontrollableCondition = uncontrollableCondition+ (m.guideline_term);
 								first = false;
 							} else
 								uncontrollableCondition = uncontrollableCondition+", "+ (m.guideline_term);
 						}
-						logger.warn("Uncontrollable do not intensify condition is not null: "+uncontrollableCondition
-								+". No increase dose recommendation)");
+						String warning = (this.direction()==Direction.up) ? warning = "No increase dose recommendation because of uncontrollable do not intensify condition " :
+							"No decrease dose recommendation because of uncontrollable do not decrease dose condition ";
+						logger.warn(warning +uncontrollableCondition);
 					}
 					break;
 				}
@@ -529,6 +534,26 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		} //for
 		return changeEval;
 	}
+	private boolean noControllableModify(Collection<Matched_Data> stopControllableIntensifyConditionCollection,
+			Collection<Matched_Data> stopControllableDecreaseDoseConditionCollection) throws Exception {
+		System.out.println("testing nocontrollableModify");
+		if (this.direction() == Direction.up)
+			 return (stopControllableIntensifyConditionCollection == null);
+		else if (this.direction() == Direction.down)
+			return (stopControllableDecreaseDoseConditionCollection == null);
+		else throw new Exception("Evaluate_Modify_Activity.direction() does not return up or down");
+	}
+	
+	private boolean noUncontrollableModifyCondition(
+			Collection<Matched_Data> stopUncontrollableIntensifyConditionCollection,
+			Collection<Matched_Data> stopUncontrollableDecreaseDoseConditionCollection) throws Exception {		
+		if (this.direction() == Direction.up)
+			 return (stopUncontrollableIntensifyConditionCollection == null);
+		else if (this.direction() == Direction.down)
+			return (stopUncontrollableDecreaseDoseConditionCollection == null);
+		else throw new Exception("Evaluate_Modify_Activity.direction does not return up or down");
+	}
+	
 	private void checkPartner(ActivityEvaluation activityEval, String currentActivity) {
 		Collection<Matched_Data> badPartners = activityEval.harmful_interactions;
 		Collection<Matched_Data> checkedBadPartners = new ArrayList<Matched_Data>();

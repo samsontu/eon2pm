@@ -26,6 +26,7 @@ public class MainEntryPanel extends JPanel {
     private DEPanel demoGraphicsPanel = null;
     private DEPanel cptPanel = null;
     private DEPanel mprPanel = null;
+    private DEPanel statusPanel = null;
 
     // roots for tree in knowledge base
     public static String[] DRUG_ROOT = {"Medications_Class", "nutritional supplements"};
@@ -43,9 +44,10 @@ public class MainEntryPanel extends JPanel {
 	 * Layout: Row 1: Demographic Panel 
 	 *         Row 2: Clinical Signs & Labs Panel
 	 *         Row 3: Drugs & MPR Panels
-	 *         Row 4: Diagnosis Panel & Adverse reaaction Panel
+	 *         Row 4: Diagnosis Panel & Adverse reaction Panel
+	 *         Row 5: Drug Status Panel
 	 */
-	setLayout(new GridLayout(4,1,5,5));
+	setLayout(new GridLayout(5,1,5,5));
 
 	// Row 1: dmCPTPanel contains both Demographics and CPT code panel	
 	JPanel dmCPTPanel = new JPanel();
@@ -72,7 +74,7 @@ public class MainEntryPanel extends JPanel {
 	JPanel dmPanel = new JPanel();
 	dmPanel.setPreferredSize(new Dimension(700,200));
 	dmPanel.setLayout(new GridLayout(1,2,5,5));
-	medsPanel = new DEPanel("Drugs",pds.medsData,"Medications_Class", DRUG_ROOT);
+	medsPanel = new DEPanel("Drug Dose",pds.medsData,"Medications_Class", DRUG_ROOT);
 	dmPanel.add(medsPanel);
 	mprPanel = new DEPanel("Medication Possesion Ratio",pds.mprData,"Medications_Class", DRUG_ROOT);
 	dmPanel.add(mprPanel);
@@ -89,10 +91,15 @@ public class MainEntryPanel extends JPanel {
 	daPanel.add(adrPanel);
 	add(daPanel);
 	
+	// row 5:statusContainingPanel contains drug status
+	JPanel statusContainingPanel = new JPanel();
+	statusContainingPanel.setPreferredSize(new Dimension(700,200));
+	statusContainingPanel.setLayout(new GridLayout(1,2,5,5));
+	statusPanel = new DEPanel("Medication Status", pds.statusData, "Medications_Class", DRUG_ROOT);
+	//dxPanel.useTreeToSetSecondField();
+	statusContainingPanel.add(statusPanel);
+	add(statusContainingPanel);
 
-	System.err.println("Clinical Signs panel incomplete");
-	System.err.println("ADR panel incomplete");
-	System.err.println("LABS panel incomplete");
 
 	setPreferredSize(new Dimension(700,600));
     }   
@@ -106,5 +113,6 @@ public class MainEntryPanel extends JPanel {
 	demoGraphicsPanel.setCurrentDataModel(p.demoGraphicsData);
 	cptPanel.setCurrentDataModel(p.cptData);	
 	mprPanel.setCurrentDataModel(p.mprData);
+	statusPanel.setCurrentDataModel(p.statusData);
     }
 }

@@ -41,6 +41,7 @@ public final class Constants {
   public final static int fatal = 0;
   public final static String caseID = "patient_id";
   public final static String active = "active";
+  public final static String hold = "hold";
   public final static String inactive = "inactive";
 public static final String DuplicateDrug = "DuplicateDrug";
 

@@ -50,21 +50,21 @@ final public class Data_To_Collect implements java.io.Serializable {
   public edu.stanford.smi.eon.PCAServerModule.Data_To_Collect_Type discriminator() {
     return _disc;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Data_Entry data_entry() {
+  public edu.stanford.smi.eon.PCAServerModule.Data_Entry data_entry() throws Exception {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Data_To_Collect_Type.data_entry.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("data_entry");
+      throw new Exception("Bad operation: data_entry");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Data_Entry) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Data_Entry_Template template() {
+  public edu.stanford.smi.eon.PCAServerModule.Data_Entry_Template template() throws Exception {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Data_To_Collect_Type.template.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("template");
+      throw new Exception("bad operation: template");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Data_Entry_Template) _object;
   }

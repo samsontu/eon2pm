@@ -142,6 +142,19 @@ public class PCAInterface {
     	prescData.sig = "";
     	return prescData;
     }
+    
+    public static Prescription_Data statusPrescription(String name, String status, String statusDate) {
+    	Prescription_Data prescData = new Prescription_Data();
+    	prescData.operation = Data_Operation_Type.modify;
+    	prescData.drug_name = name;
+    	prescData.daily_dose = (float)0.0;
+    	prescData.daily_dose_unit = "";
+    	prescData.medication_possession_ratio = 0;
+    	//prescData.present_release_time = releaseDate;
+    	prescData.start_time = "";
+    	prescData.sig = status;
+    	return prescData;
+    }
 
     public static Note_Entry_Data newNote(String term, String value, Entry_Type e,
     		String first_time, String second_time) {

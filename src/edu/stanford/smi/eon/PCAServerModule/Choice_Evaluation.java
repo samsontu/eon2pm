@@ -21,6 +21,11 @@
  *
  */
 package edu.stanford.smi.eon.PCAServerModule;
+
+import org.apache.log4j.Logger;
+
+import edu.stanford.smi.eon.datahandler.Adverse_Reaction;
+
 /**
 <p>
 <ul>
@@ -47,6 +52,7 @@ package edu.stanford.smi.eon.PCAServerModule;
 </p>
 */
 final public class Choice_Evaluation implements java.io.Serializable {
+	static Logger logger = Logger.getLogger(Choice_Evaluation.class);
   private java.lang.Object _object;
   private edu.stanford.smi.eon.PCAServerModule.Evaluation_Type _disc;
   public Choice_Evaluation() {
@@ -54,39 +60,43 @@ final public class Choice_Evaluation implements java.io.Serializable {
   public edu.stanford.smi.eon.PCAServerModule.Evaluation_Type discriminator() {
     return _disc;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Add_Evaluation add_eval() {
+  public edu.stanford.smi.eon.PCAServerModule.Add_Evaluation add_eval()  {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Evaluation_Type.add.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("add_eval");
+    	logger.error("BAD_OPERATION: add_eval");
+      //throw new org.omg.CORBA.BAD_OPERATION("add_eval");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Add_Evaluation) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Delete_Evaluation delete_eval() {
+  public edu.stanford.smi.eon.PCAServerModule.Delete_Evaluation delete_eval()  {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Evaluation_Type.delete.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("delete_eval");
+    	logger.error("BAD_OPERATION: delete_eval");
+     // throw new org.omg.CORBA.BAD_OPERATION("delete_eval");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Delete_Evaluation) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Substitute_Evaluation substitute_eval() {
+  public edu.stanford.smi.eon.PCAServerModule.Substitute_Evaluation substitute_eval()  {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Evaluation_Type.substitute.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("substitute_eval");
+    	logger.error("BAD_OPERATION: substitute_eval");
+      //throw new org.omg.CORBA.BAD_OPERATION("substitute_eval");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Substitute_Evaluation) _object;
   }
-  public edu.stanford.smi.eon.PCAServerModule.Change_Attribute_Evaluation change_attribute_eval() {
+  public edu.stanford.smi.eon.PCAServerModule.Change_Attribute_Evaluation change_attribute_eval()  {
     if(
       _disc.value() != (int) edu.stanford.smi.eon.PCAServerModule.Evaluation_Type.change_attribute.value() &&
       true
     ) {
-      throw new org.omg.CORBA.BAD_OPERATION("change_attribute_eval");
+    	logger.error("BAD_OPERATION: change_attribute_eval");
+      //throw new org.omg.CORBA.BAD_OPERATION("change_attribute_eval");
     }
     return (edu.stanford.smi.eon.PCAServerModule.Change_Attribute_Evaluation) _object;
   }

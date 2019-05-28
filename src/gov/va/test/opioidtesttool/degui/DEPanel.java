@@ -15,7 +15,6 @@ import edu.stanford.smi.protege.model.*;
 import edu.stanford.smi.protege.model.Project;
 
 import sun.awt.*;
-import sun.awt.windows.*;
 
 
 public class DEPanel extends JPanel {

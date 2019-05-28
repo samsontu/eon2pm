@@ -55,7 +55,7 @@ public class SelectionAlternatives implements java.io.Serializable {
   public int value() {
     return __value;
   }
-  public static edu.stanford.smi.eon.PCAServerModule.SelectionAlternatives from_int(int $value) {
+  public static edu.stanford.smi.eon.PCAServerModule.SelectionAlternatives from_int(int $value) throws Exception {
     switch($value) {
     case _all_of:
       return all_of;
@@ -64,7 +64,7 @@ public class SelectionAlternatives implements java.io.Serializable {
     case _one_of:
       return one_of;
     default:
-      throw new org.omg.CORBA.BAD_PARAM("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
+      throw new Exception("Enum out of range: [0.." + (3 - 1) + "]: " + $value);
     }
   }
 

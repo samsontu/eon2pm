@@ -67,7 +67,7 @@ public class ATHENA_AdvisoryXML {
 		String dataFilePath = settings.getProperty("XMLDataFile", "");
 		String guidelineName  = settings.getProperty("GuidelineName", "");
 		String protegeProjFullPath =  settings.getProperty("KBPath", "");
-		String outputdir = settings.getProperty("OutputDir", "C:/Dropbox/");
+		String outputdir = settings.getProperty("OutputDir", "/Users/tu/workspace/eon2pm/output/");
 		String pid = settings.getProperty("PatientID", "");
 
 		//assume that args[0] is the initFileFullPath, and this contain 
