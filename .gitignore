@@ -7,13 +7,8 @@ jre/*
 protege.properties
 *.class
 *.log
-
-
 *.lck
-
 *.properties
-
 lib/protege.properties
-
 *.properties
 testresult/*
