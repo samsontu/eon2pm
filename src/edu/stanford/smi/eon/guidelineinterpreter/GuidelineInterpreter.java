@@ -758,7 +758,7 @@ public class GuidelineInterpreter implements Serializable, PaddaGEE {
 			String patient_id, String session_time) {
 		Justification support=null;
 		logger.debug("GuidelineInterpreter: EvaluateApplicabilityCriteria: begin");
-		N_ary_Criterion eligibilityCriteria = (N_ary_Criterion)dataManager.createInstance("N_ary_Criterion");
+		N_ary_Criterion eligibilityCriteria = (N_ary_Criterion)dataManager.createRegisteredInstance("N_ary_Criterion");
 		eligibilityCriteria.setcriteriaValue(criteria);
 		eligibilityCriteria.setoperatorValue("AND");
 		eligibilityCriteria.setlabelValue("Eligibility criteria");

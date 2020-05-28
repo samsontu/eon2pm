@@ -87,12 +87,11 @@ public class PAL_Query extends Expression {
 			String caseID= guidelineManager.getDBmanager().getCaseID();
 			constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, case_variableValue,
 					caseID);
-			Instance newInstance = guidelineManager.getDBmanager().createInstance("PAL-QUERY");
+			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance("PAL-QUERY");
 			newInstance.setOwnSlotValue(PALStatement, constraintStatement);
 			newInstance.setOwnSlotValue(PALRange, genericQuery.getOwnSlotValue(PALRange));
 			newInstance.setOwnSlotValue(PALName, genericQuery.getOwnSlotValue(PALName));
 			//logger.debug("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
-			guidelineManager.getDBmanager().registerInstance(newInstance);
 			return newInstance;
 		} else {
 			throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
@@ -165,7 +164,7 @@ public class PAL_Query extends Expression {
 
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager) {
 		java.util.Date startTime = new java.util.Date();
-		Set_Expression set = (Set_Expression)glmanager.getDBmanager().createInstance(
+		Set_Expression set = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 				"Set_Expression");
 		try {
 			Collection result = doQuery(glmanager);

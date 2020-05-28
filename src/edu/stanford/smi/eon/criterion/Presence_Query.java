@@ -195,7 +195,7 @@ public class Presence_Query extends EPR_Query {
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager)
 	throws PCA_Session_Exception {
 		String queryResult = doQuery(glmanager);
-		Qualitative_Constant result = (Qualitative_Constant)glmanager.getDBmanager().createInstance(
+		Qualitative_Constant result = (Qualitative_Constant)glmanager.getDBmanager().createRegisteredInstance(
 		"Qualitative_Constant");
 		result.setvalueValue(queryResult);
 		return result;

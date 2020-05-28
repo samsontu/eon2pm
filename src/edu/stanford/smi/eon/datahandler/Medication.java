@@ -224,7 +224,7 @@ public class Medication extends EPR_Entity {
     logger.debug("Medication.mkInstanceFromStub fromStorage"+ fromStorage.toString());
     if (fromStorage instanceof Medication) return (Medication)fromStorage;
     ProtegeInstanceStub stub = (ProtegeInstanceStub) fromStorage;
-    Medication med = (Medication)dbmanager.createInstance("Medication");
+    Medication med = (Medication)dbmanager.createRegisteredInstance("Medication");
     logger.debug("Medication.mkInstanceFromStub med"+ med.toString());
     Map slotsValues = stub.getSlotValues();
     

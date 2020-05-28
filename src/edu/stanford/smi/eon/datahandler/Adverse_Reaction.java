@@ -114,7 +114,7 @@ public class Adverse_Reaction extends Observation {
     Map slotsValues = stub.getSlotValues();
     Adverse_Reaction react=null;
     if (slotsValues != null) {
-      react = (Adverse_Reaction)dbmanager.createInstance("Adverse_Reaction");
+      react = (Adverse_Reaction)dbmanager.createRegisteredInstance("Adverse_Reaction");
       for (Iterator i=slotsValues.keySet().iterator(); i.hasNext();) {
         String slotName = (String)i.next();
         Object value = slotsValues.get(slotName);
@@ -125,7 +125,7 @@ public class Adverse_Reaction extends Observation {
         else if (slotName.equals("patient_id"))
           react.setPatient_id((String)value);
         else if (slotName.equals("valid_time")) {
-          Definite_Time_Point time = (Definite_Time_Point)dbmanager.createInstance("Definite_Time_Point");
+          Definite_Time_Point time = (Definite_Time_Point)dbmanager.createRegisteredInstance("Definite_Time_Point");
           time.setsystem_timeValue(((Integer)value).intValue());
           react.setValid_time(time);
 

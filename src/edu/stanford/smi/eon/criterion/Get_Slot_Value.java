@@ -72,7 +72,7 @@ public class Get_Slot_Value extends Expression {
     Object value = getinstanceValue().getOwnSlotValue((Slot)getslotValue());
     // value should be a String or a Number
     if (value instanceof String) {
-      Qualitative_Constant qc = (Qualitative_Constant)dbmanager.createInstance("Qualitative_Constant");
+      Qualitative_Constant qc = (Qualitative_Constant)dbmanager.createRegisteredInstance("Qualitative_Constant");
       qc.setvalueValue((String)value);
       return qc;
     } else if (value instanceof Numeric_Constant) {

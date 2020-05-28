@@ -100,21 +100,6 @@ public class Criterion extends Expression {
 		itsWriter.print("(" + getlabelValue() + ")");
 	}
 
-	/* 
-	 public Expression evaluate_expression(GuidelineInterpreter glmanager)
-	 throws PCA_Session_Exception {
-	  Criteria_Evaluation eval = evaluate(glmanager, false);
-	  Qualitative_Constant expr;
-	  if (eval != null) {
-	      expr = (Qualitative_Constant)glmanager.getDBmanager().createInstance("Qualitative_Constant");
-	      expr.setvalueValue(eval.truth_value.toString());
-	      return expr;
-	    } else {
-	      throw new PCA_Session_Exception("Exception: no evaluated result in "+this.getBrowserText());
-	    }
-	  }
-
-	 */
 
 	protected Expression ownEvaluateExpression(
 			GuidelineInterpreter guidelineManager) throws PCA_Session_Exception {

@@ -94,7 +94,7 @@ public class Qualitative_Term_Query extends EPR_Query {
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager)
 	throws PCA_Session_Exception {
 		edu.stanford.smi.eon.datahandler.DataElement queryResult = doQuery(glmanager);
-		Qualitative_Constant result = (Qualitative_Constant)glmanager.getDBmanager().createInstance(
+		Qualitative_Constant result = (Qualitative_Constant)glmanager.getDBmanager().createRegisteredInstance(
 		"Qualitative_Constant");
 		result.setvalueValue(queryResult.domain_term);
 		return result;

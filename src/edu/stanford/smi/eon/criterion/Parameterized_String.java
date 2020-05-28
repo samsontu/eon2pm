@@ -78,7 +78,7 @@ public class Parameterized_String extends Expression {
 	public Expression ownEvaluateExpression(GuidelineInterpreter glmanager)
      {
 		Qualitative_Constant result =
-	        (Qualitative_Constant) glmanager.getDBmanager().createInstance("Qualitative_Constant");
+	        (Qualitative_Constant) glmanager.getDBmanager().createRegisteredInstance("Qualitative_Constant");
 		result.setvalueValue(getvalueValue());
 
 		Collection variables = getvariablesValue();

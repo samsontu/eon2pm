@@ -76,7 +76,7 @@ public class Relative_Time_Point extends Abstract_Time_Point {
 		return evaluate_expression(glmanager.getDBmanager());
 	}
 	public Expression evaluate_expression(DataHandler dataHandler) {
-		Definite_Time_Point date = (Definite_Time_Point)dataHandler.createInstance(
+		Definite_Time_Point date = (Definite_Time_Point)dataHandler.createRegisteredInstance(
 				"Definite_Time_Point");
 		date.setSlotsValues(dataHandler.getSessionTime());
 		try {

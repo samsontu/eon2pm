@@ -116,14 +116,14 @@ public class Date_Expression extends Expression {
      
       timePoint = start.getsystem_timeValue() +
         ((Duration) second).getRoundedDuration(Definite_Time_Point.getSystemTimeUnit());
-      result = (Definite_Time_Point)glManager.getDBmanager().createInstance("Definite_Time_Point");
+      result = (Definite_Time_Point)glManager.getDBmanager().createRegisteredInstance("Definite_Time_Point");
       result.setDateValue(timePoint);
       return result;
       
     } else if (operator.equals("-")) {
       timePoint = ((Definite_Time_Point)first).getsystem_timeValue() - 
         ((Duration) second).getRoundedDuration(Absolute_Time_Point.getSystemTimeUnit());
-      result = (Definite_Time_Point)glManager.getDBmanager().createInstance("Definite_Time_Point");
+      result = (Definite_Time_Point)glManager.getDBmanager().createRegisteredInstance("Definite_Time_Point");
       result.setDateValue(timePoint);
       return result;
     } else

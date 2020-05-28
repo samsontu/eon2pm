@@ -65,7 +65,7 @@ public class Relative_Time_Interval extends Time_Interval {
 		Relative_Time_Point anchor = (Relative_Time_Point)getrelative_time_pointValue();
 		Definite_Time_Point current = null;
 		if (anchor.getlabelValue().equals("Today")) {
-			current = (Definite_Time_Point)dbmanager.createInstance("Definite_Time_Point");
+			current = (Definite_Time_Point)dbmanager.createRegisteredInstance("Definite_Time_Point");
 			current.setSlotsValues(sessionTime);
 		} else {
 			current = (Definite_Time_Point)anchor.evaluate_expression(dbmanager);
@@ -74,7 +74,7 @@ public class Relative_Time_Interval extends Time_Interval {
         ((Relative_Time_Point)getrelative_time_pointValue()).getlabelValue());
 		 */    
 		try {
-			interval = (Definite_Time_Interval)dbmanager.createInstance("Definite_Time_Interval");
+			interval = (Definite_Time_Interval)dbmanager.createRegisteredInstance("Definite_Time_Interval");
 			interval.setSlotsValues(gettime_unitValue(),
 					gethow_manyValue(), getlabelValue(),
 					getpolarityValue(), current, gettime_unitValue(), dbmanager);

@@ -466,7 +466,7 @@ public class Drug_Usage extends Activity_Specification {
 							(Matched_Data[])eval.stop_add_controllable_conditions.toArray(new Matched_Data[0]),
 							(Matched_Data[])eval.stop_add_uncontrollable_conditions.toArray(new Matched_Data[0]),
 							Preference.neutral, getPreferredDrugs(possibleDrugs, interpreter), fine_grain_priority, null);
-			/*			Medication addedMed =  (Medication)dataHandler.createInstance("Medication");
+			/*			Medication addedMed =  (Medication)dataHandler.createRegisteredInstance("Medication");
 			addedMed.setSlotsValues( (float)0.0,"",
 					getDrug_Class_NameValue().getName(), 0, "",
 					getKnowledgeBase().getCls("Recommend_Add"),
@@ -500,7 +500,7 @@ public class Drug_Usage extends Activity_Specification {
 		DataHandler dataHandler = interpreter.getDBmanager();
 		logger.debug("in Drug_Usage.addActivity: creating Medication recom "+
 				"instance for " + getDrug_Class_NameValue().getName() );
-		Medication addedMed =  (Medication)dataHandler.createInstance("Medication");
+		Medication addedMed =  (Medication)dataHandler.createRegisteredInstance("Medication");
 		addedMed.setSlotsValues( (float)0.0,"",
 				getDrug_Class_NameValue().getName(), 0, "",
 				getKnowledgeBase().getCls(medMood),
@@ -754,7 +754,7 @@ public class Drug_Usage extends Activity_Specification {
 			}
 			 	}*/	
 		if (hasSubstitute) {
-			Medication deletedMed =  (Medication)interpreter.getDBmanager().createInstance("Medication");
+			Medication deletedMed =  (Medication)interpreter.getDBmanager().createRegisteredInstance("Medication");
 			deletedMed.setSlotsValues(
 					0, "", delEval.name,
 					0, "",interpreter.getKBmanager().getKB().getCls("Recommend_Delete"),

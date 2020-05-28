@@ -113,7 +113,7 @@ public class Numeric_Term_Query extends EPR_Query {
     if (data != null) {
       try {
         queryResult = Float.parseFloat(data.value);
-        result = (Numeric_Constant) glmanager.getDBmanager().createInstance("Numeric_Constant");
+        result = (Numeric_Constant) glmanager.getDBmanager().createRegisteredInstance("Numeric_Constant");
         result.setvalueValue(queryResult);
       } catch (Exception e) {
         logger.error("Numeric_Term_Query.evaluate: Cannot parse doQuery data value "+

@@ -365,7 +365,7 @@ public class RegressionBatchClient {
 							" dose: "+med.getOwnSlotValue(GlobalVars.kb.getSlot("daily_dose")));
 				}
 				pcaSession.resetAdvisories();
-				System.out.println("****** Frame count: *****" + GlobalVars.kb.getFrameCount());
+				//System.out.println("****** Frame count: *****" + GlobalVars.kb.getFrameCount());
 				pcaSession.setCase(patientId, GlobalVars.sessionTime);
 				for (Instance med : GlobalVars.kb.getCls("Medication").getInstances()) {
 					logger.debug("After reset advisory and set case med: "+med.getOwnSlotValue(GlobalVars.kb.getSlot("drug_name"))+ 

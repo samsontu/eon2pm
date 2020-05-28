@@ -143,12 +143,12 @@ public class Definite_Time_Interval extends Absolute_Time_Interval {
 		int systemTimeValue = ((Definite_Time_Point)gettime_pointValue()).getsystem_timeValue();
 		if (getpolarityValue().equals("Before")) {
 			setstop_timeValue(timePoint);
-			otherEndPoint = (Definite_Time_Point)dbManager.createInstance("Definite_Time_Point");
+			otherEndPoint = (Definite_Time_Point)dbManager.createRegisteredInstance("Definite_Time_Point");
 			otherEndPoint.setSlotsValues(systemTimeValue- lengthInDays);
 			setstart_timeValue(otherEndPoint);
 		} else if (getpolarityValue().equals("After")) {
 			setstart_timeValue(timePoint);
-			otherEndPoint = (Definite_Time_Point)dbManager.createInstance("Definite_Time_Point");
+			otherEndPoint = (Definite_Time_Point)dbManager.createRegisteredInstance("Definite_Time_Point");
 			otherEndPoint.setSlotsValues(systemTimeValue+ lengthInDays); 
 			setstop_timeValue(otherEndPoint);
 		} else throw new Exception("No valid polarity in "+this.getName());
@@ -164,8 +164,8 @@ public class Definite_Time_Interval extends Absolute_Time_Interval {
 		}
 		//logger.debug("Definite_Time_Interval constructor - granularity: "+ granularity+" howMany: "+howMany+
 		//  " label: "+label+" polarity: "+polarity);
-		Definite_Time_Point startTimeInst = (startTime != null)? (Definite_Time_Point)dbManager.createInstance("Definite_Time_Point"): null;
-		Definite_Time_Point stopTimeInst = (stopTime != null)? (Definite_Time_Point)dbManager.createInstance("Definite_Time_Point"): null;
+		Definite_Time_Point startTimeInst = (startTime != null)? (Definite_Time_Point)dbManager.createRegisteredInstance("Definite_Time_Point"): null;
+		Definite_Time_Point stopTimeInst = (stopTime != null)? (Definite_Time_Point)dbManager.createRegisteredInstance("Definite_Time_Point"): null;
 		if (startTime != null) {
 			startTimeInst.setSlotsValues(startTime);
 			setstart_timeValue(startTimeInst);

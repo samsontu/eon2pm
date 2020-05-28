@@ -1777,7 +1777,7 @@ public class PCASession_Imp {
 					key = new Long(((Integer) keyObj).longValue());
 				} else
 					key = (Long) keyObj;
-				timePoint = (Definite_Time_Point) dataManager.createInstance("Definite_Time_Point");
+				timePoint = (Definite_Time_Point) dataManager.createRegisteredInstance("Definite_Time_Point");
 				timePoint.setsystem_timeValue((int) (key.longValue() / 1440));
 				timePoint.setDateValue((int) (key.longValue() / 1440));
 				if (isIntervalValued(labName)) {
@@ -1862,7 +1862,7 @@ public class PCASession_Imp {
 					} else
 						key = (Long) keyObj;
 					timePoint = (Definite_Time_Point) dataManager
-							.createInstance("Definite_Time_Point");
+							.createRegisteredInstance("Definite_Time_Point");
 					timePoint
 					.setsystem_timeValue((int) (key.longValue() / 1440));
 					timePoint.setDateValue((int) (key.longValue() / 1440));
@@ -2347,12 +2347,12 @@ public class PCASession_Imp {
 
 	private void putPerformanceMeasurementPeriod(String startTime,
 			String stopTime) {
-		Definite_Time_Point start = (Definite_Time_Point)dataManager.createInstance("Definite_Time_Point");
+		Definite_Time_Point start = (Definite_Time_Point)dataManager.createRegisteredInstance("Definite_Time_Point");
 		start.setDateValue(startTime);
-		Definite_Time_Point stop = (Definite_Time_Point)dataManager.createInstance("Definite_Time_Point");
+		Definite_Time_Point stop = (Definite_Time_Point)dataManager.createRegisteredInstance("Definite_Time_Point");
 		stop.setDateValue(stopTime);
-		Variable var = (Variable)dataManager.createInstance("Variable");
-		Definite_Time_Interval pmp = (Definite_Time_Interval)dataManager.createInstance("Definite_Time_Interval");
+		Variable var = (Variable)dataManager.createRegisteredInstance("Variable");
+		Definite_Time_Interval pmp = (Definite_Time_Interval)dataManager.createRegisteredInstance("Definite_Time_Interval");
 		pmp.setstart_timeValue(start);
 		pmp.setstop_timeValue(stop);
 		var.setderivation_expressionValue(pmp);

@@ -127,28 +127,28 @@ public class Structured_Query extends Expression {
 		if (value != null){
 			logger.debug("Structured_Query.getAttributeValue value = "+value.toString());
 			if (value instanceof Collection && !((Collection)value).isEmpty()) {
-				attributeValue = (Set_Expression)glmanager.getDBmanager().createInstance(
+				attributeValue = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 						"Set_Expression");
 				((Set_Expression)attributeValue).setset_elementsValue((Collection)value);
 			} 
 			if (value instanceof Expression ) 
 				attributeValue = (Expression) value;
 			else if (value instanceof java.lang.String) {
-				attributeValue = (Qualitative_Constant)glmanager.getDBmanager().createInstance(
+				attributeValue = (Qualitative_Constant)glmanager.getDBmanager().createRegisteredInstance(
 						"Qualitative_Constant");
 				((Qualitative_Constant)attributeValue).setvalueValue((String)value);
 			} else if (value instanceof java.lang.Integer) {
-				attributeValue = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+				attributeValue = (Numeric_Constant)glmanager.getDBmanager().createRegisteredInstance(
 						"Numeric_Constant");
 				((Numeric_Constant)attributeValue).setvalueValue(Float.parseFloat(value.toString()));
 			} else if (value instanceof java.lang.Float) {
-				attributeValue = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+				attributeValue = (Numeric_Constant)glmanager.getDBmanager().createRegisteredInstance(
 						"Numeric_Constant");
 				((Numeric_Constant)attributeValue).setvalueValue(((Float)value).floatValue());
 			} else {
 				logger.warn("Querying for "+value.getClass().toString()+
 						" results turned into a set");
-				attributeValue = (Set_Expression)glmanager.getDBmanager().createInstance(
+				attributeValue = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 						"Set_Expression");
 				Collection singleton = new ArrayList();
 				singleton.add(value);
@@ -167,7 +167,7 @@ public class Structured_Query extends Expression {
 		Set_Expression attributeValues = null;
 		Collection values = new ArrayList();
 		if ((instances != null) && !instances.isEmpty()) {
-			attributeValues = (Set_Expression)glmanager.getDBmanager().createInstance(
+			attributeValues = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 					"Set_Expression");
 			for (Iterator i = instances.iterator(); i.hasNext() ;) {
 				Instance instance = (Instance)i.next();
@@ -267,7 +267,7 @@ public class Structured_Query extends Expression {
 						result = getAttributeValue(glmanager, selectInstance, (Slot)attribute);
 					else {
 						logger.debug("With aggregator "+ aggregator +" , Query attribute = null");
-						result = (Set_Expression)glmanager.getDBmanager().createInstance(
+						result = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 								"Set_Expression");
 						Collection singleton = new ArrayList();
 						singleton.add(selectInstance);
@@ -275,7 +275,7 @@ public class Structured_Query extends Expression {
 					}
 				} else logger.debug("With aggregator "+ aggregator + " , Query result = null");
 			} else if (aggregator.equals("count")) {
-				result = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+				result = (Numeric_Constant)glmanager.getDBmanager().createRegisteredInstance(
 						"Numeric_Constant");
 				((Numeric_Constant)result).setvalueValue((float) instances.size());
 			} else if (aggregator.equals("average")) {
@@ -290,7 +290,7 @@ public class Structured_Query extends Expression {
 				if (attribute != null) {
 					result = getAttributeValues(glmanager, instances, (Slot)attribute) ;             
 				} else {
-					result = (Set_Expression)glmanager.getDBmanager().createInstance(
+					result = (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 							"Set_Expression");
 					((Set_Expression)result).setset_elementsValue(instances);
 				}
@@ -337,7 +337,7 @@ public class Structured_Query extends Expression {
 		boolean first = true;
 		float sum = (float)0.0;
 		int count = 0;
-		Numeric_Constant result = (Numeric_Constant)glmanager.getDBmanager().createInstance(
+		Numeric_Constant result = (Numeric_Constant)glmanager.getDBmanager().createRegisteredInstance(
 				"Numeric_Constant");
 		if ((instances == null) || instances.isEmpty()) {
 			logger.error("Trying to take the average of an empty list returned by structure query" +this.getBrowserText());

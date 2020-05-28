@@ -92,10 +92,10 @@ public class Joined_Attribute_Query extends Expression {
         Instance qualifyObj = (Instance)instances.iterator().next();
         Object obj = (Object) qualifyObj.getOwnSlotValue((Slot)getattributeValue());
         if (obj instanceof String) {
-          qc = (Qualitative_Constant)glmanager.getDBmanager().createInstance("Qualitative_Constant");
+          qc = (Qualitative_Constant)glmanager.getDBmanager().createRegisteredInstance("Qualitative_Constant");
           qc.setvalueValue((String)obj);
         } else if (obj instanceof Cls) {
-            qc = (Qualitative_Constant)glmanager.getDBmanager().createInstance("Qualitative_Constant");
+            qc = (Qualitative_Constant)glmanager.getDBmanager().createRegisteredInstance("Qualitative_Constant");
             qc.setvalueValue(((Cls)obj).getName());
         }
       }

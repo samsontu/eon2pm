@@ -76,7 +76,7 @@ public class Interval extends Expression {
       throws PCA_Session_Exception {
 	  Expression high = gethighValue().evaluate_expression(guidelineManager);
 	  Expression low = getlowValue().evaluate_expression(guidelineManager);
-	  Interval newInterval = (Interval)guidelineManager.getDBmanager().createInstance("Interval");
+	  Interval newInterval = (Interval)guidelineManager.getDBmanager().createRegisteredInstance("Interval");
 	  newInterval.sethigh_closedValue(gethigh_closedValue());
 	  newInterval.setlow_closedValue(getlow_closedValue());
 	  newInterval.sethighValue(high);

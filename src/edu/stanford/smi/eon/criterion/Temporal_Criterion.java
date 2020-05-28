@@ -102,31 +102,4 @@ public class Temporal_Criterion extends Criterion {
     		      this.makeGuideline_Entity(),
     		      getlabelValue());
     }
-    /* Try query first.
-    boolean presence = false;
-    Criteria_Evaluation evaluation = null;
-    if ((getselectValue()== null)  || (getfromValue() == null))
-      throw new PCA_Session_Exception("null select or from clause in "+getName() +
-        " "+getlabelValue()); 
-
-    logger.debug("Temporal_Criterion ownEvaluate - "+ getlabelValue()+ "construct temporal query");
-
-    Temporal_Query criterionQuery = (Temporal_Query) guidelineManager.getDBmanager().createInstance("Temporal_Query");
-    String query = "temporal select "+getselectValue()+" from "+getfromValue();
-    if (getwhereValue() != null) query = query+" where "+getwhereValue();
-    if (getwhenValue() != null) query = query+" when "+getwhenValue();
-    criterionQuery.setqueryValue(query);
-    logger.debug("Temporal_Criterion ownEvaluate query= "+query);
-    int queryResult = criterionQuery.doQuery(guidelineManager);
-    guidelineManager.getDBmanager().deleteInstance(criterionQuery);
-    if (queryResult == 0) presence = false;
-    else presence = true;
-    evaluation = new Criteria_Evaluation(Logical_Operator.ATOMIC,
-      (ispresenceValue()) ? ((presence) ? Truth_Value._true : Truth_Value._false)
-         : ((!presence) ? Truth_Value._true : Truth_Value._false),
-      new Criteria_Evaluation[0],
-      this.makeGuideline_Entity(),
-      getlabelValue());
-    return evaluation;
-  } */
 }

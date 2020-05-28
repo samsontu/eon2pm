@@ -64,7 +64,7 @@ public class Canonical_Terms_Metaclass extends DefaultCls {
       throws PCA_Session_Exception {
 	  edu.stanford.smi.eon.datahandler.DataHandler dbmanager = guidelineManager.getDBmanager();
 
-	  Qualitative_Constant c =(Qualitative_Constant) dbmanager.createInstance("Qualitative_Constant");
+	  Qualitative_Constant c =(Qualitative_Constant) dbmanager.createRegisteredInstance("Qualitative_Constant");
 	  c.setvalueValue(getName());
       return c;
   }

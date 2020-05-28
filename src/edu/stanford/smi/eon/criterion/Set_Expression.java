@@ -106,7 +106,7 @@ public class Set_Expression extends Expression {
 	public Set_Expression subtract (Set_Expression second, GuidelineInterpreter glmanager) 
 		throws PCA_Session_Exception {
 		if (second instanceof Set_Expression) {
-			Set_Expression result =  (Set_Expression)glmanager.getDBmanager().createInstance(
+			Set_Expression result =  (Set_Expression)glmanager.getDBmanager().createRegisteredInstance(
 					"Set_Expression");
 			Collection resultCollection = new ArrayList();
 			Collection<Object>secondCollection = second.getset_elementsValue();
@@ -123,7 +123,7 @@ public class Set_Expression extends Expression {
 
 	public Numeric_Constant size(GuidelineInterpreter glManager) {
 		Collection setElements = getset_elementsValue();
-		Numeric_Constant count = (Numeric_Constant)(glManager.getDBmanager().createInstance("Numeric_Constant"));
+		Numeric_Constant count = (Numeric_Constant)(glManager.getDBmanager().createRegisteredInstance("Numeric_Constant"));
 		if (setElements == null) {
 			count.setvalueValue((float) 0.0);
 			return count;

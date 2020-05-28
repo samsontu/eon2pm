@@ -63,30 +63,30 @@ public class Numeric_Constant extends Expression {
   }
 
   public Numeric_Constant subtract (Numeric_Constant arg, GuidelineInterpreter glManager) {
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue(this.getvalueValue() - arg.getvalueValue());
     return result;
   }
   public Numeric_Constant divide (Numeric_Constant arg, GuidelineInterpreter glManager) {
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue(this.getvalueValue() / arg.getvalueValue());
     return result;
 
   }
   public Numeric_Constant power (Numeric_Constant arg, GuidelineInterpreter glManager) {
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue((float)Math.pow((double)this.getvalueValue() , (double) arg.getvalueValue()));
     return result;
 
   }
   public Numeric_Constant log (GuidelineInterpreter glManager) {
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue((float)Math.log((double)this.getvalueValue()));
     return result;
 
   }
   public Numeric_Constant exp ( GuidelineInterpreter glManager) {
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue((float)Math.exp((double)this.getvalueValue()));
     return result;
 

@@ -94,7 +94,7 @@ public Criteria_Evaluation ownEvaluate(GuidelineInterpreter guidelineManager, bo
     Criteria_Evaluation[] evaluationArray = new Criteria_Evaluation[1];
     logger.debug("Presence_Criterion ownEvaluate - "+ getlabelValue()+ "construct presence query");
 
-    Presence_Query criterionQuery = (Presence_Query) guidelineManager.getDBmanager().createInstance("Presence_Query");
+    Presence_Query criterionQuery = (Presence_Query) guidelineManager.getDBmanager().createRegisteredInstance("Presence_Query");
     Cls domainTerm = getdomain_termValue();
     if (getentry_typeValue() == null) {
       presence = false;

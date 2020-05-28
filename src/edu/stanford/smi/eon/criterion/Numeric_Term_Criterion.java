@@ -129,7 +129,7 @@ public class Numeric_Term_Criterion extends Comparison_Criterion {
 		}
 
 
-		Numeric_Term_Query criterionQuery = (Numeric_Term_Query) guidelineManager.getDBmanager().createInstance("Numeric_Term_Query");
+		Numeric_Term_Query criterionQuery = (Numeric_Term_Query) guidelineManager.getDBmanager().createRegisteredInstance("Numeric_Term_Query");
 		criterionQuery.setaggregation_operatorValue(getaggregation_operatorValue());
 		criterionQuery.setperiodValue(getvalid_windowValue());
 		criterionQuery.setnumeric_domain_termValue(domainTerm.getName());

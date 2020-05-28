@@ -504,7 +504,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 								generateMessages(interpreter, currentActivity, evaluateObject, preference),
 								preference, this.getfine_grain_priorityValue());
 						String patient_id = interpreter.getDBmanager().getCaseID();
-						Medication addedMed = (Medication)interpreter.getDBmanager().createInstance("Medication");
+						Medication addedMed = (Medication)interpreter.getDBmanager().createRegisteredInstance("Medication");
 						addedMed.setSlotsValues((float)0.0, "",
 								currentActivity, 0, "",
 								mood,

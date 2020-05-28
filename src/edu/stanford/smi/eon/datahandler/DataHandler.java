@@ -177,10 +177,10 @@ public class DataHandler {
 			logger.debug("After clearRuntimeInstance med: "+med.getOwnSlotValue(kbmanager.getKB().getSlot("drug_name"))+ 
 					" dose: "+med.getOwnSlotValue(kbmanager.getKB().getSlot("daily_dose")));
 		}
-		System.out.println("****** Frame count in datamanager.changeCase; after clearRuntimeInstances: *****" + GlobalVars.kb.getFrameCount());
+		//System.out.println("****** Frame count in datamanager.changeCase; after clearRuntimeInstances: *****" + GlobalVars.kb.getFrameCount());
 		setCaseSelector(case_id);
 		cacheQualitativeData(DharmaPaddaConstants.SessionTime, sessionTime, sessionTime);
-		/*Note_Entry sessionNote = (Note_Entry)createInstance(DharmaPaddaConstants.Qualitative_Observation);
+		/*Note_Entry sessionNote = (Note_Entry)createRegisteredInstance(DharmaPaddaConstants.Qualitative_Observation);
 		if (sessionNote != null) {
 			sessionNote.setDomain_term(DharmaPaddaConstants.SessionTime);
 			sessionNote.setValue(sessionTime);
@@ -345,7 +345,7 @@ public class DataHandler {
 
 		Definite_Time_Point PRTime = null;
 		if ((PRT != null) && !PRT.equals("")) {
-			PRTime = (Definite_Time_Point)createInstance("Definite_Time_Point");
+			PRTime = (Definite_Time_Point)createRegisteredInstance("Definite_Time_Point");
 			PRTime.setDateValue(PRT);
 		}
 		Medication existingMed = (Medication)(currentMeds.get(med));
@@ -380,7 +380,7 @@ public class DataHandler {
 					WhereFilter where = new WhereFilter(DharmaPaddaConstants.AND, comparisons);
 					Collection existingDupNoteEntry = kbmanager.findInstances("Note_Entry", where);
 					if (existingDupNoteEntry.isEmpty()) {
-						note = (Note_Entry) createInstance("Note_Entry");
+						note = (Note_Entry) createRegisteredInstance("Note_Entry");
 						note.setSlotsValues(Constants.DuplicateDrug, patient_id, null, med);	
 					}
 					if (cumulative) { // Case: cumulative flag set, add doses
@@ -400,7 +400,7 @@ public class DataHandler {
 							Definite_Time_Interval firstValidInterval = ((Definite_Time_Interval)existingMed.getValid_time());
 							if (firstValidInterval != null) {
 								Definite_Time_Point currentStart = (Definite_Time_Point)firstValidInterval.getstart_timeValue();
-								Definite_Time_Point newStart = (Definite_Time_Point)createInstance("Definite_Time_Point");
+								Definite_Time_Point newStart = (Definite_Time_Point)createRegisteredInstance("Definite_Time_Point");
 								newStart.setDateValue(startTime);
 								if (newStart.before(currentStart))
 									addProtegeInstance = false;
@@ -422,7 +422,7 @@ public class DataHandler {
 			}
 		}
 		if (addProtegeInstance) {
-			Definite_Time_Interval interval = (Definite_Time_Interval)createInstance("Definite_Time_Interval");		
+			Definite_Time_Interval interval = (Definite_Time_Interval)createRegisteredInstance("Definite_Time_Interval");		
 			try {
 				if (startTime == null) logger.warn("The medication "+ med +" has no start time");
 				interval.setSlotsValues("["+startTime+","+stopTime+"]", startTime, stopTime, this);
@@ -434,14 +434,14 @@ public class DataHandler {
 					existingMed.setSlotsValues(dailyDose, "", med, 0, "", null,
 							patient_id, "", "", status, interval, MPR, PRTime);
 				else {
-					Medication medInstance = (Medication) createInstance("Medication");
+					Medication medInstance = (Medication) createRegisteredInstance("Medication");
 					medInstance.setSlotsValues(dailyDose, "", med, 0, "", null,
 							patient_id, "", "", status, interval, MPR, PRTime);
 					if (indexNewPrescription) 
 						currentMeds.put(med, medInstance);
 				}
 			} else {
-				Medication medInstance = (Medication) createInstance("Medication");
+				Medication medInstance = (Medication) createRegisteredInstance("Medication");
 				medInstance.setSlotsValues(dailyDose, "", med, 0, "", null,
 						patient_id, "", "", status, interval, MPR, PRTime);				
 			}
@@ -544,20 +544,20 @@ public class DataHandler {
 				try {
 					timestamp = ((edu.stanford.smi.eon.ChronusII.Instant) i
 							.next()).datetime;
-					timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
+					timePoint = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point");
 					timePoint.setSlotsValues(timestamp);
 				} catch (Exception e) {
 					logger
 					.error("cacheNoteEntry: exception getting note entry time");
 				}
-				noteEntry = (Note_Entry) createInstance("Note_Entry");
+				noteEntry = (Note_Entry) createRegisteredInstance("Note_Entry");
 				noteEntry.setSlotsValues(domainTerm, patient_id, timePoint,
 						value);
 				currentProblems.put(domainTerm, timestamp);
 			}
 		} else {
 			currentProblems.put(domainTerm, null);
-			noteEntry = (Note_Entry) createInstance("Note_Entry");
+			noteEntry = (Note_Entry) createRegisteredInstance("Note_Entry");
 			noteEntry.setSlotsValues(domainTerm, patient_id, timePoint, value);
 		}
 	}
@@ -568,12 +568,12 @@ public class DataHandler {
 		//		logger.debug("domainterm: "+domainTerm+" value: "+value);
 		Definite_Time_Point timePoint = null;
 		if ((date != null) && !date.equals("")) {
-			timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
+			timePoint = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point");
 			timePoint.setDateValue(date);
 		}
 		if (value == null)
 			value = "";
-		Note_Entry noteEntry = (Note_Entry) createInstance("Note_Entry");
+		Note_Entry noteEntry = (Note_Entry) createRegisteredInstance("Note_Entry");
 		noteEntry.setSlotsValues(domainTerm.trim(), patient_id, timePoint, value.trim());
 	}
 
@@ -581,12 +581,12 @@ public class DataHandler {
 		Definite_Time_Point timePoint = null;
 		// date has the form: yyyy-mm-dd
 		if ((date != null) && !(date.equals(""))) {
-			timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
+			timePoint = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point");
 			timePoint.setDateValue(date);
 		}
 		String noWhiteSpaceProblem = problem.trim();
 		currentProblems.put(noWhiteSpaceProblem, date);
-		Note_Entry noteEntry = (Note_Entry) createInstance("Note_Entry");
+		Note_Entry noteEntry = (Note_Entry) createRegisteredInstance("Note_Entry");
 		noteEntry.setSlotsValues(noWhiteSpaceProblem, patient_id, timePoint, "");
 
 	}
@@ -594,7 +594,7 @@ public class DataHandler {
 	/*	public void cacheNoteEntry(String problem, String lastDate,
 			Collection validPeriods) {
 		Definite_Time_Point timePoint = null;
-		Note_Entry noteEntry = (Note_Entry) createInstance("Note_Entry");
+		Note_Entry noteEntry = (Note_Entry) createRegisteredInstance("Note_Entry");
 		edu.stanford.smi.eon.ChronusII.Period previousTime = null;
 
 		if ((lastDate == null) || (lastDate.equals(""))) {
@@ -628,7 +628,7 @@ public class DataHandler {
 		if ((lastDate != null) && (!lastDate.equals(""))) {
 			// logger.debug("DataHandler.cacheNoteEntry: problem:
 			// "+problem+" period start time: '" + lastDate+"'");
-			timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
+			timePoint = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point");
 			timePoint.setDateValue(lastDate);
 			noteEntry.setSlotsValues(problem, patient_id, timePoint, null);
 			// logger.debug("DataHandler.cacheNoteEntry: problem:
@@ -648,7 +648,7 @@ public class DataHandler {
 		logger.debug("in data handler: cacheAdverseEvent substance="
 				+ substance + " symptom=" + symptom);
 
-		Adverse_Reaction reaction = (Adverse_Reaction) createInstance("Adverse_Reaction");
+		Adverse_Reaction reaction = (Adverse_Reaction) createRegisteredInstance("Adverse_Reaction");
 		reaction.setSlotsValues(symptom, patient_id, substance, null);
 		adverseEvents.put(substance, reaction);
 	}
@@ -656,7 +656,7 @@ public class DataHandler {
 			String timestamp) {
 		logger.debug("in data handler: cacheAdverseEvent substance="
 				+ substance + " symptom=" + symptom);
-		Adverse_Reaction reaction = (Adverse_Reaction) createInstance("Adverse_Reaction");
+		Adverse_Reaction reaction = (Adverse_Reaction) createRegisteredInstance("Adverse_Reaction");
 		reaction.setSlotsValues(symptom, patient_id, substance, null);
 		adverseEvents.put(substance, reaction);
 	}
@@ -1456,10 +1456,10 @@ public class DataHandler {
 		 * ArrayList(); // Time of numeric data are indexed at granularity of
 		 * minutes for (Iterator i = results.keySet().iterator(); i.hasNext();) {
 		 */
-		Absolute_Time_Point timePoint = (Definite_Time_Point) createInstance("Definite_Time_Point");
+		Absolute_Time_Point timePoint = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point");
 		timePoint.setsystem_timeValue((int) (timestamp / 1440));
 		timePoint.setDateValue((int) (timestamp / 1440));
-		Numeric_Entry entry = (Numeric_Entry) createInstance("Numeric_Entry");
+		Numeric_Entry entry = (Numeric_Entry) createRegisteredInstance("Numeric_Entry");
 		logger.debug("in data handler: getNumericEvents label=" + label
 				+ " key=" + timestamp + " result=" + value);
 
@@ -1613,7 +1613,7 @@ public class DataHandler {
 		return valueObject;
 	}
 
-	public Instance createInstance(String className) {
+	public Instance createRegisteredInstance(String className) {
 		Cls cls = null;
 		if ((className != null)
 				&& (cls = kbmanager.getKB().getCls(className)) != null) {
@@ -1739,13 +1739,13 @@ public class DataHandler {
 		if ((episode != null) && (episode.hasDirectType(kb.getCls("Definite_Time_Interval")))) {
 			if (timePointCls != null) {
 				if ((startTime !=null) && !(startTime.equals(""))){
-					startTimeInstance = (Definite_Time_Point) kb.createInstance(null,timePointCls ) ;
+					startTimeInstance = (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point" ) ;
 					this.registerInstance(startTimeInstance);
 					startTimeInstance.setDateValue(startTime);
 					((Definite_Time_Interval)episode).setstart_timeValue(startTimeInstance);
 				}
 				if ((stopTime != null) && !(stopTime.equals(""))){
-					stopTimeInstance= (Definite_Time_Point) kb.createInstance(null,timePointCls ) ;
+					stopTimeInstance= (Definite_Time_Point) createRegisteredInstance("Definite_Time_Point" ) ;
 					this.registerInstance(stopTimeInstance);
 					stopTimeInstance.setDateValue(stopTime);
 					((Definite_Time_Interval)episode).setstop_timeValue(stopTimeInstance);

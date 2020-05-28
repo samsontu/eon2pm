@@ -163,7 +163,7 @@ public class General_Comparison_Criterion extends Comparison_Criterion {
 
 		if (!numeric) {
 			Qualitative_Term_Query criterionQuery =
-					(Qualitative_Term_Query) guidelineManager.getDBmanager().createInstance("Qualitative_Term_Query");
+					(Qualitative_Term_Query) guidelineManager.getDBmanager().createRegisteredInstance("Qualitative_Term_Query");
 			criterionQuery.setaggregation_operatorValue(getaggregation_operatorValue());
 			criterionQuery.setperiodValue(getvalid_windowValue());
 			criterionQuery.setqualitative_domain_termValue(domainTerm.getName());
@@ -173,7 +173,7 @@ public class General_Comparison_Criterion extends Comparison_Criterion {
 
 		} else { // not dealing with "member_of" yet
 			Numeric_Term_Query criterionQuery =
-					(Numeric_Term_Query) guidelineManager.getDBmanager().createInstance("Numeric_Term_Query");
+					(Numeric_Term_Query) guidelineManager.getDBmanager().createRegisteredInstance("Numeric_Term_Query");
 			criterionQuery.setaggregation_operatorValue(getaggregation_operatorValue());
 			criterionQuery.setperiodValue(getvalid_windowValue());
 			criterionQuery.setnumeric_domain_termValue(domainTerm.getName());

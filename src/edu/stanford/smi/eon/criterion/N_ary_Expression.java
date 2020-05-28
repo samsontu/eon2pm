@@ -92,7 +92,7 @@ public class N_ary_Expression extends Expression {
   public Numeric_Constant add (Collection args, GuidelineInterpreter glManager)
     throws PCA_Session_Exception {
     logger.debug("N_ary_Expression: add "+getlabelValue());
-    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+    Numeric_Constant result = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
     result.setvalueValue((float)0.0);
     for (Iterator i=args.iterator(); i.hasNext();) {
     	Expression arg = (Expression)i.next();
@@ -112,7 +112,7 @@ public class N_ary_Expression extends Expression {
     GuidelineInterpreter glManager)
      throws PCA_Session_Exception {
     Numeric_Constant result =
-        (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+        (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
         result.setvalueValue((float)1.0);
     Numeric_Constant evaluatedArg = null;
     logger.debug("N_ary_Expression: multiply "+getlabelValue());
@@ -142,7 +142,7 @@ public class N_ary_Expression extends Expression {
 	  if (setValue.size() != 1) {
 		  throw new PCA_Session_Exception("Number of entries in set is not 1");
 	  } else {
-		  evaluatedArg = (Numeric_Constant) glManager.getDBmanager().createInstance("Numeric_Constant");
+		  evaluatedArg = (Numeric_Constant) glManager.getDBmanager().createRegisteredInstance("Numeric_Constant");
 		  for (Iterator j=setValue.iterator(); j.hasNext();) {
 			  Object num = j.next();
 			  if (!(num instanceof Float)) {

@@ -163,7 +163,7 @@ public void doAction (Action_To_Choose action,
 					Preference.neutral, this.getfine_grain_priorityValue());
 	        
 	         String patient_id = interpreter.getDBmanager().getCaseID();
-	         Medication addedMed = (Medication)interpreter.getDBmanager().createInstance("Medication");
+	         Medication addedMed = (Medication)interpreter.getDBmanager().createRegisteredInstance("Medication");
 	         addedMed.setSlotsValues(0, "",
 	                    currentActivity, 0, "",
 	                    getRecommendationMood(),

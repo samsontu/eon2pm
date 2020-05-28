@@ -112,10 +112,10 @@ public class Note_Entry extends Observation implements Comparator<Note_Entry>{
 		if (value != null)
 			date = (String) value;
 		//if (!dbmanager.isCurrentProblem((String) problem.getKey(), date)) {
-			noteEntry = (Note_Entry) dbmanager.createInstance("Note_Entry");
+			noteEntry = (Note_Entry) dbmanager.createRegisteredInstance("Note_Entry");
 			if ((date != null) && !(date.equals(""))) {
 				timePoint = (Definite_Time_Point) dbmanager
-						.createInstance("Definite_Time_Point");
+						.createRegisteredInstance("Definite_Time_Point");
 				try {
 					timePoint.setDateValue(date);
 					noteEntry.setSlotsValues((String) problem.getKey(),
@@ -141,7 +141,7 @@ public class Note_Entry extends Observation implements Comparator<Note_Entry>{
 
     ProtegeInstanceStub stub = (ProtegeInstanceStub)fromStorage;
     logger.debug("Note_Entry.mkInstanceFromStub fromStorage"+ stub.toString());
-    Note_Entry noteEntry = (Note_Entry)dbmanager.createInstance("Note_Entry");
+    Note_Entry noteEntry = (Note_Entry)dbmanager.createRegisteredInstance("Note_Entry");
     Map slotsValues = stub.getSlotValues();
 
     if (slotsValues != null) {
@@ -164,7 +164,7 @@ public class Note_Entry extends Observation implements Comparator<Note_Entry>{
           noteEntry.setPatient_id((String)value);
         else if (slotName.equals("valid_time")) {
           Definite_Time_Point timePoint = (Definite_Time_Point)
-                        dbmanager.createInstance("Definite_Time_Point");
+                        dbmanager.createRegisteredInstance("Definite_Time_Point");
           timePoint.setDateValue(((Integer)value).intValue());
           noteEntry.setValid_time(timePoint);
 

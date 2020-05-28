@@ -107,28 +107,7 @@ public class Expression extends DefaultSimpleInstance {
 		logger.error("The expression is not handled! "+this.getBrowserText());
 		throw new PCA_Session_Exception("The expression is not handled! "+this.getBrowserText());
 	}
-	/*
 
-    if ((gettypeValue() == null) || (getstring_valueValue() == null))
-      throw new PCA_Session_Exception(this.getName()+" has no defined value or type");
-    try {
-      KBHandler kbHandler = guidelineManager.getKBmanager();
-      if (gettypeValue().getName().equals("Number")) {
-        Numeric_Constant c= (Numeric_Constant)kbHandler.createInstance("Numeric_Constant");
-        c.setvalueValue(Float.parseFloat(getstring_valueValue()));
-        return c;
-      } else if (gettypeValue().getName().equals("String")) {
-        Qualitative_Constant c = (Qualitative_Constant) kbHandler.createInstance("Qualitative_Constant");
-        c.setvalueValue(getstring_valueValue());
-        return c;
-      } else if (gettypeValue().getName().equals("Boolean")) {
-        Extended_Boolean_Criterion c = (Extended_Boolean_Criterion) kbHandler.createInstance("Extended_Boolean_Criterion");
-        c.setlabelValue(getstring_valueValue());
-        return c;
-      } else throw new PCA_Session_Exception("No such expression type: "+gettypeValue());
-    } catch (Exception e) {
-      throw new PCA_Session_Exception("Problem converting value! "+this.getName());
-    } */
     
 public Expression evaluate_expression(GuidelineInterpreter guidelineManager,
 		String join_value)

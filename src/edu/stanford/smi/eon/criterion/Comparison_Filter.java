@@ -85,7 +85,7 @@ public class Comparison_Filter extends Filter {
 			//cls.setClsName(valueExpr.getName());
 			//value = cls;
 			edu.stanford.smi.eon.datahandler.DataHandler dbmanager = guidelineManager.getDBmanager();
-			Qualitative_Constant c =(Qualitative_Constant) dbmanager.createInstance("Qualitative_Constant");
+			Qualitative_Constant c =(Qualitative_Constant) dbmanager.createRegisteredInstance("Qualitative_Constant");
 			c.setvalueValue(valueExpr.getName());
 			value = c;
 		} else value = ((Expression)valueExpr).evaluate_expression(guidelineManager);

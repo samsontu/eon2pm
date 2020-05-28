@@ -99,7 +99,7 @@ public class Definite_Time_Point extends Absolute_Time_Point {
 	int newsystemTime = 0;
 	if (duration.gettime_unitValue() != null ) {
 		newsystemTime = (int)(getsystem_timeValue() - duration.getDuration(getSystemTimeUnit()));
-		result = (Definite_Time_Point)glManager.getDBmanager().createInstance("Definite_Time_Point");
+		result = (Definite_Time_Point)glManager.getDBmanager().createRegisteredInstance("Definite_Time_Point");
 		result.setSlotsValues(newsystemTime);
 	} else
 		logger.error("Duration instance "+ duration.getBrowserText()+" does not have a time unit!");

@@ -66,7 +66,7 @@ protected Expression ownEvaluateExpression(GuidelineInterpreter guidelineManager
 
     value = getvalueValue();
     if (value != null) {
-      expr = (Qualitative_Constant)guidelineManager.getDBmanager().createInstance("Qualitative_Constant");
+      expr = (Qualitative_Constant)guidelineManager.getDBmanager().createRegisteredInstance("Qualitative_Constant");
       expr.setvalueValue(value.getName());
       return expr;
     } else {

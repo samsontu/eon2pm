@@ -148,7 +148,7 @@ public class PAL_Criterion extends Criterion {
 
 			constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, getcase_variableValue(),
 					guidelineManager.getDBmanager().getCaseID());
-			Instance newInstance = guidelineManager.getDBmanager().createInstance(":PAL-CONSTRAINT");
+			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance(":PAL-CONSTRAINT");
 			newInstance.setOwnSlotValue(PALStatement, constraintStatement);
 			newInstance.setOwnSlotValue(PALRange, genericConstraint.getOwnSlotValue(PALRange));
 			newInstance.setOwnSlotValue(PALName, genericConstraint.getOwnSlotValue(PALName));
