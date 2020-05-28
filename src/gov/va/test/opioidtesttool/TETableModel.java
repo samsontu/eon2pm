@@ -8,9 +8,11 @@ import javax.swing.table.*;
 import java.text.*;
 
 import edu.stanford.smi.eon.PCAServerModule.*;
+import edu.stanford.smi.eon.datahandler.DataHandler;
 import edu.stanford.smi.eon.kbhandler.KBHandler;
 import edu.stanford.smi.eon.util.HelperFunctions;
 
+import org.apache.log4j.Logger;
 // Stuff for DOCUMENT
 import org.w3c.dom.*;
 
@@ -29,6 +31,7 @@ public class TETableModel extends DefaultTableModel {
 	public boolean fieldTwoNumeric;
 	public int fields;
 	public int dates;
+	static Logger logger = Logger.getLogger(TETableModel.class);
 
 	// Guideline Data types, (options passed to convertToGuidelineData)
 	public final static String PCA_PRESCRIPTION = "Prescription";
@@ -181,7 +184,7 @@ public class TETableModel extends DefaultTableModel {
 			if (cur_pcaDataType.equals(PCA_PRESCRIPTION)) {
 				ptData.prescription(PCAInterface.newPrescription(f1, new Float(
 						f2), d1, d2));
-				System.out.println(f1+": "+f2+" "+d1+"-"+d2);
+				logger.debug(f1+": "+f2+" "+d1+"-"+d2);
 			} else if (cur_pcaDataType.equals(PCA_NOTE)) {
 				ptData.note_data(PCAInterface.newNote(f1, f2, pcaEntryType, d1,
 						d2));
