@@ -57,6 +57,12 @@ public class PAL_Criterion extends Criterion {
 		return ((String) ModelUtilities.getOwnSlotValue(this, "case_variable"));
 	}
 
+	public void setsession_time_variableValue(String session_time_variable) {
+		ModelUtilities.setOwnSlotValue(this, "session_time_variable", session_time_variable);	}
+	public String getsession_time_variableValue() {
+		return ((String) ModelUtilities.getOwnSlotValue(this, "session_time_variable"));
+	}
+
 	public void setPAL_constraintValue(Instance PAL_constraint) {
 		ModelUtilities.setOwnSlotValue(this, "PAL_constraint", PAL_constraint);	}
 	public Instance getPAL_constraintValue() {
@@ -148,6 +154,18 @@ public class PAL_Criterion extends Criterion {
 
 			constraintStatement = HelperFunctions.replaceSubstring(constraintStatement, getcase_variableValue(),
 					guidelineManager.getDBmanager().getCaseID());
+			String sessionTimeVariable = getsession_time_variableValue();
+			if (sessionTimeVariable != null) {
+				String sessionTime = guidelineManager.getDBmanager().getSessionTime();
+				try {
+					int sessionTimeNumeric = HelperFunctions.Day2Int2(sessionTime);
+					String sessionTimeNumericString = Integer.toString(sessionTimeNumeric);
+					constraintStatement = constraintStatement.replace(
+						getsession_time_variableValue(), sessionTimeNumericString);
+				} catch (Exception e1){
+					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" );
+				}
+			}
 			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance(":PAL-CONSTRAINT");
 			newInstance.setOwnSlotValue(PALStatement, constraintStatement);
 			newInstance.setOwnSlotValue(PALRange, genericConstraint.getOwnSlotValue(PALRange));
