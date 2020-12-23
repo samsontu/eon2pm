@@ -1,0 +1,3195 @@
+<?xml version="1.0" encoding="UTF-8"?><patientdata>
+<patient name="allfields">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">CKD_Stage_1</field1>
+            <field2 label="Name">CKD Stage 1</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">CKD_Stage_2</field1>
+            <field2 label="Name">CKD Stage 2</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage4</field1>
+            <field2 label="Name">CKD stage 4</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Renal Dialysis</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">End-Stage_Renal_Disease</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage5</field1>
+            <field2 label="Name">CKD stage 5</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Cardiovascular_disease_unspecified</field1>
+            <field2 label="Name">Cardiovascular disease, unspecified</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+        <item>
+            <field1 label="Substance">ACE_Inhibitors</field1>
+            <field2 label="Reaction">cough</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Substance">ACE_Inhibitors</field1>
+            <field2 label="Reaction">angioedema</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Substance">ACE_Inhibitors</field1>
+            <field2 label="Reaction">other</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Substance">ACE_Inhibitors</field1>
+            <field2 label="Reaction">anaphylaxis</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Substance">Angiotensin_II_receptor_blockers</field1>
+            <field2 label="Reaction">angioedema</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Substance">Angiotensin_II_receptor_blockers</field1>
+            <field2 label="Reaction">anaphylaxis</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">19</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HbA1C</field1>
+            <field2 label="Value">6.5</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">HGB</field1>
+            <field2 label="Value">10.1</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Ferritin</field1>
+            <field2 label="Value">15</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Transferrin Situation</field1>
+            <field2 label="Value">19</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+        <item>
+            <field1 label="Name">Hemodialysis</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+        <item>
+            <field1 label="Name">Peritoneal Dialysis</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+        <item>
+            <field1 label="Name">Kidney_Transplant</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="hd_procedure_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+        <item>
+            <field1 label="Name">Hemodialysis</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="pd_procedure_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+        <item>
+            <field1 label="Name">Peritoneal Dialysis</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="txp_procedure_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+        <item>
+            <field1 label="Name">Kidney_Transplant</field1>
+            <field2 label="CPT Code">0.0</field2>
+        </item>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd1_include(htn)">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">CKD_Stage_1</field1>
+            <field2 label="Name">CKD Stage 1</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd2_include(htn)">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">CKD_Stage_2</field1>
+            <field2 label="Name">CKD Stage 2</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd4_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage4</field1>
+            <field2 label="Name">CKD stage 4</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd5_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage5</field1>
+            <field2 label="Name">CKD stage 5</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="esrd_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">End-Stage_Renal_Disease</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="uacr_veryhigh_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">600</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ualb_raw_veryhigh_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">600</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="upcr_veryhigh_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">1000</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="uprot_raw_veryhigh_exclude">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">1000</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_base">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_only_no_labs">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_only_1_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_only_1_gfr_29">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">29</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_only_1_gfr_61">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">61</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_only_1_gfr_gt380d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Fri Jun 01 00:00:00 PDT 2012</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_+ACE_no_labs">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_noACEARB_no_labs">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_1_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_1_gfr_29">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">29</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_1_gfr_61">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">61</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_dx_only_1_gfr_gt380d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Fri Jun 01 00:00:00 PDT 2012</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<!-- No documentation past this point, need to update -->
+<patient name="ckd3_dx_only_+ACE_no_labs">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_dx_only_noACEARB_no_labs">
+    <meds>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_dx_only_1_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_dx_only_1_gfr_29">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">29</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_dx_only_1_gfr_61">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">61</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_dx_only_1_gfr_gt380d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Fri Jun 01 00:00:00 PDT 2012</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<patient name="ckd3_and_htn_dx_only_1_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_and_htn_dx_2_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_and_htn_dx_2_gfr_55">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_and_htn_dx_1_gfr_61_high_uacr">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">61</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_and_htn_dx_1_gfr_61_high_upcr">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">61</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">150</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">29</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="dm_base">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Diabetes_Mellitus</field1>
+            <field2 label="Name"/>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="cvd_base">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Cardiovascular_disease_unspecified</field1>
+            <field2 label="Name">Cardiovascular disease, unspecified</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="ckd3_base">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Chronic_kidney_disease_stage3</field1>
+            <field2 label="Name">CKD stage 3</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">141</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">91</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">55</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">57</field2>
+            <start>Sat Mar 02 23:00:00 PST 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_Prot/Creat_Ratio_Spot</field1>
+            <field2 label="Value">149</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">21</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineProtein_Spot</field1>
+            <field2 label="Value">999</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<patient name="htn_dx_2gfr_59to30_lt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_2gfr_59to45_lt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">45</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<patient name="htn_dx_2gfr_59to59to30_ltandgt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_2gfr_59to59to45_ltandgt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">45</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<patient name="htn_dx_2gfr_59to60to30_ltandgt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">60</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_2gfr_59to60to45_ltandgt90d">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">45</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">60</field2>
+            <start>Wed May 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+<patient name="htn_dx_2gfrCKD3b_metacid_hgb10_noUACR">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">19</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Lab">HGB</field1>
+            <field2 label="Value">10</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Ferritin</field1>
+            <field2 label="Value">15</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Transferrin Situation</field1>
+            <field2 label="Value">19</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+<patient name="htn_dx_2gfrCKD3b_nometacid_hgb99_UACR30">
+    <meds>
+        <item>
+            <field1 label="Drug">lisinopril</field1>
+            <field2 label="Daily Dose">20</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+            <end>Fri Aug 02 00:00:00 PDT 2013</end>
+        </item>
+    </meds>
+    <dx>
+        <item>
+            <field1 label="Dx">Hypertension_Inclusive</field1>
+            <field2 label="Name">Hypertension, inclusive</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </dx>
+    <clinicalSigns>
+        <item>
+            <field1 label="Sign">Systolic_BP</field1>
+            <field2 label="Value">119</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Sign">Diastolic_BP</field1>
+            <field2 label="Value">79</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </clinicalSigns>
+    <adr>
+    </adr>
+    <labs>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">eGFR</field1>
+            <field2 label="Value">59</field2>
+            <start>Wed Jan 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Bicarbonate</field1>
+            <field2 label="Value">22</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </labs>
+    <demographics>
+        <item>
+            <field1 label="Field Name">Age</field1>
+            <field2 label="Value">64</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Race</field1>
+            <field2 label="Value">Black</field2>
+        </item>
+        <item>
+            <field1 label="Field Name">Sex</field1>
+            <field2 label="Value">Male</field2>
+        </item>
+        <item>
+            <field1 label="Lab">HGB</field1>
+            <field2 label="Value">9.9</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Ferritin</field1>
+            <field2 label="Value">15</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Transferrin Situation</field1>
+            <field2 label="Value">19</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">Urine_ALB/CREAT_RATIO_spot</field1>
+            <field2 label="Value">30</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+        <item>
+            <field1 label="Lab">UrineAlbumin_SPOT</field1>
+            <field2 label="Value">599</field2>
+            <start>Wed Jul 03 00:00:00 PDT 2013</start>
+        </item>
+    </demographics>
+    <cpt>
+    </cpt>
+    <mpr>
+    </mpr>
+</patient>
+
+
+</patientdata>
