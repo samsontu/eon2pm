@@ -171,6 +171,7 @@ public class PCASession_Imp {
 			"Urinalysis",
 			"    Urine_Alb/creat_Ratio_24h",
 			"    Urine_ALB/CREAT_RATIO_spot",
+			"    Urine_Prot/Creat_Ratio_Spot",
 			"    UrineAlbumin_24H",
 			"    UrineAlbumin_SPOT",
 			"    UrineProtein_12h",
