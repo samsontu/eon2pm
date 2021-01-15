@@ -292,7 +292,6 @@ public class PCASession_Imp {
 	}
 
 
-
 	/**
 	 * <p>
 	 * Reader for attribute: <b>::PCAServerModule::PCASession::database</b>.
@@ -410,8 +409,21 @@ public class PCASession_Imp {
 				guidelineManager.setGuideline(guideline);
 			}
 		}
+		setUpLabList();
 
 	}
+	
+	private void setUpLabList() {
+		String labList = null;
+		Slot labListSlot = kbManager.getKB().getSlot(DharmaPaddaConstants.LABLIST);
+		if (labListSlot != null) {
+			labList = getGuideline().getlabListValue();
+			if (labList != null)
+				this.labs = labList.split("\n");
+		}
+		
+	}
+
 
 	public void ping() {
 		logln("PCAServer getting pinged");
