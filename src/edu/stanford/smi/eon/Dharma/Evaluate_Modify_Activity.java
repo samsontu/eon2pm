@@ -536,7 +536,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 	}
 	private boolean noControllableModify(Collection<Matched_Data> stopControllableIntensifyConditionCollection,
 			Collection<Matched_Data> stopControllableDecreaseDoseConditionCollection) throws Exception {
-		System.out.println("testing nocontrollableModify");
+		//System.out.println("testing nocontrollableModify");
 		if (this.direction() == Direction.up)
 			 return (stopControllableIntensifyConditionCollection == null);
 		else if (this.direction() == Direction.down)

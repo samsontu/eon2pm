@@ -102,7 +102,8 @@ public class PAL_Query extends Expression {
 					constraintStatement = constraintStatement.replace(
 						getsession_time_variableValue(), sessionTimeNumericString);
 				} catch (Exception e1){
-					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" );
+					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly for patient " + 
+							caseID);
 				}
 			}
 			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance("PAL-QUERY");
@@ -132,7 +133,7 @@ public class PAL_Query extends Expression {
 			activitiesToStopCollection = new ArrayList();
 			Instance query = getPAL_queryValue();
 			if (query == null) {
-				throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance "+this.getName());
+				throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance '"+ this.getBrowserText()+"': " + this.getName());
 			} else {
 
 				query = instantiateCase(query, guidelineManager);
@@ -140,35 +141,39 @@ public class PAL_Query extends Expression {
 				QueryEngine evalEngine = new QueryEvaluationEngine(evalPolicy,
 						guidelineManager.getKBmanager().getKB());
 				GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
-				logger.debug("PAL_Query.doQuery "+ this.getBrowserText()+"/"+ this.getName());
-				QueryEngineResponse response = evalEngine.askSingleQuery(
-						query);
-				Collection queryResult = null;
-
-				if (response.queryHasAtLeastOneAnswer(query)) {
-					queryResult = response.getQueryAnswers();
-					for (Iterator i=queryResult.iterator(); i.hasNext();) {
-						QueryAnswer result = (QueryAnswer)i.next();
-						Collection allVariableBindings = result.getAllVariableValueBindings();
-						for (Iterator k=allVariableBindings.iterator(); k.hasNext();) {
-							VariableValueBinding binding = (VariableValueBinding)k.next();
-							logger.debug("answer "+": binding - variable="+ binding.getVariableName() +
-									" value="+binding.getVariableValue());
-							Instance queryResultInstance = (Instance)binding.getVariableValue();
-							Cls queryResultCls = queryResultInstance.getDirectType();
-							if (getkey_slotValue() != null)  {
-								Object value = queryResultInstance.getOwnSlotValue((Slot)getkey_slotValue());
-								if (!activitiesToStopCollection.contains(value))
-									activitiesToStopCollection.add(value);
-							} else {
-								if (!activitiesToStopCollection.contains(queryResultInstance) )
-									activitiesToStopCollection.add(queryResultInstance);
-							}
-						} //for
-					}//for
-				} else {
-					logger.warn("No results from evaluating "+this.getBrowserText()
-					+ "' ("+this.getName()+") ");
+				try {
+					logger.debug("PAL_Query.doQuery evaluating query "+ this.getBrowserText()+"/"+ this.getName()
+					+ " for patient "+guidelineManager.getDBmanager().getCaseID());
+					QueryEngineResponse response = evalEngine.askSingleQuery(query);
+					Collection queryResult = null;	
+					if (response.queryHasAtLeastOneAnswer(query)) {
+						queryResult = response.getQueryAnswers();
+						for (Iterator i=queryResult.iterator(); i.hasNext();) {
+							QueryAnswer result = (QueryAnswer)i.next();
+							Collection allVariableBindings = result.getAllVariableValueBindings();
+							for (Iterator k=allVariableBindings.iterator(); k.hasNext();) {
+								VariableValueBinding binding = (VariableValueBinding)k.next();
+								logger.debug("answer "+": binding - variable="+ binding.getVariableName() +
+										" value="+binding.getVariableValue());
+								Instance queryResultInstance = (Instance)binding.getVariableValue();
+								Cls queryResultCls = queryResultInstance.getDirectType();
+								if (getkey_slotValue() != null)  {
+									Object value = queryResultInstance.getOwnSlotValue((Slot)getkey_slotValue());
+									if (!activitiesToStopCollection.contains(value))
+										activitiesToStopCollection.add(value);
+								} else {
+									if (!activitiesToStopCollection.contains(queryResultInstance) )
+										activitiesToStopCollection.add(queryResultInstance);
+								}
+							} //for
+						}//for
+					} else {
+						logger.warn("No results from evaluating "+this.getBrowserText()
+						+ " ("+this.getName()+") for patient" + guidelineManager.getDBmanager().getCaseID());
+					}
+				} catch (Exception e1){
+					logger.error("PAL_Query.doQuery exception evaluating query "+ this.getBrowserText()+"/"+ this.getName()
+							+ " for patient "+guidelineManager.getDBmanager().getCaseID());					
 				}
 				guidelineManager.evalManager.tell(this, activitiesToStopCollection);
 				if (activitiesToStopCollection.isEmpty()) {
@@ -194,7 +199,8 @@ public class PAL_Query extends Expression {
 				return set;
 			} else return null;
 		} catch (Exception e) {
-			logger.debug("PAL_Query.evaluate_expression exception: "+e.getMessage(), e);
+			logger.error("PAL_Query.evaluate_expression exception: PA query instance:"+this.getBrowserText()+
+					 " for patient case: "+glmanager.getDBmanager().getCaseID());
 			e.printStackTrace();
 			return null;
 		}

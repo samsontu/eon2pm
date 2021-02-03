@@ -113,7 +113,8 @@ public class PAL_Criterion extends Criterion {
 						logger.error(error.getDescription());  
 					}
 				}
-				logger.error(" PAL runtime error in "+this.getName()+ "; "+this.getBrowserText());
+				logger.error(" PAL runtime error in "+this.getName()+ "; "+this.getBrowserText() +
+						" for the patient "+guidelineManager.getDBmanager().getCaseID());
 				throw new PCA_Session_Exception("PAL runtime error in "+this.getName());
 			} 
 		} else {
