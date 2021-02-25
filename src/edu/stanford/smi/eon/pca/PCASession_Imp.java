@@ -95,7 +95,7 @@ import org.xml.sax.InputSource;
 public class PCASession_Imp {
 
 	private String database = null;
-	private String patient_id;
+	private String patient_id = "";
 	private String session_time;
 	private String user = null;
 	private String password = null;
@@ -392,7 +392,7 @@ public class PCASession_Imp {
 		logger.debug(Array.getLength(guidelines));
 
 		if (Array.getLength(guidelines) == 0) {
-			logger.error("Guideline "+guideline_name+" not found");
+			logger.error("Guideline "+guideline_name+" not found  for case  " +patient_id()+" !");
 			throw new PCA_Initialization_Exception("guideline not found");
 		}
 		if (Array.getLength(guidelines) > 1) {
@@ -650,13 +650,13 @@ public class PCASession_Imp {
 							+ key);
 				}
 			} catch (Exception e) {
-				logger.info("\tfinished restoring saved recommendations ");
+				logger.info("\tfinished restoring saved recommendations  for case  " +patient_id()+" !");
 				// e.printStackTrace();
 			}
 			in.close();
 		} catch (Exception e) {
 			// e.printStackTrace();
-			logger.error("problem opening precomputed file");
+			logger.error("problem opening precomputed file  for case  " +patient_id()+" !");
 			throw new PCA_Session_Exception(e.getMessage());
 		} finally {
 			stopTiming(
@@ -781,7 +781,7 @@ public class PCASession_Imp {
 			// stopTiming("\tfinished update advisories", startTime);
 			return adv;
 		} catch (Exception e) {
-			logger.error("Error ComputeAdvisory ", e);
+			logger.error("Error ComputeAdvisory  for case  " +patient_id()+" !", e);
 			return null;
 		}
 	}
@@ -1123,7 +1123,7 @@ public class PCASession_Imp {
 			stopTiming("\t finished computing advisories, taking @@@@@@@@@ ", startTime);
 			return returnAdvisorySet(advisorySet);
 		} catch (Throwable e) {
-			logger.error("PCASession_i-computeAdvisories Exception!!", e);
+			logger.error("PCASession_i-computeAdvisories Exception for case " +patient_id()+"!!!", e);
 
 			throw new PCA_Session_Exception(e.getMessage());
 
@@ -1225,10 +1225,10 @@ public class PCASession_Imp {
 								logger.info(dataElement.numeric().domain_term + "'s valid time is after session time");
 						} catch (ParseException e) {
 							logger.error("Either session time "+this.session_time()+ " or "+ dataElement.numeric().domain_term+" time "+dataElement.numeric().valid_time +
-									" is not valid");
+									" is not valid for case  " +patient_id()+" !");
 						}
 					} else {
-						logger.info(dataElement.numeric().domain_term  + " has null or empty valid time");
+						logger.info(dataElement.numeric().domain_term  + " has null or empty valid time"+ " for case "+patient_id());
 					}
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
@@ -1267,7 +1267,7 @@ public class PCASession_Imp {
 									logger.info(dataElement.prescription().drug_name.trim() + "'s start time is after session time");
 							} catch (ParseException e) {
 								logger.error("Either session time "+this.session_time()+ " or "+ dataElement.prescription().drug_name.trim()+" start time "+dataElement.prescription().start_time +
-										" is not valid");
+										" is not valid for case  " +patient_id()+" !");
 							}
 						} else {
 							dataManager.updatePrescription(
@@ -1283,7 +1283,7 @@ public class PCASession_Imp {
 									dataElement.prescription().present_release_time);
 						}
 					} else
-						logger.warn("in updateData - null prescription");
+						logger.warn("in updateData - null prescription for case  " +patient_id()+" !");
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -1309,12 +1309,12 @@ public class PCASession_Imp {
 								logger.info(dataElement.note_data().domain_term + "'s valid time is after session time");
 						} catch (ParseException e) {
 							logger.error("Either session time "+this.session_time()+ " or "+ dataElement.note_data().domain_term+" time "+dataElement.note_data().valid_time +
-									" is not valid");
+									" is not valid for case " +patient_id()+" !");
 						}
 					} else {
 						if ((!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Sex) && 
 								!dataElement.note_data().domain_term.equals(DharmaPaddaConstants.Race)))
-								logger.info(dataElement.note_data().domain_term  + " has null or empty valid time");
+								logger.info(dataElement.note_data().domain_term  + " has null or empty valid time"+ " for case "+patient_id());
 						//Sex and Race has no valid time
 						dataManager.updateNoteEntry(dataElement.note_data().operation,
 								dataElement.note_data().entry_type,
@@ -1423,7 +1423,7 @@ public class PCASession_Imp {
 			}
 			return false;
 		} catch (Throwable e) {
-			logger.error("PCASession_i-computeAdvisories Exception!!", e);
+			logger.error("PCASession_i-computeAdvisories Exception for case  " +patient_id()+" !!!", e);
 
 			throw new PCA_Session_Exception(e.getMessage());
 
@@ -1500,7 +1500,7 @@ public class PCASession_Imp {
 		Guideline_Scenario_Choices sc = currentGuidelineManager
 				.initializeScenarios();
 
-		if (sc == null)	logger.warn(sc + "Scenario Choice is NULL");
+		if (sc == null)	logger.warn(sc + "Scenario Choice is NULL for case  " +patient_id()+" !");
 
 		boolean hasUnexpandedPreferedChoice = true;
 
@@ -1527,11 +1527,11 @@ public class PCASession_Imp {
 				}
 				return advisories;
 			} else {
-				logger.warn("No patient scenario chosen!");
+				logger.warn("No patient scenario chosen for case  " +patient_id()+" !");
 				return guidelineManager.returnAdvisory();
 			}
 		} else {
-			logger.warn("No patient scenario!");
+			logger.warn("No patient scenario for case  " +patient_id()+" !!");
 			return guidelineManager.returnAdvisory();
 		}
 
@@ -1729,7 +1729,7 @@ public class PCASession_Imp {
 		nf.setMinimumFractionDigits(0);
 		Cls cls = kbManager.getCls(labName);
 		if (cls == null) 
-			logger.warn("getNumberFormat: "+ labName + " is not in KB");
+			logger.warn("getNumberFormat: "+ labName + " is not in KB for case  " +patient_id()+" !");
 		else
 			if (cls.hasType(kbManager.getCls("Interval-Valued_AtomicTest_Metaclass"))) { 
 			// is an instance of Interval-Valued_AtomicTest_Metaclass
@@ -1928,7 +1928,7 @@ public class PCASession_Imp {
 			if (age != null)
 				ageInYears = age.value + " year old ";
 		} catch (Exception e) {
-			logger.warn("Fail to query for Age");
+			logger.warn("Fail to query for Age for case  " +patient_id()+" !");
 		}
 		demographicsString = ageInYears + ((race != null) ? race : "" );
 		demographicsString = demographicsString + ((sex != null) ? " "+sex : "");
@@ -2338,7 +2338,7 @@ public class PCASession_Imp {
 					pid, hospitalizationID, sessionTime, PMName, startTime, stopTime);
 			return advisory;
 		} catch (Throwable e) {
-			logger.error("PCASession_Imp-computePerformanceMeasures Exception!!", e);
+			logger.error("PCASession_Imp-computePerformanceMeasures Exception for case  " +patient_id()+" !!!", e);
 			e.printStackTrace();
 			throw new PCA_Session_Exception(e.getMessage());
 
@@ -2379,7 +2379,7 @@ public class PCASession_Imp {
 			return returnStringConstructor.toString();
 		}
 		else
-			logger.error("Only HTML or HTML_NOTABLE format has been implemented");
+			logger.error("Only HTML or HTML_NOTABLE format has been implemented for case " +patient_id()+" !");
 		return null;
 	}
 
@@ -2427,7 +2427,7 @@ public class PCASession_Imp {
 						allsuboutput = concat(allsuboutput, subdssOutput);
 					}
 				} catch (Exception e) {
-					logger.error("Exception in computing advisory for "+ getGuidelineId(sub));
+					logger.error("Exception in computing advisory for "+ getGuidelineId(sub)+" for case  " +patient_id()+" !");
 					logger.error(e.getMessage());
 					e.printStackTrace();
 				}
@@ -2529,7 +2529,7 @@ public class PCASession_Imp {
 			} else if (dr instanceof Increase_Decrease_Dose_Recommendation) {
 				printChangeDose( itsWriter, (Increase_Decrease_Dose_Recommendation)dr);
 			} else
-				logger.error("Unknown drug recommendation type: "+dr.getClass().getName());
+				logger.error("Unknown drug recommendation type: "+dr.getClass().getName()+" for case  " +patient_id()+" !");
 		}
 		itsWriter.println("</pre>");
 	}
@@ -2660,7 +2660,7 @@ public class PCASession_Imp {
 
 	private void printAction(PrintWriter itsWriter, Action action, int indent) {
 		if (action == null) {
-			logger.error("Null action!");
+			logger.error("Null action for case " +patient_id()+" !!");
 		} else {
 			if (action.getLabel() != null)
 				printlnWithIndent(itsWriter, "<b>"+action.getAction_class()+": "+action.getLabel() +"</b>", indent);

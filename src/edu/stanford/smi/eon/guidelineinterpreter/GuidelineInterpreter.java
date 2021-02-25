@@ -546,6 +546,10 @@ public class GuidelineInterpreter implements Serializable, PaddaGEE {
 	public String getPerformanceMeasureStopTime() {
 		return this.pmStopTime;
 	}
+	
+	public String getCaseID() {
+		return getDBmanager().getCaseID();
+	}
 
 	public Collection matchData(String dataClass, Collection concepts, Collection data) {
 		Collection matchedDataCollection = new ArrayList();

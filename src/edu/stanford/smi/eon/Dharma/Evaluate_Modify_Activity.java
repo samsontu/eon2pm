@@ -103,7 +103,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 			try {
 				activitiesToModify = evaluateActivitiesToModify(interpreter);
 			} catch (Exception e) {
-				logger.error("Problem evaluating activities to delete query", e);
+				logger.error("Problem evaluating activities to delete query"+ " for case "+interpreter.getCaseID(), e);
 
 			}
 		} else {
@@ -147,7 +147,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 			else if (query instanceof Structured_Query) {
 				Set_Expression queryResult = (Set_Expression)((Structured_Query)query).evaluate_expression(interpreter);
 				if (queryResult != null) activitiesToModifyCollection = queryResult.getset_elementsValue();
-				else logger.warn("No activity to modify after evaluating "+query.getBrowserText());
+				else logger.warn("No activity to modify after evaluating "+query.getBrowserText() + " for case "+interpreter.getCaseID());
 			}
 			return activitiesToModifyCollection;
 		}
@@ -223,14 +223,14 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 		try {
 			actionSpecCandidates = getActionSpecCandidates(interpreter);
 		} catch (Exception e) {
-			logger.error("No action spec candidates for "+this.getBrowserText());
+			logger.error("No action spec candidates for "+this.getBrowserText()+ " for case "+interpreter.getCaseID());
 			return;
 		}
 		if (activitiesToModify != null) {
 			for (String activityToModify : activitiesToModify) {
 				Instance activitySpec = matchActivityToModifyWithActivitySpec(activityToModify, actionSpecCandidates, interpreter);
 				if (activitySpec == null) {
-					logger.error("No activity specification for activity to modify"+activityToModify);
+					logger.error("No activity specification for activity to modify"+activityToModify+ " for case "+interpreter.getCaseID());
 				} else {
 					Collection<Instance> dummyList = new ArrayList<Instance>();
 					dummyList.add(activitySpec);
@@ -259,7 +259,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 			else if (query instanceof Structured_Query)
 				actionSpecCandidates = ((Set_Expression)((Structured_Query)query).evaluate_expression(interpreter)).getset_elementsValue();
 			if (actionSpecCandidates == null)  {
-				logger.warn("No activity spec after evaluating "+query.getBrowserText());
+				logger.warn("No activity spec after evaluating "+query.getBrowserText()+ " for case "+interpreter.getCaseID());
 			}
 			return actionSpecCandidates;
 		}
@@ -290,7 +290,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 					// construct Change_Attribute_Evaluation records
 					logger.debug("Evaluate_Modify_Activity.doAction: has sufficient spec");
 					if (activitiesToModify == null) {
-						logger.error("Evaluate_Modify_Activity_Intensity.doAction:Potential Error: No activity to modify");
+						logger.error("Evaluate_Modify_Activity_Intensity.doAction:Potential Error: No activity to modify"+ " for case "+interpreter.getCaseID());
 					} else {
 						for (Object i :  activitiesToModify) {
 							Change_Attribute_Evaluation changeEval = null;
@@ -313,10 +313,10 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 										changeEvaluations.add(choiceEvaluation);
 									}
 								} else logger.error("Evaluate_Modify_Activity_Intensity.doAction: "+
-										currentActivity+" currentActivityLevel is null");
+										currentActivity+" currentActivityLevel is null"+ " for case "+interpreter.getCaseID());
 							}
 							else logger.error("Evaluate_Modify_Activity_Intensity.doAction: "+
-									currentActivity+" activitySpec is null");
+									currentActivity+" activitySpec is null"+ " for case "+interpreter.getCaseID());
 						}
 					}
 					addChangeEvaluation( changeEvaluations,  interpreter);
@@ -336,7 +336,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 							interpreter.getCurrentGuidelineID());
 			interpreter.addEvaluatedChoice(modifyEvaluations);
 		} else logger.warn("Evaluate_Modify_Activity_Intensity.doAction: "+
-				"No dose change record");
+				"No dose change record" + " for case "+interpreter.getCaseID());
 		
 	}
 
@@ -522,21 +522,21 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						}
 						String warning = (this.direction()==Direction.up) ? warning = "No increase dose recommendation because of uncontrollable do not intensify condition " :
 							"No decrease dose recommendation because of uncontrollable do not decrease dose condition ";
-						logger.warn(warning +uncontrollableCondition);
+						logger.warn(warning +uncontrollableCondition+ " for case "+interpreter.getCaseID());
 					}
 					break;
 				}
 
 			} catch (Exception e) {
 				logger.error("Evaluate_Modify_Activity_Intensity.doAction: exception looking at maximum dose level of "+
-						evaluateObject.getName()+": "+e.getMessage());
+						evaluateObject.getName()+": "+e.getMessage()+ " for case "+interpreter.getCaseID());
 			}
 		} //for
 		return changeEval;
 	}
 	private boolean noControllableModify(Collection<Matched_Data> stopControllableIntensifyConditionCollection,
 			Collection<Matched_Data> stopControllableDecreaseDoseConditionCollection) throws Exception {
-		System.out.println("testing nocontrollableModify");
+		//System.out.println("testing nocontrollableModify");
 		if (this.direction() == Direction.up)
 			 return (stopControllableIntensifyConditionCollection == null);
 		else if (this.direction() == Direction.down)

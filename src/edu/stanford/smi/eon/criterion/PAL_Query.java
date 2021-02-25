@@ -102,7 +102,7 @@ public class PAL_Query extends Expression {
 					constraintStatement = constraintStatement.replace(
 						getsession_time_variableValue(), sessionTimeNumericString);
 				} catch (Exception e1){
-					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" );
+					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" + "for case "+guidelineManager.getCaseID());
 				}
 			}
 			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance("PAL-QUERY");
@@ -168,7 +168,7 @@ public class PAL_Query extends Expression {
 					}//for
 				} else {
 					logger.warn("No results from evaluating "+this.getBrowserText()
-					+ "' ("+this.getName()+") ");
+					+ "' ("+this.getName()+") "+ "for case "+guidelineManager.getCaseID());
 				}
 				guidelineManager.evalManager.tell(this, activitiesToStopCollection);
 				if (activitiesToStopCollection.isEmpty()) {
