@@ -77,6 +77,12 @@ public class Management_Guideline extends Guideline {
 		return ((String) ModelUtilities.getOwnSlotValue(this, "version"));
 	}
 
+	public void setlabListValue(String version) {
+		ModelUtilities.setOwnSlotValue(this, "lab_list", version);	}
+	public String getlabListValue() {
+		return ((String) ModelUtilities.getOwnSlotValue(this, "lab_list"));
+	}
+
 	public void seteligibility_criteriaValue(Collection eligibility_criteria) {
 		ModelUtilities.setOwnSlotValues(this, "eligibility_criteria", eligibility_criteria);	}
 	public Collection geteligibility_criteriaValue(){

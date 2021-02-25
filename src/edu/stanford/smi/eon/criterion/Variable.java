@@ -79,7 +79,8 @@ public class Variable extends Expression {
 				Expression result = ((Expression)getderivation_expressionValue()).evaluate_expression(glmanager);
 				return result;
 			} catch (Exception e){
-				logger.error("Exception evaluating variable derivation expression "+getBrowserText());
+				logger.error("Exception evaluating variable derivation expression "+getBrowserText()
+						+ " for patient "+  glmanager.getDBmanager().getCaseID());
 				e.printStackTrace();
 				throw new PCA_Session_Exception("Exception Variable.evaluate_expression Exception evaluating variable derivation expression of "+
 						getBrowserText());
@@ -95,15 +96,16 @@ public class Variable extends Expression {
 		try {
 			Expression result = evaluate_expression(glmanager);
 			if (result != null) {
-				logger.debug("Variable.substituteVariableValue: Evaluating variable "+
-						getBrowserText()+" result in " +result.getDirectType().getName());
+				logger.debug("Variable.substituteVariableValue: Evaluating variable '"+
+						getBrowserText()+"' result in " +result.getDirectType().getName() 
+						+ " for patient "+ glmanager.getDBmanager().getCaseID());
 				newString = result.toString();
 			} else 
-				logger.error("Variable.substituteVariableValue: Evaluating variable "+
-						getBrowserText()+" result in null");
+				logger.error("Variable.substituteVariableValue: Evaluating variable '"+
+						getBrowserText()+"' result in null for patient "+ glmanager.getDBmanager().getCaseID());
 		} catch (Exception e){
-			logger.error("Exception Variable: substituteVariableValue: evaluating/converting derivation expression of " +
-					getBrowserText()+" to string");
+			logger.error("Exception Variable: substituteVariableValue: evaluating/converting derivation expression of '" +
+					getBrowserText()+"' to string for patient "  +  glmanager.getDBmanager().getCaseID());
 
 		}
 		try {
@@ -112,12 +114,13 @@ public class Variable extends Expression {
 				//newString = HelperFunctions.formatDisplayDate(newString);
 				outputString = edu.stanford.smi.eon.util.HelperFunctions.replaceSubstringWOQuotes(input, getstring_nameValue(),  newString);
 			} else {
-				logger.error("Evaluating derivation expression of variable "+getBrowserText()+
-						" result in null string");
+				logger.error("Evaluating derivation expression of variable '"+getBrowserText()+
+						"' result in null string for patient "+ glmanager.getDBmanager().getCaseID());
 			}
 		} catch (Exception e) {
 			logger.error("Exception Variable: substituteVariableValue: replacing "+
-					getstring_nameValue()+" with "+newString + "in variable" +getBrowserText());
+					getstring_nameValue()+" with "+newString + "in variable '" +getBrowserText()+
+					"' for patient " +  glmanager.getDBmanager().getCaseID());
 
 		}
 		return outputString;

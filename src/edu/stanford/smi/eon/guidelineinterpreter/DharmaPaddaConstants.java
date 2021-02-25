@@ -63,6 +63,7 @@ public class DharmaPaddaConstants {
  public final static String NUMERATOR = "numerator";
 public static final String meaurementPeriodName = "PerformanceMeasurementPeriod";
 public static final String NOT = "NOT";
+public static final String LABLIST = "lab_list";
 public static final String intersect = "intersect";
 public static final String Sex = "Sex";
 public static final String Race = "Race";
