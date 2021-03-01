@@ -102,7 +102,7 @@ public class PAL_Query extends Expression {
 					constraintStatement = constraintStatement.replace(
 						getsession_time_variableValue(), sessionTimeNumericString);
 				} catch (Exception e1){
-					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" + "for case "+guidelineManager.getCaseID());
+					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion: '"+genericQuery.getBrowserText()+"' may not evaluate correctly" + "for case "+guidelineManager.getCaseID());
 				}
 			}
 			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance("PAL-QUERY");
@@ -112,7 +112,7 @@ public class PAL_Query extends Expression {
 			//logger.debug("PAL_Criterion.instantiateCase: newconstraint "+constraintStatement);
 			return newInstance;
 		} else {
-			throw new PCA_Session_Exception("Null PAL statement in "+this.getName());
+			throw new PCA_Session_Exception("Null PAL statement in "+genericQuery.getBrowserText());
 		}
 
 	}
@@ -132,7 +132,7 @@ public class PAL_Query extends Expression {
 			activitiesToStopCollection = new ArrayList();
 			Instance query = getPAL_queryValue();
 			if (query == null) {
-				throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance "+this.getName());
+				throw new PCA_Session_Exception("PAL_Query.doQuery: No PAL query in instance "+this.getBrowserText());
 			} else {
 
 				query = instantiateCase(query, guidelineManager);
@@ -140,7 +140,7 @@ public class PAL_Query extends Expression {
 				QueryEngine evalEngine = new QueryEvaluationEngine(evalPolicy,
 						guidelineManager.getKBmanager().getKB());
 				GuidelineInterpreter.currentGuidelineInterpreter = guidelineManager;
-				logger.debug("PAL_Query.doQuery "+ this.getBrowserText()+"/"+ this.getName());
+				logger.debug("PAL_Query.doQuery '"+ this.getBrowserText()+"'/"+ this.getName());
 				QueryEngineResponse response = evalEngine.askSingleQuery(
 						query);
 				Collection queryResult = null;
@@ -167,8 +167,8 @@ public class PAL_Query extends Expression {
 						} //for
 					}//for
 				} else {
-					logger.warn("No results from evaluating "+this.getBrowserText()
-					+ "' ("+this.getName()+") "+ "for case "+guidelineManager.getCaseID());
+					logger.warn("No results from evaluating '"+getPAL_queryValue().getBrowserText()
+					+ "' (" + getPAL_queryValue().getName()+") "+ "for case "+guidelineManager.getCaseID());
 				}
 				guidelineManager.evalManager.tell(this, activitiesToStopCollection);
 				if (activitiesToStopCollection.isEmpty()) {

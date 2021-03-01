@@ -522,7 +522,7 @@ public class Evaluate_Modify_Activity extends Evaluate_Activity_Act {
 						}
 						String warning = (this.direction()==Direction.up) ? warning = "No increase dose recommendation because of uncontrollable do not intensify condition " :
 							"No decrease dose recommendation because of uncontrollable do not decrease dose condition ";
-						logger.warn(warning +uncontrollableCondition+ " for case "+interpreter.getCaseID());
+						logger.warn(warning +uncontrollableCondition+ "["+ this.getBrowserText()+"] for case "+interpreter.getCaseID());
 					}
 					break;
 				}

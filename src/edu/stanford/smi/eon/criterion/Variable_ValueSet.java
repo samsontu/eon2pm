@@ -49,16 +49,16 @@ public class Variable_ValueSet extends DefaultSimpleInstance {
 							} else 
 								outputString = outputString + " "+ substitutePropertyValues(inputString, (Instance)inst, glmanager);
 						} else {
-							logger.error("Result of evaluating "+inputString+" should be instances for patient "+
+							logger.error("'"+this.getBrowserText()+ "': Result of evaluating "+inputString+" should be instances for patient "+
 									glmanager.getDBmanager().getCaseID() );			
 						}
 					}
 				} else {
-					logger.error("Result of evaluating "+inputString+" should be a set of instances for patient " 
+					logger.error("'"+this.getBrowserText()+ "': Result of evaluating "+inputString+" should be a set of instances for patient " 
 							+ glmanager.getDBmanager().getCaseID() );
 				}
 			} else
-				logger.error(this.getBrowserText()+ "'s derivation expression evaluates to null for patient "+
+				logger.error("'"+this.getBrowserText()+ "': derivation expression evaluates to null for patient "+
 						glmanager.getDBmanager().getCaseID());
 		} catch (PCA_Session_Exception e) {
 			// TODO Auto-generated catch block
@@ -98,7 +98,7 @@ public class Variable_ValueSet extends DefaultSimpleInstance {
 				    Expression result = ((Expression)getderivation_expressionValue()).evaluate_expression(glmanager);
 				    return result;
 				  } catch (Exception e){
-				    logger.error("Exception evaluating variable derivation expression "+getBrowserText()+ 
+				    logger.error("'"+this.getBrowserText()+ "': Exception evaluating variable derivation expression "+ 
 				    		" for patient " + 	glmanager.getDBmanager().getCaseID());
 				    e.printStackTrace();
 				    throw new PCA_Session_Exception("Exception Variable.evaluate_expression Exception evaluating variable derivation expression of "+

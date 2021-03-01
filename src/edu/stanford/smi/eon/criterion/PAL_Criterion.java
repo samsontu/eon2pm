@@ -99,21 +99,21 @@ public class PAL_Criterion extends Criterion {
 				if ((errors != null) && (!errors.isEmpty())) {
 					for (Iterator i=errors.iterator(); i.hasNext();) {
 						ValidationError error = (ValidationError)i.next();
-						logger.error(error.getDescription() + "for case "+guidelineManager.getCaseID());
+						logger.error("'"+this.getBrowserText()+ "': "+error.getDescription() + "for case "+guidelineManager.getCaseID());
 					}
 				}
-				logger.error(" PAL validation error in "+this.getName()+ "; "+this.getBrowserText()+ "for case "+guidelineManager.getCaseID());
-				throw new PCA_Session_Exception(" PAL validation error in "+this.getName());
+				logger.error(" PAL validation error in "+getPAL_constraintValue().getName()+ "; "+getPAL_constraintValue().getBrowserText()+ "for case "+guidelineManager.getCaseID());
+				throw new PCA_Session_Exception(" PAL validation error in "+getPAL_constraintValue().getBrowserText());
 			} 
 			if (response.areThereRuntimeErrors()) {
 				errors = response.getRuntimeErrors();
 				if ((errors != null) && (!errors.isEmpty())) {
 					for (Iterator i=errors.iterator(); i.hasNext();) {
 						RuntimeError error = (RuntimeError)i.next();
-						logger.error(error.getDescription()+ "for case "+guidelineManager.getCaseID());  
+						logger.error("'"+getPAL_constraintValue().getBrowserText()+ "': "+error.getDescription()+ "for case "+guidelineManager.getCaseID());  
 					}
 				}
-				logger.error(" PAL runtime error in "+this.getName()+ "; "+this.getBrowserText()+ "for case "+guidelineManager.getCaseID());
+				logger.error(" PAL runtime error in '" + getPAL_constraintValue().getBrowserText()+ "' for case "+guidelineManager.getCaseID());
 				throw new PCA_Session_Exception("PAL runtime error in "+this.getName());
 			} 
 		} else {
@@ -163,7 +163,7 @@ public class PAL_Criterion extends Criterion {
 					constraintStatement = constraintStatement.replace(
 						getsession_time_variableValue(), sessionTimeNumericString);
 				} catch (Exception e1){
-					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion "+PALName+" may not evaluate correctly" + "for case "+guidelineManager.getCaseID());
+					logger.error("Incorrect session time format("+sessionTime+"); PAL criterion '"+genericConstraint.getBrowserText()+"' may not evaluate correctly" + "for case "+guidelineManager.getCaseID());
 				}
 			}
 			Instance newInstance = guidelineManager.getDBmanager().createRegisteredInstance(":PAL-CONSTRAINT");
